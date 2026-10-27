@@ -51,7 +51,9 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-o
 .nlabel small{color:var(--dim);font-size:13px}
 .stars{color:var(--edge);letter-spacing:2px;font-size:15px}
 .stars i{font-style:normal;color:var(--gold)}
-.decklink{display:block;margin:28px auto 0}
+.maprow{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
+.sandlink{text-decoration:none;border-color:var(--flow)}
+.badge{font-size:11px;letter-spacing:.08em;padding:2px 7px;border-radius:6px;background:var(--flow);color:var(--night)}
 
 /* buttons */
 .tile{font-family:var(--f-display);font-weight:600;font-size:17px;padding:12px 18px;border-radius:14px;background:var(--panel-2);border:2px solid var(--edge);box-shadow:0 4px 0 var(--shadow);cursor:pointer;transition:transform .08s,border-color .15s,background .15s;display:inline-flex;align-items:center;gap:8px;min-height:50px}
@@ -127,7 +129,7 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-o
   </div>
   <div class="topstats"><span class="pill"><span class="g">★</span><span id="starTotal">0</span> / 24</span><span class="pill">Score <span class="g" id="scoreMap">0</span></span></div>
   <div class="pathbox"><svg id="pathSvg" aria-hidden="true"></svg><ol class="nodes" id="nodes"></ol></div>
-  <button class="tile go decklink" id="deckBtn" type="button">Formula deck</button>
+  <div class="maprow"><button class="tile go" id="deckBtn" type="button">Formula deck</button><a class="tile sandlink" id="sandLink" href="sandbox/" target="_top">Bonus: Fluid Sandbox <span class="badge">GPU</span></a></div>
 </section>
 
 <section id="levelScreen" class="wrap" hidden>
@@ -157,6 +159,7 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-o
 <script>
 (function(){
 const $=s=>document.querySelector(s);
+if(!(location.protocol==='file:'||/github\.io$/.test(location.hostname))){ const a=$('#sandLink'); a.href='https://claude.ai/artifact/De9Ky5gR1NvWQ91sYC3AT2'; a.target='_blank'; a.rel='noopener'; }
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const fr=(a,b)=>`<span class="fr"><span>${a}</span><span>${b}</span></span>`;
 const ui='u<sub>∞</sub>';

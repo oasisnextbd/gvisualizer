@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Fluid Sandbox</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&family=STIX+Two+Text:ital,wght@0,400;1,400&display=swap">
+<style>
+/* Layout: same night-lab look as the Quest. HUD, wide GPU flow tank, then chip rows for scene, tool, view and two sliders. */
+:root{
+  --night:#0C1A2B; --panel:#14263C; --panel-2:#1C3450; --edge:#2A4767; --ink:#EAF3FF; --dim:#8EA6C2;
+  --flow:#3FD0E0; --heat:#FF8B5E; --gold:#FFC93F; --gold-deep:#A87B10; --good:#58DE8C; --bad:#FF5C7A; --plate:#C7D5E4;
+  --gold-soft:#3A3320; --shadow:#07111D;
+  --f-display:"Fredoka","Trebuchet MS",system-ui,sans-serif;
+  --f-body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-math:"STIX Two Text",Cambria,Georgia,serif;
+  color-scheme:dark;
+}
+[hidden]{display:none!important}
+html,body{background:var(--night);color:var(--ink)}
+body{font-family:var(--f-body);font-size:16px;line-height:1.45;background:radial-gradient(1200px 600px at 50% -10%,var(--panel-2),var(--night) 70%) fixed,var(--night)}
+.wrap{max-width:1000px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 40px}
+button,a{font:inherit;color:inherit}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.hud{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.back{width:44px;height:44px;border-radius:12px;background:var(--panel);border:2px solid var(--edge);display:grid;place-items:center;text-decoration:none;font-size:20px;flex:none}
+.ttl{flex:1;min-width:0;font-family:var(--f-display);font-weight:600;font-size:20px}
+.ttl small{color:var(--dim);font-weight:500;margin-right:6px}
+.stat{font-family:var(--f-display);font-weight:600;font-size:14px;color:var(--dim);flex:none}
+.stat b{color:var(--gold)}
+.tank{position:relative;border-radius:18px;overflow:hidden;border:2px solid var(--edge);background:var(--panel)}
+.tank canvas{display:block;width:100%;aspect-ratio:9/4;touch-action:none}
+#ov{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.toast{position:absolute;left:50%;bottom:12px;transform:translate(-50%,8px);padding:7px 15px;border-radius:999px;font-family:var(--f-display);font-weight:600;font-size:14px;color:var(--night);background:var(--gold);opacity:0;transition:opacity .2s,transform .2s;pointer-events:none;max-width:calc(100% - 24px);text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.nogl{padding:40px 20px;text-align:center;color:var(--dim)}
+.readout{font-family:var(--f-display);font-weight:500;text-align:center;min-height:1.5em;margin:10px 0 4px;color:var(--dim);font-size:15px}
+.readout b{color:var(--gold);font-weight:600}
+.rows{display:grid;gap:12px;margin-top:10px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.row .lab{font-family:var(--f-display);font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);width:64px;flex:none}
+.chip{font-family:var(--f-display);font-weight:600;font-size:15px;padding:8px 14px;border-radius:12px;background:var(--panel-2);border:2px solid var(--edge);box-shadow:0 3px 0 var(--shadow);cursor:pointer;transition:transform .08s,border-color .15s,background .15s}
+.chip:hover{border-color:var(--flow)}
+.chip:active{transform:translateY(2px);box-shadow:0 1px 0 var(--shadow)}
+.chip.on{border-color:var(--gold);background:var(--gold-soft)}
+.chip.go{background:var(--gold);border-color:var(--gold);color:var(--night);box-shadow:0 3px 0 var(--gold-deep)}
+.sliders{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+.slide{display:flex;align-items:center;gap:12px;background:var(--panel);border:2px solid var(--edge);border-radius:14px;padding:8px 14px;min-width:0}
+.slide label{font-family:var(--f-display);font-weight:600;color:var(--dim);font-size:14px;flex:none}
+.slide input{flex:1;min-width:0;accent-color:var(--gold);height:28px}
+.slide output{font-family:var(--f-display);font-weight:600;color:var(--gold);min-width:58px;text-align:right}
+.goals{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:18px}
+.goal{display:flex;gap:10px;align-items:center;background:var(--panel);border:2px solid var(--edge);border-radius:14px;padding:10px 12px;font-size:14px}
+.goal i{font-style:normal;width:28px;height:28px;flex:none;border-radius:50%;display:grid;place-items:center;font-family:var(--f-display);font-weight:700;background:var(--panel-2);color:var(--edge)}
+.goal.done{border-color:var(--good)} .goal.done i{background:var(--good);color:var(--night)}
+.legend{display:flex;align-items:center;gap:8px;justify-content:flex-end;font-size:12px;color:var(--dim);margin-top:8px}
+.legend span.bar{width:120px;height:8px;border-radius:4px}
+@media (prefers-reduced-motion: reduce){ *{transition:none!important} }
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <div class="hud">
+    <a class="back" id="backLink" href="../" aria-label="Back to the Quest">←</a>
+    <div class="ttl"><small>Bonus</small>Fluid Sandbox</div>
+    <span class="stat">Re <b id="reStat">–</b></span>
+    <span class="stat" id="goalStat">0/3 ★</span>
+  </div>
+  <div class="tank" id="tank">
+    <canvas id="gl" aria-label="Live fluid simulation. Draw walls or heaters with your finger or mouse."></canvas>
+    <canvas id="ov" aria-hidden="true"></canvas>
+    <div class="toast" id="toast"></div>
+  </div>
+  <div class="legend"><span id="legLo">slow</span><span class="bar" id="legBar"></span><span id="legHi">fast</span></div>
+  <p class="readout" id="readout">Real flow, solved live on your GPU. Draw in the tank.</p>
+  <div class="rows">
+    <div class="row"><span class="lab">Scene</span>
+      <button class="chip" type="button" data-scene="plate">Flat plate</button>
+      <button class="chip" type="button" data-scene="cyl">Cylinder</button>
+      <button class="chip" type="button" data-scene="block">Hot block</button>
+      <button class="chip" type="button" data-scene="blank">Empty tank</button></div>
+    <div class="row"><span class="lab">Tool</span>
+      <button class="chip" type="button" data-tool="wall">Draw wall</button>
+      <button class="chip" type="button" data-tool="heater">Draw heater</button>
+      <button class="chip" type="button" data-tool="erase">Erase</button>
+      <button class="chip" type="button" data-tool="probe">Probe</button></div>
+    <div class="row"><span class="lab">View</span>
+      <button class="chip" type="button" data-view="0">Speed</button>
+      <button class="chip" type="button" data-view="1">Temperature</button>
+      <button class="chip" type="button" data-view="2">Swirl</button>
+      <span style="flex:1"></span>
+      <button class="chip" type="button" id="pauseBtn">Pause</button>
+      <button class="chip go" type="button" id="resetBtn">Restart flow</button></div>
+    <div class="sliders">
+      <div class="slide"><label for="reS">Reynolds</label><input type="range" id="reS" min="0" max="1" step="0.01" value="0.45"><output id="reOut"></output></div>
+      <div class="slide"><label for="prS">Prandtl</label><input type="range" id="prS" min="-0.3" max="1" step="0.01" value="0"><output id="prOut"></output></div>
+    </div>
+  </div>
+  <div class="goals" id="goals"></div>
+</main>
+
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const NX=360, NY=160, U=0.08;
+const QUEST_URL='https://claude.ai/artifact/1ptyEPXUpXfdaCK4zmnyR3';
+if(!(location.protocol==='file:'||/github\.io$/.test(location.hostname))) $('#backLink').href=QUEST_URL;
+
+const cs=getComputedStyle(document.documentElement), tok=n=>cs.getPropertyValue('--'+n).trim();
+const hex3=h=>{ const n=parseInt(h.replace('#',''),16); return [(n>>16&255)/255,(n>>8&255)/255,(n&255)/255]; };
+const COL={night:tok('night'),panel:tok('panel'),flow:tok('flow'),heat:tok('heat'),gold:tok('gold'),plate:tok('plate'),ink:tok('ink'),dim:tok('dim'),good:tok('good')};
+
+const cv=$('#gl'), ov=$('#ov'), octx=ov.getContext('2d');
+const gl=cv.getContext('webgl2',{antialias:false,alpha:false});
+function noGL(msg){ $('#tank').innerHTML=`<div class="nogl">${msg}</div>`; $('#readout').textContent=''; }
+if(!gl){ noGL('This browser has no WebGL2, so the GPU sandbox cannot run here. Try a recent Chrome, Edge, Firefox or Safari.'); return; }
+let FMT=null;
+if(gl.getExtension('EXT_color_buffer_float')) FMT={i:gl.RGBA32F,t:gl.FLOAT,linear:!!gl.getExtension('OES_texture_float_linear')};
+else if(gl.getExtension('EXT_color_buffer_half_float')) FMT={i:gl.RGBA16F,t:gl.HALF_FLOAT,linear:true};
+if(!FMT){ noGL('This GPU cannot store floating-point textures, so the sandbox cannot run here.'); return; }
+
+/* ---------- shaders ---------- */
+const VS=`#version 300 es
+in vec2 pos; out vec2 v; void main(){ v=pos*0.5+0.5; gl_Position=vec4(pos,0.,1.); }`;
+const STEP=`#version 300 es
+precision highp float; precision highp int;
+uniform sampler2D A; uniform sampler2D B; uniform sampler2D Cc; uniform sampler2D M;
+uniform float tau, U, alpha; uniform int init;
+layout(location=0) out vec4 oA; layout(location=1) out vec4 oB; layout(location=2) out vec4 oC;
+const ivec2 c[9]=ivec2[9](ivec2(0,0),ivec2(1,0),ivec2(0,1),ivec2(-1,0),ivec2(0,-1),ivec2(1,1),ivec2(-1,1),ivec2(-1,-1),ivec2(1,-1));
+const float w[9]=float[9](4./9.,1./9.,1./9.,1./9.,1./9.,1./36.,1./36.,1./36.,1./36.);
+const int opp[9]=int[9](0,3,4,1,2,7,8,5,6);
+float mk(ivec2 p){ return texelFetch(M,p,0).r*255.; }
+float fF(ivec2 p,int i){ if(i<4) return texelFetch(A,p,0)[i]; if(i<8) return texelFetch(B,p,0)[i-4]; return texelFetch(Cc,p,0).x; }
+float Tat(ivec2 p,ivec2 n){ p=clamp(p,ivec2(0),n-1); return texelFetch(Cc,p,0).y; }
+void eq(float rho,vec2 u,float T){
+  float f[9]; float uu=dot(u,u);
+  for(int i=0;i<9;i++){ float cu=dot(vec2(c[i]),u); f[i]=w[i]*rho*(1.+3.*cu+4.5*cu*cu-1.5*uu); }
+  oA=vec4(f[0],f[1],f[2],f[3]); oB=vec4(f[4],f[5],f[6],f[7]); oC=vec4(f[8],T,u);
+}
+void main(){
+  ivec2 p=ivec2(gl_FragCoord.xy); ivec2 n=textureSize(A,0);
+  float m=mk(p);
+  if(m>0.5){ eq(1.,vec2(0.),m>1.5?1.:0.); return; }
+  if(init==1 || p.x==0 || p.y==0 || p.y==n.y-1){ eq(1.,vec2(U,0.),0.); return; }
+  if(p.x==n.x-1){ ivec2 q=p-ivec2(1,0); oA=texelFetch(A,q,0); oB=texelFetch(B,q,0); oC=texelFetch(Cc,q,0); return; }
+  float f[9]; float rho=0.; vec2 u=vec2(0.);
+  for(int i=0;i<9;i++){ ivec2 q=p-c[i]; f[i]= mk(q)>0.5 ? fF(p,opp[i]) : fF(q,i); rho+=f[i]; u+=vec2(c[i])*f[i]; }
+  u/=rho;
+  float uu=dot(u,u);
+  for(int i=0;i<9;i++){ float cu=dot(vec2(c[i]),u); float fe=w[i]*rho*(1.+3.*cu+4.5*cu*cu-1.5*uu); f[i]-= (f[i]-fe)/tau; }
+  vec2 s=vec2(p)-u; ivec2 b=ivec2(floor(s)); vec2 t=s-vec2(b);
+  float Ta=mix(mix(Tat(b,n),Tat(b+ivec2(1,0),n),t.x),mix(Tat(b+ivec2(0,1),n),Tat(b+ivec2(1,1),n),t.x),t.y);
+  float T0=Tat(p,n);
+  float lap=Tat(p+ivec2(1,0),n)+Tat(p-ivec2(1,0),n)+Tat(p+ivec2(0,1),n)+Tat(p-ivec2(0,1),n)-4.*T0;
+  float T=clamp(Ta+alpha*lap,0.,1.);
+  oA=vec4(f[0],f[1],f[2],f[3]); oB=vec4(f[4],f[5],f[6],f[7]); oC=vec4(f[8],T,u);
+}`;
+const DISP=`#version 300 es
+precision highp float;
+uniform sampler2D Cc; uniform sampler2D M; uniform float U; uniform int mode;
+uniform vec3 cNight,cFlow,cHeat,cGold,cPlate,cInk;
+in vec2 v; out vec4 o;
+void main(){
+  vec2 N=vec2(textureSize(Cc,0)); ivec2 p=ivec2(v*N);
+  float m=texelFetch(M,p,0).r*255.;
+  if(m>1.5){ o=vec4(mix(cHeat,cGold,0.35),1.); return; }
+  if(m>0.5){ o=vec4(cPlate,1.); return; }
+  vec4 c=texture(Cc,v); vec3 col;
+  if(mode==0){ float s=clamp(length(c.zw)/U/1.35,0.,1.); col= s<0.62? mix(cNight,cFlow,s/0.62) : mix(cFlow,cInk,(s-0.62)/0.38); }
+  else if(mode==1){ float T=clamp(c.y,0.,1.); col= T<0.5? mix(cNight,cHeat,pow(T/0.5,0.8)) : mix(cHeat,cGold,(T-0.5)/0.5); }
+  else { vec2 d=1./N; float wv=(texture(Cc,v+vec2(d.x,0.)).w-texture(Cc,v-vec2(d.x,0.)).w)-(texture(Cc,v+vec2(0.,d.y)).z-texture(Cc,v-vec2(0.,d.y)).z);
+    float k=clamp(wv/(U*0.12),-1.,1.); col= k>0.? mix(cNight,cHeat,pow(k,0.7)) : mix(cNight,cFlow,pow(-k,0.7)); }
+  o=vec4(col,1.);
+}`;
+function prog(fs){ const p=gl.createProgram(); [[gl.VERTEX_SHADER,VS],[gl.FRAGMENT_SHADER,fs]].forEach(([t,src])=>{ const s=gl.createShader(t); gl.shaderSource(s,src); gl.compileShader(s); if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s)); gl.attachShader(p,s); });
+  gl.bindAttribLocation(p,0,'pos'); gl.linkProgram(p); if(!gl.getProgramParameter(p,gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(p));
+  const U={}; const n=gl.getProgramParameter(p,gl.ACTIVE_UNIFORMS); for(let i=0;i<n;i++){ const a=gl.getActiveUniform(p,i); U[a.name]=gl.getUniformLocation(p,a.name); } return {p,U}; }
+let PS,PD;
+try{ PS=prog(STEP); PD=prog(DISP); }catch(e){ noGL('The GPU shaders failed to compile on this device.'); console.error(e); return; }
+
+const vao=gl.createVertexArray(); gl.bindVertexArray(vao);
+const vb=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,vb); gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+gl.enableVertexAttribArray(0); gl.vertexAttribPointer(0,2,gl.FLOAT,false,0,0);
+
+function ftex(){ const t=gl.createTexture(); gl.bindTexture(gl.TEXTURE_2D,t); gl.texImage2D(gl.TEXTURE_2D,0,FMT.i,NX,NY,0,gl.RGBA,FMT.t,null);
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.NEAREST); gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.NEAREST);
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE); gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE); return t; }
+const S=[0,1].map(()=>{ const s={A:ftex(),B:ftex(),C:ftex()}; s.fb=gl.createFramebuffer(); gl.bindFramebuffer(gl.FRAMEBUFFER,s.fb);
+  ['A','B','C'].forEach((k,i)=>gl.framebufferTexture2D(gl.FRAMEBUFFER,gl.COLOR_ATTACHMENT0+i,gl.TEXTURE_2D,s[k],0));
+  gl.drawBuffers([gl.COLOR_ATTACHMENT0,gl.COLOR_ATTACHMENT1,gl.COLOR_ATTACHMENT2]);
+  if(gl.checkFramebufferStatus(gl.FRAMEBUFFER)!==gl.FRAMEBUFFER_COMPLETE) s.bad=true;
+  s.rf=gl.createFramebuffer(); gl.bindFramebuffer(gl.FRAMEBUFFER,s.rf); gl.framebufferTexture2D(gl.FRAMEBUFFER,gl.COLOR_ATTACHMENT0,gl.TEXTURE_2D,s.C,0); return s; });
+gl.bindFramebuffer(gl.FRAMEBUFFER,null);
+if(S[0].bad){ noGL('This GPU cannot render to float textures, so the sandbox cannot run here.'); return; }
+S.forEach(s=>{ gl.bindTexture(gl.TEXTURE_2D,s.C); const f=FMT.linear?gl.LINEAR:gl.NEAREST; gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,f); gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,f); });
+
+const mask=new Uint8Array(NX*NY);
+const mtex=gl.createTexture(); gl.bindTexture(gl.TEXTURE_2D,mtex); gl.pixelStorei(gl.UNPACK_ALIGNMENT,1);
+gl.texImage2D(gl.TEXTURE_2D,0,gl.R8,NX,NY,0,gl.RED,gl.UNSIGNED_BYTE,mask);
+gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.NEAREST); gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.NEAREST);
+let maskDirty=false;
+function uploadMask(){ gl.bindTexture(gl.TEXTURE_2D,mtex); gl.texSubImage2D(gl.TEXTURE_2D,0,0,0,NX,NY,gl.RED,gl.UNSIGNED_BYTE,mask); maskDirty=false; }
+
+/* ---------- state ---------- */
+const SCENES={
+  plate:{L:270,label:'plate length', le:60, y:44, build(){ for(let x=60;x<330;x++) for(let y=42;y<=44;y++) mask[y*NX+x]=2; }},
+  cyl:{L:24,label:'cylinder diameter', build(){ disc(72,82,12,1); }},
+  block:{L:18,label:'block size', build(){ for(let x=70;x<88;x++) for(let y=71;y<89;y++) mask[y*NX+x]=2; }},
+  blank:{L:20,label:'about 20 cells', build(){}}
+};
+function disc(cx,cy,r,v){ for(let y=Math.max(1,cy-r);y<=Math.min(NY-2,cy+r);y++) for(let x=Math.max(1,cx-r);x<=Math.min(NX-2,cx+r);x++) if((x-cx)**2+(y-cy)**2<=r*r) mask[y*NX+x]=v; }
+const st={scene:'plate',tool:'probe',view:0,cur:0,paused:false,probe:null,col:null,steps:6,frames:0,goals:{shed:false,probe:false,pr:false},prMoved:new Set()};
+const nuOf=()=>{ const s=+$('#reS').value; return 0.08*Math.pow(0.1,s); };      // 0.08 → 0.008
+const PrOf=()=>Math.pow(10,+$('#prS').value);
+const ReOf=()=>U*SCENES[st.scene].L/nuOf();
+
+function step(init){
+  const src=S[st.cur], dst=S[1-st.cur];
+  gl.bindFramebuffer(gl.FRAMEBUFFER,dst.fb); gl.viewport(0,0,NX,NY); gl.useProgram(PS.p);
+  [src.A,src.B,src.C,mtex].forEach((t,i)=>{ gl.activeTexture(gl.TEXTURE0+i); gl.bindTexture(gl.TEXTURE_2D,t); });
+  gl.uniform1i(PS.U.A,0); gl.uniform1i(PS.U.B,1); gl.uniform1i(PS.U.Cc,2); gl.uniform1i(PS.U.M,3);
+  const nu=nuOf(); gl.uniform1f(PS.U.tau,3*nu+0.5); gl.uniform1f(PS.U.U,U); gl.uniform1f(PS.U.alpha,Math.min(0.24,nu/PrOf())); gl.uniform1i(PS.U.init,init?1:0);
+  gl.drawArrays(gl.TRIANGLES,0,3); st.cur=1-st.cur;
+}
+function display(){
+  gl.bindFramebuffer(gl.FRAMEBUFFER,null); gl.viewport(0,0,cv.width,cv.height); gl.useProgram(PD.p);
+  gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D,S[st.cur].C); gl.activeTexture(gl.TEXTURE1); gl.bindTexture(gl.TEXTURE_2D,mtex);
+  gl.uniform1i(PD.U.Cc,0); gl.uniform1i(PD.U.M,1); gl.uniform1f(PD.U.U,U); gl.uniform1i(PD.U.mode,st.view);
+  [['cNight','night'],['cFlow','flow'],['cHeat','heat'],['cGold','gold'],['cPlate','plate'],['cInk','ink']].forEach(([u,k])=>gl.uniform3fv(PD.U[u],hex3(COL[k])));
+  gl.drawArrays(gl.TRIANGLES,0,3);
+}
+const h2f=h=>{ const s=(h&0x8000)?-1:1, e=(h>>10)&31, f=h&1023; return e===0?s*Math.pow(2,-14)*(f/1024):e===31?(f?NaN:s*Infinity):s*Math.pow(2,e-15)*(1+f/1024); };
+function readColumn(x){
+  gl.bindFramebuffer(gl.READ_FRAMEBUFFER,S[st.cur].rf);
+  let out=new Float32Array(NY*4);
+  try{
+    if(FMT.t===gl.FLOAT) gl.readPixels(x,0,1,NY,gl.RGBA,gl.FLOAT,out);
+    else { const fmt=gl.getParameter(gl.IMPLEMENTATION_COLOR_READ_FORMAT), typ=gl.getParameter(gl.IMPLEMENTATION_COLOR_READ_TYPE);
+      if(typ===gl.HALF_FLOAT&&fmt===gl.RGBA){ const b=new Uint16Array(NY*4); gl.readPixels(x,0,1,NY,gl.RGBA,gl.HALF_FLOAT,b); out=Float32Array.from(b,h2f); }
+      else { gl.readPixels(x,0,1,NY,gl.RGBA,gl.FLOAT,out); } }
+  }catch(e){ out=null; }
+  gl.bindFramebuffer(gl.READ_FRAMEBUFFER,null); return out;
+}
+
+function loadScene(k){ st.scene=k; mask.fill(0); SCENES[k].build(); uploadMask(); restart(); st.probe=k==='plate'?250:null; st.col=null;
+  if(k==='plate'&&st.view===2) setView(0); if(k==='block') setView(1); if(k==='cyl') setView(2);
+  document.querySelectorAll('[data-scene]').forEach(b=>b.classList.toggle('on',b.dataset.scene===k)); updateRe(); }
+function restart(){ step(true); step(true); st.frames=0; }
+function setTool(t){ st.tool=t; document.querySelectorAll('[data-tool]').forEach(b=>b.classList.toggle('on',b.dataset.tool===t)); }
+function setView(v){ st.view=v; document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('on',+b.dataset.view===v));
+  const L=[['slow','fast',`linear-gradient(90deg,${COL.night},${COL.flow},${COL.ink})`],['cold','hot',`linear-gradient(90deg,${COL.night},${COL.heat},${COL.gold})`],['clockwise','counter',`linear-gradient(90deg,${COL.flow},${COL.night},${COL.heat})`]][v];
+  $('#legLo').textContent=L[0]; $('#legHi').textContent=L[1]; $('#legBar').style.background=L[2]; }
+function updateRe(){ const re=ReOf(); $('#reOut').textContent=Math.round(re); $('#reStat').textContent=Math.round(re); $('#prOut').textContent=PrOf().toFixed(PrOf()<1?2:1); }
+
+/* ---------- goals ---------- */
+const GOALS=[['shed','Make the cylinder shed vortices: Re above 90, Swirl view'],['probe','Probe the plate and compare δ with Blasius'],['pr','Heat the plate, then change Pr and watch the orange layer']];
+function renderGoals(){ $('#goals').innerHTML=GOALS.map(([k,t],i)=>`<div class="goal${st.goals[k]?' done':''}"><i>${st.goals[k]?'★':i+1}</i><span>${t}</span></div>`).join('');
+  $('#goalStat').innerHTML=`<b>${Object.values(st.goals).filter(Boolean).length}</b>/3 ★`; }
+function hit(k,msg){ if(st.goals[k]) return; st.goals[k]=true; renderGoals(); toast('★ '+msg); try{ localStorage.setItem('bls-goals',JSON.stringify(st.goals)); }catch(e){} }
+try{ const g=JSON.parse(localStorage.getItem('bls-goals')||'null'); if(g) Object.assign(st.goals,g); }catch(e){}
+let tT=null; function toast(m){ const t=$('#toast'); t.textContent=m; t.classList.add('on'); clearTimeout(tT); tT=setTimeout(()=>t.classList.remove('on'),2200); }
+
+/* ---------- input ---------- */
+let painting=false;
+function gridAt(e){ const r=cv.getBoundingClientRect(); return [Math.floor((e.clientX-r.left)/r.width*NX), Math.floor((1-(e.clientY-r.top)/r.height)*NY)]; }
+function paint(e){ const [gx,gy]=gridAt(e);
+  if(st.tool==='probe'){ st.probe=Math.max(2,Math.min(NX-3,gx)); return; }
+  const v=st.tool==='wall'?1:st.tool==='heater'?2:0; const r=st.tool==='erase'?5:2;
+  for(let y=Math.max(1,gy-r);y<=Math.min(NY-2,gy+r);y++) for(let x=Math.max(1,gx-r);x<=Math.min(NX-2,gx+r);x++) if((x-gx)**2+(y-gy)**2<=r*r) mask[y*NX+x]=v;
+  maskDirty=true; }
+cv.addEventListener('pointerdown',e=>{ painting=true; cv.setPointerCapture(e.pointerId); paint(e); });
+cv.addEventListener('pointermove',e=>{ if(painting&&st.tool!=='probe') paint(e); else if(painting) paint(e); });
+['pointerup','pointercancel'].forEach(ev=>cv.addEventListener(ev,()=>painting=false));
+document.querySelectorAll('[data-scene]').forEach(b=>b.addEventListener('click',()=>loadScene(b.dataset.scene)));
+document.querySelectorAll('[data-tool]').forEach(b=>b.addEventListener('click',()=>setTool(b.dataset.tool)));
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>setView(+b.dataset.view)));
+$('#reS').addEventListener('input',updateRe);
+$('#prS').addEventListener('input',()=>{ updateRe(); st.prMoved.add(Math.round(PrOf()*2)); });
+$('#pauseBtn').addEventListener('click',()=>{ st.paused=!st.paused; $('#pauseBtn').textContent=st.paused?'Play':'Pause'; });
+$('#resetBtn').addEventListener('click',restart);
+
+/* ---------- overlay: probe ---------- */
+function drawOverlay(){
+  const w=ov.clientWidth,h=ov.clientHeight, dpr=devicePixelRatio||1; if(ov.width!==Math.round(w*dpr)){ ov.width=Math.round(w*dpr); ov.height=Math.round(h*dpr); }
+  octx.setTransform(dpr,0,0,dpr,0,0); octx.clearRect(0,0,w,h);
+  if(st.probe==null||!st.col) { if(st.tool==='probe') readoutSet('Tap anywhere in the tank to drop a velocity probe.'); return; }
+  const sx=w/NX, sy=h/NY, X=(st.probe+0.5)*sx, Lm=Math.min(90,w*0.16);
+  octx.strokeStyle=COL.gold; octx.lineWidth=1.5; octx.setLineDash([4,4]); octx.beginPath(); octx.moveTo(X,0); octx.lineTo(X,h); octx.stroke(); octx.setLineDash([]);
+  octx.fillStyle=COL.gold; octx.strokeStyle=COL.gold; octx.lineWidth=1.8;
+  const pts=[];
+  for(let y=1;y<NY-1;y+=1){ const ux=st.col[y*4+2]; if(!isFinite(ux)) continue; const px=X+ux/U*Lm, py=h-(y+0.5)*sy; pts.push([px,py]);
+    if(y%5===0){ octx.beginPath(); octx.moveTo(X,py); octx.lineTo(px,py); octx.stroke(); } }
+  octx.lineWidth=2.5; octx.beginPath(); pts.forEach((q,i)=>i?octx.lineTo(q[0],q[1]):octx.moveTo(q[0],q[1])); octx.stroke();
+  const P=SCENES.plate;
+  if(st.scene==='plate'&&st.probe>P.le+8&&st.probe<330){
+    let Ue=0; for(let k=P.y+1;k<NY-1;k++) Ue=Math.max(Ue,st.col[k*4+2]); let y=P.y+1; while(y<NY-2&&!(st.col[y*4+2]>=0.99*Ue)) y++;
+    const dMeas=y-(P.y+0.5), x=st.probe-P.le, nu=nuOf(), dBl=5*x/Math.sqrt(U*x/nu);
+    const yTop=h-(P.y+0.5+dMeas)*sy; octx.strokeStyle=COL.ink; octx.setLineDash([2,3]); octx.beginPath(); octx.moveTo(X-Lm*0.3,yTop); octx.lineTo(X+Lm*1.2,yTop); octx.stroke(); octx.setLineDash([]);
+    octx.strokeStyle=COL.flow; octx.lineWidth=2; octx.setLineDash([6,4]); octx.beginPath();
+    for(let i=0;i<=30;i++){ const e=i/30*1.2, f=e>=1?1:1.5*e-0.5*e**3, py=h-(P.y+0.5+e*dMeas)*sy; i?octx.lineTo(X+f*Lm,py):octx.moveTo(X+f*Lm,py); } octx.stroke(); octx.setLineDash([]);
+    readoutSet((st.frames<5000?'Still developing… ':'')+`Measured δ ≈ <b>${dMeas.toFixed(0)}</b> cells · Blasius 5x/√Re<sub>x</sub> ≈ <b>${dBl.toFixed(0)}</b> · blue dashes: your cubic`);
+    if(st.frames>400&&Math.abs(dMeas-dBl)/dBl<0.35) hit('probe','δ measured. The textbook formula holds up!');
+  } else readoutSet(`Gold arrows: the velocity profile at the probe. Max speed ${(Math.max(...pts.map(q=>(q[0]-X)/Lm))).toFixed(2)} u∞`);
+}
+let lastRead='';
+function readoutSet(html){ if(html!==lastRead){ $('#readout').innerHTML=html; lastRead=html; } }
+
+/* ---------- loop ---------- */
+function resize(){ const r=cv.getBoundingClientRect(), dpr=Math.min(2,devicePixelRatio||1); cv.width=Math.round(r.width*dpr); cv.height=Math.round(r.height*dpr); }
+new ResizeObserver(resize).observe(cv); resize();
+let last=performance.now();
+function loop(now){
+  const dt=now-last; last=now;
+  if(maskDirty) uploadMask();
+  if(!st.paused&&!document.hidden){
+    for(let i=0;i<st.steps;i++) step(false); st.frames+=st.steps;
+    if(dt>26&&st.steps>2) st.steps--; else if(dt<15&&st.steps<14) st.steps++;
+  }
+  display();
+  if(st.frames%3===0||st.paused){
+    const x=st.probe!=null?st.probe:NX-40, col=readColumn(x);
+    if(col&&col.some(v=>!isFinite(v))){ restart(); toast('The flow went unstable. Restarted at a gentler setting.'); $('#reS').value=Math.max(0,+$('#reS').value-0.15); updateRe(); st.col=null; }
+    else st.col=st.probe!=null?col:null;
+  }
+  drawOverlay();
+  if(st.scene==='cyl'&&st.view===2&&ReOf()>=90&&st.frames>1500) hit('shed','Vortex street! That is the von Kármán street.');
+  if((st.scene==='plate'||st.scene==='block')&&st.view===1&&st.prMoved.size>=3) hit('pr','Higher Pr, thinner thermal layer.');
+  requestAnimationFrame(loop);
+}
+window.__sandbox=st; setTool('probe'); setView(0); loadScene('plate'); renderGoals(); requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
