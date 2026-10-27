@@ -4,6 +4,7 @@ Heat transfer derivations for ChE L3T1 (BUET), turned into small games. Each lev
 
 ## Modules
 
+- **[Momentum Builder](boundary-layer/momentum/)** (prequel): tap the faces of Holman's dx·dy element to build continuity and the x-momentum equation, then flip assumptions (steady, continuity, dp/dx = 0, thin layer) to watch terms drop out. Three trap assumptions lead to the Euler, Stokes and fully developed equations instead.
 - **[Boundary Layer Quest](boundary-layer/)**: 8 levels on the integral (von Kármán) method for laminar flow over a flat plate, from scaling to δ/x = 4.64/√Re_x, the thermal layer, and why the guessed profile only changes the constant.
 - **[Fluid Sandbox](boundary-layer/sandbox/)** (bonus): a live lattice-Boltzmann flow solver running on your GPU (WebGL2). Draw walls and heaters, probe the plate's boundary layer against Blasius, and watch a cylinder shed a vortex street. Notation follows Holman, *Heat Transfer*, Chapter 5.
 

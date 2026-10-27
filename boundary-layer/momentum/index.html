@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Momentum Builder</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&family=STIX+Two+Text:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: same night-lab game look as the Quest. HUD with 4 stage pips, element canvas, mission line, stage panel (face card / equation strip + assumption switchboard / Re slider). */
+:root{
+  --night:#0C1A2B; --panel:#14263C; --panel-2:#1C3450; --edge:#2A4767; --ink:#EAF3FF; --dim:#8EA6C2;
+  --flow:#3FD0E0; --heat:#FF8B5E; --heat-2:#FFB38F; --gold:#FFC93F; --gold-deep:#A87B10; --good:#58DE8C; --bad:#FF5C7A; --violet:#B79CFF; --plate:#C7D5E4;
+  --gold-soft:#3A3320; --good-soft:#15392A; --bad-soft:#3D1A27; --shadow:#07111D;
+  --f-display:"Fredoka","Trebuchet MS",system-ui,sans-serif;
+  --f-body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-math:"STIX Two Text",Cambria,Georgia,serif;
+  color-scheme:dark;
+}
+[hidden]{display:none!important}
+html,body{background:var(--night);color:var(--ink)}
+body{font-family:var(--f-body);font-size:16px;line-height:1.45;background:radial-gradient(1200px 600px at 50% -10%,var(--panel-2),var(--night) 70%) fixed,var(--night)}
+.wrap{max-width:900px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 40px}
+button,a{font:inherit;color:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.hud{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.back{width:44px;height:44px;border-radius:12px;background:var(--panel);border:2px solid var(--edge);display:grid;place-items:center;text-decoration:none;font-size:20px;flex:none}
+.ttl{flex:1;min-width:0;font-family:var(--f-display);font-weight:600;font-size:19px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ttl small{color:var(--dim);font-weight:500;margin-right:6px}
+.pips{display:flex;gap:6px;flex:none}
+.pip{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-display);font-weight:700;font-size:13px;background:var(--panel-2);color:var(--dim);border:2px solid var(--edge)}
+.pip.on{background:var(--flow);color:var(--night);border-color:var(--flow)}
+.pip.done{background:var(--gold);color:var(--night);border-color:var(--gold)}
+.stage{position:relative}
+.stage canvas{display:block;width:100%;max-width:100%;aspect-ratio:3/2;background:var(--panel);border:2px solid var(--edge);border-radius:18px;touch-action:manipulation;cursor:pointer}
+.toast{position:absolute;left:50%;bottom:12px;transform:translate(-50%,8px);padding:8px 16px;border-radius:999px;font-family:var(--f-display);font-weight:600;font-size:15px;color:var(--night);opacity:0;transition:opacity .2s,transform .2s;pointer-events:none;max-width:calc(100% - 24px);text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.toast.good{background:var(--good)} .toast.info{background:var(--gold)} .toast.trap{background:var(--violet)}
+.mission{font-family:var(--f-display);font-weight:500;font-size:clamp(17px,2.6vw,20px);text-align:center;margin:16px auto 12px;max-width:42ch;text-wrap:balance}
+.panel{display:grid;gap:12px}
+.card{background:var(--panel);border:2px solid var(--edge);border-radius:16px;padding:12px 14px;min-width:0}
+.card h3{font-family:var(--f-display);font-weight:600;font-size:16px;margin:0 0 8px;color:var(--dim);letter-spacing:.02em}
+.item{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;padding:4px 0}
+.tag{font-family:var(--f-display);font-weight:600;font-size:12px;padding:2px 9px;border-radius:999px;color:var(--night);flex:none}
+.m{font-family:var(--f-math);font-size:19px;overflow-x:auto;white-space:nowrap;max-width:100%}
+.note{color:var(--dim);font-size:14px;margin:4px 0 0}
+.big{font-family:var(--f-math);font-size:clamp(18px,3vw,23px);text-align:center;overflow-x:auto;white-space:nowrap;padding:6px 2px}
+.boxed{display:inline-block;border:2px solid var(--gold);border-radius:12px;padding:6px 14px;margin-top:6px}
+.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;font-size:.82em;line-height:1.15;margin:0 .1em}
+.fr>span:last-child{border-top:1px solid currentColor}
+.eq{display:flex;flex-wrap:wrap;gap:6px 4px;align-items:center;justify-content:center;font-family:var(--f-math);font-size:clamp(17px,2.8vw,21px)}
+.term{border:2px solid currentColor;border-radius:12px;padding:4px 10px;background:var(--panel-2);cursor:pointer;transition:opacity .35s,transform .35s,filter .35s;color:inherit;font:inherit}
+.term.dead{opacity:.28;text-decoration:line-through;transform:scale(.88);filter:grayscale(.6)}
+.term.hl{box-shadow:0 0 0 3px var(--night),0 0 0 5px currentColor}
+.op{color:var(--dim);padding:0 2px}
+.zero{color:var(--dim);font-size:1.1em;padding:0 8px}
+.result{font-family:var(--f-display);font-weight:600;text-align:center;font-size:17px;padding:10px;border-radius:12px;background:var(--panel-2)}
+.result.win{background:var(--good-soft);color:var(--good)} .result.trap{background:#2A2145;color:var(--violet)}
+.switches{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.sw{display:flex;align-items:center;gap:10px;text-align:left;padding:10px 12px;border-radius:14px;background:var(--panel-2);border:2px solid var(--edge);box-shadow:0 3px 0 var(--shadow);cursor:pointer;font-family:var(--f-display);font-weight:600;font-size:15px}
+.sw .k{width:36px;height:20px;border-radius:999px;background:var(--edge);position:relative;flex:none;transition:background .2s}
+.sw .k::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:var(--ink);transition:transform .2s}
+.sw.on{border-color:var(--gold)} .sw.on .k{background:var(--gold)} .sw.on .k::after{transform:translateX(16px);background:var(--night)}
+.sw.trapsw.on{border-color:var(--violet)} .sw.trapsw.on .k{background:var(--violet)}
+.disc{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;font-size:14px;color:var(--dim);align-items:center}
+.badge{font-family:var(--f-display);font-weight:600;font-size:13px;padding:4px 10px;border-radius:999px;border:2px dashed var(--edge);color:var(--dim)}
+.badge.got{border-style:solid;border-color:var(--violet);color:var(--violet)}
+.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.tile{font-family:var(--f-display);font-weight:600;font-size:17px;padding:12px 18px;border-radius:14px;background:var(--panel-2);border:2px solid var(--edge);box-shadow:0 4px 0 var(--shadow);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.tile:active{transform:translateY(3px);box-shadow:0 1px 0 var(--shadow)}
+.tile.go{background:var(--gold);border-color:var(--gold);color:var(--night);box-shadow:0 4px 0 var(--gold-deep)}
+.slide{display:flex;align-items:center;gap:12px;background:var(--panel);border:2px solid var(--edge);border-radius:14px;padding:10px 14px}
+.slide label{font-family:var(--f-display);font-weight:600;color:var(--dim);font-size:14px}
+.slide input{flex:1;min-width:0;accent-color:var(--gold);height:28px}
+.slide output{font-family:var(--f-display);font-weight:600;color:var(--gold);min-width:80px;text-align:right}
+.modal{position:fixed;inset:0;background:rgba(5,12,22,.72);display:grid;place-items:center;padding:16px;z-index:20;overflow-y:auto}
+.sheet{background:var(--panel);border:2px solid var(--edge);border-radius:22px;padding:22px 20px 20px;width:100%;max-width:460px;text-align:center}
+.sheet h2{font-family:var(--f-display);font-weight:700;font-size:28px;margin:0 0 10px}
+.fcard{background:linear-gradient(160deg,var(--panel-2),var(--panel));border:2px solid var(--gold);border-radius:16px;padding:12px 14px;text-align:left;margin-bottom:10px}
+.fcard .kick{font-family:var(--f-display);font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.fcard .f{font-family:var(--f-math);font-size:20px;overflow-x:auto;white-space:nowrap;margin-top:4px}
+.sheet p{color:var(--dim);font-size:15px}
+@media (max-width:560px){ .stage canvas{aspect-ratio:1/1} }
+@media (prefers-reduced-motion: reduce){ *{transition:none!important;animation:none!important} }
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <div class="hud">
+    <a class="back" id="backLink" href="../" aria-label="Back to the Quest">←</a>
+    <div class="ttl"><small>Prequel</small>Momentum Builder</div>
+    <div class="pips" id="pips"></div>
+  </div>
+  <div class="stage"><canvas id="cv" aria-label="The dx by dy fluid element inside the boundary layer"></canvas><div class="toast" id="toast"></div></div>
+  <p class="mission" id="mission"></p>
+  <div class="panel" id="panel"></div>
+</main>
+<div class="modal" id="modal" hidden><div class="sheet" id="sheet"></div></div>
+
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const QUEST_URL='https://claude.ai/artifact/1ptyEPXUpXfdaCK4zmnyR3';
+if(!(location.protocol==='file:'||/github\.io$/.test(location.hostname))) $('#backLink').href=QUEST_URL;
+const fr=(a,b)=>`<span class="fr"><span>${a}</span><span>${b}</span></span>`;
+const D=(a,b)=>fr('∂'+a,'∂'+b), D2=(a,b)=>fr('∂²'+a,'∂'+b+'²');
+
+/* ---------- canvas ---------- */
+const cv=$('#cv'), ctx=cv.getContext('2d'); let W=0,H=0,dpr=1,FS=14;
+function resize(){ const r=cv.getBoundingClientRect(); dpr=devicePixelRatio||1; W=r.width; H=r.height; cv.width=Math.round(W*dpr); cv.height=Math.round(H*dpr); }
+new ResizeObserver(resize).observe(cv);
+const cs=getComputedStyle(document.documentElement), C={};
+['night','panel','panel-2','edge','ink','dim','flow','heat','heat-2','gold','good','violet','plate'].forEach(n=>C[n.replace('-','')]=cs.getPropertyValue('--'+n).trim());
+const DISP='"Fredoka", sans-serif', MATH='"STIX Two Text", Cambria, Georgia, serif';
+const rgba=(h,a)=>{ const n=parseInt(h.slice(1),16); return `rgba(${n>>16&255},${n>>8&255},${n&255},${a})`; };
+function line(x1,y1,x2,y2,c,w,dash){ ctx.strokeStyle=c; ctx.lineWidth=w||1; ctx.setLineDash(dash||[]); ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.stroke(); ctx.setLineDash([]); }
+function arrow(x1,y1,x2,y2,c,w,hs,dash){ hs=hs||9; line(x1,y1,x2,y2,c,w,dash); const a=Math.atan2(y2-y1,x2-x1); ctx.fillStyle=c; ctx.beginPath(); ctx.moveTo(x2,y2); ctx.lineTo(x2-hs*Math.cos(a-0.45),y2-hs*Math.sin(a-0.45)); ctx.lineTo(x2-hs*Math.cos(a+0.45),y2-hs*Math.sin(a+0.45)); ctx.closePath(); ctx.fill(); }
+function text(s,x,y,o){ o=o||{}; ctx.font=(o.italic?'italic ':'')+(o.weight||500)+' '+(o.size||FS)+'px '+(o.fam||DISP); ctx.fillStyle=o.c||C.ink; ctx.textAlign=o.align||'left'; ctx.textBaseline='middle'; ctx.fillText(s,x,y); }
+function circle(x,y,r,fill,sc,w){ ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2); if(fill){ctx.fillStyle=fill;ctx.fill();} if(sc){ctx.strokeStyle=sc;ctx.lineWidth=w||2;ctx.stroke();} }
+const pulse=t=>RM?0.5:0.5+0.5*Math.sin(t*4);
+
+/* ---------- content ---------- */
+const MASS={
+  left:[['in','flow','ρu dy']],
+  right:[['out','flow',`ρ(u + ${D('u','x')}dx) dy`]],
+  bottom:[['in','flow','ρv dx']],
+  top:[['out','flow',`ρ(v + ${D('v','y')}dy) dx`]]
+};
+const MOM={
+  left:[['x-momentum in','flow','ρu · u dy = ρu² dy'],['pressure pushes →','gold','p dy'],['viscous normal stress','heat2',`μ ${D('u','x')} dy`]],
+  right:[['x-momentum out','flow',`ρ(u + ${D('u','x')}dx)² dy`],['pressure pushes ←','gold',`(p + ${D('p','x')}dx) dy`],['viscous normal stress','heat2',`μ(${D('u','x')} + ${D2('u','x')}dx) dy`]],
+  bottom:[['x-momentum in','flow','ρv · u dx'],['shear drags back ←','heat',`μ ${D('u','y')} dx`]],
+  top:[['x-momentum out','flow',`ρ(v + ${D('v','y')}dy)(u + ${D('u','y')}dy) dx`],['shear pulls forward →','heat',`μ(${D('u','y')} + ${D2('u','y')}dy) dx`]],
+  center:[['x-momentum stored','violet',`ρ ${D('u','t')} dx dy`]]
+};
+const NOTES={bottom:'Fluid crosses the bottom face moving up (speed v), but every kilogram still carries its x-speed u. So a y-face carries x-momentum: ρv·u per unit width.',
+  top:'Same idea on the top face: upward mass flow ρv, each carrying x-speed u. Both have grown a little across dy.',
+  left:'Fluid enters at speed u and carries x-speed u: x-momentum flux ρu·u.', right:'It leaves a little changed after dx.', center:'If the flow speeds up or slows down in time, the element stores x-momentum.'};
+const FACENAME={left:'Left face',right:'Right face',bottom:'Bottom face',top:'Top face',center:'Inside the element'};
+const TERMS=[
+  {id:'T1',side:'L',col:'violet',html:`ρ${D('u','t')}`,what:'storage'},
+  {id:'T2',side:'L',col:'flow',html:`ρu${D('u','x')}`,what:'x-face momentum'},
+  {id:'T3',side:'L',col:'flow',html:`ρv${D('u','y')}`,what:'y-face momentum'},
+  {id:'T4',side:'L',col:'flow',html:`ρu(${D('u','x')} + ${D('v','y')})`,what:'mass imbalance'},
+  {id:'T5',side:'R',col:'gold',html:`−${D('p','x')}`,what:'pressure'},
+  {id:'T6',side:'R',col:'heat2',html:`μ${D2('u','x')}`,what:'normal viscous'},
+  {id:'T7',side:'R',col:'heat',html:`μ${D2('u','y')}`,what:'shear'}
+];
+const SW=[
+  {id:'steady',label:'Steady flow',kills:['T1'],why:'Nothing changes with time, so nothing is stored.'},
+  {id:'cont',label:'Use continuity',kills:['T4'],why:'Stage 1: ∂u/∂x + ∂v/∂y = 0.'},
+  {id:'dpdx',label:'Flat plate: dp/dx = 0',kills:['T5'],why:'Free-stream speed is constant, so pressure is too.'},
+  {id:'thin',label:'Thin layer: δ ≪ x',kills:['T6'],why:'∂²u/∂x² is tiny next to ∂²u/∂y². Stage 4 proves it.'},
+  {id:'inv',label:'No viscosity: μ = 0',kills:['T6','T7'],trap:'Euler equation',why:'No friction, no boundary layer: fluid would slip past the wall.'},
+  {id:'creep',label:'Creeping flow: Re ≪ 1',kills:['T2','T3','T4'],trap:'Stokes flow',why:'Inertia gone: honey-slow flow, viscosity everywhere, no thin layer.'},
+  {id:'dev',label:'Fully developed: ∂u/∂x = 0',kills:['T2','T3','T6'],trap:'Fully developed flow',why:'The layer stops growing. That is a long pipe, not a plate edge.'}
+];
+const GROUP={xmom:['T2','T4'],ymom:['T3','T4'],p:['T5'],nv:['T6'],sh:['T7'],st:['T1']};
+
+/* ---------- state ---------- */
+const st={s:0,rev:{},on:new Set(),hl:null,re:2,won:[0,0,0,0],disc:new Set(),t0:performance.now(),sel:null};
+try{ const g=JSON.parse(localStorage.getItem('mb-disc')||'[]'); g.forEach(x=>st.disc.add(x)); }catch(e){}
+const FACES=()=>st.s===0?['left','right','bottom','top']:['left','right','bottom','top','center'];
+const allRev=()=>FACES().every(f=>st.rev[f]);
+const dead=()=>{ const d=new Set(); SW.forEach(s=>{ if(st.on.has(s.id)) s.kills.forEach(k=>d.add(k)); }); return d; };
+function result(){ const on=st.on;
+  for(const s of SW) if(s.trap&&on.has(s.id)) return [s.trap,'trap'];
+  const g=['steady','cont','dpdx','thin'].filter(k=>on.has(k)).length;
+  if(g===4) return ['Prandtl’s boundary-layer equation','win'];
+  if(g===0) return ['Full Navier–Stokes, x-direction','start'];
+  return [`${4-g} more simplification${g===3?'':'s'} to the boundary-layer equation`,'mid']; }
+
+/* ---------- geometry + drawing ---------- */
+function geo(){ const s=Math.min(W*0.3,H*0.42), cx=W*0.56, cy=H*0.54; return {s,cx,cy,x0:cx-s/2,x1:cx+s/2,y0:cy-s/2,y1:cy+s/2,L:s*0.62}; }
+function drawInset(){ const x0=14,y0=14,w=Math.min(170,W*0.28),h=w*0.5;
+  ctx.fillStyle=rgba(C.night,0.6); ctx.fillRect(x0,y0,w,h); ctx.strokeStyle=C.edge; ctx.lineWidth=1.5; ctx.strokeRect(x0,y0,w,h);
+  const py=y0+h-10; ctx.fillStyle=C.plate; ctx.fillRect(x0+14,py,w-20,4);
+  ctx.strokeStyle=C.dim; ctx.setLineDash([3,3]); ctx.beginPath(); for(let i=0;i<=30;i++){ const x=x0+14+(w-20)*i/30; const y=py-(h-22)*Math.sqrt(i/30)*0.85; i?ctx.lineTo(x,y):ctx.moveTo(x,y);} ctx.stroke(); ctx.setLineDash([]);
+  const ex=x0+w*0.62, ey=py-14; ctx.fillStyle=C.violet; ctx.fillRect(ex,ey,7,7);
+  text('u∞',x0+8,y0+12,{size:FS-3,c:C.dim,fam:MATH,italic:1}); text('element',ex+11,ey+3,{size:FS-3,c:C.violet}); }
+function face(G,f,t,active){ const {x0,x1,y0,y1}=G; const c=active?C.gold:C.edge, w=active?3+2*pulse(t):2;
+  const seg={left:[x0,y0,x0,y1],right:[x1,y0,x1,y1],top:[x0,y0,x1,y0],bottom:[x0,y1,x1,y1]}[f]; if(seg) line(...seg,c,w,active?[6,5]:null); }
+function tapRing(x,y,t){ circle(x,y,12+5*pulse(t),null,C.gold,2.5); text('tap',x,y,{align:'center',size:FS-3,c:C.gold,weight:600}); }
+function groupStyle(g){ if(st.s<2) return {a:1,w:3,glow:false}; const d=dead(); const alive=GROUP[g].some(k=>!d.has(k)); const hl=st.hl&&GROUP[g].includes(st.hl);
+  return {a:alive?1:0.18,w:hl?5:3,glow:hl,deadX:!alive}; }
+function styled(g,fn){ const S=groupStyle(g); ctx.save(); ctx.globalAlpha=S.a; if(S.glow&&!RM){ ctx.shadowColor=C.ink; ctx.shadowBlur=16; } fn(S.w); ctx.restore(); return S; }
+function xmark(x,y){ line(x-6,y-6,x+6,y+6,C.bad,2.5); line(x-6,y+6,x+6,y-6,C.bad,2.5); }
+function flowDots(x1,y1,x2,y2,t,c,n,carry){ for(let i=0;i<n;i++){ const ph=RM?(i+0.5)/n:((t*0.5+i/n)%1); const x=x1+(x2-x1)*ph, y=y1+(y2-y1)*ph; circle(x,y,3.4,c);
+    if(carry){ const len=carry(ph); arrow(x,y,x+len,y,C.ink,1.6,5); } } }
+
+function drawElement(t){
+  const G=geo(), {s,cx,cy,x0,x1,y0,y1,L}=G, mom=st.s>=1, R=st.rev;
+  drawInset();
+  ctx.fillStyle=rgba(C.violet,0.12); ctx.fillRect(x0,y0,s,s);
+  ['left','right','top','bottom'].forEach(f=>face(G,f,t,!R[f]&&st.s<2));
+  text('dx',cx+s*0.3,y1-14,{align:'center',fam:MATH,italic:1,c:C.dim,size:FS+1});
+  text('dy',x0+12,cy+s*0.36,{fam:MATH,italic:1,c:C.dim,size:FS+1});
+  if(mom){ const items=[['x-momentum carried',C.flow,0],['pressure',C.gold,0],['shear',C.heat,0],['normal viscous',C.heat2,1]]; if(R.center) items.push(['stored',C.violet,0]);
+    let ly=H-16-(items.length-1)*18; items.forEach(([lab,c,d])=>{ line(14,ly,36,ly,c,3,d?[4,3]:null); text(lab,42,ly,{size:FS-2,c:C.dim}); ly+=18; }); }
+  if(!mom){
+    if(R.left){ arrow(x0-L,cy,x0-4,cy,C.flow,3); flowDots(x0-L,cy,x0-4,cy,t,C.flow,3); text('ρu dy',x0-L/2,cy-16,{align:'center',fam:MATH,size:FS,c:C.flow}); }
+    if(R.right){ arrow(x1+4,cy,x1+L*1.1,cy,C.flow,3.6); flowDots(x1+4,cy,x1+L*1.1,cy,t,C.flow,3); text('out',x1+L*0.55,cy-16,{align:'center',size:FS-1,c:C.flow}); }
+    if(R.bottom){ arrow(cx,y1+L,cx,y1+4,C.flow,3); flowDots(cx,y1+L,cx,y1+4,t,C.flow,3); text('ρv dx',cx+12,y1+L*0.6,{fam:MATH,size:FS,c:C.flow}); }
+    if(R.top){ arrow(cx,y0-4,cx,y0-L*1.05,C.flow,3.4); flowDots(cx,y0-4,cx,y0-L*1.05,t,C.flow,3); text('out',cx+12,y0-L*0.6,{size:FS-1,c:C.flow}); }
+  } else {
+    const yM=cy-s*0.22, yP=cy+s*0.26, xV=cx-s*0.2;
+    if(R.left){ styled('xmom',w=>{ arrow(x0-L,yM,x0-4,yM,C.flow,w); flowDots(x0-L,yM,x0-4,yM,t,C.flow,3); });
+      styled('p',w=>arrow(x0-L*0.8,yP,x0-4,yP,C.gold,w));
+      const S=styled('nv',w=>arrow(x0-4,cy+2,x0-L*0.5,cy+2,C.heat2,w-0.5,8,[5,4])); if(S.deadX) xmark(x0-L*0.3,cy+2); }
+    if(R.right){ styled('xmom',w=>{ arrow(x1+4,yM,x1+L*1.08,yM,C.flow,w+0.5); flowDots(x1+4,yM,x1+L*1.08,yM,t,C.flow,3); });
+      const S=styled('p',w=>arrow(x1+L*0.85,yP,x1+4,yP,C.gold,w)); if(S.deadX) xmark(x1+L*0.45,yP);
+      const S2=styled('nv',w=>arrow(x1+4,cy+2,x1+L*0.55,cy+2,C.heat2,w-0.5,8,[5,4])); if(S2.deadX) xmark(x1+L*0.3,cy+2); }
+    if(R.bottom){ styled('ymom',w=>{ arrow(xV,y1+L,xV,y1+4,C.flow,w); flowDots(xV,y1+L,xV,y1+4,t,C.flow,3,ph=>s*0.1+s*0.06*ph); });
+      const S=styled('sh',w=>arrow(cx+s*0.42,y1+12,cx,y1+12,C.heat,w)); if(S.deadX) xmark(cx+s*0.2,y1+12); }
+    if(R.top){ styled('ymom',w=>{ arrow(xV,y0-4,xV,y0-L*1.05,C.flow,w+0.5); flowDots(xV,y0-4,xV,y0-L*1.05,t,C.flow,3,ph=>s*0.17+s*0.06*ph); });
+      const S=styled('sh',w=>arrow(cx,y0-12,cx+s*0.48,y0-12,C.heat,w)); if(S.deadX) xmark(cx+s*0.24,y0-12); }
+    if(R.center){ const S=styled('st',w=>{ circle(cx+s*0.12,cy,s*0.14+3*pulse(t),null,C.violet,w); text('∂u/∂t',cx+s*0.12,cy,{align:'center',fam:MATH,italic:1,c:C.violet,size:FS}); }); if(S.deadX) xmark(cx+s*0.12,cy-s*0.14); }
+    else if(st.s===1) tapRing(cx+s*0.12,cy,t);
+  }
+  if(st.s<2){ const pos={left:[x0-L*0.55,cy+(mom?0:28)],right:[x1+L*0.55,cy+(mom?0:28)],top:[cx+(mom?s*0.25:-34),y0-L*0.55],bottom:[cx+(mom?s*0.25:-34),y1+L*0.55]};
+    ['left','right','top','bottom'].forEach(f=>{ if(!R[f]) tapRing(...pos[f],t); }); }
+  if(st.sel&&st.s<2){ const lab={left:[x0,y1+18],right:[x1,y1+18],top:[x0,y0-8],bottom:[x0,y1+18],center:[x0,y1+18]}[st.sel]; }
+}
+function drawThin(t){
+  const Re=Math.pow(10,st.re), ratio=25/Re, dx=5/Math.sqrt(Re);
+  const px0=W*0.1, px1=W*0.9, py=H*0.36;
+  ctx.fillStyle=C.plate; ctx.fillRect(px0,py,px1-px0,5);
+  const hmax=H*0.28, th=Math.min(1,dx)*hmax*2.2;
+  ctx.fillStyle=rgba(C.flow,0.25); ctx.beginPath(); ctx.moveTo(px0,py); for(let i=0;i<=40;i++){ const x=px0+(px1-px0)*i/40; ctx.lineTo(x,py-Math.min(hmax,th*Math.sqrt(i/40))); } ctx.lineTo(px1,py); ctx.fill();
+  text(`δ/x ≈ ${dx<1?dx.toFixed(dx<0.1?3:2):'>1'}`,px1,py-hmax-6,{align:'right',fam:MATH,size:FS+2,c:C.flow});
+  text(`Reₓ = ${Re<1e4?Math.round(Re):Re.toExponential(1).replace('e+','×10^')}`,px0,py-hmax-6,{size:FS+2,c:C.gold,weight:600});
+  const bars=[['u ∂u/∂x  (kept)',1,C.flow],['ν ∂²u/∂y²  (kept)',1,C.heat],['ν ∂²u/∂x²  (dropped)',Math.min(ratio,1.6),C.heat2]];
+  const bx=W*0.42, bw=W*0.5, by=py+40, bh=Math.min(34,(H-by-30)/3.4);
+  bars.forEach(([lab,v,c],i)=>{ const y=by+i*bh*1.25; text(lab,bx-12,y+bh/2,{align:'right',fam:MATH,size:FS,c:i===2?C.heat2:C.ink});
+    ctx.fillStyle=rgba(C.edge,0.6); ctx.fillRect(bx,y,bw,bh); ctx.fillStyle=c; ctx.fillRect(bx,y,Math.max(2,bw*Math.min(v,1.6)/1.6),bh);
+    if(i===2) text((ratio*100<0.1?'<0.1':(ratio*100).toPrecision(2))+'%',bx+Math.max(2,bw*Math.min(v,1.6)/1.6)+8,y+bh/2,{weight:700,c:ratio<0.01?C.good:C.heat2}); });
+  line(bx+bw*0.01/1.6*100/100,by-6,bx+bw*0.01/1.6*100/100,by+bh*3.6,C.good,1,[3,3]);
+}
+
+/* ---------- UI ---------- */
+let tT=null; function toast(m,k){ const t=$('#toast'); t.textContent=m; t.className='toast on '+k; clearTimeout(tT); tT=setTimeout(()=>t.className='toast',2300); }
+let AC=null; function sfx(kind){ try{ AC=AC||new (window.AudioContext||window.webkitAudioContext)(); const seq={good:[660,990],tap:[520],trap:[392,330],win:[523,659,784,1047]}[kind]; seq.forEach((f,i)=>{ const o=AC.createOscillator(),g=AC.createGain(); o.type='triangle'; o.frequency.value=f; const t=AC.currentTime+i*0.09; g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(kind==='tap'?0.05:0.14,t+0.02); g.gain.exponentialRampToValueAtTime(0.0001,t+0.24); o.connect(g).connect(AC.destination); o.start(t); o.stop(t+0.26); }); }catch(e){} }
+const MISSIONS=['Stage 1 · Mass: tap each face to see what flows through it.','Stage 2 · x-Momentum: tap every face and the inside. What carries x-momentum, and what pushes?','Stage 3 · Simplify: flip assumptions until you reach the boundary-layer equation. Try the purple traps too.','Stage 4 · Is the layer thin? Slide Re until the dropped term is under 1%.'];
+function pips(){ $('#pips').innerHTML=[0,1,2,3].map(i=>`<span class="pip ${st.won[i]?'done':i===st.s?'on':''}">${i+1}</span>`).join(''); }
+function itemsHTML(list){ return list.map(([lab,col,m])=>`<div class="item"><span class="tag" style="background:var(--${col.replace('heat2','heat-2')})">${lab}</span><span class="m">${m}</span></div>`).join(''); }
+function render(){
+  pips(); $('#mission').textContent=MISSIONS[st.s]; const P=$('#panel');
+  if(st.s<2){
+    const src=st.s===0?MASS:MOM, f=st.sel;
+    let h=f?`<div class="card"><h3>${FACENAME[f]}</h3>${itemsHTML(src[f])}${st.s===1&&NOTES[f]?`<p class="note">${NOTES[f]}</p>`:''}</div>`:`<div class="card"><h3>Faces found: ${FACES().filter(x=>st.rev[x]).length} / ${FACES().length}</h3><p class="note">The square is a tiny piece of fluid, dx wide and dy tall, inside the boundary layer.</p></div>`;
+    if(allRev()){
+      if(st.s===0) h+=`<div class="card"><h3>Out − in = 0 (nothing piles up)</h3><div class="big">ρ${D('u','x')}dx dy + ρ${D('v','y')}dx dy = 0</div><div class="big"><span class="boxed">${D('u','x')} + ${D('v','y')} = 0</span></div><p class="note">Continuity. Keep it, you’ll use it in stage 3.</p></div>`;
+      else h+=`<div class="card"><h3>Stored + (out − in) = forces. Divide by dx dy:</h3><div class="eq">${eqHTML(true)}</div><p class="note">Multiply out the faces and drop dx·dy products. This is the full x-momentum equation for 2-D incompressible flow.</p></div>`;
+      h+=`<div class="row"><button class="tile go" type="button" id="nextBtn">Next stage →</button></div>`;
+    }
+    P.innerHTML=h;
+  } else if(st.s===2){
+    const [name,kind]=result();
+    P.innerHTML=`<div class="card"><div class="eq" id="eqRow">${eqHTML(false)}</div></div>
+      <div class="result ${kind}">${kind==='win'?'★ ':''}You have: ${name}</div>
+      ${kind==='win'?`<div class="card"><div class="big">÷ ρ: &nbsp;<span class="boxed">u${D('u','x')} + v${D('u','y')} = ν${D2('u','y')}</span></div><p class="note">Exactly the momentum equation on Holman’s slide.</p></div><div class="row"><button class="tile go" type="button" id="nextBtn">Next: prove the layer is thin →</button></div>`:''}
+      <div class="switches">${SW.map(s=>`<button type="button" class="sw${s.trap?' trapsw':''}${st.on.has(s.id)?' on':''}" data-sw="${s.id}"><span class="k"></span>${s.label}</button>`).join('')}</div>
+      <div class="disc">Traps found: ${SW.filter(s=>s.trap).map(s=>`<span class="badge${st.disc.has(s.trap)?' got':''}">${st.disc.has(s.trap)?s.trap:'?'}</span>`).join('')}</div>`;
+    P.querySelectorAll('[data-sw]').forEach(b=>b.addEventListener('click',()=>toggle(b.dataset.sw)));
+    P.querySelectorAll('[data-t]').forEach(b=>b.addEventListener('click',()=>{ st.hl=st.hl===b.dataset.t?null:b.dataset.t; render(); }));
+  } else {
+    P.innerHTML=`<div class="slide"><label for="reS">Re<sub>x</sub></label><input type="range" id="reS" min="1" max="6" step="0.01" value="${st.re}"><output id="reO"></output></div>
+      <p class="note" style="text-align:center;margin:0">Inside the layer, ∂²u/∂x² : ∂²u/∂y² ≈ (δ/x)² ≈ 25/Re<sub>x</sub></p>
+      <div class="row"><button class="tile go" type="button" id="lockBtn">Lock in</button></div>`;
+    const o=()=>{ const Re=10**st.re; $('#reO').textContent=Re<1e4?Math.round(Re):Re.toExponential(1); };
+    $('#reS').addEventListener('input',e=>{ st.re=+e.target.value; o(); }); o();
+    $('#lockBtn').addEventListener('click',()=>{ const r=25/10**st.re; if(r<0.01){ st.won[3]=1; sfx('win'); finish(); } else toast(`Still ${(r*100).toPrecision(2)}% of the kept terms. Push Re higher.`,'info'); });
+  }
+  const nb=$('#nextBtn'); if(nb) nb.addEventListener('click',()=>{ st.won[st.s]=1; st.s++; st.sel=null; $('#toast').className='toast'; st.t0=performance.now(); sfx('good'); render(); window.scrollTo({top:0,behavior:RM?'auto':'smooth'}); });
+}
+function eqHTML(static_){ const d=static_?new Set():dead(); const side=s=>{ const ts=TERMS.filter(t=>t.side===s); const live=ts.filter(t=>!d.has(t.id));
+    return ts.map((t,i)=>`${i?'<span class="op">+</span>':''}<button type="button" class="term${d.has(t.id)?' dead':''}${st.hl===t.id?' hl':''}" style="color:var(--${t.col.replace('heat2','heat-2')})" data-t="${t.id}" title="${t.what}">${t.html}</button>`).join('')+(live.length||static_?'':'<span class="zero">→ 0</span>'); };
+  return side('L')+'<span class="op" style="padding:0 8px">=</span>'+side('R'); }
+function toggle(id){ const s=SW.find(x=>x.id===id); if(st.on.has(id)) st.on.delete(id); else { st.on.add(id);
+    if(s.trap){ const nw=!st.disc.has(s.trap); st.disc.add(s.trap); try{ localStorage.setItem('mb-disc',JSON.stringify([...st.disc])); }catch(e){} sfx('trap'); toast((nw?'Trap found: ':'')+s.trap+'. '+s.why,'trap'); }
+    else { sfx('good'); toast(s.why,'good'); } }
+  const was=st.lastKind; render(); const k=result()[1]; if(k==='win'&&was!=='win'){ sfx('win'); } st.lastKind=k; }
+function finish(){ $('#sheet').innerHTML=`<h2>Equations built!</h2>
+  <div class="fcard"><div class="kick">Continuity</div><div class="f">${D('u','x')} + ${D('v','y')} = 0</div></div>
+  <div class="fcard"><div class="kick">Boundary-layer x-momentum</div><div class="f">u${D('u','x')} + v${D('u','y')} = ν${D2('u','y')}</div></div>
+  <p>Built from: steady · incompressible (continuity) · dp/dx = 0 · thin layer. Traps found: ${st.disc.size}/3.</p>
+  <div class="row"><a class="tile go" id="toQuest" href="../">Play the Quest →</a><button class="tile" type="button" id="again">Replay</button></div>`;
+  if(!(location.protocol==='file:'||/github\.io$/.test(location.hostname))){ const a=$('#toQuest'); a.href=QUEST_URL; a.target='_blank'; a.rel='noopener'; }
+  $('#modal').hidden=false; pips();
+  $('#again').addEventListener('click',()=>{ $('#modal').hidden=true; Object.assign(st,{s:0,rev:{},on:new Set(),hl:null,won:[0,0,0,0],sel:null}); render(); }); }
+
+cv.addEventListener('pointerdown',e=>{ if(st.s>1) return; const r=cv.getBoundingClientRect(), x=e.clientX-r.left, y=e.clientY-r.top, G=geo();
+  const cand=[['left',Math.abs(x-G.x0)+(y<G.y0||y>G.y1?40:0)],['right',Math.abs(x-G.x1)+(y<G.y0||y>G.y1?40:0)],['top',Math.abs(y-G.y0)+(x<G.x0||x>G.x1?40:0)],['bottom',Math.abs(y-G.y1)+(x<G.x0||x>G.x1?40:0)]];
+  if(st.s===1) cand.push(['center',Math.hypot(x-(G.cx+G.s*0.12),y-G.cy)-G.s*0.1]);
+  cand.sort((a,b)=>a[1]-b[1]); const [f,dist]=cand[0]; if(dist>G.L*0.9) return;
+  const first=!st.rev[f]; st.rev[f]=1; st.sel=f; sfx(first?'good':'tap');
+  if(first&&allRev()) toast(st.s===0?'All faces found. Mass balance ready!':'Every face found. Here is the full equation!','good');
+  render(); });
+
+let last=performance.now();
+function loop(now){ last=now; if(W>0){ ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,W,H); ctx.fillStyle=C.panel; ctx.fillRect(0,0,W,H); FS=Math.max(12,Math.min(15,W/44));
+    const t=RM?2:(now-st.t0)/1000; if(st.s<3) drawElement(t); else drawThin(t); }
+  requestAnimationFrame(loop); }
+render(); requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>

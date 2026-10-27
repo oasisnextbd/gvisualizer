@@ -128,6 +128,7 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-o
     <p>8 levels · 3 hearts each · win the formula cards</p>
   </div>
   <div class="topstats"><span class="pill"><span class="g">★</span><span id="starTotal">0</span> / 24</span><span class="pill">Score <span class="g" id="scoreMap">0</span></span></div>
+  <div class="maprow" style="margin-top:14px"><a class="tile sandlink" id="momLink" href="momentum/" target="_top">Start here: Momentum Builder <span class="badge">PREQUEL</span></a></div>
   <div class="pathbox"><svg id="pathSvg" aria-hidden="true"></svg><ol class="nodes" id="nodes"></ol></div>
   <div class="maprow"><button class="tile go" id="deckBtn" type="button">Formula deck</button><a class="tile sandlink" id="sandLink" href="sandbox/" target="_top">Bonus: Fluid Sandbox <span class="badge">GPU</span></a></div>
 </section>
@@ -159,7 +160,7 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-o
 <script>
 (function(){
 const $=s=>document.querySelector(s);
-if(!(location.protocol==='file:'||/github\.io$/.test(location.hostname))){ const a=$('#sandLink'); a.href='https://claude.ai/artifact/De9Ky5gR1NvWQ91sYC3AT2'; a.target='_blank'; a.rel='noopener'; }
+if(!(location.protocol==='file:'||/github\.io$/.test(location.hostname))){ const a=$('#sandLink'); a.href='https://claude.ai/artifact/De9Ky5gR1NvWQ91sYC3AT2'; a.target='_blank'; a.rel='noopener'; const b=$('#momLink'); b.href='https://claude.ai/artifact/C6QcX4FPV2NGkx5qdAuC3E'; b.target='_blank'; b.rel='noopener'; }
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const fr=(a,b)=>`<span class="fr"><span>${a}</span><span>${b}</span></span>`;
 const ui='u<sub>∞</sub>';
