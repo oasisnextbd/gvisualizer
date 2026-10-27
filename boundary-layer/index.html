@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Flat-Plate Boundary Layer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: lab-notebook split. Live diagram on the left (sticky), one decision card on the right. */
+:root{
+  --bg:#EDF1F0; --surface:#FFFFFF; --stage:#F8FAF9; --ink:#14232A; --muted:#5A6B70;
+  --line:#D2DBDA; --grid:#E2E9E8; --plate:#3A4A50;
+  --flow:#0B7484; --flow-soft:#D3EBEE; --heat:#D0462A; --heat-soft:#F8DED6;
+  --good:#2C8A4B; --good-soft:#DDF1E3; --bad:#B3264A; --bad-soft:#F6DCE3;
+  --f-display:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-math:"STIX Two Text","Cambria Math",Cambria,Georgia,serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0E1619; --surface:#162226; --stage:#111C20; --ink:#E3ECEB; --muted:#93A5A8;
+  --line:#293A3F; --grid:#1E2D31; --plate:#A3B5B8;
+  --flow:#4FC2D0; --flow-soft:#173A40; --heat:#FF7B58; --heat-soft:#3E211A;
+  --good:#5DC87F; --good-soft:#173322; --bad:#FF6F8E; --bad-soft:#3B1A24; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0E1619; --surface:#162226; --stage:#111C20; --ink:#E3ECEB; --muted:#93A5A8;
+  --line:#293A3F; --grid:#1E2D31; --plate:#A3B5B8;
+  --flow:#4FC2D0; --flow-soft:#173A40; --heat:#FF7B58; --heat-soft:#3E211A;
+  --good:#5DC87F; --good-soft:#173322; --bad:#FF6F8E; --bad-soft:#3B1A24; color-scheme:dark }
+
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header .wrap{padding-block:28px 16px}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+h1{font-family:var(--f-display);font-stretch:78%;font-weight:760;font-size:clamp(32px,5.4vw,52px);line-height:1;margin:8px 0 10px;letter-spacing:-.01em;text-wrap:balance}
+.lede{max-width:62ch;color:var(--muted);margin:0}
+.recipe{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:18px 0 0;align-items:center}
+.recipe .lbl{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.recipe li.m{font-size:13px;padding:5px 11px 5px 6px;border:1px solid var(--line);border-radius:999px;display:flex;gap:7px;align-items:center;color:var(--muted);background:var(--surface);transition:background .25s,border-color .25s,color .25s}
+.recipe li.m b{font-family:var(--f-mono);font-weight:500;font-size:11px;width:19px;height:19px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line)}
+.recipe li.m.on{border-color:var(--flow);color:var(--ink);background:var(--flow-soft)}
+.recipe li.m.on b{background:var(--flow);border-color:var(--flow);color:var(--surface)}
+
+main.grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:32px;align-items:start;padding-block:8px 32px}
+.stage{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px);min-width:0}
+.stage canvas{display:block;width:100%;max-width:100%;aspect-ratio:4/3;background:var(--stage);border:1px solid var(--line);border-radius:10px}
+.controls{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;margin-top:12px}
+.controls:empty{display:none}
+.controls label{font-size:14px;font-weight:500}
+.controls output{font-family:var(--f-mono);font-size:13px;color:var(--muted);min-width:64px}
+input[type=range]{accent-color:var(--flow);flex:1 1 160px;min-width:0}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip:hover{border-color:var(--flow)}
+.chip.on{border-color:var(--flow);background:var(--flow-soft)}
+.caption{font-size:14px;color:var(--muted);margin:10px 0 0;max-width:65ch}
+.ck{display:inline-block;font-family:var(--f-mono);font-size:12px;padding:1px 7px;border-radius:4px;margin:2px 2px 2px 0}
+.ck.y{background:var(--good-soft);color:var(--good)} .ck.n{background:var(--bad-soft);color:var(--bad)}
+
+.card{min-width:0}
+.stepno{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--flow);margin:0}
+h2{font-family:var(--f-display);font-stretch:85%;font-weight:700;font-size:clamp(23px,3vw,31px);line-height:1.1;margin:4px 0 14px;text-wrap:balance}
+.body p,.after p{margin:0 0 12px;max-width:62ch}
+.body ul{margin:0 0 12px;padding-left:20px} .body li{margin-bottom:4px}
+.eq{font-family:var(--f-math);font-size:19px;line-height:1.4;padding:12px 14px;background:var(--surface);border:1px solid var(--line);border-radius:8px;margin:4px 0 14px;overflow-x:auto;white-space:nowrap;text-align:center}
+.mth{font-family:var(--f-math);font-size:1.08em}
+.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;font-size:.86em;line-height:1.2;margin:0 .12em}
+.fr>span:last-child{border-top:1px solid currentColor;padding-top:1px}
+.int{display:inline-flex;align-items:center;font-size:1.25em}
+.int .lims{display:inline-flex;flex-direction:column;font-size:.5em;line-height:1.1;margin-left:.05em}
+.int .lims sub,.int .lims sup{vertical-align:baseline;font-size:1em;line-height:1.1}
+.ov{border-top:1px solid currentColor;padding-top:1px}
+
+.q{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.qtext{font-weight:600;margin:0 0 10px}
+.opts{display:grid;gap:8px}
+.opt{display:flex;gap:10px;align-items:flex-start;text-align:left;width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit;cursor:pointer;transition:border-color .2s,background .2s}
+.opt:hover{border-color:var(--flow)}
+.opt:focus-visible,.btn:focus-visible,.dot:focus-visible,.chip:focus-visible{outline:2px solid var(--flow);outline-offset:2px}
+.opt .k{font-family:var(--f-mono);font-size:12px;width:22px;height:22px;flex:none;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--muted);margin-top:1px}
+.opt.ok{border-color:var(--good);background:var(--good-soft)} .opt.ok .k{background:var(--good);border-color:var(--good);color:var(--surface)}
+.opt.no{border-color:var(--bad);background:var(--bad-soft)} .opt.no .k{background:var(--bad);border-color:var(--bad);color:var(--surface)}
+.fb{margin-top:10px;padding:12px 14px;border-radius:8px;font-size:15px}
+.fb.ok{background:var(--good-soft)} .fb.no{background:var(--bad-soft)}
+.fb strong{display:block;margin-bottom:2px}
+.fb.ok strong{color:var(--good)} .fb.no strong{color:var(--bad)}
+.after{margin-top:16px;animation:rise .35s ease-out}
+@keyframes rise{from{transform:translateY(6px)}to{transform:none}}
+
+nav.steps{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:24px;flex-wrap:wrap}
+.dots{display:flex;gap:6px;flex-wrap:wrap}
+.dot{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:var(--surface);font-family:var(--f-mono);font-size:11px;color:var(--muted);cursor:pointer;padding:0}
+.dot.done{background:var(--flow);border-color:var(--flow);color:var(--surface)}
+.dot.cur{box-shadow:0 0 0 2px var(--bg),0 0 0 4px var(--ink)}
+.navbtns{display:flex;gap:8px}
+.btn{font:inherit;font-weight:600;font-size:15px;padding:9px 16px;border-radius:8px;border:1px solid var(--ink);background:var(--ink);color:var(--bg);cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn:disabled{opacity:.35;cursor:default}
+footer .wrap{padding-block:8px 32px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:14px}
+
+@media (max-width:900px){ main.grid{grid-template-columns:minmax(0,1fr);gap:20px} .stage{position:static} }
+@media (max-width:560px){ .stage canvas{aspect-ratio:1/1} .eq{font-size:17px} }
+@media (prefers-reduced-motion: reduce){ .after{animation:none} *{transition:none!important} }
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <p class="eyebrow">Heat Transfer · Holman Ch. 5 · Integral method</p>
+  <h1>Flat-Plate Boundary Layer</h1>
+  <p class="lede">Derive δ/x = 4.64/√Re<sub>x</sub> by making each decision yourself. Every step has a moving picture and one question. Wrong answers explain why they fail, so try them too.</p>
+  <ol class="recipe" id="recipe">
+    <li class="lbl">The recipe</li>
+    <li class="m"><b>1</b>Guess the shape</li>
+    <li class="m"><b>2</b>Momentum balance</li>
+    <li class="m"><b>3</b>Integral → number</li>
+    <li class="m"><b>4</b>Separate &amp; integrate</li>
+    <li class="m"><b>5</b>δ(0) = 0</li>
+  </ol>
+</div></header>
+
+<main class="wrap grid">
+  <section class="stage" aria-label="Diagram">
+    <canvas id="cv" role="img" aria-label="Animated diagram for the current step"></canvas>
+    <div class="controls" id="controls"></div>
+    <p class="caption" id="caption"></p>
+  </section>
+  <section class="card" aria-live="polite">
+    <p class="stepno" id="stepno"></p>
+    <h2 id="title"></h2>
+    <div class="body" id="body"></div>
+    <div class="q">
+      <p class="qtext" id="qtext"></p>
+      <div class="opts" id="opts"></div>
+      <div id="fb"></div>
+    </div>
+    <div id="after"></div>
+    <nav class="steps" aria-label="Steps">
+      <div class="dots" id="dots"></div>
+      <div class="navbtns">
+        <button class="btn ghost" id="prev" type="button">Back</button>
+        <button class="btn" id="next" type="button">Next step</button>
+      </div>
+    </nav>
+  </section>
+</main>
+<footer><div class="wrap">Notation follows Holman, <i>Heat Transfer</i>, Chapter 5. Use ← and → keys to move between steps.</div></footer>
+
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const ui='u<sub>∞</sub>';
+const fr=(a,b)=>`<span class="fr"><span>${a}</span><span>${b}</span></span>`;
+const pd=(a,b)=>fr('∂'+a,'∂'+b);
+const pd2=(a,b)=>fr('∂²'+a,'∂'+b+'²');
+const intg=(lo,hi)=>`<span class="int">∫<span class="lims"><sup>${hi}</sup><sub>${lo}</sub></span></span>`;
+const sq=s=>`√<span class="ov">${s}</span>`;
+const m=s=>`<span class="mth">${s}</span>`;
+
+/* ---------- profiles ---------- */
+const PROF={
+  linear:{label:'Linear', f:e=>e, d0:1},
+  quad:{label:'Quadratic', f:e=>2*e-e*e, d0:2},
+  cubic:{label:'Cubic', f:e=>1.5*e-0.5*e*e*e, d0:1.5},
+  sine:{label:'Sine', f:e=>Math.sin(Math.PI*e/2), d0:Math.PI/2}
+};
+function F(k,e){ if(e<=0) return 0; if(e>=1) return 1; return PROF[k].f(e); }
+const fq=(e,a)=> e>=1?1:(e<=0?0:1.5*e-0.5*e*e*e + a*(0.5*e-1.5*e*e*e+e*e*e*e));
+function deficit(k){ const n=400; let s=0; for(let i=0;i<=n;i++){const e=i/n,f=F(k,e),w=(i===0||i===n)?1:(i%2?4:2); s+=w*f*(1-f);} return s/(3*n); }
+const COEF={}; for(const k in PROF) COEF[k]=Math.sqrt(2*PROF[k].d0/deficit(k));
+const Q3=['linear','quad','cubic','quartic'];
+const CHECKS={linear:[1,1,0,1],quad:[1,1,1,0],cubic:[1,1,1,1],quartic:[1,1,1,1]};
+
+const st={sel:{},done:{},u:1,prLog:Math.log10(7),p8:'cubic'};
+
+/* ---------- steps ---------- */
+const STEPS=[
+{ title:'Guess the answer before deriving it', recipe:[],
+  body:`<p>Watch the particles. Fluid touching the plate stops, and viscosity passes that slowdown up into the flow. The further the fluid travels along the plate, the deeper the slowdown has spread. That slowed region is the boundary layer, of thickness δ.</p>
+  <p>Near the edge of the layer, the two sides of the momentum equation are about the same size:</p>
+  <div class="eq">u ${pd('u','x')} ~ ${fr(ui+'²','x')} &nbsp;&nbsp;&nbsp;&nbsp; ν ${pd2('u','y')} ~ ${fr('ν'+ui,'δ²')}</div>`,
+  q:'Set the two equal. How does δ grow with x?',
+  opts:[
+   {t:'δ ∝ x, a straight wedge', why:`Check the powers: ${ui}²/x = ν${ui}/δ² gives δ² ∝ x, not δ ∝ x.`},
+   {t:'δ ∝ √x', ok:1, why:`δ² ~ νx/${ui}, so δ ~ ${m(sq('νx/'+ui))}. Divide by x and you get δ/x ~ 1/√Re<sub>x</sub>. That is already the form of the final answer. The rest of the derivation only finds the number in front.`},
+   {t:'δ ∝ x²', why:'That would make the layer thicken faster and faster. The balance gives δ² ∝ x.'},
+   {t:'δ stays constant', why:'Then inertia would fade downstream while viscosity kept acting, and the two could not balance. The balance gives δ² ∝ x.'}],
+  caption:()=>`Drag the slider. Faster flow carries fluid downstream before the slowdown can spread up, so the layer is thinner: δ ∝ 1/√${ui}.`,
+  controls:'speed', draw:drawFlow },
+
+{ title:'List what the profile must obey', recipe:[0],
+  body:`<p>We won't solve the PDE exactly. We guess a shape ${m('u/'+ui+' = f(y/δ)')}, the same at every x, and force the guess to obey four facts we know for certain:</p>
+  <ul>
+   <li><b>(a)</b> ${m('u = 0')} at ${m('y = 0')}: fluid sticks to the wall.</li>
+   <li><b>(b)</b> ${m('u = '+ui)} at ${m('y = δ')}: the layer ends where the free stream begins.</li>
+   <li><b>(c)</b> ${m('∂u/∂y = 0')} at ${m('y = δ')}: it joins the free stream smoothly, with no kink.</li>
+   <li><b>(d)</b> ${m('∂²u/∂y² = 0')} at ${m('y = 0')}: no curvature at the wall.</li>
+  </ul>`,
+  q:'(a) to (c) are clear from the picture. Where does (d) come from?',
+  opts:[
+   {t:'The momentum equation, evaluated at the wall', ok:1, why:`At the wall u = v = 0, so the left side ρ(u ∂u/∂x + v ∂u/∂y) is zero. What remains is μ ∂²u/∂y² = dp/dx, and on a flat plate dp/dx = 0. So (d) is the governing equation itself, applied at y = 0.`},
+   {t:'The profile is assumed to be linear near the wall', why:'That is circular. The straight start is a consequence of (d), not its reason.'},
+   {t:'Shear stress is zero at the wall', why:'Shear stress is largest at the wall: τ<sub>w</sub> = μ ∂u/∂y at y = 0. That is the first derivative, and it is not zero.'},
+   {t:'It is a convenient guess to simplify the algebra', why:'It does simplify the algebra, but it is not a guess. It follows from the momentum equation with u = v = 0 at the wall.'}],
+  caption:()=>'The highlight cycles through conditions (a) to (d) on the still-unknown profile.',
+  draw:drawBC },
+
+{ title:'Pick the simplest shape that fits', recipe:[0],
+  body:`<p>Each condition fixes one constant in the guess. Choose a polynomial and the diagram draws it against the four conditions.</p>`,
+  q:'Four conditions. Which polynomial do you pick?',
+  opts:[
+   {t:'Straight line, C₁ + C₂y (2 constants)', why:'It meets (a), (b) and (d), but hits the free stream with a kink. Condition (c) fails.'},
+   {t:'Quadratic (3 constants)', why:`u/${ui} = 2η − η² meets (a), (b) and (c), but it curves at the wall: ∂²u/∂y² = −2${ui}/δ². That breaks the momentum equation at the wall, so (d) fails.`},
+   {t:'Cubic, C₁ + C₂y + C₃y² + C₄y³ (4 constants)', ok:1, why:'Four conditions, four constants: exactly one answer.'},
+   {t:'Quartic (5 constants)', why:'It can meet all four, but one constant is left free, so there is a whole family of profiles. Watch it wobble. You would need a fifth condition (Pohlhausen’s method adds one).'}],
+  after:`<p>Solving for the constants, one condition at a time:</p>
+  <div class="eq" style="text-align:left">(a) C₁ = 0 &nbsp;&nbsp; (d) C₃ = 0 &nbsp;&nbsp; (c) C₂ = −3C₄δ² <br>(b) −2C₄δ³ = ${ui} &nbsp;⇒&nbsp; C₄ = −${fr(ui,'2δ³')}, &nbsp; C₂ = ${fr('3'+ui,'2δ')}</div>
+  <div class="eq">${fr('u',ui)} = ${fr('3','2')} ${fr('y','δ')} − ${fr('1','2')} (${fr('y','δ')})³</div>`,
+  caption:s=>{ const i=s.sel[2]; if(i==null) return 'Pick a polynomial in the question to draw it.';
+    const k=Q3[i], ch=CHECKS[k];
+    return 'Conditions met: '+['a','b','c','d'].map((L,j)=>`<span class="ck ${ch[j]?'y':'n'}">(${L}) ${ch[j]?'✓':'✗'}</span>`).join('')+(k==='quartic'?'<span class="ck n">one constant still free</span>':''); },
+  draw:drawPoly },
+
+{ title:'Balance momentum on a thin slice', recipe:[1],
+  body:`<p>Take a slice of width dx that reaches up to a height H, above the edge of the layer. Count the x-momentum carried across each face. The arrows on planes 1 and 2 show the velocity profile; the dots ride along with the flow.</p>`,
+  q:'The layer is thicker at plane 2, so less mass crosses plane 2 than plane 1. Where does the difference go?',
+  opts:[
+   {t:'Out through the top face, A–A', ok:1, why:`Mass is conserved and nothing crosses the wall, so the difference crosses A–A, and it carries the free-stream velocity ${ui} with it. Holman writes this as mass “entering” through A–A. The derivative comes out negative, so fluid actually leaves; the sign takes care of itself.`},
+   {t:'Into the plate', why:'The plate is solid. No mass crosses it, which is why v = 0 at the wall.'},
+   {t:'It piles up inside the slice', why:'The flow is steady, so nothing accumulates. What comes in must leave somewhere.'},
+   {t:'The fluid becomes denser', why:'The fluid is taken as incompressible: ρ is constant.'}],
+  after:`<p>Newton’s second law for the slice: net momentum flowing out = force on the fluid. The only force is the wall dragging the fluid back, −τ<sub>w</sub> dx. Since ${ui} is constant it moves inside the integral, and you get:</p>
+  <div class="eq">ρ ${fr('d','dx')} ${intg('0','δ')} (${ui} − u) u dy = τ<sub>w</sub> = μ ${pd('u','y')}<sub>y=0</sub></div>
+  <p>Read it in words: the slowed fluid’s momentum deficit grows downstream exactly as fast as the wall removes momentum.</p>`,
+  caption:()=>'Teal: mass and momentum crossing the faces. Orange: wall shear acting on the fluid.',
+  draw:drawCV },
+
+{ title:'Turn the integral into a number', recipe:[2],
+  body:`<p>Put the cubic, f(η), into the momentum integral. δ is still buried in the upper limit and inside the profile:</p>
+  <div class="eq">ρ${ui}² ${fr('d','dx')} ${intg('0','δ')} f (1 − f) dy = μ${ui} ${fr("f ′(0)",'δ')} = ${fr('3','2')} ${fr('μ'+ui,'δ')}</div>`,
+  q:'Which substitution pulls δ out of the integral?',
+  opts:[
+   {t:'η = y/δ', ok:1, why:'Then dy = δ dη and the limits become 0 to 1. The profile depends only on η, so the integral becomes δ × ∫₀¹ f(1 − f) dη, and that last integral is just a number.'},
+   {t:'η = y/x', why:'The profile is a function of y/δ, not y/x, so δ stays inside the integrand.'},
+   {t:'η = x/δ', why:'x is not the integration variable here. The integral runs across the layer, in y.'},
+   {t:'Integrate by parts', why:'Possible, but slow, and δ stays tangled in the result. Scaling y by δ makes the δ dependence come straight out.'}],
+  after:`<p>The area in the diagram is ∫₀¹ f(1 − f) dη = 39/280 ≈ 0.139, so the equation becomes:</p>
+  <div class="eq">${fr('d','dx')} ( ${fr('39','280')} ρ${ui}² δ ) = ${fr('3','2')} ${fr('μ'+ui,'δ')}</div>`,
+  caption:()=>'f is how much of the free-stream speed the fluid keeps; 1 − f is how much it has lost. Their product is the momentum deficit, and its area is 39/280.',
+  draw:drawIntegral },
+
+{ title:'Separate, integrate, start from zero', recipe:[3,4],
+  body:`<p>ρ and ${ui} are constants, so only δ is left inside the derivative:</p>
+  <div class="eq">${fr('39','280')} ρ${ui}² ${fr('dδ','dx')} = ${fr('3','2')} ${fr('μ'+ui,'δ')}</div>`,
+  q:'δ sits in a denominator on the right. How do you separate the variables?',
+  opts:[
+   {t:'Multiply by δ:  δ dδ = (140/13)(ν/u∞) dx', ok:1, why:'140/13 is just (3/2) ÷ (39/280), and μ/ρ = ν. Every δ is now on the left, every x on the right.'},
+   {t:'dδ/δ = (140/13)(ν/u∞) dx', why:'That would give ln δ ∝ x, a layer growing exponentially, which contradicts step 1. The δ on the right is in the denominator, so it moves across as a multiplier.'},
+   {t:'δ² dδ = (140/13)(ν/u∞) dx', why:'One δ too many. Only the single δ in the denominator needs to move across.'},
+   {t:'It cannot be separated', why:'It can: multiply both sides by δ and by dx.'}],
+  after:`<div class="eq">${fr('δ²','2')} = ${fr('140','13')} ${fr('νx',ui)} + C</div>
+  <p>The layer starts at the leading edge: δ = 0 at x = 0, so C = 0.</p>
+  <div class="eq">δ = ${sq('280/13')} ${sq('νx/'+ui)} = 4.64 ${sq('νx/'+ui)} &nbsp;⇒&nbsp; ${fr('δ','x')} = ${fr('4.64','Re<sub>x</sub><sup>1/2</sup>')}</div>
+  <p>The exact Blasius solution gives 5.0. A guessed cubic and one overall momentum balance land within 7%.</p>`,
+  caption:()=>'Both curves grow as √x, as step 1 predicted. They differ only in the constant in front.',
+  draw:drawODE },
+
+{ title:'The thermal layer is the same problem', recipe:[0,1,2,3,4],
+  body:`<p>Put the energy equation next to the momentum equation:</p>
+  <div class="eq">u ${pd('u','x')} + v ${pd('u','y')} = ν ${pd2('u','y')} &nbsp;&nbsp;&nbsp; u ${pd('T','x')} + v ${pd('T','y')} = α ${pd2('T','y')}</div>
+  <p>Swap u → T − T<sub>w</sub> and ν → α, and the four conditions carry over, including the hidden one. At the wall u = v = 0, so the energy equation forces ∂²T/∂y² = 0 there.</p>`,
+  q:'So the temperature profile (T − Tw)/(T∞ − Tw) is…',
+  opts:[
+   {t:'The same cubic, in y/δt', ok:1, why:'Same equation shape, same four conditions, same polynomial: (3/2)(y/δ<sub>t</sub>) − (1/2)(y/δ<sub>t</sub>)³. You already derived it in step 3.'},
+   {t:'Linear', why:'A straight line fails the smooth-join condition at δ<sub>t</sub>, just as it did for velocity.'},
+   {t:'Exponential', why:'The method uses a polynomial fitted to the four conditions, and those conditions are the same as for velocity.'},
+   {t:'A different shape for each Pr', why:'Pr changes how thick the thermal layer is, not its shape. The shape is fixed by the four conditions.'}],
+  after:`<p>The only new number comes from the energy integral, assuming heating starts at the leading edge and δ<sub>t</sub> &lt; δ:</p>
+  <div class="eq">ζ = ${fr('δ<sub>t</sub>','δ')} = ${fr('1','1.026')} Pr<sup>−1/3</sup></div>
+  <p>Drag Pr, or tap a fluid, and watch the orange layer.</p>`,
+  caption:()=>'Pr = ν/α compares how fast momentum and heat diffuse. Pr > 1: heat spreads more slowly, so the thermal layer is thinner.',
+  controls:'pr', draw:drawThermal },
+
+{ title:'What the guess actually controls', recipe:[0],
+  body:`<p>The integral method is a guessed shape plus one overall momentum balance. Change the guess and the whole derivation reruns, giving:</p>
+  <div class="eq">${fr('δ','x')} ${sq('Re<sub>x</sub>')} = ${sq(`2 f ′(0) / ${intg('0','1')} f (1 − f) dη`)}</div>
+  <p>Tap a profile under the diagram to compare.</p>`,
+  q:'Across all these guesses, which part of the answer changes?',
+  opts:[
+   {t:'Only the constant in front', ok:1, why:'The √(νx/u∞) form comes from the physics in step 1. The guess only sets the constant, and a shape closer to the real one lands closer to 5.0. This is why you can rebuild the result instead of memorizing it.'},
+   {t:'The power of Re_x', why:'Every guess gives Re<sub>x</sub><sup>−1/2</sup>. Try all four.'},
+   {t:'Both the constant and the power', why:'Try all four: the exponent never moves.'},
+   {t:'Nothing, they all give 4.64', why:'Look at the bars: linear gives 3.46 and quadratic 5.48.'}],
+  caption:()=>'Bars: the constant each guess produces. Dashed line: the exact Blasius value, 5.0.',
+  controls:'profiles', draw:drawExplore }
+];
+
+/* ---------- canvas plumbing ---------- */
+const cv=$('#cv'), ctx=cv.getContext('2d');
+let W=0,H=0,dpr=1,FS=13;
+const MATH='"STIX Two Text", Cambria, Georgia, serif', MONO='"IBM Plex Mono", Menlo, monospace', SANS='"IBM Plex Sans", system-ui, sans-serif';
+function resize(){ const r=cv.getBoundingClientRect(); dpr=window.devicePixelRatio||1; W=r.width; H=r.height; cv.width=Math.round(W*dpr); cv.height=Math.round(H*dpr); }
+new ResizeObserver(resize).observe(cv);
+let C={};
+function readColors(){ const cs=getComputedStyle(document.documentElement); const g=n=>cs.getPropertyValue('--'+n).trim();
+  C={stage:g('stage'),ink:g('ink'),muted:g('muted'),grid:g('grid'),line:g('line'),flow:g('flow'),heat:g('heat'),plate:g('plate'),good:g('good'),bad:g('bad')}; }
+readColors();
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',readColors);
+new MutationObserver(readColors).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme','class','style']});
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function hexA(h,a){ h=h.replace('#',''); if(h.length===3) h=h.split('').map(c=>c+c).join(''); const n=parseInt(h,16); return `rgba(${n>>16&255},${n>>8&255},${n&255},${a})`; }
+function line(x1,y1,x2,y2,c,w,dash){ ctx.strokeStyle=c; ctx.lineWidth=w||1; ctx.setLineDash(dash||[]); ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.stroke(); ctx.setLineDash([]); }
+function arrow(x1,y1,x2,y2,c,w,hs){ hs=hs||7; if(Math.hypot(x2-x1,y2-y1)<1.5) return; line(x1,y1,x2,y2,c,w); const a=Math.atan2(y2-y1,x2-x1); ctx.fillStyle=c; ctx.beginPath(); ctx.moveTo(x2,y2); ctx.lineTo(x2-hs*Math.cos(a-0.42),y2-hs*Math.sin(a-0.42)); ctx.lineTo(x2-hs*Math.cos(a+0.42),y2-hs*Math.sin(a+0.42)); ctx.closePath(); ctx.fill(); }
+function text(s,x,y,o){ o=o||{}; ctx.font=(o.italic?'italic ':'')+(o.weight||400)+' '+(o.size||FS)+'px '+(o.fam||MATH); ctx.fillStyle=o.c||C.ink; ctx.textAlign=o.align||'left'; ctx.textBaseline=o.base||'middle'; ctx.fillText(s,x,y); }
+function dotc(x,y,r,c,fill){ ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2); ctx.fillStyle=fill||C.stage; ctx.fill(); ctx.strokeStyle=c; ctx.lineWidth=2; ctx.stroke(); }
+function drawPlate(xl,xr,y,c){ ctx.fillStyle=c||C.plate; ctx.beginPath(); ctx.moveTo(xl-14,y+3.5); ctx.lineTo(xl,y); ctx.lineTo(xr,y); ctx.lineTo(xr,y+7); ctx.lineTo(xl,y+7); ctx.closePath(); ctx.fill(); }
+function mkPlot(l,t,w,h,xr,yr){ return {l,t,w,h,X:v=>l+(v-xr[0])/(xr[1]-xr[0])*w,Y:v=>t+h-(v-yr[0])/(yr[1]-yr[0])*h}; }
+const fmt=v=>(Math.round(v*100)/100).toString();
+function drawAxes(p,xt,yt,xl,yl){
+  for(const v of xt){ line(p.X(v),p.t,p.X(v),p.t+p.h,C.grid,1); text(fmt(v),p.X(v),p.t+p.h+12,{fam:MONO,size:FS-2,c:C.muted,align:'center'}); }
+  for(const v of yt){ line(p.l,p.Y(v),p.l+p.w,p.Y(v),C.grid,1); text(fmt(v),p.l-8,p.Y(v),{fam:MONO,size:FS-2,c:C.muted,align:'right'}); }
+  line(p.l,p.t+p.h,p.l+p.w,p.t+p.h,C.ink,1.2); line(p.l,p.t,p.l,p.t+p.h,C.ink,1.2);
+  if(xl) text(xl,p.l+p.w,p.t+p.h+30,{align:'right',italic:1,c:C.ink});
+  if(yl) text(yl,p.l-6,p.t-14,{align:'left',italic:1,c:C.ink});
+}
+function stroke(pts,c,w,dash){ ctx.strokeStyle=c; ctx.lineWidth=w; ctx.setLineDash(dash||[]); ctx.lineJoin='round'; ctx.beginPath(); pts.forEach((q,i)=>i?ctx.lineTo(q[0],q[1]):ctx.moveTo(q[0],q[1])); ctx.stroke(); ctx.setLineDash([]); }
+function profCurve(p,f,c,w,dash){ const pts=[]; for(let i=0;i<=120;i++){ const e=1.25*i/120; pts.push([p.X(e>=1?1:f(e)),p.Y(e)]); } stroke(pts,c,w,dash); }
+
+/* ---------- step 1: flow scene ---------- */
+let parts=null;
+function drawFlow(t,dt){
+  const plateY=H*0.8, top=H*0.1, avail=plateY-top, xl=W*0.14, us=st.u;
+  const dmax=0.6*avail/Math.sqrt(us), del=x=>x<=xl?0:dmax*Math.sqrt((x-xl)/(W-xl));
+  const U=W*0.11*us;
+  if(!parts){ parts=[]; for(let i=0;i<190;i++) parts.push({x:Math.random()*1.1-0.1,y:Math.random(),a:Math.random()*12}); }
+  for(const p of parts){
+    const x=p.x*W, h=p.y*avail, d=del(x), f=d>0?F('cubic',h/d):1, s=U*Math.max(f,0.03);
+    p.x+=s*dt/W; p.a+=dt;
+    if(p.x>1.02||p.a>16){ p.x=-Math.random()*0.12; p.y=Math.random(); p.a=0; }
+    ctx.globalAlpha=0.2+0.65*f; line(x-Math.max(2,s*0.09),plateY-h,x,plateY-h,C.flow,1.6);
+  }
+  ctx.globalAlpha=1;
+  const edge=[]; for(let i=0;i<=80;i++){ const x=xl+(W-xl)*i/80; edge.push([x,plateY-del(x)]); } stroke(edge,C.ink,1.4,[6,5]);
+  const Lm=Math.min(W*0.11,72);
+  for(const fx of [0.36,0.82]){
+    const xs=xl+(W-xl)*fx, d=del(xs);
+    line(xs,plateY,xs,plateY-d*1.4,C.muted,1);
+    for(let k=1;k<=6;k++){ const h=k/6*d*1.3; arrow(xs,plateY-h,xs+F('cubic',h/d)*Lm,plateY-h,C.ink,1.3,5); }
+    const pts=[]; for(let i=0;i<=40;i++){ const h=i/40*d*1.4; pts.push([xs+F('cubic',h/d)*Lm,plateY-h]); } stroke(pts,C.ink,1.8);
+  }
+  const xe=xl+(W-xl)*0.6; text('δ(x)',xe,plateY-del(xe)-14,{italic:1,size:FS+2});
+  for(const fy of [0.3,0.55,0.8]) arrow(W*0.02,top+avail*fy,W*0.02+Lm*0.85,top+avail*fy,C.muted,1.4,6);
+  text('u∞',W*0.02,top+avail*0.3-15,{italic:1,c:C.muted,size:FS+1});
+  drawPlate(xl,W,plateY);
+  text('plate, u = 0',xl+6,plateY+20,{fam:SANS,size:FS-1,c:C.muted});
+  text('u∞ × '+us.toFixed(1),W-12,18,{fam:MONO,size:FS-1,c:C.muted,align:'right'});
+}
+
+/* ---------- steps 2–3: profile plots ---------- */
+function profPlot(){ const r=Math.min(140,W*0.3); return mkPlot(48,34,W-48-r,H-34-50,[0,1.1],[0,1.25]); }
+function profAxes(p){ drawAxes(p,[0,0.5,1],[0,0.5,1],'u / u∞','y / δ'); line(p.X(0),p.Y(1),p.X(1.1),p.Y(1),C.muted,1,[4,4]); text('edge, y = δ',p.X(0.03),p.Y(1)-10,{fam:SANS,size:FS-2,c:C.muted}); }
+function drawConds(p,hl,checks){
+  const cs=i=>checks?(checks[i]?C.good:C.bad):(i===hl?C.flow:C.muted);
+  const lw=i=>(!checks&&i===hl)?2.8:1.6, sz=i=>(!checks&&i===hl)?FS+1:FS-1, wt=i=>(!checks&&i===hl)?600:400;
+  line(p.X(0),p.Y(0),p.X(0.63),p.Y(0.42),cs(3),lw(3),[5,4]);
+  text('(d) ∂²u/∂y² = 0',p.X(0.63)+6,p.Y(0.42)+2,{c:cs(3),size:sz(3),weight:wt(3)});
+  line(p.X(1),p.Y(0.84),p.X(1),p.Y(1.17),cs(2),lw(2)+0.6);
+  text('(c) ∂u/∂y = 0',p.X(1)+10,p.Y(1)+14,{c:cs(2),size:sz(2),weight:wt(2)});
+  dotc(p.X(1),p.Y(1),5,cs(1)); text('(b) u = u∞',p.X(1)+10,p.Y(1)-13,{c:cs(1),size:sz(1),weight:wt(1)});
+  dotc(p.X(0),p.Y(0),5,cs(0)); text('(a) u = 0',p.X(0.14),p.Y(0)-11,{c:cs(0),size:sz(0),weight:wt(0)});
+}
+function drawBC(t){ const p=profPlot(); profAxes(p); profCurve(p,e=>F('cubic',e),C.muted,1.4,[2,4]); text('?',p.X(0.42),p.Y(0.62),{size:FS+14,c:C.muted}); drawConds(p,RM?-1:Math.floor(t/1.8)%4,null); }
+function drawPoly(t){
+  const p=profPlot(); profAxes(p); const i=st.sel[2], k=i==null?null:Q3[i];
+  if(k==='quartic'){ for(const a of [-1,1]) profCurve(p,e=>fq(e,a),C.muted,1,[3,3]); const a=RM?0.8:1.1*Math.sin(t*1.6); profCurve(p,e=>fq(e,a),C.flow,2.8); text('free constant = '+a.toFixed(2),p.l+p.w,18,{fam:MONO,size:FS-1,c:C.bad,align:'right'}); }
+  else if(k) profCurve(p,e=>F(k,e),C.flow,2.8);
+  else text('Choose a polynomial →',p.X(0.45),p.Y(0.7),{fam:SANS,size:FS,c:C.muted,align:'center'});
+  drawConds(p,-1,k?CHECKS[k]:null);
+}
+
+/* ---------- step 4: control volume ---------- */
+function drawCV(t){
+  const plateY=H*0.76, top=H*0.14, xl=W*0.05, dmax=(plateY-top)*0.62;
+  const del=x=>x<=xl?0:dmax*Math.sqrt((x-xl)/(W-xl));
+  const xa=W*0.36, xb=W*0.66, boxTop=plateY-del(xb)*1.5, Hb=plateY-boxTop;
+  ctx.fillStyle=hexA(C.flow,0.07); ctx.fillRect(xa,boxTop,xb-xa,Hb);
+  const edge=[]; for(let i=0;i<=80;i++){ const x=xl+(W-xl)*i/80; edge.push([x,plateY-del(x)]); } stroke(edge,C.muted,1.3,[6,5]);
+  text('δ(x)',W-10,plateY-del(W)-12,{italic:1,c:C.muted,align:'right'});
+  ctx.strokeStyle=C.ink; ctx.lineWidth=1.3; ctx.setLineDash([3,3]); ctx.strokeRect(xa,boxTop,xb-xa,Hb); ctx.setLineDash([]);
+  const Lm=Math.min((xb-xa)*0.45,80), n=7;
+  for(let k=0;k<n;k++){
+    const h=(k+0.5)/n*Hb, y=plateY-h, f1=F('cubic',h/del(xa)), f2=F('cubic',h/del(xb));
+    arrow(xa-f1*Lm,y,xa,y,C.flow,1.6,6); arrow(xb,y,xb+f2*Lm,y,C.flow,1.6,6);
+    const ph=RM?0.5:(t*0.8+k*0.19)%1;
+    ctx.fillStyle=C.flow; ctx.beginPath(); ctx.arc(xa-f1*Lm*(1-ph),y,2.6,0,7); ctx.arc(xb+f2*Lm*ph,y,2.6,0,7); ctx.fill();
+  }
+  for(let j=0;j<4;j++){ const x=xa+(j+0.5)/4*(xb-xa); arrow(x,boxTop+2,x,boxTop-16,C.flow,1.5,5); const ph=RM?0.5:(t*0.6+j*0.25)%1; ctx.fillStyle=C.flow; ctx.beginPath(); ctx.arc(x,boxTop+2-18*ph,2.2,0,7); ctx.fill(); }
+  text('mass leaves through A–A, carrying u∞',(xa+xb)/2,boxTop-28,{fam:SANS,size:FS-1,c:C.flow,align:'center'});
+  for(let j=0;j<3;j++){ const x=xa+(j+0.5)/3*(xb-xa); arrow(x+13,plateY-6,x-13,plateY-6,C.heat,2.2,6); }
+  text('τw dx',(xa+xb)/2,plateY-20,{italic:1,c:C.heat,align:'center'});
+  drawPlate(xl,W,plateY);
+  text('1',xa,plateY+22,{weight:600,align:'center'}); text('2',xb,plateY+22,{weight:600,align:'center'});
+  arrow((xa+xb)/2-6,plateY+22,xa+12,plateY+22,C.muted,1,5); arrow((xa+xb)/2+6,plateY+22,xb-12,plateY+22,C.muted,1,5);
+  text('dx',(xa+xb)/2,plateY+38,{italic:1,c:C.muted,align:'center'});
+  text('A',xa-10,boxTop-6,{weight:600,align:'center'}); text('A',xb+10,boxTop-6,{weight:600,align:'center'});
+  text('H',xa+12,boxTop+Hb*0.3,{italic:1,c:C.muted});
+  const mf=x=>Hb-0.375*del(x), pct=Math.round(mf(xb)/mf(xa)*100);
+  text(`mass through 2 = ${pct}% of mass through 1`,12,18,{fam:MONO,size:FS-1,c:C.muted});
+}
+
+/* ---------- step 5: integral area ---------- */
+function drawIntegral(t){
+  const p=mkPlot(50,36,W-50-24,H-36-52,[0,1],[0,1.05]);
+  drawAxes(p,[0,0.5,1],[0,0.5,1],'η = y / δ','');
+  const f=e=>F('cubic',e), g=e=>f(e)*(1-f(e));
+  const prog=RM?1:Math.min(1,(t%7)/4);
+  ctx.fillStyle=hexA(C.flow,0.28); ctx.beginPath(); ctx.moveTo(p.X(0),p.Y(0));
+  const N=100; let I=0, prev=0;
+  for(let i=0;i<=N;i++){ const e=prog*i/N, v=g(e); ctx.lineTo(p.X(e),p.Y(v)); if(i) I+=(prev+v)/2*(prog/N); prev=v; }
+  ctx.lineTo(p.X(prog),p.Y(0)); ctx.closePath(); ctx.fill();
+  const pts=(fn)=>{const a=[]; for(let i=0;i<=100;i++){const e=i/100; a.push([p.X(e),p.Y(fn(e))]);} return a;};
+  stroke(pts(f),C.flow,1.5,[5,4]); stroke(pts(e=>1-f(e)),C.heat,1.5,[5,4]); stroke(pts(g),C.ink,2.4);
+  text('f = u/u∞',p.X(0.62)+4,p.Y(f(0.62))-14,{italic:1,c:C.flow});
+  text('1 − f',p.X(0.2)+8,p.Y(1-f(0.2))-12,{italic:1,c:C.heat});
+  text('f (1 − f)',p.X(0.42),p.Y(g(0.42))-14,{italic:1,c:C.ink,align:'center'});
+  if(prog<1) line(p.X(prog),p.t,p.X(prog),p.t+p.h,C.muted,1,[2,3]);
+  text('area = '+I.toFixed(4),p.l+p.w,p.t+6,{fam:MONO,size:FS,align:'right',c:C.ink});
+  if(prog>=1) text('= 39/280',p.l+p.w,p.t+28,{size:FS+6,weight:600,align:'right',c:C.flow});
+}
+
+/* ---------- step 6: delta vs x ---------- */
+function drawODE(t){
+  const r=Math.min(150,W*0.32), p=mkPlot(52,36,W-52-r,H-36-52,[0,1],[0,5.6]);
+  drawAxes(p,[0,0.5,1],[0,2,4],'x','δ ÷ √(ν/u∞)');
+  const prog=RM?1:Math.min(1,(t%7)/3.5);
+  const c=(k,dash,col,w)=>{ const a=[]; for(let i=0;i<=120;i++){ const x=prog*i/120; a.push([p.X(x),p.Y(k*Math.sqrt(x))]); } stroke(a,col,w,dash); return [p.X(prog),p.Y(k*Math.sqrt(prog))]; };
+  const e1=c(5.0,[6,4],C.muted,1.8), e2=c(4.64,null,C.flow,2.8);
+  ctx.fillStyle=C.flow; ctx.beginPath(); ctx.arc(e2[0],e2[1],4,0,7); ctx.fill();
+  if(prog>=1){
+    text('5.0 √x  exact (Blasius)',p.X(1)+8,p.Y(5.0)-8,{c:C.muted,size:FS-1});
+    text('4.64 √x  integral method',p.X(1)+8,p.Y(4.64)+10,{c:C.flow,size:FS-1,weight:600});
+    text('7% low',p.X(0.62),p.Y(1.2),{fam:MONO,size:FS-1,c:C.muted,align:'center'});
+  }
+}
+
+/* ---------- step 7: thermal layer ---------- */
+function drawThermal(t){
+  const Pr=Math.pow(10,st.prLog), z=Math.pow(Pr,-1/3)/1.026, zc=Math.min(z,2.1);
+  const plateY=H*0.8, top=H*0.24, avail=plateY-top, xl=W*0.1, dmax=avail*0.42;
+  const del=x=>x<=xl?0:dmax*Math.sqrt((x-xl)/(W-xl)), dT=x=>zc*del(x);
+  const gr=ctx.createLinearGradient(0,plateY,0,plateY-Math.max(4,dmax*zc));
+  gr.addColorStop(0,hexA(C.heat,0.42)); gr.addColorStop(1,hexA(C.heat,0.05));
+  ctx.fillStyle=gr; ctx.beginPath(); ctx.moveTo(xl,plateY);
+  for(let i=0;i<=80;i++){ const x=xl+(W-xl)*i/80; ctx.lineTo(x,plateY-dT(x)); } ctx.lineTo(W,plateY); ctx.closePath(); ctx.fill();
+  const ed=(fn)=>{const a=[]; for(let i=0;i<=80;i++){const x=xl+(W-xl)*i/80; a.push([x,plateY-fn(x)]);} return a;};
+  stroke(ed(del),C.flow,1.6,[6,5]); stroke(ed(dT),C.heat,1.8,[6,5]);
+  const close=Math.abs(zc-1)<0.18, sgn=zc>1?1:-1;
+  text('δ',W-8,plateY-del(W)-10+(close?-sgn*10:0),{italic:1,c:C.flow,align:'right',size:FS+2});
+  text('δt',W-8,plateY-dT(W)-10+(close?sgn*12:0),{italic:1,c:C.heat,align:'right',size:FS+2});
+  const xs=xl+(W-xl)*0.58, d=del(xs), d2=dT(xs), hm=Math.max(d,d2)*1.25, Lm=Math.min(W*0.15,95);
+  line(xs,plateY,xs,plateY-hm,C.muted,1);
+  const cu=[],ct=[]; for(let i=0;i<=50;i++){ const h=hm*i/50; cu.push([xs+F('cubic',h/d)*Lm,plateY-h]); ct.push([xs+F('cubic',h/d2)*Lm,plateY-h]); }
+  stroke(cu,C.flow,2.4); stroke(ct,C.heat,2.4);
+  text('u',xs+F('cubic',0.5)*Lm+8,plateY-d*0.5,{italic:1,c:C.flow,weight:600});
+  text('T',xs+F('cubic',0.5)*Lm-8,plateY-d2*0.5,{italic:1,c:C.heat,weight:600,align:'right'});
+  for(const fy of [0.15,0.45]) arrow(6,top+avail*fy,6+Lm*0.6,top+avail*fy,C.muted,1.4,6);
+  text('u∞, T∞',6,top-12,{italic:1,c:C.muted});
+  drawPlate(xl,W,plateY,C.heat);
+  text('heated wall, Tw',xl+6,plateY+20,{fam:SANS,size:FS-1,c:C.heat});
+  const prs=Pr<1?Pr.toPrecision(2):(Pr<10?Pr.toFixed(1):Math.round(Pr).toString());
+  text('Pr = '+prs,12,18,{fam:MONO,size:FS+1,weight:500});
+  text('δt / δ = '+z.toFixed(2),12,38,{fam:MONO,size:FS,c:C.heat});
+  const fl=Pr<0.1?'liquid metals':Pr<1.5?'gases':Pr<15?'water':Pr<60?'organic liquids':'oils';
+  text(fl,W-12,18,{fam:SANS,size:FS-1,c:C.muted,align:'right'});
+  if(z>1) text('ζ > 1: outside the ζ < 1 assumption',W-12,38,{fam:SANS,size:FS-1,c:C.bad,align:'right'});
+}
+
+/* ---------- step 8: profile explorer ---------- */
+function drawExplore(t){
+  const keys=['linear','quad','cubic','sine'], wide=W>=520;
+  const ia=wide?{x:0,y:0,w:W*0.42,h:H}:{x:0,y:0,w:W,h:H*0.5};
+  const ba=wide?{x:W*0.42,y:0,w:W*0.58,h:H}:{x:0,y:H*0.5,w:W,h:H*0.5};
+  const p=mkPlot(ia.x+46,ia.y+34,ia.w-46-22,ia.h-34-48,[0,1.1],[0,1.2]);
+  drawAxes(p,[0,0.5,1],[0,0.5,1],'u / u∞','y / δ');
+  for(const k of keys) if(k!==st.p8) profCurve(p,e=>F(k,e),C.muted,1,[3,3]);
+  profCurve(p,e=>F(st.p8,e),C.flow,2.8);
+  const lw=Math.min(92,ba.w*0.24), bx=ba.x+lw+12, bw=ba.w-lw-12-58, rowH=Math.min(46,(ba.h-64)/4), y0=ba.y+(wide?54:40);
+  const S=v=>bx+v/6*bw;
+  text('δ/x · √Rex',bx,y0-24,{italic:1,size:FS});
+  for(const v of [0,2,4,6]){ line(S(v),y0-8,S(v),y0+rowH*4,C.grid,1); text(String(v),S(v),y0+rowH*4+12,{fam:MONO,size:FS-2,c:C.muted,align:'center'}); }
+  keys.forEach((k,i)=>{
+    const y=y0+i*rowH, on=k===st.p8, val=COEF[k], bh=Math.max(10,rowH*0.5);
+    ctx.fillStyle=on?C.flow:hexA(C.muted,0.45); ctx.fillRect(bx,y+(rowH-bh)/2,S(val)-bx,bh);
+    text(PROF[k].label,bx-10,y+rowH/2,{fam:SANS,size:FS,align:'right',c:on?C.ink:C.muted,weight:on?600:400});
+    text(val.toFixed(2),S(val)+6,y+rowH/2,{fam:MONO,size:FS-1,c:on?C.ink:C.muted});
+  });
+  line(S(5),y0-10,S(5),y0+rowH*4+2,C.heat,1.6,[5,4]);
+  text('exact 5.0',S(5),y0-24,{fam:MONO,size:FS-2,c:C.heat,align:'center'});
+}
+
+/* ---------- UI ---------- */
+let cur=0, stepStart=performance.now();
+function renderControls(){
+  const s=STEPS[cur], el=$('#controls');
+  if(s.controls==='speed'){
+    el.innerHTML=`<label for="uSlider">Free-stream speed</label><input type="range" id="uSlider" min="0.5" max="3" step="0.05" value="${st.u}"><output id="uOut">× ${st.u.toFixed(1)}</output>`;
+    $('#uSlider').addEventListener('input',e=>{ st.u=+e.target.value; $('#uOut').textContent='× '+st.u.toFixed(1); });
+  } else if(s.controls==='pr'){
+    const pres=[['Mercury',0.025],['Air',0.7],['Water',7],['Engine oil',500]];
+    el.innerHTML=`<label for="prSlider">Prandtl number</label><input type="range" id="prSlider" min="-2" max="3" step="0.01" value="${st.prLog}">`+pres.map(([n,v])=>`<button type="button" class="chip" data-pr="${v}">${n} ${v}</button>`).join('');
+    $('#prSlider').addEventListener('input',e=>{ st.prLog=+e.target.value; });
+    el.querySelectorAll('[data-pr]').forEach(b=>b.addEventListener('click',()=>{ st.prLog=Math.log10(+b.dataset.pr); $('#prSlider').value=st.prLog; }));
+  } else if(s.controls==='profiles'){
+    const ks=['linear','quad','cubic','sine'];
+    el.innerHTML=ks.map(k=>`<button type="button" class="chip${k===st.p8?' on':''}" data-k="${k}">${PROF[k].label}</button>`).join('');
+    el.querySelectorAll('[data-k]').forEach(b=>b.addEventListener('click',()=>{ st.p8=b.dataset.k; el.querySelectorAll('[data-k]').forEach(x=>x.classList.toggle('on',x===b)); }));
+  } else el.innerHTML='';
+}
+function renderQuiz(){
+  const s=STEPS[cur], sel=st.sel[cur];
+  $('#opts').innerHTML=s.opts.map((o,i)=>{ const cls=sel===i?(o.ok?' ok':' no'):''; return `<button type="button" class="opt${cls}" data-i="${i}"><span class="k">${'ABCD'[i]}</span><span>${o.t}</span></button>`; }).join('');
+  $('#opts').querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{ const i=+b.dataset.i; st.sel[cur]=i; if(s.opts[i].ok) st.done[cur]=true; renderQuiz(); renderDots(); }));
+  if(sel!=null){ const o=s.opts[sel]; $('#fb').innerHTML=`<div class="fb ${o.ok?'ok':'no'}"><strong>${o.ok?'Right.':'Not quite.'}</strong>${o.why}</div>`; }
+  else $('#fb').innerHTML='';
+  $('#after').innerHTML=(st.done[cur]&&s.after)?`<div class="after">${s.after}</div>`:'';
+  $('#caption').innerHTML=s.caption?s.caption(st):'';
+}
+function renderDots(){
+  $('#dots').innerHTML=STEPS.map((s,i)=>`<button type="button" class="dot${st.done[i]?' done':''}${i===cur?' cur':''}" data-i="${i}" aria-label="Step ${i+1}: ${s.title}">${i+1}</button>`).join('');
+  $('#dots').querySelectorAll('.dot').forEach(b=>b.addEventListener('click',()=>go(+b.dataset.i)));
+}
+function render(){
+  const s=STEPS[cur];
+  $('#stepno').textContent=`Step ${cur+1} of ${STEPS.length}`+(cur===0?' · scaling first':'');
+  $('#title').textContent=s.title; $('#body').innerHTML=s.body; $('#qtext').textContent=s.q;
+  document.querySelectorAll('#recipe li.m').forEach((li,i)=>li.classList.toggle('on',s.recipe.includes(i)));
+  $('#prev').disabled=cur===0;
+  $('#next').textContent=cur===STEPS.length-1?'Start over':'Next step';
+  renderControls(); renderQuiz(); renderDots();
+}
+function go(i){ cur=(i+STEPS.length)%STEPS.length; stepStart=performance.now(); render(); if(window.innerWidth<=900) $('.stage').scrollIntoView({behavior:RM?'auto':'smooth',block:'start'}); }
+$('#prev').addEventListener('click',()=>go(cur-1));
+$('#next').addEventListener('click',()=>go(cur+1));
+document.addEventListener('keydown',e=>{ if(e.target.tagName==='INPUT') return; if(e.key==='ArrowRight'&&cur<STEPS.length-1) go(cur+1); if(e.key==='ArrowLeft'&&cur>0) go(cur-1); });
+
+let last=performance.now();
+function loop(now){
+  const dt=Math.min(0.05,(now-last)/1000); last=now;
+  if(W>0&&H>0){
+    ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,W,H); ctx.fillStyle=C.stage; ctx.fillRect(0,0,W,H);
+    FS=Math.max(11,Math.min(14,W/42));
+    STEPS[cur].draw(RM?6:(now-stepStart)/1000, RM?0:dt);
+  }
+  requestAnimationFrame(loop);
+}
+render(); resize(); requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
