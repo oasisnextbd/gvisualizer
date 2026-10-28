@@ -4,6 +4,7 @@ Heat transfer for ChE L3T1 (BUET), learned by doing. Each topic is a short hands
 
 ## Modules
 
+- **[Question Bank](question-bank/)**: all 12 CHE 301 finals from 2011-12 to 2023-24 (278 question parts), grouped by taught topic and by year, with search and filters. Each part links to a worked solution on the [solutions page](question-bank/solutions.html), written with the methods from the course slides (Holman/Çengel correlations, Kern method for shell-and-tube). Questions outside the current slides are marked.
 - **[Boundary Layer Lab](boundary-layer/)**: 12 scenes in three chapters, from probing a real boundary layer to δ/x = 4.64/√Re_x and the thermal layer. Notation follows Holman, *Heat Transfer*, Chapter 5.
   - *See it*: probe the flow along a plate, then sketch the velocity profile and compare it with the real one.
   - *Build it*: slow the fluid in a dx·dy box to discover continuity, push parcels through its faces to see what carries x-momentum, place the pressure and shear forces, then drag each assumption onto the term it removes. A slider then proves why the thin-layer assumption is safe.
