@@ -66,7 +66,7 @@ button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(-
 
 <main class="wrap">
   <div class="hud">
-    <a class="back" id="backLink" href="../" aria-label="Back to the Quest">←</a>
+    <a class="back" id="backLink" href="../" aria-label="Back to the lab">←</a>
     <div class="ttl"><small>Bonus</small>Fluid Sandbox</div>
     <span class="stat">Re <b id="reStat">–</b></span>
     <span class="stat" id="goalStat">0/3 ★</span>
@@ -108,7 +108,7 @@ button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(-
 (function(){
 const $=s=>document.querySelector(s);
 const NX=360, NY=160, U=0.08;
-const QUEST_URL='https://claude.ai/artifact/1ptyEPXUpXfdaCK4zmnyR3';
+const QUEST_URL='https://claude.ai/artifact/N4eMAx3Rn2xp5qsES1M2V9';
 if(!(location.protocol==='file:'||/github\.io$/.test(location.hostname))) $('#backLink').href=QUEST_URL;
 
 const cs=getComputedStyle(document.documentElement), tok=n=>cs.getPropertyValue('--'+n).trim();
@@ -333,7 +333,7 @@ function loop(now){
   if((st.scene==='plate'||st.scene==='block')&&st.view===1&&st.prMoved.size>=3) hit('pr','Higher Pr, thinner thermal layer.');
   requestAnimationFrame(loop);
 }
-window.__sandbox=st; setTool('probe'); setView(0); loadScene('plate'); renderGoals(); requestAnimationFrame(loop);
+setTool('probe'); setView(0); loadScene('plate'); renderGoals(); requestAnimationFrame(loop);
 })();
 </script>
 </body>
