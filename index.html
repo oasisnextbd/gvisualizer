@@ -1,3 +1,34 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=boundary-layer/"><title>Boundary Layer Lab</title></head>
-<body><a href="boundary-layer/">Boundary Layer Lab</a></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>gvisualizer · CHE 301 Heat Transfer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="question-bank/qb.css">
+<style>
+.hero{padding-block:40px 18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:22px}
+.go{display:block;background:var(--panel);border:2px solid var(--edge);border-radius:18px;padding:18px;text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s}
+.go:hover{border-color:var(--gold);transform:translateY(-2px)}
+.go b{display:block;font-family:var(--f-display);font-size:22px;margin-bottom:6px}
+.go span{color:var(--dim);font-size:15px}
+.go i{font-style:normal;font-family:var(--f-display);font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--flow)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="hero">
+    <h1>CHE 301 Heat Transfer, <span style="color:var(--flow)">learned by doing</span></h1>
+    <p class="lede">For BUET Level-3 Term-1 Chemical Engineering. Work through the ideas hands-on, then practise on every past final with worked solutions.</p>
+  </div>
+  <div class="cards">
+    <a class="go" href="question-bank/"><i>Practise</i><b>Question Bank</b><span>12 past finals (2011–12 to 2023–24), topic by topic and year by year, each with a step-by-step solution.</span></a>
+    <a class="go" href="boundary-layer/"><i>Learn</i><b>Boundary Layer Lab</b><span>Build the flat-plate boundary-layer equations by dragging, sketching and fitting, from the dx·dy element to δ/x = 4.64/√Reₓ.</span></a>
+    <a class="go" href="boundary-layer/sandbox/"><i>Explore</i><b>Fluid Sandbox</b><span>A live GPU flow simulation. Draw walls and heaters, probe the boundary layer, watch vortices shed.</span></a>
+  </div>
+</main>
+</body>
+</html>

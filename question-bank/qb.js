@@ -1,0 +1,58 @@
+/* CHE 301 question bank: shared data registry, loader and renderer */
+(function(){
+const TOPICS=[
+  {id:'intro',name:'Introduction & modes',ch:'01'},
+  {id:'conduction',name:'Steady conduction',ch:'02'},
+  {id:'insulation',name:'Critical insulation',ch:'02'},
+  {id:'generation',name:'Heat generation',ch:'02'},
+  {id:'convection-basics',name:'Convection basics & dimensionless numbers',ch:'05'},
+  {id:'boundary-layer',name:'Boundary layers & analogies',ch:'05'},
+  {id:'forced-convection',name:'Forced convection correlations',ch:'06'},
+  {id:'natural-convection',name:'Natural convection',ch:'07'},
+  {id:'condensation',name:'Condensation',ch:'08'},
+  {id:'boiling',name:'Boiling',ch:'08'},
+  {id:'heat-exchangers',name:'Heat exchangers: LMTD, double pipe, ε–NTU',ch:'HX'},
+  {id:'shell-tube',name:'Shell & tube design (Kern)',ch:'HX'},
+  {id:'evaporator',name:'Evaporators',ch:'10'},
+  {id:'other',name:'Other (radiation, transient)',ch:'–'}
+];
+const YEARS=['2023-24','2022-23','2021-22','2020-21','2018-19','2017-18','2016-17','2015-16','2014-15','2013-14','2012-13','2011-12'];
+const papers={}, parts=[], byId={};
+const QB={TOPICS,YEARS,papers,parts,byId,
+  topic:id=>TOPICS.find(t=>t.id===id)||TOPICS[TOPICS.length-1],
+  paper(p){ papers[p.year]=p; p.questions.forEach(q=>q.parts.forEach((pt,i)=>{ const o=Object.assign({},pt,{year:p.year,q:q.q,section:q.section,compulsory:q.compulsory,stem:q.stem||'',qid:q.id,idx:i,siblings:q.parts.map(x=>x.id)}); parts.push(o); byId[o.id]=o; })); },
+  load(done){ let left=YEARS.length; YEARS.forEach(y=>{ const s=document.createElement('script'); s.src='data/'+y+'.js'; s.onload=s.onerror=()=>{ if(--left===0){ parts.sort(cmp); done(); } }; document.head.appendChild(s); }); },
+  label:p=>`${p.year} · Q${p.q}${p.label?p.label:''}`,
+  md, typeset
+};
+function cmp(a,b){ const ya=YEARS.indexOf(a.year), yb=YEARS.indexOf(b.year); return ya-yb||a.q-b.q||a.idx-b.idx; }
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+function inline(s,math){
+  s=s.replace(/\$\$([\s\S]+?)\$\$/g,(m,x)=>{ math.push('\\['+x+'\\]'); return '\u0000'+(math.length-1)+'\u0000'; });
+  s=s.replace(/\$([^$\n]+?)\$/g,(m,x)=>{ math.push('\\('+x+'\\)'); return '\u0000'+(math.length-1)+'\u0000'; });
+  s=esc(s).replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/(^|[^*\w])\*([^*\s][^*]*?)\*(?!\w)/g,'$1<em>$2</em>');
+  return s.replace(/\u0000(\d+)\u0000/g,(m,i)=>esc(math[+i]));
+}
+function md(src){
+  if(!src) return '';
+  const L=String(src).replace(/\r/g,'').split('\n'); let out='',i=0;
+  const para=[]; const flush=()=>{ if(para.length){ out+='<p>'+inline(para.join(' '),[])+'</p>'; para.length=0; } };
+  while(i<L.length){ const ln=L[i], t=ln.trim();
+    if(!t){ flush(); i++; continue; }
+    if(t.startsWith('$$')){ flush(); let buf=[t.slice(2)]; if(t.length>2&&t.endsWith('$$')&&t!=='$$'){ out+='<div class="dm">'+esc('\\['+t.slice(2,-2)+'\\]')+'</div>'; i++; continue; } i++; while(i<L.length&&!L[i].trim().endsWith('$$')){ buf.push(L[i]); i++; } if(i<L.length){ buf.push(L[i].trim().slice(0,-2)); i++; } out+='<div class="dm">'+esc('\\['+buf.join('\n')+'\\]')+'</div>'; continue; }
+    if(/^#{2,4}\s/.test(t)){ flush(); const n=t.match(/^#+/)[0].length; out+=`<h${Math.min(6,n+1)}>`+inline(t.replace(/^#+\s*/,''),[])+`</h${Math.min(6,n+1)}>`; i++; continue; }
+    if(t.startsWith('|')){ flush(); const rows=[]; while(i<L.length&&L[i].trim().startsWith('|')){ rows.push(L[i].trim()); i++; }
+      const cells=r=>r.replace(/^\||\|$/g,'').split('|').map(c=>c.trim()); let h='<div class="tw"><table>'; let body=rows;
+      if(rows.length>1&&/^\|?\s*:?-{2,}/.test(rows[1])){ h+='<thead><tr>'+cells(rows[0]).map(c=>'<th>'+inline(c,[])+'</th>').join('')+'</tr></thead>'; body=rows.slice(2); }
+      h+='<tbody>'+body.map(r=>'<tr>'+cells(r).map(c=>'<td>'+inline(c,[])+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>'; out+=h; continue; }
+    if(t.startsWith('>')){ flush(); const b=[]; while(i<L.length&&L[i].trim().startsWith('>')){ b.push(L[i].trim().replace(/^>\s?/,'')); i++; } out+='<div class="note">'+md(b.join('\n'))+'</div>'; continue; }
+    if(/^(-|\*|\d+[.)])\s/.test(t)){ flush(); const ol=/^\d/.test(t); let h=ol?'<ol>':'<ul>';
+      while(i<L.length&&/^\s*(-|\*|\d+[.)])\s/.test(L[i])){ let item=L[i].trim().replace(/^(-|\*|\d+[.)])\s/,''); i++; while(i<L.length&&L[i].trim()&&/^\s{2,}/.test(L[i])&&!/^\s*(-|\*|\d+[.)])\s/.test(L[i])){ item+=' '+L[i].trim(); i++; } h+='<li>'+inline(item,[])+'</li>'; }
+      out+=h+(ol?'</ol>':'</ul>'); continue; }
+    para.push(t); i++; }
+  flush(); return out;
+}
+function typeset(el){ if(window.MathJax&&MathJax.typesetPromise){ MathJax.typesetClear&&MathJax.typesetClear([el]); MathJax.typesetPromise([el]).catch(()=>{}); } else { (window.__mjq=window.__mjq||[]).push(el); } }
+window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'},startup:{ready(){ MathJax.startup.defaultReady(); (window.__mjq||[]).forEach(e=>MathJax.typesetPromise([e]).catch(()=>{})); }}};
+window.QB=QB;
+})();
