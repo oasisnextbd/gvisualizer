@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 370" width="700" height="370" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2B3A">
+<title>Annulus equivalent diameters for heat transfer and for pressure drop</title>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#1E2B3A"/></marker>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#D2552B"/></marker>
+<marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#0B7C8C"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#55667D"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#B7840A"/></marker>
+<pattern id="ins" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern>
+<pattern id="brick" width="24" height="12" patternUnits="userSpaceOnUse"><rect width="24" height="12" fill="#FBE2D6"/><path d="M0,0.5 H24 M0,6.5 H24 M12,0.5 V6.5 M0.5,6.5 V12 M24,6.5 V12" stroke="#D2552B" stroke-width="0.8" fill="none" opacity="0.7"/></pattern>
+<pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FFF3D6"/><circle cx="2" cy="2" r="0.9" fill="#C98A00"/><circle cx="5.5" cy="5.5" r="0.9" fill="#C98A00"/></pattern>
+<pattern id="dense" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#E9D3A6"/><circle cx="1" cy="1" r="0.8" fill="#8A6200"/><circle cx="3" cy="3" r="0.8" fill="#8A6200"/></pattern>
+</defs>
+<rect width="700" height="370" fill="#FFFFFF"/>
+<text x="170" y="30" text-anchor="middle" font-weight="bold" font-size="14">Heat transfer: D<tspan dy="4" font-size="75%">e</tspan><tspan dy="-4">​</tspan></text>
+<circle cx="170" cy="165" r="108" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.3"/>
+<circle cx="170" cy="165" r="100" fill="#D9F0F2" stroke="#1E2B3A" stroke-width="1.3"/>
+<circle cx="170" cy="165" r="52" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.3"/>
+<circle cx="170" cy="165" r="45" fill="#FBE2D6" stroke="#1E2B3A" stroke-width="1.3"/>
+<circle cx="170" cy="165" r="52" fill="none" stroke="#B7840A" stroke-width="4"/>
+<text x="170" y="169" text-anchor="middle" fill="#55667D" font-size="11">inner pipe</text>
+<text x="170" y="93" text-anchor="middle" fill="#0B7C8C" font-size="11.5">annulus</text>
+<line x1="118" y1="185" x2="222" y2="185" stroke="#1E2B3A" stroke-width="1" marker-end="url(#a)" marker-start="url(#a)"/>
+<text x="174" y="201" text-anchor="middle" font-size="11.5">D<tspan dy="4" font-size="75%">1</tspan><tspan dy="-4">​</tspan> (OD)</text>
+<line x1="70" y1="227" x2="270" y2="227" stroke="#1E2B3A" stroke-width="1" marker-end="url(#a)" marker-start="url(#a)"/>
+<text x="170" y="243" text-anchor="middle" font-size="11.5">D<tspan dy="4" font-size="75%">2</tspan><tspan dy="-4">​</tspan> (ID of outer pipe)</text>
+<text x="520" y="30" text-anchor="middle" font-weight="bold" font-size="14">Pressure drop: D<tspan dy="4" font-size="75%">e</tspan><tspan dy="-4">​</tspan>′</text>
+<circle cx="520" cy="165" r="108" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.3"/>
+<circle cx="520" cy="165" r="100" fill="#D9F0F2" stroke="#1E2B3A" stroke-width="1.3"/>
+<circle cx="520" cy="165" r="52" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.3"/>
+<circle cx="520" cy="165" r="45" fill="#FBE2D6" stroke="#1E2B3A" stroke-width="1.3"/>
+<circle cx="520" cy="165" r="52" fill="none" stroke="#B7840A" stroke-width="4"/>
+<circle cx="520" cy="165" r="100" fill="none" stroke="#B7840A" stroke-width="4"/>
+<text x="520" y="169" text-anchor="middle" fill="#55667D" font-size="11">inner pipe</text>
+<text x="520" y="93" text-anchor="middle" fill="#0B7C8C" font-size="11.5">annulus</text>
+<line x1="468" y1="185" x2="572" y2="185" stroke="#1E2B3A" stroke-width="1" marker-end="url(#a)" marker-start="url(#a)"/>
+<text x="524" y="201" text-anchor="middle" font-size="11.5">D<tspan dy="4" font-size="75%">1</tspan><tspan dy="-4">​</tspan> (OD)</text>
+<line x1="420" y1="227" x2="620" y2="227" stroke="#1E2B3A" stroke-width="1" marker-end="url(#a)" marker-start="url(#a)"/>
+<text x="520" y="243" text-anchor="middle" font-size="11.5">D<tspan dy="4" font-size="75%">2</tspan><tspan dy="-4">​</tspan> (ID of outer pipe)</text>
+<text x="170" y="300" text-anchor="middle" fill="#B7840A" font-size="12.5">heated perimeter = πD<tspan dy="4" font-size="75%">1</tspan><tspan dy="-4">​</tspan></text>
+<text x="170" y="324" text-anchor="middle">D<tspan dy="4" font-size="75%">e</tspan><tspan dy="-4">​</tspan> = (D<tspan dy="4" font-size="75%">2</tspan><tspan dy="-4">²</tspan> − D<tspan dy="4" font-size="75%">1</tspan><tspan dy="-4">²</tspan>)/D<tspan dy="4" font-size="75%">1</tspan><tspan dy="-4">​</tspan></text>
+<text x="520" y="300" text-anchor="middle" fill="#B7840A" font-size="12.5">wetted perimeter = π(D<tspan dy="4" font-size="75%">1</tspan><tspan dy="-4">​</tspan> + D<tspan dy="4" font-size="75%">2</tspan><tspan dy="-4">​</tspan>)</text>
+<text x="520" y="324" text-anchor="middle">D<tspan dy="4" font-size="75%">e</tspan><tspan dy="-4">​</tspan>′ = D<tspan dy="4" font-size="75%">2</tspan><tspan dy="-4">​</tspan> − D<tspan dy="4" font-size="75%">1</tspan><tspan dy="-4">​</tspan></text>
+<text x="345" y="356" text-anchor="middle" fill="#55667D" font-size="12">Same flow area π(D<tspan dy="4" font-size="75%">2</tspan><tspan dy="-4">²</tspan> − D<tspan dy="4" font-size="75%">1</tspan><tspan dy="-4">²</tspan>)/4 in both; only the perimeter differs</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 420" width="660" height="420" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2B3A">
+<title>1-4 exchanger temperature profile: kerosene cooled by crude oil</title>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#1E2B3A"/></marker>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#D2552B"/></marker>
+<marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#0B7C8C"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#55667D"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#B7840A"/></marker>
+<pattern id="ins" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern>
+<pattern id="brick" width="24" height="12" patternUnits="userSpaceOnUse"><rect width="24" height="12" fill="#FBE2D6"/><path d="M0,0.5 H24 M0,6.5 H24 M12,0.5 V6.5 M0.5,6.5 V12 M24,6.5 V12" stroke="#D2552B" stroke-width="0.8" fill="none" opacity="0.7"/></pattern>
+<pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FFF3D6"/><circle cx="2" cy="2" r="0.9" fill="#C98A00"/><circle cx="5.5" cy="5.5" r="0.9" fill="#C98A00"/></pattern>
+<pattern id="dense" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#E9D3A6"/><circle cx="1" cy="1" r="0.8" fill="#8A6200"/><circle cx="3" cy="3" r="0.8" fill="#8A6200"/></pattern>
+</defs>
+<rect width="660" height="420" fill="#FFFFFF"/>
+<line x1="90" y1="350" x2="560" y2="350" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="90" y1="350" x2="90" y2="35" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="325" y="384" text-anchor="middle">Length along the shell, x</text>
+<text x="46" y="192.5" text-anchor="middle" transform="rotate(-90 46 192.5)">Temperature, °F</text>
+<line x1="86" y1="322.5" x2="90" y2="322.5" stroke="#1E2B3A" stroke-width="1"/>
+<text x="82" y="326.5" text-anchor="end" fill="#55667D" font-size="11">100</text>
+<line x1="86" y1="278.8" x2="90" y2="278.8" stroke="#1E2B3A" stroke-width="1"/>
+<text x="82" y="282.8" text-anchor="end" fill="#55667D" font-size="11">150</text>
+<line x1="86" y1="235" x2="90" y2="235" stroke="#1E2B3A" stroke-width="1"/>
+<text x="82" y="239" text-anchor="end" fill="#55667D" font-size="11">200</text>
+<line x1="86" y1="191.2" x2="90" y2="191.2" stroke="#1E2B3A" stroke-width="1"/>
+<text x="82" y="195.2" text-anchor="end" fill="#55667D" font-size="11">250</text>
+<line x1="86" y1="147.5" x2="90" y2="147.5" stroke="#1E2B3A" stroke-width="1"/>
+<text x="82" y="151.5" text-anchor="end" fill="#55667D" font-size="11">300</text>
+<line x1="86" y1="103.8" x2="90" y2="103.8" stroke="#1E2B3A" stroke-width="1"/>
+<text x="82" y="107.8" text-anchor="end" fill="#55667D" font-size="11">350</text>
+<line x1="86" y1="60" x2="90" y2="60" stroke="#1E2B3A" stroke-width="1"/>
+<text x="82" y="64" text-anchor="end" fill="#55667D" font-size="11">400</text>
+<line x1="520" y1="350" x2="520" y2="60" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="90" y="366" text-anchor="middle" fill="#55667D" font-size="12">0</text>
+<text x="520" y="366" text-anchor="middle" fill="#55667D" font-size="12">L</text>
+<path d="M90,68.8 C93.6,71.2 104.3,78.8 111.5,83.6 C118.7,88.4 125.8,93 133,97.5 C140.2,102 147.3,106.3 154.5,110.5 C161.7,114.6 168.8,118.6 176,122.5 C183.2,126.4 190.3,130.2 197.5,133.8 C204.7,137.4 211.8,140.9 219,144.3 C226.2,147.7 233.3,150.9 240.5,154.1 C247.7,157.2 254.8,160.3 262,163.2 C269.2,166.1 276.3,169 283.5,171.7 C290.7,174.4 297.8,177.1 305,179.6 C312.2,182.2 319.3,184.7 326.5,187.1 C333.7,189.4 340.8,191.7 348,194 C355.2,196.2 362.3,198.3 369.5,200.4 C376.7,202.5 383.8,204.5 391,206.4 C398.2,208.4 405.3,210.2 412.5,212 C419.7,213.9 426.8,215.6 434,217.3 C441.2,219 448.3,220.6 455.5,222.2 C462.7,223.8 469.8,225.3 477,226.8 C484.2,228.2 491.3,229.6 498.5,231 C505.7,232.4 516.4,234.3 520,235 C523.6,235.7 520,235 520,235" fill="none" stroke="#D2552B" stroke-width="2.6"/>
+<line x1="271.6" y1="167.1" x2="284.6" y2="172.2" stroke="#D2552B" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M90,303.9 C93.6,304.1 104.3,304.9 111.5,305.4 C118.7,305.8 125.8,306.3 133,306.7 C140.2,307.2 147.3,307.6 154.5,308.1 C161.7,308.5 168.8,308.9 176,309.3 C183.2,309.7 190.3,310.1 197.5,310.5 C204.7,310.9 211.8,311.2 219,311.6 C226.2,311.9 233.3,312.3 240.5,312.6 C247.7,313 254.8,313.3 262,313.6 C269.2,314 276.3,314.3 283.5,314.6 C290.7,314.9 297.8,315.2 305,315.5 C312.2,315.8 319.3,316.1 326.5,316.3 C333.7,316.6 340.8,316.9 348,317.1 C355.2,317.4 362.3,317.7 369.5,317.9 C376.7,318.2 383.8,318.4 391,318.7 C398.2,318.9 405.3,319.1 412.5,319.4 C419.7,319.6 426.8,319.8 434,320.1 C441.2,320.3 448.3,320.5 455.5,320.7 C462.7,320.9 469.8,321.1 477,321.3 C484.2,321.5 491.3,321.7 498.5,321.9 C505.7,322.1 516.4,322.4 520,322.5 C523.6,322.6 520,322.5 520,322.5" fill="none" stroke="#0B7C8C" stroke-width="2.2"/>
+<line x1="306.6" y1="315.5" x2="292.6" y2="315" stroke="#0B7C8C" stroke-width="2" marker-end="url(#ac)"/>
+<path d="M90,303.9 C93.6,303.6 104.3,302.9 111.5,302.4 C118.7,301.9 125.8,301.5 133,301.1 C140.2,300.6 147.3,300.2 154.5,299.8 C161.7,299.4 168.8,299 176,298.6 C183.2,298.2 190.3,297.9 197.5,297.5 C204.7,297.2 211.8,296.8 219,296.5 C226.2,296.2 233.3,295.9 240.5,295.5 C247.7,295.2 254.8,295 262,294.7 C269.2,294.4 276.3,294.1 283.5,293.8 C290.7,293.6 297.8,293.3 305,293.1 C312.2,292.8 319.3,292.6 326.5,292.4 C333.7,292.2 340.8,291.9 348,291.7 C355.2,291.5 362.3,291.3 369.5,291.1 C376.7,290.9 383.8,290.7 391,290.6 C398.2,290.4 405.3,290.2 412.5,290 C419.7,289.9 426.8,289.7 434,289.5 C441.2,289.4 448.3,289.2 455.5,289.1 C462.7,289 469.8,288.8 477,288.7 C484.2,288.5 491.3,288.4 498.5,288.3 C505.7,288.2 516.4,288 520,287.9 C523.6,287.9 520,287.9 520,287.9" fill="none" stroke="#0B7C8C" stroke-width="2.2" stroke-dasharray="7 4"/>
+<line x1="303.4" y1="293.1" x2="317.4" y2="292.7" stroke="#0B7C8C" stroke-width="2" marker-end="url(#ac)"/>
+<path d="M90,273.5 C93.6,273.7 104.3,274.4 111.5,274.8 C118.7,275.2 125.8,275.6 133,276 C140.2,276.4 147.3,276.7 154.5,277.1 C161.7,277.5 168.8,277.8 176,278.1 C183.2,278.5 190.3,278.8 197.5,279.1 C204.7,279.4 211.8,279.7 219,280 C226.2,280.3 233.3,280.6 240.5,280.9 C247.7,281.1 254.8,281.4 262,281.7 C269.2,281.9 276.3,282.2 283.5,282.4 C290.7,282.6 297.8,282.9 305,283.1 C312.2,283.3 319.3,283.5 326.5,283.7 C333.7,283.9 340.8,284.1 348,284.3 C355.2,284.5 362.3,284.7 369.5,284.9 C376.7,285.1 383.8,285.3 391,285.4 C398.2,285.6 405.3,285.8 412.5,285.9 C419.7,286.1 426.8,286.2 434,286.4 C441.2,286.5 448.3,286.7 455.5,286.8 C462.7,286.9 469.8,287.1 477,287.2 C484.2,287.3 491.3,287.5 498.5,287.6 C505.7,287.7 516.4,287.9 520,287.9 C523.6,288 520,287.9 520,287.9" fill="none" stroke="#0B7C8C" stroke-width="2.2"/>
+<line x1="338.9" y1="284.1" x2="324.9" y2="283.7" stroke="#0B7C8C" stroke-width="2" marker-end="url(#ac)"/>
+<path d="M90,273.5 C93.6,273.3 104.3,272.6 111.5,272.2 C118.7,271.8 125.8,271.4 133,271.1 C140.2,270.7 147.3,270.3 154.5,270 C161.7,269.7 168.8,269.3 176,269 C183.2,268.7 190.3,268.4 197.5,268.1 C204.7,267.8 211.8,267.5 219,267.3 C226.2,267 233.3,266.8 240.5,266.5 C247.7,266.3 254.8,266 262,265.8 C269.2,265.6 276.3,265.4 283.5,265.2 C290.7,265 297.8,264.8 305,264.6 C312.2,264.4 319.3,264.3 326.5,264.1 C333.7,263.9 340.8,263.8 348,263.6 C355.2,263.5 362.3,263.3 369.5,263.2 C376.7,263.1 383.8,262.9 391,262.8 C398.2,262.7 405.3,262.6 412.5,262.5 C419.7,262.4 426.8,262.3 434,262.2 C441.2,262.1 448.3,262 455.5,261.9 C462.7,261.8 469.8,261.7 477,261.6 C484.2,261.6 491.3,261.5 498.5,261.4 C505.7,261.4 516.4,261.3 520,261.3 C523.6,261.2 520,261.3 520,261.3" fill="none" stroke="#0B7C8C" stroke-width="2.2" stroke-dasharray="7 4"/>
+<line x1="335.6" y1="263.9" x2="349.6" y2="263.6" stroke="#0B7C8C" stroke-width="2" marker-end="url(#ac)"/>
+<text x="98" y="68.8" fill="#D2552B" font-size="12">T<tspan dy="4" font-size="75%">1</tspan><tspan dy="-4"> = 390°F</tspan></text>
+<circle cx="90" cy="68.8" r="3" fill="#D2552B"/>
+<text x="528" y="237" fill="#D2552B" font-size="12">T<tspan dy="4" font-size="75%">2</tspan><tspan dy="-4"> = 200°F</tspan></text>
+<circle cx="520" cy="235" r="3" fill="#D2552B"/>
+<text x="528" y="265.2" fill="#0B7C8C" font-size="12">t<tspan dy="4" font-size="75%">2</tspan><tspan dy="-4"> = 170°F (out)</tspan></text>
+<circle cx="520" cy="261.2" r="3" fill="#0B7C8C"/>
+<text x="528" y="291.9" fill="#0B7C8C" font-size="12">≈ 140°F (pass 2 → 3)</text>
+<circle cx="520" cy="287.9" r="3" fill="#0B7C8C"/>
+<text x="528" y="330.5" fill="#0B7C8C" font-size="12">t<tspan dy="4" font-size="75%">1</tspan><tspan dy="-4"> = 100°F (in)</tspan></text>
+<circle cx="520" cy="322.5" r="3" fill="#0B7C8C"/>
+<line x1="300" y1="40" x2="330" y2="40" stroke="#D2552B" stroke-width="2.6"/>
+<text x="338" y="44" font-size="12">Shell: kerosene, 390 → 200°F</text>
+<line x1="300" y1="60" x2="330" y2="60" stroke="#0B7C8C" stroke-width="2.2"/>
+<text x="338" y="64" font-size="12">Tubes: crude, 100 → 170°F (4 passes)</text>
+<rect x="524" y="132" width="128" height="86" fill="#F4F6F9" stroke="#9AA8B8" stroke-width="1" rx="4"/>
+<text x="532" y="150" font-size="12">LMTD = 152.2°F</text>
+<text x="532" y="168" font-size="12">R = 2.71, S = 0.241</text>
+<text x="532" y="186" font-size="12">F<tspan dy="4" font-size="75%">T</tspan><tspan dy="-4"> = 0.89</tspan></text>
+<text x="532" y="204" font-size="12">Δt = 135.7°F</text>
+</svg>

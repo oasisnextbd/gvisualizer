@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 392" width="700" height="392" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2B3A">
+<title>Hot and cold stream temperature profiles with phase change</title>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#1E2B3A"/></marker>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#D2552B"/></marker>
+<marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#0B7C8C"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#55667D"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#B7840A"/></marker>
+<pattern id="ins" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern>
+<pattern id="brick" width="24" height="12" patternUnits="userSpaceOnUse"><rect width="24" height="12" fill="#FBE2D6"/><path d="M0,0.5 H24 M0,6.5 H24 M12,0.5 V6.5 M0.5,6.5 V12 M24,6.5 V12" stroke="#D2552B" stroke-width="0.8" fill="none" opacity="0.7"/></pattern>
+<pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FFF3D6"/><circle cx="2" cy="2" r="0.9" fill="#C98A00"/><circle cx="5.5" cy="5.5" r="0.9" fill="#C98A00"/></pattern>
+<pattern id="dense" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#E9D3A6"/><circle cx="1" cy="1" r="0.8" fill="#8A6200"/><circle cx="3" cy="3" r="0.8" fill="#8A6200"/></pattern>
+</defs>
+<rect width="700" height="392" fill="#FFFFFF"/>
+<line x1="60" y1="300" x2="325" y2="300" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="60" y1="300" x2="60" y2="50" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="192.5" y="334" text-anchor="middle">Heat transferred, Q (or length)</text>
+<text x="16" y="175" text-anchor="middle" transform="rotate(-90 16 175)">T</text>
+<text x="182.5" y="30" text-anchor="middle" font-weight="bold">(i) Condensing steam / boiling liquid</text>
+<line x1="70" y1="120" x2="305" y2="120" stroke="#D2552B" stroke-width="2.6"/>
+<line x1="170" y1="120" x2="190" y2="120" stroke="#D2552B" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="70" y1="230" x2="305" y2="230" stroke="#0B7C8C" stroke-width="2.4"/>
+<line x1="200" y1="230" x2="180" y2="230" stroke="#0B7C8C" stroke-width="2.4" marker-end="url(#ac)"/>
+<text x="74" y="110" fill="#D2552B" font-size="12">Saturated steam condensing at T<tspan dy="4" font-size="75%">sat</tspan></text>
+<text x="74" y="250" fill="#0B7C8C" font-size="12">Cold fluid boiling at T<tspan dy="4" font-size="75%">boil</tspan></text>
+<line x1="260" y1="122" x2="260" y2="228" stroke="#55667D" stroke-width="1" marker-end="url(#ag)" marker-start="url(#ag)"/>
+<text x="266" y="179" fill="#55667D" font-size="12">ΔT = constant</text>
+<text x="70" y="362" fill="#55667D" font-size="11">Both lines flat: flow direction does not matter;</text>
+<text x="70" y="378" fill="#55667D" font-size="11">ΔT<tspan dy="4" font-size="75%">lm</tspan> = T<tspan dy="4" font-size="75%">sat</tspan> − T<tspan dy="4" font-size="75%">boil</tspan></text>
+<line x1="410" y1="300" x2="675" y2="300" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="410" y1="300" x2="410" y2="50" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="542.5" y="334" text-anchor="middle">Heat transferred, Q (or length)</text>
+<text x="366" y="175" text-anchor="middle" transform="rotate(-90 366 175)">T</text>
+<text x="532.5" y="30" text-anchor="middle" font-weight="bold">(ii) Desuperheat + condense / sensible</text>
+<path d="M420,85 L475,140 L630,140 L655,158" fill="none" stroke="#D2552B" stroke-width="2.6"/>
+<line x1="440" y1="105" x2="452" y2="117" stroke="#D2552B" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="610" y1="140" x2="625" y2="140" stroke="#D2552B" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="475" y1="75" x2="475" y2="300" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="630" y1="130" x2="630" y2="300" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="3 3"/>
+<path d="M420,170 L655,270" fill="none" stroke="#0B7C8C" stroke-width="2.4"/>
+<line x1="580" y1="222" x2="560" y2="214" stroke="#0B7C8C" stroke-width="2.4" marker-end="url(#ac)"/>
+<text x="434" y="88" fill="#D2552B" font-size="11">T<tspan dy="4" font-size="75%">in</tspan> (superheated)</text>
+<text x="481" y="133" fill="#D2552B" font-size="11.5">T<tspan dy="4" font-size="75%">sat</tspan>: condensing zone</text>
+<text x="629" y="175" fill="#55667D" font-size="10">subcool</text>
+<text x="428" y="186" fill="#0B7C8C" font-size="12">t<tspan dy="4" font-size="75%">2</tspan></text>
+<text x="651" y="290" text-anchor="end" fill="#0B7C8C" font-size="12">t<tspan dy="4" font-size="75%">1</tspan></text>
+<text x="530" y="203" fill="#0B7C8C" font-size="11">cold: sensible heating</text>
+<text x="447.5" y="283" text-anchor="middle" fill="#55667D" font-size="10">desuper-</text>
+<text x="447.5" y="295" text-anchor="middle" fill="#55667D" font-size="10">heating</text>
+<text x="420" y="362" fill="#55667D" font-size="11">Counterflow; treat each zone with its own ΔT</text>
+</svg>

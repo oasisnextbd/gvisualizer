@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 350" width="680" height="350" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2B3A">
+<title>Laminar boundary layer on a flat plate: air at 2 m/s, delta at 20 and 40 cm</title>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#1E2B3A"/></marker>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#D2552B"/></marker>
+<marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#0B7C8C"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#55667D"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#B7840A"/></marker>
+<pattern id="ins" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern>
+<pattern id="brick" width="24" height="12" patternUnits="userSpaceOnUse"><rect width="24" height="12" fill="#FBE2D6"/><path d="M0,0.5 H24 M0,6.5 H24 M12,0.5 V6.5 M0.5,6.5 V12 M24,6.5 V12" stroke="#D2552B" stroke-width="0.8" fill="none" opacity="0.7"/></pattern>
+<pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FFF3D6"/><circle cx="2" cy="2" r="0.9" fill="#C98A00"/><circle cx="5.5" cy="5.5" r="0.9" fill="#C98A00"/></pattern>
+<pattern id="dense" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#E9D3A6"/><circle cx="1" cy="1" r="0.8" fill="#8A6200"/><circle cx="3" cy="3" r="0.8" fill="#8A6200"/></pattern>
+</defs>
+<rect width="680" height="350" fill="#FFFFFF"/>
+<rect x="70" y="240" width="550" height="12" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.4"/>
+<path d="M70,240 L60,246 L70,252" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.4"/>
+<path d="M70,240 C74.6,235.9 88.3,221.1 97.5,215.3 C106.7,209.5 115.8,208.1 125,205.1 C134.2,202.1 143.3,199.6 152.5,197.2 C161.7,194.8 170.8,192.7 180,190.6 C189.2,188.5 198.3,186.6 207.5,184.8 C216.7,182.9 225.8,181.2 235,179.5 C244.2,177.8 253.3,176.2 262.5,174.7 C271.7,173.1 280.8,171.6 290,170.2 C299.2,168.7 308.3,167.3 317.5,165.9 C326.7,164.6 335.8,163.2 345,161.9 C354.2,160.6 363.3,159.4 372.5,158.1 C381.7,156.9 390.8,155.7 400,154.5 C409.2,153.3 418.3,152.1 427.5,151 C436.7,149.8 445.8,148.7 455,147.6 C464.2,146.5 473.3,145.4 482.5,144.4 C491.7,143.3 500.8,142.3 510,141.2 C519.2,140.2 528.3,139.2 537.5,138.2 C546.7,137.2 555.8,136.2 565,135.2 C574.2,134.3 583.3,133.3 592.5,132.4 C601.7,131.4 615.4,130 620,129.6 C624.6,129.1 620,129.6 620,129.6" fill="none" stroke="#0B7C8C" stroke-width="2.2" stroke-dasharray="7 4"/>
+<text x="560" y="100" fill="#0B7C8C">δ(x) ∝ √x</text>
+<line x1="20" y1="40" x2="80" y2="40" stroke="#0B7C8C" stroke-width="2" marker-end="url(#ac)"/>
+<line x1="20" y1="70" x2="80" y2="70" stroke="#0B7C8C" stroke-width="2" marker-end="url(#ac)"/>
+<text x="20" y="30">u<tspan dy="4" font-size="75%">∞</tspan><tspan dy="-4">​</tspan> = 2 m/s</text>
+<text x="20" y="100" fill="#55667D" font-size="12">Air, 300 K, 1 atm</text>
+<text x="20" y="116" fill="#55667D" font-size="12">μ = 1.85 × 10⁻⁵ kg/m·s</text>
+<line x1="290" y1="240" x2="290" y2="170.2" stroke="#B7840A" stroke-width="1.4" marker-end="url(#aa)" marker-start="url(#aa)"/>
+<path d="M290,240 C291.1,238.8 294.6,235.3 296.9,233 C299.1,230.7 301.4,228.4 303.6,226 C305.8,223.7 308,221.4 310.1,219 C312.2,216.7 314.2,214.4 316.1,212.1 C318.1,209.7 319.9,207.4 321.6,205.1 C323.3,202.8 325,200.4 326.4,198.1 C327.9,195.8 329.2,193.4 330.4,191.1 C331.6,188.8 332.6,186.5 333.4,184.1 C334.2,181.8 334.9,179.5 335.3,177.1 C335.8,174.8 335.9,171.3 336,170.2" fill="none" stroke="#1E2B3A" stroke-width="1.4"/>
+<line x1="290" y1="170.2" x2="336" y2="170.2" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="284" y="209.1" text-anchor="end" font-weight="bold" fill="#B7840A" font-size="12.5">δ = 5.8 mm</text>
+<line x1="290" y1="252" x2="290" y2="274" stroke="#9AA8B8" stroke-width="1"/>
+<text x="290" y="290" text-anchor="middle" font-size="12">x = 20 cm</text>
+<text x="290" y="306" text-anchor="middle" fill="#55667D" font-size="11">Re<tspan dy="4" font-size="75%">x</tspan><tspan dy="-4">​</tspan> ≈ 25 400</text>
+<line x1="510" y1="240" x2="510" y2="141.2" stroke="#B7840A" stroke-width="1.4" marker-end="url(#aa)" marker-start="url(#aa)"/>
+<path d="M510,240 C511.1,238.4 514.6,233.4 516.9,230.1 C519.1,226.8 521.4,223.5 523.6,220.2 C525.8,217 528,213.7 530.1,210.4 C532.2,207.1 534.2,203.8 536.1,200.5 C538.1,197.2 539.9,193.9 541.6,190.6 C543.3,187.3 545,184 546.4,180.7 C547.9,177.5 549.2,174.2 550.4,170.9 C551.6,167.6 552.6,164.3 553.4,161 C554.2,157.7 554.9,154.4 555.3,151.1 C555.8,147.8 555.9,142.9 556,141.2" fill="none" stroke="#1E2B3A" stroke-width="1.4"/>
+<line x1="510" y1="141.2" x2="556" y2="141.2" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="504" y="194.6" text-anchor="end" font-weight="bold" fill="#B7840A" font-size="12.5">δ = 8.2 mm</text>
+<line x1="510" y1="252" x2="510" y2="274" stroke="#9AA8B8" stroke-width="1"/>
+<text x="510" y="290" text-anchor="middle" font-size="12">x = 40 cm</text>
+<text x="510" y="306" text-anchor="middle" fill="#55667D" font-size="11">Re<tspan dy="4" font-size="75%">x</tspan><tspan dy="-4">​</tspan> ≈ 50 900</text>
+<line x1="70" y1="260" x2="286" y2="260" stroke="#9AA8B8" stroke-width="1" marker-end="url(#ag)"/>
+<text x="70" y="280" text-anchor="middle" fill="#55667D" font-size="11">leading edge</text>
+<text x="250" y="338" fill="#55667D" font-size="11">Laminar (Re<tspan dy="4" font-size="75%">x</tspan><tspan dy="-4">​</tspan> &lt; 5 × 10⁵): δ = 4.64x/√Re<tspan dy="4" font-size="75%">x</tspan><tspan dy="-4">​</tspan>;  vertical scale exaggerated</text>
+</svg>

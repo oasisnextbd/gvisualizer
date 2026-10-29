@@ -28,6 +28,8 @@ Physical properties at caloric temperature:
 ### 1. Temperature profile (sketch)
 Sketch: temperature (°F, vertical) vs. length along the shell (horizontal). The kerosene line falls steadily from 390°F at the shell inlet to 200°F at the shell outlet. The crude enters the tubes at 100°F and rises to 170°F in four alternating passes: draw it as a zig-zag of four rising segments (pass 1 left→right, pass 2 right→left, …), each lying below the kerosene curve. Mark the terminal differences: hot end $390-170 = 220$°F, cold end $200-100 = 100$°F. No temperature cross occurs ($T_2 = 200 > t_2 = 170$).
 
+![Temperature profile in the 1-4 kerosene–crude exchanger (T₁ = 390°F, shape computed)](fig/2017-18-Q1a-sol.svg)
+
 ### 2. Heat balance
 $$Q_{crude} = w c (t_2-t_1) = 149{,}000(0.49)(70) = 5.11\times10^6\ \mathrm{Btu/h}$$
 $$Q_{kero} = W C (T_1-T_2) = 43{,}800(0.60)(190) = 4.99\times10^6\ \mathrm{Btu/h}$$
@@ -184,6 +186,8 @@ A 2-4 exchanger has **two shell passes** and **four tube passes**.
 - **Tube bundle** (U-tubes or floating head) fixed in a **tube sheet**; a front **channel (bonnet)** with **pass-partition plates** so that the tube fluid makes four passes (in → pass 1 → rear head → pass 2 → front channel → pass 3 → pass 4 → out).
 - Label: shell inlet/outlet nozzles, tube inlet/outlet nozzles, shell, tube sheet(s), channel cover, pass partitions, longitudinal baffle, transverse baffles, tie rods/spacers, floating head (or U-bends), supports, vent and drain.
 
+![2-4 exchanger: schematic and temperature profile](fig/2017-18-Q2a-sol.svg)
+
 ### Temperature profile
 Sketch: temperature vs. fractional length. Two shell-fluid curves (one per shell pass): hot fluid falls from $T_1$ along the first shell pass and continues falling along the second pass to $T_2$. The tube fluid is shown as four segments rising from $t_1$ to $t_2$, alternately in counter- and co-current with the shell fluid; the pair of passes in the second shell lies at the cold end, the pair in the first shell at the hot end. The arrangement approaches true counter-flow, so $t_2$ can exceed $T_2$ (a temperature cross a 1-2 exchanger could not tolerate), and $F_T$ for a 2-4 exchanger is higher than for a 1-2 at the same $R$, $S$.
 
@@ -203,6 +207,8 @@ Sketch: temperature vs. fractional length. Two shell-fluid curves (one per shell
 Also implied: steady state with constant flow rates, no partial phase change (a phase change at constant temperature is allowed), and one bulk temperature for each fluid at any cross-section.
 
 **Derivation (counter-flow; parallel flow is analogous)**
+
+![Temperature profiles: parallel flow, counterflow, condensing and boiling](fig/common-hx-profiles.svg)
 
 Let hot fluid $(W, C, T)$ and cold fluid $(w, c, t)$ exchange heat across an element $dA$. Local driving force $\Delta t = T - t$.
 
@@ -238,6 +244,8 @@ For parallel flow the same result follows with $\Delta t_1 = T_1 - t_1$, $\Delta
           text: String.raw`Draw a pool boiling curve and explain the boiling behavior during *burnout condition* and *Leidenfrost point*.`,
           solution: String.raw`**Sketch:** log heat flux $q''$ (vertical) vs. log excess temperature $\Delta T_e = T_s - T_{sat}$ (horizontal) for water at 1 atm. The curve rises gently (natural convection, up to $\Delta T_e \approx 5$°C), then steeply (nucleate boiling) to a peak $q''_{max} \approx 1$ MW/m² at $\Delta T_e \approx 30$°C (point C, **critical heat flux / burnout**), falls through the transition region to a minimum at $\Delta T_e \approx 120$°C (point D, **Leidenfrost point**, $q''_{min}$), then rises again in film boiling. Mark points A (onset of nucleate boiling), B (isolated bubbles → jets and columns), C, D, and the dashed jump from C horizontally to E in film boiling at $\Delta T_e \approx 1000$°C.
 
+![Pool boiling curve: regimes, critical heat flux (burnout) and Leidenfrost point](fig/common-boiling-curve.svg)
+
 **Regimes**
 | Regime | $\Delta T_e$ (water, 1 atm) | Behaviour |
 |---|---|---|
@@ -256,7 +264,7 @@ For parallel flow the same result follows with $\Delta t_1 = T_1 - t_1$, $\Delta
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`A sheet metal air duct carries air-conditioned air at an average temperature of 10°C. The duct size is 320 mm × 200 mm and the length of duct exposed to the surrounding air at 30°C is 15 m long. Find the heat gain by the air in the duct. Assume 200 mm side is vertical and the top surface is insulated.
 
-*[Figure: rectangular duct, width B = 320 mm, height H = 200 mm, top surface labelled "Insulated", air-conditioned air flowing along its length.]*
+![Duct 320 mm × 200 mm with an insulated top](fig/2017-18-Q3b.svg)
 
 Formula sheet: $\mathrm{Gr}_x = g\beta(T_w-T_\infty)x^3/\nu^2$; $\mathrm{Nu} = 0.6(\mathrm{Gr\,Pr})^{0.25}$ for vertical surface; $\mathrm{Nu} = 0.27(\mathrm{Gr\,Pr})^{0.25}$ for horizontal surface.`,
           solution: String.raw`**Given:** $T_w = 10$°C (thin sheet metal, wall ≈ air temperature), $T_\infty = 30$°C, $H = 0.20$ m, $B = 0.32$ m, $L = 15$ m; top insulated.
@@ -360,6 +368,8 @@ $$\frac{\dot m}{L} = \frac{Q/L}{h^*_{fg}} = \frac{11{,}734}{2.303\times10^6} = 5
 
 1. **Control volume:** an element $dx\,dy\,dz$ inside the solid.
 
+![Control volume dx dy dz for the conduction energy balance](fig/2015-16-Q5a-sol.svg)
+
 2. **Fourier's law** for the heat flow entering the face at $x$:
 $$q_x = -k\,dy\,dz\,\frac{\partial T}{\partial x}$$
 Heat leaving at $x+dx$ (Taylor expansion):
@@ -391,6 +401,8 @@ $$\frac{\partial^2 T}{\partial x^2} + \frac{\partial^2 T}{\partial y^2} + \frac{
           solution: String.raw`**Significance:** adding insulation to a small pipe or wire increases the conduction resistance but also increases the outer surface area, which decreases the convection resistance. Up to a certain outer radius (the critical radius) the second effect wins, so the heat loss *increases* as insulation is added. Hence:
 - for steam/hot pipes the outer radius must exceed $r_c$ for insulation to reduce heat loss;
 - for electric cables, insulation up to $r_c$ is used deliberately to *increase* heat dissipation.
+
+![Heat loss vs outer radius: maximum at the critical radius r = k/h](fig/common-critical-radius.svg)
 
 **Derivation (per unit length, steady, constant $k$ and $h$)**
 
@@ -431,6 +443,8 @@ $$\frac{T - T_w}{T_\infty - T_w} = 0.99$$
 At the wall, heat transfer is by conduction only: $q'' = -k(\partial T/\partial y)_{y=0} = h(T_w - T_\infty)$. As $\delta_t$ grows, the wall gradient and hence $h_x$ fall ($h_x \propto x^{-1/2}$ in laminar flow).
 
 *Sketch: plate with velocity profile (u from 0 to u∞ within δ) and temperature profile (T from T_w to T∞ within δ_t), both boundary-layer edges growing as √x from the leading edge.*
+
+![Velocity and thermal boundary layers on a flat plate](fig/common-bl-flat-plate.svg)
 
 **Relative thickness — set by the Prandtl number** $\mathrm{Pr} = \nu/\alpha$ (momentum diffusivity / heat diffusivity). Integral analysis (cubic profiles, plate heated from the leading edge):
 $$\frac{\delta_t}{\delta} = \frac{1}{1.026}\mathrm{Pr}^{-1/3}$$
@@ -482,6 +496,8 @@ Ratio of molecular diffusivity of momentum to that of heat; a pure fluid propert
 **Find:** $\dot Q$, $T_1$ (inner surface).
 **Assumptions:** steady, 1-D conduction; constant $k$; $h$ values include radiation.
 
+![Glass window: convection-conduction-convection in series](fig/2016-17-Q5c.svg)
+
 1. Resistances in series:
 $$R_{conv,1} = \frac{1}{h_1A} = \frac{1}{10(1.2)} = 0.08333\ \mathrm{°C/W}$$
 $$R_{glass} = \frac{L}{kA} = \frac{0.008}{0.78(1.2)} = 0.00855\ \mathrm{°C/W}$$
@@ -510,7 +526,7 @@ $$T_1 = T_{\infty1} - \dot Q R_{conv,1} = 20 - 266(0.08333) = -2.2\,°\mathrm{C}
 (i) Draw the thermal resistance circuit for the system.
 (ii) Calculate the total heat loss from the pipe.
 
-*[Figure: pipe cross-section, $r_1 = 50$ mm, $r_2 = 100$ mm; insulation split horizontally into upper half A ($k_A = 2$ W/m·K) and lower half B ($k_B = 0.25$ W/m·K).]*`,
+![Pipe with insulation A (top half) and B (bottom half)](fig/2017-18-Q7a.svg)`,
           solution: String.raw`**Given:** $T_s = 500$ K, $T_\infty = 300$ K, $h = 25$ W/m²K, $r_1 = 0.05$ m, $r_2 = 0.10$ m, $k_A = 2$, $k_B = 0.25$ W/m·K; each material covers half the circumference.
 **Find:** circuit; $q'$ per metre of pipe.
 **Assumptions:** steady, radial conduction only (the infinite contact resistance blocks circumferential heat flow between A and B); constant properties; per unit length.
@@ -522,6 +538,8 @@ $T_s$ — $R_{A}$ (half-cylinder conduction) — $R_{conv,A}$ (outer half surfac
 $T_s$ — $R_{B}$ (half-cylinder conduction) — $R_{conv,B}$ (outer half surface) — $T_\infty$
 
 Each branch is two resistances in series; the two branches are in parallel.
+
+![Two parallel branches, each conduction plus convection](fig/2017-18-Q7a-sol.svg)
 
 ### (ii) Resistances (per metre)
 A half cylinder has half the area of a full one, so its resistance is twice the full-cylinder value:
@@ -545,6 +563,8 @@ Given relations: $u/u_\infty = \tfrac{3}{2}(y/\delta) - \tfrac{1}{2}(y/\delta)^3
           solution: String.raw`**Given:** air, $T = 300$ K, $p = 101.325$ kPa, $u_\infty = 2$ m/s, $\mu = 1.85\times10^{-5}$ kg/m·s; $x = 0.2$ and $0.4$ m.
 **Assumptions:** ideal gas, steady laminar flow, zero pressure gradient, cubic profile (integral method).
 
+![Boundary-layer thickness at 20 cm and 40 cm (air, 2 m/s)](fig/2015-16-Q7b.svg)
+
 1. Density:
 $$\rho = \frac{p}{RT} = \frac{101{,}325}{287(300)} = 1.177\ \mathrm{kg/m^3},\qquad \nu = \frac{\mu}{\rho} = 1.572\times10^{-5}\ \mathrm{m^2/s}$$
 
@@ -565,6 +585,8 @@ $$\mathrm{Re}_x = 5.09\times10^4\ (\text{laminar}),\qquad \delta = \frac{4.64(0.
 1. **Isothermal flow:** the parabola $u/u_{max} = 1 - (r/R)^2$.
 2. **Liquid heated / gas cooled:** the fluid near the wall has *lower* viscosity than the core, so it moves faster near the wall; the profile is **flatter** (blunter) than the parabola, with a steeper slope at the wall and a lower centre-line velocity.
 3. **Liquid cooled / gas heated:** the fluid near the wall has *higher* viscosity, so it is slowed near the wall; the profile is **more peaked** (sharper) than the parabola, with a higher centre-line velocity and a smaller wall slope.
+
+![Laminar tube velocity profiles distorted by heating and cooling](fig/common-velocity-distortion.svg)
 
 All three enclose the same flow rate.
 

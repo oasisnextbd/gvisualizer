@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 380" width="700" height="380" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2B3A">
+<title>Thermal contact resistance at an interface</title>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#1E2B3A"/></marker>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#D2552B"/></marker>
+<marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#0B7C8C"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#55667D"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#B7840A"/></marker>
+<pattern id="ins" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern>
+<pattern id="brick" width="24" height="12" patternUnits="userSpaceOnUse"><rect width="24" height="12" fill="#FBE2D6"/><path d="M0,0.5 H24 M0,6.5 H24 M12,0.5 V6.5 M0.5,6.5 V12 M24,6.5 V12" stroke="#D2552B" stroke-width="0.8" fill="none" opacity="0.7"/></pattern>
+<pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FFF3D6"/><circle cx="2" cy="2" r="0.9" fill="#C98A00"/><circle cx="5.5" cy="5.5" r="0.9" fill="#C98A00"/></pattern>
+<pattern id="dense" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#E9D3A6"/><circle cx="1" cy="1" r="0.8" fill="#8A6200"/><circle cx="3" cy="3" r="0.8" fill="#8A6200"/></pattern>
+</defs>
+<rect width="700" height="380" fill="#FFFFFF"/>
+<rect x="60" y="60" width="180" height="80" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.4"/>
+<rect x="250" y="60" width="180" height="80" fill="#C9D3DF" stroke="#1E2B3A" stroke-width="1.4"/>
+<text x="150" y="105" text-anchor="middle" font-weight="bold">Solid A</text>
+<text x="340" y="105" text-anchor="middle" font-weight="bold">Solid B</text>
+<line x1="20" y1="100" x2="55" y2="100" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah)"/>
+<text x="20" y="92" fill="#D2552B">q</text>
+<line x1="435" y1="100" x2="470" y2="100" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah)"/>
+<path d="M240,60 L240,60 L246,65 L240,70 L246,75 L240,80 L246,85 L240,90 L246,95 L240,100 L246,105 L240,110 L246,115 L240,120 L246,125 L240,130 L246,135 L240,140" fill="none" stroke="#1E2B3A" stroke-width="1"/>
+<path d="M250,60 L244,60 L250,65 L244,70 L250,75 L244,80 L250,85 L244,90 L250,95 L244,100 L250,105 L244,110 L250,115 L244,120 L250,125 L244,130 L250,135 L244,140" fill="none" stroke="#1E2B3A" stroke-width="1"/>
+<circle cx="245" cy="100" r="14" fill="none" stroke="#B7840A" stroke-width="1.2"/>
+<line x1="258" y1="108" x2="520" y2="70" stroke="#B7840A" stroke-width="0.8" stroke-dasharray="3 2"/>
+<line x1="258" y1="92" x2="520" y2="70" stroke="#B7840A" stroke-width="0.8" stroke-dasharray="3 2"/>
+<rect x="520" y="30" width="160" height="110" fill="#FFFFFF" stroke="#B7840A" stroke-width="1.2" rx="6"/>
+<path d="M525,35 L595,35 L597,35 L603,45 L591,55 L609,65 L591,75 L603,85 L597,95 L603,105 L591,115 L609,125 L591,135 L525,135 Z" fill="#DCE3EC"/>
+<path d="M675,35 L605,35 L605,35 L599,45 L609,55 L595,65 L609,75 L599,85 L605,95 L599,105 L609,115 L595,125 L609,135 L675,135 Z" fill="#C9D3DF"/>
+<text x="600" y="155" text-anchor="middle" fill="#55667D" font-size="11">real contact at a few spots;</text>
+<text x="600" y="169" text-anchor="middle" fill="#55667D" font-size="11">gaps filled with air</text>
+<line x1="60" y1="330" x2="460" y2="330" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="60" y1="330" x2="60" y2="170" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="260" y="364" text-anchor="middle">x</text>
+<text x="16" y="250" text-anchor="middle" transform="rotate(-90 16 250)">T</text>
+<line x1="240" y1="175" x2="240" y2="330" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="250" y1="175" x2="250" y2="330" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="60" y1="195" x2="240" y2="240" stroke="#D2552B" stroke-width="2.4"/>
+<line x1="250" y1="280" x2="430" y2="320" stroke="#D2552B" stroke-width="2.4"/>
+<line x1="240" y1="240" x2="250" y2="280" stroke="#D2552B" stroke-width="1.4" stroke-dasharray="3 2"/>
+<line x1="232" y1="240" x2="232" y2="280" stroke="#55667D" stroke-width="1" marker-end="url(#ag)" marker-start="url(#ag)"/>
+<text x="226" y="264" text-anchor="end" fill="#55667D" font-size="12">ΔT</text>
+<text x="258" y="262" fill="#B7840A" font-size="11.5">temperature drop at the interface</text>
+<text x="500" y="210" font-weight="bold" font-size="14">R<tspan dy="4" font-size="75%">c</tspan><tspan dy="-4">​</tspan> = ΔT / (q/A)</text>
+<text x="500" y="232" fill="#55667D" font-size="11.5">(m²·K/W); per area: h<tspan dy="4" font-size="75%">c</tspan><tspan dy="-4">​</tspan> = 1/R<tspan dy="4" font-size="75%">c</tspan><tspan dy="-4">​</tspan></text>
+<text x="500" y="258" fill="#55667D" font-size="11.5">Lower R<tspan dy="4" font-size="75%">c</tspan><tspan dy="-4">​</tspan>: smoother surfaces,</text>
+<text x="500" y="274" fill="#55667D" font-size="11.5">higher pressure, soft metals,</text>
+<text x="500" y="290" fill="#55667D" font-size="11.5">conducting paste or grease</text>
+</svg>

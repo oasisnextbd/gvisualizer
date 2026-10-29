@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="700" height="420" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2B3A">
+<title>Double-pipe exchanger cross-section and the series resistances behind U_o</title>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#1E2B3A"/></marker>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#D2552B"/></marker>
+<marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#0B7C8C"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#55667D"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#B7840A"/></marker>
+<pattern id="ins" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern>
+<pattern id="brick" width="24" height="12" patternUnits="userSpaceOnUse"><rect width="24" height="12" fill="#FBE2D6"/><path d="M0,0.5 H24 M0,6.5 H24 M12,0.5 V6.5 M0.5,6.5 V12 M24,6.5 V12" stroke="#D2552B" stroke-width="0.8" fill="none" opacity="0.7"/></pattern>
+<pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FFF3D6"/><circle cx="2" cy="2" r="0.9" fill="#C98A00"/><circle cx="5.5" cy="5.5" r="0.9" fill="#C98A00"/></pattern>
+<pattern id="dense" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#E9D3A6"/><circle cx="1" cy="1" r="0.8" fill="#8A6200"/><circle cx="3" cy="3" r="0.8" fill="#8A6200"/></pattern>
+</defs>
+<rect width="700" height="420" fill="#FFFFFF"/>
+<circle cx="160" cy="170" r="150" fill="#FFFFFF" opacity="0.55"/>
+<circle cx="160" cy="170" r="124" fill="url(#ins)" stroke="#1E2B3A" stroke-width="1.3"/>
+<circle cx="160" cy="170" r="116" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.3"/>
+<circle cx="160" cy="170" r="108" fill="#D9F0F2" stroke="#1E2B3A" stroke-width="1.3"/>
+<circle cx="160" cy="170" r="62" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.3"/>
+<circle cx="160" cy="170" r="50" fill="#FBE2D6" stroke="#1E2B3A" stroke-width="1.3"/>
+<text x="160" y="186" text-anchor="middle" font-size="10.5">Hot fluid</text>
+<text x="160" y="198" text-anchor="middle" font-size="10.5">T<tspan dy="4" font-size="75%">h</tspan><tspan dy="-4">​</tspan>, h<tspan dy="4" font-size="75%">i</tspan><tspan dy="-4">​</tspan></text>
+<line x1="160" y1="170" x2="136.5" y2="125.9" stroke="#1E2B3A" stroke-width="1.1" marker-end="url(#a)"/>
+<line x1="136.5" y1="125.9" x2="83" y2="25.2" stroke="#9AA8B8" stroke-width="0.9" stroke-dasharray="3 2"/>
+<text x="79" y="21.2" text-anchor="end" font-size="12">r<tspan dy="4" font-size="75%">i</tspan><tspan dy="-4">​</tspan></text>
+<line x1="160" y1="170" x2="207.5" y2="130.1" stroke="#1E2B3A" stroke-width="1.1" marker-end="url(#a)"/>
+<line x1="207.5" y1="130.1" x2="285.6" y2="64.6" stroke="#9AA8B8" stroke-width="0.9" stroke-dasharray="3 2"/>
+<text x="289.6" y="68.6" font-size="12">r<tspan dy="4" font-size="75%">o</tspan><tspan dy="-4">​</tspan></text>
+<circle cx="160" cy="170" r="2" fill="#1E2B3A"/>
+<text x="16" y="324" fill="#0B7C8C" font-size="12"></text>
+<rect x="360" y="38" width="22" height="16" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1"/>
+<text x="390" y="50" font-size="12.5">Inner pipe wall, k, length L</text>
+<rect x="360" y="84" width="22" height="16" fill="#FBE2D6" stroke="#1E2B3A" stroke-width="1"/>
+<text x="390" y="96" font-size="12.5">Hot fluid in inner pipe</text>
+<text x="390" y="111" fill="#55667D" font-size="12">A<tspan dy="4" font-size="75%">i</tspan><tspan dy="-4">​</tspan> = 2πr<tspan dy="4" font-size="75%">i</tspan><tspan dy="-4">​</tspan>L</text>
+<rect x="360" y="130" width="22" height="16" fill="#D9F0F2" stroke="#1E2B3A" stroke-width="1"/>
+<text x="390" y="142" font-size="12.5">Cold fluid in annulus</text>
+<text x="390" y="157" fill="#55667D" font-size="12">T<tspan dy="4" font-size="75%">c</tspan><tspan dy="-4">​</tspan>, h<tspan dy="4" font-size="75%">o</tspan><tspan dy="-4">​</tspan>;  A<tspan dy="4" font-size="75%">o</tspan><tspan dy="-4">​</tspan> = 2πr<tspan dy="4" font-size="75%">o</tspan><tspan dy="-4">​</tspan>L</text>
+<rect x="360" y="176" width="22" height="16" fill="url(#ins)" stroke="#1E2B3A" stroke-width="1"/>
+<text x="390" y="188" font-size="12.5">Outer pipe, insulated</text>
+<circle cx="300" cy="268" r="3.2" fill="#1E2B3A"/>
+<text x="300" y="259" text-anchor="middle" font-size="12">T<tspan dy="4" font-size="75%">h</tspan><tspan dy="-4">​</tspan></text>
+<line x1="300" y1="268" x2="322" y2="268" stroke="#1E2B3A" stroke-width="1.6"/>
+<path d="M322,268 L326,268 L331.2,262 L341.5,274 L351.8,262 L362.2,274 L372.5,262 L382.8,274 L388,268 L392,268" fill="none" stroke="#1E2B3A" stroke-width="1.6"/>
+<text x="357" y="294" text-anchor="middle" font-size="12">1/(h<tspan dy="4" font-size="75%">i</tspan><tspan dy="-4">​</tspan>A<tspan dy="4" font-size="75%">i</tspan><tspan dy="-4">​</tspan>)</text>
+<line x1="392" y1="268" x2="414" y2="268" stroke="#1E2B3A" stroke-width="1.6"/>
+<circle cx="414" cy="268" r="3.2" fill="#1E2B3A"/>
+<text x="414" y="259" text-anchor="middle" font-size="12">T<tspan dy="4" font-size="75%">w,i</tspan><tspan dy="-4">​</tspan></text>
+<line x1="414" y1="268" x2="436" y2="268" stroke="#1E2B3A" stroke-width="1.6"/>
+<path d="M436,268 L440,268 L445.2,262 L455.5,274 L465.8,262 L476.2,274 L486.5,262 L496.8,274 L502,268 L506,268" fill="none" stroke="#1E2B3A" stroke-width="1.6"/>
+<text x="471" y="294" text-anchor="middle" font-size="12">ln(r<tspan dy="4" font-size="75%">o</tspan><tspan dy="-4">​</tspan>/r<tspan dy="4" font-size="75%">i</tspan><tspan dy="-4">​</tspan>)/(2πkL)</text>
+<line x1="506" y1="268" x2="528" y2="268" stroke="#1E2B3A" stroke-width="1.6"/>
+<circle cx="528" cy="268" r="3.2" fill="#1E2B3A"/>
+<text x="528" y="259" text-anchor="middle" font-size="12">T<tspan dy="4" font-size="75%">w,o</tspan><tspan dy="-4">​</tspan></text>
+<line x1="528" y1="268" x2="550" y2="268" stroke="#1E2B3A" stroke-width="1.6"/>
+<path d="M550,268 L554,268 L559.2,262 L569.5,274 L579.8,262 L590.2,274 L600.5,262 L610.8,274 L616,268 L620,268" fill="none" stroke="#1E2B3A" stroke-width="1.6"/>
+<text x="585" y="294" text-anchor="middle" font-size="12">1/(h<tspan dy="4" font-size="75%">o</tspan><tspan dy="-4">​</tspan>A<tspan dy="4" font-size="75%">o</tspan><tspan dy="-4">​</tspan>)</text>
+<line x1="620" y1="268" x2="642" y2="268" stroke="#1E2B3A" stroke-width="1.6"/>
+<circle cx="642" cy="268" r="3.2" fill="#1E2B3A"/>
+<text x="642" y="259" text-anchor="middle" font-size="12">T<tspan dy="4" font-size="75%">c</tspan><tspan dy="-4">​</tspan></text>
+<text x="300" y="335" font-size="12">1/(U<tspan dy="4" font-size="75%">o</tspan><tspan dy="-4">​</tspan>A<tspan dy="4" font-size="75%">o</tspan><tspan dy="-4">​</tspan>) = 1/(h<tspan dy="4" font-size="75%">i</tspan><tspan dy="-4">​</tspan>A<tspan dy="4" font-size="75%">i</tspan><tspan dy="-4">​</tspan>) + ln(r<tspan dy="4" font-size="75%">o</tspan><tspan dy="-4">​</tspan>/r<tspan dy="4" font-size="75%">i</tspan><tspan dy="-4">​</tspan>)/(2πkL) + 1/(h<tspan dy="4" font-size="75%">o</tspan><tspan dy="-4">​</tspan>A<tspan dy="4" font-size="75%">o</tspan><tspan dy="-4">​</tspan>)</text>
+</svg>

@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 650" width="700" height="650" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2B3A">
+<title>2-4 shell-and-tube exchanger: labelled schematic and temperature profile</title>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#1E2B3A"/></marker>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#D2552B"/></marker>
+<marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#0B7C8C"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#55667D"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#B7840A"/></marker>
+<pattern id="ins" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern>
+<pattern id="brick" width="24" height="12" patternUnits="userSpaceOnUse"><rect width="24" height="12" fill="#FBE2D6"/><path d="M0,0.5 H24 M0,6.5 H24 M12,0.5 V6.5 M0.5,6.5 V12 M24,6.5 V12" stroke="#D2552B" stroke-width="0.8" fill="none" opacity="0.7"/></pattern>
+<pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FFF3D6"/><circle cx="2" cy="2" r="0.9" fill="#C98A00"/><circle cx="5.5" cy="5.5" r="0.9" fill="#C98A00"/></pattern>
+<pattern id="dense" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#E9D3A6"/><circle cx="1" cy="1" r="0.8" fill="#8A6200"/><circle cx="3" cy="3" r="0.8" fill="#8A6200"/></pattern>
+</defs>
+<rect width="700" height="650" fill="#FFFFFF"/>
+<rect x="190" y="80" width="370" height="150" fill="#FFFFFF" stroke="#1E2B3A" stroke-width="2.2"/>
+<line x1="190" y1="95" x2="560" y2="95" stroke="#9AA8B8" stroke-width="1.6"/>
+<line x1="190" y1="105" x2="560" y2="105" stroke="#9AA8B8" stroke-width="1.6"/>
+<line x1="190" y1="128" x2="560" y2="128" stroke="#9AA8B8" stroke-width="1.6"/>
+<line x1="190" y1="138" x2="560" y2="138" stroke="#9AA8B8" stroke-width="1.6"/>
+<line x1="190" y1="162" x2="560" y2="162" stroke="#9AA8B8" stroke-width="1.6"/>
+<line x1="190" y1="172" x2="560" y2="172" stroke="#9AA8B8" stroke-width="1.6"/>
+<line x1="190" y1="195" x2="560" y2="195" stroke="#9AA8B8" stroke-width="1.6"/>
+<line x1="190" y1="205" x2="560" y2="205" stroke="#9AA8B8" stroke-width="1.6"/>
+<line x1="190" y1="155" x2="520" y2="155" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="250" y1="80" x2="250" y2="133" stroke="#1E2B3A" stroke-width="2"/>
+<line x1="250" y1="230" x2="250" y2="177" stroke="#1E2B3A" stroke-width="2"/>
+<line x1="310" y1="155" x2="310" y2="102" stroke="#1E2B3A" stroke-width="2"/>
+<line x1="310" y1="155" x2="310" y2="208" stroke="#1E2B3A" stroke-width="2"/>
+<line x1="370" y1="80" x2="370" y2="133" stroke="#1E2B3A" stroke-width="2"/>
+<line x1="370" y1="230" x2="370" y2="177" stroke="#1E2B3A" stroke-width="2"/>
+<line x1="430" y1="155" x2="430" y2="102" stroke="#1E2B3A" stroke-width="2"/>
+<line x1="430" y1="155" x2="430" y2="208" stroke="#1E2B3A" stroke-width="2"/>
+<line x1="490" y1="80" x2="490" y2="133" stroke="#1E2B3A" stroke-width="2"/>
+<line x1="490" y1="230" x2="490" y2="177" stroke="#1E2B3A" stroke-width="2"/>
+<rect x="182" y="72" width="8" height="166" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.4"/>
+<rect x="560" y="72" width="8" height="166" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.4"/>
+<rect x="110" y="76" width="72" height="158" fill="#D9F0F2" stroke="#1E2B3A" stroke-width="1.6"/>
+<rect x="102" y="68" width="8" height="174" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.4"/>
+<line x1="110" y1="116" x2="182" y2="116" stroke="#1E2B3A" stroke-width="2.4"/>
+<line x1="110" y1="184" x2="182" y2="184" stroke="#1E2B3A" stroke-width="2.4"/>
+<path d="M568,76 L605,76 Q625,76 625,100 L625,210 Q625,234 605,234 L568,234 Z" fill="#D9F0F2" stroke="#1E2B3A" stroke-width="1.6"/>
+<line x1="568" y1="155" x2="625" y2="155" stroke="#1E2B3A" stroke-width="2.4"/>
+<rect x="141" y="50" width="18" height="26" fill="#D9F0F2" stroke="#1E2B3A" stroke-width="1.3"/>
+<rect x="141" y="234" width="18" height="26" fill="#D9F0F2" stroke="#1E2B3A" stroke-width="1.3"/>
+<rect x="211" y="54" width="18" height="26" fill="#FBE2D6" stroke="#1E2B3A" stroke-width="1.3"/>
+<rect x="211" y="230" width="18" height="26" fill="#FBE2D6" stroke="#1E2B3A" stroke-width="1.3"/>
+<line x1="150" y1="282" x2="150" y2="262" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ac)"/>
+<line x1="150" y1="48" x2="150" y2="28" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ac)"/>
+<line x1="220" y1="28" x2="220" y2="50" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah)"/>
+<line x1="220" y1="260" x2="220" y2="282" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah)"/>
+<text x="140" y="296" text-anchor="end" fill="#0B7C8C" font-size="11.5">Tube fluid in</text>
+<text x="140" y="36" text-anchor="end" fill="#0B7C8C" font-size="11.5">Tube fluid out</text>
+<text x="232" y="30" fill="#D2552B" font-size="11.5">Shell fluid in</text>
+<text x="230" y="280" fill="#D2552B" font-size="11.5">Shell fluid out</text>
+<path d="M262,114 L520,114 Q548,114 548,155.0 Q548,196 520,196 L262,196" fill="none" stroke="#D2552B" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<line x1="330" y1="100" x2="304" y2="100" stroke="#0B7C8C" stroke-width="1.8" marker-end="url(#ac)"/>
+<line x1="290" y1="133" x2="316" y2="133" stroke="#0B7C8C" stroke-width="1.8" marker-end="url(#ac)"/>
+<line x1="330" y1="167" x2="304" y2="167" stroke="#0B7C8C" stroke-width="1.8" marker-end="url(#ac)"/>
+<line x1="290" y1="200" x2="316" y2="200" stroke="#0B7C8C" stroke-width="1.8" marker-end="url(#ac)"/>
+<text x="552" y="101" text-anchor="end" fill="#0B7C8C" font-size="10">4</text>
+<text x="552" y="134" text-anchor="end" fill="#0B7C8C" font-size="10">3</text>
+<text x="552" y="168" text-anchor="end" fill="#0B7C8C" font-size="10">2</text>
+<text x="552" y="201" text-anchor="end" fill="#0B7C8C" font-size="10">1</text>
+<line x1="104" y1="104" x2="17" y2="96" stroke="#9AA8B8" stroke-width="0.9"/>
+<circle cx="104" cy="104" r="1.8" fill="#1E2B3A"/>
+<text x="20" y="100" font-size="11.5">Channel cover</text>
+<line x1="120" y1="150" x2="37" y2="131" stroke="#9AA8B8" stroke-width="0.9"/>
+<circle cx="120" cy="150" r="1.8" fill="#1E2B3A"/>
+<text x="40" y="135" font-size="11.5">Channel</text>
+<line x1="140" y1="184" x2="27" y2="171" stroke="#9AA8B8" stroke-width="0.9"/>
+<circle cx="140" cy="184" r="1.8" fill="#1E2B3A"/>
+<text x="30" y="175" font-size="11.5">Pass partitions</text>
+<line x1="140" y1="116" x2="118" y2="168" stroke="#9AA8B8" stroke-width="0.9"/>
+<line x1="186" y1="74" x2="330" y2="54" stroke="#9AA8B8" stroke-width="0.9"/>
+<circle cx="186" cy="74" r="1.8" fill="#1E2B3A"/>
+<text x="330" y="58" text-anchor="middle" font-size="11.5">Tube sheet</text>
+<line x1="420" y1="80" x2="420" y2="36" stroke="#9AA8B8" stroke-width="0.9"/>
+<circle cx="420" cy="80" r="1.8" fill="#1E2B3A"/>
+<text x="420" y="40" text-anchor="middle" font-size="11.5">Shell</text>
+<line x1="490" y1="92" x2="497" y2="50" stroke="#9AA8B8" stroke-width="0.9"/>
+<circle cx="490" cy="92" r="1.8" fill="#1E2B3A"/>
+<text x="500" y="54" font-size="11.5">Transverse baffles</text>
+<line x1="470" y1="156" x2="480" y2="268" stroke="#9AA8B8" stroke-width="0.9"/>
+<circle cx="470" cy="156" r="1.8" fill="#1E2B3A"/>
+<text x="480" y="272" text-anchor="middle" font-size="11.5">Longitudinal baffle</text>
+<line x1="600" y1="220" x2="630" y2="264" stroke="#9AA8B8" stroke-width="0.9"/>
+<circle cx="600" cy="220" r="1.8" fill="#1E2B3A"/>
+<text x="630" y="268" text-anchor="middle" font-size="11.5">Rear head</text>
+<text x="632" y="159" font-size="10"></text>
+<line x1="340" y1="205" x2="330" y2="258" stroke="#9AA8B8" stroke-width="0.9"/>
+<circle cx="340" cy="205" r="1.8" fill="#1E2B3A"/>
+<text x="330" y="262" text-anchor="middle" font-size="11.5">Tubes (4 passes)</text>
+<line x1="40" y1="305" x2="660" y2="305" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="110" y1="590" x2="560" y2="590" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="110" y1="590" x2="110" y2="320" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="335" y="624" text-anchor="middle">Length along the exchanger, x</text>
+<text x="66" y="455" text-anchor="middle" transform="rotate(-90 66 455)">Temperature</text>
+<text x="110" y="608" text-anchor="middle" fill="#55667D" font-size="12">0</text>
+<text x="520" y="608" text-anchor="middle" fill="#55667D" font-size="12">L</text>
+<line x1="520" y1="590" x2="520" y2="340" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="4 3"/>
+<path d="M110,359.2 C113.4,360.8 123.7,365.7 130.5,368.7 C137.3,371.7 144.2,374.4 151,377.1 C157.8,379.7 164.7,382.1 171.5,384.5 C178.3,386.8 185.2,389 192,391 C198.8,393.1 205.7,395 212.5,396.9 C219.3,398.7 226.2,400.4 233,402 C239.8,403.6 246.7,405.1 253.5,406.6 C260.3,408 267.2,409.4 274,410.6 C280.8,411.9 287.7,413.1 294.5,414.2 C301.3,415.4 308.2,416.4 315,417.4 C321.8,418.4 328.7,419.4 335.5,420.3 C342.3,421.2 349.2,422 356,422.8 C362.8,423.6 369.7,424.3 376.5,425 C383.3,425.7 390.2,426.4 397,427 C403.8,427.7 410.7,428.3 417.5,428.8 C424.3,429.4 431.2,429.9 438,430.4 C444.8,430.9 451.7,431.4 458.5,431.8 C465.3,432.3 472.2,432.7 479,433.1 C485.8,433.5 492.7,433.9 499.5,434.3 C506.3,434.6 516.6,435.1 520,435.3 C523.4,435.5 520,435.3 520,435.3" fill="none" stroke="#D2552B" stroke-width="2.6"/>
+<line x1="263.7" y1="408.7" x2="277.5" y2="411.3" stroke="#D2552B" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M110,511 C113.4,510.6 123.7,509.5 130.5,508.8 C137.3,508 144.2,507.3 151,506.5 C157.8,505.8 164.7,505 171.5,504.2 C178.3,503.4 185.2,502.6 192,501.8 C198.8,501 205.7,500.2 212.5,499.3 C219.3,498.5 226.2,497.6 233,496.8 C239.8,495.9 246.7,495 253.5,494.1 C260.3,493.2 267.2,492.2 274,491.3 C280.8,490.3 287.7,489.3 294.5,488.3 C301.3,487.3 308.2,486.2 315,485.1 C321.8,484 328.7,482.9 335.5,481.8 C342.3,480.6 349.2,479.4 356,478.2 C362.8,476.9 369.7,475.6 376.5,474.3 C383.3,473 390.2,471.6 397,470.1 C403.8,468.6 410.7,467.1 417.5,465.6 C424.3,464 431.2,462.3 438,460.6 C444.8,458.9 451.7,457.1 458.5,455.1 C465.3,453.2 472.2,451.3 479,449.2 C485.8,447.1 492.7,444.9 499.5,442.6 C506.3,440.3 516.6,436.5 520,435.3 C523.4,434.1 520,435.3 520,435.3" fill="none" stroke="#D2552B" stroke-width="2.6" stroke-dasharray="8 4"/>
+<line x1="318.5" y1="484.6" x2="304.7" y2="486.8" stroke="#D2552B" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M110,570.8 C113.4,570.3 123.7,568.8 130.5,567.8 C137.3,566.8 144.2,565.8 151,564.9 C157.8,563.9 164.7,562.9 171.5,561.9 C178.3,561 185.2,560 192,559.1 C198.8,558.1 205.7,557.2 212.5,556.2 C219.3,555.3 226.2,554.3 233,553.4 C239.8,552.4 246.7,551.5 253.5,550.5 C260.3,549.6 267.2,548.7 274,547.7 C280.8,546.8 287.7,545.8 294.5,544.9 C301.3,544 308.2,543 315,542.1 C321.8,541.1 328.7,540.2 335.5,539.2 C342.3,538.3 349.2,537.3 356,536.3 C362.8,535.4 369.7,534.4 376.5,533.4 C383.3,532.4 390.2,531.4 397,530.4 C403.8,529.4 410.7,528.4 417.5,527.4 C424.3,526.4 431.2,525.3 438,524.3 C444.8,523.2 451.7,522.1 458.5,521 C465.3,520 472.2,518.8 479,517.7 C485.8,516.6 492.7,515.4 499.5,514.2 C506.3,513 516.6,511.2 520,510.6 C523.4,510 520,510.6 520,510.6" fill="none" stroke="#0B7C8C" stroke-width="2.2"/>
+<line x1="325.2" y1="540.7" x2="339" y2="538.7" stroke="#0B7C8C" stroke-width="2" marker-end="url(#ac)"/>
+<path d="M110,495.3 C113.4,495.2 123.7,494.8 130.5,494.6 C137.3,494.4 144.2,494.1 151,493.9 C157.8,493.7 164.7,493.5 171.5,493.4 C178.3,493.2 185.2,493 192,492.9 C198.8,492.7 205.7,492.6 212.5,492.5 C219.3,492.4 226.2,492.3 233,492.2 C239.8,492.2 246.7,492.1 253.5,492.1 C260.3,492.1 267.2,492.1 274,492.1 C280.8,492.1 287.7,492.2 294.5,492.2 C301.3,492.3 308.2,492.4 315,492.5 C321.8,492.7 328.7,492.8 335.5,493 C342.3,493.2 349.2,493.5 356,493.7 C362.8,494 369.7,494.3 376.5,494.7 C383.3,495 390.2,495.4 397,495.9 C403.8,496.3 410.7,496.8 417.5,497.4 C424.3,497.9 431.2,498.5 438,499.2 C444.8,499.9 451.7,500.6 458.5,501.4 C465.3,502.2 472.2,503 479,504 C485.8,504.9 492.7,505.9 499.5,507 C506.3,508.1 516.6,510 520,510.6 C523.4,511.2 520,510.6 520,510.6" fill="none" stroke="#0B7C8C" stroke-width="2.2" stroke-dasharray="7 4"/>
+<line x1="339.1" y1="493.1" x2="325.1" y2="492.8" stroke="#0B7C8C" stroke-width="2" marker-end="url(#ac)"/>
+<path d="M110,495.3 C113.4,494.2 123.7,490.8 130.5,488.8 C137.3,486.7 144.2,484.8 151,483 C157.8,481.2 164.7,479.5 171.5,477.9 C178.3,476.4 185.2,474.9 192,473.5 C198.8,472.1 205.7,470.7 212.5,469.5 C219.3,468.3 226.2,467.1 233,466 C239.8,464.9 246.7,463.9 253.5,463 C260.3,462 267.2,461.1 274,460.3 C280.8,459.4 287.7,458.6 294.5,457.9 C301.3,457.1 308.2,456.4 315,455.8 C321.8,455.1 328.7,454.5 335.5,453.9 C342.3,453.4 349.2,452.8 356,452.3 C362.8,451.8 369.7,451.4 376.5,450.9 C383.3,450.5 390.2,450.1 397,449.7 C403.8,449.3 410.7,448.9 417.5,448.6 C424.3,448.3 431.2,447.9 438,447.6 C444.8,447.4 451.7,447.1 458.5,446.8 C465.3,446.6 472.2,446.3 479,446.1 C485.8,445.9 492.7,445.7 499.5,445.5 C506.3,445.3 516.6,445 520,445 C523.4,444.9 520,445 520,445" fill="none" stroke="#0B7C8C" stroke-width="2.2"/>
+<line x1="325.1" y1="454.8" x2="339.1" y2="453.6" stroke="#0B7C8C" stroke-width="2" marker-end="url(#ac)"/>
+<path d="M110,420.1 C113.4,420.6 123.7,422 130.5,422.9 C137.3,423.8 144.2,424.6 151,425.4 C157.8,426.2 164.7,427 171.5,427.7 C178.3,428.4 185.2,429 192,429.7 C198.8,430.3 205.7,430.9 212.5,431.5 C219.3,432 226.2,432.6 233,433.1 C239.8,433.6 246.7,434.1 253.5,434.5 C260.3,435 267.2,435.4 274,435.8 C280.8,436.2 287.7,436.6 294.5,437 C301.3,437.4 308.2,437.7 315,438.1 C321.8,438.4 328.7,438.7 335.5,439.1 C342.3,439.4 349.2,439.7 356,439.9 C362.8,440.2 369.7,440.5 376.5,440.7 C383.3,441 390.2,441.2 397,441.5 C403.8,441.7 410.7,441.9 417.5,442.2 C424.3,442.4 431.2,442.6 438,442.8 C444.8,443 451.7,443.2 458.5,443.4 C465.3,443.6 472.2,443.8 479,443.9 C485.8,444.1 492.7,444.3 499.5,444.5 C506.3,444.6 516.6,444.9 520,445 C523.4,445 520,445 520,445" fill="none" stroke="#0B7C8C" stroke-width="2.2" stroke-dasharray="7 4"/>
+<line x1="339.1" y1="439.2" x2="325.1" y2="438.6" stroke="#0B7C8C" stroke-width="2" marker-end="url(#ac)"/>
+<text x="118" y="355.2" fill="#D2552B" font-size="11.5">T<tspan dy="4" font-size="75%">1</tspan><tspan dy="-4">​</tspan> (shell in)</text>
+<text x="528" y="439.3" fill="#D2552B" font-size="11.5">shell pass 1 → 2</text>
+<text x="104" y="527" text-anchor="end" fill="#D2552B" font-size="12">T<tspan dy="4" font-size="75%">2</tspan><tspan dy="-4">​</tspan></text>
+<text x="104" y="574.8" text-anchor="end" fill="#0B7C8C" font-size="12">t<tspan dy="4" font-size="75%">1</tspan><tspan dy="-4">​</tspan></text>
+<text x="104" y="424.1" text-anchor="end" fill="#0B7C8C" font-size="12">t<tspan dy="4" font-size="75%">2</tspan><tspan dy="-4">​</tspan></text>
+<text x="364.2" y="549.4" text-anchor="middle" fill="#0B7C8C" font-size="10.5">pass 1</text>
+<text x="364.2" y="488" text-anchor="middle" fill="#0B7C8C" font-size="10.5">pass 2</text>
+<text x="364.2" y="465.8" text-anchor="middle" fill="#0B7C8C" font-size="10.5">pass 3</text>
+<text x="364.2" y="434.2" text-anchor="middle" fill="#0B7C8C" font-size="10.5">pass 4</text>
+<text x="545" y="380" fill="#D2552B" font-size="11">Hot (shell): solid = pass 1,</text>
+<text x="545" y="394" fill="#D2552B" font-size="11">dashed = pass 2</text>
+<text x="545" y="418" fill="#0B7C8C" font-size="11">Cold (tubes): 4 passes</text>
+<text x="545" y="472" font-size="11">t<tspan dy="4" font-size="75%">2</tspan><tspan dy="-4">​</tspan> > T<tspan dy="4" font-size="75%">2</tspan><tspan dy="-4">​</tspan> is possible:</text>
+<text x="545" y="486" font-size="11">closer to true</text>
+<text x="545" y="500" font-size="11">counterflow than 1-2</text>
+<text x="545" y="526" fill="#55667D" font-size="10">Illustrative values</text>
+</svg>

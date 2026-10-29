@@ -34,6 +34,8 @@ Physical properties at the caloric temperature:
 - Water, pass 2: returns from x = 0 to x = L, rising further to 90 °F at the outlet (counter-flow pass).
 - The two tube-side curves meet at the return end (x = 0); none of the water curves crosses the shell curve. Note $t_2 = T_2 = 90^\circ$F, so the outlet ends approach each other closely; this is why $F_T$ falls to ≈ 0.81.
 
+![Temperature profile in the 1-2 K₃PO₄ cooler (shape computed for these terminal temperatures)](fig/2015-16-Q1a-sol.svg)
+
 **LMTD (counter-flow basis):**
 $$\Delta t_1 = T_1 - t_2 = 150 - 90 = 60^\circ\mathrm{F}, \qquad \Delta t_2 = T_2 - t_1 = 90 - 68 = 22^\circ\mathrm{F}$$
 $$\mathrm{LMTD} = \frac{60 - 22}{\ln(60/22)} = 37.9^\circ\mathrm{F}$$
@@ -165,6 +167,8 @@ The dirt factor exceeds the requirement and both pressure drops are within 10 ps
 
 **Sketch:** log–log plot of heat flux $q''$ (W/m², ≈ $10^3$–$10^7$) versus excess temperature $\Delta T_e = T_s - T_{sat}$ (≈ 1–1000 °C). The curve rises slowly (A–B), then steeply (B–C) to a peak C ($q_{max}$, ≈ 1 MW/m² for water at $\Delta T_e \approx 30^\circ$C), falls (C–D) to a minimum D (Leidenfrost, $\Delta T_e \approx 120^\circ$C), and then rises again (D–E). A dashed horizontal arrow from C to the far right (ΔT ≈ 1000 °C) shows the burnout jump under heat-flux control.
 
+![Pool boiling curve: regimes, critical heat flux (burnout) and Leidenfrost point](fig/common-boiling-curve.svg)
+
 **Regimes:**
 1. **Natural convection boiling** ($\Delta T_e \lesssim 5^\circ$C, to point A): liquid slightly superheated; motion by natural convection; evaporation at the free surface; no bubbles at the wall.
 2. **Nucleate boiling** (A–C, $5 \lesssim \Delta T_e \lesssim 30^\circ$C):
@@ -213,6 +217,8 @@ The properties of water at the saturation temperature of 40°C corresponding to 
 
 **Find:** Q and $\dot m$ per metre of tube length.
 
+![Condenser tube bank: 3 tubes per column, 4 columns](fig/2015-16-Q3a.svg)
+
 **Assumptions:** steady laminar film condensation; condensate from upper tubes falls onto lower ones; liquid properties at $T_f = 35^\circ$C (Çengel Table A-9): $\rho_l = 994.0\,\mathrm{kg/m^3}$, $\mu_l = 0.720\times10^{-3}\,\mathrm{kg/m\,s}$, $k_l = 0.623\,\mathrm{W/m\,K}$, $c_{pl} = 4178\,\mathrm{J/kg\,K}$. Basis L = 1 m.
 
 1. Modified latent heat: $h_{fg}^* = h_{fg} + 0.68c_{pl}(T_{sat} - T_s) = 2407\times10^3 + 0.68(4178)(10) = 2435\times10^3$ J/kg.
@@ -260,13 +266,17 @@ $$\mathrm{Nu}_d = 0.675(4.06\times10^{-5})^{0.058} = 0.376$$
 - **Wider temperature range:** in counter flow the cold-fluid outlet can exceed the hot-fluid outlet ($t_2 > T_2$, temperature cross); in parallel flow $t_2 < T_2$ always.
 - **Higher effectiveness** (ε–NTU, textbook method, not in the slides): for the same NTU, ε(counter) > ε(parallel); counter-flow ε → 1 as NTU → ∞, parallel flow is limited to $1/(1+C_r)$.
 - **More uniform wall temperatures and thermal stresses** (smaller local ΔT variations).
-- Parallel flow is used only when the cold fluid must not overheat, or a rapid initial temperature change is needed (e.g. viscous fluids, heat-sensitive materials).`,
+- Parallel flow is used only when the cold fluid must not overheat, or a rapid initial temperature change is needed (e.g. viscous fluids, heat-sensitive materials).
+
+![Temperature profiles: parallel flow, counterflow, condensing and boiling](fig/common-hx-profiles.svg)`,
           answer: String.raw`Counter flow gives a larger, more uniform LMTD (less area), allows $t_2 > T_2$ and higher effectiveness.` },
         { id: "2015-16-Q4b", label: "(b)", marks: "10",
           topic: "heat-exchangers", sub: "Shell-side D_e: square and triangular pitch",
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`Calculate the equivalent diameter for square-pitch and triangular-pitch tube arrangements of a shell-and-tube heat exchanger where the tube OD is 0.75 inch and the clearance is 0.25 inch.`,
           solution: String.raw`**Given:** $d_o = 0.75$ in, $C' = 0.25$ in → pitch $P_T = d_o + C' = 1.0$ in.
+
+![Unit cells for square and triangular pitch](fig/2015-16-Q4b.svg)
 
 $D_e = 4 \times$ (free flow area) / (wetted perimeter), taken over the unit cell of the layout (Kern).
 
@@ -303,6 +313,8 @@ Put in the **shell**:
 
 For an annulus (inner pipe OD $D_1$, outer pipe ID $D_2$), the flow area is $\pi(D_2^2 - D_1^2)/4$ in both cases, but the **perimeter** used differs:
 
+![Annulus: heated perimeter for Dₑ, wetted perimeter for Dₑ′](fig/2015-16-Q4d-sol.svg)
+
 | | Heat transfer: $D_e$ | Pressure drop (friction): $D_e'$ |
 |---|---|---|
 | Perimeter | **heated** perimeter only, $\pi D_1$ (heat passes only through the inner pipe) | **wetted** perimeter, $\pi(D_1 + D_2)$ (friction acts on both walls) |
@@ -326,6 +338,8 @@ $D_e > D_e'$ always. For shell-side flow (Kern), $D_e$ is based on the unit cell
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Starting from Fourier's law of heat conduction, develop the general three-dimensional heat-conduction equation.`,
           solution: String.raw`**Assumptions:** Cartesian coordinates, stationary solid, uniform volumetric generation $\dot q$ (W/m³) allowed, properties may vary with position, no bulk motion.
+
+![Control volume dx dy dz for the conduction energy balance](fig/2015-16-Q5a-sol.svg)
 
 1. **Control volume:** element $dx\,dy\,dz$ at $(x, y, z)$.
 2. **Fourier's law:** heat entering the x-face: $q_x = -k\,dy\,dz\,\dfrac{\partial T}{\partial x}$. Heat leaving the opposite face (Taylor series):
@@ -352,6 +366,8 @@ $$\frac{\partial^2T}{\partial x^2} + \frac{\partial^2T}{\partial y^2} + \frac{\p
           text: String.raw`Derive an expression for the heat flow from a hollow sphere. The inside and outside surfaces of the hollow sphere are maintained at $T_i$ and $T_o$ temperatures respectively.`,
           solution: String.raw`**Assumptions:** steady state, radial (1-D) conduction only, constant k, no heat generation; inner radius $r_i$ at $T_i$, outer radius $r_o$ at $T_o$.
 
+![Hollow sphere with a thin shell at radius r](fig/2015-16-Q5b-sol.svg)
+
 1. **Governing equation** (spherical, steady, no generation):
 $$\frac{1}{r^2}\frac{d}{dr}\left(r^2\frac{dT}{dr}\right) = 0 \;\Rightarrow\; r^2\frac{dT}{dr} = C_1 \;\Rightarrow\; T = -\frac{C_1}{r} + C_2$$
 2. **Boundary conditions:** $T(r_i) = T_i$, $T(r_o) = T_o$:
@@ -377,7 +393,9 @@ Q is independent of r (steady, no generation) though the flux $Q/(4\pi r^2)$ fal
 - Defined per unit area: $R_c'' = \dfrac{\Delta T_{interface}}{q''}$ (m²·K/W); thermal contact conductance $h_c = 1/R_c''$. Typical $R_c'' \approx 10^{-5}$–$10^{-3}$ m²K/W (metals in air).
 - It is treated as an extra resistance in series in composite-wall networks: $R_c = R_c''/A$.
 - Decreases with: higher contact pressure, smoother surfaces, softer materials, a gap fluid of higher k (helium, thermal grease, oil), metallic foils (Al, Cu, In) inserted between the surfaces.
-- Important for thin, high-k layers (electronics, bolted joints) where $R_c$ can be comparable to the wall resistance.`,
+- Important for thin, high-k layers (electronics, bolted joints) where $R_c$ can be comparable to the wall resistance.
+
+![Temperature drop across an imperfect contact](fig/2015-16-Q5c-sol.svg)`,
           answer: String.raw`Imperfect contact at rough interfaces gives a temperature jump; $R_c'' = \Delta T/q''$, reduced by pressure, smoothness and conductive fillers.` },
       ] },
     { id: "2015-16-Q6", q: 6, section: "B", compulsory: false,
@@ -388,6 +406,8 @@ Q is independent of r (steady, no generation) though the flux $Q/(4\pi r^2)$ fal
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Discuss the phenomenon called "critical insulation thickness". Derive the equation for the critical insulation thickness for a pipe.`,
           solution: String.raw`**Phenomenon:** adding insulation of outer radius r to a pipe of radius $r_1$ adds conduction resistance $\ln(r/r_1)/(2\pi kL)$, but at the same time enlarges the outer surface, which *reduces* the convection resistance $1/(2\pi rLh)$. For small pipes (or poor h, i.e. low-h surroundings) the second effect wins at first: heat loss **increases** with insulation up to a maximum at $r = r_c$, then decreases. Insulation reduces heat loss only if $r_1 \ge r_c$ or if enough is added to go well beyond $r_c$. Electric wires use this to dissipate more heat through thin insulation.
+
+![Heat loss vs outer radius: maximum at the critical radius r = k/h](fig/common-critical-radius.svg)
 
 **Derivation** (steady, radial, constant k, uniform h and $T_\infty$, pipe surface at $T_1$):
 1. $$Q = \frac{T_1 - T_\infty}{\dfrac{\ln(r/r_1)}{2\pi kL} + \dfrac{1}{2\pi rLh}} = \frac{T_1 - T_\infty}{R_{tot}(r)}$$
@@ -405,6 +425,8 @@ $$\frac{dR_{tot}}{dr} = \frac{1}{2\pi kL}\frac{1}{r} - \frac{1}{2\pi Lh}\frac{1}
           solution: String.raw`**Given:** $r_1 = 0.025$ m, $r_2 = 0.0275$ m, $r_3 = r_2 + 0.03 = 0.0575$ m; $k_p = 80$, $k_{ins} = 0.05$ W/m·°C; $h_i = 60$, $h_o = 18\,\mathrm{W/m^2\,^\circ C}$; $T_{\infty1} = 320^\circ$C, $T_{\infty2} = 5^\circ$C; L = 1 m.
 
 **Find:** $\dot Q$ per metre, $\Delta T_{pipe}$, $\Delta T_{ins}$.
+
+![Insulated steam pipe and its series resistances](fig/2015-16-Q6b.svg)
 
 **Assumptions:** steady, 1-D radial, constant k, perfect contact between pipe and insulation.
 
@@ -436,6 +458,8 @@ The notations have their usual meanings. Notes for Q.7(a), for incompressible fl
 - Momentum: $\rho\left(u\dfrac{\partial u}{\partial x} + v\dfrac{\partial u}{\partial y}\right) = \mu\dfrac{\partial^2u}{\partial y^2} - \dfrac{\partial p}{\partial x}$
 - Energy: $u\dfrac{\partial T}{\partial x} + v\dfrac{\partial T}{\partial y} = \alpha\dfrac{\partial^2T}{\partial y^2} + \dfrac{\mu}{\rho c_p}\left(\dfrac{\partial u}{\partial y}\right)^2$`,
           solution: String.raw`**Assumptions:** steady, 2-D, laminar, incompressible, constant properties; flat plate so $u_\infty$ = const and $\partial p/\partial x = 0$; at $y = \delta$, $u = u_\infty$ and $\partial u/\partial y = 0$.
+
+![Velocity and thermal boundary layers on a flat plate](fig/common-bl-flat-plate.svg)
 
 **Step 1 – integrate the momentum equation across the layer** ($y = 0$ to $H > \delta$), with $\partial p/\partial x = 0$:
 $$\int_0^H u\frac{\partial u}{\partial x}dy + \int_0^H v\frac{\partial u}{\partial y}dy = \nu\int_0^H\frac{\partial^2u}{\partial y^2}dy = \nu\left[\frac{\partial u}{\partial y}\right]_0^H = -\nu\left.\frac{\partial u}{\partial y}\right|_0$$
@@ -470,6 +494,8 @@ i.e. $\delta/x = 4.64/\sqrt{\mathrm{Re}_x}$ (exact Blasius: 5.0). The energy equ
           solution: String.raw`**Given:** air, p = 1 atm = 101 325 Pa, T = 300 K, $u_\infty = 2$ m/s, $\mu = 1.85\times10^{-5}$ kg/m·s; x = 0.2 and 0.4 m.
 
 **Find:** δ at both x.
+
+![Boundary-layer thickness at 20 cm and 40 cm (air, 2 m/s)](fig/2015-16-Q7b.svg)
 
 **Assumptions:** ideal gas, laminar boundary layer (checked), integral-method result.
 
@@ -539,6 +565,8 @@ Properties at the mean bulk temperature.
 1. **Isothermal flow** – the standard parabola $u/u_{max} = 1 - (r/R)^2$, $u_{max} = 2u_m$.
 2. **Liquid being heated** (or gas being cooled) – the fluid near the wall is hotter, so its viscosity is **lower** (liquid); velocity near the wall increases and the centre-line velocity falls → a **flatter, blunter** profile.
 3. **Liquid being cooled** (or gas being heated) – fluid near the wall is colder and more viscous (liquid; for gases μ rises with T); flow near the wall slows and the centre-line velocity rises → a **more peaked (pointed)** profile.
+
+![Laminar tube velocity profiles distorted by heating and cooling](fig/common-velocity-distortion.svg)
 
 **Consequence:** heating a liquid gives a higher h than cooling it at the same Re; this is why Sieder–Tate include $(\mu/\mu_w)^{0.14}$ and Dittus–Boelter uses n = 0.4 vs 0.3.`,
           answer: String.raw`Isothermal: parabola; liquid heated: flatter (lower wall viscosity); liquid cooled: more peaked – reversed for gases.` },

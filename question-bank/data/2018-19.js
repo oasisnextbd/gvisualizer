@@ -38,6 +38,8 @@ Axes: temperature (°F) vertical, length along the exchanger horizontal (0 to $L
 - **Tube side (raw water), 2 passes:** pass 1 enters at 75°F at the end where the shell fluid leaves (85°F), so it runs counter to the shell fluid, and rises to an intermediate temperature (about 77–78°F) at the floating/return head. Pass 2 comes back in parallel with the shell fluid and rises to 80°F at the outlet (same end as the 93°F inlet). The two tube lines form a "hairpin", one counterflow and one parallel-flow branch.
 - Terminal differences: hot end $93-80=13$°F, cold end $85-75=10$°F.
 
+![Temperature profile in the 1-2 distilled-water cooler (shape computed)](fig/2018-19-Q1b-sol.svg)
+
 ### LMTD (counterflow basis)
 $$\mathrm{LMTD}=\frac{\Delta t_h-\Delta t_c}{\ln(\Delta t_h/\Delta t_c)}=\frac{13-10}{\ln(13/10)}=11.43\ ^\circ\mathrm F$$
 
@@ -200,6 +202,8 @@ $$\Delta P_s=\frac{fG_s^2D_s(N+1)}{5.22\times10^{10}D_es\phi_s}=\frac{0.00197(6.
 
 **Find:** the number of hairpins.
 
+![Three 20 ft hairpins in series, counterflow](fig/2018-19-Q2.svg)
+
 **Assumptions:** counterflow; $\phi=(\mu/\mu_w)^{0.14}=1$; arithmetic-mean caloric temperatures (both liquids have $\mu<1$ cP and small ranges); properties from Kern's charts (values read below).
 
 **Pipe data (Kern Table 11, schedule 40):** 1¼ in IPS: OD = 1.66 in, ID = 1.38 in, outside surface 0.435 ft²/ft; 2 in IPS: ID = 2.067 in.
@@ -292,7 +296,9 @@ Axes: distance from the wall $y$ (horizontal), with the plate drawn as a vertica
 - **Temperature profile:** maximum $T_s$ at the wall ($y=0$), decreasing smoothly and monotonically to $T_\infty$ at the edge of the thermal boundary layer $\delta_t$.
 - **Velocity profile:** $u=0$ at the wall (no slip), rising to a maximum a short distance from the wall (about one third of the layer thickness), then falling back to $u=0$ at the edge of the boundary layer (quiescent fluid far away). There is no free-stream velocity.
 - Both layers grow with height $x$; for $Pr\approx1$ (air), $\delta\approx\delta_t$.
-- For a cooled plate ($T_s<T_\infty$) the picture is mirrored: the fluid sinks along the plate, and the temperature rises from $T_s$ to $T_\infty$.`,
+- For a cooled plate ($T_s<T_\infty$) the picture is mirrored: the fluid sinks along the plate, and the temperature rises from $T_s$ to $T_\infty$.
+
+![Natural convection on hot and cold vertical plates: velocity and temperature profiles](fig/common-nc-vertical-plate.svg)`,
           answer: String.raw`$Gr=g\beta\Delta TL^3/\nu^2$ (buoyancy vs viscous forces); it governs $Nu$ and transition ($Ra\approx10^9$). Velocity is zero at the wall and at the layer edge with a maximum between; temperature falls monotonically from $T_s$ to $T_\infty$.` },
         { id: "2018-19-Q3b", label: "(b)", marks: "18",
           topic: "boiling", sub: "Film boiling on a 10 mm heater with radiation",
@@ -357,7 +363,9 @@ $$\mathrm{LMTD}=\frac{200-25}{\ln(200/25)}=84.2\ ^\circ\mathrm F$$
 Axes: temperature (°F) vertical, length horizontal.
 - Steam: a horizontal straight line at 300°F over the whole length.
 - Cold fluid: enters at 100°F at the right-hand end and rises towards the left, concave downward (steep at first, where $\Delta t$ is 200°F, then flattening), to 275°F at the left-hand end, approaching but never reaching 300°F.
-- Mark $\Delta t=200$°F at the cold-inlet end and $\Delta t=25$°F at the cold-outlet end.`,
+- Mark $\Delta t=200$°F at the cold-inlet end and $\Delta t=25$°F at the cold-outlet end.
+
+![Counterflow profile with condensing steam at 300°F](fig/2018-19-Q4a-sol.svg)`,
           answer: String.raw`It does not matter thermally: with isothermal condensing steam both arrangements give LMTD = 84.2°F ($F=1$). Counterflow is drawn conventionally: flat steam line at 300°F, cold fluid rising from 100 to 275°F.` },
         { id: "2018-19-Q4b", label: "(b)", marks: "20",
           topic: "condensation", sub: "Condenser: 625 horizontal tubes (25×25 bank)",
@@ -368,6 +376,8 @@ At 15 kPa: saturation temperature = 54°C, vapour density = 0.098 kg/m³, $h_{fg
           solution: String.raw`**Given:** $N_{total}=625$ in a square array, so $N=\sqrt{625}=25$ tubes per vertical column; $D=0.006$ m; $T_{sat}=54$°C, $T_s=25$°C, $\Delta T=29$ K; $\rho_v=0.098\ \mathrm{kg/m^3}$, $h_{fg}=2373$ kJ/kg.
 
 **Find:** (i) $\bar h$ for the bank; (ii) $\dot m'$ (kg/s per metre of tube length).
+
+![Square bank of 625 tubes: N = 25 per column](fig/2018-19-Q4b.svg)
 
 **Assumptions:** laminar film condensation on horizontal tubes (Nusselt); pure vapour, no non-condensables; condensate from the upper tubes drips onto the lower ones (tube-bank correction $N^{-1/4}$); properties of liquid water at the film temperature.
 
@@ -465,6 +475,8 @@ Emissivity depends on **wavelength**. "White" and "black" describe behaviour in 
 
 **Find:** $\dot m$ (kg/day).
 
+![Spherical LN₂ tank with 2.5 cm of superinsulation](fig/2018-19-Q5b.svg)
+
 **Assumptions:** steady, 1-D radial conduction through the insulation only; the tank wall is at the LN₂ temperature; outer surface at 21°C (given), so the outside convection resistance is ignored; constant $k$.
 
 ### 1. Heat leak through a spherical shell
@@ -488,6 +500,8 @@ $$\dot m=1.10\times10^{-5}(86\,400)=0.95\ \mathrm{kg/day}$$
           solution: String.raw`**Given:** $L_1=0.06$ m, $k_1=1.0$; $k_2=0.1$ W/m·°C; inner face $T_1=800$°C (taken as the inner wall surface temperature), interface $T_2=700$°C, outer face $T_3=70$°C.
 
 **Find:** $L_2$.
+
+![Composite furnace wall and its resistances](fig/2018-19-Q6a.svg)
 
 **Assumptions:** steady, 1-D conduction through a plane composite wall, constant $k$, perfect contact (no contact resistance), per unit area.
 
@@ -513,6 +527,8 @@ A 5 mm diameter wire generates heat uniformly at the rate of 500 MW/m³. The out
           solution: String.raw`**Given:** $R=2.5\times10^{-3}$ m, $\dot q=500\times10^6\ \mathrm{W/m^3}$, $T_w=150$°C, $k=20$ W/m·°C.
 
 **Find:** $T_0=T(r=0)$.
+
+![Wire with uniform heat generation: parabolic temperature profile](fig/2018-19-Q6b.svg)
 
 **Assumptions:** steady, 1-D radial conduction, uniform generation, constant $k$ (this is what the given profile assumes).
 
@@ -596,7 +612,9 @@ $$q'=\bar h\,\pi D\,(T_w-T_\infty)=7.00\,\pi(0.20)(188)=827\ \mathrm{W/m}$$
   - $Pr\ll1$ (liquid metals): $\delta_t\gg\delta$.
 - If the plate is heated only beyond an unheated starting length $x_0$, the thermal layer starts at $x_0$ while the velocity layer starts at $x=0$.
 
-Sketch: plate along the horizontal axis; two curves growing from the leading edge, $\delta(x)$ and $\delta_t(x)$, with a velocity profile (0 at the wall to $u_\infty$) and a temperature profile ($T_s$ at the wall to $T_\infty$) drawn at one station.`,
+Sketch: plate along the horizontal axis; two curves growing from the leading edge, $\delta(x)$ and $\delta_t(x)$, with a velocity profile (0 at the wall to $u_\infty$) and a temperature profile ($T_s$ at the wall to $T_\infty$) drawn at one station.
+
+![Velocity and thermal boundary layers on a flat plate](fig/common-bl-flat-plate.svg)`,
           answer: String.raw`No-slip creates a velocity layer ($u:0\to u_\infty$, $\delta\propto\sqrt{x}$); wall-fluid thermal equilibrium creates a thermal layer ($T:T_s\to T_\infty$); $h$ comes from conduction at the wall and falls as $\delta_t$ grows; $\delta_t/\delta\approx Pr^{-1/3}$.` },
         { id: "2018-19-Q7c", label: "(c)", marks: "7",
           topic: "boundary-layer", sub: "Colburn analogy → Nu = 0.0395 Re^¾ Pr^⅓",
@@ -641,6 +659,8 @@ $$\boxed{Nu=0.0395\,Re^{3/4}\,Pr^{1/3}}$$
 
 **Find:** $q'$ (per metre) and a check that $T_{s,o}\le40$°C.
 
+![Insulated hot-water pipe and its series resistances](fig/2018-19-Q8a.svg)
+
 **Assumptions:** steady, 1-D radial conduction, constant properties, no contact resistance, radiation included in $h_o$ (or neglected), $L=1$ m.
 
 ### 1. Thermal resistances (per metre)
@@ -671,6 +691,8 @@ $$T_{s,o}=T_{\infty,o}+q'R_o=25+31.9(0.4681)=39.9\ ^\circ\mathrm C\le40\ ^\circ\
           solution: String.raw`**Set-up:** inner pipe of inside radius $r_i$, outside radius $r_o$, length $L$, wall conductivity $k$. Hot fluid inside ($T_h$, coefficient $h_i$), cold fluid in the annulus ($T_c$, coefficient $h_o$). Areas $A_i=2\pi r_iL$, $A_o=2\pi r_oL$.
 
 **Assumptions:** steady state; 1-D radial conduction through the wall; constant properties; local fluid temperatures $T_h$, $T_c$ at a section; outer pipe insulated (all heat goes from hot to cold fluid).
+
+![Double-pipe section: resistances from hot fluid to cold fluid](fig/2018-19-Q8b-sol.svg)
 
 ### 1. Heat flow through the three resistances in series
 Hot fluid to inner wall (convection):

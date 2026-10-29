@@ -10,7 +10,7 @@ QB.paper({
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Identify the following labeled sections of a shell and tube heat exchanger from Figure 1(a).
 
-*[Figure 1(a): cut-away of a TEMA type AES (removable channel and cover, one shell pass, pull-through/split-ring floating head) shell-and-tube exchanger. Numbered balloons: 36, 4, 3, 34, 5, 31, 6, 34, 12, 29, 7, 8, 27, 28, 18, 36, 32, 9, 15, 16 along the top and right; 1, 5, 34, 3, 10, 35, 35, 12, 34, 11, 13, 17, 33 along the bottom.]*`,
+![Figure 1(a): TEMA type AES shell-and-tube exchanger with numbered parts](fig/2016-17-Q1a.svg)`,
           solution: String.raw`The figure is the standard TEMA nomenclature drawing of an **AES** exchanger (A = channel with removable cover, E = one-pass shell, S = floating head with backing device). The numbers are the TEMA part numbers, the same numbering as the slides' parts list (items 1–33; 34–36 are the instrument connection, support saddle and lifting lug of the full TEMA list):
 
 | No. | Part | No. | Part |
@@ -37,6 +37,8 @@ QB.paper({
           text: String.raw`What is the critical heat flux of a pool boiling curve? List the factors that can influence the critical heat flux.`,
           solution: String.raw`**Critical (maximum, burnout) heat flux** $\dot q_{max}$ is the peak of the pool boiling curve, reached at the end of the nucleate boiling regime (end of region III, point C or "a"). Beyond it bubbles form so fast that they merge into a vapour blanket that insulates the surface, so any further rise in $\Delta T_{excess}$ *lowers* the heat flux (transition boiling). For a heat-flux-controlled heater (electric element, nuclear rod), exceeding $\dot q_{max}$ even slightly makes the surface jump to the film boiling curve at a very high temperature (point E), which usually melts it: **burnout**. For water at 1 atm, $\dot q_{max} \approx 1.1$–$1.3\,\mathrm{MW/m^2}$ at $\Delta T_{excess} \approx 30^\circ\mathrm{C}$.
 
+![Pool boiling curve: regimes, critical heat flux (burnout) and Leidenfrost point](fig/common-boiling-curve.svg)
+
 Zuber–Lienhard relation (slides):
 $$\dot q_{max} = C_{cr}\,h_{fg}\left[\sigma g \rho_v^2(\rho_l-\rho_v)\right]^{1/4}$$
 
@@ -58,6 +60,8 @@ By the Zuber relation, CHF does *not* depend on the fluid–surface combination 
           solution: String.raw`**Given:** tube diameter $d = 2$ in, clearance $C' = 0.5$ in, triangular pitch.
 
 **Find:** shell-side equivalent diameter $D_e$.
+
+![Triangular-pitch unit cell, d = 2 in, C′ = 0.5 in](fig/2016-17-Q1c.svg)
 
 **Assumption:** the shell-side $D_e$ is based on the tube *outside* diameter; the printed "2″ ID" is taken as the tube diameter $d_o = 2$ in (one-line assumption, since only one diameter is given).
 
@@ -89,6 +93,8 @@ $$D_e = \frac{4(2.6875 - 1.5708)}{\tfrac{1}{2}\pi(2)} = \frac{4.467}{3.1416} = 1
 - Curve A: isothermal parabola.
 - Curve B: *liquid heating / gas cooling*: fuller near the wall, flatter centre, lower peak than A.
 - Curve C: *liquid cooling / gas heating*: thinner near the wall, sharper and higher peak than A.
+
+![Laminar tube velocity profiles distorted by heating and cooling](fig/common-velocity-distortion.svg)
 
 | Case | Near-wall velocity | Centre-line velocity |
 |---|---|---|
@@ -172,6 +178,8 @@ So the factor ¾ is not "75% of the radiation is lost". It is the net gain left 
 
 *Sketch:* a vertical plate with $x$ along it and $y$ normal to it; a thin layer drawn growing in the flow direction. At one height draw the hump-shaped $u(y)$ (0 → max → 0) and the decaying $T(y)$ curve from $T_w$ to $T_\infty$. For the cold plate draw everything mirrored with arrows pointing down.
 
+![Natural convection on hot and cold vertical plates: velocity and temperature profiles](fig/common-nc-vertical-plate.svg)
+
 ### Difference from forced convection
 | | Natural convection | Forced convection |
 |---|---|---|
@@ -245,6 +253,8 @@ At 30 cm/s, natural convection dominates.
 
 **Construction (schematic in words):** a fixed **frame plate** (head) and a movable **pressure plate** (follower) hang from an upper **carrying bar** and are located by a lower **guide bar**. Between them is a pack of thin (0.5–1 mm) corrugated metal **plates** (stainless steel, titanium) clamped together by **tightening bolts**. Each plate has a **port hole** at each of its four corners and a peripheral **gasket**. The gaskets seal each channel and route the hot and cold fluids into **alternate channels**. The four inlet/outlet nozzles are on the frame plate. *Sketch:* exploded view of a plate pack with hot (red) and cold (blue) arrows entering through diagonally opposite corner ports and flowing in alternate gaps, usually counter-current.
 
+![Plate-and-frame exchanger: frame, plate pack and alternate hot and cold channels](fig/2016-17-Q3a-sol.svg)
+
 **Working principle**
 - The hot fluid enters a corner port and is distributed by the gaskets into every second gap. The cold fluid fills the gaps in between, usually flowing in the opposite direction (counterflow).
 - Heat passes through the thin plate from each hot channel to the cold channels on both sides.
@@ -264,6 +274,8 @@ At 30 cm/s, natural convection dominates.
 
 (ii) cold fluid is gaining sensible heat and hot fluid is superheated steam that eventually condenses.`,
           solution: String.raw`*Axes for both sketches:* temperature $T$ (vertical) vs length along the exchanger, or fraction of heat transferred (horizontal).
+
+![Temperature profiles with phase change](fig/2016-17-Q3b-sol.svg)
 
 **(i) Condensing saturated steam / boiling cold fluid**
 - Hot line: **horizontal** at $T_{sat,steam}$, because condensation is isothermal.
@@ -291,6 +303,8 @@ Which exchanger should be used?`,
           solution: String.raw`**Given:** $\dot m_w = \dot m_o = 230$ kg/h $= 0.0639$ kg/s; water 35 → 93°C; oil inlet 175°C, $c_{p,o} = 2100$ J/kg·°C.
 
 **Find:** which exchanger can deliver the duty.
+
+![Double-pipe exchanger (counterflow)](fig/common-double-pipe.svg)
 
 **Assumptions:** counterflow double pipe; $c_{p,w} = 4180$ J/kg·°C at the mean 64°C (Çengel Table A-9); no heat loss; U constant.
 
@@ -334,6 +348,8 @@ $$\varepsilon = \frac{1 - e^{-\mathrm{NTU}(1 - C_r)}}{1 - C_r\,e^{-\mathrm{NTU}(
           solution: String.raw`**Given:** $\dot m = 600$ kg/h $= 0.1667$ kg/s; $T_{sat} = 100^\circ$C; $T_w = 97^\circ$C; 400 tubes in a square array, so $N = \sqrt{400} = 20$ tubes per vertical column; $D = 0.01$ m.
 
 **Find:** tube length $L$.
+
+![Square bank of 400 tubes: N = 20 per column](fig/2016-17-Q4a.svg)
 
 **Assumptions:** laminar film condensation on horizontal tubes; pure saturated vapour; Nusselt tube-bank relation $h_N = h_1 N^{-1/4}$.
 
@@ -398,6 +414,8 @@ $$\dot m_{evap} = \frac{\dot Q}{h_{fg}} = \frac{1.087\times10^7}{2.114\times10^6
           text: String.raw`Starting from the Fourier's law of heat conduction, develop the general three dimensional heat-conduction equation.`,
           solution: String.raw`**Assumptions:** a stationary solid element of volume $dx\,dy\,dz$ in Cartesian coordinates; conductivity $k$ may vary with position; uniform volumetric heat generation $\dot q$ (W/m³); density $\rho$ and specific heat $c$ constant; no mass flow.
 
+![Control volume dx dy dz for the conduction energy balance](fig/2015-16-Q5a-sol.svg)
+
 1. **Fourier's law** for the heat entering the face at $x$ (area $dy\,dz$):
 $$q_x = -k\,dy\,dz\,\frac{\partial T}{\partial x}$$
 
@@ -431,6 +449,8 @@ $$\frac{\partial^2 T}{\partial x^2} + \frac{\partial^2 T}{\partial y^2} + \frac{
           text: String.raw`For a hollow cylinder exposed to a convection environment on its inner and outer surfaces, write down (i) Electric-resistance analogy and (ii) Overall heat transfer coefficient relationships based on outside and inside area of the tube.`,
           solution: String.raw`Set-up: inner fluid at $T_A$ with $h_i$ on radius $r_i$; wall of conductivity $k$ between $r_i$ and $r_o$; outer fluid at $T_B$ with $h_o$; length $L$; $A_i = 2\pi r_i L$, $A_o = 2\pi r_o L$.
 
+![Hollow cylinder and its three series resistances](fig/2016-17-Q5b-sol.svg)
+
 **(i) Electric-resistance analogy.** Three resistances in series:
 
 $T_A$ —[ $\dfrac{1}{h_iA_i}$ ]— $T_1$ —[ $\dfrac{\ln(r_o/r_i)}{2\pi kL}$ ]— $T_2$ —[ $\dfrac{1}{h_oA_o}$ ]— $T_B$
@@ -454,6 +474,8 @@ They are linked by $U_iA_i = U_oA_o = 1/\sum R$. Fouling resistances, if present
           solution: String.raw`**Given:** $A = 0.8 \times 1.5 = 1.2$ m², $L = 0.008$ m, $k = 0.78$ W/m·°C, $T_{\infty1} = 20^\circ$C, $T_{\infty2} = -10^\circ$C, $h_1 = 10$, $h_2 = 40$ W/m²·°C.
 
 **Find:** $\dot Q$ and the inner surface temperature $T_1$.
+
+![Glass window: convection-conduction-convection in series](fig/2016-17-Q5c.svg)
 
 **Assumptions:** steady, 1-D conduction; constant $k$; the given $h$ values include radiation.
 
@@ -490,6 +512,8 @@ The **critical radius** $r_c$ is the outer radius at which heat loss is a *maxim
 - For **small steam or refrigerant lines** (insulation for saving heat), the thickness must be chosen well beyond $r_c$, or the insulation will make things worse.
 - For large pipes $r_i > r_c$ already, so any insulation reduces the loss.
 
+![Heat loss vs outer radius: maximum at the critical radius r = k/h](fig/common-critical-radius.svg)
+
 ### Derivation (cylinder)
 **Assumptions:** steady, 1-D radial conduction; constant $k$ of the insulation; constant outside $h$; inner insulation surface held at $T_i$; the radiation effect is lumped into $h$.
 
@@ -515,6 +539,8 @@ For a sphere the same steps give $r_c = 2k/h$.`,
           solution: String.raw`**Given:** $r_1 = 1.5$ mm, $r_2 = 3.5$ mm, $L = 5$ m, $k = 0.15$ W/m·°C, $I = 10$ A, $V = 8$ V, $T_\infty = 30^\circ$C, $h = 12$ W/m²·°C.
 
 **Find:** the interface temperature $T_1$, and the effect of a 4 mm cover.
+
+![Insulated wire and its resistance network](fig/2016-17-Q6b.svg)
 
 **Assumptions:** steady state; 1-D radial conduction; constant properties; all electrical heat is dissipated through the cover; radiation is included in $h$.
 
@@ -544,7 +570,7 @@ $$T_1 = 30 + 80 \times 0.7580 = 90.6^\circ\mathrm{C}$$
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`It is common experience to feel "chilly" in winter and "warm" in summer in our homes even when the thermostat setting is kept the same. This is due to so called "radiation effect" resulting from radiation heat exchange between our bodies and the surrounding surfaces of the walls and the ceiling. Consider a person standing in a room maintained at 22°C at all times. The inner surfaces of the walls, floors and the ceiling of the house are observed to be at an average temperature of 10°C in winter and 25°C in summer. Now validate the "radiation effect" with this information. [See Fig. 6(c)].
 
-*[Figure 6(c): person in a room; body surface 30°C, area 1.4 m², emissivity of human body = 0.95; radiation $\dot Q_{rad}$ to the room surfaces at $T_{surr}$.]*`,
+![Figure 6(c): person in a room, radiation to the room surfaces](fig/2016-17-Q6c.svg)`,
           solution: String.raw`**Given:** $A_s = 1.4$ m², $\varepsilon = 0.95$, $T_s = 30^\circ$C = 303 K; $T_{surr} = 10^\circ$C = 283 K (winter) and 25°C = 298 K (summer). Air is at 22°C in both cases.
 
 **Find:** the radiation loss from the body in winter and summer.
@@ -627,6 +653,8 @@ $$\mathrm{Pr} = \frac{\nu}{\alpha} = \frac{c_p\mu}{k}$$
           solution: String.raw`**Given:** air at 1 atm and 300 K, $u_\infty = 2$ m/s, $\mu = 1.85\times10^{-5}$ kg/m·s; $x = 0.2$ and $0.4$ m.
 
 **Find:** $\delta$ at both positions.
+
+![Boundary-layer thickness at 20 cm and 40 cm (air, 2 m/s)](fig/2015-16-Q7b.svg)
 
 **Assumptions:** ideal gas; steady, incompressible, laminar flow over a smooth plate; integral-method (cubic profile) result.
 

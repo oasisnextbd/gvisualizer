@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 420" width="660" height="420" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2B3A">
+<title>1-2 exchanger temperature profile: K3PO4 solution cooled by water</title>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#1E2B3A"/></marker>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#D2552B"/></marker>
+<marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#0B7C8C"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#55667D"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#B7840A"/></marker>
+<pattern id="ins" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern>
+<pattern id="brick" width="24" height="12" patternUnits="userSpaceOnUse"><rect width="24" height="12" fill="#FBE2D6"/><path d="M0,0.5 H24 M0,6.5 H24 M12,0.5 V6.5 M0.5,6.5 V12 M24,6.5 V12" stroke="#D2552B" stroke-width="0.8" fill="none" opacity="0.7"/></pattern>
+<pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#FFF3D6"/><circle cx="2" cy="2" r="0.9" fill="#C98A00"/><circle cx="5.5" cy="5.5" r="0.9" fill="#C98A00"/></pattern>
+<pattern id="dense" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#E9D3A6"/><circle cx="1" cy="1" r="0.8" fill="#8A6200"/><circle cx="3" cy="3" r="0.8" fill="#8A6200"/></pattern>
+</defs>
+<rect width="660" height="420" fill="#FFFFFF"/>
+<line x1="90" y1="350" x2="560" y2="350" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="90" y1="350" x2="90" y2="35" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="325" y="384" text-anchor="middle">Length along the shell, x</text>
+<text x="46" y="192.5" text-anchor="middle" transform="rotate(-90 46 192.5)">Temperature, °F</text>
+<line x1="86" y1="340" x2="90" y2="340" stroke="#1E2B3A" stroke-width="1"/>
+<text x="82" y="344" text-anchor="end" fill="#55667D" font-size="11">60</text>
+<line x1="86" y1="312" x2="90" y2="312" stroke="#1E2B3A" stroke-width="1"/>
+<text x="82" y="316" text-anchor="end" fill="#55667D" font-size="11">70</text>
+<line x1="86" y1="284" x2="90" y2="284" stroke="#1E2B3A" stroke-width="1"/>
+<text x="82" y="288" text-anchor="end" fill="#55667D" font-size="11">80</text>
+<line x1="86" y1="256" x2="90" y2="256" stroke="#1E2B3A" stroke-width="1"/>
+<text x="82" y="260" text-anchor="end" fill="#55667D" font-size="11">90</text>
+<line x1="86" y1="228" x2="90" y2="228" stroke="#1E2B3A" stroke-width="1"/>
+<text x="82" y="232" text-anchor="end" fill="#55667D" font-size="11">100</text>
+<line x1="86" y1="200" x2="90" y2="200" stroke="#1E2B3A" stroke-width="1"/>
+<text x="82" y="204" text-anchor="end" fill="#55667D" font-size="11">110</text>
+<line x1="86" y1="172" x2="90" y2="172" stroke="#1E2B3A" stroke-width="1"/>
+<text x="82" y="176" text-anchor="end" fill="#55667D" font-size="11">120</text>
+<line x1="86" y1="144" x2="90" y2="144" stroke="#1E2B3A" stroke-width="1"/>
+<text x="82" y="148" text-anchor="end" fill="#55667D" font-size="11">130</text>
+<line x1="86" y1="116" x2="90" y2="116" stroke="#1E2B3A" stroke-width="1"/>
+<text x="82" y="120" text-anchor="end" fill="#55667D" font-size="11">140</text>
+<line x1="86" y1="88" x2="90" y2="88" stroke="#1E2B3A" stroke-width="1"/>
+<text x="82" y="92" text-anchor="end" fill="#55667D" font-size="11">150</text>
+<line x1="86" y1="60" x2="90" y2="60" stroke="#1E2B3A" stroke-width="1"/>
+<text x="82" y="64" text-anchor="end" fill="#55667D" font-size="11">160</text>
+<line x1="520" y1="350" x2="520" y2="60" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="90" y="366" text-anchor="middle" fill="#55667D" font-size="12">0</text>
+<text x="520" y="366" text-anchor="middle" fill="#55667D" font-size="12">L</text>
+<path d="M90,88 C93.6,91 104.3,100.2 111.5,105.9 C118.7,111.6 125.8,117 133,122.1 C140.2,127.3 147.3,132.2 154.5,136.8 C161.7,141.5 168.8,145.9 176,150.2 C183.2,154.4 190.3,158.5 197.5,162.3 C204.7,166.2 211.8,169.8 219,173.4 C226.2,176.9 233.3,180.2 240.5,183.4 C247.7,186.6 254.8,189.6 262,192.5 C269.2,195.4 276.3,198.1 283.5,200.8 C290.7,203.4 297.8,205.9 305,208.3 C312.2,210.8 319.3,213 326.5,215.2 C333.7,217.4 340.8,219.5 348,221.5 C355.2,223.5 362.3,225.4 369.5,227.3 C376.7,229.1 383.8,230.8 391,232.5 C398.2,234.2 405.3,235.8 412.5,237.3 C419.7,238.8 426.8,240.3 434,241.7 C441.2,243.1 448.3,244.4 455.5,245.7 C462.7,247 469.8,248.3 477,249.4 C484.2,250.6 491.3,251.8 498.5,252.9 C505.7,253.9 516.4,255.5 520,256 C523.6,256.5 520,256 520,256" fill="none" stroke="#D2552B" stroke-width="2.6"/>
+<line x1="271.6" y1="196.3" x2="284.7" y2="201.2" stroke="#D2552B" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M90,279.6 C93.6,280.2 104.3,281.9 111.5,283 C118.7,284 125.8,285 133,286 C140.2,287 147.3,287.9 154.5,288.9 C161.7,289.8 168.8,290.6 176,291.5 C183.2,292.3 190.3,293.1 197.5,293.9 C204.7,294.7 211.8,295.5 219,296.2 C226.2,297 233.3,297.7 240.5,298.4 C247.7,299 254.8,299.7 262,300.4 C269.2,301 276.3,301.6 283.5,302.2 C290.7,302.8 297.8,303.4 305,304 C312.2,304.6 319.3,305.1 326.5,305.7 C333.7,306.2 340.8,306.7 348,307.3 C355.2,307.8 362.3,308.3 369.5,308.8 C376.7,309.2 383.8,309.7 391,310.2 C398.2,310.7 405.3,311.1 412.5,311.5 C419.7,312 426.8,312.4 434,312.9 C441.2,313.3 448.3,313.7 455.5,314.1 C462.7,314.5 469.8,314.9 477,315.3 C484.2,315.7 491.3,316.1 498.5,316.5 C505.7,316.9 516.4,317.4 520,317.6 C523.6,317.8 520,317.6 520,317.6" fill="none" stroke="#0B7C8C" stroke-width="2.2"/>
+<line x1="306.6" y1="304.1" x2="292.6" y2="303" stroke="#0B7C8C" stroke-width="2" marker-end="url(#ac)"/>
+<path d="M90,279.6 C93.6,279.1 104.3,277.4 111.5,276.4 C118.7,275.4 125.8,274.4 133,273.5 C140.2,272.6 147.3,271.7 154.5,270.9 C161.7,270.1 168.8,269.4 176,268.7 C183.2,268 190.3,267.3 197.5,266.7 C204.7,266.1 211.8,265.5 219,264.9 C226.2,264.4 233.3,263.9 240.5,263.4 C247.7,262.9 254.8,262.5 262,262 C269.2,261.6 276.3,261.2 283.5,260.9 C290.7,260.5 297.8,260.2 305,259.9 C312.2,259.6 319.3,259.3 326.5,259 C333.7,258.8 340.8,258.5 348,258.3 C355.2,258.1 362.3,257.9 369.5,257.7 C376.7,257.5 383.8,257.3 391,257.2 C398.2,257.1 405.3,256.9 412.5,256.8 C419.7,256.7 426.8,256.6 434,256.5 C441.2,256.4 448.3,256.3 455.5,256.3 C462.7,256.2 469.8,256.2 477,256.1 C484.2,256.1 491.3,256 498.5,256 C505.7,256 516.4,256 520,256 C523.6,256 520,256 520,256" fill="none" stroke="#0B7C8C" stroke-width="2.2" stroke-dasharray="7 4"/>
+<line x1="303.4" y1="259.9" x2="317.4" y2="259.4" stroke="#0B7C8C" stroke-width="2" marker-end="url(#ac)"/>
+<text x="98" y="88" fill="#D2552B" font-size="12">T<tspan dy="4" font-size="75%">1</tspan><tspan dy="-4"> = 150°F</tspan></text>
+<circle cx="90" cy="88" r="3" fill="#D2552B"/>
+<text x="98" y="303.6" fill="#0B7C8C" font-size="12">≈ 81.6°F (return end)</text>
+<circle cx="90" cy="279.6" r="3" fill="#0B7C8C"/>
+<text x="528" y="254" font-size="12">T<tspan dy="4" font-size="75%">2</tspan><tspan dy="-4"> = </tspan>t<tspan dy="4" font-size="75%">2</tspan><tspan dy="-4"> = 90°F</tspan></text>
+<circle cx="520" cy="256" r="3" fill="#1E2B3A"/>
+<text x="528" y="325.6" fill="#0B7C8C" font-size="12">t<tspan dy="4" font-size="75%">1</tspan><tspan dy="-4"> = 68°F</tspan></text>
+<circle cx="520" cy="317.6" r="3" fill="#0B7C8C"/>
+<line x1="300" y1="40" x2="330" y2="40" stroke="#D2552B" stroke-width="2.6"/>
+<text x="338" y="44" font-size="12">Shell: K₃PO₄ solution, 150 → 90°F</text>
+<line x1="300" y1="60" x2="330" y2="60" stroke="#0B7C8C" stroke-width="2.2"/>
+<text x="338" y="64" font-size="12">Tubes: well water, 68 → 90°F (2 passes)</text>
+<rect x="524" y="132" width="128" height="86" fill="#F4F6F9" stroke="#9AA8B8" stroke-width="1" rx="4"/>
+<text x="532" y="150" font-size="12">LMTD = 37.9°F</text>
+<text x="532" y="168" font-size="12">R = 2.73, S = 0.268</text>
+<text x="532" y="186" font-size="12">F<tspan dy="4" font-size="75%">T</tspan><tspan dy="-4"> = 0.81</tspan></text>
+<text x="532" y="204" font-size="12">Δt = 30.6°F</text>
+</svg>
