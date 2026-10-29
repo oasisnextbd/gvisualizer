@@ -98,3 +98,8 @@ mjx-container[display="true"]{margin:6px 0!important}
 
 .themebtn,.backbtn{font-family:var(--f-display);font-weight:600;font-size:14px;padding:8px 12px;border-radius:12px;background:var(--panel);border:2px solid var(--edge);color:var(--ink);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
 .themebtn:hover,.backbtn:hover{border-color:var(--flow)}
+
+/* figures: always on a paper card so one drawing reads in both themes */
+.fig{margin:12px 0;background:#FFFFFF;border:2px solid var(--edge);border-radius:14px;padding:10px 12px 8px;max-width:680px}
+.fig img{display:block;width:100%;height:auto;max-width:100%}
+.fig figcaption{font-size:13px;color:#4A5A70;margin-top:6px;text-align:center}

@@ -45,6 +45,7 @@ function md(src){
   while(i<L.length){ const ln=L[i], t=ln.trim();
     if(!t){ flush(); i++; continue; }
     if(t.startsWith('$$')){ flush(); let buf=[t.slice(2)]; if(t.length>2&&t.endsWith('$$')&&t!=='$$'){ out+='<div class="dm">'+esc('\\['+t.slice(2,-2)+'\\]')+'</div>'; i++; continue; } i++; while(i<L.length&&!L[i].trim().endsWith('$$')){ buf.push(L[i]); i++; } if(i<L.length){ buf.push(L[i].trim().slice(0,-2)); i++; } out+='<div class="dm">'+esc('\\['+buf.join('\n')+'\\]')+'</div>'; continue; }
+    { const im=t.match(/^!\[([^\]]*)\]\(([^)\s]+)\)$/); if(im){ flush(); out+='<figure class="fig"><img src="'+esc(im[2])+'" alt="'+esc(im[1])+'" loading="lazy">'+(im[1]?'<figcaption>'+inline(im[1],[])+'</figcaption>':'')+'</figure>'; i++; continue; } }
     if(/^#{2,4}\s/.test(t)){ flush(); const n=t.match(/^#+/)[0].length; out+=`<h${Math.min(6,n+1)}>`+inline(t.replace(/^#+\s*/,''),[])+`</h${Math.min(6,n+1)}>`; i++; continue; }
     if(t.startsWith('|')){ flush(); const rows=[]; while(i<L.length&&L[i].trim().startsWith('|')){ rows.push(L[i].trim()); i++; }
       const cells=r=>r.replace(/^\||\|$/g,'').split('|').map(c=>c.trim()); let h='<div class="tw"><table>'; let body=rows;
