@@ -17,15 +17,20 @@ const TOPICS=[
   {id:'other',name:'Other (radiation, transient)',ch:'–'}
 ];
 const YEARS=['2023-24','2022-23','2021-22','2020-21','2018-19','2017-18','2016-17','2015-16','2014-15','2013-14','2012-13','2011-12'];
+const SETS=['intro','conduction','insulation','generation','convection-basics','boundary-layer','forced-convection','natural-convection','condensation','boiling','heat-exchangers','shell-tube','evaporator'].map(t=>'practice-'+t);   /* book-style practice sets, files data/<name>.js */
+const keyOf=p=>p.practice?'practice-'+String(p.set||'set').toLowerCase().replace(/[^a-z0-9]+/g,'-'):p.year;
 const papers={}, parts=[], byId={};
-const QB={TOPICS,YEARS,papers,parts,byId,
+const QB={TOPICS,YEARS,SETS,papers,parts,byId,keyOf,
+  keys:()=>YEARS.filter(y=>papers[y]).concat(Object.keys(papers).filter(k=>k.startsWith('practice-'))),
   topic:id=>TOPICS.find(t=>t.id===id)||TOPICS[TOPICS.length-1],
-  paper(p){ papers[p.year]=p; p.questions.forEach(q=>q.parts.forEach((pt,i)=>{ const o=Object.assign({},pt,{year:p.year,q:q.q,section:q.section,compulsory:q.compulsory,stem:q.stem||'',qid:q.id,idx:i,siblings:q.parts.map(x=>x.id)}); parts.push(o); byId[o.id]=o; })); },
-  load(done){ let left=YEARS.length; YEARS.forEach(y=>{ const s=document.createElement('script'); s.src='data/'+y+'.js'; s.onload=s.onerror=()=>{ if(--left===0){ parts.sort(cmp); done(); } }; document.head.appendChild(s); }); },
-  label:p=>`${p.year} · Q${p.q}${p.label?p.label:''}`,
+  paper(p){ const key=keyOf(p); p.key=key; papers[key]=p; p.questions.forEach(q=>q.parts.forEach((pt,i)=>{ const o=Object.assign({},pt,{year:p.year,key,practice:!!p.practice,set:p.set||'',q:q.q,section:q.section,compulsory:q.compulsory,stem:q.stem||'',qid:q.id,idx:i,siblings:q.parts.map(x=>x.id)}); parts.push(o); byId[o.id]=o; })); },
+  load(done){ const files=YEARS.concat(SETS); let left=files.length; files.forEach(y=>{ const s=document.createElement('script'); s.src='data/'+y+'.js'; s.onload=s.onerror=()=>{ if(--left===0){ parts.sort(cmp); done(); } }; document.head.appendChild(s); }); },
+  label:p=>p.practice?`Practice · ${p.set} P${p.q}${p.label||''}`:`${p.year} · Q${p.q}${p.label?p.label:''}`,
+  title:k=>{ const P=papers[k]; return P&&P.practice?'Practice: '+P.set:k; },
   md, typeset
 };
-function cmp(a,b){ const ya=YEARS.indexOf(a.year), yb=YEARS.indexOf(b.year); return ya-yb||a.q-b.q||a.idx-b.idx; }
+function rank(p){ const i=YEARS.indexOf(p.key); return i<0?YEARS.length:i; }
+function cmp(a,b){ return rank(a)-rank(b)||(a.key<b.key?-1:a.key>b.key?1:0)||a.q-b.q||a.idx-b.idx; }
 const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 function inline(s,math){
   s=s.replace(/\$\$([\s\S]+?)\$\$/g,(m,x)=>{ math.push('\\['+x+'\\]'); return '\u0000'+(math.length-1)+'\u0000'; });

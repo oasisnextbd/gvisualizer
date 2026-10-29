@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CHE 301 Practice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="qb.css">
+<script src="../theme.js"></script>
+<script src="qb.js"></script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+<style>
+.kind{font-family:var(--f-display);font-weight:600;font-size:15px;margin:20px 0 4px;display:flex;align-items:center;gap:8px}
+.kind small{font-family:var(--f-body);font-weight:400;color:var(--dim);font-size:13px}
+.dot{width:10px;height:10px;border-radius:50%;flex:none}
+.dot.s{background:var(--flow)} .dot.f{background:var(--gold)}
+.tag.slides{background:var(--rep-soft);color:var(--flow)} .tag.potential{background:var(--gold-soft);color:var(--gold-ink)}
+.ref{font-size:13px;color:var(--dim);margin:-2px 0 6px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="top">
+    <a class="backbtn" href="./" aria-label="Back">← Back</a>
+    <a class="brand" href="practice.html">CHE 301 <span>Practice</span></a>
+    <a class="navlink" href="./">Past papers</a>
+    <a class="navlink on" href="practice.html">Practice</a>
+    <a class="navlink" href="solutions.html">Solutions</a>
+    <button type="button" class="themebtn">☀ Day</button>
+  </div>
+  <h1>Practice problems, topic by topic</h1>
+  <p class="lede">Two kinds of problems for every topic in the syllabus. <b>From the slides</b>: the worked examples and calculation types your teachers used, solved step by step, plus variations with new numbers. <b>Potential finals</b>: book-style problems (Holman, Çengel, Kern, Incropera) written in the style and length of the CHE 301 final. Every problem links to its worked solution.</p>
+  <div class="stats" id="stats"></div>
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Kind"><button type="button" data-k="" class="on">All</button><button type="button" data-k="slides">From the slides</button><button type="button" data-k="potential">Potential finals</button></div>
+    <input class="search" id="q" type="search" placeholder="Search: hairpin, Rohsenow, triple effect…" aria-label="Search practice problems">
+    <select id="type" class="search" style="flex:0 1 170px" aria-label="Problem type">
+      <option value="">All types</option><option value="numerical">Numericals</option><option value="derivation">Derivations</option><option value="theory">Theory</option><option value="sketch">Sketches</option>
+    </select>
+  </div>
+  <div class="layout">
+    <nav class="rail" id="rail" aria-label="Topics"></nav>
+    <section id="list" aria-live="polite"><p class="empty">Loading practice problems…</p></section>
+  </div>
+</main>
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const st={sel:null,kind:'',q:'',type:''};
+const pr=()=>QB.parts.filter(p=>p.practice);
+function filtered(){ const q=st.q.toLowerCase(); return pr().filter(p=>(!st.kind||p.origin===st.kind)&&(!st.type||p.type===st.type)&&(!q||(p.text+' '+p.sub+' '+p.stem+' '+(p.ref||'')).toLowerCase().includes(q))); }
+function rail(list){
+  const cnt=k=>list.filter(p=>p.topic===k).length;
+  $('#rail').innerHTML=`<button type="button" data-t="" class="${!st.sel?'on':''}"><span>All topics</span><span class="n">${list.length}</span></button>`+QB.TOPICS.filter(t=>cnt(t.id)).map(t=>`<button type="button" data-t="${t.id}" class="${st.sel===t.id?'on':''}"><span><span class="ch">${t.ch}</span>${t.name}</span><span class="n">${cnt(t.id)}</span></button>`).join('');
+  $('#rail').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{ st.sel=b.dataset.t||null; history.replaceState(null,'',st.sel?'#'+st.sel:location.pathname); render(); window.scrollTo({top:$('.layout').offsetTop-10}); }));
+}
+function card(p){
+  return `<article class="card" id="c-${p.id}">
+    <div class="meta"><span class="tag id">P${p.q}${p.label||''}</span>${p.marks?`<span class="tag marks">${p.marks} marks</span>`:''}<span class="tag t-${p.type}">${p.type}</span><span class="tag ${p.origin}">${p.origin==='slides'?'from the slides':'potential final'}</span>${p.syllabus==='out'?'<span class="tag out">not in current slides</span>':p.syllabus==='partial'?'<span class="tag partial">partly in slides</span>':''}</div>
+    ${p.sub?`<p class="sub">${QB.md(p.sub).replace(/^<p>|<\/p>$/g,'')}</p>`:''}
+    ${p.ref?`<p class="ref">${QB.md(p.ref).replace(/<\/?p>/g,'')}</p>`:''}
+    <div class="qtext">${p.stem&&p.idx===0?`<div class="stem">${QB.md(p.stem)}</div>`:p.stem?`<div class="stem"><em>Common data in P${p.q}, see solution page.</em></div>`:''}${QB.md(p.text)}</div>
+    <div class="row"><a class="btn" href="solutions.html#${p.id}">Solution →</a></div>
+  </article>`;
+}
+function render(){
+  const list=filtered(); rail(list);
+  document.querySelectorAll('.seg button').forEach(b=>b.classList.toggle('on',b.dataset.k===st.kind));
+  let h='';
+  QB.TOPICS.filter(t=>!st.sel||t.id===st.sel).forEach(t=>{ const ps=list.filter(p=>p.topic===t.id); if(!ps.length) return;
+    const s=ps.filter(p=>p.origin==='slides'), f=ps.filter(p=>p.origin!=='slides');
+    h+=`<section class="group"><h2>${t.name}</h2><p class="gsub">${ps.length} problems · ${s.length} from the slides · ${f.length} potential finals</p>`;
+    if(s.length) h+=`<div class="kind"><span class="dot s"></span>From the slides <small>worked examples and types taught in class</small></div>`+s.map(card).join('');
+    if(f.length) h+=`<div class="kind"><span class="dot f"></span>Potential finals <small>book-style, exam length</small></div>`+f.map(card).join('');
+    h+='</section>'; });
+  $('#list').innerHTML=h||(pr().length?'<p class="empty">No practice problems match these filters.</p>':'<p class="empty">Practice sets are being added.</p>');
+  QB.typeset($('#list'));
+}
+document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{ st.kind=b.dataset.k; render(); }));
+let tq; $('#q').addEventListener('input',e=>{ clearTimeout(tq); tq=setTimeout(()=>{ st.q=e.target.value.trim(); render(); },200); });
+$('#type').addEventListener('change',e=>{ st.type=e.target.value; render(); });
+window.addEventListener('hashchange',()=>{ st.sel=decodeURIComponent(location.hash.slice(1))||null; render(); });
+QB.load(()=>{ st.sel=decodeURIComponent(location.hash.slice(1))||null;
+  const P=pr(); $('#stats').innerHTML=`<span class="pill"><b>${P.length}</b> practice problems</span><span class="pill"><b>${P.filter(p=>p.origin==='slides').length}</b> from the slides</span><span class="pill"><b>${P.filter(p=>p.origin!=='slides').length}</b> potential finals</span><span class="pill"><b>${new Set(P.map(p=>p.topic)).size}</b> topics</span>`;
+  render(); });
+})();
+</script>
+</body>
+</html>
