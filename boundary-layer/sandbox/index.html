@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Fluid Sandbox</title>
+<script src="../../theme.js"></script>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,11 +15,17 @@
 :root{
   --night:#0C1A2B; --panel:#14263C; --panel-2:#1C3450; --edge:#2A4767; --ink:#EAF3FF; --dim:#8EA6C2;
   --flow:#3FD0E0; --heat:#FF8B5E; --gold:#FFC93F; --gold-deep:#A87B10; --good:#58DE8C; --bad:#FF5C7A; --plate:#C7D5E4;
-  --gold-soft:#3A3320; --shadow:#07111D;
+  --gold-soft:#3A3320; --shadow:#07111D; --on-accent:#0C1A2B; --gold-ink:#FFC93F;
   --f-display:"Fredoka","Trebuchet MS",system-ui,sans-serif;
   --f-body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-math:"STIX Two Text",Cambria,Georgia,serif;
   color-scheme:dark;
+}
+:root[data-theme="light"]{
+  --night:#F3F6FA; --panel:#FFFFFF; --panel-2:#E8EEF6; --edge:#C8D4E2; --ink:#14223A; --dim:#55667D;
+  --flow:#0B7C8C; --heat:#D2552B; --gold:#E9A919; --gold-deep:#B98612; --good:#1E8A4C; --bad:#C42A4A; --plate:#5B6E84;
+  --gold-soft:#FFF3D6; --shadow:#C3CFDD; --on-accent:#14223A; --gold-ink:#8A6100;
+  color-scheme:light;
 }
 [hidden]{display:none!important}
 html,body{background:var(--night);color:var(--ink)}
@@ -31,15 +38,15 @@ button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(-
 .ttl{flex:1;min-width:0;font-family:var(--f-display);font-weight:600;font-size:20px}
 .ttl small{color:var(--dim);font-weight:500;margin-right:6px}
 .stat{font-family:var(--f-display);font-weight:600;font-size:14px;color:var(--dim);flex:none}
-.stat b{color:var(--gold)}
+.stat b{color:var(--gold-ink)}
 .tank{position:relative;border-radius:18px;overflow:hidden;border:2px solid var(--edge);background:var(--panel)}
 .tank canvas{display:block;width:100%;aspect-ratio:9/4;touch-action:none}
 #ov{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.toast{position:absolute;left:50%;bottom:12px;transform:translate(-50%,8px);padding:7px 15px;border-radius:999px;font-family:var(--f-display);font-weight:600;font-size:14px;color:var(--night);background:var(--gold);opacity:0;transition:opacity .2s,transform .2s;pointer-events:none;max-width:calc(100% - 24px);text-align:center}
+.toast{position:absolute;left:50%;bottom:12px;transform:translate(-50%,8px);padding:7px 15px;border-radius:999px;font-family:var(--f-display);font-weight:600;font-size:14px;color:var(--on-accent);background:var(--gold);opacity:0;transition:opacity .2s,transform .2s;pointer-events:none;max-width:calc(100% - 24px);text-align:center}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 .nogl{padding:40px 20px;text-align:center;color:var(--dim)}
 .readout{font-family:var(--f-display);font-weight:500;text-align:center;min-height:1.5em;margin:10px 0 4px;color:var(--dim);font-size:15px}
-.readout b{color:var(--gold);font-weight:600}
+.readout b{color:var(--gold-ink);font-weight:600}
 .rows{display:grid;gap:12px;margin-top:10px}
 .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .row .lab{font-family:var(--f-display);font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);width:64px;flex:none}
@@ -47,16 +54,16 @@ button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(-
 .chip:hover{border-color:var(--flow)}
 .chip:active{transform:translateY(2px);box-shadow:0 1px 0 var(--shadow)}
 .chip.on{border-color:var(--gold);background:var(--gold-soft)}
-.chip.go{background:var(--gold);border-color:var(--gold);color:var(--night);box-shadow:0 3px 0 var(--gold-deep)}
+.chip.go{background:var(--gold);border-color:var(--gold);color:var(--on-accent);box-shadow:0 3px 0 var(--gold-deep)}
 .sliders{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
 .slide{display:flex;align-items:center;gap:12px;background:var(--panel);border:2px solid var(--edge);border-radius:14px;padding:8px 14px;min-width:0}
 .slide label{font-family:var(--f-display);font-weight:600;color:var(--dim);font-size:14px;flex:none}
 .slide input{flex:1;min-width:0;accent-color:var(--gold);height:28px}
-.slide output{font-family:var(--f-display);font-weight:600;color:var(--gold);min-width:58px;text-align:right}
+.slide output{font-family:var(--f-display);font-weight:600;color:var(--gold-ink);min-width:58px;text-align:right}
 .goals{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:18px}
 .goal{display:flex;gap:10px;align-items:center;background:var(--panel);border:2px solid var(--edge);border-radius:14px;padding:10px 12px;font-size:14px}
 .goal i{font-style:normal;width:28px;height:28px;flex:none;border-radius:50%;display:grid;place-items:center;font-family:var(--f-display);font-weight:700;background:var(--panel-2);color:var(--edge)}
-.goal.done{border-color:var(--good)} .goal.done i{background:var(--good);color:var(--night)}
+.goal.done{border-color:var(--good)} .goal.done i{background:var(--good);color:var(--on-accent)}
 .legend{display:flex;align-items:center;gap:8px;justify-content:flex-end;font-size:12px;color:var(--dim);margin-top:8px}
 .legend span.bar{width:120px;height:8px;border-radius:4px}
 @media (prefers-reduced-motion: reduce){ *{transition:none!important} }
@@ -66,10 +73,11 @@ button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(-
 
 <main class="wrap">
   <div class="hud">
-    <a class="back" id="backLink" href="../" aria-label="Back to the lab">←</a>
+    <a class="back backbtn" id="backLink" href="../" aria-label="Back">←</a>
     <div class="ttl"><small>Bonus</small>Fluid Sandbox</div>
     <span class="stat">Re <b id="reStat">–</b></span>
     <span class="stat" id="goalStat">0/3 ★</span>
+    <button class="chip themebtn" type="button">☀ Day</button>
   </div>
   <div class="tank" id="tank">
     <canvas id="gl" aria-label="Live fluid simulation. Draw walls or heaters with your finger or mouse."></canvas>
@@ -111,9 +119,10 @@ const NX=360, NY=160, U=0.08;
 const QUEST_URL='https://claude.ai/artifact/N4eMAx3Rn2xp5qsES1M2V9';
 if(!(location.protocol==='file:'||/github\.io$/.test(location.hostname))) $('#backLink').href=QUEST_URL;
 
-const cs=getComputedStyle(document.documentElement), tok=n=>cs.getPropertyValue('--'+n).trim();
+const tok=n=>getComputedStyle(document.documentElement).getPropertyValue('--'+n).trim();
 const hex3=h=>{ const n=parseInt(h.replace('#',''),16); return [(n>>16&255)/255,(n>>8&255)/255,(n&255)/255]; };
-const COL={night:tok('night'),panel:tok('panel'),flow:tok('flow'),heat:tok('heat'),gold:tok('gold'),plate:tok('plate'),ink:tok('ink'),dim:tok('dim'),good:tok('good')};
+const COL={}; function readCOL(){ ['night','panel','flow','heat','gold','plate','ink','dim','good'].forEach(k=>COL[k]=tok(k)); } readCOL();
+window.addEventListener('themechange',()=>{ readCOL(); if(typeof setView==='function'&&window.__sbView!=null) setView(window.__sbView); });
 
 const cv=$('#gl'), ov=$('#ov'), octx=ov.getContext('2d');
 const gl=cv.getContext('webgl2',{antialias:false,alpha:false});
@@ -253,7 +262,7 @@ function loadScene(k){ st.scene=k; mask.fill(0); SCENES[k].build(); uploadMask()
   document.querySelectorAll('[data-scene]').forEach(b=>b.classList.toggle('on',b.dataset.scene===k)); updateRe(); }
 function restart(){ step(true); step(true); st.frames=0; }
 function setTool(t){ st.tool=t; document.querySelectorAll('[data-tool]').forEach(b=>b.classList.toggle('on',b.dataset.tool===t)); }
-function setView(v){ st.view=v; document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('on',+b.dataset.view===v));
+function setView(v){ st.view=v; window.__sbView=v; document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('on',+b.dataset.view===v));
   const L=[['slow','fast',`linear-gradient(90deg,${COL.night},${COL.flow},${COL.ink})`],['cold','hot',`linear-gradient(90deg,${COL.night},${COL.heat},${COL.gold})`],['clockwise','counter',`linear-gradient(90deg,${COL.flow},${COL.night},${COL.heat})`]][v];
   $('#legLo').textContent=L[0]; $('#legHi').textContent=L[1]; $('#legBar').style.background=L[2]; }
 function updateRe(){ const re=ReOf(); $('#reOut').textContent=Math.round(re); $('#reStat').textContent=Math.round(re); $('#prOut').textContent=PrOf().toFixed(PrOf()<1?2:1); }
