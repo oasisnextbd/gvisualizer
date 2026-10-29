@@ -193,13 +193,14 @@ Sketch: temperature vs. fractional length. Two shell-fluid curves (one per shell
           topic: "heat-exchangers", sub: "LMTD derivation",
           type: "derivation", syllabus: "in", repeats: ["2013-14-Q4b"],
           text: String.raw`Derive the basic equation to calculate LMTD. List the assumptions you make to derive this.`,
-          solution: String.raw`**Assumptions**
-1. Steady state; flow rates and inlet temperatures constant.
-2. Overall coefficient $U$ constant along the length.
-3. Specific heats constant; no phase change (or constant-temperature phase change).
-4. No heat loss to the surroundings (exchanger well insulated).
-5. Axial conduction in fluids and wall negligible; kinetic/potential energy changes negligible.
-6. Each fluid has a single (bulk) temperature at any cross-section.
+          solution: String.raw`**Assumptions (the five listed in the slides)**
+1. The exchanger is insulated from its surroundings: heat is exchanged only between the hot and cold fluids (no heat loss).
+2. Axial conduction along the tubes is negligible.
+3. Potential and kinetic energy changes are negligible.
+4. The fluid specific heats are constant.
+5. The overall heat transfer coefficient $U$ is constant.
+
+Also implied: steady state with constant flow rates, no partial phase change (a phase change at constant temperature is allowed), and one bulk temperature for each fluid at any cross-section.
 
 **Derivation (counter-flow; parallel flow is analogous)**
 
@@ -225,7 +226,7 @@ $$Q = UA\,\mathrm{LMTD},\qquad \mathrm{LMTD} = \frac{\Delta t_1 - \Delta t_2}{\l
 For parallel flow the same result follows with $\Delta t_1 = T_1 - t_1$, $\Delta t_2 = T_2 - t_2$.
 
 **Notes:** if $\Delta t_1 = \Delta t_2$ the LMTD reduces to $\Delta t$ (limit). For multipass/cross-flow exchangers, $\Delta t = F_T\,\mathrm{LMTD}_{counter}$.`,
-          answer: String.raw`$Q = UA\,\mathrm{LMTD}$ with $\mathrm{LMTD} = (\Delta t_1-\Delta t_2)/\ln(\Delta t_1/\Delta t_2)$, assuming steady state, constant $U$ and $c_p$, no heat loss.` },
+          answer: String.raw`$Q = UA\,\mathrm{LMTD}$ with $\mathrm{LMTD} = (\Delta t_1-\Delta t_2)/\ln(\Delta t_1/\Delta t_2)$, assuming an insulated exchanger, negligible axial conduction, negligible KE/PE changes, constant $c_p$ and constant $U$.` },
       ] },
 
     { id: "2017-18-Q3", q: 3, section: "A", compulsory: false,

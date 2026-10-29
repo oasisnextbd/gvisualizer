@@ -230,6 +230,8 @@ $$\bar h = 0.943\left[\frac{\rho(\rho-\rho_v)g h_{fg}k^3}{L\mu(T_g-T_w)}\right]^
 - **Floating tube sheet** and **floating head cover** (allows thermal expansion), inside the **shell cover**.
 - **Saddle supports**, **vent** (top) and **drain** (bottom).
 
+Names follow the slides' parts list (TEMA numbering): e.g. 1 channel, 4 channel cover, 5 stationary head nozzle, 6 stationary tube sheet, 7 tubes, 8 shell, 12 shell nozzle, 15/16 floating tube sheet and floating head cover, 27 tie rods and spacers, 28 transverse baffles, 29 impingement baffle, 31 pass partition, 32 vent connection.
+
 Arrows: tube fluid in → pass 1 → turns in the floating head → pass 2 → out of the same channel; shell fluid zig-zags around the baffles from inlet to outlet.
 
 | Component | Function |
@@ -247,7 +249,14 @@ Arrows: tube fluid in → pass 1 → turns in the floating head → pass 2 → o
           topic: "heat-exchangers", sub: "LMTD derivation (double pipe)",
           type: "derivation", syllabus: "in", repeats: ["2017-18-Q2b"],
           text: String.raw`In a double-pipe heat exchanger the temperature difference between hot fluid and cold fluid varies continuously along the length of the exchanger. Therefore, some kind of mean temperature difference is to be used for heat transfer calculations. Show mathematically that log-mean temperature difference is appropriate for this.`,
-          solution: String.raw`**Assumptions:** steady state; constant $U$ and specific heats; no heat loss; no phase change; negligible axial conduction.
+          solution: String.raw`**Assumptions (slides):**
+1. The exchanger is insulated from its surroundings, so heat is exchanged only between the hot and cold fluids.
+2. Axial conduction along the tubes is negligible.
+3. Potential and kinetic energy changes are negligible.
+4. The fluid specific heats are constant.
+5. The overall heat transfer coefficient $U$ is constant.
+
+(Also implied: steady state, and each fluid has one bulk temperature at any cross-section.)
 
 Take **parallel flow** (counter-flow is identical with signs changed). Hot fluid $\dot m_h c_h$, temperature $T_h$; cold fluid $\dot m_c c_c$, temperature $T_c$; local $\Delta T = T_h - T_c$.
 
@@ -269,9 +278,9 @@ So the mean temperature difference that makes $q = UA\,\Delta T_m$ exact is the 
           topic: "heat-exchangers", sub: "Overall U of a water–water double-pipe exchanger",
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`Hot water at 90°C flows through the inside of a 2.5-cm-ID steel tube with 0.8-mm wall thickness at a velocity of 4 m/s. This tube forms the inside of a double-pipe heat exchanger. The outer pipe has a 3.75-cm ID and water at 20°C flows in the annular space at a velocity of 6 m/s. Calculate the overall heat transfer coefficient for this arrangement. The tube length is 6.0 m.`,
-          solution: String.raw`**Given:** $d_i = 0.025$ m, wall 0.8 mm → $d_o = 0.0266$ m; $V_i = 4$ m/s at 90°C; annulus $D_2 = 0.0375$ m, $V_a = 6$ m/s at 20°C; $L = 6$ m.
-**Find:** $U_o$ (based on outer tube area).
-**Assumptions:** properties at the given temperatures (taken as bulk); clean surfaces; steel $k \approx 54$ W/m·K (mild steel); Dittus–Boelter for both streams.
+          solution: String.raw`**Given:** $d_i = 0.025$ m, wall 0.8 mm → $d_o = D_1 = 0.0266$ m; $V_i = 4$ m/s at 90°C; annulus $D_2 = 0.0375$ m, $V_a = 6$ m/s at 20°C; $L = 6$ m.
+**Find:** $U_o$ (based on the outside area of the inner tube, the reference surface the slides use for double pipes).
+**Assumptions:** properties at the given temperatures (taken as bulk); clean surfaces; steel $k \approx 54$ W/m·K (mild steel); Dittus–Boelter for both streams; $(\mu/\mu_w)$ effects neglected.
 
 Water properties (Çengel Table A-9):
 | | 90°C (tube) | 20°C (annulus) |
@@ -288,21 +297,23 @@ $$\mathrm{Nu} = 0.023\mathrm{Re}^{0.8}\mathrm{Pr}^{0.3} = 0.023(3.06\times10^5)^
 $$h_i = \frac{689(0.675)}{0.025} = 1.86\times10^4\ \mathrm{W/m^2K}$$
 
 ### 2. Annulus (cold water, being heated, n = 0.4)
-Hydraulic diameter: $D_h = D_2 - d_o = 0.0375 - 0.0266 = 0.0109$ m.
-$$\mathrm{Re} = \frac{998(6)(0.0109)}{1.002\times10^{-3}} = 6.51\times10^4,\quad L/D_h = 550$$
-$$\mathrm{Nu} = 0.023(6.51\times10^4)^{0.8}(7.01)^{0.4} = 356$$
-$$h_o = \frac{356(0.598)}{0.0109} = 1.95\times10^4\ \mathrm{W/m^2K}$$
+For **heat transfer** the slides (Kern Eq. 6.3) use the heated perimeter $\pi D_1$ only:
+$$D_e = \frac{D_2^2 - D_1^2}{D_1} = \frac{0.0375^2 - 0.0266^2}{0.0266} = 0.0263\ \mathrm{m}$$
+($D'_e = D_2 - D_1 = 0.0109$ m would be used only for the annulus pressure drop.)
+$$\mathrm{Re}_a = \frac{\rho V D_e}{\mu} = \frac{998(6)(0.0263)}{1.002\times10^{-3}} = 1.57\times10^5,\quad L/D_e = 228$$
+$$\mathrm{Nu} = 0.023(1.57\times10^5)^{0.8}(7.01)^{0.4} = 719$$
+$$h_o = \frac{719(0.598)}{0.0263} = 1.64\times10^4\ \mathrm{W/m^2K}$$
 
 ### 3. Overall coefficient (outer area)
 $$\frac{1}{U_o} = \frac{d_o}{d_i h_i} + \frac{d_o\ln(d_o/d_i)}{2k} + \frac{1}{h_o}$$
-$$= \frac{0.0266}{0.025(18{,}614)} + \frac{0.0266\ln(1.064)}{2(54)} + \frac{1}{19{,}515}$$
-$$= 5.72\times10^{-5} + 1.53\times10^{-5} + 5.12\times10^{-5} = 1.237\times10^{-4}\ \mathrm{m^2K/W}$$
-$$U_o \approx 8.1\times10^3\ \mathrm{W/m^2K}\qquad (U_i = U_o d_o/d_i \approx 8.6\times10^3)$$
+$$= \frac{0.0266}{0.025(18{,}614)} + \frac{0.0266\ln(1.064)}{2(54)} + \frac{1}{16{,}367}$$
+$$= 5.72\times10^{-5} + 1.53\times10^{-5} + 6.11\times10^{-5} = 1.335\times10^{-4}\ \mathrm{m^2K/W}$$
+$$U_o \approx 7.5\times10^3\ \mathrm{W/m^2K}\qquad (U_i = U_o d_o/d_i \approx 8.0\times10^3)$$
 
-(With $k = 43$ W/m·K for 1% C steel, $U_o = 7.8\times10^3$ W/m²K.)
+(With $k = 43$ W/m·K for 1% C steel, $U_o = 7.3\times10^3$ W/m²K. Neglecting the wall, the slides' form $U = h_{io}h_o/(h_{io}+h_o)$ with $h_{io} = h_i d_i/d_o = 1.75\times10^4$ gives $8.5\times10^3$. Holman's hydraulic diameter $D_2 - D_1$ in place of $D_e$ would give $h_o = 1.95\times10^4$ and $U_o = 8.1\times10^3$.)
 
-**Why it matters:** with high water velocities on both sides, the wall resistance is no longer negligible (~12% of the total).`,
-          answer: String.raw`$h_i \approx 1.86\times10^4$, $h_o \approx 1.95\times10^4$ W/m²K; $U_o \approx 8.1\times10^3$ W/m²K (outer area).` },
+**Why it matters:** with high water velocities on both sides, the wall resistance is no longer negligible (about 11% of the total).`,
+          answer: String.raw`$h_i \approx 1.86\times10^4$ W/m²K; annulus with $D_e = (D_2^2-D_1^2)/D_1 = 0.0263$ m gives $h_o \approx 1.64\times10^4$ W/m²K; $U_o \approx 7.5\times10^3$ W/m²K (outer area).` },
       ] },
 
     { id: "2013-14-Q5", q: 5, section: "B", compulsory: false,

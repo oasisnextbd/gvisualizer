@@ -192,9 +192,9 @@ $$\Delta P_s=\frac{fG_s^2D_s(N+1)}{5.22\times10^{10}D_es\phi_s}=\frac{0.00197(6.
       parts: [
         { id: "2018-19-Q2", label: "", marks: "30",
           topic: "heat-exchangers", sub: "Double pipe: benzene–toluene hairpins",
-          type: "numerical", syllabus: "partial", repeats: [],
+          type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`It is desired to heat 9820 lb/hr of cold benzene from 80 to 120°F using 6330 lb/hr of hot toluene, which is cooled from 160 to 100°F. The specific gravities at 68°F are 0.88 and 0.87, respectively. A fouling factor of 0.001 should be provided for each stream. A number of 20 ft hairpins of 2 by $1\tfrac14$ in IPS pipe are available. How many hairpins are required?`,
-          solution: String.raw`> The Kern film-coefficient method ($j_H$, $h_{io}$, $U_C$, $R_d$) is in the slides; the annulus equivalent diameter and IPS pipe data come from Kern Ch. 6 (Example 6.1).
+          solution: String.raw`> This is Kern Example 6.1, worked in full in the slides (double-pipe "calculation involved", steps 1–7). The chart readings below are the slides' values.
 
 **Given:** benzene (cold) $w=9820$ lb/h, $80\to120$°F; toluene (hot) $W=6330$ lb/h, $160\to100$°F; $R_d=0.001+0.001=0.002$; hairpins of 20 ft (40 ft of pipe each), 2 in × 1¼ in IPS.
 
@@ -233,38 +233,40 @@ $$D_e=\frac{D_2^2-D_1^2}{D_1}=\frac{(0.1723)^2-(0.1383)^2}{0.1383}=0.0761\ \math
 
 $$G_a=\frac{W}{a_a}=\frac{6330}{0.00827}=7.65\times10^5\ \mathrm{lb/h\,ft^2},\qquad Re_a=\frac{D_eG_a}{\mu}=\frac{0.0761(7.65\times10^5)}{0.99}=5.87\times10^4$$
 
-Kern Fig. 24 (fit $j_H=0.027Re^{0.8}$): $j_H\approx176$. $Pr=c\mu/k=0.44(0.99)/0.085=5.14$.
+Kern Fig. 24: $j_H\approx167$ (slides; the turbulent fit $0.027Re^{0.8}$ gives 177). $Pr=c\mu/k=0.44(0.99)/0.085=5.14$, $Pr^{1/3}=1.725$.
 
-$$h_o=j_H\frac{k}{D_e}Pr^{1/3}=176\left(\frac{0.085}{0.0761}\right)(5.14)^{1/3}=340\ \mathrm{Btu/h\,ft^2\,^\circ F}$$
+$$h_o=j_H\frac{k}{D_e}Pr^{1/3}\phi_a=167\left(\frac{0.085}{0.0761}\right)(1.725)(1)=321\ \mathrm{Btu/h\,ft^2\,^\circ F}$$
 
 ### 5. Inner pipe (cold benzene)
 $$G_p=\frac{w}{a_p}=\frac{9820}{0.01039}=9.45\times10^5\ \mathrm{lb/h\,ft^2},\qquad Re_p=\frac{DG_p}{\mu}=\frac{0.115(9.45\times10^5)}{1.21}=8.99\times10^4$$
 
-Kern Fig. 24 (fit): $j_H\approx248$. $Pr=0.425(1.21)/0.091=5.65$.
+Kern Fig. 24: $j_H\approx236$ (slides; fit gives 248). $Pr=0.425(1.21)/0.091=5.65$, $Pr^{1/3}=1.78$.
 
-$$h_i=j_H\frac{k}{D}Pr^{1/3}=248\left(\frac{0.091}{0.115}\right)(5.65)^{1/3}=349\ \mathrm{Btu/h\,ft^2\,^\circ F}$$
+$$h_i=j_H\frac{k}{D}Pr^{1/3}\phi_p=236\left(\frac{0.091}{0.115}\right)(1.78)(1)=333\ \mathrm{Btu/h\,ft^2\,^\circ F}$$
 
-$$h_{io}=h_i\frac{ID}{OD}=349\left(\frac{1.38}{1.66}\right)=290\ \mathrm{Btu/h\,ft^2\,^\circ F}$$
+$$h_{io}=h_i\frac{ID}{OD}=333\left(\frac{1.38}{1.66}\right)=277\ \mathrm{Btu/h\,ft^2\,^\circ F}$$
 
 ### 6. Clean and design coefficients
-$$U_C=\frac{h_{io}h_o}{h_{io}+h_o}=\frac{290(340)}{290+340}=156.6\ \mathrm{Btu/h\,ft^2\,^\circ F}$$
+$$U_C=\frac{h_{io}h_o}{h_{io}+h_o}=\frac{277(321)}{277+321}=148.7\ \mathrm{Btu/h\,ft^2\,^\circ F}$$
 
-$$\frac{1}{U_D}=\frac{1}{U_C}+R_d=\frac{1}{156.6}+0.002\;\Rightarrow\;U_D=119.2\ \mathrm{Btu/h\,ft^2\,^\circ F}$$
+$$\frac{1}{U_D}=\frac{1}{U_C}+R_d=\frac{1}{148.7}+0.002\;\Rightarrow\;U_D=114.6\ \mathrm{Btu/h\,ft^2\,^\circ F}$$
 
 ### 7. Required surface and hairpins
-$$A=\frac{Q}{U_D\,\mathrm{LMTD}}=\frac{1.669\times10^5}{119.2(28.85)}=48.5\ \mathrm{ft^2}$$
+$$A=\frac{Q}{U_D\,\mathrm{LMTD}}=\frac{1.669\times10^5}{114.6(28.85)}=50.5\ \mathrm{ft^2}$$
 
-$$\text{Required length}=\frac{48.5}{0.435}=111.6\ \mathrm{ft};\qquad\text{one 20 ft hairpin}=40\ \mathrm{ft}$$
+$$\text{Required length}=\frac{50.5}{0.435}=116\ \mathrm{ft};\qquad\text{one 20 ft hairpin}=40\ \mathrm{ft}$$
 
-$$\frac{111.6}{40}=2.8\;\Rightarrow\;\boxed{3\ \text{hairpins}}\ \text{(in series)}$$
+$$\frac{116}{40}=2.9\;\Rightarrow\;\boxed{3\ \text{hairpins}}\ \text{(in series)}$$
 
 ### 8. Check with 3 hairpins
 $A=3(40)(0.435)=52.2\ \mathrm{ft^2}$; $U_D=Q/(A\,\mathrm{LMTD})=1.669\times10^5/(52.2\times28.85)=110.8$;
 
-$$R_{d,actual}=\frac{U_C-U_D}{U_CU_D}=\frac{156.6-110.8}{156.6(110.8)}=0.0026>0.002\;✓$$
+$$R_{d,actual}=\frac{U_C-U_D}{U_CU_D}=\frac{148.7-110.8}{148.7(110.8)}=0.0023>0.002\;✓$$
 
-**Exam tip:** pressure drops are not asked here, but in a full Kern solution you would check them using $D'_e=D_2-D_1$ for the annulus friction.`,
-          answer: String.raw`$Q\approx1.67\times10^5$ Btu/h, LMTD = 28.9°F, $h_{io}\approx290$, $h_o\approx340$, $U_C\approx157$, $U_D\approx119$; $A\approx48.5$ ft² → 112 ft of pipe → **3 hairpins** (actual $R_d\approx0.0026$).` },
+These match the slides (149, 115, 50.5 ft², 116 ft, $R_d = 0.0023$). With the curve fits instead of the chart ($j_H$ 177 and 248) you get $U_C \approx 157$ and $A \approx 48.5$ ft²: still 3 hairpins.
+
+**Exam tip:** pressure drops are not asked here. In the slides' full solution they use $D'_e=D_2-D_1=0.0345$ ft for the annulus ($\Delta F_a = 4fG_a^2L/(2g\rho^2D'_e) = 23.5$ ft plus one velocity head per hairpin, 0.7 ft, so $\Delta P_a = 9.2$ psi) and $\Delta P_p = 3.2$ psi for the pipe, both below 10 psi.`,
+          answer: String.raw`$Q\approx1.67\times10^5$ Btu/h, LMTD = 28.9°F, $h_{io}\approx277$, $h_o\approx321$, $U_C\approx149$, $U_D\approx115$; $A\approx50.5$ ft² → 116 ft of pipe → **3 hairpins** (actual $R_d\approx0.0023$).` },
       ] },
     { id: "2018-19-Q3", q: 3, section: "A", compulsory: false,
       stem: String.raw``,
@@ -347,7 +349,7 @@ $$q'=\dot q_{total}\,\pi D=6.57\times10^4\,\pi(0.010)=2.07\times10^3\ \mathrm{W/
 - Counterflow: $\Delta t_1=300-275=25$°F, $\Delta t_2=300-100=200$°F.
 - Same pair of terminal differences, so the same LMTD:
 $$\mathrm{LMTD}=\frac{200-25}{\ln(200/25)}=84.2\ ^\circ\mathrm F$$
-- The hot side has an effectively infinite heat-capacity rate ($C_r=0$), so $\varepsilon=1-e^{-NTU}$ for any flow arrangement, and $F_T=1$ for multipass units.
+- This is the slides' third LMTD example: "heat transfer rate is independent of the flow pattern". For multipass units $R=0$, so $F_T=1$. (In ε–NTU terms, from the textbook, $C_r=0$ and $\varepsilon=1-e^{-NTU}$ for any arrangement.)
 
 **Practical choice:** steam is admitted at the top and the condensate drained from the bottom (gravity drainage), with the cold fluid usually entering at the condensate end, i.e. counterflow. This gives a little condensate subcooling and makes it impossible for the cold fluid to reach its outlet against a cooler section if the steam is slightly superheated or the condensate subcools.
 

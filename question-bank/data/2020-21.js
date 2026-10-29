@@ -101,9 +101,9 @@ $$R_d = \frac{U_C - U_D}{U_C U_D} = \frac{69.6-25.0}{69.6(25.0)} = 0.0256\ \math
 ### Pressure drops
 **Tube side.** $Re_t = 1.94\times10^4$ → Kern Fig. 26: $f \approx 0.00026$ ft²/in² (fit $f = 1.2\times4(0.0035+0.264Re^{-0.42}) = 0.0368$ ft²/ft²).
 $$\Delta P_t = \frac{f G_t^2 L n}{5.22\times10^{10} D s \phi_t} = \frac{0.000256(3.04\times10^5)^2(16)(6)}{5.22\times10^{10}(0.0695)(0.73)} = 0.86\ \mathrm{psi}$$
-Velocity $V = G_t/(3600\rho) = 3.04\times10^5/(3600\times62.5\times0.73) = 1.85$ ft/s:
-$$\Delta P_r = \frac{4n}{s}\frac{V^2}{2g'}\left(\frac{62.5}{144}\right) = \frac{4(6)}{0.73}\cdot\frac{1.85^2}{2(32.2)}(0.434) = 0.76\ \mathrm{psi}$$
-$\Delta P_T = 0.86 + 0.76 = 1.6$ psi.
+Actual velocity $V = G_t/(3600\rho) = 3.04\times10^5/(3600\times62.5\times0.73) = 1.85$ ft/s. For the return loss, Kern Fig. 27 gives $V^2/2g'$ (psi) against $G_t$ on a water basis, so it is evaluated with $V_w = G_t/(3600\times62.5) = 1.35$ ft/s; the density correction is the $1/s$ in the formula:
+$$\frac{V^2}{2g'} = \frac{1.35^2}{2(32.2)}\left(\frac{62.5}{144}\right) = 0.0123\ \mathrm{psi},\qquad \Delta P_r = \frac{4n}{s}\frac{V^2}{2g'} = \frac{4(6)}{0.73}(0.0123) = 0.40\ \mathrm{psi}$$
+$\Delta P_T = 0.86 + 0.40 = 1.3$ psi.
 
 **Shell side.** $Re_s = 4.95\times10^3$ → Kern Fig. 29: $f \approx 0.0025$ ft²/in² (fit $e^{0.576-0.19\ln Re}/144$). $N+1 = 12L/B = 12(16)/5 = 38.4$.
 $$\Delta P_s = \frac{f G_s^2 D_s (N+1)}{5.22\times10^{10} D_e s \phi_s} = \frac{0.00245(5.08\times10^5)^2(1.771)(38.4)}{5.22\times10^{10}(0.0825)(0.85)} = 11.8\ \mathrm{psi}$$
@@ -121,7 +121,7 @@ $$\Delta P_s = \frac{f G_s^2 D_s (N+1)}{5.22\times10^{10} D_e s \phi_s} = \frac{
 | Specific heat / k | 0.5 / 0.08 | 0.6 / 0.077 |
 | Velocity | 2.7 ft/s (cross flow) | 1.85 ft/s |
 | Passes | 1 | 6 |
-| ΔP allowed / calculated | 10 / 11.8 psi | 10 / 1.6 psi |
+| ΔP allowed / calculated | 10 / 11.8 psi | 10 / 1.3 psi |
 | Film coefficient | $h_o = 141$ | $h_{io} = 137$ (h_i = 164) Btu/h·ft²·°F |
 | Fouling resistance | $R_d$ (total) = 0.026 h·ft²·°F/Btu available | |
 | $U_C$ / $U_D$ | 69.6 / 25.0 Btu/h·ft²·°F | |
@@ -130,7 +130,7 @@ $$\Delta P_s = \frac{f G_s^2 D_s (N+1)}{5.22\times10^{10} D_e s \phi_s} = \frac{
 | Baffles | 20% cut segmental, 5 in spacing | |
 
 **Comment:** thermally the unit has ample surface, but the shell-side ΔP (≈ 11.8 psi) is slightly above a 10 psi allowance; widening the baffle spacing would bring it down (ΔP ∝ roughly $B^{-2.8}$ at fixed flow) at the cost of some of the excess $R_d$.`,
-          answer: String.raw`$\Delta P_T \approx 1.6$ psi (tubes), $\Delta P_s \approx 11.8$ psi (shell); TEMA: 21¼–192, 1-6, 653.5 ft², $U_C = 69.6$, $U_D = 25.0$, $R_d = 0.026$.` },
+          answer: String.raw`$\Delta P_T \approx 1.3$ psi (tubes), $\Delta P_s \approx 11.8$ psi (shell); TEMA: 21¼–192, 1-6, 653.5 ft², $U_C = 69.6$, $U_D = 25.0$, $R_d = 0.026$.` },
       ] },
     { id: "2020-21-Q2", q: 2, section: "A", compulsory: false,
       stem: String.raw``,
@@ -225,13 +225,14 @@ $$N = \frac{14.33}{0.438} = 32.7 \;\Rightarrow\; 33\ \text{hairpins}$$
           topic: "heat-exchangers", sub: "LMTD derivation and assumptions",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Derive the working equation of LMTD and state the assumptions made for the derivation.`,
-          solution: String.raw`**Assumptions**
-1. Steady state, steady flow rates.
-2. Overall coefficient $U$ constant along the exchanger.
-3. Specific heats constant (no phase change, or the whole phase change at constant temperature).
-4. No heat loss to the surroundings; all heat lost by the hot fluid is gained by the cold fluid.
-5. No axial conduction in the fluids or walls; kinetic/potential energy changes negligible.
-6. Each fluid has a single bulk temperature at any cross-section (pure parallel- or counter-flow).
+          solution: String.raw`**Assumptions (the five listed in the slides)**
+1. The exchanger is insulated from its surroundings: heat is exchanged only between the hot and cold fluids (no heat loss).
+2. Axial conduction along the tubes is negligible.
+3. Potential and kinetic energy changes are negligible.
+4. The fluid specific heats are constant.
+5. The overall heat transfer coefficient $U$ is constant.
+
+Also implied: steady state with constant flow rates, no partial phase change (a phase change at constant temperature is allowed), and one bulk temperature for each fluid at any cross-section.
 
 **Derivation (parallel flow; hot $h$, cold $c$, area coordinate $A$ from inlet)**
 
@@ -253,7 +254,7 @@ $$\boxed{q = UA\,\Delta T_{lm},\qquad \Delta T_{lm} = \frac{\Delta T_1 - \Delta 
 **Counterflow:** repeating with $dT_c$ of the same sign as $dT_h$ (the cold fluid flows the other way) gives the same form with $\Delta T_1 = T_{h,in} - T_{c,out}$ and $\Delta T_2 = T_{h,out} - T_{c,in}$.
 
 For multipass or cross-flow exchangers: $q = UAF\,\Delta T_{lm,cf}$, with $F$ from charts (Holman Fig. 10-8).`,
-          answer: String.raw`$q = UA\,\Delta T_{lm}$, $\Delta T_{lm} = (\Delta T_1 - \Delta T_2)/\ln(\Delta T_1/\Delta T_2)$, assuming steady state, constant U and $c_p$, and no heat loss or axial conduction.` },
+          answer: String.raw`$q = UA\,\Delta T_{lm}$, $\Delta T_{lm} = (\Delta T_1 - \Delta T_2)/\ln(\Delta T_1/\Delta T_2)$, assuming an insulated exchanger, negligible axial conduction, negligible KE/PE changes, constant $c_p$ and constant $U$.` },
         { id: "2020-21-Q3b", label: "(b)", marks: "17",
           topic: "condensation", sub: "Horizontal tube bank (400 tubes) with modified h_fg",
           type: "numerical", syllabus: "in", repeats: [],

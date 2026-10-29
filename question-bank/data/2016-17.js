@@ -11,7 +11,7 @@ QB.paper({
           text: String.raw`Identify the following labeled sections of a shell and tube heat exchanger from Figure 1(a).
 
 *[Figure 1(a): cut-away of a TEMA type AES (removable channel and cover, one shell pass, pull-through/split-ring floating head) shell-and-tube exchanger. Numbered balloons: 36, 4, 3, 34, 5, 31, 6, 34, 12, 29, 7, 8, 27, 28, 18, 36, 32, 9, 15, 16 along the top and right; 1, 5, 34, 3, 10, 35, 35, 12, 34, 11, 13, 17, 33 along the bottom.]*`,
-          solution: String.raw`The figure is the standard TEMA nomenclature drawing of an **AES** exchanger (A = channel with removable cover, E = one-pass shell, S = floating head with backing device). The numbers are the TEMA part numbers:
+          solution: String.raw`The figure is the standard TEMA nomenclature drawing of an **AES** exchanger (A = channel with removable cover, E = one-pass shell, S = floating head with backing device). The numbers are the TEMA part numbers, the same numbering as the slides' parts list (items 1–33; 34–36 are the instrument connection, support saddle and lifting lug of the full TEMA list):
 
 | No. | Part | No. | Part |
 |---|---|---|---|
@@ -239,9 +239,9 @@ At 30 cm/s, natural convection dominates.
       parts: [
         { id: "2016-17-Q3a", label: "(a)", marks: "10",
           topic: "heat-exchangers", sub: "Plate and frame heat exchanger",
-          type: "sketch", syllabus: "out", repeats: [],
+          type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`Using a neat schematic describe the working principle of plate and frame heat exchanger.`,
-          solution: String.raw`> Not covered in the current CHE 301 slides.
+          solution: String.raw`**Slides' description (gasketed / welded plate exchanger):** a stack of corrugated metal plates pressed together in a frame and sealed at the edges by compressible gaskets, which form narrow interconnected passages; the slides show the flow principle with the two fluids (e.g. steam/condensate and product) in alternate channels. No design equations are given; the details below are from the textbooks.
 
 **Construction (schematic in words):** a fixed **frame plate** (head) and a movable **pressure plate** (follower) hang from an upper **carrying bar** and are located by a lower **guide bar**. Between them is a pack of thin (0.5–1 mm) corrugated metal **plates** (stainless steel, titanium) clamped together by **tightening bolts**. Each plate has a **port hole** at each of its four corners and a peripheral **gasket**. The gaskets seal each channel and route the hot and cold fluids into **alternate channels**. The four inlet/outlet nozzles are on the frame plate. *Sketch:* exploded view of a plate pack with hot (red) and cold (blue) arrows entering through diagonally opposite corner ports and flowing in alternate gaps, usually counter-current.
 
@@ -257,7 +257,7 @@ At 30 cm/s, natural convection dominates.
           answer: String.raw`A pack of gasketed corrugated plates is clamped in a frame. Corner ports and gaskets send the hot and cold streams through alternate channels (usually counterflow), and the corrugations give high turbulence and high U. The unit is compact and easy to clean, but limited in pressure and temperature by the gaskets.` },
         { id: "2016-17-Q3b", label: "(b)", marks: "6",
           topic: "heat-exchangers", sub: "Temperature profiles with phase change",
-          type: "sketch", syllabus: "partial", repeats: [],
+          type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`Draw the temperature profiles of the hot and cold streams for the following situations:
 
 (i) cold fluid is evaporating and hot fluid is saturated steam
@@ -314,7 +314,7 @@ $$(UA)_{req} = \frac{q}{\Delta T_{lm}} = \frac{15{,}490}{47.6} = 325\ \mathrm{W/
 | Exchanger 1 | 570 × 0.47 = 268 | No |
 | Exchanger 2 | 370 × 0.94 = 348 | Yes (about 7% margin) |
 
-6. Check by ε–NTU, with $C_r = 134.2/267.1 = 0.502$ and required $\varepsilon = q/[C_{min}(175 - 35)] = 0.825$. Counterflow effectiveness:
+6. Check by ε–NTU (textbook method, not in the slides; the LMTD route above is enough for full marks), with $C_r = 134.2/267.1 = 0.502$ and required $\varepsilon = q/[C_{min}(175 - 35)] = 0.825$. Counterflow effectiveness:
 $$\varepsilon = \frac{1 - e^{-\mathrm{NTU}(1 - C_r)}}{1 - C_r\,e^{-\mathrm{NTU}(1 - C_r)}}$$
    - Exchanger 1: NTU = 268/134.2 = 2.00, so ε = 0.774 and the water leaves at only **89.4°C** (< 93°C).
    - Exchanger 2: NTU = 2.59, so ε = 0.841 and the water leaves at **94.2°C** (≥ 93°C).

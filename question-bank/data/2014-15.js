@@ -447,9 +447,9 @@ $$\boxed{D_e=\frac{4\left(\dfrac12P_T\times0.86P_T-\dfrac12\cdot\dfrac{\pi d_o^2
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Why is a counterflow heat exchanger more effective than a parallel-flow heat exchanger?`,
           solution: String.raw`- **More uniform $\Delta T$:** in counterflow the hot inlet meets the cold outlet and the hot outlet meets the cold inlet, so the temperature difference stays nearly constant along the length. In parallel flow $\Delta T$ is very large at the inlet and collapses towards the outlet.
-- **Larger LMTD for the same terminal temperatures**, so less area is needed for the same duty ($q=UA\Delta T_{lm}$). Example: hot 100→60°C, cold 20→50°C: counterflow $\Delta T_{lm}=44.8$ K, parallel flow $\Delta T_{lm}=33.7$ K, so parallel flow needs about 33 % more area.
+- **Larger LMTD for the same terminal temperatures**, so less area is needed for the same duty ($q=UA\Delta T_{lm}$). Example: hot 100→60°C, cold 20→50°C: counterflow $\Delta T_{lm}=44.8$ K, parallel flow $\Delta T_{lm}=33.7$ K, so parallel flow needs about 33 % more area. The slides' example: hot 300→200°F, cold 100→150°F gives counterflow LMTD = 123.5°F against 108°F for parallel flow; with cold 150→200°F, parallel flow is impossible (outlet ΔT = 0) while counterflow still gives 72°F.
 - **Outlet temperature limit:** in parallel flow the cold outlet can never exceed the hot outlet ($t_2<T_2$). In counterflow $t_2$ can exceed $T_2$ and approach $T_1$.
-- **Higher maximum effectiveness:** as $NTU\to\infty$, counterflow $\varepsilon\to1$ for any $C_r$; parallel flow is limited to $\varepsilon_{max}=1/(1+C_r)$ (only 0.5 when $C_r=1$).
+- **Higher maximum effectiveness** (ε–NTU view, from the textbook, not in the slides): as $NTU\to\infty$, counterflow $\varepsilon\to1$ for any $C_r$; parallel flow is limited to $\varepsilon_{max}=1/(1+C_r)$ (only 0.5 when $C_r=1$).
 - Smaller thermal stresses (smaller local $\Delta T$ at any section).
 - Exception: when one fluid changes phase at constant temperature ($C_r=0$) both arrangements perform the same.`,
           answer: String.raw`Counterflow keeps $\Delta T$ more uniform, gives the larger LMTD (less area), allows $t_2 > T_2$, and its effectiveness can approach 1; parallel flow is capped at $1/(1+C_r)$.` },
@@ -688,7 +688,7 @@ Fluid properties:
 | $c_p$ | 1 Btu/lb·°F | 1 Btu/lb·°F |
 | $\mu$ | 1.96 lb/ft·hr | 2.23 lb/ft·hr |
 | $k$ | 0.36 Btu/hr·ft·°F | 0.36 Btu/hr·ft·°F |`,
-          solution: String.raw`> Data note: the shell-side fouling factor is printed as 0.005. The same problem in 2018-19 Q1 (and Kern Example 7.3) uses 0.0005 for distilled water, so 0.005 is almost certainly a misprint. Both cases are checked at the end. The raw-water flow rate is not given here; it follows from the heat balance (it is printed as 280,000 lb/h in 2018-19).
+          solution: String.raw`> Data note: the shell-side fouling factor is printed as 0.005. The same problem in 2018-19 Q1 (and Kern Example 7.4) uses 0.0005 for distilled water, so 0.005 is almost certainly a misprint. Both cases are checked at the end. The raw-water flow rate is not given here; it follows from the heat balance (it is printed as 280,000 lb/h in 2018-19).
 
 **Given:** distilled water (hot) $W=175\,000$ lb/h, $T_1=93$°F, $T_2=85$°F; raw water (cold) $t_1=75$°F, $t_2=80$°F; $c_p=1$, $s=1$ ($\rho=62.5\ \mathrm{lb/ft^3}$) for both; $\Delta P_{allow}=10$ psi each side; $R_{d,shell}=0.005$ (printed), $R_{d,tube}=0.0015$.
 Exchanger: 1-2, shell ID 15.25 in, $B=12$ in, 160 tubes, $\tfrac34$ in OD 18 BWG, $L=16$ ft, $P_T=\tfrac{15}{16}$ in triangular.

@@ -363,29 +363,32 @@ $R_d$(calc) ≥ $R_d$(required) and both pressure drops are within the allowance
           answer: String.raw`Q = 908 400 Btu/h (41 290 lb/h water); Δt = 0.81 × 37.9 = 30.6 °F; $h_o \approx 574$, $h_i \approx 905$ ($h_{io} = 748$); $U_C = 325$, $U_D = 182$, $R_d = 0.0024 > 0.002$; ΔP_s ≈ 9.8 psi, ΔP_t ≈ 2.2 psi → suitable.` },
         { id: "2012-13-Q5b", label: "(b)", marks: "4+6",
           topic: "heat-exchangers", sub: "Double-pipe pros/cons; 1-2 Δt assumptions",
-          type: "theory", syllabus: "partial", repeats: [],
+          type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Write the advantages and disadvantages of using a double pipe heat exchanger. State the assumptions of the true temperature difference for a 1-2 shell-and-tube heat exchanger.`,
           solution: String.raw`### Double-pipe exchanger
+Construction (slides): an inner pipe inside an outer pipe that acts as a jacket, built as **hairpins** (two legs joined by a U-bend) from standard IPS fittings (2 × 1¼, 2½ × 1¼, 3 × 2, 4 × 3 in), effective lengths 12, 15 or 20 ft.
+
 **Advantages**
-- Simple, cheap, built from standard pipe fittings; easy to assemble, clean and maintain (hairpins dismantle easily).
-- True counter-flow → high $F_T = 1$, can handle temperature crosses.
-- Good for high pressures (small diameters) and small duties.
-- Area easily increased by adding hairpins in series/parallel.
+- Simple construction from standard pipe and fittings; hairpins are connected in series (or parallel), so area is easily added.
+- Advantageous when the required surface is small, about **100–200 ft² or less** (low heat duty).
+- True counterflow: no $F_T$ correction is needed and a temperature cross can be handled.
+- Small diameters stand high pressures; hairpins are easily dismantled for cleaning.
 
 **Disadvantages**
-- Small area per unit (practical limit ≈ 100–200 ft²); large duties need many hairpins → large floor space, many joints and possible leak points.
-- High cost per unit area for large surfaces.
-- Annulus is hard to clean if dirty fluid is placed there; gland/packing leaks.
+- Small surface per hairpin: a large duty needs many hairpins, which take much floor space, and cleaning and maintenance of so many units become prohibitive compared with other equipment (slides).
+- Every hairpin adds joints, glands and possible leak points; the cost per unit area is high for large surfaces.
+- Not suited to high heat duty; shell-and-tube units are used there.
 
 ### Assumptions for the 1-2 true temperature difference ($\Delta t = F_T \times \mathrm{LMTD}$)
+$F_T$ corrects the counterflow LMTD, so the slides' LMTD assumptions apply (exchanger insulated, negligible axial conduction, negligible kinetic and potential energy changes, constant specific heats, constant $U$; the correction-factor slide singles out constant $c_p$ and constant $U$ as the important ones). For the 1-2 chart Kern lists:
 1. Shell fluid temperature is uniform over any cross-section (shell fluid well mixed).
-2. Equal heat transfer surface in each tube pass.
+2. Equal heat-transfer surface in each tube pass.
 3. Overall coefficient $U$ is constant along the exchanger.
 4. Flow rate of each fluid is constant (steady state).
 5. Specific heat of each fluid is constant.
 6. No phase change (no condensation or boiling) in part of the exchanger.
 7. Heat losses to the surroundings are negligible.`,
-          answer: String.raw`Double pipe: cheap, true counter-flow, easy to clean, but small area and many joints. $F_T$ assumes mixed shell fluid, equal pass areas, constant U, flows and c, no phase change, no losses.` },
+          answer: String.raw`Double pipe: simple hairpins, true counterflow, best below about 100–200 ft²; but small area per hairpin, many joints, much space and costly maintenance for large duties. $F_T$ assumes mixed shell fluid, equal pass areas, constant U, flows and c, no phase change, no losses.` },
       ] },
     { id: "2012-13-Q6", q: 6, section: "B", compulsory: false,
       stem: String.raw``,
@@ -516,13 +519,27 @@ $$h_1 = 0.729\left[\frac{g\rho_l(\rho_l-\rho_v)h_{fg}^*k_l^3}{\mu_l\Delta T D}\r
       parts: [
         { id: "2012-13-Q8a", label: "(a)", marks: "2+4",
           topic: "heat-exchangers", sub: "Thermal design; equipment types and purposes",
-          type: "theory", syllabus: "partial", repeats: [],
+          type: "theory", syllabus: "in", repeats: [],
           text: String.raw`What do you mean by thermal design of heat transfer equipment? Make a list of some heat transfer equipment types and their purpose of use in process industries.`,
-          solution: String.raw`**Thermal design:** determining the heat transfer area and configuration (exchanger type, number/size/length of tubes, passes, shell diameter, baffles) needed to transfer a specified duty between given streams, with film coefficients, fouling allowance and true temperature difference, while keeping pressure drops within allowable limits. (Mechanical design – thicknesses, codes – follows it.)
+          solution: String.raw`**Thermal design (slides):** heat-exchanger design has two parts, **thermal design** (done by the chemical engineer) and **mechanical design**, both recorded on the equipment data sheet. Thermal design finds the heat-transfer area and configuration (type, number, size and length of tubes, passes, shell diameter, baffles) for a specified duty, using film coefficients, a fouling allowance and the true temperature difference. It must establish that (1) the equipment can take the heat load and (2) the pressure drop in both streams is satisfactory. Mechanical design (thicknesses, codes) follows.
 
-| Equipment | Purpose |
+**Classification (slides):** by type of contact (direct transfer, storage/regenerative, direct contact); by construction (tubular: double pipe and shell-and-tube; plate; extended surface; regenerative); by flow arrangement (single pass, multi-pass); by surface compactness (compact above 700 m²/m³).
+
+| Equipment type | Purpose / where used |
 |---|---|
-| Heat exchanger | exchange heat between two process streams (heat recovery) |
+| Double-pipe (hairpin) exchanger | small duties, surface below about 100–200 ft² |
+| Shell-and-tube exchanger (fixed tube sheet, U-tube, floating head) | most process duties, high heat load |
+| Plate (gasketed or welded) exchanger | compact liquid–liquid duties |
+| Plate-fin (compact) exchanger | gas service, small size and weight |
+| Air-cooled (fin-fan) exchanger | reject heat to air where water is scarce |
+| Scraped-surface exchanger | highly viscous or crystallizing products, heavy fouling |
+| Direct-contact equipment (cooling tower, barometric condenser) | cool water or condense vapour by mixing |
+
+By service (Kern ch. 1):
+
+| Service | Purpose |
+|---|---|
+| Exchanger | exchange heat between two process streams (heat recovery) |
 | Cooler | cool a process stream with water or air |
 | Heater | heat a process stream, usually with steam |
 | Condenser | condense vapour (total or partial) |
@@ -530,27 +547,26 @@ $$h_1 = 0.729\left[\frac{g\rho_l(\rho_l-\rho_v)h_{fg}^*k_l^3}{\mu_l\Delta T D}\r
 | Reboiler | supply heat to the bottom of a distillation column (vaporize part of the bottoms) |
 | Vaporizer / evaporator | vaporize a liquid / concentrate a solution by boiling off solvent |
 | Steam generator / waste-heat boiler | raise steam from hot process gases |
-| Superheater | heat vapour above saturation |
-| Cooling tower, air cooler | reject heat to atmosphere |`,
-          answer: String.raw`Thermal design = sizing area/geometry for a duty within ΔP limits; types include exchangers, coolers, heaters, condensers, chillers, reboilers, evaporators, vaporizers.` },
+| Superheater | heat vapour above saturation |`,
+          answer: String.raw`Thermal design = sizing area and geometry so the unit takes the heat load with acceptable ΔP on both streams (mechanical design follows). Types: double pipe, shell-and-tube, plate, plate-fin, air-cooled, scraped-surface; services: exchangers, coolers, heaters, condensers, chillers, reboilers, evaporators.` },
         { id: "2012-13-Q8b", label: "(b)", marks: "3+2",
           topic: "shell-tube", sub: "Components; pitch, clearance, arrangement, BWG",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Write the names of the components of shell-and-tube heat exchangers. Give the definitions of (i) tube pitch, (ii) clearance, (iii) arrangement, (iv) BWG.`,
-          solution: String.raw`**Components:** shell, shell cover, tubes (tube bundle), tube sheets (stationary and floating), front (stationary) head / channel and channel cover, rear head, floating head and floating-head cover (with backing device/split ring), pass partition plates, baffles (segmental) and support plates, tie rods and spacers, impingement plate, shell and channel nozzles, vent and drain connections, expansion joint (fixed tube sheet units), supports/saddles.
+          solution: String.raw`**Components (slides' parts list, TEMA numbering):** stationary head (channel or bonnet) and channel cover; stationary head flange; stationary head nozzles; stationary tube sheet; tubes; shell and shell cover; shell flanges (stationary-head end and rear-head end) and shell cover flange; shell nozzles; expansion joint (fixed-tube-sheet units); floating tube sheet, floating head cover and floating head flange; floating head backing device and split shear ring; slip-on backing flange; floating tube sheet skirt; packing box flange, packing, packing follower ring and lantern ring (packed floating heads); tie rods and spacers; transverse baffles or support plates; impingement baffle; longitudinal baffle; pass partition; vent and drain connections.
 
-- **(i) Tube pitch $P_T$:** centre-to-centre distance between adjacent tubes (e.g. 1 in for ¾ in tubes).
-- **(ii) Clearance $C'$:** the shortest distance between the outer surfaces of adjacent tubes, $C' = P_T - d_o$ (e.g. 0.25 in).
-- **(iii) Arrangement (layout):** the pattern of tubes on the tube sheet – square, rotated square, triangular, rotated triangular. Square pitch allows mechanical cleaning of the outside; triangular packs more tubes in a given shell.
-- **(iv) BWG:** Birmingham Wire Gauge – the number that specifies the tube wall thickness; higher BWG = thinner wall (¾ in 16 BWG: wall 0.065 in, ID 0.62 in).`,
-          answer: String.raw`Shell, tubes, tube sheets, heads/channels, baffles, tie rods, nozzles…; pitch = centre distance, clearance = $P_T - d_o$, arrangement = layout pattern, BWG = wall thickness gauge.` },
+- **(i) Tube pitch $P_T$:** the centre-to-centre distance between adjacent tubes (e.g. ¾ in tubes on 1 in pitch).
+- **(ii) Clearance $C'$:** the shortest distance between the outer surfaces of adjacent tubes, $C' = P_T - d_o$ (0.25 in for ¾ in tubes on 1 in pitch). It sets the shell-side flow area $a_s = \mathrm{ID}\,C'B/(144P_T)$.
+- **(iii) Arrangement (layout):** the pattern of tubes on the tube sheet: triangular (30°), rotated triangular (60°), square (90°) or rotated square (45°). Square pitch: easy cleaning and less pressure drop. Triangular pitch: preferred, more heat transfer in a given cell, higher $h$, but a larger pressure drop from the extra turbulence.
+- **(iv) BWG:** Birmingham Wire Gauge, the number that gives the tube wall thickness; a higher BWG means a thinner wall (14 BWG = 0.083 in, 16 BWG = 0.065 in; ¾ in 16 BWG has ID 0.62 in). It is chosen from the operating pressure, the corrosiveness of the fluids and the wall thinning during bending.`,
+          answer: String.raw`Shell, tubes, tube sheets, channel/heads, floating head and backing device, baffles, tie rods, pass partitions, nozzles…; pitch = centre distance, clearance = $P_T - d_o$, arrangement = 30°/60°/90°/45° layout, BWG = wall-thickness gauge (set by pressure, corrosion and bending).` },
         { id: "2012-13-Q8c", label: "(c)", marks: "3+4",
           topic: "shell-tube", sub: "Codes and standards; TEMA specification sheet",
           type: "theory", syllabus: "partial", repeats: [],
           text: String.raw`Mention some commonly employed codes and standards for the design and construction of heat transfer equipment. What type of information does a TEMA specification sheet contain for a shell-and-tube heat exchanger?`,
-          solution: String.raw`**Codes and standards:** TEMA (Tubular Exchanger Manufacturers Association) standards, classes R (refinery), C (commercial), B (chemical); ASME Boiler and Pressure Vessel Code, Section VIII Div. 1 (unfired pressure vessels); API 660 (shell-and-tube for petroleum service) and API 661 (air-cooled); HEI (Heat Exchange Institute) standards for surface condensers and feedwater heaters; British PD 5500 (BS 5500); IS 4503; ISO 16812.
+          solution: String.raw`**Codes and standards:** TEMA (Tubular Exchanger Manufacturers Association) standards, the ones covered in the slides: scope shell ID ≤ 60 in, nominal diameter × design pressure ≤ 60,000 in·psi, design pressure ≤ 3000 psi; classes **R** (severe requirements of petroleum processing), **C** (general commercial application, least stringent) and **B** (chemical process service). Other codes (textbook): ASME Boiler and Pressure Vessel Code, Section VIII Div. 1 (unfired pressure vessels); API 660 (shell-and-tube for petroleum service) and API 661 (air-cooled); HEI (Heat Exchange Institute) standards for surface condensers and feedwater heaters; British PD 5500 (BS 5500); IS 4503; ISO 16812.
 
-**TEMA specification sheet contains:**
+**TEMA specification sheet contains** (the slides show a blank sheet and a filled one for an ammonia condenser):
 - Customer, plant, item number, service of unit.
 - Size (shell ID – tube length) and type (e.g. AES), arrangement (shells in series/parallel), surface per unit and per shell.
 - Performance of one unit, shell side and tube side: fluid name, total flow, vapour/liquid in and out, temperatures in/out, density, viscosity, specific heat, thermal conductivity, latent heat, inlet pressure, velocity, pressure drop allowed/calculated, fouling resistance.
@@ -559,11 +575,13 @@ $$h_1 = 0.729\left[\frac{g\rho_l(\rho_l-\rho_v)h_{fg}^*k_l^3}{\mu_l\Delta T D}\r
           answer: String.raw`TEMA, ASME VIII, API 660/661, HEI; the TEMA sheet lists size/type, process data for both sides, duty, MTD, U, ΔP, fouling and full construction details.` },
         { id: "2012-13-Q8d", label: "(d)", marks: "2+2+6",
           topic: "shell-tube", sub: "TEMA designation; plate-and-frame limits; extended surfaces",
-          type: "theory", syllabus: "partial", repeats: [],
+          type: "theory", syllabus: "in", repeats: [],
           text: String.raw`What do you mean by "SIZE 23-192 TYPE AES"? Mention the design limitations of a plate-and-frame heat exchanger. Why are extended surface heat exchangers used? Explain with examples.`,
           solution: String.raw`**SIZE 23-192 TYPE AES** (TEMA designation):
 - 23 = nominal shell inside diameter, 23 in; 192 = straight tube length, 192 in (16 ft).
 - A = front (stationary) head: channel with removable cover; E = one-pass shell; S = rear head: floating head with backing device (split-ring), so the bundle is removable and free to expand.
+
+**Plate-and-frame exchanger (slides):** a stack of corrugated metal plates pressed together in a frame and sealed at the edges by compressible gaskets, forming narrow interconnected passages; the hot and cold fluids flow in alternate channels. The slides describe it but give no limits or design equations; the limitations below are from the textbooks.
 
 **Plate-and-frame limitations:**
 - Pressure limited by gaskets and plate thickness (≈ 25–30 bar max).
@@ -572,7 +590,7 @@ $$h_1 = 0.729\left[\frac{g\rho_l(\rho_l-\rho_v)h_{fg}^*k_l^3}{\mu_l\Delta T D}\r
 - Long gasket length → leakage risk; gasket compatibility with fluids; not for very toxic or flammable fluids at high pressure.
 - Maximum size limits flow rates per unit (≈ 2500 m³/h).
 
-**Extended surfaces (fins):** $Q = hA\Delta T$; when one fluid has a low h (gases, air, viscous oils), its resistance $1/(hA)$ controls U. Adding fins increases A on that side cheaply, balancing the two resistances and making the unit compact.
+**Extended surfaces (fins):** $Q = hA\Delta T$; when one fluid has a low h (gases, air, viscous oils), its resistance $1/(hA)$ controls U. Adding fins increases A on that side cheaply, balancing the two resistances and making the unit compact. The slides' air-cooled (fin-fan) exchanger is the standard example: fins are needed to raise U on the air side, and their cost is partly offset because no shell, cooling water, pumps or piping are needed.
 Examples: finned-tube air-cooled exchangers and car radiators (air side), air-conditioning and refrigeration coils, economizers and air preheaters in boilers (flue gas), longitudinal-fin double-pipe exchangers for viscous oils, fins on motorcycle engines and transformers.`,
           answer: String.raw`23 in ID × 192 in tubes, A-head/E-shell/S floating head; P&F limited by gasket T and P, high ΔP, no gases/solids; fins boost area on the low-h (gas) side.` },
         { id: "2012-13-Q8e", label: "(e)", marks: "4+3",

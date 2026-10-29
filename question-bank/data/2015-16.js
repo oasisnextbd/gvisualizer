@@ -256,9 +256,9 @@ $$\mathrm{Nu}_d = 0.675(4.06\times10^{-5})^{0.058} = 0.376$$
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Why is counter flow preferred to parallel flow? Explain.`,
           solution: String.raw`- **Larger mean ΔT:** for the same terminal temperatures, $\mathrm{LMTD}_{counter} > \mathrm{LMTD}_{parallel}$ (ΔT is nearly uniform along a counter-flow exchanger, while in parallel flow it is large at the inlet and collapses at the outlet). Less area is needed for the same duty: $A = Q/(U\,\Delta T_{lm})$.
-  Example: hot 150→90, cold 68→90 °F: counter-flow LMTD = 37.9 °F; parallel flow is impossible because the cold outlet (90) cannot reach the hot outlet (90).
+  Example: hot 150→90, cold 68→90 °F: counter-flow LMTD = 37.9 °F; parallel flow is impossible because the cold outlet (90) cannot reach the hot outlet (90). The slides' example: hot 300→200°F, cold 100→150°F gives 123.5°F (counter) against 108°F (parallel).
 - **Wider temperature range:** in counter flow the cold-fluid outlet can exceed the hot-fluid outlet ($t_2 > T_2$, temperature cross); in parallel flow $t_2 < T_2$ always.
-- **Higher effectiveness:** for the same NTU, ε(counter) > ε(parallel); counter-flow ε → 1 as NTU → ∞, parallel flow is limited to $1/(1+C_r)$.
+- **Higher effectiveness** (ε–NTU, textbook method, not in the slides): for the same NTU, ε(counter) > ε(parallel); counter-flow ε → 1 as NTU → ∞, parallel flow is limited to $1/(1+C_r)$.
 - **More uniform wall temperatures and thermal stresses** (smaller local ΔT variations).
 - Parallel flow is used only when the cold fluid must not overheat, or a rapid initial temperature change is needed (e.g. viscous fluids, heat-sensitive materials).`,
           answer: String.raw`Counter flow gives a larger, more uniform LMTD (less area), allows $t_2 > T_2$ and higher effectiveness.` },
@@ -297,9 +297,9 @@ Put in the **shell**:
           answer: String.raw`Tubes: corrosive, fouling, high-pressure, high-temperature, toxic streams (and cooling water); shell: viscous/low-flow streams, condensing vapours, low allowable ΔP.` },
         { id: "2015-16-Q4d", label: "(d)", marks: "8",
           topic: "heat-exchangers", sub: "Annulus D_e (heat transfer) vs D_e′ (pressure drop)",
-          type: "theory", syllabus: "partial", repeats: [],
+          type: "theory", syllabus: "in", repeats: [],
           text: String.raw`What are the two equivalent diameters used in heat exchanger calculations? Explain the differences with examples.`,
-          solution: String.raw`> The slides use the shell-side $D_e$; the double-pipe annulus pair below is from Kern ch. 6.
+          solution: String.raw`The slides (Kern ch. 6, Eqs. 6.3 and 6.4) use two equivalent diameters for the double-pipe annulus.
 
 For an annulus (inner pipe OD $D_1$, outer pipe ID $D_2$), the flow area is $\pi(D_2^2 - D_1^2)/4$ in both cases, but the **perimeter** used differs:
 
@@ -312,6 +312,8 @@ For an annulus (inner pipe OD $D_1$, outer pipe ID $D_2$), the flow area is $\pi
 **Example:** 2 × 1¼ in IPS double pipe: $D_2 = 2.067$ in, $D_1 = 1.66$ in.
 - $D_e = (2.067^2 - 1.66^2)/1.66 = 0.914$ in
 - $D_e' = 2.067 - 1.66 = 0.407$ in
+
+(Kern Table 6.2 in the slides lists 0.915 and 0.40 in.) In the slides' Example 6.1 the toluene annulus uses $D_e = 0.0762$ ft for $\mathrm{Re}_a = 59{,}000$ and $h_o$, but $D'_e = 0.0345$ ft for $\mathrm{Re}'_a = 26{,}800$, $f$ and $\Delta F_a$.
 
 $D_e > D_e'$ always. For shell-side flow (Kern), $D_e$ is based on the unit cell: square pitch $4(P_T^2 - \pi d_o^2/4)/(\pi d_o)$ – e.g. 0.95 in for ¾ in tubes on 1 in square – and the same $D_e$ is used for both h and ΔP there.`,
           answer: String.raw`Annulus: $D_e = (D_2^2 - D_1^2)/D_1$ (heated perimeter, for h) and $D_e' = D_2 - D_1$ (wetted perimeter, for ΔP); 2 × 1¼ in IPS: 0.914 in and 0.407 in.` },

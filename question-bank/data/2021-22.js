@@ -179,7 +179,7 @@ Labels: shell, shell inlet/outlet nozzles, longitudinal baffle, transverse (segm
           topic: "heat-exchangers", sub: "Ammonia condenser: ε–NTU sizing and reduced water flow",
           type: "numerical", syllabus: "partial", repeats: [],
           text: String.raw`A shell and tube heat exchanger is used as an ammonia condenser with ammonia vapor entering the shell at 50°C as a saturated vapor. Water enters the single pass tube arrangement at 20°C and the total heat transfer required is 200 kW. You can assume the overall heat transfer coefficient is 1000 W/m²·°C. Determine the area to achieve a heat exchanger effectiveness of 60% with an exit temperature of 40°C. What percent reduction will result if the water flow is reduced by 25% while keeping the heat exchanger area and U the same?`,
-          solution: String.raw`> The ε–NTU method is not in the current CHE 301 slides (only LMTD/F and Kern are). The data conflict slightly: ε = 0.6 gives a water exit of 38°C, while an exit of 40°C gives ε = 0.667. The main solution uses ε = 0.6 (the stated design target), and the 40°C case is given as a check.
+          solution: String.raw`> The ε–NTU method is from the textbook (Holman/Çengel); it is not in the CHE 301 slides, which use LMTD with $F$. Both routes are shown. The data conflict slightly: ε = 0.6 gives a water exit of 38°C, while an exit of 40°C gives ε = 0.667. The main solution uses ε = 0.6 (the stated design target), and the 40°C case is given as a check.
 
 **Given:** $T_{NH_3} = 50$°C (condensing, $C_h \to \infty$), $t_{c,in} = 20$°C, $q = 200$ kW, $U = 1000$ W/m²·°C.
 
@@ -200,6 +200,10 @@ $$NTU' = \frac{UA}{C'_w} = \frac{1000(10.18)}{8333} = 1.222,\qquad \varepsilon' 
 5. New heat transfer:
 $$q' = \varepsilon' C'_w\Delta T_{max} = 0.705(8333)(30) = 176.3\ \mathrm{kW}$$
 Reduction $= (200 - 176.3)/200 = $ **11.8%** (water now leaves at 41.2°C).
+
+**LMTD route (slides' method):** with the ammonia isothermal, $q = C_w(t_2 - t_1)$ and $q = UA\,\Delta T_{lm}$ with $\Delta T_{lm} = (t_2 - t_1)/\ln[(T - t_1)/(T - t_2)]$. Equating the two gives
+$$\ln\frac{T - t_1}{T - t_2} = \frac{UA}{C'_w}\ \Rightarrow\ t_2 = 50 - 30\,e^{-10{,}180/8333} = 41.2^\circ\mathrm{C},\qquad q' = 8333(41.2 - 20) = 176.3\ \mathrm{kW}$$
+the same result, since $F = 1$ for a condensing shell fluid.
 
 ### Check with a 40°C exit
 $C_w = 200/20 = 10$ kW/°C, $\varepsilon = 0.667$, $NTU = 1.099$, $A = 11.0$ m². With 25% less water: $NTU' = 1.465$, $\varepsilon' = 0.769$, $q' = 173.0$ kW, a 13.5% reduction.

@@ -549,9 +549,13 @@ That would need $A = 6.670\times10^6/(76.7\times69.3) = 1255\,\mathrm{ft^2}$, wh
 
 $$\Delta P_t = \frac{f G_t^2 L n}{5.22\times10^{10} D s \phi_t} = \frac{1.93\times10^{-4}\times(9.245\times10^5)^2\times16\times6}{5.22\times10^{10}\times(0.62/12)\times0.83\times1} = 7.1\,\mathrm{psi}$$
 
-$$\Delta P_r = \frac{4n}{s}\frac{V^2}{2g'}\left(\frac{62.5}{144}\right) = \frac{4\times6}{0.83}\times\frac{4.95^2}{2\times32.2}\times0.434 = 4.8\,\mathrm{psi}$$
+Return loss (four velocity heads per pass). Kern Fig. 27 gives $\frac{V^2}{2g'}$, already in psi (×62.5/144), against $G_t$. The chart is drawn for water, so $V$ is taken as $G_t/(3600\times62.5)$ and the real density enters only through the $1/s$ in the formula (using the actual 4.95 ft/s and then dividing by $s$ would count $s$ twice):
 
-$$\Delta P_T = 7.1 + 4.8 = 11.9\,\mathrm{psi} > 7\,\mathrm{psi\ allowed}$$
+$$V_w = \frac{9.245\times10^5}{3600\times62.5} = 4.11\,\mathrm{ft/s},\qquad \frac{V^2}{2g'} = \frac{4.11^2}{2\times32.2}\times\frac{62.5}{144} = 0.114\,\mathrm{psi}$$
+
+$$\Delta P_r = \frac{4n}{s}\frac{V^2}{2g'} = \frac{4\times6}{0.83}\times0.114 = 3.3\,\mathrm{psi}$$
+
+$$\Delta P_T = 7.1 + 3.3 = 10.4\,\mathrm{psi} > 7\,\mathrm{psi\ allowed}$$
 
 **Shell side.** Kern Fig. 29 at $\mathrm{Re}_s = 1.53\times10^4$ reads $f \approx 0.0020\,\mathrm{ft^2/in^2}$, from the fit $e^{0.576 - 0.19\ln \mathrm{Re}}/144 = 1.98\times10^{-3}$. Crossings per shell pass: $N + 1 = 12L/B = 12\times16/8 = 24$, so 48 for the two shell passes.
 
@@ -562,7 +566,7 @@ $$\Delta P_s = \frac{f G_s^2 D_s (N+1)}{5.22\times10^{10} D_e s \phi_s} = \frac{
 | Item | Calculated | Required | OK? |
 |---|---|---|---|
 | $R_d$ | 0.00238 | ≥ 0.0035 | No |
-| $\Delta P$ tube (benzene) | 11.9 psi | ≤ 7 psi | No |
+| $\Delta P$ tube (benzene) | 10.4 psi | ≤ 7 psi | No |
 | $\Delta P$ shell (nitrobenzene) | 4.5 psi | ≤ 10 psi | Yes |
 
 The exchanger is **not suitable** as specified. It is about 9% short of surface and the tube side exceeds its allowable pressure drop.
@@ -571,7 +575,7 @@ The exchanger is **not suitable** as specified. It is about 9% short of surface 
 - The verdict depends on the assumed $t_2$. With a lower benzene outlet, e.g. $t_2 = 220^\circ\mathrm{F}$, there is more benzene and a larger $\Delta t$, and $R_d \approx 0.0036$ just meets the requirement. A larger benzene flow also raises the tube $\Delta P$ further.
 
 > Why it matters: an exchanger is "suitable" only if three checks all pass: $R_d \ge R_{d,req}$ (or $U_D \le U_C$ with margin), and both pressure drops within their limits.`,
-          answer: String.raw`$\Delta t = 69.3^\circ\mathrm{F}$, $U_D = 83.9$, $R_d = 0.0024 < 0.0035$ required; tube $\Delta P \approx 11.9 > 7$ psi; shell $\Delta P \approx 4.5$ psi → **not suitable**.` },
+          answer: String.raw`$\Delta t = 69.3^\circ\mathrm{F}$, $U_D = 83.9$, $R_d = 0.0024 < 0.0035$ required; tube $\Delta P \approx 10.4 > 7$ psi; shell $\Delta P \approx 4.5$ psi → **not suitable**.` },
         { id: "2022-23-Q5d", label: "(d)", marks: "6",
           topic: "shell-tube", sub: "TEMA specification sheet",
           type: "numerical", syllabus: "in", repeats: [],
@@ -593,7 +597,7 @@ The exchanger is **not suitable** as specified. It is about 9% short of surface 
 | Specific heat | 0.56 Btu/lb·°F | 0.435 Btu/lb·°F |
 | Thermal conductivity | 0.085 Btu/h·ft·°F | 0.0785 Btu/h·ft·°F |
 | Velocity | ≈ 1.3 ft/s (cross-flow) | 4.95 ft/s |
-| Pressure drop, allowed / calc. | 10 / 4.5 psi | 7 / 11.9 psi |
+| Pressure drop, allowed / calc. | 10 / 4.5 psi | 7 / 10.4 psi |
 | Fouling resistance (min) | 0.0025 h·ft²·°F/Btu | 0.001 h·ft²·°F/Btu |
 | Film coefficient | $h_o$ = 172 Btu/h·ft²·°F | $h_{io}$ = 269 Btu/h·ft²·°F |
 | Heat exchanged | 6.67 × 10⁶ Btu/h | |
@@ -608,7 +612,7 @@ The exchanger is **not suitable** as specified. It is about 9% short of surface 
 | Remarks | **Not suitable:** $R_d$ below requirement, tube ΔP above allowable. Benzene side must be pressurised (230 °F > 176 °F b.p.) | |
 
 > Exam tip: on the TEMA sheet the key lines are the fluids, flows, temperatures, ΔP allowed/calculated, fouling, $U$ (service, dirty, clean), corrected MTD and the construction data (tubes, pitch, shell ID, baffles, passes).`,
-          answer: String.raw`TEMA sheet: 25 in × 16 ft, 2-6, 1147 ft²; Q = 6.67×10⁶ Btu/h; MTD 69.3°F; $U_C$ 104.8, $U_D$ 83.9; $R_d$ 0.0024 vs 0.0035; ΔP 4.5/10 (shell), 11.9/7 (tube) psi.` },
+          answer: String.raw`TEMA sheet: 25 in × 16 ft, 2-6, 1147 ft²; Q = 6.67×10⁶ Btu/h; MTD 69.3°F; $U_C$ 104.8, $U_D$ 83.9; $R_d$ 0.0024 vs 0.0035; ΔP 4.5/10 (shell), 10.4/7 (tube) psi.` },
       ] },
 
     { id: "2022-23-Q6", q: 6, section: "B", compulsory: false,
@@ -746,7 +750,9 @@ It is the ratio of buoyancy forces to the product of momentum and thermal diffus
 - obtaining area, tube count, shell size, passes and baffles;
 - checking $R_d$ and $\Delta P$, and iterating (Kern method, TEMA sheet).
 
-Mechanical design (thickness, codes) is a separate step.
+The slides split heat-exchanger design into **thermal design** (done by the chemical engineer) and **mechanical design** (thickness, codes), both recorded on the equipment data sheet. Thermal design must establish that (1) the equipment can take the heat load and (2) the pressure drop in both streams is satisfactory.
+
+**Types of equipment (slides' classification):** double pipe (hairpins, small duties up to about 100–200 ft²); shell-and-tube (fixed tube sheet BEM, U-tube BEU, floating head BES; high duties); gasketed or welded plate; compact plate-fin (gas service, about 9 times more compact than shell-and-tube); air-cooled fin-fan; scraped-surface (very viscous or crystallizing fluids, μ > 1 Pa·s, heavy fouling); direct-contact equipment such as cooling towers. By service (Kern ch. 1):
 
 | Equipment | Purpose |
 |---|---|
@@ -767,7 +773,7 @@ Mechanical design (thickness, codes) is a separate step.
           topic: "heat-exchangers", sub: "Plate-and-frame exchanger",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Write a short note on the plate-and-frame heat exchanger.`,
-          solution: String.raw`**Construction:** a stack of thin, corrugated metal plates (stainless steel, titanium) clamped between a fixed and a movable frame plate by tie bolts. Gaskets around each plate's edge and ports form alternate channels. The hot fluid flows in every other channel and the cold fluid in the channels between, usually in counterflow.
+          solution: String.raw`**Construction (slides):** a stack of corrugated metal plates pressed together in a frame and sealed at the edges by compressible gaskets, which form narrow interconnected passages (welded versions have no gaskets). In detail: thin plates (stainless steel, titanium) are clamped between a fixed and a movable frame plate by tie bolts, and the gaskets around each plate's edge and ports form alternate channels. The hot fluid flows in every other channel and the cold fluid in the channels between, usually in counterflow.
 
 **Features and advantages**
 - The corrugations promote turbulence at low Re. $h$ is very high and $U$ is 3–5 times that of shell-and-tube units.
@@ -775,6 +781,8 @@ Mechanical design (thickness, codes) is a separate step.
 - Easy to open for cleaning and inspection. Capacity can be changed by adding or removing plates.
 - Low fluid hold-up, and less fouling owing to the high turbulence.
 - Widely used in the food, dairy (pasteurisers), pharmaceutical and HVAC industries, and for liquid–liquid duties.
+
+The slides give no design equations for plate exchangers; the performance figures and limits here are from the textbooks.
 
 **Limitations**
 - The gaskets limit operating pressure (about 25 bar) and temperature (about 150–250°C), and they restrict the fluids that can be handled.
@@ -851,7 +859,9 @@ $$\dot m_{per\ tube} = \frac{0.0328}{12} = 2.73\times10^{-3}\,\mathrm{kg/s\ per\
           topic: "heat-exchangers", sub: "Effectiveness limits",
           type: "theory", syllabus: "partial", repeats: [],
           text: String.raw`Discuss the criteria for maximum and minimum effectiveness of a heat exchanger.`,
-          solution: String.raw`**Effectiveness**
+          solution: String.raw`> The ε–NTU method is from the textbook (Holman/Çengel); it is not in the CHE 301 slides, which rate exchangers by LMTD with $F$.
+
+**Effectiveness**
 
 $$\varepsilon = \frac{q_{actual}}{q_{max}} = \frac{q}{C_{min}(T_{h,in} - T_{c,in})}, \qquad 0 \le \varepsilon \le 1$$
 
@@ -868,9 +878,7 @@ Here $C = \dot mc_p$. The value $q_{max}$ is reached only if the fluid with $C_{
 - For a given NTU, ε is lowest when $C_r = 1$ (equal capacity rates).
 - In **parallel flow** ε can never exceed $\varepsilon_{max} = \dfrac{1}{1 + C_r}$, however large the area. For $C_r = 1$ this is only 0.5, because both outlets approach the same mixed temperature.
 
-**Design criterion:** choose counterflow (or high $F_T$ multipass) and an NTU of about 2–3 for high ε at reasonable cost.
-
-> The ε–NTU method is not in the current Kern-based slides; this is the standard treatment from Holman/Çengel.`,
+**Design criterion:** choose counterflow (or high $F_T$ multipass) and an NTU of about 2–3 for high ε at reasonable cost.`,
           answer: String.raw`ε = q/q_max ∈ [0, 1]. ε → 1 needs counterflow with NTU → ∞ (or $C_r = 0$, where $\varepsilon = 1 - e^{-NTU}$). ε = 0 at NTU = 0. Parallel flow is capped at $1/(1 + C_r)$ (0.5 for $C_r = 1$).` },
         { id: "2022-23-Q8c", label: "(c)", marks: "14",
           topic: "natural-convection", sub: "Horizontal steam pipe in air",

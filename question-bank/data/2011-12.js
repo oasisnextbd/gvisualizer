@@ -125,9 +125,13 @@ That would need $A = 6.670\times10^6/(76.7\times69.3) = 1255\,\mathrm{ft^2}$, wh
 
 $$\Delta P_t = \frac{f G_t^2 L n}{5.22\times10^{10} D s \phi_t} = \frac{1.93\times10^{-4}\times(9.245\times10^5)^2\times16\times6}{5.22\times10^{10}\times(0.62/12)\times0.83\times1} = 7.1\,\mathrm{psi}$$
 
-$$\Delta P_r = \frac{4n}{s}\frac{V^2}{2g'}\left(\frac{62.5}{144}\right) = \frac{4\times6}{0.83}\times\frac{4.95^2}{2\times32.2}\times0.434 = 4.8\,\mathrm{psi}$$
+Return loss (four velocity heads per pass). Kern Fig. 27 gives $\frac{V^2}{2g'}$, already in psi (×62.5/144), against $G_t$. The chart is drawn for water, so $V$ is taken as $G_t/(3600\times62.5)$ and the real density enters only through the $1/s$ in the formula (using the actual 4.95 ft/s and then dividing by $s$ would count $s$ twice):
 
-$$\Delta P_T = 7.1 + 4.8 = 11.9\,\mathrm{psi} > 7\,\mathrm{psi\ allowed}$$
+$$V_w = \frac{9.245\times10^5}{3600\times62.5} = 4.11\,\mathrm{ft/s},\qquad \frac{V^2}{2g'} = \frac{4.11^2}{2\times32.2}\times\frac{62.5}{144} = 0.114\,\mathrm{psi}$$
+
+$$\Delta P_r = \frac{4n}{s}\frac{V^2}{2g'} = \frac{4\times6}{0.83}\times0.114 = 3.3\,\mathrm{psi}$$
+
+$$\Delta P_T = 7.1 + 3.3 = 10.4\,\mathrm{psi} > 7\,\mathrm{psi\ allowed}$$
 
 **Shell side.** Kern Fig. 29 at $\mathrm{Re}_s = 1.53\times10^4$ reads $f \approx 0.0020\,\mathrm{ft^2/in^2}$, from the fit $e^{0.576 - 0.19\ln \mathrm{Re}}/144 = 1.98\times10^{-3}$. Crossings per shell pass: $N + 1 = 12L/B = 12\times16/8 = 24$, so 48 for the two shell passes.
 
@@ -138,7 +142,7 @@ $$\Delta P_s = \frac{f G_s^2 D_s (N+1)}{5.22\times10^{10} D_e s \phi_s} = \frac{
 | Item | Calculated | Required | OK? |
 |---|---|---|---|
 | $R_d$ | 0.00238 | ≥ 0.0035 | No |
-| $\Delta P$ tube (benzene) | 11.9 psi | ≤ 7 psi | No |
+| $\Delta P$ tube (benzene) | 10.4 psi | ≤ 7 psi | No |
 | $\Delta P$ shell (nitrobenzene) | 4.5 psi | ≤ 10 psi | Yes |
 
 The exchanger is **not suitable** as specified. It is about 9% short of surface and the tube side exceeds its allowable pressure drop.
@@ -147,7 +151,7 @@ The exchanger is **not suitable** as specified. It is about 9% short of surface 
 - The verdict depends on the assumed $t_2$. With a lower benzene outlet, e.g. $t_2 = 220^\circ\mathrm{F}$, there is more benzene and a larger $\Delta t$, and $R_d \approx 0.0036$ just meets the requirement. A larger benzene flow also raises the tube $\Delta P$ further.
 
 > Why it matters: an exchanger is "suitable" only if three checks all pass: $R_d \ge R_{d,req}$ (or $U_D \le U_C$ with margin), and both pressure drops within their limits.`,
-          answer: String.raw`$\Delta t = 69.3^\circ\mathrm{F}$, $U_D = 83.9$, $R_d = 0.0024 < 0.0035$ required; tube $\Delta P \approx 11.9 > 7$ psi; shell $\Delta P \approx 4.5$ psi → **not suitable**.` },
+          answer: String.raw`$\Delta t = 69.3^\circ\mathrm{F}$, $U_D = 83.9$, $R_d = 0.0024 < 0.0035$ required; tube $\Delta P \approx 10.4 > 7$ psi; shell $\Delta P \approx 4.5$ psi → **not suitable**.` },
       ] },
 
     { id: "2011-12-Q2", q: 2, section: "A", compulsory: false,
@@ -269,20 +273,21 @@ $$q = \bar h A (T_s - T_\infty) = 4.82\times(0.5\times0.4)\times100 = 96.4\,\mat
           topic: "shell-tube", sub: "U-tube exchanger pros and cons",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`What are the advantages and disadvantages of a U-tube type heat exchanger?`,
-          solution: String.raw`A U-tube exchanger has tubes bent into a U and rolled into a **single tube sheet**. There is no second tube sheet and no floating head.
+          solution: String.raw`A U-tube exchanger (TEMA type **BEU** in the slides) has tubes bent into a U and rolled into a **single stationary tube sheet**. There is no second tube sheet and no floating head.
 
-**Advantages**
-- Each tube is free to expand, so it handles large shell/tube temperature differences and thermal cycling without an expansion joint.
-- Only one tube sheet: cheaper than a floating-head unit, and fewer joints to leak.
-- The bundle can be pulled out, so the shell side and outside of the tubes can be cleaned.
-- Suitable for high-pressure tube-side service (fewer gasketed joints).
+**Advantages (slides)**
+- It absorbs thermal-expansion stress: each tube is free to expand, so large shell/tube temperature differences need no expansion joint.
+- About the same price as a fixed-tube unit, but a significant saving at high pressure (one tube sheet, fewer gasketed joints).
+- The bundle can be pulled out, so the shell side and the outside of the tubes can be cleaned.
 
-**Disadvantages**
-- The inside of the tubes is hard to clean mechanically around the U-bends, so the tube side should carry the clean fluid.
-- Individual tubes are hard to replace (except the outer row). A failed inner tube is usually plugged.
-- The number of tube passes is always even, and fewer tubes fit in a given shell because of the minimum bend radius.
-- Bends are prone to erosion and vibration. The U-bend region has poor shell-side flow distribution.`,
-          answer: String.raw`Pros: free thermal expansion, one tube sheet (cheap), removable bundle, good for high pressure. Cons: tube insides hard to clean, tubes hard to replace, even passes only, fewer tubes per shell.` },
+**Disadvantages (slides)**
+- Cleaning the inside of the tubes is very difficult (the U-bends cannot be rodded), so the tube side should carry the clean fluid.
+- Complete counterflow is possible only with an **F shell** (two-pass shell with a longitudinal baffle). In an E shell it works as a 1-2 exchanger and needs the $F_T$ correction.
+
+**Further points (textbook)**
+- Individual inner tubes are hard to replace; a failed tube is usually plugged.
+- The number of tube passes is always even, and fewer tubes fit in a given shell because of the minimum bend radius.`,
+          answer: String.raw`Pros: absorbs thermal expansion, same price but cheaper at high pressure, removable bundle. Cons: tube insides very hard to clean, full counterflow only with an F shell, tubes hard to replace, even passes only.` },
         { id: "2011-12-Q3c", label: "(c)", marks: "10",
           topic: "heat-exchangers", sub: "Temperature profiles with phase change",
           type: "sketch", syllabus: "in", repeats: [],
@@ -306,7 +311,9 @@ Label on both sketches: $T_1$, $T_2$, $t_1$, $t_2$, the $\Delta T_1$ (inlet) and
           text: String.raw`What is a fouling factor, and why do you need to consider the fouling factor in heat exchanger design calculations?`,
           solution: String.raw`**Fouling factor (dirt factor) $R_d$:** the extra thermal resistance, per unit area, caused by deposits that build up on the heat-transfer surfaces during service. Deposits include scale, corrosion products, biological growth, coke and sediment. Units: $\mathrm{m^2K/W}$ or $\mathrm{h\,ft^2\,^\circ F/Btu}$.
 
-$$\frac{1}{U_D} = \frac{1}{U_C} + R_{di}\frac{A_o}{A_i} + R_{do} \quad\Rightarrow\quad R_d = \frac{U_C - U_D}{U_C U_D}$$
+$$R_f = \frac{1}{U_{dirty}} - \frac{1}{U_{clean}},\qquad \frac{1}{U_D} = \frac{1}{U_C} + R_{di}\frac{A_o}{A_i} + R_{do} \quad\Rightarrow\quad R_d = \frac{U_C - U_D}{U_C U_D}$$
+
+(The first form is the slides' definition; the last is Kern Eq. 6.13, used in every rating problem.)
 
 **Why it is included in design**
 - A new, clean exchanger has $U_C$. After months of operation the deposits lower $U$ to $U_D$. If the exchanger were sized on $U_C$, it would soon fail to meet its duty.
@@ -318,15 +325,16 @@ $$\frac{1}{U_D} = \frac{1}{U_C} + R_{di}\frac{A_o}{A_i} + R_{do} \quad\Rightarro
           topic: "heat-exchangers", sub: "Compact heat exchangers",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Write a short note on compact heat exchangers.`,
-          solution: String.raw`**Compact heat exchanger:** an exchanger with a very large heat-transfer area per unit volume. The area density is $\beta > 700\,\mathrm{m^2/m^3}$ by the usual definition (lungs about 20,000, car radiator about 1000; ordinary shell-and-tube about 100).
+          solution: String.raw`**Compact heat exchanger:** an exchanger with a very large heat-transfer area per unit volume. In the slides' classification by surface compactness, an exchanger is **compact if its area density exceeds 700 m²/m³** and non-compact below that (a car radiator is about 1000; ordinary shell-and-tube about 100).
 
-- **Construction:** closely spaced thin plates or tubes with fins attached (plate-fin, tube-fin, corrugated or louvered fins), or plate types.
+- **Construction (plate-fin, slides):** alternate layers of corrugated, die-formed metal fins placed between flat separator plates. The edges of each layer are sealed with solid bars, and integral welded headers feed the streams. Tube-fin types (finned tubes) are also compact.
+- **Size (slides):** small in size and weight, about **9 times more compact than shell-and-tube** exchangers.
 - **Use:** mainly gas-to-gas and gas-to-liquid service. The low $h$ of the gas is offset by the large finned area. Examples: car radiators, air-conditioner evaporators and condensers, gas-turbine regenerators, aircraft and cryogenic exchangers.
 - **Flow:** usually **cross-flow**, with one or both fluids unmixed (fins divide the passages).
 - **Advantages:** small size and weight, high effectiveness, low fluid inventory.
 - **Limitations:** narrow passages foul and are hard to clean, so they need clean fluids; pressure and temperature limits are lower; pressure drop can be high.
-- **Design:** usually by the ε–NTU method with Kays and London $j$ and $f$ charts.`,
-          answer: String.raw`Area density > 700 m²/m³ via fins/thin plates; cross-flow, gas service (radiators, A/C coils); small and light but foul easily and need clean fluids.` },
+- **Design:** the slides give no design equations for compact units. Textbooks (Kays and London) rate them by the ε–NTU method with $j$ and $f$ charts.`,
+          answer: String.raw`Area density > 700 m²/m³ (plate-fin: corrugated fins between separator plates, about 9 times more compact than shell-and-tube); small and light, cross-flow gas service (radiators, A/C coils), but foul easily and need clean fluids.` },
       ] },
 
     { id: "2011-12-Q4", q: 4, section: "A", compulsory: false,
