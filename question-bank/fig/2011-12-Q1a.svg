@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" width="700" height="400" font-family="Helvetica, Arial, sans-serif">
+<title>2-6 exchanger: nitrobenzene in the shell, benzene in the tubes</title>
+<defs><marker id="a-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="a-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="a-cold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="a-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="a-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="a-vap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><pattern id="ins" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="metal" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.8"/></pattern></defs>
+<rect width="700" height="400" fill="#FFFFFF"/>
+<rect x="116" y="76" width="34" height="84" rx="6" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/><rect x="550" y="76" width="34" height="84" rx="6" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/><rect x="150" y="70" width="400" height="96" rx="4" fill="#F4F6F9" stroke="#1E2B3A" stroke-width="2"/><line x1="150" y1="70" x2="150" y2="166" stroke="#1E2B3A" stroke-width="3"/><line x1="550" y1="70" x2="550" y2="166" stroke="#1E2B3A" stroke-width="3"/><line x1="200.0" y1="70" x2="200.0" y2="142.0" stroke="#9AA8B8" stroke-width="2"/><line x1="250.0" y1="94.0" x2="250.0" y2="166" stroke="#9AA8B8" stroke-width="2"/><line x1="300.0" y1="70" x2="300.0" y2="142.0" stroke="#9AA8B8" stroke-width="2"/><line x1="350.0" y1="94.0" x2="350.0" y2="166" stroke="#9AA8B8" stroke-width="2"/><line x1="400.0" y1="70" x2="400.0" y2="142.0" stroke="#9AA8B8" stroke-width="2"/><line x1="450.0" y1="94.0" x2="450.0" y2="166" stroke="#9AA8B8" stroke-width="2"/><line x1="500.0" y1="70" x2="500.0" y2="142.0" stroke="#9AA8B8" stroke-width="2"/><text x="350.0" y="62" font-size="12" fill="#55667D" text-anchor="middle">Shell pass 1  (D<tspan dy="3.8" font-size="8.6">s</tspan><tspan dy="-3.8"> </tspan> = 25 in, baffles B = 8 in, 25% cut)</text>
+<rect x="116" y="236" width="34" height="84" rx="6" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/><rect x="550" y="236" width="34" height="84" rx="6" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/><rect x="150" y="230" width="400" height="96" rx="4" fill="#F4F6F9" stroke="#1E2B3A" stroke-width="2"/><line x1="150" y1="230" x2="150" y2="326" stroke="#1E2B3A" stroke-width="3"/><line x1="550" y1="230" x2="550" y2="326" stroke="#1E2B3A" stroke-width="3"/><line x1="200.0" y1="230" x2="200.0" y2="302.0" stroke="#9AA8B8" stroke-width="2"/><line x1="250.0" y1="254.0" x2="250.0" y2="326" stroke="#9AA8B8" stroke-width="2"/><line x1="300.0" y1="230" x2="300.0" y2="302.0" stroke="#9AA8B8" stroke-width="2"/><line x1="350.0" y1="254.0" x2="350.0" y2="326" stroke="#9AA8B8" stroke-width="2"/><line x1="400.0" y1="230" x2="400.0" y2="302.0" stroke="#9AA8B8" stroke-width="2"/><line x1="450.0" y1="254.0" x2="450.0" y2="326" stroke="#9AA8B8" stroke-width="2"/><line x1="500.0" y1="230" x2="500.0" y2="302.0" stroke="#9AA8B8" stroke-width="2"/><text x="350.0" y="222" font-size="12" fill="#55667D" text-anchor="middle">Shell pass 2</text>
+<line x1="150" y1="92" x2="550" y2="92" stroke="#0B7C8C" stroke-width="2.2"/>
+<line x1="362.0" y1="92" x2="336.0" y2="92" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#a-cold)"/>
+<line x1="150" y1="118" x2="550" y2="118" stroke="#0B7C8C" stroke-width="2.2"/>
+<line x1="338.0" y1="118" x2="364.0" y2="118" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#a-cold)"/>
+<line x1="150" y1="144" x2="550" y2="144" stroke="#0B7C8C" stroke-width="2.2"/>
+<line x1="362.0" y1="144" x2="336.0" y2="144" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#a-cold)"/>
+<path d="M550,92 C578,92 578,118 550,118" stroke="#0B7C8C" stroke-width="2" fill="none"/>
+<path d="M150,118 C122,118 122,144 150,144" stroke="#0B7C8C" stroke-width="2" fill="none"/>
+<line x1="150" y1="252" x2="550" y2="252" stroke="#0B7C8C" stroke-width="2.2"/>
+<line x1="338.0" y1="252" x2="364.0" y2="252" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#a-cold)"/>
+<line x1="150" y1="278" x2="550" y2="278" stroke="#0B7C8C" stroke-width="2.2"/>
+<line x1="362.0" y1="278" x2="336.0" y2="278" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#a-cold)"/>
+<line x1="150" y1="304" x2="550" y2="304" stroke="#0B7C8C" stroke-width="2.2"/>
+<line x1="338.0" y1="304" x2="364.0" y2="304" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#a-cold)"/>
+<path d="M550,252 C578,252 578,278 550,278" stroke="#0B7C8C" stroke-width="2" fill="none"/>
+<path d="M150,278 C122,278 122,304 150,304" stroke="#0B7C8C" stroke-width="2" fill="none"/>
+<line x1="40" y1="252" x2="148" y2="252" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#a-cold)"/>
+<text x="38" y="238" font-size="12" fill="#0B7C8C" font-weight="bold">Benzene in</text>
+<text x="38" y="270" font-size="12" fill="#0B7C8C">t<tspan dy="3.8" font-size="8.6">1</tspan><tspan dy="-3.8"> </tspan> = 100°F</text>
+<path d="M550,304 L620,304 L620,144 L552,144" stroke="#0B7C8C" stroke-width="2.2" fill="none" marker-end="url(#a-cold)"/>
+<text x="628" y="210.0" font-size="11" fill="#0B7C8C">tubes, to</text>
+<text x="628" y="224.0" font-size="11" fill="#0B7C8C">pass 4</text>
+<line x1="150" y1="92" x2="40" y2="92" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#a-cold)"/>
+<text x="38" y="78" font-size="12" fill="#0B7C8C" font-weight="bold">Benzene out</text>
+<text x="38" y="110" font-size="12" fill="#0B7C8C">t<tspan dy="3.8" font-size="8.6">2</tspan><tspan dy="-3.8"> </tspan> ≈ 230°F</text>
+<line x1="190" y1="24" x2="190" y2="68" stroke="#D2552B" stroke-width="2.6" marker-end="url(#a-hot)"/>
+<text x="200" y="34" font-size="12" fill="#D2552B" font-weight="bold">Nitrobenzene in, T<tspan dy="3.8" font-size="8.6">1</tspan><tspan dy="-3.8"> </tspan> = 365°F, 55,400 lb/h</text>
+<path d="M510,166 L510,198 L490,198 L490,228" stroke="#D2552B" stroke-width="2.6" fill="none" marker-end="url(#a-hot)"/>
+<line x1="190" y1="326" x2="190" y2="366" stroke="#D2552B" stroke-width="2.6" marker-end="url(#a-hot)"/>
+<text x="200" y="360" font-size="12" fill="#D2552B" font-weight="bold">Nitrobenzene out, T<tspan dy="3.8" font-size="8.6">2</tspan><tspan dy="-3.8"> </tspan> = 150°F</text>
+<text x="350.0" y="192" font-size="11" fill="#D2552B" text-anchor="middle">shell fluid crosses to pass 2</text>
+<text x="20" y="386" font-size="11" fill="#55667D">Tubes: 365 × ¾ in OD, 16 BWG, 16 ft, 1 in square pitch, 6 passes (3 per shell pass).  R<tspan dy="3.5" font-size="7.9">d</tspan><tspan dy="-3.5"> </tspan>: shell 0.0025, tubes 0.001</text>
+</svg>

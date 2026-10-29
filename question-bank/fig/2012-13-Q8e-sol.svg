@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400" font-family="Helvetica, Arial, sans-serif">
+<title>Trombone cooler and cooling tower schematics</title>
+<defs><marker id="a-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="a-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="a-cold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="a-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="a-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="a-vap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><pattern id="ins" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="metal" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.8"/></pattern></defs>
+<rect width="720" height="400" fill="#FFFFFF"/>
+<text x="170.0" y="24" font-size="14" fill="#1E2B3A" text-anchor="middle" font-weight="bold">Trombone (cascade) cooler</text>
+<rect x="40" y="44" width="260" height="16" rx="2" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.4"/>
+<text x="170.0" y="56" font-size="10" fill="#0B7C8C" text-anchor="middle">water trough / spray header</text>
+<rect x="50" y="78" width="240" height="16" rx="8" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.3"/>
+<path d="M290,78 C320,78 320,128 290,128" stroke="#1E2B3A" stroke-width="1.3" fill="none"/>
+<path d="M290,94 C304,94 304,112 290,112" stroke="#1E2B3A" stroke-width="1.3" fill="none"/>
+<rect x="50" y="112" width="240" height="16" rx="8" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.3"/>
+<path d="M50,112 C20,112 20,162 50,162" stroke="#1E2B3A" stroke-width="1.3" fill="none"/>
+<path d="M50,128 C36,128 36,146 50,146" stroke="#1E2B3A" stroke-width="1.3" fill="none"/>
+<rect x="50" y="146" width="240" height="16" rx="8" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.3"/>
+<path d="M290,146 C320,146 320,196 290,196" stroke="#1E2B3A" stroke-width="1.3" fill="none"/>
+<path d="M290,162 C304,162 304,180 290,180" stroke="#1E2B3A" stroke-width="1.3" fill="none"/>
+<rect x="50" y="180" width="240" height="16" rx="8" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.3"/>
+<path d="M50,180 C20,180 20,230 50,230" stroke="#1E2B3A" stroke-width="1.3" fill="none"/>
+<path d="M50,196 C36,196 36,214 50,214" stroke="#1E2B3A" stroke-width="1.3" fill="none"/>
+<rect x="50" y="214" width="240" height="16" rx="8" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.3"/>
+<path d="M290,214 C320,214 320,264 290,264" stroke="#1E2B3A" stroke-width="1.3" fill="none"/>
+<path d="M290,230 C304,230 304,248 290,248" stroke="#1E2B3A" stroke-width="1.3" fill="none"/>
+<rect x="50" y="248" width="240" height="16" rx="8" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.3"/>
+<path d="M50,248 C20,248 20,298 50,298" stroke="#1E2B3A" stroke-width="1.3" fill="none"/>
+<path d="M50,264 C36,264 36,282 50,282" stroke="#1E2B3A" stroke-width="1.3" fill="none"/>
+<rect x="50" y="282" width="240" height="16" rx="8" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.3"/>
+<path d="M290,282 C320,282 320,332 290,332" stroke="#1E2B3A" stroke-width="1.3" fill="none"/>
+<path d="M290,298 C304,298 304,316 290,316" stroke="#1E2B3A" stroke-width="1.3" fill="none"/>
+<rect x="50" y="316" width="240" height="16" rx="8" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.3"/>
+<line x1="70" y1="96" x2="70" y2="110" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="70" y1="130" x2="70" y2="144" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="70" y1="164" x2="70" y2="178" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="70" y1="198" x2="70" y2="212" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="70" y1="232" x2="70" y2="246" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="70" y1="266" x2="70" y2="280" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="70" y1="300" x2="70" y2="314" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="106" y1="96" x2="106" y2="110" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="106" y1="130" x2="106" y2="144" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="106" y1="164" x2="106" y2="178" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="106" y1="198" x2="106" y2="212" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="106" y1="232" x2="106" y2="246" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="106" y1="266" x2="106" y2="280" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="106" y1="300" x2="106" y2="314" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="142" y1="96" x2="142" y2="110" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="142" y1="130" x2="142" y2="144" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="142" y1="164" x2="142" y2="178" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="142" y1="198" x2="142" y2="212" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="142" y1="232" x2="142" y2="246" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="142" y1="266" x2="142" y2="280" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="142" y1="300" x2="142" y2="314" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="178" y1="96" x2="178" y2="110" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="178" y1="130" x2="178" y2="144" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="178" y1="164" x2="178" y2="178" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="178" y1="198" x2="178" y2="212" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="178" y1="232" x2="178" y2="246" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="178" y1="266" x2="178" y2="280" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="178" y1="300" x2="178" y2="314" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="214" y1="96" x2="214" y2="110" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="214" y1="130" x2="214" y2="144" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="214" y1="164" x2="214" y2="178" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="214" y1="198" x2="214" y2="212" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="214" y1="232" x2="214" y2="246" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="214" y1="266" x2="214" y2="280" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="214" y1="300" x2="214" y2="314" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="250" y1="96" x2="250" y2="110" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="250" y1="130" x2="250" y2="144" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="250" y1="164" x2="250" y2="178" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="250" y1="198" x2="250" y2="212" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="250" y1="232" x2="250" y2="246" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="250" y1="266" x2="250" y2="280" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="250" y1="300" x2="250" y2="314" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="286" y1="96" x2="286" y2="110" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="286" y1="130" x2="286" y2="144" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="286" y1="164" x2="286" y2="178" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="286" y1="198" x2="286" y2="212" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="286" y1="232" x2="286" y2="246" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="286" y1="266" x2="286" y2="280" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="286" y1="300" x2="286" y2="314" stroke="#0B7C8C" stroke-width="1.2" stroke-dasharray="2 3"/>
+<rect x="36" y="342" width="268" height="18" rx="2" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.4"/>
+<text x="170.0" y="355" font-size="10" fill="#0B7C8C" text-anchor="middle">collecting pan → drain</text>
+<line x1="10" y1="324" x2="50" y2="324" stroke="#D2552B" stroke-width="2.4" marker-end="url(#a-hot)"/>
+<text x="6" y="316" font-size="11" fill="#D2552B">hot in</text>
+<line x1="50" y1="86" x2="10" y2="86" stroke="#D2552B" stroke-width="2.4" marker-end="url(#a-hot)"/>
+<text x="6" y="74" font-size="11" fill="#D2552B">cooled</text>
+<text x="170.0" y="392" font-size="11" fill="#55667D" text-anchor="middle">process fluid inside; water trickles over the pipes</text>
+<text x="530" y="24" font-size="14" fill="#1E2B3A" text-anchor="middle" font-weight="bold">Cooling tower (induced draft, counterflow)</text>
+<path d="M430,350 L430,90 L630,90 L630,350" stroke="#1E2B3A" stroke-width="2" fill="none"/>
+<rect x="480" y="56" width="100" height="34" rx="0" fill="#EEF1F5" stroke="#1E2B3A" stroke-width="1.6"/>
+<path d="M494,73 L566,73 M530,62 L530,84" stroke="#1E2B3A" stroke-width="2" fill="none"/>
+<text x="586" y="70" font-size="11" fill="#1E2B3A">fan</text>
+<line x1="506" y1="54" x2="506" y2="34" stroke="#9AA8B8" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#a-vap)"/>
+<line x1="530" y1="54" x2="530" y2="34" stroke="#9AA8B8" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#a-vap)"/>
+<line x1="554" y1="54" x2="554" y2="34" stroke="#9AA8B8" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#a-vap)"/>
+<text x="594" y="44" font-size="10" fill="#55667D">warm moist air</text>
+<rect x="436" y="104" width="188" height="10" rx="0" fill="none" stroke="#55667D" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="636" y="113" font-size="10" fill="#55667D">drift eliminator</text>
+<line x1="390" y1="136" x2="620" y2="136" stroke="#D2552B" stroke-width="2.4"/>
+<text x="424" y="128" font-size="10" fill="#D2552B" text-anchor="end">warm water in</text>
+<line x1="390" y1="136" x2="424" y2="136" stroke="#D2552B" stroke-width="2.4" marker-end="url(#a-hot)"/>
+<path d="M450,136 l-6,12 M450,136 l6,12" stroke="#D2552B" stroke-width="1.2" fill="none"/>
+<path d="M480,136 l-6,12 M480,136 l6,12" stroke="#D2552B" stroke-width="1.2" fill="none"/>
+<path d="M510,136 l-6,12 M510,136 l6,12" stroke="#D2552B" stroke-width="1.2" fill="none"/>
+<path d="M540,136 l-6,12 M540,136 l6,12" stroke="#D2552B" stroke-width="1.2" fill="none"/>
+<path d="M570,136 l-6,12 M570,136 l6,12" stroke="#D2552B" stroke-width="1.2" fill="none"/>
+<path d="M600,136 l-6,12 M600,136 l6,12" stroke="#D2552B" stroke-width="1.2" fill="none"/>
+<text x="636" y="140" font-size="10" fill="#55667D">spray nozzles</text>
+<rect x="436" y="160" width="188" height="100" rx="0" fill="url(#metal)" stroke="#55667D" stroke-width="1"/>
+<text x="530" y="214" font-size="12" fill="#1E2B3A" text-anchor="middle" font-weight="bold">fill / packing</text>
+<line x1="470" y1="170" x2="470" y2="252" stroke="#0B7C8C" stroke-width="1.4" marker-end="url(#a-cold)"/>
+<line x1="590" y1="170" x2="590" y2="252" stroke="#0B7C8C" stroke-width="1.4" marker-end="url(#a-cold)"/>
+<text x="636" y="214" font-size="10" fill="#0B7C8C">water ↓</text>
+<line x1="396" y1="284" x2="460" y2="264" stroke="#9AA8B8" stroke-width="1.6" marker-end="url(#a-vap)"/>
+<line x1="664" y1="284" x2="600" y2="264" stroke="#9AA8B8" stroke-width="1.6" marker-end="url(#a-vap)"/>
+<line x1="396" y1="304" x2="460" y2="284" stroke="#9AA8B8" stroke-width="1.6" marker-end="url(#a-vap)"/>
+<line x1="664" y1="304" x2="600" y2="284" stroke="#9AA8B8" stroke-width="1.6" marker-end="url(#a-vap)"/>
+<text x="424" y="266" font-size="10" fill="#55667D" text-anchor="end">air in (louvres)</text>
+<rect x="430" y="320" width="200" height="30" rx="0" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.4"/>
+<text x="530" y="340" font-size="11" fill="#0B7C8C" text-anchor="middle">cold-water basin</text>
+<line x1="630" y1="340" x2="680" y2="340" stroke="#0B7C8C" stroke-width="2.4" marker-end="url(#a-cold)"/>
+<text x="716" y="364" font-size="10" fill="#0B7C8C" text-anchor="end">to pump / process</text>
+<text x="390" y="380" font-size="10" fill="#55667D">make-up water + blowdown at basin</text>
+</svg>

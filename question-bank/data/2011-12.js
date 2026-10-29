@@ -30,6 +30,8 @@ The available exchanger is a 2-6 shell-and-tube heat exchanger.
 
 **Find:** $h_i$ (as $h_{io}$) and $h_o$.
 
+![2-6 exchanger: nitrobenzene in the shell (365 → 150°F), benzene in the tubes (from 100°F)](fig/2011-12-Q1a.svg)
+
 **Assumptions**
 - Benzene flow is not given. "Maximum attainable temperature" in a 2-shell-pass unit is limited by $F_T$: Kern's rule is $F_T \ge 0.75$–0.8. I take $t_2 = 230^\circ\mathrm{F}$, which gives $F_T \approx 0.81$ (Holman Fig. 10-9 / Kern Fig. 19). At $t_2 \approx 232^\circ\mathrm{F}$, $F_T$ falls to 0.80, and above about $275^\circ\mathrm{F}$ the unit cannot work at all.
 - The properties are given at the average temperature, so I use them as caloric values. $\phi = (\mu/\mu_w)^{0.14} = 1$ because $\mu_w$ is not given.
@@ -212,6 +214,8 @@ $$\overline{\mathrm{Nu}}^{1/2} = 0.825 + \frac{0.387\,\mathrm{Ra}_L^{1/6}}{\left
 
 **Find:** $\bar h$ and $q$.
 
+![Vertical plate, 0.5 m high and 0.4 m wide, at 120°C in air at 20°C](fig/2011-12-Q2c.svg)
+
 **Assumptions:** steady state; one face exposed ("its outside surface"); radiation neglected; ideal gas so $\beta = 1/T_f$.
 
 1. **Film temperature:** $T_f = (120 + 20)/2 = 70^\circ\mathrm{C} = 343\,\mathrm{K}$. Air properties (Holman Table A-5, interpolated between 300 and 350 K): $\nu = 20.07\times10^{-6}\,\mathrm{m^2/s}$, $k = 0.02951\,\mathrm{W/m\,K}$, $\mathrm{Pr} = 0.6985$, $\beta = 1/343 = 2.914\times10^{-3}\,\mathrm{K^{-1}}$.
@@ -292,7 +296,9 @@ $$q = \bar h A (T_s - T_\infty) = 4.82\times(0.5\times0.4)\times100 = 96.4\,\mat
           topic: "heat-exchangers", sub: "Temperature profiles with phase change",
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`Draw the temperature distribution profile for a parallel-flow heat exchanger where (i) both fluids change phase, and (ii) one fluid is partially condensed.`,
-          solution: String.raw`Axes for both sketches: temperature $T$ (vertical) against length or heat transferred along the exchanger, from inlet (left) to outlet (right). In parallel flow, both fluids enter at the left.
+          solution: String.raw`![Parallel flow: (i) both fluids change phase; (ii) one fluid partially condensed](fig/2011-12-Q3c-sol.svg)
+
+Axes for both sketches: temperature $T$ (vertical) against length or heat transferred along the exchanger, from inlet (left) to outlet (right). In parallel flow, both fluids enter at the left.
 
 **(i) Both fluids change phase** (e.g. condensing steam heats a boiling liquid)
 - The hot fluid condenses at constant $T_{sat,h}$: a **horizontal line** at the top.
@@ -344,7 +350,9 @@ $$R_f = \frac{1}{U_{dirty}} - \frac{1}{U_{clean}},\qquad \frac{1}{U_D} = \frac{1
           topic: "boiling", sub: "Nucleate boiling and CHF",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Write a short note on nucleate boiling and critical heat flux. Why is the critical heat flux important for designing boiling heat transfer equipment?`,
-          solution: String.raw`**Nucleate boiling** (regime between points A and C of the pool boiling curve, $\Delta T_e \approx 5$–$30^\circ\mathrm{C}$ for water at 1 atm)
+          solution: String.raw`![Pool boiling curve: nucleate regime and the critical (maximum) heat flux](fig/common-boiling-curve.svg)
+
+**Nucleate boiling** (regime between points A and C of the pool boiling curve, $\Delta T_e \approx 5$–$30^\circ\mathrm{C}$ for water at 1 atm)
 - Bubbles form at nucleation sites (pits and scratches) on the heated surface.
 - At low $\Delta T_e$ (isolated bubbles), bubbles collapse or rise individually. At higher $\Delta T_e$ they merge into jets and columns.
 - Bubble growth and departure stir the liquid next to the wall and carry latent heat away. $h$ is very high and $q'' \propto \Delta T_e^3$.
@@ -408,7 +416,9 @@ $$\dot m_{max} = \frac{\dot Q_{max}}{h_{fg}} = \frac{2.476\times10^5}{2257\times
           topic: "intro", sub: "Thermal conductivity ranges",
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`Using a diagram, show the relative thermal conductivity ranges of nonmetallic crystals, pure metals, metal alloys, nonmetallic solids, liquids, insulators and gases.`,
-          solution: String.raw`Sketch: a horizontal **logarithmic** axis of $k$ in W/m·K from about 0.01 to 1000. Each material class is drawn as a horizontal bar spanning its range (Çengel Fig. 1-24):
+          solution: String.raw`![Thermal conductivity ranges of material classes (log scale)](fig/2011-12-Q5a-sol.svg)
+
+Sketch: a horizontal **logarithmic** axis of $k$ in W/m·K from about 0.01 to 1000. Each material class is drawn as a horizontal bar spanning its range (Çengel Fig. 1-24):
 
 | Class | Typical range of $k$ (W/m·K) | Examples |
 |---|---|---|
@@ -455,7 +465,9 @@ $$\dot Q_{total} = 86.4 + 81.8 = 168.2\,\mathrm{W}$$
           topic: "conduction", sub: "3-D heat conduction equation",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Derive the general three-dimensional heat conduction equation. From this general equation, derive the equations for the following conditions: (i) steady-state one-dimensional heat flow with no heat generation; (ii) two-dimensional heat flow without heat generation.`,
-          solution: String.raw`**Assumptions:** stationary, isotropic solid with density $\rho$ and specific heat $c$. Volumetric heat generation $\dot q$ (W/m³). Fourier's law holds.
+          solution: String.raw`![Control volume Δx Δy Δz with conduction in and out, generation and storage](fig/2011-12-Q5c-sol.svg)
+
+**Assumptions:** stationary, isotropic solid with density $\rho$ and specific heat $c$. Volumetric heat generation $\dot q$ (W/m³). Fourier's law holds.
 
 **Control volume:** element $\Delta x\,\Delta y\,\Delta z$ in Cartesian coordinates.
 
@@ -502,7 +514,9 @@ If the 2-D flow is unsteady: $\frac{\partial^2 T}{\partial x^2} + \frac{\partial
           topic: "conduction", sub: "Spherical shell: T(r) and Q",
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`Consider a spherical container of inner radius $r_1 = 8$ cm, outer radius $r_2 = 10$ cm, and thermal conductivity $k = 45$ W/m·°C. The inner and outer surfaces are maintained at constant temperatures $T_1 = 200$°C and $T_2 = 80$°C, respectively, as a result of a chemical reaction occurring inside. First derive the general relation for the temperature distribution inside the shell under steady conditions, then determine the rate of heat loss from the system.`,
-          solution: String.raw`**Assumptions:** steady state; one-dimensional radial conduction; constant $k$; no heat generation in the wall.
+          solution: String.raw`![Spherical shell r₁ = 8 cm, r₂ = 10 cm and its hyperbolic temperature profile](fig/2011-12-Q6a.svg)
+
+**Assumptions:** steady state; one-dimensional radial conduction; constant $k$; no heat generation in the wall.
 
 ### Derivation
 
@@ -554,7 +568,9 @@ $$\dot Q = 4\pi\times45\times\frac{0.08\times0.10}{0.10 - 0.08}\times(200 - 80) 
           text: String.raw`What is the critical thickness of insulation? Derive the equation for the critical thickness. What will happen if the thickness of insulation is greater than the critical thickness?
 
 Calculate the critical thickness of insulation for asbestos ($k = 0.17$ W/m·°C) surrounding a pipe exposed to room air at 20°C with $h = 3$ W/m²·°C. Calculate the heat loss from a 200°C, 5.0 cm diameter pipe when covered with the critical thickness of insulation and without insulation.`,
-          solution: String.raw`**Critical radius:** adding insulation to a small cylinder raises the conduction resistance, but it also enlarges the outer surface and so lowers the convection resistance. The **critical radius** $r_c$ is the outer radius at which the total resistance is a minimum, so the heat loss is a **maximum**. The critical thickness is $r_c - r_i$.
+          solution: String.raw`![Heat loss vs outer radius: maximum at the critical radius rc = k/h](fig/common-critical-radius.svg)
+
+**Critical radius:** adding insulation to a small cylinder raises the conduction resistance, but it also enlarges the outer surface and so lowers the convection resistance. The **critical radius** $r_c$ is the outer radius at which the total resistance is a minimum, so the heat loss is a **maximum**. The critical thickness is $r_c - r_i$.
 
 ### Derivation (cylinder, length L)
 
@@ -715,6 +731,8 @@ Fluid properties at the bulk temperature: $\rho = 992.1$ kg/m³, $k = 0.631$ W/m
 
 **Find:** heater power $\dot Q$; $T_s$ at the exit.
 
+![Uniformly heated tube: Tm rises linearly, Ts stays a constant q″/h above it](fig/2011-12-Q7c.svg)
+
 **Assumptions:** steady state; uniform surface heat flux; fully developed flow at the exit; smooth tube.
 
 1. **Mass flow and heat rate**
@@ -786,7 +804,9 @@ $$\boxed{\varepsilon_M = \ell^2\left|\frac{d\bar u}{dy}\right|}$$
           topic: "boundary-layer", sub: "Thermal boundary layer on a flat plate",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Describe the thermal boundary layer formation for forced convection on an isothermal flat plate. Indicate the relative thickness of the hydrodynamic and thermal boundary layers for common fluids.`,
-          solution: String.raw`**Formation**
+          solution: String.raw`![Relative thickness of the velocity (δ) and thermal (δt) boundary layers](fig/2011-12-Q8b-sol.svg)
+
+**Formation**
 - Fluid at uniform $T_\infty$ and $u_\infty$ meets a plate held at $T_s$, starting at the leading edge (x = 0).
 - Fluid particles touching the plate reach thermal equilibrium with it ($T = T_s$ at $y = 0$, no-slip). They exchange energy with the next layer, and temperature gradients develop in the fluid.
 - The region where $T$ changes from $T_s$ to $T_\infty$ is the **thermal boundary layer**. Its thickness $\delta_t$ is the distance $y$ at which $\frac{T - T_s}{T_\infty - T_s} = 0.99$.

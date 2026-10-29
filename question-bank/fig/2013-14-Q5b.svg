@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" width="680" height="340" font-family="Helvetica, Arial, sans-serif">
+<title>Spherical reactor wall with optional insulation and its resistance circuit</title>
+<defs><marker id="a-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="a-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="a-cold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="a-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="a-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="a-vap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><pattern id="ins" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="metal" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.8"/></pattern></defs>
+<rect width="680" height="340" fill="#FFFFFF"/>
+<path d="M57.4,321.5 A100,100 0 0 1 134.0,385.8 L321.9,317.4 A300,300 0 0 0 92.1,124.6 Z" stroke="None" stroke-width="1.4" fill="#FBE2D6"/>
+<path d="M92.1,124.6 A300,300 0 0 1 321.9,317.4 L359.5,303.7 A340,340 0 0 0 99.0,85.2 Z" stroke="#1E2B3A" stroke-width="1.4" fill="url(#metal)"/>
+<path d="M99.0,85.2 A340,340 0 0 1 359.5,303.7 L372.7,298.9 A354,354 0 0 0 101.5,71.4 Z" stroke="#C98A00" stroke-width="1.4" fill="url(#ins)"/>
+<text x="130" y="230" font-size="12" fill="#D2552B" text-anchor="middle" font-weight="bold">reactor contents</text>
+<text x="130" y="246" font-size="11" fill="#D2552B" text-anchor="middle">inner D = 1 m (r₁ = 0.50 m)</text>
+<text x="130" y="262" font-size="11" fill="#D2552B" text-anchor="middle">T₁ = 50°C (case i)</text>
+<line x1="255.6920350996926" y1="164.86577820192704" x2="380" y2="100" stroke="#9AA8B8" stroke-width="0.8"/>
+<text x="384" y="100" font-size="12" fill="#1E2B3A">stainless steel, 10 mm, k = 17 W/m·K</text>
+<line x1="267.0473005612291" y1="148.1825782377146" x2="380" y2="70" stroke="#9AA8B8" stroke-width="0.8"/>
+<text x="384" y="66" font-size="12" fill="#C98A00" font-weight="bold">(ii) fibreglass 2 mm, k = 0.040 W/m·K</text>
+<text x="384" y="40" font-size="12" fill="#0B7C8C" font-weight="bold">air: T<tspan dy="3.8" font-size="8.6">∞</tspan><tspan dy="-3.8"> </tspan> = 25°C, h = 6 W/m²K</text>
+<text x="384" y="134" font-size="10" fill="#55667D">layers not to scale</text>
+<circle cx="360" cy="250" r="3.5" fill="#1E2B3A"/><text x="360" y="238" font-size="12" fill="#1E2B3A" text-anchor="middle">T₁</text>
+<path d="M360,250 L383.0,250 L386.7,243 L394.0,257 L401.3,243 L408.7,257 L416.0,243 L423.3,257 L427.0,250 L450,250" stroke="#1E2B3A" stroke-width="1.6" fill="none"/><text x="405.0" y="274" font-size="11" fill="#55667D" text-anchor="middle">R<tspan dy="3.5" font-size="7.9">steel</tspan><tspan dy="-3.5"> </tspan></text>
+<circle cx="450" cy="250" r="3.5" fill="#1E2B3A"/>
+<path d="M450,250 L473.0,250 L476.7,243 L484.0,257 L491.3,243 L498.7,257 L506.0,243 L513.3,257 L517.0,250 L540,250" stroke="#1E2B3A" stroke-width="1.6" fill="none"/><text x="495.0" y="274" font-size="11" fill="#55667D" text-anchor="middle">R<tspan dy="3.5" font-size="7.9">ins</tspan><tspan dy="-3.5"> </tspan> (ii)</text>
+<circle cx="540" cy="250" r="3.5" fill="#1E2B3A"/>
+<path d="M540,250 L568.0,250 L571.7,243 L579.0,257 L586.3,243 L593.7,257 L601.0,243 L608.3,257 L612.0,250 L640,250" stroke="#1E2B3A" stroke-width="1.6" fill="none"/><text x="590.0" y="274" font-size="11" fill="#55667D" text-anchor="middle">1/(h 4πr<tspan dy="3.5" font-size="7.9">o</tspan><tspan dy="-3.5"> </tspan>²)</text>
+<circle cx="640" cy="250" r="3.5" fill="#1E2B3A"/><text x="640" y="238" font-size="12" fill="#1E2B3A" text-anchor="middle">T<tspan dy="3.8" font-size="8.6">∞</tspan><tspan dy="-3.8"> </tspan></text>
+<text x="360" y="310" font-size="11" fill="#55667D">R<tspan dy="3.5" font-size="7.9">sph</tspan><tspan dy="-3.5"> </tspan> = (1/r<tspan dy="3.5" font-size="7.9">a</tspan><tspan dy="-3.5"> </tspan> − 1/r<tspan dy="3.5" font-size="7.9">b</tspan><tspan dy="-3.5"> </tspan>)/(4πk);  same Q in (ii) → T₁ rises</text>
+</svg>

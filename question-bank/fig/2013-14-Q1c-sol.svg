@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" width="700" height="300" font-family="Helvetica, Arial, sans-serif">
+<title>Heat pipe: evaporator, adiabatic section and condenser</title>
+<defs><marker id="a-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="a-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="a-cold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="a-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="a-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="a-vap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><pattern id="ins" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="metal" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.8"/></pattern></defs>
+<rect width="700" height="300" fill="#FFFFFF"/>
+<rect x="70" y="80" width="560" height="120" rx="30" fill="#F4F6F9" stroke="#1E2B3A" stroke-width="2"/>
+<rect x="76" y="86" width="548" height="14" rx="4" fill="url(#ins)" stroke="#C98A00" stroke-width="0.8"/>
+<rect x="76" y="180" width="548" height="14" rx="4" fill="url(#ins)" stroke="#C98A00" stroke-width="0.8"/>
+<text x="350.0" y="116" font-size="10" fill="#C98A00" text-anchor="middle">wick lining (liquid returns by capillary action)</text>
+<line x1="220" y1="50" x2="220" y2="230" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="480" y1="50" x2="480" y2="230" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="145.0" y="32" font-size="13" fill="#D2552B" text-anchor="middle" font-weight="bold">Evaporator</text>
+<text x="350.0" y="32" font-size="13" fill="#55667D" text-anchor="middle" font-weight="bold">Adiabatic section</text>
+<text x="555.0" y="32" font-size="13" fill="#0B7C8C" text-anchor="middle" font-weight="bold">Condenser</text>
+<rect x="220" y="68" width="260" height="12" rx="0" fill="url(#ins)" stroke="#C98A00" stroke-width="1"/>
+<rect x="220" y="200" width="260" height="12" rx="0" fill="url(#ins)" stroke="#C98A00" stroke-width="1"/>
+<line x1="100" y1="40" x2="100" y2="76" stroke="#D2552B" stroke-width="2" marker-end="url(#a-hot)"/>
+<line x1="100" y1="240" x2="100" y2="204" stroke="#D2552B" stroke-width="2" marker-end="url(#a-hot)"/>
+<line x1="140" y1="40" x2="140" y2="76" stroke="#D2552B" stroke-width="2" marker-end="url(#a-hot)"/>
+<line x1="140" y1="240" x2="140" y2="204" stroke="#D2552B" stroke-width="2" marker-end="url(#a-hot)"/>
+<line x1="180" y1="40" x2="180" y2="76" stroke="#D2552B" stroke-width="2" marker-end="url(#a-hot)"/>
+<line x1="180" y1="240" x2="180" y2="204" stroke="#D2552B" stroke-width="2" marker-end="url(#a-hot)"/>
+<line x1="510" y1="76" x2="510" y2="40" stroke="#0B7C8C" stroke-width="2" marker-end="url(#a-cold)"/>
+<line x1="510" y1="204" x2="510" y2="240" stroke="#0B7C8C" stroke-width="2" marker-end="url(#a-cold)"/>
+<line x1="550" y1="76" x2="550" y2="40" stroke="#0B7C8C" stroke-width="2" marker-end="url(#a-cold)"/>
+<line x1="550" y1="204" x2="550" y2="240" stroke="#0B7C8C" stroke-width="2" marker-end="url(#a-cold)"/>
+<line x1="590" y1="76" x2="590" y2="40" stroke="#0B7C8C" stroke-width="2" marker-end="url(#a-cold)"/>
+<line x1="590" y1="204" x2="590" y2="240" stroke="#0B7C8C" stroke-width="2" marker-end="url(#a-cold)"/>
+<text x="70" y="258" font-size="12" fill="#D2552B">heat in</text>
+<text x="630" y="258" font-size="12" fill="#0B7C8C" text-anchor="end">heat out</text>
+<line x1="130" y1="124" x2="570" y2="124" stroke="#9AA8B8" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#a-vap)"/>
+<line x1="130" y1="156" x2="570" y2="156" stroke="#9AA8B8" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#a-vap)"/>
+<text x="350.0" y="145" font-size="12" fill="#55667D" text-anchor="middle">vapour flows to the cold end</text>
+<line x1="540" y1="187" x2="160" y2="187" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#a-cold)"/>
+<line x1="540" y1="93" x2="160" y2="93" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#a-cold)"/>
+<text x="555.0" y="174" font-size="10" fill="#0B7C8C" text-anchor="middle">vapour condenses</text>
+<text x="145.0" y="174" font-size="10" fill="#D2552B" text-anchor="middle">liquid evaporates</text>
+<text x="350.0" y="290" font-size="11" fill="#55667D" text-anchor="middle">sealed, evacuated tube with a little working fluid; nearly isothermal (T<tspan dy="3.5" font-size="7.9">sat</tspan><tspan dy="-3.5"> </tspan>)</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 300" width="660" height="300" font-family="Helvetica, Arial, sans-serif">
+<title>Firefighter turnout coat: three layers with two air gaps</title>
+<defs><marker id="aI" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="aIs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#1E2B3A"/></marker><marker id="aH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="aHs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#D2552B"/></marker><marker id="aC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aCs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#0B7C8C"/></marker><marker id="aG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aGs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#9AA8B8"/></marker><marker id="aA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="aAs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#B7840A"/></marker><marker id="aS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="aSs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#55667D"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="mhatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.9"/></pattern></defs>
+<rect width="660" height="300" fill="#FFFFFF"/>
+<rect x="120" y="90" width="70" height="130" fill="#D8DDE4" stroke="#1E2B3A" stroke-width="1.4"/>
+<text x="155" y="159" font-size="12" text-anchor="middle" fill="#1E2B3A">k<tspan dy="3.6" font-size="8.6">s</tspan><tspan dy="-3.6">​</tspan>, L<tspan dy="3.6" font-size="8.6">s</tspan><tspan dy="-3.6">​</tspan></text>
+<line x1="155" y1="94" x2="159" y2="52" stroke="#55667D" stroke-width="0.9"/>
+<circle cx="155" cy="94" r="1.8" fill="#55667D" stroke="none" stroke-width="0"/>
+<text x="162" y="56" font-size="13" text-anchor="start" fill="#1E2B3A">Shell (s)</text>
+<rect x="190" y="90" width="14" height="130" fill="#F7FAFC" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="3 2"/>
+<line x1="197" y1="216" x2="203" y2="250" stroke="#55667D" stroke-width="0.9"/>
+<circle cx="197" cy="216" r="1.8" fill="#55667D" stroke="none" stroke-width="0"/>
+<text x="206" y="254" font-size="12" text-anchor="start" fill="#1E2B3A">Air gap (1 mm)</text>
+<rect x="204" y="90" width="64" height="130" fill="#C9D3DE" stroke="#1E2B3A" stroke-width="1.4"/>
+<text x="236" y="159" font-size="12" text-anchor="middle" fill="#1E2B3A">k<tspan dy="3.6" font-size="8.6">mb</tspan><tspan dy="-3.6">​</tspan>, L<tspan dy="3.6" font-size="8.6">mb</tspan><tspan dy="-3.6">​</tspan></text>
+<line x1="236" y1="94" x2="240" y2="64" stroke="#55667D" stroke-width="0.9"/>
+<circle cx="236" cy="94" r="1.8" fill="#55667D" stroke="none" stroke-width="0"/>
+<text x="243" y="68" font-size="13" text-anchor="start" fill="#1E2B3A">Moisture barrier (mb)</text>
+<rect x="268" y="90" width="14" height="130" fill="#F7FAFC" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="3 2"/>
+<line x1="275" y1="216" x2="281" y2="268" stroke="#55667D" stroke-width="0.9"/>
+<circle cx="275" cy="216" r="1.8" fill="#55667D" stroke="none" stroke-width="0"/>
+<text x="284" y="272" font-size="12" text-anchor="start" fill="#1E2B3A">Air gap (1 mm)</text>
+<rect x="282" y="90" width="90" height="130" fill="#E7E1D3" stroke="#1E2B3A" stroke-width="1.4"/>
+<text x="327" y="159" font-size="12" text-anchor="middle" fill="#1E2B3A">k<tspan dy="3.6" font-size="8.6">tl</tspan><tspan dy="-3.6">​</tspan>, L<tspan dy="3.6" font-size="8.6">tl</tspan><tspan dy="-3.6">​</tspan></text>
+<line x1="327" y1="94" x2="331" y2="52" stroke="#55667D" stroke-width="0.9"/>
+<circle cx="327" cy="94" r="1.8" fill="#55667D" stroke="none" stroke-width="0"/>
+<text x="334" y="56" font-size="13" text-anchor="start" fill="#1E2B3A">Thermal liner (tl)</text>
+<path d="M30,200 C40,160 55,170 50,130 C70,150 75,120 70,100 C95,130 100,160 96,200 Z" stroke="#D2552B" stroke-width="1.5" fill="#FBE2D6"/>
+<text x="64" y="232" font-size="13" text-anchor="middle" fill="#D2552B" font-weight="bold">Fire side</text>
+<line x1="98" y1="155" x2="116" y2="155" stroke="#D2552B" stroke-width="3" marker-end="url(#aH)"/>
+<circle cx="600" cy="105" r="14" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.4"/>
+<path d="M580,125 L620,125 L616,205 L584,205 Z" stroke="#1E2B3A" stroke-width="1.4" fill="#DCE3EC"/>
+<line x1="592" y1="205" x2="590" y2="250" stroke="#1E2B3A" stroke-width="6"/>
+<line x1="608" y1="205" x2="610" y2="250" stroke="#1E2B3A" stroke-width="6"/>
+<text x="600" y="272" font-size="13" text-anchor="middle" fill="#1E2B3A" font-weight="bold">Firefighter</text>
+<path d="M574,150 C530,120 412,110 378,120" stroke="#55667D" stroke-width="1.4" fill="none" marker-end="url(#aS)"/>
+<text x="486" y="100" font-size="11" text-anchor="middle" fill="#55667D">worn on</text>
+</svg>

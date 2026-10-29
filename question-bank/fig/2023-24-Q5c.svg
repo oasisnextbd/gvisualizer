@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 330" width="660" height="330" font-family="Helvetica, Arial, sans-serif">
+<title>Absorber tube with uniform heat flux: bulk and wall temperatures along the tube</title>
+<defs><marker id="aI" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="aIs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#1E2B3A"/></marker><marker id="aH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="aHs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#D2552B"/></marker><marker id="aC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aCs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#0B7C8C"/></marker><marker id="aG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aGs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#9AA8B8"/></marker><marker id="aA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="aAs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#B7840A"/></marker><marker id="aS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="aSs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#55667D"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="mhatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.9"/></pattern></defs>
+<rect width="660" height="330" fill="#FFFFFF"/>
+<rect x="80" y="40" width="520" height="50" fill="#D9F0F2" stroke="#1E2B3A" stroke-width="1.6"/>
+<line x1="100" y1="18" x2="100" y2="38" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="100" y1="112" x2="100" y2="92" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="140" y1="18" x2="140" y2="38" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="140" y1="112" x2="140" y2="92" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="180" y1="18" x2="180" y2="38" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="180" y1="112" x2="180" y2="92" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="220" y1="18" x2="220" y2="38" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="220" y1="112" x2="220" y2="92" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="260" y1="18" x2="260" y2="38" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="260" y1="112" x2="260" y2="92" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="300" y1="18" x2="300" y2="38" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="300" y1="112" x2="300" y2="92" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="340" y1="18" x2="340" y2="38" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="340" y1="112" x2="340" y2="92" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="380" y1="18" x2="380" y2="38" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="380" y1="112" x2="380" y2="92" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="420" y1="18" x2="420" y2="38" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="420" y1="112" x2="420" y2="92" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="460" y1="18" x2="460" y2="38" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="460" y1="112" x2="460" y2="92" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="500" y1="18" x2="500" y2="38" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="500" y1="112" x2="500" y2="92" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="540" y1="18" x2="540" y2="38" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="540" y1="112" x2="540" y2="92" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="580" y1="18" x2="580" y2="38" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="580" y1="112" x2="580" y2="92" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<text x="604" y="30" font-size="11" text-anchor="end" fill="#D2552B">q″ = 2000 W/m²</text>
+<line x1="20" y1="65" x2="120" y2="65" stroke="#0B7C8C" stroke-width="2" marker-end="url(#aC)"/>
+<line x1="560" y1="65" x2="640" y2="65" stroke="#0B7C8C" stroke-width="2" marker-end="url(#aC)"/>
+<text x="140" y="69" font-size="12" text-anchor="start" fill="#0B7C8C">water 620 g/min, D = 60 mm</text>
+<line x1="80" y1="300" x2="620" y2="300" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#aI)"/>
+<line x1="80" y1="300" x2="80" y2="130" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#aI)"/>
+<text x="620" y="318" font-size="12" text-anchor="end" fill="#1E2B3A">x</text>
+<text x="72" y="134" font-size="12" text-anchor="end" fill="#1E2B3A">T (°C)</text>
+<line x1="80" y1="290.667" x2="600" y2="206.667" stroke="#0B7C8C" stroke-width="2.4"/>
+<path d="M80.0,290.7 C85.0,284.4 96.7,262.9 110.0,253.3 C123.3,243.8 143.3,237.7 160.0,233.3 C176.7,229.0 201.7,228.3 210.0,227.3 L600,152.4" stroke="#D2552B" stroke-width="2.4" fill="none"/>
+<text x="84" y="306.667" font-size="11" text-anchor="start" fill="#0B7C8C">T<tspan dy="3.3" font-size="7.9">b,in</tspan><tspan dy="-3.3">​</tspan> = 27°C</text>
+<text x="600" y="224.667" font-size="11" text-anchor="end" fill="#0B7C8C">T<tspan dy="3.3" font-size="7.9">b,out</tspan><tspan dy="-3.3">​</tspan> = 90°C</text>
+<text x="606" y="148.4" font-size="11" text-anchor="end" fill="#D2552B">T<tspan dy="3.3" font-size="7.9">w</tspan><tspan dy="-3.3">​</tspan> ≈ 131°C</text>
+<text x="230" y="216" font-size="12" text-anchor="start" fill="#D2552B" font-weight="bold">T<tspan dy="3.6" font-size="8.6">w</tspan><tspan dy="-3.6">​</tspan></text>
+<text x="310" y="246.667" font-size="12" text-anchor="start" fill="#0B7C8C" font-weight="bold">T<tspan dy="3.6" font-size="8.6">b</tspan><tspan dy="-3.6">​</tspan> (linear)</text>
+<line x1="460" y1="179.015" x2="460" y2="225.282" stroke="#9AA8B8" stroke-width="1" marker-end="url(#aG)" marker-start="url(#aGs)"/>
+<text x="466" y="206.149" font-size="11" text-anchor="start" fill="#55667D">q″/h = 40.7°C (constant)</text>
+<line x1="200" y1="300" x2="200" y2="140" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="140" y="294" font-size="10" text-anchor="middle" fill="#55667D">entrance</text>
+<text x="600" y="318" font-size="11" text-anchor="end" fill="#55667D">L = 7.23 m</text>
+</svg>

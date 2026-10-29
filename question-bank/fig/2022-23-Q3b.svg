@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320" font-family="Helvetica, Arial, sans-serif">
+<title>Insulated copper rod between two plates</title>
+<defs><marker id="aI" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="aIs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#1E2B3A"/></marker><marker id="aH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="aHs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#D2552B"/></marker><marker id="aC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aCs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#0B7C8C"/></marker><marker id="aG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aGs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#9AA8B8"/></marker><marker id="aA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="aAs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#B7840A"/></marker><marker id="aS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="aSs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#55667D"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="mhatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.9"/></pattern></defs>
+<rect width="600" height="320" fill="#FFFFFF"/>
+<rect x="104" y="40" width="16" height="200" fill="url(#mhatch)" stroke="#1E2B3A" stroke-width="1.4"/>
+<rect x="460" y="40" width="16" height="200" fill="url(#mhatch)" stroke="#1E2B3A" stroke-width="1.4"/>
+<rect x="120" y="100" width="340" height="14" fill="url(#hatch)" stroke="#C98A00" stroke-width="1.2"/>
+<rect x="120" y="166" width="340" height="14" fill="url(#hatch)" stroke="#C98A00" stroke-width="1.2"/>
+<rect x="120" y="114" width="340" height="52" fill="#F0C9A8" stroke="#1E2B3A" stroke-width="1.4"/>
+<line x1="90" y1="140" x2="500" y2="140" stroke="#55667D" stroke-width="1" stroke-dasharray="10 3 2 3"/>
+<line x1="150" y1="108" x2="160" y2="22" stroke="#55667D" stroke-width="0.9"/>
+<circle cx="150" cy="108" r="1.8" fill="#55667D" stroke="none" stroke-width="0"/>
+<text x="163" y="26" font-size="13" text-anchor="start" fill="#1E2B3A">Insulation</text>
+<line x1="330" y1="146" x2="340" y2="22" stroke="#55667D" stroke-width="0.9"/>
+<circle cx="330" cy="146" r="1.8" fill="#55667D" stroke="none" stroke-width="0"/>
+<text x="343" y="26" font-size="13" text-anchor="start" fill="#1E2B3A">Copper rod, k = 390 W/m·K</text>
+<text x="230" y="158" font-size="12" text-anchor="middle" fill="#D2552B">q̇ (electrical heating)</text>
+<line x1="480" y1="114" x2="520" y2="114" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="480" y1="166" x2="520" y2="166" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="510" y1="88" x2="510" y2="114" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)"/>
+<line x1="510" y1="192" x2="510" y2="166" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)"/>
+<text x="518" y="145" font-size="13" text-anchor="start" fill="#1E2B3A">d = 25 mm</text>
+<text x="110" y="205" font-size="13" text-anchor="end" fill="#1E2B3A">0</text>
+<line x1="120" y1="200" x2="190" y2="200" stroke="#1E2B3A" stroke-width="1.4" marker-end="url(#aI)"/>
+<text x="196" y="205" font-size="14" text-anchor="start" fill="#1E2B3A" font-style="italic">x</text>
+<line x1="120" y1="230" x2="460" y2="230" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)" marker-start="url(#aGs)"/>
+<text x="290" y="224" font-size="12" text-anchor="middle" fill="#55667D">L = 300 mm</text>
+<text x="120" y="268" font-size="14" text-anchor="middle" fill="#D2552B">T<tspan dy="4.2" font-size="10.1">1</tspan><tspan dy="-4.2">​</tspan> = 150°C</text>
+<text x="460" y="268" font-size="14" text-anchor="middle" fill="#D2552B">T<tspan dy="4.2" font-size="10.1">2</tspan><tspan dy="-4.2">​</tspan> = 100°C</text>
+<text x="120" y="286" font-size="11" text-anchor="middle" fill="#55667D">(plate 1)</text>
+<text x="460" y="286" font-size="11" text-anchor="middle" fill="#55667D">(plate 2)</text>
+</svg>

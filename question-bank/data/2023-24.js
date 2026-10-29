@@ -14,7 +14,7 @@ QB.paper({
 
 (ii) For this system, with the help of the sketch, determine whether the forced convection will assist or oppose the natural convection with appropriate reasoning. **[3]**
 
-*[Figure: vertical PCB at surface temperature $T_s$, 100 × 0.05 W chips, height L = 12 cm; air at $T_\infty$ = 35°C flowing upward.]*`,
+![Vertical circuit board (L = 12 cm) with air blown upward along it](fig/2023-24-Q1a.svg)`,
           solution: String.raw`**Given:** $L = 0.12$ m (in the flow direction), $T_s = 80^\circ$C, $T_\infty = 35^\circ$C, $V = 0.85$ m/s upward; total dissipation $100 \times 0.05 = 5$ W.
 
 **Find:** the dominant mechanism (Gr/Re²), and whether the flows assist or oppose.
@@ -71,6 +71,8 @@ Mark the critical heat flux (point C) and the Leidenfrost point (D) on the curve
 | Mist flow | droplets in vapour | low, slight recovery |
 | Single-phase vapour | superheated vapour | lowest, vapour forced convection |
 
+![h for pool boiling (against $\Delta T_{excess}$) and for flow boiling (along the tube)](fig/2023-24-Q1b-sol.svg)
+
 ### Is flow boiling harder to analyse? **Yes.**
 - In pool boiling the vapour escapes through a free surface and the liquid around it is essentially stagnant. $\dot q$ depends mainly on $\Delta T_{excess}$, fluid properties and $C_{sf}$ (Rohsenow), plus geometry for CHF (Zuber).
 - In a tube there is **no free surface**. Liquid and vapour are forced to flow together, and the **two-phase flow pattern changes continuously along the length** (bubbly → slug → annular → mist). Each pattern has a different mechanism and correlation.
@@ -85,6 +87,8 @@ Mark the critical heat flux (point C) and the Leidenfrost point (D) on the curve
           solution: String.raw`**Given:** acid 13,000 lb/h, 250 → 135°F; butanol 19,000 lb/h, 100 → 157°F; $U_D = 85$ Btu/h·ft²·°F; the hot outlet rises 3°F/month; cleaning cycle 5 months.
 
 **Find:** the dirt factor $R_d$ that builds up in 5 months.
+
+![Double-pipe hairpin exchanger](fig/common-double-pipe.svg)
 
 **Assumptions:**
 - True counterflow (double pipe); constant flows, inlet temperatures and $c_p$; the area $A$ is fixed.
@@ -157,6 +161,8 @@ At average temperatures, the following fluid properties are available:
 **Assumptions:** no heat loss; constant $c_p$.
 
 1. **Temperature profile (sketch):** T (°F) vertical, length horizontal. The ammonia curve falls steeply from 245°F to 95°F (gas cooling, sensible heat only, since dry gas does not condense). The water line is nearly flat, rising only from 85 to 95°F. With multipass flow the water line zig-zags between 85 and 95°F. The two streams come close at the cold end (95°F gas vs 85°F water inlet), which is a small approach. The hot outlet (95°F) equals the cold outlet (95°F), a temperature "meet" that makes $F_T$ fall well below 1.
+
+![1-8 gas cooler: ammonia falls from 245°F to 95°F, water zig-zags from 85°F to 95°F](fig/2023-24-Q2a-sol.svg)
 
 2. Heat balance:
 $$Q = WC(T_1 - T_2) = 9872 \times 0.53 \times 150 = 784{,}800\ \mathrm{Btu/h}$$
@@ -307,6 +313,8 @@ This is right at the 2.0 psi allowable: acceptable but with no margin.
           text: String.raw`"Equivalent diameter of the annular area of a double pipe system can be different based on its context" – Explain.`,
           solution: String.raw`The equivalent diameter is defined as $D_e = 4 \times$ (flow area)/(perimeter). In an annulus (inner pipe OD $D_1$, outer pipe ID $D_2$) the flow area is always $\frac{\pi}{4}(D_2^2 - D_1^2)$, but **which perimeter counts depends on what is being calculated** (Kern):
 
+![Annulus: heated perimeter π D₁ for heat transfer, wetted perimeter π(D₁ + D₂) for friction](fig/2020-21-Q2a-sol.svg)
+
 **1. For heat transfer:** only the surface that transfers heat counts, i.e. the outside of the inner pipe, $\pi D_1$ (the outer pipe is insulated).
 $$D_e = \frac{4\cdot\frac{\pi}{4}(D_2^2 - D_1^2)}{\pi D_1} = \frac{D_2^2 - D_1^2}{D_1}$$
 This $D_e$ is used in $\mathrm{Re}_a$ and in $h_o D_e/k$ (Fig. 24).
@@ -355,10 +363,12 @@ How it helps:
 
 (ii) Temperature at the interface.
 
-*[Figure: composite wall – furnace gases, magnesite bricks ($L_1$), common bricks ($L_2$) with interface temperature $T_2$, surrounding air; Q from left to right.]*`,
+![Furnace wall: magnesite brick lining and common brick, gases inside and air outside](fig/2023-24-Q3d.svg)`,
           solution: String.raw`**Given:** $T_g = 1400^\circ$C, $h_{c,i} = 17.5$, $h_{r,i} = 23.2$ W/m²K; magnesite $L_1 = 0.30$ m, $k_1 = 11.5$; common brick $L_2 = 0.25$ m, $k_2 = 0.65$; $T_a = 30^\circ$C, $h_{c,o} = 7.5$, $h_{r,o} = 11.5$ W/m²K.
 
 **Find:** $q''$ and the brick–brick interface temperature $T_2$.
+
+![Furnace wall circuit: convection and radiation in parallel at each face, two brick layers in series](fig/2023-24-Q3d-sol.svg)
 
 **Assumptions:** steady 1-D conduction through a large plane wall; constant $k$; convection and radiation act in parallel on each face (combined $h = h_c + h_r$); no contact resistance.
 
@@ -391,6 +401,8 @@ Check: $T_3 - q''R_o = 177.8 - 147.8 = 30^\circ$C ✓.
           solution: String.raw`**Given:** hot (inner pipe) 350 → 250°F; cold (annulus) 80 → 120°F; 2 in sch 40 pipe: $D_i = 2.067$ in, $D_o = 2.375$ in; $k = 26$ Btu/h·ft·°F (the paper's "ft²" is a unit misprint); $R_{Di} = R_{Do} = 0.001$; $h_i = 200$ (based on the inside area), $h_o = 350$; $q = 3.5\times10^6$ Btu/h.
 
 **Find:** the outside area $A_o$ for counter-current and co-current flow.
+
+![Counter-current and co-current temperature profiles with the terminal differences](fig/2023-24-Q4a-sol.svg)
 
 **Assumptions:** U is constant along the exchanger; area based on the pipe OD.
 
@@ -429,6 +441,8 @@ $$A_o = \frac{3.5\times10^6}{88.7 \times 191.5} = 206\ \mathrm{ft^2}$$
 
 **Find:** $U_o$, $r_c$, and the effect of 0.5 mm and 10 mm of insulation.
 
+![Heat loss versus outer radius: maximum at the critical radius $r_c = k/h$](fig/common-critical-radius.svg)
+
 **Assumptions:** steady, 1-D radial conduction; steel $k = 43$ W/m·°C (1% carbon steel, Holman Table A-2; not given in the question); h unchanged by the insulation; per metre length.
 
 1. Resistances per metre (°C·m/W):
@@ -461,7 +475,7 @@ Heat transfer **decreases** (−8.8% compared with the bare pipe).
     { id: "2023-24-Q5", q: 5, section: "B", compulsory: false,
       stem: String.raw`The parabolic trough reflector is a solar thermal energy device designed to capture the sun's direct solar radiation over a large surface area and then focus, or "concentrate", it onto a much smaller focal point area. Concentrating solar energy onto a smaller area yields high-temperature heat with excellent thermal efficiency. A tube is set at the focal line of a parabolic reflector and a fluid is passed through it. The net effect of this arrangement may be approximated as a condition of uniform heating (constant heat flux) at the surface of the tube.
 
-*[Figure: parabolic trough collector – solar beam, reflector plate, absorber tube along the focal line, collector stand, heat transfer fluid inlet and outlet.]*
+![Parabolic trough collector: the absorber tube lies along the focal line](fig/2023-24-Q5.svg)
 
 On a sunny day, the heat flux from the reflector was 2000 W/m² and the surface temperature reached up to 450°C. The fluid tube has an internal diameter of 60 mm, and water was used at 620 g/min as the heating fluid with an inlet temperature of 27°C.`,
       parts: [
@@ -470,6 +484,8 @@ On a sunny day, the heat flux from the reflector was 2000 W/m² and the surface 
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`As the reflectors are long enough, the surfaces approximately behave like a flat plate system for a small horizon. Develop the expression for the temperature profile at a distance y in the boundary layer with thermal boundary layer thickness ($\delta_t$), surface temperature ($T_w$) and free stream temperature ($T_\infty$).`,
           solution: String.raw`**Assumptions:** steady, 2-D, laminar, incompressible flow over a flat plate; constant properties; negligible viscous dissipation; plate at uniform $T_w$; the profile is similar at every x, so it can be written in terms of $y/\delta_t$.
+
+![Cubic temperature profile across the thermal boundary layer $\delta_t$](fig/2023-24-Q5a-sol.svg)
 
 1. Define $\theta = T - T_w$, so $\theta_\infty = T_\infty - T_w$. Assume a cubic polynomial (as for the velocity profile):
 $$\theta(y) = a + by + cy^2 + dy^3$$
@@ -501,6 +517,8 @@ so $q''_w = -k(\partial T/\partial y)_0$ gives $h = 3k/(2\delta_t)$. Combined wi
 
 **Find:** $\delta$ and $\delta_t$ in cm.
 
+![Velocity and thermal boundary layers on a flat plate](fig/common-bl-flat-plate.svg)
+
 **Assumptions:** 1 atm; the reflector temperature is not given, so properties are taken at the air temperature 30°C (303 K); laminar integral-method results from the data sheet.
 
 1. Air at 303 K (Holman Table A-5, interpolated): $\nu = 1.601\times10^{-5}$ m²/s, $\mathrm{Pr} = 0.707$.
@@ -524,6 +542,8 @@ $$\delta_t = 1.094 \times 0.656 = 0.718\ \mathrm{cm}$$
           solution: String.raw`**Given:** $q''_w = 2000$ W/m² (uniform); $D = 0.06$ m; $\dot m = 620$ g/min $= 0.01033$ kg/s; $T_{b,in} = 27^\circ$C, $T_{b,out} = 90^\circ$C.
 
 **Find:** $L$ and $T_{w}$ at the exit.
+
+![Uniform heat flux: $T_b$ rises linearly and $T_w$ runs parallel above it once developed](fig/2023-24-Q5c.svg)
 
 **Assumptions:** steady state; the whole tube surface receives 2000 W/m²; no losses; water properties from Çengel Table A-9. The "450°C surface temperature" in the stem is not consistent with this flux and is not used.
 
@@ -558,7 +578,7 @@ Assume:
 - The propane tank is at about the same temperature as the propane inside at all times.
 - The heat transfer coefficient at the end surfaces of the tank is the same as that of its side surface.
 
-*[Figure: horizontal cylindrical propane tank, D = 1.5 m, at −42°C in 25°C air, vapor escaping from a vent on top; the length is labelled 4 m in the figure (the text says 5 m).]*`,
+![Horizontal propane tank (D = 1.5 m) at −42°C in still air at 25°C](fig/2023-24-Q6.svg)`,
       parts: [
         { id: "2023-24-Q6a", label: "(a)", marks: "7",
           topic: "natural-convection", sub: "Boundary layer on a cold horizontal cylinder",
@@ -571,6 +591,8 @@ Assume:
 - It **thickens** as it flows down both sides around the circumference.
 - At the **bottom** the two layers meet and leave as a **falling cold plume** (downward arrows below the tank). Air near the bottom is cold and nearly stagnant.
 - Velocity profile at any angle: zero at the wall, a maximum close to it, zero at the edge. Temperature rises from $T_s = -42^\circ$C at the wall to 25°C at the edge.
+
+![Cold tank: the boundary layer starts thin at the top and leaves as a falling plume at the bottom](fig/2023-24-Q6a-sol.svg)
 
 **Comparison of h:**
 - **Upper surface:** thin boundary layer, fresh warm air constantly arrives, so the temperature gradient is steep and the **local h is highest**.
@@ -658,9 +680,11 @@ where $h = h_{ave} = \frac{1}{L}\int_0^L h_x\,dx = \frac{4}{3}h_{x=L}$.
 
 (ii) Determine the rate of heat transfer from the steam to the cooling water and the rate of condensation of steam in the condenser.
 
-*[Figure: shell condenser – steam enters at the top, P = 4.25 kPa; bank of n = 100 horizontal tubes, N = 10 tubes per column, L = 8 m; cooling water connections on the side; condensate drain at the bottom.]*`,
+![Shell condenser: 100 horizontal tubes in a 10 × 10 array, N = 10 per column](fig/2023-24-Q7a.svg)`,
           solution: String.raw`### (i) Re-form of the Nusselt vertical-plate coefficient
 **Assumptions:** laminar, wave-free film (Re < 30); $\rho_v \ll \rho_l$; plate of width $b$ (wetted perimeter $p = b$) and height L; steady state; average $h = \frac43 h_{x=L}$ (consistent with $h_x \propto x^{-1/4}$).
+
+![Nusselt film on a vertical plate, the basis of the Re form of h](fig/2022-23-Q6a-sol.svg)
 
 1. Nusselt average coefficient (data sheet), with $\rho_l - \rho_v \approx \rho_l$:
 $$h = 0.943\left[\frac{g\rho_l^2h^*_{fg}k_l^3}{\mu_l(T_{sat} - T_s)L}\right]^{1/4}$$
@@ -718,7 +742,9 @@ On a strict energy basis (superheat + $h_{fg}$ + 5°C subcooling $= 19.2 + 2431 
 (i) The top and bottom surfaces of the inclined hot flat plate
 
 (ii) The top and bottom surfaces of the horizontal cold flat plate`,
-          solution: String.raw`### (i) Inclined hot plate (angle θ from the vertical)
+          solution: String.raw`![Inclined hot plate and horizontal cold plate: which face holds the layer and which sheds plumes](fig/2023-24-Q7b-sol.svg)
+
+### (i) Inclined hot plate (angle θ from the vertical)
 The buoyancy force $g\Delta\rho$ acts vertically upward on the heated air. Split it into a component **along** the plate ($g\cos\theta$) and a component **normal** to it ($g\sin\theta$).
 
 - **Bottom (lower) surface:** the normal component pushes the warm air *toward* the plate, holding the layer against it. The flow stays attached and moves up the plate under $g\cos\theta$.
@@ -753,6 +779,8 @@ The cooled air next to the plate is heavier and tends to **sink**.
           solution: String.raw`**Given:** $D_i = 0.04$ m (heated, $T_w = 80^\circ$C), $D_o = 0.05$ m (insulated); $u_m = 6.9$ m/s; $T_b$: 20 → 40°C.
 
 **Find:** the annulus length L.
+
+![Annulus D₁ = 4 cm, D₂ = 5 cm: only the inner tube (80°C) heats the glycol](fig/2021-22-Q5c.svg)
 
 **Assumptions:** steady, fully developed turbulent flow; Dittus–Boelter with $n = 0.4$ (fluid heated) using the hydraulic diameter; properties at the mean bulk temperature 30°C; constant wall temperature, so the LMTD applies.
 
@@ -790,7 +818,7 @@ $$q = h(\pi D_iL)\Delta T_{lm}\ \Rightarrow\ L = \frac{2.627\times10^5}{3877 \ti
           type: "numerical", syllabus: "in", repeats: ["2016-17-Q4b"],
           text: String.raw`In a gas-fired boiler, water is boiled at 150°C by hot gases flowing through 50-m-long, 5-cm-outer-diameter mechanically polished stainless-steel pipes submerged in water. The outer surface of the pipe should not exceed 170°C. Thus, the operating zone is maintained so that $q_{existing} = 0.75\,q_{critical}$. Determine whether the surface temperature of the flue gas pipe is below the safety limit. Also, determine the rate of steam production from the boiler.
 
-*[Figure: cylindrical boiler with water at 150°C; a serpentine flue-gas pipe enters at the bottom (hot gases) and exits at the top (vent).]*`,
+![Gas-fired boiler: flue-gas pipe submerged in water boiling at 150°C](fig/2023-24-Q8b.svg)`,
           solution: String.raw`**Given:** $T_{sat} = 150^\circ$C; $D = 0.05$ m, $L = 50$ m; water on mechanically polished stainless steel; $\dot q = 0.75\,\dot q_{max}$; limit $T_s \le 170^\circ$C.
 
 **Find:** $T_s$ at the operating flux, and $\dot m_{steam}$.

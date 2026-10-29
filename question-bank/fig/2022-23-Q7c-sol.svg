@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 330" width="660" height="330" font-family="Helvetica, Arial, sans-serif">
+<title>Plate-and-frame heat exchanger: plate pack and alternating channels</title>
+<defs><marker id="aI" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="aIs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#1E2B3A"/></marker><marker id="aH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="aHs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#D2552B"/></marker><marker id="aC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aCs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#0B7C8C"/></marker><marker id="aG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aGs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#9AA8B8"/></marker><marker id="aA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="aAs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#B7840A"/></marker><marker id="aS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="aSs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#55667D"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="mhatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.9"/></pattern></defs>
+<rect width="660" height="330" fill="#FFFFFF"/>
+<rect x="70" y="50" width="30" height="220" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.6"/>
+<rect x="520" y="50" width="24" height="220" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.6"/>
+<text x="85" y="290" font-size="11" text-anchor="middle" fill="#1E2B3A">fixed frame</text>
+<text x="532" y="290" font-size="11" text-anchor="middle" fill="#1E2B3A">pressure plate</text>
+<line x1="60" y1="40" x2="570" y2="40" stroke="#55667D" stroke-width="3"/>
+<line x1="60" y1="276" x2="570" y2="276" stroke="#55667D" stroke-width="3"/>
+<text x="60" y="34" font-size="11" text-anchor="start" fill="#55667D">tie bolts / guide bars</text>
+<rect x="100" y="70" width="42" height="180" fill="#FBE2D6" stroke="none" stroke-width="1.5"/>
+<line x1="121" y1="90" x2="121" y2="230" stroke="#D2552B" stroke-width="1.6" marker-end="url(#aH)"/>
+<rect x="142" y="70" width="42" height="180" fill="#D9F0F2" stroke="none" stroke-width="1.5"/>
+<line x1="163" y1="230" x2="163" y2="90" stroke="#0B7C8C" stroke-width="1.6" marker-end="url(#aC)"/>
+<rect x="184" y="70" width="42" height="180" fill="#FBE2D6" stroke="none" stroke-width="1.5"/>
+<line x1="205" y1="90" x2="205" y2="230" stroke="#D2552B" stroke-width="1.6" marker-end="url(#aH)"/>
+<rect x="226" y="70" width="42" height="180" fill="#D9F0F2" stroke="none" stroke-width="1.5"/>
+<line x1="247" y1="230" x2="247" y2="90" stroke="#0B7C8C" stroke-width="1.6" marker-end="url(#aC)"/>
+<rect x="268" y="70" width="42" height="180" fill="#FBE2D6" stroke="none" stroke-width="1.5"/>
+<line x1="289" y1="90" x2="289" y2="230" stroke="#D2552B" stroke-width="1.6" marker-end="url(#aH)"/>
+<rect x="310" y="70" width="42" height="180" fill="#D9F0F2" stroke="none" stroke-width="1.5"/>
+<line x1="331" y1="230" x2="331" y2="90" stroke="#0B7C8C" stroke-width="1.6" marker-end="url(#aC)"/>
+<rect x="352" y="70" width="42" height="180" fill="#FBE2D6" stroke="none" stroke-width="1.5"/>
+<line x1="373" y1="90" x2="373" y2="230" stroke="#D2552B" stroke-width="1.6" marker-end="url(#aH)"/>
+<rect x="394" y="70" width="42" height="180" fill="#D9F0F2" stroke="none" stroke-width="1.5"/>
+<line x1="415" y1="230" x2="415" y2="90" stroke="#0B7C8C" stroke-width="1.6" marker-end="url(#aC)"/>
+<rect x="436" y="70" width="42" height="180" fill="#FBE2D6" stroke="none" stroke-width="1.5"/>
+<line x1="457" y1="90" x2="457" y2="230" stroke="#D2552B" stroke-width="1.6" marker-end="url(#aH)"/>
+<rect x="478" y="70" width="42" height="180" fill="#D9F0F2" stroke="none" stroke-width="1.5"/>
+<line x1="499" y1="230" x2="499" y2="90" stroke="#0B7C8C" stroke-width="1.6" marker-end="url(#aC)"/>
+<path d="M100,70 L103,80 L97,90 L103,100 L97,110 L103,120 L97,130 L103,140 L97,150 L103,160 L97,170 L103,180 L97,190 L103,200 L97,210 L103,220 L97,230 L103,240 L97,250" stroke="#1E2B3A" stroke-width="1.4" fill="none"/>
+<path d="M142,70 L145,80 L139,90 L145,100 L139,110 L145,120 L139,130 L145,140 L139,150 L145,160 L139,170 L145,180 L139,190 L145,200 L139,210 L145,220 L139,230 L145,240 L139,250" stroke="#1E2B3A" stroke-width="1.4" fill="none"/>
+<path d="M184,70 L187,80 L181,90 L187,100 L181,110 L187,120 L181,130 L187,140 L181,150 L187,160 L181,170 L187,180 L181,190 L187,200 L181,210 L187,220 L181,230 L187,240 L181,250" stroke="#1E2B3A" stroke-width="1.4" fill="none"/>
+<path d="M226,70 L229,80 L223,90 L229,100 L223,110 L229,120 L223,130 L229,140 L223,150 L229,160 L223,170 L229,180 L223,190 L229,200 L223,210 L229,220 L223,230 L229,240 L223,250" stroke="#1E2B3A" stroke-width="1.4" fill="none"/>
+<path d="M268,70 L271,80 L265,90 L271,100 L265,110 L271,120 L265,130 L271,140 L265,150 L271,160 L265,170 L271,180 L265,190 L271,200 L265,210 L271,220 L265,230 L271,240 L265,250" stroke="#1E2B3A" stroke-width="1.4" fill="none"/>
+<path d="M310,70 L313,80 L307,90 L313,100 L307,110 L313,120 L307,130 L313,140 L307,150 L313,160 L307,170 L313,180 L307,190 L313,200 L307,210 L313,220 L307,230 L313,240 L307,250" stroke="#1E2B3A" stroke-width="1.4" fill="none"/>
+<path d="M352,70 L355,80 L349,90 L355,100 L349,110 L355,120 L349,130 L355,140 L349,150 L355,160 L349,170 L355,180 L349,190 L355,200 L349,210 L355,220 L349,230 L355,240 L349,250" stroke="#1E2B3A" stroke-width="1.4" fill="none"/>
+<path d="M394,70 L397,80 L391,90 L397,100 L391,110 L397,120 L391,130 L397,140 L391,150 L397,160 L391,170 L397,180 L391,190 L397,200 L391,210 L397,220 L391,230 L397,240 L391,250" stroke="#1E2B3A" stroke-width="1.4" fill="none"/>
+<path d="M436,70 L439,80 L433,90 L439,100 L433,110 L439,120 L433,130 L439,140 L433,150 L439,160 L433,170 L439,180 L433,190 L439,200 L433,210 L439,220 L433,230 L439,240 L433,250" stroke="#1E2B3A" stroke-width="1.4" fill="none"/>
+<path d="M478,70 L481,80 L475,90 L481,100 L475,110 L481,120 L475,130 L481,140 L475,150 L481,160 L475,170 L481,180 L475,190 L481,200 L475,210 L481,220 L475,230 L481,240 L475,250" stroke="#1E2B3A" stroke-width="1.4" fill="none"/>
+<path d="M520,70 L523,80 L517,90 L523,100 L517,110 L523,120 L517,130 L523,140 L517,150 L523,160 L517,170 L523,180 L517,190 L523,200 L517,210 L523,220 L517,230 L523,240 L517,250" stroke="#1E2B3A" stroke-width="1.4" fill="none"/>
+<text x="360" y="34" font-size="12" text-anchor="middle" fill="#1E2B3A">corrugated plates + gaskets</text>
+<line x1="20" y1="80" x2="68" y2="80" stroke="#D2552B" stroke-width="2.2" marker-end="url(#aH)"/>
+<text x="20" y="70" font-size="11" text-anchor="start" fill="#D2552B">hot in</text>
+<line x1="68" y1="240" x2="20" y2="240" stroke="#D2552B" stroke-width="2.2" marker-end="url(#aH)"/>
+<text x="20" y="254" font-size="11" text-anchor="start" fill="#D2552B">hot out</text>
+<line x1="640" y1="240" x2="546" y2="240" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#aC)"/>
+<text x="640" y="254" font-size="11" text-anchor="end" fill="#0B7C8C">cold in</text>
+<line x1="546" y1="80" x2="640" y2="80" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#aC)"/>
+<text x="640" y="70" font-size="11" text-anchor="end" fill="#0B7C8C">cold out</text>
+<text x="330" y="310" font-size="12" text-anchor="middle" fill="#55667D">hot and cold fluids in alternate channels, counterflow; high U, compact, easy to open and clean</text>
+</svg>

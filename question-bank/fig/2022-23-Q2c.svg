@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 250" width="620" height="250" font-family="Helvetica, Arial, sans-serif">
+<title>Rectangular duct 30 mm × 50 mm heating water</title>
+<defs><marker id="aI" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="aIs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#1E2B3A"/></marker><marker id="aH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="aHs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#D2552B"/></marker><marker id="aC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aCs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#0B7C8C"/></marker><marker id="aG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aGs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#9AA8B8"/></marker><marker id="aA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="aAs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#B7840A"/></marker><marker id="aS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="aSs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#55667D"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="mhatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.9"/></pattern></defs>
+<rect width="620" height="250" fill="#FFFFFF"/>
+<rect x="42" y="62" width="166" height="106" fill="#FBE2D6" stroke="#D2552B" stroke-width="1.5"/>
+<rect x="50" y="70" width="150" height="90" fill="#D9F0F2" stroke="#1E2B3A" stroke-width="1.5"/>
+<text x="125" y="119" font-size="12" text-anchor="middle" fill="#0B7C8C">water</text>
+<line x1="50" y1="50" x2="200" y2="50" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)" marker-start="url(#aGs)"/>
+<text x="125" y="45" font-size="12" text-anchor="middle" fill="#55667D">50 mm</text>
+<line x1="222" y1="70" x2="222" y2="160" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)" marker-start="url(#aGs)"/>
+<text x="228" y="119" font-size="12" text-anchor="start" fill="#55667D">30 mm</text>
+<text x="125" y="194" font-size="12" text-anchor="middle" fill="#1E2B3A">D<tspan dy="3.6" font-size="8.6">h</tspan><tspan dy="-3.6">​</tspan> = 4A/P = 37.5 mm</text>
+<text x="125" y="212" font-size="12" text-anchor="middle" fill="#D2552B">wall T<tspan dy="3.6" font-size="8.6">w</tspan><tspan dy="-3.6">​</tspan> = 90°C</text>
+<rect x="310" y="84" width="280" height="6" fill="#FBE2D6" stroke="#D2552B" stroke-width="1"/>
+<rect x="310" y="150" width="280" height="6" fill="#FBE2D6" stroke="#D2552B" stroke-width="1"/>
+<rect x="310" y="90" width="280" height="60" fill="#D9F0F2" stroke="none" stroke-width="1.5"/>
+<line x1="280" y1="120" x2="360" y2="120" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#aC)"/>
+<line x1="540" y1="120" x2="610" y2="120" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#aC)"/>
+<text x="310" y="74" font-size="12" text-anchor="start" fill="#0B7C8C">2 kg/s, 30°C in</text>
+<text x="590" y="74" font-size="12" text-anchor="end" fill="#0B7C8C">50°C out</text>
+<line x1="310" y1="176" x2="590" y2="176" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)" marker-start="url(#aGs)"/>
+<text x="450" y="192" font-size="12" text-anchor="middle" fill="#55667D">L = ?</text>
+</svg>

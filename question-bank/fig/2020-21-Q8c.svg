@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 350" width="660" height="350" font-family="Helvetica, Arial, sans-serif">
+<title>Aluminium test sphere with an insulation shell and its resistance circuit</title>
+<defs><marker id="aI" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="aIs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#1E2B3A"/></marker><marker id="aH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="aHs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#D2552B"/></marker><marker id="aC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aCs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#0B7C8C"/></marker><marker id="aG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aGs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#9AA8B8"/></marker><marker id="aA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="aAs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#B7840A"/></marker><marker id="aS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="aSs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#55667D"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="mhatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.9"/></pattern></defs>
+<rect width="660" height="350" fill="#FFFFFF"/>
+<circle cx="150" cy="170" r="135" fill="url(#hatch)" stroke="#C98A00" stroke-width="1.3"/>
+<circle cx="150" cy="170" r="81" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.4"/>
+<circle cx="150" cy="170" r="67.5" fill="#FFFFFF" stroke="#1E2B3A" stroke-width="1.4"/>
+<circle cx="150" cy="170" r="10" fill="#FBE2D6" stroke="#D2552B" stroke-width="1.4"/>
+<text x="150" y="196" font-size="11" text-anchor="middle" fill="#D2552B">heater, 80 W</text>
+<line x1="150" y1="170" x2="213.429" y2="146.914" stroke="#1E2B3A" stroke-width="1" marker-end="url(#aI)"/>
+<line x1="150" y1="170" x2="190.5" y2="99.8519" stroke="#1E2B3A" stroke-width="1" marker-end="url(#aI)"/>
+<line x1="150" y1="170" x2="103.827" y2="43.1415" stroke="#1E2B3A" stroke-width="1" marker-end="url(#aI)"/>
+<text x="190" y="150" font-size="11" text-anchor="start" fill="#1E2B3A">r<tspan dy="3.3" font-size="7.9">1</tspan><tspan dy="-3.3">​</tspan></text>
+<text x="180" y="120" font-size="11" text-anchor="start" fill="#1E2B3A">r<tspan dy="3.3" font-size="7.9">2</tspan><tspan dy="-3.3">​</tspan></text>
+<text x="120" y="100" font-size="11" text-anchor="end" fill="#1E2B3A">r<tspan dy="3.3" font-size="7.9">3</tspan><tspan dy="-3.3">​</tspan></text>
+<text x="30" y="336" font-size="11" text-anchor="start" fill="#55667D">r<tspan dy="3.3" font-size="7.9">1</tspan><tspan dy="-3.3">​</tspan> = 0.15 m, r<tspan dy="3.3" font-size="7.9">2</tspan><tspan dy="-3.3">​</tspan> = 0.18 m, r<tspan dy="3.3" font-size="7.9">3</tspan><tspan dy="-3.3">​</tspan> = 0.30 m</text>
+<text x="30" y="320" font-size="11" text-anchor="start" fill="#55667D">T<tspan dy="3.3" font-size="7.9">1</tspan><tspan dy="-3.3">​</tspan> = 250°C at r<tspan dy="3.3" font-size="7.9">1</tspan><tspan dy="-3.3">​</tspan>;  air 20°C, h = 30 W/m²K</text>
+<text x="240" y="282" font-size="12" text-anchor="start" fill="#C98A00" font-weight="bold">insulation, k = ?</text>
+<text x="240" y="266" font-size="11" text-anchor="start" fill="#55667D">Al, k = 230</text>
+<circle cx="330" cy="170" r="3.2" fill="#1E2B3A" stroke="none" stroke-width="0"/>
+<text x="330" y="138" font-size="12" text-anchor="middle" fill="#1E2B3A">T<tspan dy="3.6" font-size="8.6">1</tspan><tspan dy="-3.6">​</tspan> = 250°C</text>
+<polyline points="330,170 352,170 355.833,164 363.5,176 371.167,164 378.833,176 386.5,164 394.167,176 398,170 420,170" fill="none" stroke="#1E2B3A" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="375" y="158" font-size="12" text-anchor="middle" fill="#1E2B3A">R<tspan dy="3.6" font-size="8.6">Al</tspan><tspan dy="-3.6">​</tspan></text>
+<text x="375" y="196" font-size="11" text-anchor="middle" fill="#55667D">(1/r<tspan dy="3.3" font-size="7.9">1</tspan><tspan dy="-3.3">​</tspan> − 1/r<tspan dy="3.3" font-size="7.9">2</tspan><tspan dy="-3.3">​</tspan>)/4πk<tspan dy="3.3" font-size="7.9">Al</tspan><tspan dy="-3.3">​</tspan></text>
+<circle cx="420" cy="170" r="3.2" fill="#1E2B3A" stroke="none" stroke-width="0"/>
+<polyline points="420,170 447,170 450.833,164 458.5,176 466.167,164 473.833,176 481.5,164 489.167,176 493,170 520,170" fill="none" stroke="#C98A00" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="470" y="158" font-size="12" text-anchor="middle" fill="#C98A00">R<tspan dy="3.6" font-size="8.6">ins</tspan><tspan dy="-3.6">​</tspan></text>
+<text x="470" y="214" font-size="11" text-anchor="middle" fill="#55667D">(1/r<tspan dy="3.3" font-size="7.9">2</tspan><tspan dy="-3.3">​</tspan> − 1/r<tspan dy="3.3" font-size="7.9">3</tspan><tspan dy="-3.3">​</tspan>)/4πk</text>
+<circle cx="520" cy="170" r="3.2" fill="#1E2B3A" stroke="none" stroke-width="0"/>
+<polyline points="520,170 547,170 550.833,164 558.5,176 566.167,164 573.833,176 581.5,164 589.167,176 593,170 620,170" fill="none" stroke="#0B7C8C" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="570" y="158" font-size="12" text-anchor="middle" fill="#0B7C8C">R<tspan dy="3.6" font-size="8.6">conv</tspan><tspan dy="-3.6">​</tspan></text>
+<text x="570" y="196" font-size="11" text-anchor="middle" fill="#55667D">1/(h·4πr<tspan dy="3.3" font-size="7.9">3</tspan><tspan dy="-3.3">​</tspan>²)</text>
+<circle cx="620" cy="170" r="3.2" fill="#1E2B3A" stroke="none" stroke-width="0"/>
+<text x="620" y="138" font-size="12" text-anchor="end" fill="#1E2B3A">T<tspan dy="3.6" font-size="8.6">∞</tspan><tspan dy="-3.6">​</tspan> = 20°C</text>
+<line x1="360" y1="110" x2="460" y2="110" stroke="#D2552B" stroke-width="2" marker-end="url(#aH)"/>
+<text x="410" y="100" font-size="12" text-anchor="middle" fill="#D2552B" font-weight="bold">q = 80 W</text>
+<text x="470" y="270" font-size="12" text-anchor="middle" fill="#1E2B3A">R<tspan dy="3.6" font-size="8.6">tot</tspan><tspan dy="-3.6">​</tspan> = (250 − 20)/80 = 2.875 K/W</text>
+</svg>

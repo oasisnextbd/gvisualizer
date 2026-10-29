@@ -12,7 +12,9 @@ QB.paper({
 $$\mathrm{Nu}_x = 0.508\,\mathrm{Pr}^{1/2}(0.952+\mathrm{Pr})^{-1/4}\mathrm{Gr}_x^{1/4},\qquad \mathrm{Gr}_x = \frac{g\beta(T_w-T_\infty)x^3}{\nu^2}$$
 The above equation gives the local heat-transfer coefficient along the vertical direction. Show that the average heat-transfer coefficient is given by
 $$\bar h = \frac{4}{3}h_{x=L}$$`,
-          solution: String.raw`**Assumptions:** isothermal plate ($T_w$ constant), laminar flow over the whole height, constant properties.
+          solution: String.raw`![Local hₓ ∝ x^(−1/4) on the plate and the average h̄ = (4/3) hL](fig/2013-14-Q1a-sol.svg)
+
+**Assumptions:** isothermal plate ($T_w$ constant), laminar flow over the whole height, constant properties.
 
 1. Write the local coefficient explicitly. Let $C = 0.508\,\mathrm{Pr}^{1/2}(0.952+\mathrm{Pr})^{-1/4}$ (a constant for a given fluid):
 $$\frac{h_x x}{k} = C\left[\frac{g\beta(T_w-T_\infty)}{\nu^2}\right]^{1/4}x^{3/4}$$
@@ -60,6 +62,8 @@ $$q = \bar h(2L^2)(T_w-T_\infty) = 808(2\times0.04)(50) = 3.23\times10^3\ \mathr
           text: String.raw`Write a short note on heat pipe.`,
           solution: String.raw`> Not covered in the current CHE 301 slides.
 
+![Heat pipe: evaporator, adiabatic section, condenser and wick](fig/2013-14-Q1c-sol.svg)
+
 **Heat pipe:** a sealed tube, evacuated and partly filled with a working fluid (water, ammonia, methanol, liquid metals for high T), whose inner wall is lined with a **wick** (mesh, grooves or sintered powder). It transports large heat loads over a distance with a very small temperature difference.
 
 **Operation (three sections)**
@@ -85,7 +89,7 @@ The condensate returns to the evaporator by **capillary action** in the wick (or
           type: "derivation", syllabus: "out", repeats: [],
           text: String.raw`Show that $A_{1,2}F_{1,2-3} = A_1F_{1-3} + A_2F_{2-3}$ in the Figure.
 
-*[Figure for Q2(a): two adjacent rectangles $A_1$ and $A_2$ forming one plane surface $A_{1,2}$, with a separate tilted rectangle $A_3$ above them.]*`,
+![Figure for Q2(a): plane surface A₁,₂ = A₁ + A₂ and a separate surface A₃](fig/2013-14-Q2a.svg)`,
           solution: String.raw`> Not covered in the current CHE 301 slides.
 
 Let $J$ be uniform radiosity. Radiation leaving the composite surface $A_{1,2} = A_1 + A_2$ that reaches $A_3$ is the sum of what leaves $A_1$ and reaches $A_3$ and what leaves $A_2$ and reaches $A_3$:
@@ -99,7 +103,7 @@ $$A_{1,2}F_{1,2-3} = A_1F_{1-3} + A_2F_{2-3}$$
           type: "derivation", syllabus: "out", repeats: [],
           text: String.raw`Determine the shape factor $F_{1-4}$ in the Figure in terms of known shape factors for perpendicular rectangles with a common edge.
 
-*[Figure for Q2(b): a vertical surface made of $A_1$ (top) above $A_2$; $A_2$ meets, at a 90° common edge, a perpendicular surface made of $A_3$ (next to the edge) and $A_4$ (farther away).]*`,
+![Figure for Q2(b): A₁ above A₂, perpendicular to A₃ and A₄ at a 90° common edge](fig/2013-14-Q2b.svg)`,
           solution: String.raw`> Not covered in the current CHE 301 slides.
 
 Known (common-edge) pairs: $(1,2)$–$(3,4)$, $(1,2)$–$3$, $2$–$(3,4)$, $2$–$3$.
@@ -119,6 +123,8 @@ Each of the four F's is read from the perpendicular-rectangles-with-common-edge 
           type: "derivation", syllabus: "out", repeats: [],
           text: String.raw`Show that a radiation shield placed between two parallel infinite planes will reduce the heat flow by one-half (assume all the surfaces have the same emissivity).`,
           solution: String.raw`> Not covered in the current CHE 301 slides.
+
+![Shield between two planes: the network doubles, so q halves](fig/2013-14-Q2c-sol.svg)
 
 **Assumptions:** infinite parallel grey diffuse planes ($F = 1$), all emissivities $\varepsilon$, thin shield (same $\varepsilon$ on both faces), steady state, no convection.
 
@@ -156,7 +162,9 @@ $$\frac{1}{U_D} = \frac{1}{U_C} + R_d,\qquad R_d = R_{di}\frac{d_o}{d_i} + R_{do
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Analyze mathematically the film condensation on a vertical plate (condensate flow is laminar) and show that
 $$\mathrm{Nu}_x = \left[\frac{\rho(\rho-\rho_v)g h_{fg}x^3}{4\mu k(T_g-T_w)}\right]^{1/4}$$`,
-          solution: String.raw`**Set-up:** vertical plate at $T_w$ in saturated vapour at $T_g$ ($T_w < T_g$). $x$ is measured downward from the top, $y$ normal to the plate; film thickness $\delta(x)$.
+          solution: String.raw`![Laminar condensate film on a vertical plate: δ(x), u(y) and linear T(y)](fig/2013-14-Q3a-sol.svg)
+
+**Set-up:** vertical plate at $T_w$ in saturated vapour at $T_g$ ($T_w < T_g$). $x$ is measured downward from the top, $y$ normal to the plate; film thickness $\delta(x)$.
 
 **Assumptions (Nusselt)**
 1. Steady, laminar film flow; constant liquid properties.
@@ -200,7 +208,9 @@ $$\bar h = 0.943\left[\frac{\rho(\rho-\rho_v)g h_{fg}k^3}{L\mu(T_g-T_w)}\right]^
           topic: "boiling", sub: "Boiling curve and regimes",
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`Draw the "Heat flux" vs. "Temperature excess" curve and explain the different regimes of boiling.`,
-          solution: String.raw`**Sketch:** log heat flux $q''$ (vertical, W/m²) vs log excess temperature $\Delta T_e = T_s - T_{sat}$ (horizontal, °C) for water at 1 atm. Mark: A ≈ 5°C (onset of nucleate boiling), B ≈ 10°C, C ≈ 30°C (peak, $q''_{max} \approx 10^6$ W/m²), D ≈ 120°C (minimum, Leidenfrost, $q''_{min}$), E ≈ 1000°C in film boiling at the same flux as C. Show a dashed arrow C→E (jump when heat flux is controlled) and D→ back to nucleate on cooling (hysteresis).
+          solution: String.raw`![Pool boiling curve, q″ vs ΔT excess, with the boiling regimes](fig/common-boiling-curve.svg)
+
+**Sketch:** log heat flux $q''$ (vertical, W/m²) vs log excess temperature $\Delta T_e = T_s - T_{sat}$ (horizontal, °C) for water at 1 atm. Mark: A ≈ 5°C (onset of nucleate boiling), B ≈ 10°C, C ≈ 30°C (peak, $q''_{max} \approx 10^6$ W/m²), D ≈ 120°C (minimum, Leidenfrost, $q''_{min}$), E ≈ 1000°C in film boiling at the same flux as C. Show a dashed arrow C→E (jump when heat flux is controlled) and D→ back to nucleate on cooling (hysteresis).
 
 **Regimes (Nukiyama curve)**
 1. **Natural (free) convection boiling, I ($\Delta T_e \lesssim 5$°C):** liquid near the surface is slightly superheated; no bubbles; heat removed by natural convection; vapour forms only at the free surface. $q'' \propto \Delta T_e^{5/4}$.
@@ -221,7 +231,9 @@ $$\bar h = 0.943\left[\frac{\rho(\rho-\rho_v)g h_{fg}k^3}{L\mu(T_g-T_w)}\right]^
           topic: "shell-tube", sub: "Multipass shell-and-tube exchanger components",
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`Draw a simple diagram of a multipass shell-and-tube heat exchanger and label its different components.`,
-          solution: String.raw`**Sketch (1-2 exchanger, floating head):** a horizontal cylindrical shell with the tube bundle inside. From left to right:
+          solution: String.raw`![Labelled 1-2 (multipass) shell-and-tube exchanger](fig/common-st-1-2.svg)
+
+**Sketch (1-2 exchanger, floating head):** a horizontal cylindrical shell with the tube bundle inside. From left to right:
 - **Channel (stationary head)** with **channel cover** and a horizontal **pass-partition plate**; **tube-side inlet nozzle** on the lower half and **outlet nozzle** on the upper half.
 - **Stationary tube sheet** into which the tubes are rolled/welded.
 - **Tubes** running the length of the shell (first pass in the lower half, return pass in the upper half).
@@ -249,7 +261,9 @@ Arrows: tube fluid in → pass 1 → turns in the floating head → pass 2 → o
           topic: "heat-exchangers", sub: "LMTD derivation (double pipe)",
           type: "derivation", syllabus: "in", repeats: ["2017-18-Q2b"],
           text: String.raw`In a double-pipe heat exchanger the temperature difference between hot fluid and cold fluid varies continuously along the length of the exchanger. Therefore, some kind of mean temperature difference is to be used for heat transfer calculations. Show mathematically that log-mean temperature difference is appropriate for this.`,
-          solution: String.raw`**Assumptions (slides):**
+          solution: String.raw`![Parallel-flow profiles with the element dA used in the LMTD derivation](fig/2013-14-Q4b-sol.svg)
+
+**Assumptions (slides):**
 1. The exchanger is insulated from its surroundings, so heat is exchanged only between the hot and cold fluids.
 2. Axial conduction along the tubes is negligible.
 3. Potential and kinetic energy changes are negligible.
@@ -281,6 +295,8 @@ So the mean temperature difference that makes $q = UA\,\Delta T_m$ exact is the 
           solution: String.raw`**Given:** $d_i = 0.025$ m, wall 0.8 mm → $d_o = D_1 = 0.0266$ m; $V_i = 4$ m/s at 90°C; annulus $D_2 = 0.0375$ m, $V_a = 6$ m/s at 20°C; $L = 6$ m.
 **Find:** $U_o$ (based on the outside area of the inner tube, the reference surface the slides use for double pipes).
 **Assumptions:** properties at the given temperatures (taken as bulk); clean surfaces; steel $k \approx 54$ W/m·K (mild steel); Dittus–Boelter for both streams; $(\mu/\mu_w)$ effects neglected.
+
+![Double-pipe exchanger: inner tube 2.5 cm ID (0.8 mm wall), outer pipe 3.75 cm ID](fig/2013-14-Q4c.svg)
 
 Water properties (Çengel Table A-9):
 | | 90°C (tube) | 20°C (annulus) |
@@ -351,6 +367,8 @@ Note that $q$ is constant with $r$ but the flux $q/4\pi r^2$ falls as $1/r^2$, a
           solution: String.raw`**Given:** $r_1 = 0.50$ m, $r_2 = 0.51$ m, $k_s = 17$ W/m·K, $h = 6$ W/m²K, $T_\infty = 25$°C, $T_{s,i} = 50$°C; insulation $r_3 = 0.512$ m, $k_{ins} = 0.040$ W/m·K.
 **Assumptions:** steady, radial conduction; constant $k$; radiation neglected; negligible contact resistance.
 
+![Spherical reactor wall, optional fibreglass layer and the series circuit](fig/2013-14-Q5b.svg)
+
 ### (i) Heat loss
 $$R_{wall} = \frac{1}{4\pi k_s}\left(\frac{1}{r_1} - \frac{1}{r_2}\right) = \frac{1}{4\pi(17)}\left(\frac{1}{0.50} - \frac{1}{0.51}\right) = 1.84\times10^{-4}\ \mathrm{K/W}$$
 $$R_{conv} = \frac{1}{h\,4\pi r_2^2} = \frac{1}{6(4\pi)(0.51)^2} = 0.0510\ \mathrm{K/W}$$
@@ -373,7 +391,9 @@ $$T_{s,i} = T_\infty + qR_{tot} = 25 + 488.5(0.06602) = 57.2\,°\mathrm{C}$$
           topic: "boundary-layer", sub: "Hydrodynamic vs thermal boundary layers",
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`With the help of schematics, explain the differences between hydrodynamic and thermal boundary layers.`,
-          solution: String.raw`**Schematic 1 (hydrodynamic):** flat plate with uniform approaching velocity $u_\infty$; velocity profiles at several $x$ rising from $u = 0$ at the wall to $u_\infty$; the edge line $\delta(x)$ (where $u = 0.99u_\infty$) grows from the leading edge (laminar, then transition and turbulent with a viscous sublayer).
+          solution: String.raw`![Velocity and thermal boundary layers on a flat plate](fig/common-bl-flat-plate.svg)
+
+**Schematic 1 (hydrodynamic):** flat plate with uniform approaching velocity $u_\infty$; velocity profiles at several $x$ rising from $u = 0$ at the wall to $u_\infty$; the edge line $\delta(x)$ (where $u = 0.99u_\infty$) grows from the leading edge (laminar, then transition and turbulent with a viscous sublayer).
 
 **Schematic 2 (thermal):** same plate at $T_w$, fluid at $T_\infty$; temperature profiles from $T_w$ at the wall to $T_\infty$; edge line $\delta_t(x)$ (where $(T-T_w)/(T_\infty-T_w) = 0.99$).
 
@@ -401,7 +421,9 @@ Continuity: $\dfrac{\partial u}{\partial x} + \dfrac{\partial v}{\partial y} = 0
 Momentum: $\rho\left(u\dfrac{\partial u}{\partial x} + v\dfrac{\partial u}{\partial y}\right) = \mu\dfrac{\partial^2 u}{\partial y^2} - \dfrac{\partial p}{\partial x}$
 
 *(The paper prints $\partial v/\partial x$ and $v\,\partial u/\partial x$; these are misprints for $\partial v/\partial y$ and $v\,\partial u/\partial y$.)*`,
-          solution: String.raw`**Assumptions**
+          solution: String.raw`![Integral momentum control volume in the flat-plate boundary layer](fig/2013-14-Q6b-sol.svg)
+
+**Assumptions**
 1. Steady, 2-D, incompressible, laminar flow; constant properties.
 2. Boundary-layer approximations ($\delta \ll x$, $\partial^2u/\partial x^2 \ll \partial^2u/\partial y^2$).
 3. Zero pressure gradient: outside the layer $u = u_\infty$ = const, so $dp/dx = 0$ (flat plate).
@@ -501,6 +523,8 @@ with $f$ the Darcy friction factor ($\Delta p = f\frac{L}{d}\frac{\rho u_m^2}{2}
 **Find:** $L$.
 **Assumptions:** fully developed turbulent flow; thin wall at 121°C; Dittus–Boelter (heating, $n = 0.4$).
 
+![Water heated from 15 to 60°C in a tube held at 121°C](fig/2013-14-Q7b.svg)
+
 1. Derived properties:
 $$\mu = \rho\nu = 993.2(0.686\times10^{-6}) = 6.81\times10^{-4}\ \mathrm{kg/m\,s},\qquad \mathrm{Pr} = \frac{\mu c_p}{k} = \frac{6.81\times10^{-4}(4183)}{0.628} = 4.54$$
 
@@ -544,6 +568,8 @@ Sugar slurry properties at average temperature:
 **Find:** $T_o$.
 **Assumptions:** steady; constant wall temperature; laminar entrance region over the whole length (given); $\mu_w$ not given, so $(\mu/\mu_w)^{0.14} \approx 1$.
 
+![Sugar slurry in a 25 mm tube, 5 m long, wall at 100°C](fig/2013-14-Q8a.svg)
+
 1. Reynolds and Prandtl numbers:
 $$\mathrm{Re} = \frac{4\dot m}{\pi D\mu} = \frac{4(0.5)}{\pi(0.025)(0.0836)} = 305\ (\text{laminar})$$
 $$\mathrm{Pr} = \frac{c_p\mu}{k} = \frac{2035(0.0836)}{0.141} = 1207$$
@@ -578,6 +604,8 @@ $$T_o = 100 - 75(0.9516) = 28.6\,°\mathrm{C}$$
           solution: String.raw`**Given:** inner pipe $D_i = 0.06$ m (thin wall), outer pipe $D_o = 0.10$ m; $\dot m_w = 0.3$ kg/s, $\dot m_{oil} = 0.15$ kg/s; properties as tabulated.
 **Find:** $h_{water}$, $h_{oil}$.
 **Assumptions:** fully developed flow; inner wall thickness neglected; outer pipe insulated; properties at the stated mean temperatures.
+
+![Concentric-pipe oil cooler: water inside, oil in the annulus](fig/2013-14-Q8b.svg)
 
 ### Water side (inside the inner pipe)
 $$\mathrm{Re} = \frac{4\dot m}{\pi D_i\mu} = \frac{4(0.3)}{\pi(0.06)(7.25\times10^{-4})} = 8.78\times10^3$$

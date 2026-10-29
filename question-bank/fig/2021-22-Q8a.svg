@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" width="680" height="420" font-family="Helvetica, Arial, sans-serif">
+<title>Tube with uniform generation, insulated outside and cooled inside</title>
+<defs><marker id="aI" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="aIs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#1E2B3A"/></marker><marker id="aH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="aHs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#D2552B"/></marker><marker id="aC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aCs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#0B7C8C"/></marker><marker id="aG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aGs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#9AA8B8"/></marker><marker id="aA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="aAs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#B7840A"/></marker><marker id="aS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="aSs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#55667D"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="mhatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.9"/></pattern></defs>
+<rect width="680" height="420" fill="#FFFFFF"/>
+<circle cx="140" cy="210" r="70" fill="url(#hatch)" stroke="#C98A00" stroke-width="1.1"/>
+<circle cx="140" cy="210" r="62" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.4"/>
+<circle cx="140" cy="210" r="36" fill="#D9F0F2" stroke="#1E2B3A" stroke-width="1.4"/>
+<text x="140" y="214" font-size="11" text-anchor="middle" fill="#0B7C8C">coolant</text>
+<text x="60" y="320" font-size="13" text-anchor="start" fill="#0B7C8C" font-weight="bold">Coolant</text>
+<text x="60" y="338" font-size="13" text-anchor="start" fill="#0B7C8C">T<tspan dy="3.9" font-size="9.4">∞</tspan><tspan dy="-3.9">​</tspan>, h</text>
+<line x1="90" y1="306" x2="126" y2="228" stroke="#55667D" stroke-width="0.9" marker-end="url(#aS)"/>
+<circle cx="195" cy="184" r="14" fill="none" stroke="#55667D" stroke-width="1.2"/>
+<path d="M210,174 C260,120 300,150 340,170" stroke="#55667D" stroke-width="4" fill="none" marker-end="url(#aS)"/>
+<path d="M587.926,367.583 A205,205 0 0 0 522.5,72.4648 L531,57.7424 A222,222 0 0 1 601.852,377.334 Z" stroke="#C98A00" stroke-width="1.4" fill="url(#hatch)"/>
+<path d="M542.873,336.036 A150,150 0 0 0 495,120.096 L522.5,72.4648 A205,205 0 0 1 587.926,367.583 Z" stroke="#1E2B3A" stroke-width="1.4" fill="#DCE3EC"/>
+<circle cx="420" cy="250" r="3" fill="#1E2B3A" stroke="none" stroke-width="1.5"/>
+<text x="408" y="272" font-size="13" text-anchor="end" fill="#0B7C8C">T<tspan dy="3.9" font-size="9.4">∞</tspan><tspan dy="-3.9">​</tspan>, h</text>
+<line x1="420" y1="250" x2="567" y2="250" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)"/>
+<text x="502.5" y="244" font-size="13" text-anchor="middle" fill="#55667D">r<tspan dy="3.9" font-size="9.4">1</tspan><tspan dy="-3.9">​</tspan></text>
+<line x1="420" y1="250" x2="603.074" y2="335.369" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)"/>
+<text x="522.186" y="311.65" font-size="13" text-anchor="middle" fill="#55667D">r<tspan dy="3.9" font-size="9.4">2</tspan><tspan dy="-3.9">​</tspan></text>
+<line x1="512.349" y1="131.798" x2="452.349" y2="109.798" stroke="#55667D" stroke-width="0.9"/>
+<circle cx="512.349" cy="131.798" r="1.8" fill="#55667D" stroke="none" stroke-width="0"/>
+<text x="449.349" y="113.798" font-size="13" text-anchor="end" fill="#1E2B3A">T<tspan dy="3.9" font-size="9.4">s,1</tspan><tspan dy="-3.9">​</tspan></text>
+<line x1="537.583" y1="82.0738" x2="487.583" y2="46.0738" stroke="#55667D" stroke-width="0.9"/>
+<circle cx="537.583" cy="82.0738" r="1.8" fill="#55667D" stroke="none" stroke-width="0"/>
+<text x="484.583" y="50.0738" font-size="13" text-anchor="end" fill="#1E2B3A">T<tspan dy="3.9" font-size="9.4">s,2</tspan><tspan dy="-3.9">​</tspan></text>
+<line x1="598.542" y1="185.016" x2="562.833" y2="198.013" stroke="#D2552B" stroke-width="2.4" marker-end="url(#aH)"/>
+<text x="571.885" y="160" font-size="13" text-anchor="end" fill="#D2552B">q′<tspan dy="3.9" font-size="9.4">cond</tspan><tspan dy="-3.9">​</tspan></text>
+<line x1="555.316" y1="200.749" x2="504.572" y2="219.218" stroke="#0B7C8C" stroke-width="2.4" marker-end="url(#aC)"/>
+<text x="500.572" y="211.218" font-size="13" text-anchor="end" fill="#0B7C8C">q′<tspan dy="3.9" font-size="9.4">conv</tspan><tspan dy="-3.9">​</tspan></text>
+<text x="589.037" y="299.293" font-size="13" text-anchor="start" fill="#1E2B3A">q̇, k</text>
+<line x1="612.258" y1="361" x2="602.258" y2="401" stroke="#55667D" stroke-width="0.9"/>
+<circle cx="612.258" cy="361" r="1.8" fill="#55667D" stroke="none" stroke-width="0"/>
+<text x="599.258" y="405" font-size="12" text-anchor="end" fill="#1E2B3A">Insulation (q″ = 0 at r<tspan dy="3.6" font-size="8.6">2</tspan><tspan dy="-3.6">​</tspan>)</text>
+</svg>

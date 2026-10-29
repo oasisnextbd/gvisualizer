@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 300" width="620" height="300" font-family="Helvetica, Arial, sans-serif">
+<title>Hollow cylinder: radial conduction and its thermal resistance</title>
+<defs><marker id="aI" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="aIs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#1E2B3A"/></marker><marker id="aH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="aHs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#D2552B"/></marker><marker id="aC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aCs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#0B7C8C"/></marker><marker id="aG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aGs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#9AA8B8"/></marker><marker id="aA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="aAs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#B7840A"/></marker><marker id="aS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="aSs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#55667D"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="mhatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.9"/></pattern></defs>
+<rect width="620" height="300" fill="#FFFFFF"/>
+<circle cx="150" cy="150" r="115" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.6"/>
+<circle cx="150" cy="150" r="50" fill="#FFFFFF" stroke="#1E2B3A" stroke-width="1.6"/>
+<circle cx="150" cy="150" r="82" fill="none" stroke="#55667D" stroke-width="1" stroke-dasharray="4 3"/>
+<circle cx="150" cy="150" r="92" fill="none" stroke="#55667D" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="148" y="80" font-size="10" text-anchor="middle" fill="#55667D">shell dr</text>
+<line x1="150" y1="150" x2="190" y2="180" stroke="#1E2B3A" stroke-width="1" marker-end="url(#aI)"/>
+<text x="164" y="182" font-size="12" text-anchor="start" fill="#1E2B3A">r<tspan dy="3.6" font-size="8.6">1</tspan><tspan dy="-3.6">​</tspan></text>
+<line x1="150" y1="150" x2="58" y2="219" stroke="#1E2B3A" stroke-width="1" marker-end="url(#aI)"/>
+<text x="100" y="206" font-size="12" text-anchor="end" fill="#1E2B3A">r<tspan dy="3.6" font-size="8.6">2</tspan><tspan dy="-3.6">​</tspan></text>
+<line x1="200.229" y1="179" x2="243.531" y2="204" stroke="#D2552B" stroke-width="1.6" marker-end="url(#aH)"/>
+<line x1="150" y1="208" x2="150" y2="258" stroke="#D2552B" stroke-width="1.6" marker-end="url(#aH)"/>
+<line x1="99.7705" y1="179" x2="56.4693" y2="204" stroke="#D2552B" stroke-width="1.6" marker-end="url(#aH)"/>
+<line x1="99.7705" y1="121" x2="56.4693" y2="96" stroke="#D2552B" stroke-width="1.6" marker-end="url(#aH)"/>
+<line x1="150" y1="92" x2="150" y2="42" stroke="#D2552B" stroke-width="1.6" marker-end="url(#aH)"/>
+<line x1="200.229" y1="121" x2="243.531" y2="96" stroke="#D2552B" stroke-width="1.6" marker-end="url(#aH)"/>
+<text x="136" y="136" font-size="13" text-anchor="middle" fill="#D2552B" font-weight="bold">T<tspan dy="3.9" font-size="9.4">1</tspan><tspan dy="-3.9">​</tspan></text>
+<text x="273" y="80" font-size="12" text-anchor="start" fill="#1E2B3A">T<tspan dy="3.6" font-size="8.6">2</tspan><tspan dy="-3.6">​</tspan> (outer)</text>
+<text x="273" y="180" font-size="13" text-anchor="start" fill="#D2552B">q<tspan dy="3.9" font-size="9.4">r</tspan><tspan dy="-3.9">​</tspan> (radial)</text>
+<text x="150" y="290" font-size="11" text-anchor="middle" fill="#55667D">length L, conductivity k, T<tspan dy="3.3" font-size="7.9">1</tspan><tspan dy="-3.3">​</tspan> &gt; T<tspan dy="3.3" font-size="7.9">2</tspan><tspan dy="-3.3">​</tspan></text>
+<circle cx="330" cy="140" r="3.2" fill="#1E2B3A" stroke="none" stroke-width="0"/>
+<text x="330" y="126" font-size="13" text-anchor="middle" fill="#1E2B3A">T<tspan dy="3.9" font-size="9.4">1</tspan><tspan dy="-3.9">​</tspan></text>
+<polyline points="330,140 422,140 425.833,134 433.5,146 441.167,134 448.833,146 456.5,134 464.167,146 468,140 560,140" fill="none" stroke="#1E2B3A" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="445" y="122" font-size="14" text-anchor="middle" fill="#1E2B3A">R<tspan dy="4.2" font-size="10.1">cyl</tspan><tspan dy="-4.2">​</tspan> = ln(r<tspan dy="4.2" font-size="10.1">2</tspan><tspan dy="-4.2">​</tspan>/r<tspan dy="4.2" font-size="10.1">1</tspan><tspan dy="-4.2">​</tspan>) / (2πkL)</text>
+<circle cx="560" cy="140" r="3.2" fill="#1E2B3A" stroke="none" stroke-width="0"/>
+<text x="560" y="126" font-size="13" text-anchor="middle" fill="#1E2B3A">T<tspan dy="3.9" font-size="9.4">2</tspan><tspan dy="-3.9">​</tspan></text>
+<line x1="380" y1="176" x2="510" y2="176" stroke="#D2552B" stroke-width="2" marker-end="url(#aH)"/>
+<text x="445" y="198" font-size="13" text-anchor="middle" fill="#D2552B">q<tspan dy="3.9" font-size="9.4">r</tspan><tspan dy="-3.9">​</tspan> = (T<tspan dy="3.9" font-size="9.4">1</tspan><tspan dy="-3.9">​</tspan> − T<tspan dy="3.9" font-size="9.4">2</tspan><tspan dy="-3.9">​</tspan>)/R<tspan dy="3.9" font-size="9.4">cyl</tspan><tspan dy="-3.9">​</tspan></text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 330" width="700" height="330" font-family="Helvetica, Arial, sans-serif">
+<title>Parallel-flow temperature profiles with phase change</title>
+<defs><marker id="a-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="a-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="a-cold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="a-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="a-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="a-vap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><pattern id="ins" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="metal" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.8"/></pattern></defs>
+<rect width="700" height="330" fill="#FFFFFF"/>
+<line x1="60" y1="270" x2="320" y2="270" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#a-ink)"/><line x1="60" y1="270" x2="60" y2="50" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#a-ink)"/><text x="320" y="290" font-size="12" fill="#1E2B3A" text-anchor="end">Length (inlet → outlet)</text><text x="52" y="54" font-size="12" fill="#1E2B3A" text-anchor="end">T</text>
+<text x="190.0" y="30" font-size="14" fill="#1E2B3A" text-anchor="middle" font-weight="bold">(i) Both fluids change phase</text>
+<line x1="60" y1="100" x2="300" y2="100" stroke="#D2552B" stroke-width="2.6"/>
+<line x1="60" y1="200" x2="300" y2="200" stroke="#0B7C8C" stroke-width="2.6"/>
+<text x="180" y="92" font-size="11" fill="#D2552B" text-anchor="middle">hot fluid condenses at T<tspan dy="3.5" font-size="7.9">sat,h</tspan><tspan dy="-3.5"> </tspan></text>
+<text x="180" y="222" font-size="11" fill="#0B7C8C" text-anchor="middle">cold fluid boils at t<tspan dy="3.5" font-size="7.9">sat,c</tspan><tspan dy="-3.5"> </tspan></text>
+<line x1="84" y1="104" x2="84" y2="196" stroke="#55667D" stroke-width="1" marker-end="url(#a-dim)" marker-start="url(#a-dim)"/>
+<text x="90" y="154" font-size="12" fill="#55667D">ΔT<tspan dy="3.8" font-size="8.6">1</tspan><tspan dy="-3.8"> </tspan></text>
+<line x1="276" y1="104" x2="276" y2="196" stroke="#55667D" stroke-width="1" marker-end="url(#a-dim)" marker-start="url(#a-dim)"/>
+<text x="282" y="154" font-size="12" fill="#55667D">ΔT<tspan dy="3.8" font-size="8.6">2</tspan><tspan dy="-3.8"> </tspan></text>
+<text x="180" y="154" font-size="12" fill="#1E2B3A" text-anchor="middle">ΔT<tspan dy="3.8" font-size="8.6">1</tspan><tspan dy="-3.8"> </tspan> = ΔT<tspan dy="3.8" font-size="8.6">2</tspan><tspan dy="-3.8"> </tspan> = const</text>
+<text x="54" y="104" font-size="11" fill="#D2552B" text-anchor="end">T<tspan dy="3.5" font-size="7.9">1</tspan><tspan dy="-3.5"> </tspan> = T<tspan dy="3.5" font-size="7.9">2</tspan><tspan dy="-3.5"> </tspan></text>
+<text x="54" y="204" font-size="11" fill="#0B7C8C" text-anchor="end">t<tspan dy="3.5" font-size="7.9">1</tspan><tspan dy="-3.5"> </tspan> = t<tspan dy="3.5" font-size="7.9">2</tspan><tspan dy="-3.5"> </tspan></text>
+<line x1="130" y1="308" x2="190" y2="308" stroke="#D2552B" stroke-width="2" marker-end="url(#a-hot)"/>
+<text x="126" y="312" font-size="11" fill="#D2552B" text-anchor="end">hot</text>
+<line x1="230" y1="308" x2="290" y2="308" stroke="#0B7C8C" stroke-width="2" marker-end="url(#a-cold)"/>
+<text x="226" y="312" font-size="11" fill="#0B7C8C" text-anchor="end">cold</text>
+<line x1="410" y1="270" x2="670" y2="270" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#a-ink)"/><line x1="410" y1="270" x2="410" y2="50" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#a-ink)"/><text x="670" y="290" font-size="12" fill="#1E2B3A" text-anchor="end">Length (inlet → outlet)</text><text x="402" y="54" font-size="12" fill="#1E2B3A" text-anchor="end">T</text>
+<text x="540.0" y="30" font-size="14" fill="#1E2B3A" text-anchor="middle" font-weight="bold">(ii) One fluid partially condensed</text>
+<line x1="410" y1="90" x2="650" y2="90" stroke="#D2552B" stroke-width="2.6"/>
+<path d="M410,90 C490,96 580,108 650,118" stroke="#D2552B" stroke-width="1.6" fill="none" stroke-dasharray="6 4"/>
+<text x="414" y="80" font-size="11" fill="#D2552B">pure vapour: T<tspan dy="3.5" font-size="7.9">1</tspan><tspan dy="-3.5"> </tspan> = T<tspan dy="3.5" font-size="7.9">2</tspan><tspan dy="-3.5"> </tspan> = T<tspan dy="3.5" font-size="7.9">sat</tspan><tspan dy="-3.5"> </tspan></text>
+<text x="470" y="124" font-size="10" fill="#D2552B">mixture (dashed): dew → bubble point</text>
+<path d="M410.0,250.0 C411.3,248.3 415.3,243.1 418.0,239.9 C420.7,236.6 423.3,233.5 426.0,230.5 C428.7,227.5 431.3,224.6 434.0,221.8 C436.7,219.1 439.3,216.4 442.0,213.9 C444.7,211.3 447.3,208.9 450.0,206.5 C452.7,204.1 455.3,201.9 458.0,199.7 C460.7,197.5 463.3,195.4 466.0,193.4 C468.7,191.4 471.3,189.5 474.0,187.6 C476.7,185.8 479.3,184.0 482.0,182.3 C484.7,180.6 487.3,178.9 490.0,177.3 C492.7,175.7 495.3,174.2 498.0,172.8 C500.7,171.3 503.3,169.9 506.0,168.6 C508.7,167.2 511.3,165.9 514.0,164.7 C516.7,163.4 519.3,162.2 522.0,161.1 C524.7,159.9 527.3,158.8 530.0,157.8 C532.7,156.7 535.3,155.7 538.0,154.7 C540.7,153.7 543.3,152.8 546.0,151.9 C548.7,151.0 551.3,150.1 554.0,149.3 C556.7,148.5 559.3,147.7 562.0,146.9 C564.7,146.1 567.3,145.4 570.0,144.7 C572.7,144.0 575.3,143.3 578.0,142.6 C580.7,142.0 583.3,141.3 586.0,140.7 C588.7,140.1 591.3,139.5 594.0,139.0 C596.7,138.4 599.3,137.9 602.0,137.4 C604.7,136.9 607.3,136.4 610.0,135.9 C612.7,135.4 615.3,135.0 618.0,134.5 C620.7,134.1 623.3,133.7 626.0,133.2 C628.7,132.8 631.3,132.5 634.0,132.1 C636.7,131.7 639.3,131.3 642.0,131.0 C644.7,130.7 648.7,130.2 650.0,130.0" stroke="#0B7C8C" stroke-width="2.6" fill="none"/>
+<text x="530" y="236" font-size="11" fill="#0B7C8C">cold fluid heated (sensible)</text>
+<text x="404" y="254" font-size="12" fill="#0B7C8C" text-anchor="end">t<tspan dy="3.8" font-size="8.6">1</tspan><tspan dy="-3.8"> </tspan></text>
+<text x="654" y="150" font-size="12" fill="#0B7C8C">t<tspan dy="3.8" font-size="8.6">2</tspan><tspan dy="-3.8"> </tspan></text>
+<text x="404" y="94" font-size="12" fill="#D2552B" text-anchor="end">T<tspan dy="3.8" font-size="8.6">1</tspan><tspan dy="-3.8"> </tspan></text>
+<line x1="422" y1="94" x2="422" y2="246" stroke="#55667D" stroke-width="1" marker-end="url(#a-dim)" marker-start="url(#a-dim)"/>
+<text x="427" y="180" font-size="12" fill="#55667D">ΔT<tspan dy="3.8" font-size="8.6">1</tspan><tspan dy="-3.8"> </tspan></text>
+<line x1="646" y1="94" x2="646" y2="128" stroke="#55667D" stroke-width="1" marker-end="url(#a-dim)" marker-start="url(#a-dim)"/>
+<text x="652" y="108" font-size="12" fill="#55667D">ΔT<tspan dy="3.8" font-size="8.6">2</tspan><tspan dy="-3.8"> </tspan></text>
+<line x1="480" y1="308" x2="540" y2="308" stroke="#D2552B" stroke-width="2" marker-end="url(#a-hot)"/>
+<text x="476" y="312" font-size="11" fill="#D2552B" text-anchor="end">hot</text>
+<line x1="580" y1="308" x2="640" y2="308" stroke="#0B7C8C" stroke-width="2" marker-end="url(#a-cold)"/>
+<text x="576" y="312" font-size="11" fill="#0B7C8C" text-anchor="end">cold</text>
+</svg>

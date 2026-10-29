@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 400" width="620" height="400" font-family="Helvetica, Arial, sans-serif">
+<title>Composite furnace wall: magnesite and common brick</title>
+<defs><marker id="aI" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="aIs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#1E2B3A"/></marker><marker id="aH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="aHs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#D2552B"/></marker><marker id="aC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aCs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#0B7C8C"/></marker><marker id="aG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aGs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#9AA8B8"/></marker><marker id="aA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="aAs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#B7840A"/></marker><marker id="aS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="aSs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#55667D"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="mhatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.9"/></pattern><pattern id="brA" width="24" height="28" patternUnits="userSpaceOnUse" x="230" y="70"><rect width="24" height="28" fill="#F1D9CE"/><path d="M0,0.5 H24 M0,14.5 H24 M12,0 V14 M0.5,14 V28" stroke="#55667D" stroke-width="1" fill="none"/></pattern><pattern id="brB" width="20" height="24" patternUnits="userSpaceOnUse" x="326" y="70"><rect width="20" height="24" fill="#E6E9EE"/><path d="M0,0.5 H20 M0,12.5 H20 M10,0 V12 M0.5,12 V24" stroke="#55667D" stroke-width="1" fill="none"/></pattern></defs>
+<rect width="620" height="400" fill="#FFFFFF"/>
+<rect x="230" y="70" width="96" height="250" fill="url(#brA)" stroke="#1E2B3A" stroke-width="1.6"/>
+<rect x="326" y="70" width="80" height="250" fill="url(#brB)" stroke="#1E2B3A" stroke-width="1.6"/>
+<line x1="278" y1="80" x2="260" y2="54" stroke="#55667D" stroke-width="0.9"/>
+<circle cx="278" cy="80" r="1.8" fill="#55667D" stroke="none" stroke-width="0"/>
+<text x="260" y="30" font-size="13" text-anchor="middle" fill="#1E2B3A">Magnesite bricks</text>
+<text x="260" y="46" font-size="11" text-anchor="middle" fill="#55667D">k<tspan dy="3.3" font-size="7.9">1</tspan><tspan dy="-3.3">​</tspan> = 11.5 W/m·K</text>
+<line x1="366" y1="80" x2="396" y2="54" stroke="#55667D" stroke-width="0.9"/>
+<circle cx="366" cy="80" r="1.8" fill="#55667D" stroke="none" stroke-width="0"/>
+<text x="396" y="30" font-size="13" text-anchor="middle" fill="#1E2B3A">Common bricks</text>
+<text x="396" y="46" font-size="11" text-anchor="middle" fill="#55667D">k<tspan dy="3.3" font-size="7.9">2</tspan><tspan dy="-3.3">​</tspan> = 0.65 W/m·K</text>
+<text x="332" y="150" font-size="13" text-anchor="start" fill="#1E2B3A" font-weight="bold">T<tspan dy="3.9" font-size="9.4">2</tspan><tspan dy="-3.9">​</tspan></text>
+<line x1="170" y1="195" x2="224" y2="195" stroke="#D2552B" stroke-width="5" marker-end="url(#aH)"/>
+<line x1="412" y1="195" x2="466" y2="195" stroke="#D2552B" stroke-width="5" marker-end="url(#aH)"/>
+<text x="472" y="200" font-size="15" text-anchor="start" fill="#D2552B" font-weight="bold">Q</text>
+<text x="110" y="100" font-size="13" text-anchor="middle" fill="#1E2B3A" font-weight="bold">Furnace gases</text>
+<line x1="60" y1="112" x2="160" y2="112" stroke="#D2552B" stroke-width="1.8" marker-end="url(#aH)"/>
+<text x="110" y="135" font-size="12" text-anchor="middle" fill="#1E2B3A">T<tspan dy="3.6" font-size="8.6">∞,1</tspan><tspan dy="-3.6">​</tspan> = 1400°C</text>
+<text x="110" y="152" font-size="12" text-anchor="middle" fill="#55667D">h<tspan dy="3.6" font-size="8.6">c</tspan><tspan dy="-3.6">​</tspan> = 17.5 W/m²·K</text>
+<text x="110" y="168" font-size="12" text-anchor="middle" fill="#55667D">h<tspan dy="3.6" font-size="8.6">r</tspan><tspan dy="-3.6">​</tspan> = 23.2 W/m²·K</text>
+<text x="520" y="100" font-size="13" text-anchor="middle" fill="#1E2B3A" font-weight="bold">Surrounding air</text>
+<line x1="470" y1="112" x2="570" y2="112" stroke="#0B7C8C" stroke-width="1.8" marker-end="url(#aC)"/>
+<text x="520" y="135" font-size="12" text-anchor="middle" fill="#1E2B3A">T<tspan dy="3.6" font-size="8.6">∞,2</tspan><tspan dy="-3.6">​</tspan> = 30°C</text>
+<text x="520" y="152" font-size="12" text-anchor="middle" fill="#55667D">h<tspan dy="3.6" font-size="8.6">c</tspan><tspan dy="-3.6">​</tspan> = 7.5 W/m²·K</text>
+<text x="520" y="168" font-size="12" text-anchor="middle" fill="#55667D">h<tspan dy="3.6" font-size="8.6">r</tspan><tspan dy="-3.6">​</tspan> = 11.5 W/m²·K</text>
+<line x1="230" y1="324" x2="230" y2="350" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="326" y1="324" x2="326" y2="350" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="406" y1="324" x2="406" y2="350" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="230" y1="342" x2="326" y2="342" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)" marker-start="url(#aGs)"/>
+<text x="278" y="362" font-size="12" text-anchor="middle" fill="#55667D">L<tspan dy="3.6" font-size="8.6">1</tspan><tspan dy="-3.6">​</tspan> = 300 mm</text>
+<text x="466" y="225" font-size="11" text-anchor="middle" fill="#55667D">(per unit area)</text>
+<line x1="326" y1="342" x2="406" y2="342" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)" marker-start="url(#aGs)"/>
+<text x="366" y="362" font-size="12" text-anchor="middle" fill="#55667D">L<tspan dy="3.6" font-size="8.6">2</tspan><tspan dy="-3.6">​</tspan> = 250 mm</text>
+</svg>

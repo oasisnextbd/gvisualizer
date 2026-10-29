@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 330" width="700" height="330" font-family="Helvetica, Arial, sans-serif">
+<title>Insulated spherical reactor with convection and radiation from the outer surface</title>
+<defs><marker id="a-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="a-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="a-cold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="a-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="a-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="a-vap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><pattern id="ins" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="metal" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.8"/></pattern></defs>
+<rect width="700" height="330" fill="#FFFFFF"/>
+<circle cx="160" cy="165" r="130" fill="url(#ins)" stroke="#C98A00" stroke-width="1.5"/>
+<circle cx="160" cy="165" r="130" fill="none" stroke="#1E2B3A" stroke-width="1.8"/>
+<circle cx="160" cy="165" r="104" fill="#FBE2D6" stroke="#1E2B3A" stroke-width="2"/>
+<text x="160" y="147" font-size="12" fill="#D2552B" text-anchor="middle" font-weight="bold">reacting mixture</text>
+<text x="160" y="165" font-size="12" fill="#D2552B" text-anchor="middle">T<tspan dy="3.8" font-size="8.6">0</tspan><tspan dy="-3.8"> </tspan> = 90°C</text>
+<text x="160" y="183" font-size="11" fill="#D2552B" text-anchor="middle">q̇ = 5000 e<tspan dy="-4.4" font-size="7.9">−75/T₀</tspan><tspan dy="4.4"> </tspan> W/m³</text>
+<line x1="160" y1="195" x2="224.64743670014911" y2="246.46599860125826" stroke="#1E2B3A" stroke-width="1.1" marker-end="url(#a-ink)"/>
+<text x="166" y="227" font-size="11" fill="#1E2B3A">r<tspan dy="3.5" font-size="7.9">1</tspan><tspan dy="-3.5"> </tspan> = 200 mm</text>
+<text x="264" y="41" font-size="11" fill="#C98A00" font-weight="bold">insulation k = 0.05 W/m·K</text>
+<text x="272" y="55" font-size="11" fill="#55667D">r<tspan dy="3.5" font-size="7.9">2</tspan><tspan dy="-3.5"> </tspan> = 208 mm (drawn thicker)</text>
+<text x="296" y="169" font-size="13" fill="#1E2B3A" font-weight="bold">T<tspan dy="4.2" font-size="9.4">s2</tspan><tspan dy="-4.2"> </tspan></text>
+<text x="20" y="28" font-size="11" fill="#0B7C8C">air T<tspan dy="3.5" font-size="7.9">∞</tspan><tspan dy="-3.5"> </tspan> = 25°C, h = 5 W/m²K</text>
+<text x="20" y="315" font-size="11" fill="#55667D">surroundings T<tspan dy="3.5" font-size="7.9">sur</tspan><tspan dy="-3.5"> </tspan> = 35°C, ε = 0.9</text>
+<circle cx="330" cy="165" r="3.5" fill="#1E2B3A"/><text x="330" y="153" font-size="12" fill="#1E2B3A" text-anchor="middle">T<tspan dy="3.8" font-size="8.6">0</tspan><tspan dy="-3.8"> </tspan></text>
+<path d="M330,165 L368.0,165 L371.7,158 L379.0,172 L386.3,158 L393.7,172 L401.0,158 L408.3,172 L412.0,165 L450,165" stroke="#1E2B3A" stroke-width="1.6" fill="none"/><text x="390.0" y="152" font-size="12" fill="#1E2B3A" text-anchor="middle">R<tspan dy="3.8" font-size="8.6">ins</tspan><tspan dy="-3.8"> </tspan></text><text x="390.0" y="189" font-size="11" fill="#55667D" text-anchor="middle">(1/r₁ − 1/r₂)/4πk</text>
+<circle cx="450" cy="165" r="3.5" fill="#1E2B3A"/><text x="450" y="153" font-size="12" fill="#1E2B3A" text-anchor="middle">T<tspan dy="3.8" font-size="8.6">s2</tspan><tspan dy="-3.8"> </tspan></text>
+<path d="M450,165 L480,165 L480,115 M480,165 L480,215" stroke="#1E2B3A" stroke-width="1.5" fill="none"/>
+<path d="M480,115 L523.0,115 L526.7,108 L534.0,122 L541.3,108 L548.7,122 L556.0,108 L563.3,122 L567.0,115 L610,115" stroke="#1E2B3A" stroke-width="1.6" fill="none"/><text x="545.0" y="102" font-size="12" fill="#1E2B3A" text-anchor="middle">R<tspan dy="3.8" font-size="8.6">conv</tspan><tspan dy="-3.8"> </tspan> = 1/hA₂</text>
+<path d="M480,215 L523.0,215 L526.7,208 L534.0,222 L541.3,208 L548.7,222 L556.0,208 L563.3,222 L567.0,215 L610,215" stroke="#1E2B3A" stroke-width="1.6" fill="none"/><text x="545.0" y="202" font-size="12" fill="#1E2B3A" text-anchor="middle">R<tspan dy="3.8" font-size="8.6">rad</tspan><tspan dy="-3.8"> </tspan> = 1/h<tspan dy="3.8" font-size="8.6">r</tspan><tspan dy="-3.8"> </tspan>A₂</text>
+<circle cx="610" cy="115" r="3.5" fill="#1E2B3A"/>
+<text x="618" y="119" font-size="12" fill="#1E2B3A">T<tspan dy="3.8" font-size="8.6">∞</tspan><tspan dy="-3.8"> </tspan> = 25°C</text>
+<circle cx="610" cy="215" r="3.5" fill="#1E2B3A"/>
+<text x="618" y="219" font-size="12" fill="#1E2B3A">T<tspan dy="3.8" font-size="8.6">sur</tspan><tspan dy="-3.8"> </tspan> = 35°C</text>
+<line x1="340" y1="105" x2="420" y2="105" stroke="#D2552B" stroke-width="2" marker-end="url(#a-hot)"/>
+<text x="380" y="97" font-size="12" fill="#D2552B" text-anchor="middle">Q = q̇·(4/3)πr₁³</text>
+</svg>

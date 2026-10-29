@@ -37,6 +37,8 @@ $$\Delta t = F_T\,\Delta T_{lm} = 0.938(176.1) = 165.3\ \mathrm{°F}$$
 
 **Sketch (temperature vs. length):** vertical axis $T$ (°F), horizontal axis tube length. Kerosene (tube side) falls from 400°F to 250°F; gas oil (shell side) rises from 110°F to 182°F. In a 1-6 unit the tube-side curve zig-zags (parallel/counter passes alternate) while the shell curve is a smooth rise; the two curves never cross since $t_2 = 182 < T_2 = 250$°F (no temperature cross), which is why $F_T$ stays high (0.94).
 
+![1-6 exchanger: kerosene zig-zags through six tube passes, gas oil rises smoothly in the shell](fig/2020-21-Q1a-sol.svg)
+
 **Exam tip:** $F_T$ above about 0.75–0.8 means a 1-even-pass exchanger is acceptable for the duty.`,
           answer: String.raw`$Q = 2.70\times10^6$ Btu/h, gas oil leaves at 182°F; LMTD = 176.1°F, $F_T = 0.938$, corrected $\Delta t = 165.3$°F.` },
         { id: "2020-21-Q1b", label: "(b)", marks: "16",
@@ -141,6 +143,8 @@ $$\Delta P_s = \frac{f G_s^2 D_s (N+1)}{5.22\times10^{10} D_e s \phi_s} = \frac{
           text: String.raw`"Equivalent diameter of the annular area of a double pipe system can be different based on its application." – Explain.`,
           solution: String.raw`For a non-circular passage the equivalent diameter is $4\times$(flow area)/(relevant perimeter). In a double-pipe exchanger (inner pipe OD $D_1$, outer pipe ID $D_2$) the **perimeter that matters depends on what is being calculated**:
 
+![Annulus: heated perimeter π D₁ for heat transfer, wetted perimeter π(D₁ + D₂) for friction](fig/2020-21-Q2a-sol.svg)
+
 - **Heat transfer** – only the outer surface of the inner pipe transfers heat, so the heated perimeter is $\pi D_1$:
 $$D_e = \frac{4\cdot\frac{\pi}{4}(D_2^2-D_1^2)}{\pi D_1} = \frac{D_2^2 - D_1^2}{D_1}$$
 This $D_e$ is used in $Re$ and $Nu$ for the annulus film coefficient $h_o$ (Kern).
@@ -194,6 +198,8 @@ Put in the **shell**:
 
 **Find:** number of hairpins.
 
+![Double-pipe hairpin exchanger](fig/common-double-pipe.svg)
+
 **Assumptions:** U based on the outside area of the inner tube; a "hairpin 18 ft long" has two 18 ft legs (Kern's convention); condensing at constant $T_{sat}$ (so $F = 1$); no subcooling.
 
 1. Heat load:
@@ -232,6 +238,8 @@ $$N = \frac{14.33}{0.438} = 32.7 \;\Rightarrow\; 33\ \text{hairpins}$$
 4. The fluid specific heats are constant.
 5. The overall heat transfer coefficient $U$ is constant.
 
+![Temperature profiles: parallel flow, counterflow, condensing and boiling](fig/common-hx-profiles.svg)
+
 Also implied: steady state with constant flow rates, no partial phase change (a phase change at constant temperature is allowed), and one bulk temperature for each fluid at any cross-section.
 
 **Derivation (parallel flow; hot $h$, cold $c$, area coordinate $A$ from inlet)**
@@ -263,6 +271,8 @@ For multipass or cross-flow exchangers: $q = UAF\,\Delta T_{lm,cf}$, with $F$ fr
 
 **Find:** condensation rate per metre of tube length (whole array).
 
+![Condensation on a horizontal tube bank: the film thickens down each column](fig/common-tube-bank-condensation.svg)
+
 **Assumptions:** laminar film condensation on horizontal tubes (Nusselt); vapour quiescent, no non-condensables; condensate from upper tubes falls on lower tubes ($h_N = h_1N^{-1/4}$).
 
 **Properties.** Saturated steam at 15 kPa (Çengel Table A-5): $T_{sat} = 53.97$°C, $h_{fg} = 2372.4$ kJ/kg, $\rho_v = 1/10.02 = 0.0998$ kg/m³. Liquid at film temperature $T_f = (53.97+25)/2 \approx 40$°C (Çengel Table A-9): $\rho_l = 992.1$ kg/m³, $\mu_l = 0.653\times10^{-3}$ kg/m·s, $k_l = 0.631$ W/m·K, $c_{pl} = 4179$ J/kg·K.
@@ -291,7 +301,9 @@ $$\dot m' = \frac{q'}{h^*_{fg}} = \frac{1.133\times10^6}{2.455\times10^6} = 0.46
           topic: "boiling", sub: "Critical heat flux and the factors that affect it",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`What is the critical heat flux of a pool boiling curve? List the factors that can influence the critical heat flux.`,
-          solution: String.raw`**Critical (peak, burnout) heat flux** $\dot q_{max}$ is the maximum heat flux on the pool boiling curve, at the end of the nucleate boiling regime (point C, about $\Delta T_e \approx 30$°C for water at 1 atm). Beyond it, bubbles merge into vapour columns and patches, vapour blankets the surface, and the flux falls (transition boiling). In a heat-flux-controlled heater (electric), raising the flux above $\dot q_{max}$ makes the surface temperature jump to the film boiling curve (≈ 1000°C for water), which can melt the heater. This is **burnout**.
+          solution: String.raw`![Pool boiling curve with its regimes, the critical heat flux and the Leidenfrost point](fig/common-boiling-curve.svg)
+
+**Critical (peak, burnout) heat flux** $\dot q_{max}$ is the maximum heat flux on the pool boiling curve, at the end of the nucleate boiling regime (point C, about $\Delta T_e \approx 30$°C for water at 1 atm). Beyond it, bubbles merge into vapour columns and patches, vapour blankets the surface, and the flux falls (transition boiling). In a heat-flux-controlled heater (electric), raising the flux above $\dot q_{max}$ makes the surface temperature jump to the film boiling curve (≈ 1000°C for water), which can melt the heater. This is **burnout**.
 
 Zuber–Lienhard (slides):
 $$\dot q_{max} = C_{cr}h_{fg}\left[\sigma g\rho_v^2(\rho_l - \rho_v)\right]^{1/4}$$
@@ -334,6 +346,8 @@ So only ¾ of the radiation coefficient is added: the remaining quarter is cance
 2. Plate facing up: plumes rising from the centre, cold air drawn in from both edges.
 3. Plate facing down: a thin layer of warm air under the plate with arrows moving outward to the edges, then turning up around the edges; still air in the middle.
 
+![Hot plate vertical, facing up and facing down: the face-down case traps the warm air](fig/2020-21-Q4c-sol.svg)
+
 (For a cold plate the situation reverses: cold surface facing up is the worst case.)
 
 In the course example (0.6 m square plate at 90°C in 30°C air) the heat loss for hot surface down was the lowest of the three orientations.`,
@@ -343,6 +357,8 @@ In the course example (0.6 m square plate at 90°C in 30°C air) the heat loss f
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`A household oven door (0.5 m × 0.7 m) reaches an average temperature of 32°C during its operation. Estimate free convection heat loss to the room with ambient air of 22°C. If the door has an emissivity factor of 1.0, how much heat will be lost by radiation?`,
           solution: String.raw`**Given:** vertical door, $A = 0.5\times0.7 = 0.35$ m², $T_w = 32$°C, $T_\infty = 22$°C.
+
+![Natural convection on a vertical plate: velocity and temperature profiles](fig/common-nc-vertical-plate.svg)
 
 **Assumptions:** door vertical with height $L = 0.7$ m; isothermal; room walls at 22°C for radiation; one face (outside) only.
 
@@ -388,7 +404,9 @@ Simplified form (used when no profile information is given): $T_b \approx (T_1 +
           topic: "boundary-layer", sub: "Thermal boundary layer on an isothermal plate; δt vs δ",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Describe the thermal boundary layer formation for forced convection on an isothermal flat plate. Indicate the relative thickness of hydrodynamic and thermal boundary layers for common fluids.`,
-          solution: String.raw`**Formation**
+          solution: String.raw`![Velocity and thermal boundary layers on a flat plate](fig/common-bl-flat-plate.svg)
+
+**Formation**
 - Fluid at $T_\infty$ and $u_\infty$ meets a plate held at $T_w$. At the wall the fluid is at rest (no slip) and at the wall temperature (no temperature jump).
 - Heat is conducted into the fluid layer next to the wall and carried downstream, so a region forms where $T$ changes from $T_w$ to $T_\infty$: the **thermal boundary layer**, of thickness $\delta_t$, defined where $(T - T_w)/(T_\infty - T_w) = 0.99$.
 - $\delta_t$ is zero at the leading edge and grows with $x$ (laminar: $\delta_t \propto \sqrt{x}$), so the wall temperature gradient and the local $h_x = -k(\partial T/\partial y)_0/(T_w - T_\infty)$ **decrease** along the plate ($h_x \propto x^{-1/2}$).
@@ -414,6 +432,8 @@ $$\frac{\delta_t}{\delta} = \frac{1}{1.026}Pr^{-1/3}$$
 (i) Steady state one dimensional heat flow with no heat generation.
 (ii) Two-dimensional heat flow without heat generation.`,
           solution: String.raw`**Assumptions:** homogeneous solid, $\rho$ and $c$ constant, Fourier's law applies, volumetric generation $\dot q$ (W/m³).
+
+![Control volume dx dy dz: conduction in and out on each face, generation and storage](fig/2020-21-Q5c-sol.svg)
 
 **Energy balance on a control volume $dx\,dy\,dz$ (Cartesian)**
 
@@ -524,6 +544,8 @@ $$\frac{u}{u_\infty} = \frac{3}{2}\frac{y}{\delta} - \frac{1}{2}\left(\frac{y}{\
 where $u_\infty$ is the fluid velocity outside the boundary layer and other symbols have their usual meanings. Derive the Reynolds–Colburn analogy using the above equations and state its significance in heat transfer.`,
           solution: String.raw`**Assumptions:** steady, laminar, incompressible flow over a flat plate; constant properties; zero pressure gradient; plate isothermal at $T_w$ and heated from the leading edge; negligible viscous dissipation.
 
+![Velocity and thermal boundary layers on a flat plate](fig/common-bl-flat-plate.svg)
+
 ### 1. Friction side
 Wall shear stress from the given profile:
 $$\tau_w = \mu\left.\frac{\partial u}{\partial y}\right|_{y=0} = \mu u_\infty\frac{3}{2\delta}$$
@@ -563,6 +585,8 @@ The same holds for average values over a length $L$: $\overline{St}\,Pr^{2/3} = 
           text: String.raw`Air at 25°C flows past a flat plate at 2.5 m/s. The plate measures 600 mm × 300 mm and is maintained at a uniform temperature of 95°C. Calculate the heat loss from the plate if the air flows parallel to the 600 mm side. How would this heat loss be affected if the flow of air is made parallel to the 300 mm side? Use an appropriate heat transfer equation to solve the problem.`,
           solution: String.raw`**Given:** $T_\infty = 25$°C, $u_\infty = 2.5$ m/s, $T_w = 95$°C, plate 0.6 m × 0.3 m.
 
+![The same plate with the flow along the 600 mm side and along the 300 mm side](fig/2020-21-Q7b.svg)
+
 **Assumptions:** steady, 1 atm, smooth plate, heat loss from one face, laminar if $Re_L < 5\times10^5$.
 
 **Properties** of air at $T_f = (95+25)/2 = 60$°C = 333 K (Holman Table A-5, interpolated): $\nu = 19.05\times10^{-6}$ m²/s, $k = 0.02875$ W/m·K, $Pr = 0.701$.
@@ -601,6 +625,8 @@ $$\boxed{r_c = \frac{k}{h}}$$
 
 **Schematic (q vs $r_o$):** horizontal axis outer radius $r_o$ starting at $r_i$; vertical axis heat loss $q$. If $r_i < r_c$ the curve rises from the bare-pipe value $q_{bare}$, peaks at $r_o = r_c$, then falls, crossing $q_{bare}$ again at a radius $r^*$ well beyond $r_c$, and keeps decreasing. If $r_i > r_c$ the curve falls from the start.
 
+![Heat loss versus outer radius: maximum at the critical radius $r_c = k/h$](fig/common-critical-radius.svg)
+
 **Suggestions when $r_i < r_c$** (small tubes, wires, low $h$):
 - Adding a thin layer of the same insulation **increases** the loss. Either use insulation thick enough that $r_o > r^*$ (where $q < q_{bare}$), or better,
 - choose an insulating material with **lower $k$** so that $r_c = k/h$ becomes smaller than $r_i$. Then any thickness reduces the loss.
@@ -625,6 +651,8 @@ $$\boxed{r_c = \frac{k}{h}}$$
           solution: String.raw`**Given:** $r_1 = 0.15$ m, $r_2 = 0.18$ m, $r_3 = 0.18 + 0.12 = 0.30$ m; $T_1 = 250$°C, $T_\infty = 20$°C; $h = 30$ W/m²K; $k_{Al} = 230$ W/m·K; $q = 80$ W.
 
 **Find:** $k_{ins}$.
+
+![Test sphere: heater, aluminium shell, insulation and outside film in series](fig/2020-21-Q8c.svg)
 
 **Assumptions:** steady, 1-D radial conduction, perfect contact, constant $k$, radiation neglected.
 

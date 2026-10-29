@@ -56,7 +56,7 @@ The heat rate $q_r$ is independent of $r$, but the heat flux $q''=q_r/(2\pi rL)$
           type: "numerical", syllabus: "in", repeats: ["2017-18-Q7a"],
           text: String.raw`Steam flowing through a long, thin-walled pipe maintains the pipe wall at a uniform temperature of 500 K. The pipe is covered with an insulation blanket comprised of two different materials, A and B, as shown in the figure. The interface between the two materials may be assumed to have an infinite contact resistance, and the entire outer surface is exposed to air at 300 K and $h = 25\ \mathrm{W/m^2K}$. Heat transfer resistance of the thin wall is negligible.
 
-*[Figure: pipe of radius $r_1 = 50$ mm covered by insulation to $r_2 = 100$ mm. The upper half of the insulation is material A ($k_A = 2\ \mathrm{W/m\,K}$), the lower half is material B ($k_B = 0.25\ \mathrm{W/m\,K}$).]*
+![Figure for Q1(b): r₁ = 50 mm, r₂ = 100 mm; upper half A (kA = 2), lower half B (kB = 0.25 W/m·K)](fig/2014-15-Q1b.svg)
 
 (i) Draw the thermal resistance circuit for the system. (5)
 
@@ -73,6 +73,8 @@ Because no heat flows between A and B, the two halves are **two parallel branche
 $$T_1 \;\to\; \big[R'_{cond,A}\to T_{s,A}\to R'_{conv,A}\big] \;\|\; \big[R'_{cond,B}\to T_{s,B}\to R'_{conv,B}\big] \;\to\; T_\infty$$
 
 Sketch: two horizontal resistor chains drawn one above the other, both starting at the node $T_1$ and ending at the node $T_\infty$; the middle node of the top chain is $T_{s,A}$, of the bottom chain $T_{s,B}$.
+
+![Thermal circuit: two parallel branches, each conduction + convection in series](fig/2014-15-Q1b-sol.svg)
 
 ### (ii) Resistances (per metre)
 For half a cylinder the conduction area is half that of a full cylinder, so $2\pi k$ becomes $\pi k$:
@@ -105,7 +107,9 @@ $$T_{s,B}=300+198.0(0.1273)=325\ \mathrm{K}$$
           topic: "insulation", sub: "Critical radius of a cylinder",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Derive the equation for the critical radius of insulation in a cylindrical system. What would you do to reduce heat loss if the bare pipe radius is smaller than the critical radius of insulation? Explain your answer with a schematic of heat loss vs. radius.`,
-          solution: String.raw`**Set-up:** a pipe of outer radius $r_i$ at $T_i$ is covered with insulation ($k$) to outer radius $r$; the outer surface loses heat by convection ($h$) to $T_\infty$. Steady state, 1-D radial conduction, constant $k$ and $h$.
+          solution: String.raw`![Heat loss vs radius: maximum at rc = k/h; cases rᵢ < rc and rᵢ > rc](fig/common-critical-radius.svg)
+
+**Set-up:** a pipe of outer radius $r_i$ at $T_i$ is covered with insulation ($k$) to outer radius $r$; the outer surface loses heat by convection ($h$) to $T_\infty$. Steady state, 1-D radial conduction, constant $k$ and $h$.
 
 ### Derivation
 Two resistances in series (length $L$):
@@ -137,6 +141,8 @@ Sketch: heat loss $q$ (vertical axis) vs. outer radius $r$ (horizontal axis), st
           solution: String.raw`**Given:** $r_1=0.15$ m, $r_2=0.18$ m, $r_3=0.18+0.12=0.30$ m; $T_1=250$°C, $T_\infty=20$°C; $h=30\ \mathrm{W/m^2K}$; $q=80$ W; $k_{Al}=230\ \mathrm{W/m\,K}$.
 
 **Find:** $k_{ins}$.
+
+![Aluminium sphere with a cast insulation shell and the series circuit](fig/2014-15-Q2b.svg)
 
 **Assumptions:** steady, 1-D radial conduction, constant properties, no contact resistance, radiation neglected.
 
@@ -225,6 +231,8 @@ This is the Reynolds–Colburn analogy. For $Pr = 1$ it reduces to Reynolds' ana
 
 **Find:** $q$ over the first 0.4 m; drag $D$ from $\overline{St}\,Pr^{2/3}=\overline{C_f}/2$.
 
+![Air at 2 m/s over a plate at 60°C: first 40 cm](fig/2014-15-Q3b.svg)
+
 **Assumptions:** steady, laminar (checked), constant properties at the film temperature, heating from the leading edge.
 
 ### 1. Properties at the film temperature
@@ -311,6 +319,8 @@ $$Pr=\frac{\nu}{\alpha}=\frac{\mu/\rho}{k/(\rho c_p)}=\frac{c_p\mu}{k}$$
 
 **Find:** $T_{m,o}$ and $q$.
 
+![Engine oil in a 50 mm tube, 25 m long, wall at 150°C](fig/2014-15-Q4b.svg)
+
 **Assumptions:** steady; constant wall temperature; laminar flow with a developing temperature profile over the whole length (as stated); properties at the mean bulk temperature; viscous dissipation and axial conduction negligible.
 
 ### 1. Properties (first guess $T_{m,o}\approx 40$°C, then iterate)
@@ -394,7 +404,9 @@ which includes both the momentum and the thermal diffusion that damp disturbance
           topic: "heat-exchangers", sub: "Shell-side equivalent diameter (square and triangular pitch)",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Derive the expression for the equivalent diameter for square-pitch and triangular-pitch tube arrangements of a shell-and-tube heat exchanger.`,
-          solution: String.raw`**Definition (Kern):** for the shell side, the equivalent diameter is four times the free flow area divided by the wetted (heat-transfer) perimeter, taken for the repeating cell of the tube layout:
+          solution: String.raw`![Unit cells: one tube per square cell, half a tube per triangular cell](fig/2014-15-Q5c-sol.svg)
+
+**Definition (Kern):** for the shell side, the equivalent diameter is four times the free flow area divided by the wetted (heat-transfer) perimeter, taken for the repeating cell of the tube layout:
 
 $$D_e=\frac{4\times\text{free flow area}}{\text{wetted perimeter}}$$
 
@@ -426,7 +438,9 @@ $$\boxed{D_e=\frac{4\left(\dfrac12P_T\times0.86P_T-\dfrac12\cdot\dfrac{\pi d_o^2
           topic: "heat-exchangers", sub: "Temperature profiles: boiling and condensing",
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`Draw the temperature distribution profile for double-pipe heat exchanger equipment for (i) boiling and (ii) condensing cases.`,
-          solution: String.raw`Axes for both sketches: temperature $T$ (vertical) vs. length along the exchanger, or area $A$ (horizontal), from inlet to outlet.
+          solution: String.raw`![Double-pipe temperature profiles: (i) boiling, (ii) condensing](fig/2014-15-Q5d-sol.svg)
+
+Axes for both sketches: temperature $T$ (vertical) vs. length along the exchanger, or area $A$ (horizontal), from inlet to outlet.
 
 ### (i) Boiling (cold fluid evaporates at constant $T_{sat}$)
 - Cold fluid: a **horizontal straight line** at $T_{sat}$ (latent heat absorbed, temperature constant).
@@ -446,7 +460,9 @@ $$\boxed{D_e=\frac{4\left(\dfrac12P_T\times0.86P_T-\dfrac12\cdot\dfrac{\pi d_o^2
           topic: "heat-exchangers", sub: "Counterflow vs parallel flow",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Why is a counterflow heat exchanger more effective than a parallel-flow heat exchanger?`,
-          solution: String.raw`- **More uniform $\Delta T$:** in counterflow the hot inlet meets the cold outlet and the hot outlet meets the cold inlet, so the temperature difference stays nearly constant along the length. In parallel flow $\Delta T$ is very large at the inlet and collapses towards the outlet.
+          solution: String.raw`![Temperature profiles: parallel flow vs counterflow (and phase change)](fig/common-hx-profiles.svg)
+
+- **More uniform $\Delta T$:** in counterflow the hot inlet meets the cold outlet and the hot outlet meets the cold inlet, so the temperature difference stays nearly constant along the length. In parallel flow $\Delta T$ is very large at the inlet and collapses towards the outlet.
 - **Larger LMTD for the same terminal temperatures**, so less area is needed for the same duty ($q=UA\Delta T_{lm}$). Example: hot 100→60°C, cold 20→50°C: counterflow $\Delta T_{lm}=44.8$ K, parallel flow $\Delta T_{lm}=33.7$ K, so parallel flow needs about 33 % more area. The slides' example: hot 300→200°F, cold 100→150°F gives counterflow LMTD = 123.5°F against 108°F for parallel flow; with cold 150→200°F, parallel flow is impossible (outlet ΔT = 0) while counterflow still gives 72°F.
 - **Outlet temperature limit:** in parallel flow the cold outlet can never exceed the hot outlet ($t_2<T_2$). In counterflow $t_2$ can exceed $T_2$ and approach $T_1$.
 - **Higher maximum effectiveness** (ε–NTU view, from the textbook, not in the slides): as $NTU\to\infty$, counterflow $\varepsilon\to1$ for any $C_r$; parallel flow is limited to $\varepsilon_{max}=1/(1+C_r)$ (only 0.5 when $C_r=1$).
@@ -485,7 +501,9 @@ Other points: if there is no imposed velocity it is natural convection; low velo
 (iii) The average heat transfer coefficient for vertical film condensation can be expressed in terms of a modified Nusselt number. Show that
 
 $$\frac{\bar h\,(\nu^2/g)^{1/3}}{k}=1.47\,Re_\delta^{-1/3}\qquad\text{for } Re_\delta\le30$$`,
-          solution: String.raw`**Nusselt's assumptions**
+          solution: String.raw`![Laminar condensate film on a vertical plate: δ(x), u(y) and linear T(y)](fig/2013-14-Q3a-sol.svg)
+
+**Nusselt's assumptions**
 - Laminar film, plate and vapour at constant $T_s$ and $T_{sat}$; vapour is pure and at $T_{sat}$.
 - Gravity and viscous forces only; inertia (acceleration) of the film negligible.
 - No shear at the liquid–vapour interface ($\partial u/\partial y=0$ at $y=\delta$).
@@ -600,6 +618,8 @@ Laminar, wave-free, so the Nusselt equation is valid. (With $h_{fg}$ instead of 
 
 **Find:** $D_{min}$ such that the vertical-plate correlations apply.
 
+![Vertical cylinder treated as a plate when D/L ≥ 35/Gr^(1/4)](fig/2014-15-Q7a.svg)
+
 **Criterion (slides, Holman):** a vertical cylinder may be treated as a vertical plate when the boundary layer is thin compared with the diameter:
 
 $$\frac{D}{L}\ge\frac{35}{Gr_L^{1/4}}$$
@@ -636,6 +656,8 @@ Fluid properties:
           solution: String.raw`**Given:** $d=0.05$ m, $\varepsilon=0.1$, $T_s=250$°C $=523.15$ K, $T_{sat}=100$°C $=373.15$ K, so $\Delta T_e=150$ K; properties as in the table.
 
 **Find:** $q'$ (W/m).
+
+![Film boiling on a horizontal bar: conduction and radiation across the vapour film](fig/2014-15-Q7b.svg)
 
 **Assumptions:** stable film boiling (a vapour blanket covers the bar at $\Delta T_e=150$ K, beyond the Leidenfrost point); the formula is based on $T_{sat}$, so the water's subcooling (bulk 25°C) is neglected; the bar radiates to the liquid at $T_{sat}$ through the vapour film; steady state.
 
@@ -694,6 +716,8 @@ Fluid properties:
 Exchanger: 1-2, shell ID 15.25 in, $B=12$ in, 160 tubes, $\tfrac34$ in OD 18 BWG, $L=16$ ft, $P_T=\tfrac{15}{16}$ in triangular.
 
 **Find:** $U_C$, $U_D$, $R_{d,calc}$ and $\Delta P$ on both sides, and decide whether the exchanger is suitable.
+
+![1-2 exchanger: distilled water in the shell, raw water in the tubes](fig/2014-15-Q8.svg)
 
 **Assumptions:** Kern method; raw water in the **tubes** (the dirtier, scale-forming stream with the higher flow, and the tube-side fouling factor 0.0015 is the raw-water value), distilled water in the **shell**; 25 % cut segmental baffles; $\phi=(\mu/\mu_w)^{0.14}=1$ ($\mu_w$ not given; at $t_w\approx83$°F it would be 1.01 for the tubes and 0.99 for the shell); no heat loss.
 

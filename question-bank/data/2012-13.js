@@ -11,6 +11,8 @@ QB.paper({
           text: String.raw`Derive a relationship for the critical radius of insulation for a sphere.`,
           solution: String.raw`> The slides derive the cylinder case ($r_c = k/h$); the sphere follows exactly the same steps.
 
+![Insulated sphere and heat loss vs outer radius: maximum at rc = 2k/h](fig/2012-13-Q1a-sol.svg)
+
 **Assumptions:** steady state, 1-D radial conduction, constant $k$ of insulation, no generation, uniform outside $h$ and $T_\infty$, inner surface of the insulation held at $T_1$ (radius $r_1$), insulation outer radius $r$ (variable).
 
 1. Resistance of a spherical shell (from $Q = -k\,4\pi r^2\,dT/dr$ integrated from $r_1$ to $r$):
@@ -35,6 +37,8 @@ $$\frac{dR_{tot}}{dr} = \frac{1}{4\pi k}\,\frac{1}{r^2} - \frac{2}{4\pi h\, r^3}
 
 **Find:** $T_0$ (centre).
 
+![Electrically heated copper wire: parabolic T(r) with the maximum at the centre](fig/2012-13-Q1b.svg)
+
 **Assumptions:** steady, 1-D radial, uniform generation, constant $k$ (the value 50 W/m·K is used as given, although real copper is ≈ 386).
 
 1. Cross-section: $A = \pi D^2/4 = 8.042\times10^{-6}\,\mathrm{m^2}$.
@@ -56,6 +60,8 @@ $$T_0 - T_w = \frac{(1.709\times10^9)(1.6\times10^{-3})^2}{4(50)} = 21.9\,\mathr
 **Given:** $r_1 = 0.200\,\mathrm{m}$, $r_2 = 0.208\,\mathrm{m}$, $T_0 = 90^\circ\mathrm{C} = 363.15\,\mathrm{K}$, $k = 0.05\,\mathrm{W/m\,K}$, $h = 5\,\mathrm{W/m^2K}$, $\varepsilon = 0.9$, $T_\infty = 298.15\,\mathrm{K}$, $T_{sur} = 308.15\,\mathrm{K}$.
 
 **Find:** $T_{s2}$.
+
+![Insulated spherical reactor and its circuit: conduction, then convection and radiation in parallel](fig/2012-13-Q1c.svg)
 
 **Assumptions:** steady state; well-mixed contents at $T_0$; thin container wall (no resistance); 1-D radial conduction in the insulation; all heat generated leaves the outer surface by convection + radiation.
 
@@ -95,6 +101,8 @@ The two values agree within about 4 °C. The data are over-specified: an exactly
           type: "derivation", syllabus: "out", repeats: [],
           text: String.raw`Find the relationship for the temperature distribution and the surface heat transfer rate for transient heat flow in a semi-infinite solid.`,
           solution: String.raw`> Not covered in the current CHE 301 slides.
+
+![Semi-infinite solid after a step in surface temperature: erf profiles at increasing times](fig/2012-13-Q2b-sol.svg)
 
 **Assumptions:** solid occupies $x \ge 0$, constant properties, no generation, initially at $T_i$; at $t = 0$ the surface is suddenly set to $T_0$ and held there.
 
@@ -173,6 +181,8 @@ $$\eta = \frac{x}{2\sqrt{\alpha t}} = \frac{0.025}{2\sqrt{(8.4\times10^{-5})(60)
 
 **Find:** $h$, $L$.
 
+![Constant wall temperature: the bulk temperature approaches Ts exponentially](fig/2012-13-Q3c.svg)
+
 **Assumptions:** steady, fully developed turbulent flow, smooth tube, constant wall temperature; property variation handled by the Sieder–Tate viscosity correction (the correlation the question asks for).
 
 1. Bulk mean temperature $T_b = (25+85)/2 = 55^\circ$C. Water at 55 °C (Çengel Table A-9): $c_p = 4183\,\mathrm{J/kg\,K}$, $k = 0.649\,\mathrm{W/m\,K}$, $\mu = 0.504\times10^{-3}\,\mathrm{kg/m\,s}$, Pr = 3.25. At $T_w = 100^\circ$C: $\mu_w = 0.282\times10^{-3}\,\mathrm{kg/m\,s}$.
@@ -240,7 +250,9 @@ Also holds for turbulent plate flow and (with $f/8$) for turbulent tube flow: $\
           topic: "boundary-layer", sub: "δ(x) from the integral momentum method",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Prove that the boundary layer thickness over a flat plate is a function of the distance from the leading edge and depends on the local Reynolds number.`,
-          solution: String.raw`**Assumptions:** steady, incompressible, laminar flow over a flat plate, constant properties, $dp/dx = 0$ (free stream $u_\infty$ constant).
+          solution: String.raw`![Integral momentum control volume in the flat-plate boundary layer](fig/2013-14-Q6b-sol.svg)
+
+**Assumptions:** steady, incompressible, laminar flow over a flat plate, constant properties, $dp/dx = 0$ (free stream $u_\infty$ constant).
 
 1. **Integral momentum equation** (von Kármán), from integrating continuity and x-momentum across the layer:
 $$\frac{d}{dx}\int_0^\delta (u_\infty - u)\,u\,dy = \nu\left.\frac{\partial u}{\partial y}\right|_{y=0} = \frac{\tau_w}{\rho}$$
@@ -271,6 +283,8 @@ So $\delta \propto x^{1/2}$ grows with distance from the leading edge, and $\del
 (v) Will the exchanger be suitable? (7)
 (vi) Fill in the TEMA sheet and attach it to your answer script. (2)`,
           solution: String.raw`**Given:** phosphate solution $W = 20\,000$ lb/h, $T_1 = 150$, $T_2 = 90^\circ$F, s = 1.30; well water $t_1 = 68$, $t_2 = 90^\circ$F; ΔP allowed 10 psi each; $R_d$ required 0.002 h·ft²·°F/Btu. Shell ID 10.02 in, B = 2 in, one shell pass; 52 tubes, ¾ in OD, 16 BWG (ID 0.62 in, flow area 0.302 in²/tube, $a'' = 0.1963$ ft²/ft – Kern Table 10), L = 16 ft, 1 in square pitch, 2 tube passes.
+
+![1-2 exchanger: phosphate solution in the shell, well water in two tube passes](fig/2012-13-Q5a.svg)
 
 **Properties** (booklet not available; these are the standard Kern values for this problem, the same ones the 2015-16 paper prints):
 - Phosphate at $T_c = 120^\circ$F: $c = 0.757$ Btu/lb·°F, $\mu = 1.2$ cP $= 2.90$ lb/ft·h, $k = 0.33$ Btu/h·ft·°F, s = 1.30.
@@ -365,7 +379,9 @@ $R_d$(calc) ≥ $R_d$(required) and both pressure drops are within the allowance
           topic: "heat-exchangers", sub: "Double-pipe pros/cons; 1-2 Δt assumptions",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Write the advantages and disadvantages of using a double pipe heat exchanger. State the assumptions of the true temperature difference for a 1-2 shell-and-tube heat exchanger.`,
-          solution: String.raw`### Double-pipe exchanger
+          solution: String.raw`![Double-pipe hairpin exchanger](fig/common-double-pipe.svg)
+
+### Double-pipe exchanger
 Construction (slides): an inner pipe inside an outer pipe that acts as a jacket, built as **hairpins** (two legs joined by a U-bend) from standard IPS fittings (2 × 1¼, 2½ × 1¼, 3 × 2, 4 × 3 in), effective lengths 12, 15 or 20 ft.
 
 **Advantages**
@@ -439,6 +455,8 @@ Free-convection velocities are very small (cm/s), so the probe must not disturb 
 
 **Find:** total natural-convection heat loss $q$.
 
+![Copper block 2.5 × 2.5 × 5 cm: four vertical sides, top and bottom faces](fig/2012-13-Q6d.svg)
+
 **Assumptions:** block suspended in still air (all six faces exposed); four vertical faces treated as vertical plates of height L = 5 cm; top = hot surface facing up, bottom = hot surface facing down; radiation neglected (polished copper); properties at film temperature.
 
 1. Film temperature $T_f = (93+20)/2 = 56.5^\circ\mathrm{C} = 329.7$ K; $\beta = 1/T_f = 3.03\times10^{-3}\,\mathrm{K^{-1}}$. Air (Holman Table A-5, interpolated 300–350 K): $\nu = 18.70\times10^{-6}\,\mathrm{m^2/s}$, $k = 0.02849\,\mathrm{W/m\,K}$, Pr = 0.701. ΔT = 73 K.
@@ -479,7 +497,9 @@ $\dot m$ = condensate flow at the bottom (kg/s), $p$ = wetted perimeter (plate w
           topic: "boiling", sub: "Pool boiling; subcooled vs saturated; nucleate vs film",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`What is pool boiling? What is meant by subcooled and saturated boiling? Distinguish between nucleate and film boiling.`,
-          solution: String.raw`**Pool boiling:** boiling of a stagnant liquid on a submerged heated surface; liquid motion is caused only by natural convection and bubble motion (no forced bulk flow, unlike flow boiling).
+          solution: String.raw`![Pool boiling curve: nucleate and film boiling regimes](fig/common-boiling-curve.svg)
+
+**Pool boiling:** boiling of a stagnant liquid on a submerged heated surface; liquid motion is caused only by natural convection and bubble motion (no forced bulk flow, unlike flow boiling).
 
 **Subcooled (local) boiling:** bulk liquid is below $T_{sat}$; bubbles form at the hot surface but collapse as they rise into the cooler liquid. **Saturated (bulk) boiling:** bulk liquid is at $T_{sat}$; bubbles rise and escape from the free surface.
 
@@ -499,6 +519,8 @@ $\dot m$ = condensate flow at the bottom (kg/s), $p$ = wetted perimeter (plate w
           solution: String.raw`**Given:** N = 20 rows (vertical), 20 columns → 400 tubes; D = 0.006 m; L = 0.3 m; $T_{sat} = 32^\circ$C; $T_w = 28^\circ$C; ΔT = 4 K; $h_{fg} = 1136$ kJ/kg.
 
 **Find:** condensation rate $\dot m$.
+
+![20 × 20 tube bank: condensate drains down each column of N = 20 tubes](fig/2012-13-Q7c.svg)
 
 **Assumptions:** laminar film condensation on horizontal tubes (Nusselt), condensate draining from tube to tube down each column ($h_N = h_1N^{-1/4}$), pure saturated vapour, liquid properties at film temperature.
 
@@ -553,7 +575,9 @@ By service (Kern ch. 1):
           topic: "shell-tube", sub: "Components; pitch, clearance, arrangement, BWG",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Write the names of the components of shell-and-tube heat exchangers. Give the definitions of (i) tube pitch, (ii) clearance, (iii) arrangement, (iv) BWG.`,
-          solution: String.raw`**Components (slides' parts list, TEMA numbering):** stationary head (channel or bonnet) and channel cover; stationary head flange; stationary head nozzles; stationary tube sheet; tubes; shell and shell cover; shell flanges (stationary-head end and rear-head end) and shell cover flange; shell nozzles; expansion joint (fixed-tube-sheet units); floating tube sheet, floating head cover and floating head flange; floating head backing device and split shear ring; slip-on backing flange; floating tube sheet skirt; packing box flange, packing, packing follower ring and lantern ring (packed floating heads); tie rods and spacers; transverse baffles or support plates; impingement baffle; longitudinal baffle; pass partition; vent and drain connections.
+          solution: String.raw`![Components of a 1-2 shell-and-tube exchanger](fig/common-st-1-2.svg)
+
+**Components (slides' parts list, TEMA numbering):** stationary head (channel or bonnet) and channel cover; stationary head flange; stationary head nozzles; stationary tube sheet; tubes; shell and shell cover; shell flanges (stationary-head end and rear-head end) and shell cover flange; shell nozzles; expansion joint (fixed-tube-sheet units); floating tube sheet, floating head cover and floating head flange; floating head backing device and split shear ring; slip-on backing flange; floating tube sheet skirt; packing box flange, packing, packing follower ring and lantern ring (packed floating heads); tie rods and spacers; transverse baffles or support plates; impingement baffle; longitudinal baffle; pass partition; vent and drain connections.
 
 - **(i) Tube pitch $P_T$:** the centre-to-centre distance between adjacent tubes (e.g. ¾ in tubes on 1 in pitch).
 - **(ii) Clearance $C'$:** the shortest distance between the outer surfaces of adjacent tubes, $C' = P_T - d_o$ (0.25 in for ¾ in tubes on 1 in pitch). It sets the shell-side flow area $a_s = \mathrm{ID}\,C'B/(144P_T)$.
@@ -598,6 +622,8 @@ Examples: finned-tube air-cooled exchangers and car radiators (air side), air-co
           type: "sketch", syllabus: "out", repeats: [],
           text: String.raw`Write a short note on trombone or cascade coolers with the necessary diagram. Draw a schematic diagram of a cooling tower.`,
           solution: String.raw`> Not covered in the current CHE 301 slides.
+
+![Trombone (cascade) cooler and induced-draft cooling tower](fig/2012-13-Q8e-sol.svg)
 
 **Trombone (cascade, trickle, serpentine) cooler**
 - A bank of straight horizontal pipes stacked one above the other in a vertical plane and connected at the ends by U-return bends, forming a continuous serpentine (looks like a trombone slide).

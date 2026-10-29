@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 360" width="680" height="360" font-family="Helvetica, Arial, sans-serif">
+<title>Insulated liquid-oxygen tank with hemispherical ends</title>
+<defs><marker id="aI" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="aIs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#1E2B3A"/></marker><marker id="aH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="aHs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#D2552B"/></marker><marker id="aC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aCs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#0B7C8C"/></marker><marker id="aG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aGs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#9AA8B8"/></marker><marker id="aA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="aAs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#B7840A"/></marker><marker id="aS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="aSs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#55667D"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="mhatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.9"/></pattern></defs>
+<rect width="680" height="360" fill="#FFFFFF"/>
+<path d="M210,94 L470,94 A86,86 0 0 1 470,266 L210,266 A86,86 0 0 1 210,94 Z" stroke="#C98A00" stroke-width="1.3" fill="url(#hatch)"/>
+<path d="M210,110 L470,110 A70,70 0 0 1 470,250 L210,250 A70,70 0 0 1 210,110 Z" stroke="#1E2B3A" stroke-width="1.8" fill="#D9F0F2"/>
+<line x1="84" y1="180" x2="596" y2="180" stroke="#55667D" stroke-width="0.9" stroke-dasharray="10 3 2 3"/>
+<line x1="210" y1="64" x2="210" y2="316" stroke="#55667D" stroke-width="0.9" stroke-dasharray="4 3"/>
+<line x1="470" y1="64" x2="470" y2="316" stroke="#55667D" stroke-width="0.9" stroke-dasharray="4 3"/>
+<text x="340" y="160" font-size="13" text-anchor="middle" fill="#1E2B3A">Liquid oxygen</text>
+<text x="340" y="202" font-size="13" text-anchor="middle" fill="#0B7C8C" font-weight="bold">t<tspan dy="3.9" font-size="9.4">i</tspan><tspan dy="-3.9">​</tspan> = −180°C</text>
+<text x="340" y="82" font-size="13" text-anchor="middle" fill="#D2552B" font-weight="bold">t<tspan dy="3.9" font-size="9.4">o</tspan><tspan dy="-3.9">​</tspan> = 25°C</text>
+<line x1="400" y1="112" x2="420" y2="28" stroke="#55667D" stroke-width="0.9"/>
+<circle cx="400" cy="112" r="1.8" fill="#55667D" stroke="none" stroke-width="0"/>
+<text x="423" y="32" font-size="12" text-anchor="start" fill="#1E2B3A">Cylindrical tank</text>
+<line x1="520" y1="130" x2="520" y2="48" stroke="#55667D" stroke-width="0.9"/>
+<circle cx="520" cy="130" r="1.8" fill="#55667D" stroke="none" stroke-width="0"/>
+<text x="523" y="52" font-size="12" text-anchor="start" fill="#1E2B3A">Hemispherical end</text>
+<line x1="548" y1="160" x2="560" y2="68" stroke="#55667D" stroke-width="0.9"/>
+<circle cx="548" cy="160" r="1.8" fill="#55667D" stroke="none" stroke-width="0"/>
+<text x="563" y="72" font-size="12" text-anchor="start" fill="#1E2B3A">Insulation (k)</text>
+<line x1="210" y1="292" x2="470" y2="292" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)" marker-start="url(#aGs)"/>
+<text x="340" y="286" font-size="12" text-anchor="middle" fill="#55667D">L = 4 m</text>
+<line x1="470" y1="214" x2="540" y2="214" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)" marker-start="url(#aGs)"/>
+<text x="464" y="218" font-size="11" text-anchor="end" fill="#55667D">r<tspan dy="3.3" font-size="7.9">1</tspan><tspan dy="-3.3">​</tspan> = 0.5 m</text>
+<line x1="470" y1="250" x2="556" y2="250" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)" marker-start="url(#aGs)"/>
+<text x="464" y="254" font-size="11" text-anchor="end" fill="#55667D">r<tspan dy="3.3" font-size="7.9">2</tspan><tspan dy="-3.3">​</tspan> = 0.57 m</text>
+<line x1="540" y1="180" x2="540" y2="300" stroke="#9AA8B8" stroke-width="0.8" stroke-dasharray="2 2"/>
+<line x1="556" y1="180" x2="556" y2="300" stroke="#9AA8B8" stroke-width="0.8" stroke-dasharray="2 2"/>
+<text x="562" y="296" font-size="12" text-anchor="start" fill="#55667D">70 mm</text>
+<line x1="140" y1="190" x2="140" y2="336" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="540" y1="300" x2="540" y2="336" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="140" y1="328" x2="540" y2="328" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)" marker-start="url(#aGs)"/>
+<text x="340" y="344" font-size="12" text-anchor="middle" fill="#55667D">5 m (tank, outside length)</text>
+</svg>

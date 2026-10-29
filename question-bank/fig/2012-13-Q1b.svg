@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 330" width="660" height="330" font-family="Helvetica, Arial, sans-serif">
+<title>Electrically heated copper wire and its parabolic temperature profile</title>
+<defs><marker id="a-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="a-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="a-cold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="a-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="a-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="a-vap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><pattern id="ins" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="metal" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.8"/></pattern></defs>
+<rect width="660" height="330" fill="#FFFFFF"/>
+<rect x="120" y="68" width="350" height="44" rx="4" fill="#E9B48F" stroke="#1E2B3A" stroke-width="1.6"/>
+<text x="295.0" y="95" font-size="12" fill="#1E2B3A" text-anchor="middle">copper wire, k = 50 W/m·K, ρ<tspan dy="3.8" font-size="8.6">e</tspan><tspan dy="-3.8"> </tspan> = 65 μΩ·cm</text>
+<line x1="120" y1="138" x2="470" y2="138" stroke="#55667D" stroke-width="1" marker-end="url(#a-dim)" marker-start="url(#a-dim)"/><line x1="120" y1="133" x2="120" y2="143" stroke="#55667D" stroke-width="1"/><line x1="470" y1="133" x2="470" y2="143" stroke="#55667D" stroke-width="1"/><text x="295.0" y="154" font-size="12" fill="#55667D" text-anchor="middle">L = 30 cm</text>
+<line x1="492" y1="68" x2="492" y2="112" stroke="#55667D" stroke-width="1" marker-end="url(#a-dim)" marker-start="url(#a-dim)"/><line x1="487" y1="68" x2="497" y2="68" stroke="#55667D" stroke-width="1"/><line x1="487" y1="112" x2="497" y2="112" stroke="#55667D" stroke-width="1"/><text x="499" y="94.0" font-size="12" fill="#55667D">D = 3.2 mm</text>
+<path d="M120,90 L90,90 L90,30 L283.0,30" stroke="#1E2B3A" stroke-width="1.4" fill="none"/>
+<path d="M470,90 L470,90 M470,68 " stroke="#1E2B3A" stroke-width="1.4" fill="none"/>
+<path d="M470,90 L480,90 L480,30 L307.0,30" stroke="#1E2B3A" stroke-width="1.4" fill="none"/>
+<line x1="283.0" y1="18" x2="283.0" y2="42" stroke="#1E2B3A" stroke-width="2"/>
+<line x1="307.0" y1="24" x2="307.0" y2="36" stroke="#1E2B3A" stroke-width="4"/>
+<text x="317.0" y="16" font-size="12" fill="#1E2B3A">E = 10 V</text>
+<text x="140" y="170" font-size="12" fill="#55667D">surface T<tspan dy="3.8" font-size="8.6">s</tspan><tspan dy="-3.8"> </tspan> = 366 K;  q̇ = I²R<tspan dy="3.8" font-size="8.6">e</tspan><tspan dy="-3.8"> </tspan>/V = E²/(ρ<tspan dy="3.8" font-size="8.6">e</tspan><tspan dy="-3.8"> </tspan>L²) uniform</text>
+<line x1="110" y1="300" x2="350" y2="300" stroke="#1E2B3A" stroke-width="1.4" marker-end="url(#a-ink)"/>
+<text x="354" y="304" font-size="13" fill="#1E2B3A">r</text>
+<line x1="230" y1="300" x2="230" y2="190" stroke="#1E2B3A" stroke-width="1.4" marker-end="url(#a-ink)"/>
+<text x="222" y="196" font-size="13" fill="#1E2B3A" text-anchor="end">T</text>
+<path d="M130,270 Q230,130 330,270" stroke="#D2552B" stroke-width="2.6" fill="none"/>
+<line x1="130" y1="300" x2="130" y2="270" stroke="#9AA8B8" stroke-width="0.8" stroke-dasharray="3 3"/>
+<line x1="330" y1="300" x2="330" y2="270" stroke="#9AA8B8" stroke-width="0.8" stroke-dasharray="3 3"/>
+<text x="130" y="316" font-size="11" fill="#1E2B3A" text-anchor="middle">−r<tspan dy="3.5" font-size="7.9">o</tspan><tspan dy="-3.5"> </tspan></text>
+<text x="330" y="316" font-size="11" fill="#1E2B3A" text-anchor="middle">r<tspan dy="3.5" font-size="7.9">o</tspan><tspan dy="-3.5"> </tspan></text>
+<text x="336" y="270" font-size="11" fill="#55667D">T<tspan dy="3.5" font-size="7.9">s</tspan><tspan dy="-3.5"> </tspan> = 366 K</text>
+<circle cx="230" cy="200" r="4" fill="#B7840A"/>
+<text x="240" y="210" font-size="12" fill="#B7840A" font-weight="bold">T<tspan dy="3.8" font-size="8.6">0</tspan><tspan dy="-3.8"> </tspan> (centre, maximum)</text>
+<text x="380" y="250" font-size="12" fill="#1E2B3A">T<tspan dy="3.8" font-size="8.6">0</tspan><tspan dy="-3.8"> </tspan> − T<tspan dy="3.8" font-size="8.6">s</tspan><tspan dy="-3.8"> </tspan> = q̇ r<tspan dy="3.8" font-size="8.6">o</tspan><tspan dy="-3.8"> </tspan><tspan dy="-4.8" font-size="8.6">2</tspan><tspan dy="4.8"> </tspan>/(4k)</text>
+</svg>

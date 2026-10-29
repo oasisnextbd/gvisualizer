@@ -17,6 +17,8 @@ QB.paper({
 Consider at least two alternatives before selecting a final design and discuss the factors that influenced your design selection.`,
           solution: String.raw`This follows the course's kerosene–gasoline design procedure (Kern): heat balance → LMTD and $F_T$ → assumed $U$ (Kern Table 8) → area and tube count (Kern Table 9) → tube-side and shell-side $h$ → $U$ check → pressure drops → over-surface and over-design. It is done in SI units, with Kern's standard tube sizes.
 
+![1-2 shell-and-tube exchanger and its flow paths](fig/common-st-1-2.svg)
+
 **Given:** steam $\dot m_s = 3900$ kg/h = 1.083 kg/s, saturated at 1 atm, leaves as saturated liquid; water in tubes, $t_1 = 40$°C; 1 shell pass, 2 tube passes.
 
 **Design decisions (assumptions):**
@@ -152,7 +154,9 @@ Performance: $Q = 2.45$ MW, water 19.5 kg/s from 40 to 70°C, $U_C = 3120$ W/m²
           topic: "heat-exchangers", sub: "F = 1 for boiling/condensing; why F is needed",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`"Values of the correction factor for LMTD calculation in a heat exchanger for boiling is considered 1 (one)" True/False. Explain your answer. Why do you need this correction factor?`,
-          solution: String.raw`**True.**
+          solution: String.raw`![Temperature profiles: parallel flow, counterflow, condensing and boiling](fig/common-hx-profiles.svg)
+
+**True.**
 - During boiling (or condensation) one fluid stays at its saturation temperature throughout the exchanger. For that fluid $\Delta T = 0$, so
 $$R = \frac{T_1 - T_2}{t_2 - t_1} = 0\quad\text{(isothermal shell fluid)}\quad\text{or}\quad P = \frac{t_2-t_1}{T_1-t_1} = 0\ \ \text{(isothermal tube fluid)}$$
 - On every $F$ chart (Holman Fig. 10-8 and others) $F \to 1$ when $R = 0$. Physically, when one stream is at a constant temperature it does not matter how the other stream is routed (parallel, counter, multipass, cross flow): the local driving force depends only on the other stream's temperature. All arrangements therefore have the same mean ΔT, the counterflow LMTD.
@@ -169,6 +173,8 @@ $$R = \frac{T_1 - T_2}{t_2 - t_1} = 0\quad\text{(isothermal shell fluid)}\quad\t
           solution: String.raw`**Schematic (describe):** a horizontal shell with a **longitudinal baffle** along its axis, dividing it into two shell passes. Shell fluid enters at the top of one end (shell inlet nozzle), flows along the upper half across segmental (transverse) baffles, turns around the end of the longitudinal baffle, returns along the lower half, and leaves at the same end (shell outlet). Tube fluid enters a **front channel (stationary head)** split by pass partitions and makes **4 passes** (2 in each shell pass), turning in the **rear (floating) head** and front channel, then leaves from the channel outlet nozzle.
 
 Labels: shell, shell inlet/outlet nozzles, longitudinal baffle, transverse (segmental) baffles, tube bundle, tube sheets (stationary and floating), channel with pass partition plates, channel cover, floating head cover, tube inlet/outlet nozzles, tie rods and spacers, support saddles, vent and drain.
+
+![2-4 exchanger: longitudinal baffle, four tube passes, and the temperature profile along the shell path](fig/2021-22-Q2b-sol.svg)
 
 **Temperature profile (describe):** horizontal axis is the length (or fraction of area), vertical axis is temperature.
 - Shell fluid (say hot, $T_1 \to T_2$): one curve falling along pass 1 (left to right) and continuing to fall along pass 2 (right to left), i.e. a smooth monotonic decrease from $T_1$ to $T_2$.
@@ -256,6 +262,8 @@ $g$ is gravity, $\beta$ the volume expansion coefficient ($= 1/T$ in K for an id
 
 **Find:** average plate temperature $T_s$.
 
+![Natural convection on a vertical plate: velocity and temperature profiles](fig/common-nc-vertical-plate.svg)
+
 **Method (slides):** for uniform flux, use the isothermal-plate Churchill–Chu correlation with the plate (midpoint/average) temperature in the film temperature, and iterate since $T_s$ is unknown.
 
 **Properties:** air, Holman Table A-5, interpolated at each trial film temperature; $\beta = 1/T_f$.
@@ -283,7 +291,9 @@ $$T_s = T_\infty + \frac{q''}{h} = 30 + \frac{800}{5.91} = 165\ \mathrm{°C}$$
           topic: "boiling", sub: "Regimes of pool boiling (boiling curve)",
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`Discuss the different regimes of boiling heat transfer.`,
-          solution: String.raw`**Boiling curve (sketch):** heat flux $\dot q''$ (log scale) vs excess temperature $\Delta T_e = T_s - T_{sat}$ (log scale), for water at 1 atm. Points: A (onset of nucleate boiling, ΔT ≈ 5°C), B (bubbles merge into columns), C (critical heat flux, ΔT ≈ 30°C, ≈ 1 MW/m²), D (Leidenfrost / minimum heat flux, ΔT ≈ 120°C), then a rising branch to E (film boiling, radiation important). Under heat-flux control, raising the flux beyond C makes the surface jump along a horizontal line to E (burnout); lowering the flux in film boiling, the surface drops back from D to the nucleate curve (hysteresis).
+          solution: String.raw`![Pool boiling curve with its regimes, the critical heat flux and the Leidenfrost point](fig/common-boiling-curve.svg)
+
+**Boiling curve (sketch):** heat flux $\dot q''$ (log scale) vs excess temperature $\Delta T_e = T_s - T_{sat}$ (log scale), for water at 1 atm. Points: A (onset of nucleate boiling, ΔT ≈ 5°C), B (bubbles merge into columns), C (critical heat flux, ΔT ≈ 30°C, ≈ 1 MW/m²), D (Leidenfrost / minimum heat flux, ΔT ≈ 120°C), then a rising branch to E (film boiling, radiation important). Under heat-flux control, raising the flux beyond C makes the surface jump along a horizontal line to E (burnout); lowering the flux in film boiling, the surface drops back from D to the nucleate curve (hysteresis).
 
 | Regime | $\Delta T_e$ (water, 1 atm) | Mechanism | Heat transfer |
 |---|---|---|---|
@@ -352,6 +362,8 @@ $$\dot m = \frac{q}{h^*_{fg}} = \frac{2400}{2.263\times10^6} = 1.06\times10^{-3}
           text: String.raw`Derive an equation for the thermal resistance offered by a hollow long cylinder of constant thermal conductivity.`,
           solution: String.raw`**Assumptions:** long cylinder (length $L \gg$ radius, so no end effects), steady state, 1-D radial conduction, constant $k$, no heat generation, inner surface at $T_1$ ($r = r_1$), outer surface at $T_2$ ($r = r_2$).
 
+![Hollow cylinder: radial heat flow from r₁ to r₂ and its resistance ln(r₂/r₁)/(2πkL)](fig/2021-22-Q5a-sol.svg)
+
 1. Fourier's law across a cylindrical surface of radius $r$ (area $A_r = 2\pi rL$):
 $$q_r = -kA_r\frac{dT}{dr} = -2\pi krL\frac{dT}{dr}$$
 2. At steady state with no generation, $q_r$ is the same at every $r$ (energy balance on the shell between $r$ and $r + dr$: $q_r = q_{r+dr}$). Equivalently, the heat equation $\frac{1}{r}\frac{d}{dr}\left(r\frac{dT}{dr}\right) = 0$.
@@ -368,7 +380,9 @@ Notes: per unit length, $R' = \ln(r_2/r_1)/(2\pi k)$ (m·K/W). Composite cylinde
           topic: "boundary-layer", sub: "Reynolds–Colburn analogy and its use",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Explain the Reynolds Colburn analogy for laminar flow over a plate. How can it be used to calculate heat transfer coefficient?`,
-          solution: String.raw`**Analogy.** For laminar flow over a flat plate, the momentum and energy boundary-layer equations have the same form ($u\,\partial u/\partial x + v\,\partial u/\partial y = \nu\,\partial^2u/\partial y^2$ and $u\,\partial T/\partial x + v\,\partial T/\partial y = \alpha\,\partial^2T/\partial y^2$). The solutions are therefore similar, and they differ only through $Pr = \nu/\alpha$:
+          solution: String.raw`![Velocity and thermal boundary layers on a flat plate](fig/common-bl-flat-plate.svg)
+
+**Analogy.** For laminar flow over a flat plate, the momentum and energy boundary-layer equations have the same form ($u\,\partial u/\partial x + v\,\partial u/\partial y = \nu\,\partial^2u/\partial y^2$ and $u\,\partial T/\partial x + v\,\partial T/\partial y = \alpha\,\partial^2T/\partial y^2$). The solutions are therefore similar, and they differ only through $Pr = \nu/\alpha$:
 $$C_{fx} = \frac{\tau_w}{\frac12\rho u_\infty^2} = 0.664Re_x^{-1/2}\ (\text{Blasius}),\qquad St_x = \frac{h_x}{\rho c_pu_\infty} = \frac{Nu_x}{Re_xPr} = 0.332Re_x^{-1/2}Pr^{-2/3}$$
 $$\Rightarrow\quad St_x\,Pr^{2/3} = \frac{C_{fx}}{2}\qquad(\text{also for averages: }\overline{St}\,Pr^{2/3} = \overline{C_f}/2)$$
 This is the **Reynolds–Colburn analogy**. For $Pr = 1$ it reduces to the Reynolds analogy $St = C_f/2$. It is valid with no pressure gradient (no form drag), for about $0.6 < Pr < 60$.
@@ -397,6 +411,8 @@ The reverse is also used: from a known $h$, estimate the drag (slide example: ai
           solution: String.raw`**Given:** $D_1 = 0.04$ m (heated inner tube), $D_2 = 0.05$ m; $u = 6.9$ m/s; $T_{b1} = 20$°C, $T_{b2} = 40$°C; $T_w = 80$°C; properties as tabulated (at 30°C).
 
 **Find:** length $L$.
+
+![Annulus D₁ = 4 cm, D₂ = 5 cm: only the inner tube (80°C) heats the glycol](fig/2021-22-Q5c.svg)
 
 **Assumptions:** steady, fully developed; correlations based on the hydraulic diameter (slides); $\mu_w$ given, so Sieder–Tate.
 
@@ -455,7 +471,7 @@ $L/d = 63 > 60$, so fully developed flow is a fair assumption.
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`A cylindrical tank of 1.0 m diameter and 5 m total length has hemispherical ends. It contains liquid oxygen which has boiling point and heat of vaporization −180°C and 210 kJ/kg, respectively. It is required to insulate the tank so as to reduce the boil-off rate of oxygen in steady state to 14 kg/h. Determine the thermal conductivity of the insulating material if its maximum thickness is limited to 70 mm. Assume room temperature outside the insulation as 25°C.
 
-*[Figure: tank with a cylindrical section of length L = 4 m and two hemispherical ends of radius $r_1$ = 0.5 m; insulation 70 mm thick ($r_2$ = 0.57 m); $t_i$ = −180°C inside, $t_o$ = 25°C on the outside of the insulation.]*`,
+![Liquid-oxygen tank: 4 m cylinder with hemispherical ends (r₁ = 0.5 m), 70 mm of insulation](fig/2021-22-Q6b.svg)`,
           solution: String.raw`**Given:** $r_1 = 0.5$ m, $r_2 = 0.5 + 0.07 = 0.57$ m; cylindrical length $L = 5 - 2(0.5) = 4$ m; two hemispheres = one sphere; $t_i = -180$°C, $t_o = 25$°C; $\dot m = 14$ kg/h; $h_{fg} = 210$ kJ/kg.
 
 **Find:** $k$ of insulation.
@@ -491,6 +507,8 @@ $$T - T_c = \frac{1}{\alpha}\frac{\partial T}{\partial x}\frac{u_0r_0^2}{4}\left
 3. **Constant wall heat flux** $q_w$ (this is what makes $\partial T/\partial x$ constant), so $dT_w/dx = dT_b/dx = \partial T/\partial x$.
 4. Axial conduction and viscous dissipation negligible.
 
+![Fully developed laminar flow: parabolic velocity, quartic temperature profile, constant wall flux](fig/2021-22-Q7a-sol.svg)
+
 Let $C = \dfrac{1}{\alpha}\dfrac{\partial T}{\partial x}\dfrac{u_0r_0^2}{4}$ and $\eta = r/r_0$, so $T - T_c = C\left(\eta^2 - \tfrac14\eta^4\right)$.
 
 ### 1. Wall temperature ($\eta = 1$)
@@ -523,6 +541,8 @@ Every flow and fluid quantity ($u_0$, $\partial T/\partial x$, $\alpha$) cancels
           text: String.raw`A wall 30 cm thick has size 5 m × 3 m made of red bricks ($k = 0.35$ W/m·K). It is covered on both sides by layers of plaster 2 cm thick ($k = 0.6$ W/m·K). The wall has a window of size 1 m × 2 m. The window door is made of glass, 12 mm thick, having thermal conductivity 1.2 W/m·K. Estimate the rate of heat flow through the wall. Inner and outer surface temperatures are 10°C and 40°C, respectively.`,
           solution: String.raw`**Given:** wall 5 m × 3 m = 15 m², window 1 m × 2 m = 2 m² → wall (net) area 13 m²; brick 0.30 m ($k = 0.35$), plaster 2 × 0.02 m ($k = 0.6$), glass 0.012 m ($k = 1.2$); $\Delta T = 40 - 10 = 30$°C on both paths.
 
+![Wall and window as parallel heat-flow paths between 10°C and 40°C](fig/2021-22-Q7b.svg)
+
 **Assumptions:** steady 1-D conduction; the wall and window are parallel paths between the same surface temperatures; no edge effects; surface temperatures given, so no convection resistances.
 
 1. Wall path (three layers in series), per unit area:
@@ -547,7 +567,7 @@ $$q = 422 + 6000 = 6422\ \mathrm{W} \approx 6.4\ \mathrm{kW}$$
 $$\frac{1}{r}\frac{d}{dr}\left(r\frac{dT}{dr}\right) + \frac{\dot q}{k} = 0$$
 (ii) Determine the heat removal rate per unit length of tube.
 
-*[Figure: tube cross-section; coolant at $T_\infty$, $h$ flows inside $r_1$ (surface temperature $T_{s,1}$); solid with $\dot q$, $k$ between $r_1$ and $r_2$; insulation on the outer surface $r_2$ ($T_{s,2}$); $q'_{cond}$ flows inward to the coolant as $q'_{conv}$.]*`,
+![Tube with uniform generation: cooled at r₁ by the coolant, insulated at r₂](fig/2021-22-Q8a.svg)`,
           solution: String.raw`**Assumptions:** steady, 1-D radial conduction, constant $k$, uniform $\dot q$, long tube (no axial or end effects).
 
 ### (i) Temperature distribution

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 470" width="700" height="470" font-family="Helvetica, Arial, sans-serif">
+<title>Pool boiling curve for water at 1 atm, regimes I to VI</title>
+<defs>
+<marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#1E2B3A"/></marker>
+<marker id="as-ink" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#1E2B3A"/></marker>
+<marker id="ah-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#D2552B"/></marker>
+<marker id="as-hot" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#D2552B"/></marker>
+<marker id="ah-cold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#0B7C8C"/></marker>
+<marker id="as-cold" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#0B7C8C"/></marker>
+<marker id="ah-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#9AA8B8"/></marker>
+<marker id="as-grey" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#9AA8B8"/></marker>
+<marker id="ah-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#B7840A"/></marker>
+<marker id="as-acc" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#B7840A"/></marker>
+<marker id="ah-sec" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#55667D"/></marker>
+<marker id="as-sec" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#55667D"/></marker>
+<pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern>
+<pattern id="mhatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="6" stroke="#9AA8B8" stroke-width="1"/></pattern>
+</defs>
+<rect width="700" height="470" fill="#FFFFFF"/>
+<line x1="207.578" y1="392" x2="207.578" y2="52" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="259.939" y1="392" x2="259.939" y2="52" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="342.93" y1="392" x2="342.93" y2="52" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="447.652" y1="392" x2="447.652" y2="52" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="538.601" y1="392" x2="538.601" y2="52" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="146.789" y="66" font-size="12.5" text-anchor="middle" font-weight="bold" fill="#1E2B3A">Natural</text>
+<text x="146.789" y="80" font-size="12.5" text-anchor="middle" font-weight="bold" fill="#1E2B3A">convection</text>
+<text x="275.254" y="66" font-size="12.5" text-anchor="middle" font-weight="bold" fill="#1E2B3A">Nucleate</text>
+<text x="275.254" y="80" font-size="12.5" text-anchor="middle" font-weight="bold" fill="#1E2B3A">boiling</text>
+<text x="395.291" y="66" font-size="12.5" text-anchor="middle" font-weight="bold" fill="#1E2B3A">Transition</text>
+<text x="395.291" y="80" font-size="12.5" text-anchor="middle" font-weight="bold" fill="#1E2B3A">boiling</text>
+<text x="553.821" y="66" font-size="12.5" text-anchor="middle" font-weight="bold" fill="#1E2B3A">Film</text>
+<text x="553.821" y="80" font-size="12.5" text-anchor="middle" font-weight="bold" fill="#1E2B3A">boiling</text>
+<text x="146.789" y="108" font-size="13" text-anchor="middle" font-weight="bold" fill="#B7840A">I</text>
+<text x="233.759" y="108" font-size="13" text-anchor="middle" font-weight="bold" fill="#B7840A">II</text>
+<text x="301.434" y="108" font-size="13" text-anchor="middle" font-weight="bold" fill="#B7840A">III</text>
+<text x="395.291" y="108" font-size="13" text-anchor="middle" font-weight="bold" fill="#B7840A">IV</text>
+<text x="493.126" y="108" font-size="13" text-anchor="middle" font-weight="bold" fill="#B7840A">V</text>
+<text x="599.295" y="108" font-size="13" text-anchor="middle" font-weight="bold" fill="#B7840A">VI</text>
+<rect x="86" y="92" width="574" height="300" fill="none" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="81" y1="392" x2="86" y2="392" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="78" y="396" font-size="12" text-anchor="end" fill="#1E2B3A">10<tspan dy="-4.6" font-size="8.6">3</tspan><tspan dy="4.6">​</tspan></text>
+<line x1="81" y1="317" x2="86" y2="317" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="78" y="321" font-size="12" text-anchor="end" fill="#1E2B3A">10<tspan dy="-4.6" font-size="8.6">4</tspan><tspan dy="4.6">​</tspan></text>
+<line x1="81" y1="242" x2="86" y2="242" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="78" y="246" font-size="12" text-anchor="end" fill="#1E2B3A">10<tspan dy="-4.6" font-size="8.6">5</tspan><tspan dy="4.6">​</tspan></text>
+<line x1="81" y1="167" x2="86" y2="167" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="78" y="171" font-size="12" text-anchor="end" fill="#1E2B3A">10<tspan dy="-4.6" font-size="8.6">6</tspan><tspan dy="4.6">​</tspan></text>
+<line x1="81" y1="92" x2="86" y2="92" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="78" y="96" font-size="12" text-anchor="end" fill="#1E2B3A">10<tspan dy="-4.6" font-size="8.6">7</tspan><tspan dy="4.6">​</tspan></text>
+<line x1="86" y1="392" x2="86" y2="397" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="86" y="411" font-size="12" text-anchor="middle" fill="#1E2B3A">1</text>
+<line x1="207.578" y1="392" x2="207.578" y2="397" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="207.578" y="411" font-size="12" text-anchor="middle" fill="#1E2B3A">5</text>
+<line x1="259.939" y1="392" x2="259.939" y2="397" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="259.939" y="411" font-size="12" text-anchor="middle" fill="#1E2B3A">10</text>
+<line x1="342.93" y1="392" x2="342.93" y2="397" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="342.93" y="411" font-size="12" text-anchor="middle" fill="#1E2B3A">30</text>
+<line x1="433.879" y1="392" x2="433.879" y2="397" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="433.879" y="411" font-size="12" text-anchor="middle" fill="#1E2B3A">100</text>
+<line x1="447.652" y1="392" x2="447.652" y2="397" stroke="#1E2B3A" stroke-width="1.2"/>
+<line x1="607.818" y1="392" x2="607.818" y2="397" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="607.818" y="411" font-size="12" text-anchor="middle" fill="#1E2B3A">1000</text>
+<text x="451.652" y="411" font-size="12" fill="#1E2B3A">120</text>
+<text x="373" y="432" font-size="13" text-anchor="middle" fill="#1E2B3A">ΔT<tspan dy="3.9" font-size="9.4">excess</tspan><tspan dy="-3.9">​</tspan> = T<tspan dy="3.9" font-size="9.4">s</tspan><tspan dy="-3.9">​</tspan> − T<tspan dy="3.9" font-size="9.4">sat</tspan><tspan dy="-3.9">​</tspan>  (°C, log scale)</text>
+<text x="34" y="242" font-size="13" text-anchor="middle" fill="#1E2B3A" transform="rotate(-90 34 242.0)">q″ (W/m², log scale)</text>
+<path d="M86.0,392.0 C94.7,388.5 122.6,377.7 138.4,371.1 C154.1,364.4 169.1,358.4 180.6,352.1 C192.2,345.9 198.0,343.0 207.6,333.6 C217.2,324.3 229.5,307.6 238.2,296.1 C246.9,284.6 251.2,277.4 259.9,264.6 C268.7,251.8 281.2,233.1 290.6,219.4 C299.9,205.8 309.1,191.1 316.0,182.6 C322.9,174.1 327.6,171.4 332.1,168.3 C336.6,165.2 339.6,164.1 342.9,163.9 C346.3,163.7 348.1,164.1 352.4,167.0 C356.6,169.9 362.3,174.2 368.3,181.5 C374.4,188.8 381.4,199.2 388.7,210.9 C396.0,222.5 404.6,238.9 412.1,251.4 C419.7,263.9 428.0,278.4 433.9,285.9 C439.8,293.3 443.0,294.7 447.7,296.1 C452.3,297.5 455.5,297.3 461.9,294.4 C468.4,291.6 475.9,287.3 486.2,279.1 C496.6,270.9 511.3,256.6 524.1,245.4 C536.8,234.3 550.7,222.5 562.7,212.2 C574.6,201.9 584.7,191.7 595.5,183.6 C606.4,175.6 616.9,171.9 627.6,163.9 C638.4,155.9 654.6,140.5 660.0,135.9" fill="none" stroke="#D2552B" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="207.578" cy="333.639" r="4.2" fill="#1E2B3A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="259.939" cy="264.577" r="4.2" fill="#1E2B3A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="342.93" cy="163.896" r="4.2" fill="#B7840A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="447.652" cy="296.093" r="4.2" fill="#B7840A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="627.637" cy="163.896" r="4.2" fill="#1E2B3A" stroke="#FFFFFF" stroke-width="1.2"/>
+<text x="214.578" y="349.639" font-size="13" font-weight="bold" fill="#1E2B3A">A</text>
+<text x="266.939" y="276.577" font-size="13" font-weight="bold" fill="#1E2B3A">B</text>
+<text x="338.93" y="153.896" font-size="13" text-anchor="end" font-weight="bold" fill="#B7840A">C</text>
+<text x="443.652" y="314.093" font-size="13" text-anchor="middle" font-weight="bold" fill="#B7840A">D</text>
+<text x="635.637" y="177.896" font-size="13" font-weight="bold" fill="#1E2B3A">E</text>
+<line x1="350.93" y1="163.896" x2="619.637" y2="163.896" stroke="#B7840A" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#ah-acc)"/>
+<text x="495.283" y="155.896" font-size="11.5" text-anchor="middle" fill="#B7840A">burnout jump (heat-flux-controlled heater)</text>
+<text x="308.426" y="155.896" font-size="11.5" text-anchor="end" fill="#B7840A">Maximum (critical) heat flux q″<tspan dy="3.4" font-size="8.3">max</tspan><tspan dy="-3.4">​</tspan>,</text>
+<text x="308.426" y="170.271" font-size="11.5" text-anchor="end" fill="#B7840A">the burnout point (≈ 1 MW/m², ΔT ≈ 30°C)</text>
+<text x="459.652" y="318.093" font-size="11.5" fill="#B7840A">Leidenfrost point,</text>
+<text x="459.652" y="332.468" font-size="11.5" fill="#B7840A">minimum heat flux q″<tspan dy="3.4" font-size="8.3">min</tspan><tspan dy="-3.4">​</tspan></text>
+<text x="217.578" y="369.639" font-size="11.5" fill="#1E2B3A">Onset of nucleate</text>
+<text x="217.578" y="384.014" font-size="11.5" fill="#1E2B3A">boiling (ΔT ≈ 5°C)</text>
+<text x="94" y="122.577" font-size="10.5" fill="#55667D">no bubbles;</text>
+<text x="94" y="135.702" font-size="10.5" fill="#55667D">free convection</text>
+<text x="210.578" y="122.577" font-size="10.5" fill="#55667D">isolated</text>
+<text x="210.578" y="135.702" font-size="10.5" fill="#55667D">bubbles</text>
+<text x="263.939" y="122.577" font-size="10.5" fill="#55667D">jets and</text>
+<text x="263.939" y="135.702" font-size="10.5" fill="#55667D">columns</text>
+<text x="368.347" y="125.846" font-size="10.5" fill="#55667D">unstable</text>
+<text x="368.347" y="138.971" font-size="10.5" fill="#55667D">vapour film</text>
+<text x="453.698" y="125.846" font-size="10.5" fill="#55667D">stable</text>
+<text x="453.698" y="138.971" font-size="10.5" fill="#55667D">film</text>
+<text x="542.286" y="125.846" font-size="10.5" fill="#55667D">film +</text>
+<text x="542.286" y="138.971" font-size="10.5" fill="#55667D">radiation</text>
+</svg>

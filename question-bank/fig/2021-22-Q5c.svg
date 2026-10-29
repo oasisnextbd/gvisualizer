@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" width="680" height="300" font-family="Helvetica, Arial, sans-serif">
+<title>Annulus with a heated inner tube: ethylene glycol 20 to 40 °C</title>
+<defs><marker id="aI" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="aIs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#1E2B3A"/></marker><marker id="aH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="aHs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#D2552B"/></marker><marker id="aC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aCs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#0B7C8C"/></marker><marker id="aG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aGs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#9AA8B8"/></marker><marker id="aA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="aAs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#B7840A"/></marker><marker id="aS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="aSs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#55667D"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="mhatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.9"/></pattern></defs>
+<rect width="680" height="300" fill="#FFFFFF"/>
+<circle cx="110" cy="150" r="83" fill="url(#hatch)" stroke="#C98A00" stroke-width="1.2"/>
+<circle cx="110" cy="150" r="75" fill="#D9F0F2" stroke="#1E2B3A" stroke-width="1.4"/>
+<circle cx="110" cy="150" r="60" fill="#FBE2D6" stroke="#D2552B" stroke-width="2.4"/>
+<text x="110" y="148" font-size="11" text-anchor="middle" fill="#D2552B">inner tube</text>
+<text x="110" y="164" font-size="11" text-anchor="middle" fill="#D2552B">T<tspan dy="3.3" font-size="7.9">w</tspan><tspan dy="-3.3">​</tspan> = 80°C</text>
+<text x="110" y="87" font-size="9" text-anchor="middle" fill="#0B7C8C">glycol</text>
+<text x="110" y="30" font-size="12" text-anchor="middle" fill="#1E2B3A">D<tspan dy="3.6" font-size="8.6">1</tspan><tspan dy="-3.6">​</tspan> = 4 cm, D<tspan dy="3.6" font-size="8.6">2</tspan><tspan dy="-3.6">​</tspan> = 5 cm</text>
+<text x="110" y="260" font-size="11" text-anchor="middle" fill="#C98A00">outer wall insulated</text>
+<text x="110" y="276" font-size="11" text-anchor="middle" fill="#55667D">D<tspan dy="3.3" font-size="7.9">h</tspan><tspan dy="-3.3">​</tspan> = D<tspan dy="3.3" font-size="7.9">2</tspan><tspan dy="-3.3">​</tspan> − D<tspan dy="3.3" font-size="7.9">1</tspan><tspan dy="-3.3">​</tspan> = 1 cm</text>
+<rect x="240" y="74" width="400" height="6" fill="url(#hatch)" stroke="#C98A00" stroke-width="1"/>
+<rect x="240" y="220" width="400" height="6" fill="url(#hatch)" stroke="#C98A00" stroke-width="1"/>
+<rect x="240" y="80" width="400" height="20" fill="#D9F0F2" stroke="none" stroke-width="1.5"/>
+<rect x="240" y="200" width="400" height="20" fill="#D9F0F2" stroke="none" stroke-width="1.5"/>
+<rect x="240" y="100" width="400" height="100" fill="#FBE2D6" stroke="#D2552B" stroke-width="2"/>
+<line x1="240" y1="80" x2="640" y2="80" stroke="#1E2B3A" stroke-width="1.6"/>
+<line x1="240" y1="220" x2="640" y2="220" stroke="#1E2B3A" stroke-width="1.6"/>
+<text x="440" y="155" font-size="12" text-anchor="middle" fill="#D2552B">heated inner tube, T<tspan dy="3.6" font-size="8.6">w</tspan><tspan dy="-3.6">​</tspan> = 80°C (constant)</text>
+<line x1="210" y1="90" x2="280" y2="90" stroke="#0B7C8C" stroke-width="2" marker-end="url(#aC)"/>
+<line x1="600" y1="90" x2="670" y2="90" stroke="#0B7C8C" stroke-width="2" marker-end="url(#aC)"/>
+<line x1="210" y1="210" x2="280" y2="210" stroke="#0B7C8C" stroke-width="2" marker-end="url(#aC)"/>
+<line x1="600" y1="210" x2="670" y2="210" stroke="#0B7C8C" stroke-width="2" marker-end="url(#aC)"/>
+<text x="236" y="66" font-size="12" text-anchor="start" fill="#0B7C8C">in: 20°C, 6.9 m/s</text>
+<text x="640" y="66" font-size="12" text-anchor="end" fill="#0B7C8C">out: 40°C</text>
+<line x1="330" y1="108" x2="330" y2="90" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="400" y1="108" x2="400" y2="90" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="470" y1="108" x2="470" y2="90" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="540" y1="108" x2="540" y2="90" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="330" y1="192" x2="330" y2="210" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="400" y1="192" x2="400" y2="210" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="470" y1="192" x2="470" y2="210" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="540" y1="192" x2="540" y2="210" stroke="#D2552B" stroke-width="1.3" marker-end="url(#aH)"/>
+<line x1="240" y1="252" x2="640" y2="252" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)" marker-start="url(#aGs)"/>
+<text x="440" y="270" font-size="12" text-anchor="middle" fill="#55667D">L = ?</text>
+</svg>

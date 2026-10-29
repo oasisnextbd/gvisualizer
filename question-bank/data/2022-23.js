@@ -15,7 +15,9 @@ QB.paper({
 - As the heat "sees" it, the velocity profile is therefore **blunt, almost flat (slug or plug flow)** across most of the thermal layer. In turbulent tube flow the profile is flat as well, and molecular conduction dominates even in the turbulent core.
 - Consequence: liquid-metal analyses assume slug flow ($u = u_\infty$ everywhere). The ordinary correlations based on Pr ≈ 1 (Dittus–Boelter) do not apply. Special correlations in the Péclet number are used instead, e.g. Lyon: $\mathrm{Nu} = 7 + 0.025\,\mathrm{Pe}^{0.8}$ for constant flux, or Seban–Shimazaki: $\mathrm{Nu} = 5.0 + 0.025\,\mathrm{Pe}^{0.8}$ for constant wall temperature.
 
-Sketch: wall at the bottom, a thin velocity layer $\delta$ with a steep $u$ profile, and a much thicker $\delta_t$ above it inside which $u \approx u_\infty$ (vertical straight line).`,
+Sketch: wall at the bottom, a thin velocity layer $\delta$ with a steep $u$ profile, and a much thicker $\delta_t$ above it inside which $u \approx u_\infty$ (vertical straight line).
+
+![Liquid metal (Pr ≪ 1): the velocity layer is thin, so u ≈ u∞ across most of the thermal layer](fig/2022-23-Q1a-sol.svg)`,
           answer: String.raw`Pr ≪ 1, so $\delta_t \gg \delta$. Over most of the thermal layer the fluid moves at ≈ $u_\infty$, giving a flat (slug-flow) profile, and correlations use the Péclet number.` },
         { id: "2022-23-Q1b", label: "(b)", marks: "5",
           topic: "conduction", sub: "Thermal contact resistance (two glass sheets)",
@@ -29,13 +31,17 @@ $$R''_{single} = \frac{L}{k} = \frac{0.008}{k}, \qquad R''_{double} = \frac{0.00
 - **Real surfaces:** no surface is perfectly smooth. Even when pressed tightly, the sheets touch only at the peaks of their surface roughness. The gaps are filled with air ($k \approx 0.026\,\mathrm{W/m\,K}$, about 30 times lower than glass at $k \approx 0.78$). This adds a **thermal contact resistance** $R''_{tc}$.
 - So $R''_{double} > R''_{single}$, and the double-sheet window transmits **somewhat less heat** than the single 8 mm sheet. With convection on both sides the difference is small, because the film resistances ($1/h$) dominate.
 
-> Why it matters: contact resistance is usually small for metals pressed together under high pressure, but it can be significant for rough or low-pressure joints, or when the interface traps a gas.`,
+> Why it matters: contact resistance is usually small for metals pressed together under high pressure, but it can be significant for rough or low-pressure joints, or when the interface traps a gas.
+
+![Temperature drop at the contact between two pressed sheets](fig/2022-23-Q1b-sol.svg)`,
           answer: String.raw`With perfect contact they are equal. In reality the contact resistance (air in the roughness gaps) makes the two-sheet window lose slightly less heat.` },
         { id: "2022-23-Q1c", label: "(c)", marks: "5",
           topic: "conduction", sub: "Al/Cu/Al pan bottom",
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`The bottom of a pan is made of a 4 mm thick aluminium layer. To increase the rate of heat transfer through the bottom, someone proposes a design that consists of a 3 mm thick copper layer sandwiched between two 2 mm thick aluminium layers. Will the new design conduct heat better? Explain. Assume perfect contact between the layers.`,
           solution: String.raw`**Given:** $k_{Al} = 237\,\mathrm{W/m\,K}$, $k_{Cu} = 401\,\mathrm{W/m\,K}$ (Çengel Table A-3, 300 K). Perfect contact.
+
+![Original 4 mm aluminium bottom versus the Al/Cu/Al sandwich](fig/2022-23-Q1c.svg)
 
 **Assumptions:** 1-D steady conduction; same area and same $\Delta T$ across the bottom.
 
@@ -58,7 +64,7 @@ $$R''_2 = \frac{0.002}{237} + \frac{0.003}{401} + \frac{0.002}{237} = 1.69\times
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`A house has a composite wall of wood, fibreglass insulation and plaster board, as shown in the sketch. On a cold winter day the convection heat transfer coefficients are $h_o = 60$ W/m²·K and $h_i = 30$ W/m²·K. The total wall surface is 350 m². Thermal conductivities: glass fibre blanket $k_b = 0.038$ W/m·K, plywood siding $k_s = 0.12$ W/m·K, plasterboard $k_p = 0.17$ W/m·K.
 
-*[Figure: composite wall, inside to outside: plasterboard ($L_p$ = 10 mm), glass fibre blanket (28 kg/m³, $L_b$ = 100 mm), plywood siding ($L_s$ = 20 mm). Inside air $T_{\infty,i}$ = 20°C with $h_i$; outside air $T_{\infty,o}$ = −15°C with $h_o$.]*
+![House wall: plasterboard, glass-fibre blanket and plywood siding between inside and outside air](fig/2022-23-Q1d.svg)
 
 (i) Determine a symbolic expression for the total thermal resistance of the wall, including inside and outside convection effects.
 
@@ -74,6 +80,8 @@ $$R''_2 = \frac{0.002}{237} + \frac{0.003}{401} + \frac{0.002}{237} = 1.69\times
 All resistances are in series:
 
 $$R_{tot} = \frac{1}{A}\left[\frac{1}{h_i} + \frac{L_p}{k_p} + \frac{L_b}{k_b} + \frac{L_s}{k_s} + \frac{1}{h_o}\right]$$
+
+![Series circuit for the house wall (resistances per unit area)](fig/2022-23-Q1d-sol.svg)
 
 ### (ii) Heat loss
 
@@ -147,7 +155,9 @@ $$T_0 = T_\infty + \frac{\dot q R}{2h} + \frac{\dot q R^2}{4k}$$`,
           topic: "forced-convection", sub: "Property variation distorts velocity profile",
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`"Wide temperature differences can have a significant impact on fluid properties that ends up altering the velocity profile." Explain with appropriate schematics.`,
-          solution: String.raw`- With a large wall-to-fluid temperature difference, viscosity varies strongly across the tube. This is especially true for liquids, where $\mu$ falls steeply with T. The parabolic laminar profile (or the turbulent profile) derived for constant properties is then distorted.
+          solution: String.raw`![Velocity-profile distortion when the fluid is heated or cooled](fig/common-velocity-distortion.svg)
+
+- With a large wall-to-fluid temperature difference, viscosity varies strongly across the tube. This is especially true for liquids, where $\mu$ falls steeply with T. The parabolic laminar profile (or the turbulent profile) derived for constant properties is then distorted.
 - **Liquid being heated** (wall hotter): the fluid near the wall is less viscous and flows faster, so it needs less shear. The profile becomes **flatter in the centre and steeper near the wall** than the isothermal parabola. The higher wall gradient raises $h$.
 - **Liquid being cooled** (wall colder): the fluid near the wall is more viscous and slows down. The profile becomes **more peaked at the centre** with a gentler wall gradient, so $h$ drops.
 - **Gases** are the opposite, because $\mu$ *increases* with T. A heated gas gives a more peaked profile; a cooled gas gives a flatter one.
@@ -164,6 +174,8 @@ $$T_0 = T_\infty + \frac{\dot q R}{2h} + \frac{\dot q R^2}{4k}$$`,
           solution: String.raw`**Given:** duct $a\times b = 0.03\times0.05\,\mathrm{m}$, $\dot m = 2\,\mathrm{kg/s}$, $T_i = 30^\circ\mathrm{C}$, $T_e = 50^\circ\mathrm{C}$, $T_w = 90^\circ\mathrm{C}$.
 
 **Find:** L.
+
+![Rectangular duct 30 mm × 50 mm with the wall at 90°C](fig/2022-23-Q2c.svg)
 
 **Assumptions:** steady state; fully developed turbulent flow; constant properties (given at the mean bulk temperature, $40^\circ\mathrm{C}$); hydraulic-diameter approach.
 
@@ -208,7 +220,9 @@ Check: $L/D_h = 100 > 10$, so the fully developed assumption holds.`,
 $$\frac{u}{u_\infty} = \frac32\frac{y}{\delta} - \frac12\left(\frac{y}{\delta}\right)^3, \qquad \delta = 4.64\sqrt{\frac{\nu x}{u_\infty}}$$
 
 where $u_\infty$ is the velocity outside the boundary layer. Derive a relation between fluid friction and heat transfer for laminar flow on a flat plate, known as the Reynolds–Colburn analogy.`,
-          solution: String.raw`**Assumptions:** steady, incompressible, laminar flow over a flat plate at zero pressure gradient; constant properties; plate at uniform $T_w$.
+          solution: String.raw`![Velocity and thermal boundary layers on a flat plate](fig/common-bl-flat-plate.svg)
+
+**Assumptions:** steady, incompressible, laminar flow over a flat plate at zero pressure gradient; constant properties; plate at uniform $T_w$.
 
 ### 1. Friction side
 
@@ -272,7 +286,7 @@ This is the **Reynolds–Colburn analogy**. It also holds for the plate averages
 
 (iii) the heat flux at the two ends of the rod.
 
-*[Figure: insulated rod, d = 25 mm, L = 300 mm; x measured from the left end; $T_1$ = 150°C at x = 0, $T_2$ = 100°C at x = L.]*`,
+![Insulated copper rod (d = 25 mm, L = 300 mm) welded between plates at 150°C and 100°C](fig/2022-23-Q3b.svg)`,
           solution: String.raw`**Given:** $L = 0.3\,\mathrm{m}$, $d = 0.025\,\mathrm{m}$, $k = 390\,\mathrm{W/m\,K}$, $\dot Q_{gen} = 150\,\mathrm{W}$, $T(0) = 150^\circ\mathrm{C}$, $T(L) = 100^\circ\mathrm{C}$.
 
 **Assumptions:** steady state; 1-D axial conduction (lateral surface insulated); uniform $\dot q$; constant $k$.
@@ -329,7 +343,7 @@ This flows in +x, into the 100°C plate. The heat rate is $106.9\,\mathrm{W}$.
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`A firefighter's protective clothing (turnout coat) is typically constructed as an ensemble of three layers separated by air gaps. Considering all possible modes of heat transfer, draw the thermal resistance circuit for the system.
 
-*[Figure: from the fire side to the firefighter: shell (s) ($k_s$, $L_s$), 1 mm air gap, moisture barrier (mb) ($k_{mb}$, $L_{mb}$), 1 mm air gap, thermal liner (tl) ($k_{tl}$, $L_{tl}$).]*`,
+![Turnout coat: shell, moisture barrier and thermal liner separated by 1 mm air gaps](fig/2022-23-Q4a.svg)`,
           solution: String.raw`**Modes**
 - Conduction through each fabric layer.
 - Across each thin (1 mm) air gap: **conduction** through the air (the gap is too narrow for free convection) **in parallel with radiation** between the facing surfaces.
@@ -351,7 +365,9 @@ $$T_{fire}\ -\!\!\left[R_{conv,o}\ \|\ R_{rad,o}\right]\!\!-\ R_{s}\ -\!\!\left[
 
 The total is $R''_{tot} = (1/h_o + h_{r,o})^{-1} + R_s + 2\left(\frac{1}{R_a} + \frac{1}{R_{rad,a}}\right)^{-1} + R_{mb} + R_{tl}$. A contact or convection resistance to the skin can be added at the inner end if the liner is not in contact.
 
-Sketch: draw it as a chain of resistors. At the outer surface and at each gap, two branches sit side by side (parallel pair); the fabric layers are single resistors in series.`,
+Sketch: draw it as a chain of resistors. At the outer surface and at each gap, two branches sit side by side (parallel pair); the fabric layers are single resistors in series.
+
+![Turnout-coat circuit: fabric layers in series, conduction and radiation in parallel across each gap](fig/2022-23-Q4a-sol.svg)`,
           answer: String.raw`Series chain: [outer conv ∥ rad] – $R_s$ – [gap cond ∥ gap rad] – $R_{mb}$ – [gap cond ∥ gap rad] – $R_{tl}$.` },
         { id: "2022-23-Q4b", label: "(b)", marks: "11",
           topic: "convection-basics", sub: "Nusselt number from wall conduction",
@@ -632,6 +648,8 @@ All symbols have their usual meaning.`,
 3. Heat crosses the film by conduction only, giving a **linear** temperature profile. Momentum and energy changes (inertia) in the film are negligible.
 4. The interface temperature is $T_{sat}$. Sub-cooling of the condensate is neglected.
 
+![Condensate film on a vertical plate: δ(x), the element, and the velocity and temperature profiles](fig/2022-23-Q6a-sol.svg)
+
 ### 1. Velocity profile
 
 Force balance on a liquid element from $y$ to $\delta$ (unit width, height dx). Weight minus buoyancy equals viscous shear:
@@ -775,6 +793,8 @@ The slides split heat-exchanger design into **thermal design** (done by the chem
           text: String.raw`Write a short note on the plate-and-frame heat exchanger.`,
           solution: String.raw`**Construction (slides):** a stack of corrugated metal plates pressed together in a frame and sealed at the edges by compressible gaskets, which form narrow interconnected passages (welded versions have no gaskets). In detail: thin plates (stainless steel, titanium) are clamped between a fixed and a movable frame plate by tie bolts, and the gaskets around each plate's edge and ports form alternate channels. The hot fluid flows in every other channel and the cold fluid in the channels between, usually in counterflow.
 
+![Plate-and-frame exchanger: plate pack with hot and cold fluids in alternate channels](fig/2022-23-Q7c-sol.svg)
+
 **Features and advantages**
 - The corrugations promote turbulence at low Re. $h$ is very high and $U$ is 3–5 times that of shell-and-tube units.
 - Very compact (large area per volume), with close temperature approach (about 1°C) and high effectiveness.
@@ -798,6 +818,8 @@ Properties of water at the saturation temperature of 40°C corresponding to 7.38
           solution: String.raw`**Given:** $T_{sat} = 40^\circ\mathrm{C}$, $T_s = 30^\circ\mathrm{C}$, $D = 0.03\,\mathrm{m}$, 12 tubes with $N = 3$ in each vertical column, $h_{fg} = 2407\,\mathrm{kJ/kg}$, $\rho_v = 0.05\,\mathrm{kg/m^3}$.
 
 **Find:** $\dot Q$ and $\dot m$, per metre of tube length (the length is not given).
+
+![Tube bank 3 high × 4 wide: N = 3 tubes per column](fig/2022-23-Q7d.svg)
 
 **Assumptions:** steady; laminar film condensation; uniform tube surface temperature; condensate drips from tube to tube down each column.
 
@@ -838,7 +860,9 @@ $$\dot m_{per\ tube} = \frac{0.0328}{12} = 2.73\times10^{-3}\,\mathrm{kg/s\ per\
           topic: "boiling", sub: "Pool boiling curve; burnout",
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`Draw a typical pool boiling curve and discuss the heat transfer behaviour in the different regimes. Explain the "burnout" phenomenon.`,
-          solution: String.raw`**Sketch:** heat flux $q''$ (log scale, W/m²) against excess temperature $\Delta T_e = T_s - T_{sat}$ (log scale, °C), for water at 1 atm. The curve rises gently, then steeply to a peak C ($\Delta T_e \approx 30^\circ\mathrm{C}$, $q''_{max} \approx 1.26\,\mathrm{MW/m^2}$). It falls to a minimum D (the Leidenfrost point, $\Delta T_e \approx 120^\circ\mathrm{C}$) and rises again. Mark points A (onset of nucleate boiling, $\Delta T_e \approx 5^\circ\mathrm{C}$), B, C, D and E. Draw a dashed horizontal arrow from C to the film-boiling branch E (burnout) and a return arrow from D on cooling (hysteresis).
+          solution: String.raw`![Pool boiling curve with its regimes, the critical heat flux and the Leidenfrost point](fig/common-boiling-curve.svg)
+
+**Sketch:** heat flux $q''$ (log scale, W/m²) against excess temperature $\Delta T_e = T_s - T_{sat}$ (log scale, °C), for water at 1 atm. The curve rises gently, then steeply to a peak C ($\Delta T_e \approx 30^\circ\mathrm{C}$, $q''_{max} \approx 1.26\,\mathrm{MW/m^2}$). It falls to a minimum D (the Leidenfrost point, $\Delta T_e \approx 120^\circ\mathrm{C}$) and rises again. Mark points A (onset of nucleate boiling, $\Delta T_e \approx 5^\circ\mathrm{C}$), B, C, D and E. Draw a dashed horizontal arrow from C to the film-boiling branch E (burnout) and a return arrow from D on cooling (hysteresis).
 
 | Regime | $\Delta T_e$ (water, 1 atm) | Behaviour |
 |---|---|---|

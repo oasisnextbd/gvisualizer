@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 380" width="700" height="380" font-family="Helvetica, Arial, sans-serif">
+<title>Ranges of thermal conductivity of material classes</title>
+<defs><marker id="a-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="a-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="a-cold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="a-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="a-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="a-vap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><pattern id="ins" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="metal" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.8"/></pattern></defs>
+<rect width="700" height="380" fill="#FFFFFF"/>
+<line x1="190.0" y1="32" x2="190.0" y2="310" stroke="#9AA8B8" stroke-width="0.7" stroke-dasharray="3 4"/>
+<text x="190.0" y="328" font-size="12" fill="#55667D" text-anchor="middle">0.001</text>
+<line x1="255.71428571428572" y1="32" x2="255.71428571428572" y2="310" stroke="#9AA8B8" stroke-width="0.7" stroke-dasharray="3 4"/>
+<text x="255.71428571428572" y="328" font-size="12" fill="#55667D" text-anchor="middle">0.01</text>
+<line x1="321.42857142857144" y1="32" x2="321.42857142857144" y2="310" stroke="#9AA8B8" stroke-width="0.7" stroke-dasharray="3 4"/>
+<text x="321.42857142857144" y="328" font-size="12" fill="#55667D" text-anchor="middle">0.1</text>
+<line x1="387.1428571428571" y1="32" x2="387.1428571428571" y2="310" stroke="#9AA8B8" stroke-width="0.7" stroke-dasharray="3 4"/>
+<text x="387.1428571428571" y="328" font-size="12" fill="#55667D" text-anchor="middle">1</text>
+<line x1="452.85714285714283" y1="32" x2="452.85714285714283" y2="310" stroke="#9AA8B8" stroke-width="0.7" stroke-dasharray="3 4"/>
+<text x="452.85714285714283" y="328" font-size="12" fill="#55667D" text-anchor="middle">10</text>
+<line x1="518.5714285714286" y1="32" x2="518.5714285714286" y2="310" stroke="#9AA8B8" stroke-width="0.7" stroke-dasharray="3 4"/>
+<text x="518.5714285714286" y="328" font-size="12" fill="#55667D" text-anchor="middle">100</text>
+<line x1="584.2857142857142" y1="32" x2="584.2857142857142" y2="310" stroke="#9AA8B8" stroke-width="0.7" stroke-dasharray="3 4"/>
+<text x="584.2857142857142" y="328" font-size="12" fill="#55667D" text-anchor="middle">1000</text>
+<line x1="650.0" y1="32" x2="650.0" y2="310" stroke="#9AA8B8" stroke-width="0.7" stroke-dasharray="3 4"/>
+<text x="650.0" y="328" font-size="12" fill="#55667D" text-anchor="middle">10 000</text>
+<line x1="186" y1="312" x2="660" y2="312" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#a-ink)"/>
+<text x="420.0" y="352" font-size="13" fill="#1E2B3A" text-anchor="middle">Thermal conductivity k, W/m·K (log scale)</text>
+<text x="178" y="58" font-size="13" fill="#1E2B3A" text-anchor="end" font-weight="bold">Nonmetallic crystals</text>
+<rect x="406.9248282864902" y="44" width="201.13157236609447" height="20" rx="4" fill="#FBE2D6" stroke="#D2552B" stroke-width="1.4"/>
+<text x="398.9248282864902" y="58" font-size="11" fill="#55667D" text-anchor="end">diamond, graphite, SiC, BeO</text>
+<text x="178" y="96" font-size="13" fill="#1E2B3A" text-anchor="end" font-weight="bold">Pure metals</text>
+<rect x="498.7894574277955" y="82" width="61.40989822457726" height="20" rx="4" fill="#FBE2D6" stroke="#D2552B" stroke-width="1.4"/>
+<text x="490.7894574277955" y="96" font-size="11" fill="#55667D" text-anchor="end">Ag 429, Cu 401, Al 237, Fe 80</text>
+<text x="178" y="134" font-size="13" fill="#1E2B3A" text-anchor="end" font-weight="bold">Metal alloys</text>
+<rect x="452.85714285714283" y="120" width="77.28599702365915" height="20" rx="4" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.4"/>
+<text x="444.85714285714283" y="134" font-size="11" fill="#55667D" text-anchor="end">brass, bronze, stainless 15</text>
+<text x="178" y="172" font-size="13" fill="#1E2B3A" text-anchor="end" font-weight="bold">Nonmetallic solids</text>
+<rect x="352.78225388157784" y="158" width="100.07488897556499" height="20" rx="4" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.4"/>
+<text x="460.85714285714283" y="172" font-size="11" fill="#55667D">oxides, rock, brick, ice</text>
+<text x="178" y="210" font-size="13" fill="#1E2B3A" text-anchor="end" font-weight="bold">Liquids</text>
+<rect x="321.42857142857144" y="196" width="55.535014058079696" height="20" rx="4" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.4"/>
+<text x="384.96358548665114" y="210" font-size="11" fill="#55667D">water 0.6, oils 0.15  (Hg ≈ 8)</text>
+<text x="178" y="248" font-size="13" fill="#1E2B3A" text-anchor="end" font-weight="bold">Insulators</text>
+<rect x="275.49625685791875" y="234" width="65.71428571428572" height="20" rx="4" fill="#FFF3D6" stroke="#C98A00" stroke-width="1.4"/>
+<text x="349.2105425722045" y="248" font-size="11" fill="#55667D">fibres, foams, glass wool</text>
+<text x="178" y="286" font-size="13" fill="#1E2B3A" text-anchor="end" font-weight="bold">Gases</text>
+<rect x="235.93231457065266" y="272" width="105.27822800155181" height="20" rx="4" fill="#EEF1F5" stroke="#55667D" stroke-width="1.4"/>
+<text x="349.2105425722045" y="286" font-size="11" fill="#55667D">air 0.026, CO₂, H₂ 0.18</text>
+</svg>

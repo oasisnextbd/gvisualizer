@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 380" width="620" height="380" font-family="Helvetica, Arial, sans-serif">
+<title>Composite house wall: plasterboard, glass-fibre blanket, plywood siding</title>
+<defs><marker id="aI" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="aIs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#1E2B3A"/></marker><marker id="aH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="aHs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#D2552B"/></marker><marker id="aC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aCs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#0B7C8C"/></marker><marker id="aG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aGs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#9AA8B8"/></marker><marker id="aA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="aAs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#B7840A"/></marker><marker id="aS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="aSs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#55667D"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="mhatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.9"/></pattern></defs>
+<rect width="620" height="380" fill="#FFFFFF"/>
+<rect x="210" y="70" width="14" height="220" fill="#EDE7DA" stroke="#1E2B3A" stroke-width="1.4"/>
+<rect x="224" y="70" width="140" height="220" fill="url(#hatch)" stroke="#C98A00" stroke-width="1.2"/>
+<rect x="364" y="70" width="26" height="220" fill="#E9D2B4" stroke="#1E2B3A" stroke-width="1.4"/>
+<line x1="217" y1="100" x2="150" y2="40" stroke="#55667D" stroke-width="0.9"/>
+<circle cx="217" cy="100" r="1.8" fill="#55667D" stroke="none" stroke-width="0"/>
+<text x="152" y="44" font-size="13" text-anchor="end" fill="#1E2B3A">Plaster board, k<tspan dy="3.9" font-size="9.4">p</tspan><tspan dy="-3.9">​</tspan></text>
+<text x="294" y="30" font-size="13" text-anchor="middle" fill="#1E2B3A">Glass fibre blanket</text>
+<text x="294" y="47" font-size="13" text-anchor="middle" fill="#1E2B3A">(28 kg/m³), k<tspan dy="3.9" font-size="9.4">b</tspan><tspan dy="-3.9">​</tspan></text>
+<line x1="294" y1="52" x2="294" y2="100" stroke="#55667D" stroke-width="0.9"/>
+<line x1="377" y1="100" x2="470" y2="40" stroke="#55667D" stroke-width="0.9"/>
+<circle cx="377" cy="100" r="1.8" fill="#55667D" stroke="none" stroke-width="0"/>
+<text x="473" y="44" font-size="13" text-anchor="start" fill="#1E2B3A">Plywood siding, k<tspan dy="3.9" font-size="9.4">s</tspan><tspan dy="-3.9">​</tspan></text>
+<text x="100" y="120" font-size="14" text-anchor="middle" fill="#1E2B3A" font-weight="bold">Inside</text>
+<text x="100" y="145" font-size="13" text-anchor="middle" fill="#1E2B3A">h<tspan dy="3.9" font-size="9.4">i</tspan><tspan dy="-3.9">​</tspan>, T<tspan dy="3.9" font-size="9.4">∞,i</tspan><tspan dy="-3.9">​</tspan> = 20°C</text>
+<text x="520" y="120" font-size="14" text-anchor="middle" fill="#1E2B3A" font-weight="bold">Outside</text>
+<text x="520" y="145" font-size="13" text-anchor="middle" fill="#1E2B3A">h<tspan dy="3.9" font-size="9.4">o</tspan><tspan dy="-3.9">​</tspan>, T<tspan dy="3.9" font-size="9.4">∞,o</tspan><tspan dy="-3.9">​</tspan> = −15°C</text>
+<line x1="75" y1="230" x2="75" y2="175" stroke="#D2552B" stroke-width="1.8" marker-end="url(#aH)"/>
+<line x1="495" y1="230" x2="495" y2="175" stroke="#0B7C8C" stroke-width="1.8" marker-end="url(#aC)"/>
+<line x1="100" y1="230" x2="100" y2="175" stroke="#D2552B" stroke-width="1.8" marker-end="url(#aH)"/>
+<line x1="520" y1="230" x2="520" y2="175" stroke="#0B7C8C" stroke-width="1.8" marker-end="url(#aC)"/>
+<line x1="125" y1="230" x2="125" y2="175" stroke="#D2552B" stroke-width="1.8" marker-end="url(#aH)"/>
+<line x1="545" y1="230" x2="545" y2="175" stroke="#0B7C8C" stroke-width="1.8" marker-end="url(#aC)"/>
+<line x1="170" y1="200" x2="202" y2="200" stroke="#D2552B" stroke-width="3.5" marker-end="url(#aH)"/>
+<text x="180" y="190" font-size="13" text-anchor="middle" fill="#D2552B" font-weight="bold">q</text>
+<line x1="210" y1="294" x2="210" y2="324" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="224" y1="294" x2="224" y2="324" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="364" y1="294" x2="364" y2="324" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="390" y1="294" x2="390" y2="324" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="170" y1="316" x2="210" y2="316" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)"/>
+<text x="166" y="320" font-size="12" text-anchor="end" fill="#55667D">10 mm</text>
+<line x1="224" y1="316" x2="364" y2="316" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)" marker-start="url(#aGs)"/>
+<text x="294" y="310" font-size="12" text-anchor="middle" fill="#55667D">100 mm</text>
+<line x1="430" y1="316" x2="390" y2="316" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)"/>
+<text x="434" y="320" font-size="12" text-anchor="start" fill="#55667D">20 mm</text>
+<text x="217" y="344" font-size="13" text-anchor="middle" fill="#1E2B3A">L<tspan dy="3.9" font-size="9.4">p</tspan><tspan dy="-3.9">​</tspan></text>
+<text x="294" y="344" font-size="13" text-anchor="middle" fill="#1E2B3A">L<tspan dy="3.9" font-size="9.4">b</tspan><tspan dy="-3.9">​</tspan></text>
+<text x="377" y="344" font-size="13" text-anchor="middle" fill="#1E2B3A">L<tspan dy="3.9" font-size="9.4">s</tspan><tspan dy="-3.9">​</tspan></text>
+<text x="310" y="372" font-size="12" text-anchor="middle" fill="#55667D">A = 350 m²;  h<tspan dy="3.6" font-size="8.6">i</tspan><tspan dy="-3.6">​</tspan> = 30, h<tspan dy="3.6" font-size="8.6">o</tspan><tspan dy="-3.6">​</tspan> = 60 W/m²·K</text>
+</svg>

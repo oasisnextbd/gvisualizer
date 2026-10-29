@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" width="680" height="460" font-family="Helvetica, Arial, sans-serif">
+<title>Shell condenser with a 10 × 10 horizontal tube bank</title>
+<defs><marker id="aI" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="aIs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#1E2B3A"/></marker><marker id="aH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="aHs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#D2552B"/></marker><marker id="aC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aCs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#0B7C8C"/></marker><marker id="aG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aGs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#9AA8B8"/></marker><marker id="aA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="aAs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#B7840A"/></marker><marker id="aS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="aSs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#55667D"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="mhatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.9"/></pattern></defs>
+<rect width="680" height="460" fill="#FFFFFF"/>
+<circle cx="290" cy="245" r="150" fill="#F3F5F8" stroke="#1E2B3A" stroke-width="2.2"/>
+<path d="M180,347 A150,150 0 0 0 400,347 Z" stroke="#0B7C8C" stroke-width="1" fill="#D9F0F2"/>
+<rect x="274" y="55" width="32" height="42" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<rect x="264" y="49" width="52" height="8" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<line x1="290" y1="8" x2="290" y2="45" stroke="#9AA8B8" stroke-width="2.5" marker-end="url(#aG)"/>
+<text x="304" y="22" font-size="12" text-anchor="start" fill="#55667D">Saturated steam (≈10°C superheat)</text>
+<text x="210" y="133" font-size="13" text-anchor="start" fill="#1E2B3A" font-weight="bold">P = 4.25 kPa</text>
+<circle cx="183.5" cy="158.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="200.5" cy="158.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="217.5" cy="158.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="234.5" cy="158.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="251.5" cy="158.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="268.5" cy="158.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="285.5" cy="158.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="302.5" cy="158.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="319.5" cy="158.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="336.5" cy="158.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="183.5" cy="175.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="200.5" cy="175.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="217.5" cy="175.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="234.5" cy="175.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="251.5" cy="175.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="268.5" cy="175.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="285.5" cy="175.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="302.5" cy="175.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="319.5" cy="175.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="336.5" cy="175.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="183.5" cy="192.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="200.5" cy="192.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="217.5" cy="192.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="234.5" cy="192.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="251.5" cy="192.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="268.5" cy="192.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="285.5" cy="192.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="302.5" cy="192.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="319.5" cy="192.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="336.5" cy="192.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="183.5" cy="209.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="200.5" cy="209.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="217.5" cy="209.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="234.5" cy="209.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="251.5" cy="209.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="268.5" cy="209.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="285.5" cy="209.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="302.5" cy="209.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="319.5" cy="209.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="336.5" cy="209.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="183.5" cy="226.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="200.5" cy="226.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="217.5" cy="226.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="234.5" cy="226.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="251.5" cy="226.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="268.5" cy="226.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="285.5" cy="226.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="302.5" cy="226.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="319.5" cy="226.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="336.5" cy="226.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="183.5" cy="243.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="200.5" cy="243.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="217.5" cy="243.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="234.5" cy="243.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="251.5" cy="243.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="268.5" cy="243.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="285.5" cy="243.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="302.5" cy="243.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="319.5" cy="243.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="336.5" cy="243.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="183.5" cy="260.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="200.5" cy="260.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="217.5" cy="260.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="234.5" cy="260.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="251.5" cy="260.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="268.5" cy="260.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="285.5" cy="260.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="302.5" cy="260.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="319.5" cy="260.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="336.5" cy="260.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="183.5" cy="277.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="200.5" cy="277.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="217.5" cy="277.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="234.5" cy="277.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="251.5" cy="277.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="268.5" cy="277.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="285.5" cy="277.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="302.5" cy="277.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="319.5" cy="277.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="336.5" cy="277.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="183.5" cy="294.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="200.5" cy="294.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="217.5" cy="294.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="234.5" cy="294.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="251.5" cy="294.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="268.5" cy="294.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="285.5" cy="294.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="302.5" cy="294.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="319.5" cy="294.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="336.5" cy="294.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="183.5" cy="311.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="200.5" cy="311.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="217.5" cy="311.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="234.5" cy="311.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="251.5" cy="311.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="268.5" cy="311.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="285.5" cy="311.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="302.5" cy="311.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="319.5" cy="311.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<circle cx="336.5" cy="311.5" r="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.1"/>
+<line x1="171.5" y1="150.5" x2="171.5" y2="319.5" stroke="#9AA8B8" stroke-width="1" marker-end="url(#aG)" marker-start="url(#aGs)"/>
+<line x1="171.5" y1="245" x2="128" y2="245" stroke="#55667D" stroke-width="0.9"/>
+<text x="124" y="243" font-size="12" text-anchor="end" fill="#1E2B3A">N = 10</text>
+<text x="124" y="258" font-size="11" text-anchor="end" fill="#55667D">per column</text>
+<text x="352.5" y="188.5" font-size="13" text-anchor="start" fill="#1E2B3A" font-weight="bold">n = 100 tubes</text>
+<text x="352.5" y="206.5" font-size="12" text-anchor="start" fill="#1E2B3A">D = 3 cm</text>
+<text x="352.5" y="222.5" font-size="12" text-anchor="start" fill="#1E2B3A">L = 8 m</text>
+<text x="352.5" y="238.5" font-size="12" text-anchor="start" fill="#1E2B3A">T<tspan dy="3.6" font-size="8.6">s</tspan><tspan dy="-3.6">​</tspan> = 18°C</text>
+<text x="290" y="373" font-size="11" text-anchor="middle" fill="#0B7C8C">condensate (5°C subcooled)</text>
+<rect x="436" y="207" width="40" height="16" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.3"/>
+<line x1="480" y1="215" x2="530" y2="215" stroke="#0B7C8C" stroke-width="2" marker-end="url(#aC)"/>
+<text x="535" y="219" font-size="12" text-anchor="start" fill="#0B7C8C">Cooling water out</text>
+<rect x="436" y="247" width="40" height="16" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.3"/>
+<line x1="530" y1="255" x2="480" y2="255" stroke="#0B7C8C" stroke-width="2" marker-end="url(#aC)"/>
+<text x="535" y="259" font-size="12" text-anchor="start" fill="#0B7C8C">Cooling water in</text>
+<rect x="283" y="393" width="14" height="30" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.3"/>
+<line x1="290" y1="423" x2="290" y2="450" stroke="#0B7C8C" stroke-width="2" marker-end="url(#aC)"/>
+<text x="304" y="443" font-size="12" text-anchor="start" fill="#0B7C8C">Condensate drain</text>
+</svg>
