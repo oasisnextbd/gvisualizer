@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="700" height="250" font-family="Helvetica, Arial, sans-serif"><title>Horizontal air layer 2 cm thick between surfaces 10°C apart: conduction, cellular and turbulent convection</title><defs><marker id="ai" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="dg" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L10,5 L0,9 z" fill="#9AA8B8"/></marker><marker id="dg0" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M10,1 L0,5 L10,9 z" fill="#9AA8B8"/></marker><pattern id="ins" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="gen" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#FBE2D6"/><circle cx="6" cy="6" r="1.3" fill="#D2552B"/></pattern><pattern id="wtr" width="16" height="8" patternUnits="userSpaceOnUse"><rect width="16" height="8" fill="#D9F0F2"/><path d="M0,4 q4,-3 8,0 t8,0" stroke="#0B7C8C" stroke-width="0.7" fill="none"/></pattern></defs><rect width="700" height="250" fill="white"/>
+<rect x="20.0" y="50.0" width="200.0" height="10.0" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.2"/>
+<rect x="20.0" y="170.0" width="200.0" height="10.0" fill="#FBE2D6" stroke="#D2552B" stroke-width="1.2"/>
+<rect x="20.0" y="60.0" width="200.0" height="110.0" fill="#F7F9FB" stroke="none" stroke-width="0"/>
+<text x="120.0" y="36.0" font-size="12.5" text-anchor="middle" fill="#1E2B3A" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke" font-weight="bold">(i) q = 13.15 W/m²: Nu = 1</text>
+<line x1="45.0" y1="166.0" x2="45.0" y2="66.0" stroke="#D2552B" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="83.0" y1="166.0" x2="83.0" y2="66.0" stroke="#D2552B" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="121.0" y1="166.0" x2="121.0" y2="66.0" stroke="#D2552B" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="159.0" y1="166.0" x2="159.0" y2="66.0" stroke="#D2552B" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="197.0" y1="166.0" x2="197.0" y2="66.0" stroke="#D2552B" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="120.0" y="200.0" font-size="11.5" text-anchor="middle" fill="#55667D" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">still fluid: pure conduction</text>
+<line x1="230.0" y1="60.0" x2="230.0" y2="170.0" stroke="#9AA8B8" stroke-width="1" marker-end="url(#dg)" marker-start="url(#dg0)"/>
+<text x="236.0" y="119.0" font-size="12" text-anchor="start" fill="#55667D" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke"></text>
+<rect x="248.0" y="50.0" width="200.0" height="10.0" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.2"/>
+<rect x="248.0" y="170.0" width="200.0" height="10.0" fill="#FBE2D6" stroke="#D2552B" stroke-width="1.2"/>
+<rect x="248.0" y="60.0" width="200.0" height="110.0" fill="#F7F9FB" stroke="none" stroke-width="0"/>
+<text x="348.0" y="36.0" font-size="12.5" text-anchor="middle" fill="#1E2B3A" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke" font-weight="bold">(ii) q = 40 W/m²: Nu ≈ 3</text>
+<ellipse cx="273" cy="115.0" rx="22" ry="44" fill="none" stroke="#0B7C8C" stroke-width="1.5"/>
+<line x1="295.0" y1="119.0" x2="295.0" y2="111.0" stroke="#0B7C8C" stroke-width="1.5" marker-end="url(#ac)"/>
+<ellipse cx="323" cy="115.0" rx="22" ry="44" fill="none" stroke="#0B7C8C" stroke-width="1.5"/>
+<line x1="345.0" y1="111.0" x2="345.0" y2="119.0" stroke="#0B7C8C" stroke-width="1.5" marker-end="url(#ac)"/>
+<ellipse cx="373" cy="115.0" rx="22" ry="44" fill="none" stroke="#0B7C8C" stroke-width="1.5"/>
+<line x1="395.0" y1="119.0" x2="395.0" y2="111.0" stroke="#0B7C8C" stroke-width="1.5" marker-end="url(#ac)"/>
+<ellipse cx="423" cy="115.0" rx="22" ry="44" fill="none" stroke="#0B7C8C" stroke-width="1.5"/>
+<line x1="445.0" y1="111.0" x2="445.0" y2="119.0" stroke="#0B7C8C" stroke-width="1.5" marker-end="url(#ac)"/>
+<text x="348.0" y="200.0" font-size="11.5" text-anchor="middle" fill="#55667D" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">laminar convection cells</text>
+<line x1="458.0" y1="60.0" x2="458.0" y2="170.0" stroke="#9AA8B8" stroke-width="1" marker-end="url(#dg)" marker-start="url(#dg0)"/>
+<text x="464.0" y="119.0" font-size="12" text-anchor="start" fill="#55667D" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke"></text>
+<rect x="476.0" y="50.0" width="200.0" height="10.0" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1.2"/>
+<rect x="476.0" y="170.0" width="200.0" height="10.0" fill="#FBE2D6" stroke="#D2552B" stroke-width="1.2"/>
+<rect x="476.0" y="60.0" width="200.0" height="110.0" fill="#F7F9FB" stroke="none" stroke-width="0"/>
+<text x="576.0" y="36.0" font-size="12.5" text-anchor="middle" fill="#1E2B3A" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke" font-weight="bold">(iii) q = 200 W/m²: Nu ≈ 15</text>
+<path d="M544.7257505085511,118.44987957308425 A11.699551665480794,11.699551665480794 0 1 1 533.0261988430702,106.75032790760345" stroke="#0B7C8C" stroke-width="1.4" fill="none" marker-end="url(#ac)"/>
+<path d="M601.6981749221741,124.80618372042821 A8.655288592398131,8.655288592398131 0 1 1 593.0428863297759,116.15089512803007" stroke="#0B7C8C" stroke-width="1.4" fill="none" marker-end="url(#ac)"/>
+<path d="M506.7530907582794,141.32258840352387 A10.593540143280077,10.593540143280077 0 1 1 496.1595506149994,130.7290482602438" stroke="#0B7C8C" stroke-width="1.4" fill="none" marker-end="url(#ac)"/>
+<path d="M545.1329126868827,153.6602971698161 A12.70263507522448,12.70263507522448 0 1 1 532.4302776116582,140.9576620945916" stroke="#0B7C8C" stroke-width="1.4" fill="none" marker-end="url(#ac)"/>
+<path d="M645.5703594144413,113.15555027854813 A14.390681405441619,14.390681405441619 0 1 1 631.1796780089998,98.76486887310651" stroke="#0B7C8C" stroke-width="1.4" fill="none" marker-end="url(#ac)"/>
+<path d="M535.3815466112909,125.5191313462447 A16.680453071432968,16.680453071432968 0 1 1 518.7010935398579,108.83867827481174" stroke="#0B7C8C" stroke-width="1.4" fill="none" marker-end="url(#ac)"/>
+<path d="M594.5158332565574,133.81764478371625 A14.714114753695926,14.714114753695926 0 1 1 579.8017185028614,119.10353003002032" stroke="#0B7C8C" stroke-width="1.4" fill="none" marker-end="url(#ac)"/>
+<path d="M518.4121516985407,135.14195921037174 A13.910995829313176,13.910995829313176 0 1 1 504.50115586922755,121.23096338105856" stroke="#0B7C8C" stroke-width="1.4" fill="none" marker-end="url(#ac)"/>
+<path d="M560.0631685303663,78.4189166146405 A16.655272369789458,16.655272369789458 0 1 1 543.4078961605768,61.76364424485104" stroke="#0B7C8C" stroke-width="1.4" fill="none" marker-end="url(#ac)"/>
+<text x="576.0" y="200.0" font-size="11.5" text-anchor="middle" fill="#55667D" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">turbulent mixing</text>
+<line x1="686.0" y1="60.0" x2="686.0" y2="170.0" stroke="#9AA8B8" stroke-width="1" marker-end="url(#dg)" marker-start="url(#dg0)"/>
+<text x="692.0" y="119.0" font-size="12" text-anchor="start" fill="#55667D" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke"></text>
+<text x="232.0" y="230.0" font-size="12" text-anchor="start" fill="#55667D" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">L = 2 cm, k<tspan dy="3.6" font-size="8.6">air</tspan><tspan dy="-3.6"> </tspan> = 0.0263 W/m·°C, ΔT = 10°C;  Nu = hL/k = q/(kΔT/L)</text>
+<text x="18.0" y="230.0" font-size="11" text-anchor="start" fill="#0B7C8C" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">cold surface top,</text>
+<text x="18.0" y="244.0" font-size="11" text-anchor="start" fill="#D2552B" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">hot surface below</text>
+</svg>

@@ -102,6 +102,8 @@ St is the natural group in the Reynolds–Colburn analogy, $\mathrm{St}\,\mathrm
 
 **Find:** $h$ and $\mathrm{Nu} = hL/k$.
 
+![The air layer for Nu = 1, ≈ 3 and ≈ 15](fig/practice-convection-basics-P3a.svg)
+
 1. Heat-transfer coefficient: $h = \dfrac{\dot q}{\Delta T}$.
 2. Nusselt number:
 $$\mathrm{Nu} = \frac{\dot q_{conv}}{\dot q_{cond}} = \frac{h\Delta T}{k\Delta T/L} = \frac{hL}{k}$$
@@ -172,6 +174,8 @@ $$T_b = \bar T = \frac{\displaystyle\int_0^{r_0}\rho\,2\pi r\,dr\,u\,c_p\,T}{\di
 
 **Find:** $T_b$, $\bar T_{area}$.
 
+![Velocity and temperature profiles in the tube; T_b lies below the area average](fig/practice-convection-basics-P4b.svg)
+
 1. Let $\eta = r/r_0$ and $\phi = (T_w - T)/(T_w - T_c) = 1 - \eta^2$. With constant $\rho c_p$:
 $$\frac{T_w - T_b}{T_w - T_c} = \frac{\int_0^1 u\phi\,\eta\,d\eta}{\int_0^1 u\,\eta\,d\eta} = \frac{\int_0^1(1 - \eta^2)^2\eta\,d\eta}{\int_0^1(1 - \eta^2)\eta\,d\eta} = \frac{1/6}{1/4} = \frac23$$
 2. Bulk temperature:
@@ -192,6 +196,8 @@ $$\frac{T_w - \bar T_{area}}{T_w - T_c} = 2\int_0^1(1 - \eta^2)\eta\,d\eta = \fr
           syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 05, p. 37 (mean temperature difference, 40 percent rule)`,
           text: String.raw`Water enters a tube at 20°C; the wall is held at 100°C. Calculate the arithmetic-mean and logarithmic-mean temperature differences, and the percentage error of the arithmetic mean, for exit temperatures of (a) 30°C, (b) 42.86°C, (c) 60°C and (d) 90°C. Use the results to explain the "40 percent" rule on the slides.`,
           solution: String.raw`**Given:** $T_s = 100$°C, $T_i = 20$°C, so $\Delta T_i = T_s - T_i = 80$°C.
+
+![Bulk temperature along the tube for the four exit temperatures](fig/practice-convection-basics-P5.svg)
 
 **Formulas (constant wall temperature):**
 $$\Delta T_{am} = \frac{\Delta T_i + \Delta T_e}{2} = T_s - \frac{T_i + T_e}{2} = T_s - T_b$$
@@ -224,6 +230,8 @@ $$\Delta T_{ln} = \frac{T_i - T_e}{\ln[(T_s - T_e)/(T_s - T_i)]} = \frac{\Delta 
 Air at 60°C, 1 atm (CoolProp): $\rho = 1.060$ kg/m³, $\nu = 1.897\times10^{-5}$ m²/s, $k = 0.02880$ W/m·°C, $c_p = 1008$ J/kg·°C, Pr = 0.703.`,
           solution: String.raw`**Given:** $T_\infty = 20$°C, $T_w = 100$°C, $u_\infty = 4$ m/s, $L = 0.4$ m, $\bar h = 12$ W/m²·°C.
 
+![Flat plate in a parallel air stream with its velocity and thermal boundary layers](fig/common-bl-flat-plate.svg)
+
 **(a) Film temperature.**
 $$T_f = \frac{T_w + T_\infty}{2} = \frac{100 + 20}{2} = 60^\circ\mathrm{C}$$
 The flat-plate analysis assumes constant properties. When wall and free-stream temperatures differ appreciably, the slides recommend evaluating properties at the film temperature, the mean of the two, as the best single representative value for the boundary layer.
@@ -253,7 +261,9 @@ $$q = \bar hA(T_w - T_\infty) = 12(0.4 \times 1)(100 - 20) = 384\,\mathrm{W}$$
           sub: "Buckingham π: natural convection → Nu = φ(Gr, Pr)", type: "derivation",
           syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of Holman Sec. 7-1 / Kern Ch. 2 dimensional analysis; cousin of the slide pipe example (Slides 05, pp. 8–11)`,
           text: String.raw`In natural convection from a vertical plate of height $L$, the average heat-transfer coefficient depends on $L$, $k$, $\mu$, $\rho$, $c_p$ and the buoyancy term $g\beta\Delta T$. Using Buckingham's π theorem, show that $\mathrm{Nu} = \phi(\mathrm{Gr}, \mathrm{Pr})$, where $\mathrm{Gr} = g\beta\Delta T L^3/\nu^2$. Why can $g$, $\beta$ and $\Delta T$ be grouped as a single variable?`,
-          solution: String.raw`**Why one variable:** the buoyancy force per unit volume is $\rho g\beta\Delta T$, so $g$, $\beta$ and $\Delta T$ always appear together as the product $g\beta\Delta T$ (dimensions $L\theta^{-2}$, an acceleration) and can be treated as one variable.
+          solution: String.raw`![Natural convection on a vertical plate: velocity and temperature profiles](fig/common-nc-vertical-plate.svg)
+
+**Why one variable:** the buoyancy force per unit volume is $\rho g\beta\Delta T$, so $g$, $\beta$ and $\Delta T$ always appear together as the product $g\beta\Delta T$ (dimensions $L\theta^{-2}$, an acceleration) and can be treated as one variable.
 
 **Step 1: variables.**
 
@@ -343,6 +353,8 @@ Water at 30°C: $\rho = 995.6$ kg/m³, $\mu = 7.97\times10^{-4}$ kg/m·s, $k = 0
 
 **Find:** $T_e$, $h$, Re, Pr, Nu, St.
 
+![Electrically heated tube: bulk and wall temperatures rise in parallel](fig/practice-convection-basics-P9.svg)
+
 **Assumptions:** steady, uniform wall flux, no heat loss, properties at 30°C (checked below).
 
 1. **Exit temperature** (energy balance):
@@ -418,6 +430,8 @@ $$T_b = \frac{1.2893}{0.02500} = 51.6^\circ\mathrm{C}$$
 $$\frac{T_s - T_e}{T_s - T_i} = \exp\left(-\frac{hA_s}{\dot mc_p}\right)$$
 and hence that $q = hA_s\Delta T_{ln}$.`,
           solution: String.raw`**Assumptions:** steady flow, constant $h$, $c_p$ and $T_s$; axial conduction negligible.
+
+![Energy balance on an element dx and the exponential approach to T_s](fig/practice-convection-basics-P11a.svg)
 
 1. **Energy balance on a slice $dx$:** the heat convected from the wall raises the bulk temperature:
 $$\dot mc_p\,dT_b = h(T_s - T_b)\,p\,dx$$

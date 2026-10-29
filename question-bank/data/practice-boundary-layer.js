@@ -11,6 +11,8 @@ QB.paper({ year: "Practice", set: "Boundary layers & analogies", date: "", marks
 $$\frac{\delta}{x} = \frac{4.64}{\mathrm{Re}_x^{1/2}}$$`,
           solution: String.raw`**Assumptions:** steady, 2-D, incompressible, constant properties, $\partial p/\partial x = 0$ (flat plate), unit depth.
 
+![Control volume of height H and length dx in the boundary layer](fig/practice-boundary-layer-P1.svg)
+
 **Step 1: mass and momentum flows** through the control volume between planes 1 and 2, $0 \le y \le H$:
 - Mass in through plane 1: $\int_0^H\rho u\,dy$. Momentum in: $\int_0^H\rho u^2dy$.
 - Momentum out through plane 2: $\int_0^H\rho u^2dy + \dfrac{d}{dx}\left(\int_0^H\rho u^2dy\right)dx$.
@@ -54,6 +56,8 @@ The exact (Blasius) solution gives $\delta/x = 5.0/\mathrm{Re}_x^{1/2}$. The res
           text: String.raw`Calculate the boundary-layer thickness at 20 cm and 40 cm from the leading edge.`,
           solution: String.raw`**Given:** $p = 1.0132\times10^5$ Pa, $T = 300$ K, $u_\infty = 2$ m/s, $\mu = 1.85\times10^{-5}$ kg/m·s.
 
+![δ at 20 cm and 40 cm and the mass entering the layer between them](fig/practice-boundary-layer-P2.svg)
+
 1. **Density** (ideal gas):
 $$\rho = \frac{p}{RT} = \frac{1.0132\times10^5}{287(300)} = 1.177\,\mathrm{kg/m^3}$$
 2. **Reynolds numbers** $\mathrm{Re}_x = \rho u_\infty x/\mu$:
@@ -89,6 +93,8 @@ $$\zeta = \frac{\delta_t}{\delta} = \frac{1}{1.026}\mathrm{Pr}^{-1/3}\left[1 - \
 and state the key assumption.`,
           solution: String.raw`**Assumptions:** steady laminar flow, constant properties, no viscous dissipation, $\delta_t < \delta$ (ζ < 1).
 
+![Unheated starting length: δ grows from x = 0, δt from x0](fig/practice-boundary-layer-P3.svg)
+
 **(a) Temperature profile.** Let $\theta = T - T_w$, $\theta_\infty = T_\infty - T_w$. The conditions are:
 - $T = T_w$ at $y = 0$
 - $T = T_\infty$ at $y = \delta_t$
@@ -122,7 +128,9 @@ since $(13/14)^{1/3} = 0.976 = 1/1.025$, quoted as 1/1.026. For a plate heated o
           sub: "Derivation of Nu_x = 0.332 Re^½ Pr^⅓ and h̄ = 2h_L", type: "derivation",
           syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 05, pp. 26–27 (h from the wall gradient; average h over the plate)`,
           text: String.raw`Using the cubic temperature profile and the results for δ and $\delta_t/\delta$, derive the local Nusselt number for a flat plate heated over its entire length, $\mathrm{Nu}_x = 0.332\,\mathrm{Re}_x^{1/2}\mathrm{Pr}^{1/3}$. Show that the average coefficient over a length $L$ is $\bar h = 2h_{x=L}$, and write the form for an unheated starting length.`,
-          solution: String.raw`1. **h from the wall gradient.** At the wall, heat leaves by conduction into the fluid:
+          solution: String.raw`![Velocity and thermal boundary layers on the heated plate](fig/common-bl-flat-plate.svg)
+
+1. **h from the wall gradient.** At the wall, heat leaves by conduction into the fluid:
 $$q_w = -k\left.\frac{\partial T}{\partial y}\right|_0 = h_x(T_w - T_\infty) \;\Rightarrow\; h_x = \frac{-k(\partial T/\partial y)_w}{T_w - T_\infty}$$
 2. From the cubic profile, $\left.\dfrac{\partial T}{\partial y}\right|_0 = \dfrac{3}{2}\dfrac{T_\infty - T_w}{\delta_t}$, so
 $$h_x = \frac{3k}{2\delta_t} = \frac{3k}{2\zeta\delta}$$
@@ -253,6 +261,8 @@ $$q = \bar hA(T_w - T_\infty) = 219.2(0.2)^2(60 - 20) = 350.6\,\mathrm{W}$$
           text: String.raw`Find δ and $\delta_t$ at the trailing edge, the local and average heat-transfer coefficients, and the heat loss from one side.`,
           solution: String.raw`**Given:** $u_\infty = 3$ m/s, $L = 0.6$ m, $W = 1$ m, $T_w - T_\infty = 60$°C.
 
+![Velocity and thermal boundary layers on the heated plate (Pr ≈ 0.7: δt slightly above δ)](fig/common-bl-flat-plate.svg)
+
 1. $\mathrm{Re}_L = \dfrac{3(0.6)}{1.797\times10^{-5}} = 1.002\times10^5$ (laminar)
 2. $\delta = \dfrac{4.64L}{\mathrm{Re}_L^{1/2}} = \dfrac{4.64(0.6)}{(1.002\times10^5)^{1/2}} = 8.80\times10^{-3}$ m = 8.8 mm
 3. $\delta_t = \dfrac{\delta\,\mathrm{Pr}^{-1/3}}{1.026} = \dfrac{8.80(1.124)}{1.026} = 9.64$ mm (ζ ≈ 1.1; Pr ≈ 0.7 is the borderline of the ζ < 1 assumption)
@@ -284,6 +294,8 @@ $$q = \bar hA(T_w - T_\infty) = 219.2(0.2)^2(60 - 20) = 350.6\,\mathrm{W}$$
 Water at the film temperature 30°C: $\rho = 995.6$ kg/m³, $\nu = 0.801\times10^{-6}$ m²/s, $k = 0.614$ W/m·°C, Pr = 5.42.`,
           solution: String.raw`**Given:** $u_\infty = 0.3$ m/s, ΔT = 45 − 15 = 30°C, plate area 0.125 m².
 
+![The two flow directions over the 50 cm × 25 cm plate](fig/practice-boundary-layer-P9.svg)
+
 **Assumptions:** laminar (checked), properties at $T_f = 30$°C, plate heated from the leading edge; $0.6 < \mathrm{Pr} = 5.42 < 50$, so the 0.332/0.664 relations apply.
 
 **Relations:** $\overline{\mathrm{Nu}}_L = 0.664\,\mathrm{Re}_L^{1/2}\mathrm{Pr}^{1/3}$, $\bar C_f = 1.328\,\mathrm{Re}_L^{-1/2}$.
@@ -314,6 +326,8 @@ Water at the film temperature 30°C: $\rho = 995.6$ kg/m³, $\nu = 0.801\times10
           syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of Holman Ex. 5-5 (unheated starting length, Table 5-2); cousin of 2023-24 Q5(b)`,
           text: String.raw`At $x = 30$ cm and $x = 50$ cm from the leading edge, calculate δ, $\delta_t$, the local heat-transfer coefficient and the local heat flux.`,
           solution: String.raw`**Given:** $u_\infty = 5$ m/s, $x_0 = 0.10$ m, $T_w - T_\infty = 50$°C.
+
+![Plate insulated for 10 cm, then at 75°C; stations at 30 cm and 50 cm](fig/practice-boundary-layer-P10.svg)
 
 **Relations** (Slides 05 / Table 5-2):
 $$\delta = \frac{4.64x}{\mathrm{Re}_x^{1/2}},\quad \delta_t = \frac{\delta}{1.026}\mathrm{Pr}^{-1/3}\left[1 - \left(\frac{x_0}{x}\right)^{3/4}\right]^{1/3},\quad \mathrm{Nu}_x = \frac{0.332\,\mathrm{Re}_x^{1/2}\mathrm{Pr}^{1/3}}{[1 - (x_0/x)^{3/4}]^{1/3}}$$
@@ -387,6 +401,8 @@ The analogy estimate is 7% lower, the same 7% by which the measured drag is belo
 
 For Pr > 1 draw $\delta_t$ below δ. Mark "boundary-layer region" and "inviscid free stream".
 
+![Velocity and thermal boundary layers on a heated flat plate (Pr > 1)](fig/common-bl-flat-plate.svg)
+
 **Velocity boundary layer:** the region next to the plate where viscous shear is felt. No slip makes u = 0 at the wall; δ is the distance where $u = 0.99u_\infty$. Outside it, friction is negligible and $u = u_\infty$.
 
 **Thermal boundary layer:** forms when fluid at $T_\infty$ flows over a surface at $T_w \ne T_\infty$. It is the region where temperature varies normal to the wall; $\delta_t$ is where $T - T_w = 0.99(T_\infty - T_w)$.
@@ -399,7 +415,9 @@ For Pr > 1 draw $\delta_t$ below δ. Mark "boundary-layer region" and "inviscid 
           text: String.raw`Compare the velocity and thermal boundary layers for a liquid metal (Pr ≈ 0.01) and a heavy oil (Pr ≈ 1000). Why does the cubic-profile result for $\delta_t/\delta$ fail for liquid metals?`,
           solution: String.raw`- **Liquid metal (Pr ≪ 1):** α ≫ ν because the conductivity is very high, so heat diffuses much faster than momentum and $\delta_t \gg \delta$. Across most of the thermal layer the fluid moves at nearly $u_\infty$, giving a "blunt" (almost slug) velocity profile.
 - **Heavy oil (Pr ≫ 1):** momentum diffuses much faster than heat, so $\delta_t \ll \delta$ (≈ 0.1δ for Pr = 1000). The whole thermal layer sits in the slow, nearly linear part of the velocity profile next to the wall.
-- **Why the formula fails:** the derivation of $\zeta = \mathrm{Pr}^{-1/3}/1.026$ integrates the velocity profile only up to $\delta_t$, assumes ζ < 1 and drops the ζ⁴ term. For a liquid metal ζ ≫ 1, and beyond δ the velocity is $u_\infty$, not the cubic. The formula is acceptable for Pr ≳ 0.7.`,
+- **Why the formula fails:** the derivation of $\zeta = \mathrm{Pr}^{-1/3}/1.026$ integrates the velocity profile only up to $\delta_t$, assumes ζ < 1 and drops the ζ⁴ term. For a liquid metal ζ ≫ 1, and beyond δ the velocity is $u_\infty$, not the cubic. The formula is acceptable for Pr ≳ 0.7.
+
+![Liquid metal: δt ≫ δ; heavy oil: δt ≪ δ](fig/practice-boundary-layer-P12b-sol.svg)`,
           answer: String.raw`Liquid metal: $\delta_t \gg \delta$ (heat diffuses fast; blunt velocity profile). Oil: $\delta_t \ll \delta$. The cubic result assumes ζ < 1, so it is valid only for Pr ≳ 0.7.` },
         { id: "practice-boundary-layer-P12c", label: "(c)", marks: "4", topic: "boundary-layer",
           sub: "Why h decreases along the plate", type: "theory",

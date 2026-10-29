@@ -10,6 +10,8 @@ QB.paper({ year: "Practice", set: "Forced convection correlations", date: "", ma
           text: String.raw`Calculate the heat transfer per unit length of tube.`,
           solution: String.raw`**Given:** p = 2 atm, $T_b = 473$ K, d = 0.0254 m, $u_m = 10$ m/s, $T_w - T_b = 20$°C (constant flux).
 
+![Constant-flux tube: wall and bulk temperatures rise in parallel, 20°C apart](fig/practice-forced-convection-P1.svg)
+
 **Assumptions:** fully developed turbulent flow, smooth tube, moderate ΔT, so Dittus–Boelter applies with n = 0.4 (the gas is heated).
 
 1. **Density** (ideal gas):
@@ -51,6 +53,8 @@ Water at 60°C: $\rho = 985$ kg/m³, $c_p = 4.18$ kJ/kg·°C, $\mu = 4.71\times1
 
 **Find:** $T_{b2}$.
 
+![Laminar water flow with the wall at 80°C](fig/practice-forced-convection-P2.svg)
+
 **Iteration 1** (properties at the inlet, 60°C, since $T_{b2}$ is unknown):
 1. Regime:
 $$\mathrm{Re}_d = \frac{\rho u_md}{\mu} = \frac{985(0.02)(0.0254)}{4.71\times10^{-4}} = 1062 \quad(\text{laminar})$$
@@ -86,6 +90,8 @@ $$\mathrm{Re\,Pr}\frac{d}{L} = \frac{1147(2.78)(0.0254)}{3} = 27.0$$
           text: String.raw`Air at 300 K and 1 atm enters a smooth tube having a diameter of 2 cm and a length of 10 cm. The air velocity is 40 m/s. What constant heat flux must be applied at the tube surface to give an air temperature rise of 5°C? What average wall temperature would be needed? Air at 300 K: $\nu = 15.69\times10^{-6}$ m²/s, $k = 0.02624$ W/m·°C, Pr = 0.7, $c_p = 1006$ J/kg·°C, $\rho = 1.18$ kg/m³.`,
           solution: String.raw`**Given:** d = 0.02 m, L = 0.10 m (L/d = 5), $u_m = 40$ m/s, $\Delta T_b = 5$°C, constant flux.
 
+![Short tube (L/d = 5) with constant flux: thermal entrance region](fig/practice-forced-convection-P3.svg)
+
 **Assumptions:** smooth tube, properties at 300 K (ΔT_b is small).
 
 1. **Regime:**
@@ -113,6 +119,8 @@ $$\bar T_w = \bar T_b + \frac{11\,841}{175.5} = 302.5 + 67.5 = 370\,\mathrm{K}$$
           syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 06, pp. 31–33 (oil pipeline through a lake)`,
           text: String.raw`Determine the temperature of the oil when the pipe leaves the lake.`,
           solution: String.raw`**Given:** D = 0.3 m, L = 200 m, $V_m = 2$ m/s, $T_i = 20$°C, $T_s = 0$°C (constant).
+
+![Oil pipeline crossing 200 m of lake at 0°C](fig/practice-forced-convection-P4.svg)
 
 **Assumptions:** steady flow; properties at 20°C (checked afterwards).
 
@@ -159,6 +167,8 @@ $$T - T_c = \frac{1}{\alpha}\frac{\partial T}{\partial x}\frac{u_0r_0^2}{4}\left
 and show that $\mathrm{Nu}_d = hd/k = 4.364$, independent of Re and Pr. What is the corresponding value for constant wall temperature?`,
           solution: String.raw`**Assumptions:** steady, laminar, hydrodynamically and thermally fully developed, constant properties, axial conduction and viscous dissipation negligible, constant $q_w$ (so $\partial T/\partial x = dT_b/dx$ = const).
 
+![Parabolic velocity and the constant-flux temperature profile in the tube](fig/practice-forced-convection-P5.svg)
+
 1. **Energy equation in cylindrical coordinates** (radial conduction balances axial convection):
 $$u\frac{\partial T}{\partial x} = \frac{\alpha}{r}\frac{\partial}{\partial r}\left(r\frac{\partial T}{\partial r}\right)$$
 2. **Insert u** and integrate once:
@@ -189,6 +199,8 @@ C cancels, so Nu contains no $u_0$, α or ν: it is independent of Re and Pr.
           text: String.raw`Air at 1 atm enters a 1 cm × 2 cm rectangular duct, 2 m long, at 20°C and 2 m/s. The duct walls are held at 80°C. Find the hydraulic diameter, check the flow regime, and estimate the exit air temperature and the heat transferred. Air at an assumed mean bulk temperature of 50°C: $\rho = 1.092$ kg/m³, $\mu = 1.964\times10^{-5}$ kg/m·s, $k = 0.02808$ W/m·°C, $c_p = 1007$ J/kg·°C, Pr = 0.704.`,
           solution: String.raw`**Given:** a = 2 cm, b = 1 cm (b/a = 1/2), L = 2 m, $V = 2$ m/s, $T_i = 20$°C, $T_s = 80$°C.
 
+![Rectangular duct 1 cm × 2 cm, 2 m long, and its hydraulic diameter](fig/practice-forced-convection-P6a.svg)
+
 1. **Hydraulic diameter:**
 $$D_h = \frac{4A_c}{P} = \frac{4ab}{2(a + b)} = \frac{2ab}{a + b} = \frac{2(0.02)(0.01)}{0.03} = 0.01333\,\mathrm{m}$$
 2. **Regime:**
@@ -208,7 +220,9 @@ $$q = \dot mc_p(T_e - T_i) = 4.368\times10^{-4}(1007)(71.4 - 20) = 22.6\,\mathrm
           sub: "Hydraulic diameter of an annulus and a square duct", type: "numerical",
           syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 06, pp. 12–13 ($D_H = 4A/P$)`,
           text: String.raw`Find the hydraulic diameter of (i) a 4 cm × 4 cm square duct and (ii) the annulus between a 2.5 cm OD inner tube and a 5 cm ID outer pipe when the fluid wets both surfaces.`,
-          solution: String.raw`1. **Square duct:** $D_h = \dfrac{4a^2}{4a} = a = 4\,\mathrm{cm}$.
+          solution: String.raw`![Square duct and annulus with their wetted perimeters](fig/practice-forced-convection-P6b.svg)
+
+1. **Square duct:** $D_h = \dfrac{4a^2}{4a} = a = 4\,\mathrm{cm}$.
 2. **Annulus:**
 $$D_h = \frac{4\cdot\frac{\pi}{4}(D_o^2 - D_i^2)}{\pi(D_o + D_i)} = D_o - D_i = 5 - 2.5 = 2.5\,\mathrm{cm}$$
 
@@ -261,6 +275,8 @@ $$T_{b2} = 69.7^\circ\mathrm{C},\qquad q = 6.984\times10^{-3}(4181)(69.7 - 30) =
           text: String.raw`Using the Dittus–Boelter equation, find the heat-transfer coefficient and the tube length required.`,
           solution: String.raw`**Given:** $\dot m = 0.3$ kg/s, D = 0.02 m, $T_i = 20$°C, $T_e = 70$°C, $T_s = 100$°C.
 
+![Water heated by condensing steam: wall at 100°C](fig/practice-forced-convection-P8.svg)
+
 **Assumptions:** fully developed turbulent flow (checked), smooth tube, properties at $T_b = (20 + 70)/2 = 45$°C.
 
 1. **Regime:**
@@ -312,6 +328,8 @@ $$h = \frac{189.4(0.635)}{0.02} = 6014\,\mathrm{W/m^2\cdot^\circ C}$$
           text: String.raw`Water at 0.005 kg/s is heated from 20°C to 60°C in a 1.2 cm ID tube by an electric heating tape that supplies a uniform flux of 3000 W/m². Find (a) the tube length required, (b) the surface temperature at the exit, and (c) whether the fully developed assumption is reasonable. Water at 40°C: $\rho = 992.2$ kg/m³, $\mu = 6.53\times10^{-4}$ kg/m·s, $k = 0.629$ W/m·°C, $c_p = 4179$ J/kg·°C, Pr = 4.34.`,
           solution: String.raw`**Given:** $\dot m = 0.005$ kg/s, D = 0.012 m, $T_i = 20$°C, $T_e = 60$°C, $q_s'' = 3000$ W/m².
 
+![Uniform-flux heating tape: bulk and surface temperatures](fig/practice-forced-convection-P9.svg)
+
 **Assumptions:** steady, uniform flux, fully developed laminar flow at the exit, properties at 40°C.
 
 1. **Regime:**
@@ -338,6 +356,8 @@ Both are well below 7.39 m, so the flow is fully developed at the exit and Nu = 
           syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of Holman Ex. 6-6 (annulus); close cousin of 2021-22 Q5(c) / 2023-24 Q8(a)`,
           text: String.raw`Water at 0.8 kg/s flows through the annulus of a double-pipe heater formed by a 3.0 cm OD inner tube and a 5.0 cm ID outer pipe. The water is heated from 20°C to 40°C by the inner tube, whose surface is held at 75°C; the outer pipe is insulated. Using the Dittus–Boelter equation with the hydraulic diameter, find the heat-transfer coefficient and the length of heater needed. Water at 30°C: $\rho = 995.6$ kg/m³, $\mu = 7.97\times10^{-4}$ kg/m·s, $k = 0.615$ W/m·°C, $c_p = 4178$ J/kg·°C, Pr = 5.42.`,
           solution: String.raw`**Given:** $D_i = 0.03$ m (heated surface), $D_o = 0.05$ m, $\dot m = 0.8$ kg/s, $T_i = 20$°C, $T_e = 40$°C, $T_s = 75$°C.
+
+![Double-pipe heater annulus with the inner tube at 75°C](fig/practice-forced-convection-P10.svg)
 
 **Assumptions:** fully developed turbulent flow, Dittus–Boelter applied with $D_h$ (as taught for non-circular channels), properties at the mean bulk temperature 30°C.
 
@@ -432,6 +452,8 @@ Properties are evaluated at the mean bulk temperature.
 1. **Isothermal:** a parabola, $u = 2u_m[1 - (r/R)^2]$.
 2. **Liquid heating (or gas cooling):** the wall fluid is hotter. A liquid's μ falls with temperature, so the fluid near the wall flows faster and the centre slower: a **flatter, blunter** profile.
 3. **Gas heating (or liquid cooling):** the wall fluid is hotter but a gas's μ rises with temperature, so the fluid near the wall is slowed and the centre speeds up: a **more peaked** profile.
+
+![Velocity-profile distortion by heating and cooling](fig/common-velocity-distortion.svg)
 
 **Link to correlations:** a flatter profile means a larger velocity gradient at the wall and better heat transfer. Sieder–Tate's $(\mu/\mu_w)^{0.14}$ is > 1 for a liquid being heated ($\mu_w < \mu$) and < 1 for a liquid being cooled. Dittus–Boelter's n = 0.4 versus 0.3 reflects the same effect.`,
           answer: String.raw`Liquid heated / gas cooled: flatter profile (faster near the wall); gas heated / liquid cooled: more peaked. This is captured by $(\mu/\mu_w)^{0.14}$ and by n = 0.4/0.3.` },

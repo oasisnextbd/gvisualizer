@@ -35,7 +35,9 @@ so $R'$ is a **minimum** and $q$ a **maximum** at $r_c = k/h$.
 Sketch: $q$ (vertical) against $r_o$ (horizontal), starting at $r_o = r_i$ with $q_{bare}$; the curve rises to a peak $q_{max}$ at $r_c = k/h$, then falls slowly, crossing $q_{bare}$ again at some larger radius and tending to zero.
 - If $r_i < r_c$, adding insulation **increases** the loss until $r_o = r_c$; it must be thick enough to pass the second crossing before it saves any heat (or use a material of lower $k$, which lowers $r_c$).
 - If $r_i \ge r_c$, any insulation reduces the loss.
-- For ordinary steam pipes $r_c$ is a few mm (e.g. $k = 0.04$, $h = 10$ gives 4 mm), so the effect matters only for wires, small tubes and low $h$. For electric wires it is useful: a cover near $r_c$ dissipates more heat and keeps the conductor cooler.`,
+- For ordinary steam pipes $r_c$ is a few mm (e.g. $k = 0.04$, $h = 10$ gives 4 mm), so the effect matters only for wires, small tubes and low $h$. For electric wires it is useful: a cover near $r_c$ dissipates more heat and keeps the conductor cooler.
+
+![Heat loss against outer radius: maximum at r_c = k/h](fig/common-critical-radius.svg)`,
           answer: String.raw`$q = 2\pi L\Delta T/[\ln(r_o/r_i)/k + 1/(r_oh)]$; $dq/dr_o = 0 \Rightarrow r_c = k/h$, a maximum of heat loss.` }
       ] },
     { id: "practice-insulation-P2", q: 2, section: "S", compulsory: false,
@@ -46,6 +48,8 @@ Sketch: $q$ (vertical) against $r_o$ (horizontal), starting at $r_o = r_i$ with 
           syllabus: "in", repeats: ["2011-12-Q6c"], origin: "slides", ref: String.raw`Slides 02 Conduction I, slides 41–42 (asbestos on a 200°C, 5 cm pipe; fiberglass alternative); also in 2011-12 Q6(c)`,
           text: String.raw`Calculate the critical radius of insulation for asbestos ($k = 0.17$ W/m·°C) on a pipe exposed to room air at 20°C with $h = 3.0$ W/m²·°C. Calculate the heat loss from a 200°C, 5.0 cm diameter pipe when it is covered with the critical radius of insulation and when it is bare. What happens if fiberglass ($k = 0.04$ W/m·°C) is used instead?`,
           solution: String.raw`**Given:** $k = 0.17$ W/m·°C, $h = 3.0$ W/m²·°C, $r_i = 2.5$ cm, $T_i = 200$°C, $T_\infty = 20$°C.
+
+![q/L against r_o for asbestos and fiberglass on the 5 cm pipe](fig/practice-insulation-P2.svg)
 
 **Assumptions:** as in the derivation (steady, radial, pipe wall at 200°C, $h$ constant, radiation neglected).
 
@@ -76,6 +80,8 @@ so any thickness of fiberglass decreases the loss (e.g. 2 cm of fiberglass gives
           syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Variation of Slides 02 Conduction I, slides 40–41 (q vs r_o curve, critical radius)`,
           text: String.raw`A 1 cm OD tube at 120°C is in air at 20°C with $h = 8$ W/m²·°C. It is to be covered with insulation of $k = 0.08$ W/m·°C. (a) Find the critical radius. (b) Tabulate the heat loss per metre for insulation thicknesses 0, 0.25, 0.5, 1.0, 1.5, 2.5 and 3.5 cm. (c) What thickness is needed just to get back to the bare-tube loss, and what thickness halves it?`,
           solution: String.raw`**Given:** $r_i = 0.005$ m, $T_i - T_\infty = 100$°C, $k = 0.08$ W/m·°C, $h = 8$ W/m²·°C.
+
+![Heat loss per metre against insulation thickness for the 1 cm tube](fig/practice-insulation-P3.svg)
 
 **Assumptions:** steady radial; tube wall at 120°C; $h$ unchanged by the outer radius; radiation neglected.
 
@@ -133,6 +139,8 @@ $D$ is a minimum, so $q$ is a **maximum** at $r_c = 2k/h$, twice the cylinder va
           text: String.raw`A spherical electronic sensor of 12 mm diameter has its surface at 90°C in air at 20°C ($h = 20$ W/m²·°C). It is to be coated with epoxy ($k = 0.1$ W/m·°C). Find the critical radius, the heat loss bare and at the critical radius, and the coating radius at which the loss returns to the bare value. What is the least loss that any thickness of coating could achieve?`,
           solution: String.raw`**Given:** $r_i = 0.006$ m, $\Delta T = 70$°C, $k = 0.1$ W/m·°C, $h = 20$ W/m²·°C.
 
+![Heat loss from the coated sensor against coating radius](fig/practice-insulation-P4b.svg)
+
 **Assumptions:** as in (a); sensor surface held at 90°C.
 
 ### 1. Critical radius
@@ -172,6 +180,8 @@ As $r_o \to \infty$, $q \to 4\pi kr_i\Delta T = 4\pi(0.1)(0.006)(70) = 0.528$ W:
 (c) Comment on the result. **[3]**`,
           solution: String.raw`**Given:** $r_i = 0.001$ m, $T_i = 75$°C, $T_\infty = 30$°C, $\Delta T = 45$°C, $k = 0.16$ W/m·°C, $h = 10$ W/m²·°C, $\rho_e = 1.72\times10^{-8}$ Ω·m.
 
+![Allowable current against PVC outer radius](fig/practice-insulation-P5.svg)
+
 **Assumptions:** steady; radial 1-D; copper is nearly isothermal (its $k \approx 400$), so the PVC inner surface is at the conductor temperature; $h$ constant; radiation neglected; contact perfect.
 
 ### (a) Critical radius
@@ -208,6 +218,8 @@ Because the wire radius is far below $r_c$, the PVC acts as an extended surface:
 
 (c) Using a combined coefficient evaluated at an estimated insulated-surface temperature of 50°C, find the true critical radius and the loss with 2 cm of insulation. Check the assumed surface temperature. **[8]**`,
           solution: String.raw`**Given:** $r_i = 0.006$ m, $T_i = 150$°C $= 423.15$ K, $T_\infty = T_{surr} = 25$°C $= 298.15$ K, $h_{conv} = 6$ W/m²·°C, $\varepsilon = 0.9$, $k = 0.07$ W/m·°C.
+
+![Insulated tube with convection and radiation from the outer surface](fig/practice-insulation-P6.svg)
 
 **Assumptions:** steady radial; tube surface at 150°C; room large compared with the tube; $h_{conv}$ independent of $r_o$.
 
@@ -254,6 +266,8 @@ Surface temperature check: $T_o = 25 + q'/(h_{comb}2\pi r_o) = 25 + 32.6/(12.13\
 (c) Repeat the 30% reduction for polyethylene foam ($k = 0.035$ W/m·°C), and compare 10 mm of each. Recommend a material. **[6]**`,
           solution: String.raw`**Given:** $r_i = 0.006$ m, $\Delta T = 60$°C, $h = 9$ W/m²·°C.
 
+![Heat loss against outer radius for rubber and PE foam on the 12 mm tube](fig/practice-insulation-P7.svg)
+
 **Assumptions:** steady radial; tube surface at 80°C; $h$ constant; radiation neglected.
 
 $$q'(r_o) = \frac{2\pi\,\Delta T}{\ln(r_o/r_i)/k + 1/(hr_o)},\qquad q'_{bare} = h\,2\pi r_i\,\Delta T = 9(2\pi)(0.006)(60) = 20.4\ \mathrm{W/m}$$
@@ -288,7 +302,9 @@ $r_c = 0.035/9 = 3.9$ mm $< 6$ mm, so foam reduces the loss from the start. The 
           text: String.raw`Explain physically why adding insulation to a small pipe can increase the heat loss. Why is this rarely a concern for steam mains?`,
           solution: String.raw`- Adding insulation does two things: it adds conduction resistance $\ln(r_o/r_i)/(2\pi kL)$, which increases with $r_o$, and it enlarges the outer surface, so the convection resistance $1/(2\pi r_oLh)$ decreases.
 - When $r_o < k/h$, the drop in convection resistance outweighs the added conduction resistance: total resistance falls and $q$ rises. Beyond $r_c$ the conduction term wins and $q$ falls.
-- For steam mains $r_i$ is several cm while $r_c = k/h$ for good insulation ($k \approx 0.04$) and $h \approx 5$–$20$ is only 2–8 mm. Since $r_i \gg r_c$, every layer reduces the loss.`,
+- For steam mains $r_i$ is several cm while $r_c = k/h$ for good insulation ($k \approx 0.04$) and $h \approx 5$–$20$ is only 2–8 mm. Since $r_i \gg r_c$, every layer reduces the loss.
+
+![Why the loss first rises: Q against r_o with the peak at r_c](fig/common-critical-radius.svg)`,
           answer: String.raw`Extra surface area cuts convection resistance faster than the layer adds conduction resistance while $r_o < k/h$; big pipes already have $r_i \gg r_c$.` },
         { id: "practice-insulation-P8b", label: "(b)", marks: "3", topic: "insulation",
           sub: "Effect of h and k on the critical radius", type: "theory",

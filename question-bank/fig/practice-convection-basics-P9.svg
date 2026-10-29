@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 400" width="660" height="400" font-family="Helvetica, Arial, sans-serif"><title>Electrically heated tube: uniform flux, bulk and wall temperatures along the length</title><defs><marker id="ai" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="dg" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L10,5 L0,9 z" fill="#9AA8B8"/></marker><marker id="dg0" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M10,1 L0,5 L10,9 z" fill="#9AA8B8"/></marker><pattern id="ins" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="gen" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#FBE2D6"/><circle cx="6" cy="6" r="1.3" fill="#D2552B"/></pattern><pattern id="wtr" width="16" height="8" patternUnits="userSpaceOnUse"><rect width="16" height="8" fill="#D9F0F2"/><path d="M0,4 q4,-3 8,0 t8,0" stroke="#0B7C8C" stroke-width="0.7" fill="none"/></pattern></defs><rect width="660" height="400" fill="white"/>
+<rect x="90.0" y="58.0" width="470.0" height="44.0" fill="#D9F0F2" stroke="none" stroke-width="0"/>
+<rect x="90.0" y="48.0" width="470.0" height="10.0" fill="#FBE2D6" stroke="#1E2B3A" stroke-width="1.3"/>
+<rect x="90.0" y="102.0" width="470.0" height="10.0" fill="#FBE2D6" stroke="#1E2B3A" stroke-width="1.3"/>
+<line x1="70.0" y1="80.0" x2="580.0" y2="80.0" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="10 4 2 4"/>
+<line x1="40.0" y1="80.0" x2="120.0" y2="80.0" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ac)"/>
+<line x1="530.0" y1="80.0" x2="610.0" y2="80.0" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ac)"/>
+<line x1="120.0" y1="24.0" x2="120.0" y2="46.0" stroke="#D2552B" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="120.0" y1="136.0" x2="120.0" y2="114.0" stroke="#D2552B" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="178.6" y1="24.0" x2="178.6" y2="46.0" stroke="#D2552B" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="178.6" y1="136.0" x2="178.6" y2="114.0" stroke="#D2552B" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="237.1" y1="24.0" x2="237.1" y2="46.0" stroke="#D2552B" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="237.1" y1="136.0" x2="237.1" y2="114.0" stroke="#D2552B" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="295.7" y1="24.0" x2="295.7" y2="46.0" stroke="#D2552B" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="295.7" y1="136.0" x2="295.7" y2="114.0" stroke="#D2552B" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="354.3" y1="24.0" x2="354.3" y2="46.0" stroke="#D2552B" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="354.3" y1="136.0" x2="354.3" y2="114.0" stroke="#D2552B" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="412.9" y1="24.0" x2="412.9" y2="46.0" stroke="#D2552B" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="412.9" y1="136.0" x2="412.9" y2="114.0" stroke="#D2552B" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="471.4" y1="24.0" x2="471.4" y2="46.0" stroke="#D2552B" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="471.4" y1="136.0" x2="471.4" y2="114.0" stroke="#D2552B" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="530.0" y1="24.0" x2="530.0" y2="46.0" stroke="#D2552B" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="530.0" y1="136.0" x2="530.0" y2="114.0" stroke="#D2552B" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="325.0" y="16.0" font-size="12" text-anchor="middle" fill="#D2552B" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">heater: 10 kW uniform (well insulated outside)</text>
+<text x="40.0" y="152.0" font-size="11.5" text-anchor="start" fill="#0B7C8C" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke" font-weight="bold">0.12 kg/s, 20°C</text>
+<text x="610.0" y="152.0" font-size="11.5" text-anchor="end" fill="#0B7C8C" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke" font-weight="bold">T<tspan dy="3.4" font-size="8.3">e</tspan><tspan dy="-3.4"> </tspan> = ?</text>
+<circle cx="325.0" cy="107.0" r="4.0" fill="#1E2B3A" stroke="#1E2B3A" stroke-width="1.5"/>
+<text x="333.0" y="168.0" font-size="11.5" text-anchor="start" fill="#1E2B3A" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">thermocouple at mid-length: T<tspan dy="3.4" font-size="8.3">w</tspan><tspan dy="-3.4"> </tspan> = 59.0°C</text>
+<line x1="325.0" y1="111.0" x2="331.0" y2="156.0" stroke="#55667D" stroke-width="1"/>
+<text x="200.0" y="152.0" font-size="11.5" text-anchor="middle" fill="#55667D" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">L = 2.5 m, ID = 2.0 cm</text>
+<line x1="90.0" y1="375.0" x2="574.0" y2="375.0" stroke="#1E2B3A" stroke-width="1.4" marker-end="url(#ai)"/>
+<line x1="90.0" y1="375.0" x2="90.0" y2="191.0" stroke="#1E2B3A" stroke-width="1.4" marker-end="url(#ai)"/>
+<line x1="90.0" y1="375.0" x2="90.0" y2="379.0" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="90.0" y="391.0" font-size="11" text-anchor="middle" fill="#55667D" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">0</text>
+<line x1="325.0" y1="375.0" x2="325.0" y2="379.0" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="325.0" y="391.0" font-size="11" text-anchor="middle" fill="#55667D" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">0.5</text>
+<line x1="560.0" y1="375.0" x2="560.0" y2="379.0" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="560.0" y="391.0" font-size="11" text-anchor="middle" fill="#55667D" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">1</text>
+<line x1="86.0" y1="332.5" x2="90.0" y2="332.5" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="83.0" y="336.5" font-size="11" text-anchor="end" fill="#55667D" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">20</text>
+<line x1="86.0" y1="290.0" x2="90.0" y2="290.0" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="83.0" y="294.0" font-size="11" text-anchor="end" fill="#55667D" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">40</text>
+<line x1="86.0" y1="249.6" x2="90.0" y2="249.6" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="83.0" y="253.6" font-size="11" text-anchor="end" fill="#55667D" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">59</text>
+<line x1="86.0" y1="226.2" x2="90.0" y2="226.2" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="83.0" y="230.2" font-size="11" text-anchor="end" fill="#55667D" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">70</text>
+<text x="574.0" y="367.0" font-size="12" text-anchor="end" fill="#1E2B3A" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">x/L</text>
+<text x="50.0" y="189.0" font-size="12" text-anchor="start" fill="#1E2B3A" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">T (°C)</text>
+<path d="M90.0,332.5 C93.9,332.1 105.7,331.1 113.5,330.4 C121.3,329.7 129.2,329.0 137.0,328.3 C144.8,327.6 152.7,326.8 160.5,326.1 C168.3,325.4 176.2,324.7 184.0,324.0 C191.8,323.3 199.7,322.6 207.5,321.9 C215.3,321.2 223.2,320.5 231.0,319.8 C238.8,319.1 246.7,318.4 254.5,317.7 C262.3,317.0 270.2,316.2 278.0,315.5 C285.8,314.8 293.7,314.1 301.5,313.4 C309.3,312.7 317.2,312.0 325.0,311.3 C332.8,310.6 340.7,309.9 348.5,309.2 C356.3,308.5 364.2,307.8 372.0,307.1 C379.8,306.4 387.7,305.7 395.5,304.9 C403.3,304.2 411.2,303.5 419.0,302.8 C426.8,302.1 434.7,301.4 442.5,300.7 C450.3,300.0 458.2,299.3 466.0,298.6 C473.8,297.9 481.7,297.2 489.5,296.5 C497.3,295.8 505.2,295.1 513.0,294.3 C520.8,293.6 528.7,292.9 536.5,292.2 C544.3,291.5 556.1,290.5 560.0,290.1" stroke="#0B7C8C" stroke-width="2.4" fill="none"/>
+<path d="M90.0,270.8 C93.9,270.5 105.7,269.4 113.5,268.7 C121.3,268.0 129.2,267.3 137.0,266.6 C144.8,265.9 152.7,265.2 160.5,264.5 C168.3,263.8 176.2,263.0 184.0,262.3 C191.8,261.6 199.7,260.9 207.5,260.2 C215.3,259.5 223.2,258.8 231.0,258.1 C238.8,257.4 246.7,256.7 254.5,256.0 C262.3,255.3 270.2,254.6 278.0,253.9 C285.8,253.2 293.7,252.5 301.5,251.7 C309.3,251.0 317.2,250.3 325.0,249.6 C332.8,248.9 340.7,248.2 348.5,247.5 C356.3,246.8 364.2,246.1 372.0,245.4 C379.8,244.7 387.7,244.0 395.5,243.3 C403.3,242.6 411.2,241.9 419.0,241.1 C426.8,240.4 434.7,239.7 442.5,239.0 C450.3,238.3 458.2,237.6 466.0,236.9 C473.8,236.2 481.7,235.5 489.5,234.8 C497.3,234.1 505.2,233.4 513.0,232.7 C520.8,232.0 528.7,231.3 536.5,230.5 C544.3,229.8 556.1,228.8 560.0,228.4" stroke="#D2552B" stroke-width="2.4" fill="none"/>
+<circle cx="325.0" cy="249.6" r="4.0" fill="#B7840A" stroke="#B7840A" stroke-width="1.5"/>
+<line x1="337.0" y1="249.6" x2="337.0" y2="311.3" stroke="#9AA8B8" stroke-width="1" marker-end="url(#dg)" marker-start="url(#dg0)"/>
+<text x="343.0" y="284.5" font-size="11.5" text-anchor="start" fill="#55667D" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">T<tspan dy="3.4" font-size="8.3">w</tspan><tspan dy="-3.4"> </tspan> − T<tspan dy="3.4" font-size="8.3">b</tspan><tspan dy="-3.4"> </tspan> = q″/h</text>
+<text x="556.0" y="308.1" font-size="11.5" text-anchor="end" fill="#0B7C8C" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">T<tspan dy="3.4" font-size="8.3">b</tspan><tspan dy="-3.4"> </tspan>: 20 → 39.95°C</text>
+<text x="556.0" y="246.4" font-size="11.5" text-anchor="end" fill="#D2552B" stroke="white" stroke-width="3" stroke-linejoin="round" paint-order="stroke">T<tspan dy="3.4" font-size="8.3">w</tspan><tspan dy="-3.4"> </tspan> (parallel)</text>
+</svg>

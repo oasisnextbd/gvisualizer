@@ -9,10 +9,12 @@ QB.paper({ year: "Practice", set: "Steady conduction", date: "", marks: 0, pract
           syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 02 Conduction I, slides 9–12 (composite wall A–D)`,
           text: String.raw`Find the heat flow through the composite wall shown. Thermal conductivities: $k_A = 150$, $k_B = 30$, $k_C = 65$, $k_D = 50$ W/m·°C. The left face is at 400°C and the right face at 60°C.
 
-*[Figure: block 10 cm high and 10 cm deep. Layer A is 3 cm thick over the full height. The next 8 cm is split into B (top, 3 cm high) and C (bottom, 7 cm high) side by side. Layer D is 5 cm thick over the full height.]*`,
+![Composite wall: A (3 cm), B over C (8 cm; 3 cm and 7 cm high), D (5 cm); 10 cm high and deep](fig/practice-conduction-P1.svg)`,
           solution: String.raw`**Given:** depth 0.1 m; $L_A = 0.03$, $L_B = L_C = 0.08$, $L_D = 0.05$ m; heights 0.1 (A, D), 0.03 (B), 0.07 (C) m; $T_1 = 400$°C, $T_4 = 60$°C.
 
 **Find:** $Q$.
+
+![Thermal circuit: R_A in series with (R_B ∥ R_C) and R_D](fig/practice-conduction-P1-sol.svg)
 
 **Assumptions:** steady; 1-D flow left to right (faces of B and C isothermal at the junctions, so B and C act in parallel); constant $k$; perfect contact.
 
@@ -46,6 +48,8 @@ $T_2 = 400 - 1274(0.020) = 374.5$°C, $T_3 = 60 + 1274(0.100) = 187.4$°C. Throu
           syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Variation using Slides 02 Conduction I, slide 3 (plane wall with temperature-dependent k)`,
           text: String.raw`A 20 cm thick refractory wall has faces at 900°C and 100°C. Its conductivity varies as $k = 0.8(1 + 0.0007\,T)$ W/m·°C with $T$ in °C. Find (a) the heat flux, (b) the mean conductivity that would give the same answer with the constant-$k$ formula, and (c) the temperature at the mid-plane, compared with the linear-profile value.`,
           solution: String.raw`**Given:** $\Delta x = 0.2$ m, $T_1 = 900$°C, $T_2 = 100$°C, $k_0 = 0.8$ W/m·°C, $\beta = 0.0007\ \mathrm{°C^{-1}}$.
+
+![Refractory wall with k = k0(1 + βT): the profile bows above the straight line](fig/practice-conduction-P2.svg)
 
 **Assumptions:** steady, 1-D, no generation; $k$ linear in $T$.
 
@@ -84,6 +88,8 @@ A constant-$k$ wall would give 500°C. Since $k$ is larger on the hot side, a sm
           text: String.raw`A thick-walled stainless-steel tube (18% Cr, 8% Ni, $k = 19$ W/m·°C) of 2 cm ID and 4 cm OD is covered with a 3 cm layer of asbestos insulation ($k = 0.2$ W/m·°C). The inside wall is at 600°C and the outside of the insulation is at 100°C. Calculate the heat loss per metre of length and the tube–insulation interface temperature.`,
           solution: String.raw`**Given:** $r_1 = 1$ cm, $r_2 = 2$ cm, $r_3 = 2 + 3 = 5$ cm; $k_s = 19$, $k_a = 0.2$ W/m·°C; $T_1 = 600$°C, $T_3 = 100$°C.
 
+![Stainless tube with asbestos insulation and its two cylindrical resistances](fig/practice-conduction-P3.svg)
+
 **Assumptions:** steady, radial 1-D conduction (long tube); constant $k$; perfect contact at the interface.
 
 ### 1. Series cylindrical resistances (per metre)
@@ -110,6 +116,8 @@ $$\frac qL = \frac{T_a - T_3}{\ln(r_3/r_2)/(2\pi k_a)}\ \Rightarrow\ T_a = 100 +
           syllabus: "in", repeats: ["2015-16-Q6b"], origin: "slides", ref: String.raw`Slides 02 Conduction I, slides 30–33 (steam in cast-iron pipe with glass wool); also set as 2015-16 Q6(b)`,
           text: String.raw`Steam at 320°C flows in a cast-iron pipe ($k = 80$ W/m·°C) with inner and outer diameters 5 cm and 5.5 cm. The pipe is covered with 3 cm thick glass-wool insulation ($k = 0.05$ W/m·°C). Heat is lost to surroundings at 5°C by natural convection and radiation with a combined coefficient $h_2 = 18$ W/m²·°C; the inside coefficient is $h_1 = 60$ W/m²·°C. Determine the heat loss per metre of pipe and the temperature drops across the pipe shell and the insulation.`,
           solution: String.raw`**Given:** $r_1 = 0.025$, $r_2 = 0.0275$, $r_3 = 0.0575$ m; $k_1 = 80$, $k_2 = 0.05$ W/m·°C; $h_1 = 60$, $h_2 = 18$ W/m²·°C; $T_{\infty1} = 320$°C, $T_{\infty2} = 5$°C; $L = 1$ m.
+
+![Steam pipe with glass wool: geometry and the four series resistances](fig/practice-conduction-P4.svg)
 
 **Assumptions:** steady, radial 1-D; constant properties; perfect contact; $h_2$ already includes radiation.
 
@@ -147,6 +155,8 @@ Also: inside film drop $121(0.106) = 12.8$°C, outer surface at $5 + 121(0.154) 
           text: String.raw`Water at 50°C flows inside a tube of 2.5 cm ID with $h_i = 3500$ W/m²·°C. The tube wall is 0.8 mm thick with $k = 16$ W/m·°C. The outside loses heat by free convection to air at 20°C with $h_o = 7.6$ W/m²·°C. Calculate the overall heat-transfer coefficient (based on the outside area) and the heat loss per unit length.`,
           solution: String.raw`**Given:** $d_i = 0.025$ m, $d_o = 0.025 + 2(0.0008) = 0.0266$ m, $L = 1$ m; $h_i = 3500$, $h_o = 7.6$ W/m²·°C; $k = 16$ W/m·°C; $\Delta T = 50 - 20 = 30$°C.
 
+![Thin tube with water inside and free convection outside; the outside film controls](fig/practice-conduction-P5.svg)
+
 **Assumptions:** steady; radial 1-D; constant properties; no fouling.
 
 ### 1. Three resistances in series
@@ -181,6 +191,8 @@ $$q = U_oA_o\Delta T = 7.58\,\pi(0.0266)(1)(30) = 19\ \mathrm{W\ per\ m}$$
 - a 10 cm layer split into three 0.2 m high strips: B (top) and D (bottom) are insulation, $k = 0.04$; C (middle) is a brick bond course, $k = 1.2$ W/m·K;
 - E: cement board, 3 cm, full height, $k = 0.8$ W/m·K;
 - a 2 cm cladding split into two 0.3 m strips: F (top) $k = 0.2$, G (bottom) $k = 0.6$ W/m·K.
+
+![Wall section A, B/C/D, E, F/G and its series–parallel network](fig/practice-conduction-P6.svg)
 
 The inner face is at 25°C and the outer face at −5°C. Find (a) the heat flow, the interface temperatures and the share carried by the brick strip C; (b) the R-value and U of the wall section, also in British units; (c) the heat flow if C were replaced by insulation.`,
           solution: String.raw`**Assumptions:** steady; 1-D (each parallel group has common isothermal faces); constant $k$; perfect contact. Areas per strip: full height $0.6\ \mathrm{m^2}$, B/C/D $0.2\ \mathrm{m^2}$ each, F/G $0.3\ \mathrm{m^2}$ each.
@@ -225,6 +237,8 @@ With C as insulation, $R_{B\parallel C\parallel D} = 12.5/3 = 4.17$ K/W, $R_{tot
           syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Variation of Slides 02 Conduction I, slides 15 and 30–37 (multilayer cylinder, U_i and U_o)`,
           text: String.raw`Hot oil at 200°C flows in a steel pipe ($k = 45$ W/m·°C) of 10 cm ID and 11.4 cm OD; $h_i = 150$ W/m²·°C. The pipe is covered with 4 cm of calcium silicate ($k = 0.06$ W/m·°C) and then 2 cm of mineral wool ($k = 0.04$ W/m·°C). The outside is in air at 25°C with a combined coefficient $h_o = 10$ W/m²·°C. Find (a) the heat loss per metre, (b) all interface temperatures, (c) $U_i$ and $U_o$, and (d) the loss from the bare pipe for comparison.`,
           solution: String.raw`**Given:** $r_1 = 0.05$, $r_2 = 0.057$, $r_3 = 0.097$, $r_4 = 0.117$ m; $L = 1$ m; $T_A = 200$°C, $T_B = 25$°C.
+
+![Oil pipe with two insulation layers and five resistances in series](fig/practice-conduction-P7.svg)
 
 **Assumptions:** steady, radial 1-D; constant $k$; perfect contact; $h_o$ includes radiation.
 
@@ -279,6 +293,8 @@ A convection surface adds $1/(h\,4\pi r^2)$ in series.`,
           text: String.raw`A spherical steel tank ($k = 15$ W/m·°C) of 3 m inner diameter and 2 cm wall thickness stores ice-water at 0°C. It is covered with 5 cm of insulation ($k = 0.04$ W/m·°C). The surroundings are at 25°C with a combined outside coefficient of 12 W/m²·°C. Taking the inner steel surface at 0°C and the latent heat of fusion of ice as 333.7 kJ/kg, find the rate of heat gain, the mass of ice that melts per day, and the outer surface temperature. How much ice would melt per day without insulation?`,
           solution: String.raw`**Given:** $r_1 = 1.50$, $r_2 = 1.52$, $r_3 = 1.57$ m; $k_s = 15$, $k_i = 0.04$ W/m·°C; $h_o = 12$ W/m²·°C; $T_1 = 0$°C, $T_\infty = 25$°C; $h_{if} = 333.7$ kJ/kg.
 
+![Insulated spherical ice-water tank and its resistance circuit](fig/practice-conduction-P8b.svg)
+
 **Assumptions:** steady; radial 1-D; constant $k$; perfect contact; inner surface held at 0°C by the ice–water mixture.
 
 ### 1. Resistances (using part (a))
@@ -316,6 +332,8 @@ $\sum R = R_s + 1/(h_o4\pi r_2^2) = 4.65\times10^{-5} + 0.00287 = 0.00292$ °C/W
 
 (b) Give the R-value of the wall (surface to surface) in SI and British units and the overall U. If foam is available only in whole centimetres, what heat gain results? **[5]**`,
           solution: String.raw`**Given:** $T_o = 30$°C, $T_i = -20$°C, $\Delta T = 50$°C; $q_{max} = 10\ \mathrm{W/m^2}$.
+
+![Cold-store wall layers and the five series resistances per m²](fig/practice-conduction-P9.svg)
 
 **Assumptions:** steady, 1-D; constant $k$; perfect contact; radiation lumped into $h$.
 
@@ -378,6 +396,8 @@ Axes: $T$ (vertical) against $x$ from 0 to $L$, from $T_1$ down to $T_2$.
 - $\beta > 0$ ($k$ rises with $T$): the hot side conducts better, so the slope is gentle near $x = 0$ and steep near $x = L$; the curve lies **above** the straight line (convex upward).
 - $\beta < 0$: the opposite; the curve lies **below** the straight line.
 
+![T(x) across the wall for β > 0, β = 0 and β < 0](fig/practice-conduction-P10-sol.svg)
+
 Reason: $q'' = -k\,dT/dx$ is constant, so $|dT/dx| \propto 1/k$.`,
           answer: String.raw`$q'' = k_m(T_1-T_2)/L$ with $k_m = k_0[1+\beta(T_1+T_2)/2]$; $T(x) = -1/\beta + \sqrt{(1/\beta+T_1)^2 - 2q''x/(\beta k_0)}$; curve above the straight line for $\beta>0$, below for $\beta<0$.` }
       ] },
@@ -420,6 +440,8 @@ $$T_A(x_0) = T_B(x_0),\qquad -k_A\frac{dT_A(x_0)}{dx} = -k_B\frac{dT_B(x_0)}{dx}
           text: String.raw`For case (ii) of part (a), the plate is 2 cm thick with $k = 0.8$ W/m·°C. Solve $d^2T/dx^2 = 0$ with those boundary conditions and find the temperatures of both faces.`,
           solution: String.raw`**Assumptions:** steady; 1-D; no generation; constant $k$; all 600 W/m² absorbed at $x = 0$ and no other loss from the left face.
 
+![Plate with absorbed solar flux on the left face and convection on the right: linear profile](fig/practice-conduction-P11b.svg)
+
 1. $d^2T/dx^2 = 0 \Rightarrow T = C_1x + C_2$, so $dT/dx = C_1$.
 2. BC at $x = 0$: $-kC_1 = 600 \Rightarrow C_1 = -600/0.8 = -750$ °C/m.
 3. BC at $x = L$: $-kC_1 = h[T(L) - 25] \Rightarrow 600 = 10[T(L) - 25] \Rightarrow T(L) = 85$°C.
@@ -438,6 +460,8 @@ $$T(x) = 100 - 750x\ \ (^\circ\mathrm C,\ x\ \mathrm{in\ m})$$
           syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of Çengel ch. 3 (insulating for a safe surface temperature); cousin of 2018-19 Q8(a)`,
           text: String.raw`Steam at 180°C flows in a 2-in schedule-40 steel pipe (ID 5.25 cm, OD 6.03 cm, $k = 50$ W/m·°C) with $h_i = 2000$ W/m²·°C. The room air is at 30°C and the combined outside coefficient is 10 W/m²·°C. For safety the outer surface must not exceed 40°C. Using insulation with $k = 0.045$ W/m·°C, find the minimum thickness, the heat loss per metre with that thickness, and the loss and surface temperature of the bare pipe. Is the critical radius a concern here?`,
           solution: String.raw`**Given:** $r_1 = 0.02625$ m, $r_2 = 0.03015$ m; $h_i = 2000$, $h_o = 10$ W/m²·°C; $T_s = 180$°C, $T_\infty = 30$°C; $T_{surf} \le 40$°C.
+
+![Insulated steam pipe: find the thickness for a 40°C outer surface](fig/practice-conduction-P12.svg)
 
 **Assumptions:** steady, radial 1-D; constant $k$; $h_o$ independent of the outer radius.
 

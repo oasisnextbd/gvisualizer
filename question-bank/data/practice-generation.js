@@ -10,6 +10,8 @@ QB.paper({ year: "Practice", set: "Heat generation", date: "", marks: 0, practic
           text: String.raw`A large plane wall of thickness $2L$ generates heat uniformly at $\dot q$ (W/m³). Both faces ($x = \pm L$) are held at $T_w$. Starting from the steady 1-D conduction equation, derive the temperature distribution and the mid-plane temperature $T_0$. Show that the same $T_0$ follows from an overall energy balance.`,
           solution: String.raw`**Assumptions:** steady; 1-D in $x$ (wall large in $y$, $z$); uniform $\dot q$; constant $k$; both faces at $T_w$ (symmetric); $x = 0$ at the mid-plane.
 
+![Plane wall 2L with uniform generation: parabolic profile, peak T0 at the mid-plane](fig/practice-generation-P1.svg)
+
 ### 1. Governing equation
 Energy balance on a slice $\Delta x$ (conduction in − conduction out + generation = 0 at steady state) gives
 
@@ -53,6 +55,8 @@ $$\frac1r\frac{d}{dr}\left(r\frac{dT}{dr}\right) + \frac{\dot q}{k} = 0$$
 derive the temperature distribution and the centre temperature $T_0$.`,
           solution: String.raw`**Assumptions:** steady; radial 1-D (long cylinder, no angular variation); uniform $\dot q$; constant $k$.
 
+![Solid cylinder with generation: parabolic T(r), peak at the axis](fig/practice-generation-P2.svg)
+
 **Boundary conditions:** $T = T_w$ at $r = R$; $dT/dr = 0$ at $r = 0$ (symmetry, finite temperature at the axis).
 
 ### 1. First integration
@@ -88,6 +92,8 @@ $$\boxed{T_0 = \frac{\dot qR^2}{4k} + T_w},\qquad \frac{T - T_w}{T_0 - T_w} = 1 
           text: String.raw`A current of 200 A passes through a stainless-steel wire ($k = 19$ W/m·°C) of 3 mm diameter and 1 m length. The resistivity of the steel is 70 μΩ·cm. The wire is submerged in a liquid at 110°C with a convection coefficient of 4 kW/m²·°C. Calculate the centre temperature of the wire.`,
           solution: String.raw`**Given:** $I = 200$ A, $d = 3$ mm ($r_0 = 1.5\times10^{-3}$ m), $L = 1$ m, $k = 19$ W/m·°C, $\rho_e = 70\ \mu\Omega\cdot\mathrm{cm} = 70\times10^{-8}\ \Omega\cdot\mathrm m$, $T_\infty = 110$°C, $h = 4000$ W/m²·°C.
 
+![Current-carrying wire in liquid and its radial temperature profile](fig/practice-generation-P3.svg)
+
 **Assumptions:** steady; uniform generation (uniform current density); radial conduction; constant $k$ and $\rho_e$; all electrical power leaves by convection from the side surface.
 
 ### 1. Electrical resistance and power
@@ -117,6 +123,8 @@ $$T_0 = \frac{\dot qr_0^2}{4k} + T_w = \frac{(5.60\times10^8)(1.5\times10^{-3})^
           syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Variation of Slides 02 Conduction II, slides 7–10 (plane wall with heat sources) with convection faces`,
           text: String.raw`A 4 cm thick plate ($k = 20$ W/m·°C) generates heat uniformly at $5\times10^6$ W/m³. Both faces are cooled by water at 80°C with $h = 1100$ W/m²·°C. Find the face temperature, the mid-plane temperature and the temperature halfway between the mid-plane and a face.`,
           solution: String.raw`**Given:** $2L = 0.04$ m ($L = 0.02$ m), $k = 20$ W/m·°C, $\dot q = 5\times10^6$ W/m³, $T_\infty = 80$°C, $h = 1100$ W/m²·°C.
+
+![Heat-generating plate cooled on both faces: temperatures at the face, L/2 and centre](fig/practice-generation-P4.svg)
 
 **Assumptions:** steady; 1-D; uniform $\dot q$; constant $k$; identical cooling on both faces (symmetric, so each face rejects half the heat).
 
@@ -179,6 +187,8 @@ $$T_w = 40 + 597(0.12732) = 116.0\ ^\circ\mathrm C,\qquad T_0 - T_w = 597/(4\pi\
 (b) Find the surface and maximum temperatures and the temperature at the middle of the wall. **[5]**`,
           solution: String.raw`**Given:** $L = 0.08$ m, $k = 2.5$ W/m·°C, $\dot q = 5\times10^4$ W/m³, $h = 40$ W/m²·°C, $T_\infty = 25$°C.
 
+![Wall insulated at x = 0, convective at x = L: maximum at the insulated face](fig/practice-generation-P6.svg)
+
 **Assumptions:** steady; 1-D; uniform $\dot q$; constant $k$.
 
 ### (a) Formulation and solution
@@ -213,6 +223,8 @@ $$T(L/2) = 125 + \frac{5\times10^4}{2(2.5)}(0.0064 - 0.0016) = 125 + 48 = 173\ ^
           syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of Holman Ch. 2 problems on generation with unequal end temperatures; cousin of 2022-23 Q3(b)`,
           text: String.raw`A brass bar ($k = 110$ W/m·°C), 0.2 m long and 20 mm in diameter, connects two large blocks held at 60°C ($x = 0$) and 40°C ($x = L$). Its lateral surface is insulated. An electric current generates a total of 80 W uniformly in the bar. Derive the temperature distribution and find the maximum temperature, where it occurs, and the heat flowing into each block.`,
           solution: String.raw`**Given:** $L = 0.2$ m, $d = 0.02$ m, $k = 110$ W/m·°C, $T(0) = T_1 = 60$°C, $T(L) = T_2 = 40$°C, total generation 80 W.
+
+![Heated bar between blocks at 60°C and 40°C: off-centre maximum](fig/practice-generation-P7.svg)
 
 **Assumptions:** steady; 1-D axial (lateral surface insulated); uniform $\dot q$; constant $k$; perfect contact with the blocks.
 
@@ -253,6 +265,8 @@ Check: $36.5 + 43.5 = 80$ W ✓. The maximum lies at $x_m = 0.0914$ m, where the
           syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of Holman Prob. 2-series; cousin of 2021-22 Q8(a) (tube insulated at r2, cooled at r1)`,
           text: String.raw`Taking the inner surface temperature as $T_1$, derive the temperature distribution $T(r)$, state where the maximum temperature occurs and give the heat removed per unit length.`,
           solution: String.raw`**Assumptions:** steady; radial 1-D; uniform $\dot q$; constant $k$.
+
+![Hollow cylinder with generation, insulated outside and cooled inside](fig/practice-generation-P8a.svg)
 
 **Governing equation:** $\dfrac1r\dfrac{d}{dr}\left(r\dfrac{dT}{dr}\right) + \dfrac{\dot q}{k} = 0$.
 
@@ -307,6 +321,8 @@ $$T_{max} = 110 + 101.8 = 211.8\ ^\circ\mathrm C$$
           text: String.raw`A heating cable has a 2 mm diameter nichrome core (resistivity $1.0\times10^{-6}$ Ω·m, $k = 13$ W/m·°C) carrying 12 A. The core is covered by a 1.5 mm thick ceramic-filled sleeve ($k = 0.5$ W/m·°C). The cable is in air at 25°C with $h = 20$ W/m²·°C (combined). Find the heat generated per metre and per unit volume, the temperatures of the outer sleeve surface, the core surface and the core centre. Would the core run hotter or cooler without the sleeve? Explain.`,
           solution: String.raw`**Given:** $r_1 = 1$ mm, $r_2 = 2.5$ mm, $I = 12$ A, $\rho_e = 1.0\times10^{-6}$ Ω·m, $k_w = 13$, $k_s = 0.5$ W/m·°C, $h = 20$ W/m²·°C, $T_\infty = 25$°C.
 
+![Heating cable: core, sleeve and air with the radial temperature profile](fig/practice-generation-P9.svg)
+
 **Assumptions:** steady; radial 1-D; uniform generation in the core only; constant properties; perfect contact.
 
 ### 1. Generation
@@ -342,7 +358,9 @@ Reason: the sleeve's critical radius is $r_c = k_s/h = 0.5/20 = 25$ mm, far abov
 Sketch: $T$ vertical, $x$ horizontal across the wall.
 1. **Equal faces ($T_w$ both sides):** a symmetric parabola with the peak $T_0 = T_w + \dot qL^2/(2k)$ at the mid-plane; heat leaves equally through both faces.
 2. **Unequal faces ($T_1 > T_2$):** the parabola is shifted toward the hotter face; the maximum lies inside the wall, nearer the hotter face (if generation is strong enough). More heat leaves through the colder face. If $\dot q$ is small, the maximum can fall at or outside the hot face, and heat then flows through the wall from $T_1$ to $T_2$.
-3. **One face insulated:** the curve meets the insulated face with zero slope; the maximum is on that face; all heat leaves through the other face. It is half of case 1 with thickness $2L$.`,
+3. **One face insulated:** the curve meets the insulated face with zero slope; the maximum is on that face; all heat leaves through the other face. It is half of case 1 with thickness $2L$.
+
+![The three profiles: equal faces, unequal faces, one face insulated](fig/practice-generation-P10a-sol.svg)`,
           answer: String.raw`All concave-down parabolas: peak at mid-plane (equal faces), shifted toward the hotter face (unequal), at the insulated face (one face insulated).` },
         { id: "practice-generation-P10b", label: "(b)", marks: "3", topic: "generation",
           sub: "Scaling of the maximum temperature rise", type: "theory",

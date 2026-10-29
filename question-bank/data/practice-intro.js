@@ -16,6 +16,8 @@ QB.paper({ year: "Practice", set: "Introduction & modes", date: "", marks: 0, pr
 
 **Find:** $\dot Q$ and the cost of $Q = \dot Q\,\Delta t$.
 
+![Concrete roof slab, 6 m × 8 m × 0.25 m, with surfaces at 15°C and 4°C](fig/practice-intro-P1.svg)
+
 **Assumptions:** steady operation over the 10 h (surface temperatures constant); 1-D conduction through the thickness (roof is large compared with 0.25 m); constant $k$.
 
 ### 1. Rate of heat loss (Fourier's law for a plane layer)
@@ -42,6 +44,8 @@ $$\text{Cost} = (16.9\ \mathrm{kWh})(0.08\ \mathrm{USD/kWh}) = 1.35\ \mathrm{USD
 
 **Find:** $q = Q/A$ and $T_{s,i}$.
 
+![Refrigerator side wall: convection from the room, conduction through the wall, and the series circuit](fig/practice-intro-P2.svg)
+
 **Assumptions:** steady state; 1-D conduction through the side; constant $k$; radiation from the room included in $h$ (or neglected).
 
 ### 1. Heat flux by convection from room air to the outer surface (Newton's law)
@@ -63,6 +67,8 @@ $$q = \frac{k\,(T_{s,o}-T_{s,i})}{L}\ \Rightarrow\ T_{s,i} = T_{s,o} - \frac{qL}
           syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 01 Intro, slides 48–50 (parallel plates, air gap)`,
           text: String.raw`filled with atmospheric air.`,
           solution: String.raw`**Given:** $T_1 = 300$ K, $T_2 = 200$ K, $L = 0.01$ m, $\varepsilon = 1$, $k_{air} = 0.0219$ W/m·°C; take $A = 1\ \mathrm{m^2}$.
+
+![The four gap fillings between the 300 K and 200 K plates and the modes that cross each](fig/practice-intro-P3.svg)
 
 **Assumptions:** steady; plates large (1-D, no edge effects); the thin air layer is stagnant, so heat crosses it by conduction (no natural convection); air does not absorb radiation; black plates exchange radiation directly.
 
@@ -127,6 +133,8 @@ $$\dot Q_{total} = kA\,\frac{T_1-T_2}{L} = (2\times10^{-5})(1)\,\frac{100}{0.01}
           solution: String.raw`**Given:** $A = 2\ \mathrm{m^2}$, $T_s = 80$°C $= 353.15$ K, $T_\infty = T_{surr} = 25$°C $= 298.15$ K, $h_{conv} = 8$ W/m²·°C, $\varepsilon = 0.9$.
 
 **Find:** $h_{rad}$, $h_{combined}$, $\dot Q_{total}$, $\dot Q_{rad}/\dot Q_{total}$.
+
+![Hot plate losing heat by convection and radiation in parallel](fig/practice-intro-P4.svg)
 
 **Assumptions:** steady; the room is large compared with the plate (small surface enclosed by large surroundings); air does not take part in radiation; temperatures in kelvin for radiation.
 
@@ -205,6 +213,8 @@ Example (copper): $\alpha = 401/(8933\times385) = 1.17\times10^{-4}\ \mathrm{m^2
 (b) The board has density 300 kg/m³ and specific heat 1400 J/kg·K. Find its thermal diffusivity and state what the temperature difference would be if a board of twice the conductivity were tested at the same power. **[4]**`,
           solution: String.raw`**Given:** $A = 0.3\times0.3 = 0.09\ \mathrm{m^2}$, $L = 0.025$ m, $\dot Q = 9$ W, $T_1 = 38$°C, $T_2 = 22$°C; $\rho = 300$ kg/m³, $c_p = 1400$ J/kg·K.
 
+![Guarded hot-plate apparatus for measuring k](fig/practice-intro-P6.svg)
+
 **Assumptions:** steady; 1-D conduction normal to the faces (guard heater removes edge losses); constant $k$ over 22–38°C.
 
 ### (a) Thermal conductivity and R-value
@@ -236,6 +246,8 @@ At the same $\dot Q$, $\Delta T = \dot Q L/(kA)$ is inversely proportional to $k
 
 (b) The rod is replaced by one with a polished surface ($\varepsilon = 0.1$). With the same power and the same convection coefficient, estimate the new surface temperature. **[7]**`,
           solution: String.raw`**Given:** $D = 0.005$ m, $L = 1$ m, $\dot Q = 40$ W, $T_s = 120$°C $= 393.15$ K, $T_\infty = T_{surr} = 20$°C $= 293.15$ K, $\varepsilon = 0.85$.
+
+![Heater rod losing heat by convection and radiation to the room](fig/practice-intro-P7.svg)
 
 **Assumptions:** steady; all electrical power leaves the side surface (end areas neglected); the room is large; uniform surface temperature.
 
