@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ChE 303 Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../question-bank/qb.css">
+<script src="../theme.js"></script>
+<script src="course.js"></script>
+<script src="../question-bank/qb.js"></script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+</head>
+<body>
+<main class="wrap">
+  <div class="top">
+    <a class="backbtn" href="./" aria-label="Back">← Back</a>
+    <a class="brand" href="./">ChE 303 <span>Solutions</span></a>
+    <a class="navlink" href="./">Questions</a>
+    <a class="navlink" href="practice.html">Practice</a>
+    <a class="navlink on" href="solutions.html">Solutions</a>
+    <a class="navlink" href="checklist.html">Checklist</a>
+    <button type="button" class="themebtn">☀ Day</button>
+  </div>
+  <div class="solwrap" id="view"><p class="empty">Loading solutions…</p></div>
+</main>
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+function index(){
+  return `<h1>Worked solutions</h1><p class="lede">Pick a paper, or open any question from the question bank. Every solution states the data it uses and shows the stage-by-stage diagram, so you can follow the same steps in the exam.</p>
+  <div class="paperlist" style="margin-top:18px">${QB.keys().map(y=>{ const ps=QB.parts.filter(p=>p.key===y); return `<a href="#year-${y}"><b>${QB.title(y)}</b><span>${ps.length} parts · ${ps.filter(p=>p.type==='numerical').length} numericals</span></a>`; }).join('')}</div>`;
+}
+function paper(y){
+  const ps=QB.parts.filter(p=>p.key===y), P=QB.papers[y]; if(!P) return index();
+  let h=`<div class="crumbs"><a href="solutions.html">Solutions</a> › ${QB.title(y)}</div><h1>${P.practice?QB.title(y):y+' final'}</h1><p class="lede">${P.practice?'':(P.date?'Held '+P.date+' · ':'')+(P.marks||210)+' marks. '}${QB.md(P.rules||'').replace(/<\/?p>/g,'')}</p>`;
+  [...new Set(ps.map(p=>p.section))].forEach(sec=>{ const sp=ps.filter(p=>p.section===sec); if(!sp.length) return; if(!P.practice) h+=`<div class="yearhead">Section ${sec}</div>`;
+    sp.forEach(p=>{ h+=`<a class="card" style="display:block;text-decoration:none;color:inherit" href="#${p.id}"><div class="meta"><span class="tag id">${p.practice?'P':'Q'}${p.q}${p.label}</span>${p.marks?`<span class="tag marks">${p.marks} marks</span>`:''}<span class="tag">${QB.topic(p.topic).name}</span></div><p class="sub" style="margin:0">${QB.md(p.sub||'').replace(/<\/?p>/g,'')}</p></a>`; }); });
+  return h;
+}
+function one(p){
+  const t=QB.topic(p.topic), same=QB.parts.filter(x=>x.topic===p.topic&&!!x.practice===!!p.practice), i=same.indexOf(p), home=p.practice?'practice.html':'./';
+  const prev=same[i-1], next=same[i+1];
+  const sib=p.siblings.length>1?`<div class="siblings">${p.siblings.map(id=>{ const s=QB.byId[id]; return `<a href="#${id}" class="${id===p.id?'on':''}">${s.practice?'P':'Q'}${s.q}${s.label}</a>`; }).join('')}</div>`:'';
+  const rep=(p.repeats||[]).map(r=>QB.byId[r]?`<a href="#${r}">${QB.label(QB.byId[r])}</a>`:r).join(', ');
+  return `<div class="crumbs"><a href="solutions.html">Solutions</a> › <a href="#year-${p.key}">${QB.title(p.key)}</a> › ${p.practice?'P':'Q'}${p.q}${p.label} · <a href="${home}#${p.topic}">${t.name}</a></div>${p.practice&&p.ref?`<p class="lede" style="margin-top:4px">${p.origin==='slides'?'From the slides':'Potential final'} · ${QB.md(p.ref).replace(/<\/?p>/g,'')}</p>`:''}
+  <h1 style="font-size:clamp(26px,4vw,36px)">${QB.md(p.sub||QB.label(p)).replace(/<\/?p>/g,'')}</h1>
+  <div class="meta" style="display:flex;flex-wrap:wrap;gap:6px"><span class="tag id">${QB.label(p)}</span>${p.marks?`<span class="tag marks">${p.marks} marks</span>`:''}<span class="tag t-${p.type}">${p.type}</span>${p.syllabus==='out'?'<span class="tag out">not in current slides</span>':p.syllabus==='partial'?'<span class="tag partial">partly in slides</span>':''}${rep?`<span class="tag rep">also asked: ${rep}</span>`:''}</div>
+  ${sib}
+  <div class="qbox qtext">${p.stem?`<div class="stem">${QB.md(p.stem)}</div>`:''}${QB.md(p.text)}</div>
+  <div class="sol">${QB.md(p.solution)}${p.answer?`<div class="answer"><div class="k">Answer</div>${QB.md(p.answer)}</div>`:''}</div>
+  <div class="pager">${prev?`<a class="btn ghost" href="#${prev.id}">← ${QB.label(prev)}</a>`:'<span></span>'}<a class="btn ghost" href="${home}#${p.topic}">All ${p.practice?'practice: ':''}${t.name}</a>${next?`<a class="btn" href="#${next.id}">${QB.label(next)} →</a>`:'<span></span>'}</div>`;
+}
+function route(){
+  const h=decodeURIComponent(location.hash.slice(1)), v=$('#view');
+  v.innerHTML=QB.byId[h]?one(QB.byId[h]):h.startsWith('year-')?paper(h.slice(5)):index();
+  document.title=QB.byId[h]?QB.label(QB.byId[h])+' · ChE 303 Solutions':'ChE 303 Solutions';
+  QB.typeset(v); window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',route);
+QB.load(route);
+})();
+</script>
+</body>
+</html>

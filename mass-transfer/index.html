@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ChE 303 Question Bank</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../question-bank/qb.css">
+<script src="../theme.js"></script>
+<script src="course.js"></script>
+<script src="../question-bank/qb.js"></script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+</head>
+<body>
+<main class="wrap">
+  <div class="top">
+    <a class="backbtn" href="../" aria-label="Back">← Back</a>
+    <a class="brand" href="./">ChE 303 <span>Question Bank</span></a>
+    <a class="navlink on" href="./">Questions</a>
+    <a class="navlink" href="practice.html">Practice</a>
+    <a class="navlink" href="solutions.html">Solutions</a>
+    <a class="navlink" href="checklist.html">Checklist</a>
+    <button type="button" class="themebtn">☀ Day</button>
+  </div>
+  <h1>ChE 303 finals, topic by topic</h1>
+  <p class="lede">BUET L-3/T-1 ChE 303 Mass Transfer I finals from 2011–12 to 2023–24 (11 papers), sorted in the order the course is taught: VLE, flash, distillation, batch, column design, absorption, extraction, leaching. Each question links to a worked solution with its McCabe–Thiele or triangular diagram. Questions on topics that are not in the current slides are marked. For more problems by topic, see <a href="practice.html">Practice</a>.</p>
+  <div class="stats" id="stats"></div>
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Group by"><button type="button" id="byTopic" class="on">By topic</button><button type="button" id="byYear">By year</button></div>
+    <input class="search" id="q" type="search" placeholder="Search: McCabe, Kremser, Rayleigh, open steam…" aria-label="Search questions">
+    <select id="type" class="search" style="flex:0 1 170px" aria-label="Question type">
+      <option value="">All types</option><option value="numerical">Numericals</option><option value="derivation">Derivations</option><option value="theory">Theory</option><option value="sketch">Sketches</option>
+    </select>
+    <label class="check"><input type="checkbox" id="hideOut"> Hide out-of-syllabus</label>
+  </div>
+  <div class="layout">
+    <nav class="rail" id="rail" aria-label="Topics"></nav>
+    <section id="list" aria-live="polite"><p class="empty">Loading questions…</p></section>
+  </div>
+</main>
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const st={by:'topic',sel:null,q:'',type:'',hideOut:false};
+function readHash(){ const h=decodeURIComponent(location.hash.slice(1)); if(h.startsWith('year-')){ st.by='year'; st.sel=h.slice(5); } else if(h){ st.by='topic'; st.sel=h; } }
+function filtered(){ const q=st.q.toLowerCase(); return QB.parts.filter(p=>!p.practice&&(!st.type||p.type===st.type)&&(!st.hideOut||p.syllabus!=='out')&&(!q||(p.text+' '+p.sub+' '+p.stem+' '+p.year).toLowerCase().includes(q))); }
+function rail(list){
+  const keys=st.by==='topic'?QB.TOPICS.map(t=>({k:t.id,name:t.name,ch:t.ch})):QB.YEARS.filter(y=>QB.papers[y]).map(y=>({k:y,name:y,ch:''}));
+  const cnt=k=>list.filter(p=>(st.by==='topic'?p.topic:p.key)===k).length;
+  $('#rail').innerHTML=`<button type="button" data-k="" class="${!st.sel?'on':''}"><span>All</span><span class="n">${list.length}</span></button>`+keys.filter(x=>cnt(x.k)).map(x=>`<button type="button" data-k="${x.k}" class="${st.sel===x.k?'on':''}"><span>${x.ch?`<span class="ch">${x.ch}</span>`:''}${x.name}</span><span class="n">${cnt(x.k)}</span></button>`).join('');
+  $('#rail').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{ st.sel=b.dataset.k||null; history.replaceState(null,'',st.sel?'#'+(st.by==='year'?'year-':'')+st.sel:location.pathname); render(); window.scrollTo({top:$('.layout').offsetTop-10}); }));
+}
+function card(p){
+  const t=QB.topic(p.topic);
+  const rep=(p.repeats||[]).filter(r=>QB.byId[r]||r).map(r=>`<span class="tag rep" title="Same problem">also ${r.split('-Q')[0]}</span>`).join('');
+  return `<article class="card" id="c-${p.id}">
+    <div class="meta"><span class="tag id">${QB.label(p)}</span>${p.marks?`<span class="tag marks">${p.marks} marks</span>`:''}<span class="tag t-${p.type}">${p.type}</span>${st.by==='year'?`<span class="tag">${t.name}</span>`:''}${p.practice?'<span class="tag rep">practice (book-style)</span>':''}${p.syllabus==='out'?'<span class="tag out">not in current slides</span>':p.syllabus==='partial'?'<span class="tag partial">partly in slides</span>':''}${rep}</div>
+    ${p.sub?`<p class="sub">${QB.md(p.sub).replace(/^<p>|<\/p>$/g,'')}</p>`:''}
+    <div class="qtext">${p.stem&&p.idx===0?`<div class="stem">${QB.md(p.stem)}</div>`:p.stem?`<div class="stem"><em>Common data in Q${p.q}, see solution page.</em></div>`:''}${QB.md(p.text)}</div>
+    <div class="row"><a class="btn" href="solutions.html#${p.id}">Solution →</a></div>
+  </article>`;
+}
+function render(){
+  const list=filtered(); rail(list);
+  $('#byTopic').classList.toggle('on',st.by==='topic'); $('#byYear').classList.toggle('on',st.by==='year');
+  let html='';
+  if(st.by==='topic'){
+    QB.TOPICS.filter(t=>!st.sel||t.id===st.sel).forEach(t=>{ const ps=list.filter(p=>p.topic===t.id); if(!ps.length) return;
+      html+=`<section class="group"><h2>${t.name}</h2><p class="gsub">${ps.length} question parts · ${new Set(ps.map(p=>p.year)).size} papers</p>`;
+      QB.YEARS.forEach(y=>{ const yp=ps.filter(p=>p.key===y); if(yp.length) html+=`<div class="yearhead">${QB.title(y)}</div>`+yp.map(card).join(''); });
+      html+='</section>'; });
+  } else {
+    QB.YEARS.filter(y=>QB.papers[y]&&(!st.sel||y===st.sel)).forEach(y=>{ const ps=list.filter(p=>p.key===y); if(!ps.length) return; const P=QB.papers[y];
+      html+=P.practice?`<section class="group"><h2>${QB.title(y)}</h2><p class="gsub">${QB.md(P.rules||'').replace(/<\/?p>/g,'')}</p>`:`<section class="group"><h2>${y} final</h2><p class="gsub">${P.date?'Held '+P.date+' · ':''}${P.marks||210} marks · ${QB.md(P.rules||'').replace(/<\/?p>/g,'')}</p>`;
+      [...new Set(ps.map(p=>p.section))].forEach(sec=>{ const sp=ps.filter(p=>p.section===sec); if(sp.length) html+=(P.practice?'':`<div class="yearhead">Section ${sec}</div>`)+sp.map(card).join(''); });
+      html+='</section>'; });
+  }
+  $('#list').innerHTML=html||'<p class="empty">No questions match these filters.</p>';
+  QB.typeset($('#list'));
+}
+$('#byTopic').addEventListener('click',()=>{ st.by='topic'; st.sel=null; history.replaceState(null,'',location.pathname); render(); });
+$('#byYear').addEventListener('click',()=>{ st.by='year'; st.sel=null; history.replaceState(null,'',location.pathname); render(); });
+let tq; $('#q').addEventListener('input',e=>{ clearTimeout(tq); tq=setTimeout(()=>{ st.q=e.target.value.trim(); render(); },200); });
+$('#type').addEventListener('change',e=>{ st.type=e.target.value; render(); });
+$('#hideOut').addEventListener('change',e=>{ st.hideOut=e.target.checked; render(); });
+window.addEventListener('hashchange',()=>{ readHash(); render(); });
+QB.load(()=>{ readHash();
+  const P=QB.parts;
+  const ex=P.filter(p=>!p.practice), pr=P.length-ex.length; const num=ex.filter(p=>p.type==='numerical').length;
+  $('#stats').innerHTML=`<span class="pill"><b>${QB.YEARS.filter(y=>QB.papers[y]).length}</b> papers</span><span class="pill"><b>${ex.length}</b> exam question parts</span>${pr?`<span class="pill"><b>${pr}</b> practice problems</span>`:''}<span class="pill"><b>${num}</b> numericals</span><span class="pill"><b>${ex.filter(p=>(p.repeats||[]).length).length}</b> repeated problems</span>`;
+  render(); });
+})();
+</script>
+</body>
+</html>

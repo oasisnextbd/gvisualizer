@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>gvisualizer · CHE 301 Heat Transfer</title>
+<title>gvisualizer · BUET ChE L-3/T-1</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
@@ -13,6 +13,7 @@
 .hero{padding-block:40px 18px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:22px}
 .go{display:block;background:var(--panel);border:2px solid var(--edge);border-radius:18px;padding:18px;text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s}
+.course{font-family:var(--f-display);font-size:22px;margin:30px 0 0}
 .go:hover{border-color:var(--gold);transform:translateY(-2px)}
 .go b{display:block;font-family:var(--f-display);font-size:22px;margin-bottom:6px}
 .go span{color:var(--dim);font-size:15px}
@@ -23,9 +24,16 @@
 <main class="wrap">
   <div class="top"><span class="brand">gvisualizer</span><button type="button" class="themebtn">☀ Day</button></div>
   <div class="hero">
-    <h1>CHE 301 Heat Transfer, <span style="color:var(--flow)">learned by doing</span></h1>
+    <h1>L-3/T-1 Chemical Engineering, <span style="color:var(--flow)">learned by doing</span></h1>
     <p class="lede">For BUET Level-3 Term-1 Chemical Engineering. Work through the ideas hands-on, then practise on every past final with worked solutions.</p>
   </div>
+  <h2 class="course">ChE 303 · Mass Transfer I</h2>
+  <div class="cards">
+    <a class="go" href="mass-transfer/"><i>Practise</i><b>Question Bank</b><span>11 past finals (2011–12 to 2023–24), topic by topic and year by year, each solved step by step with its McCabe–Thiele or triangular diagram.</span></a>
+    <a class="go" href="mass-transfer/practice.html"><i>Practise</i><b>Practice Problems</b><span>The slides' worked examples re-solved, plus potential finals for VLE, flash, distillation, batch, absorption, extraction and leaching.</span></a>
+    <a class="go" href="mass-transfer/checklist.html"><i>Plan</i><b>Prep Checklist</b><span>Tick what you have mastered; get a plan of what is left, with the slides, Wankat chapters and past questions to do next.</span></a>
+  </div>
+  <h2 class="course">CHE 301 · Heat Transfer</h2>
   <div class="cards">
     <a class="go" href="question-bank/"><i>Practise</i><b>Question Bank</b><span>12 past finals (2011–12 to 2023–24), topic by topic and year by year, each with a step-by-step solution.</span></a>
     <a class="go" href="question-bank/practice.html"><i>Practise</i><b>Practice Problems</b><span>Topic-by-topic problems from the slides' worked examples, plus potential finals in the style of the CHE 301 paper, all solved.</span></a>

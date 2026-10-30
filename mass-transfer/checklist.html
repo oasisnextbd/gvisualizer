@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ChE 303 Prep Checklist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../question-bank/qb.css">
+<script src="../theme.js"></script>
+<script src="course.js"></script>
+<script src="../question-bank/qb.js"></script>
+<script src="checklist-data.js"></script>
+<style>
+.meter{height:14px;background:var(--panel-2);border-radius:99px;overflow:hidden;border:2px solid var(--edge);margin:6px 0 4px}
+.meter i{display:block;height:100%;background:linear-gradient(90deg,var(--flow),var(--good));border-radius:99px;transition:width .3s}
+.ready{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-top:18px}
+.ready b{font-family:var(--f-display);font-size:40px;line-height:1}
+.ready span{color:var(--dim)}
+.legend{font-size:14px;color:var(--dim);margin:8px 0 22px}
+.tsec{background:var(--panel);border:2px solid var(--edge);border-radius:16px;padding:14px 16px;margin:14px 0}
+.thead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.thead h3{font-family:var(--f-display);font-size:19px;margin:0;flex:1 1 auto}
+.thead .tm{width:120px;margin:0}
+.thead small{color:var(--dim);font-size:13px}
+.tref{font-size:13px;color:var(--dim);margin:4px 0 8px}
+.skill{display:grid;grid-template-columns:auto auto 1fr;gap:4px 14px;align-items:center;padding:9px 0;border-top:1px solid var(--edge)}
+.skill:first-of-type{border-top:0}
+.skill label{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--dim);cursor:pointer;white-space:nowrap}
+.skill input{width:20px;height:20px;accent-color:var(--flow);cursor:pointer}
+.skill label.g input{accent-color:var(--good)}
+.skill .nm{font-weight:600}
+.skill.done .nm{color:var(--good)}
+.skill .fq{font-size:12.5px;color:var(--dim);grid-column:3}
+.heat{display:inline-block;padding:1px 7px;border-radius:99px;font-size:12px;font-weight:700;margin-right:6px}
+.h3{background:var(--bad-soft);color:var(--bad)} .h2{background:var(--gold-soft);color:var(--gold-ink)} .h1{background:var(--rep-soft);color:var(--flow)} .h0{background:var(--panel-2);color:var(--dim)}
+#plan .card{border-left:6px solid var(--edge)}
+#plan .card.p-new{border-left-color:var(--bad)} #plan .card.p-rev{border-left-color:var(--gold)}
+.why{font-size:14px;color:var(--dim);margin:2px 0 8px}
+.do{margin:6px 0 0;padding-left:0;list-style:none}
+.do li{margin:5px 0;font-size:15px}
+.do li b{display:inline-block;min-width:82px;font-family:var(--f-display);font-weight:600;color:var(--flow)}
+.qlinks a{display:inline-block;margin:2px 6px 2px 0;padding:2px 8px;border-radius:8px;background:var(--panel-2);border:1px solid var(--edge);color:var(--ink);text-decoration:none;font-size:13.5px}
+.qlinks a:hover{border-color:var(--gold)}
+.qlinks a.s{border-color:var(--flow)}
+.done-all{background:var(--good-soft);color:var(--good);border-radius:14px;padding:16px;font-weight:700}
+.bar2{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0}
+@media (max-width:560px){ .skill{grid-template-columns:auto auto} .skill .nm,.skill .fq{grid-column:1/-1} .thead .tm{width:80px} }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="top">
+    <a class="backbtn" href="./" aria-label="Back">← Back</a>
+    <a class="brand" href="checklist.html">ChE 303 <span>Checklist</span></a>
+    <a class="navlink" href="./">Questions</a>
+    <a class="navlink" href="practice.html">Practice</a>
+    <a class="navlink" href="solutions.html">Solutions</a>
+    <a class="navlink on" href="checklist.html">Checklist</a>
+    <button type="button" class="themebtn">☀ Day</button>
+  </div>
+  <h1>Check your preparation</h1>
+  <p class="lede">Tick each skill when you have <b>studied</b> it, and again when you have a <b>good grip</b> (you can solve its past questions without looking). The plan below then tells you what is left, in order of how often the finals ask it, with the book chapter, the slides and the exact questions to practise.</p>
+  <div class="ready"><b id="pct">0%</b><span id="readyTxt">exam-weighted readiness</span></div>
+  <div class="meter"><i id="bar" style="width:0"></i></div>
+  <p class="legend"><span class="heat h3">hot</span>asked in 7+ of 12 papers <span class="heat h2">often</span>4–6 <span class="heat h1">sometimes</span>1–3 <span class="heat h0">practice only</span>not in past papers. Your ticks are saved in this browser only.</p>
+
+  <section class="group" id="planSec">
+    <h2>What's left: your plan</h2>
+    <p class="gsub" id="planSub"></p>
+    <div class="controls" style="margin-top:6px"><div class="seg" role="group" aria-label="Plan size"><button type="button" data-n="6" class="on">Top 6</button><button type="button" data-n="15">Top 15</button><button type="button" data-n="999">Everything left</button></div></div>
+    <div id="plan"></div>
+  </section>
+
+  <section class="group">
+    <h2>Checklist by topic</h2>
+    <p class="gsub">In the order the course is taught. Click the question count to see the questions.</p>
+    <div class="controls"><label class="check"><input type="checkbox" id="hideDone"> Hide skills with a good grip</label></div>
+    <div id="list"><p class="empty">Loading…</p></div>
+    <div class="bar2"><button type="button" class="btn ghost" id="reset">Clear all ticks</button></div>
+  </section>
+</main>
+<script>
+(function(){
+const $=s=>document.querySelector(s), KEY='gv-che303-check';
+let st={}; try{ st=JSON.parse(localStorage.getItem(KEY)||'{}')||{}; }catch(e){ st={}; }
+const save=()=>{ try{ localStorage.setItem(KEY,JSON.stringify(st)); }catch(e){} };
+let planN=6, hideDone=false;
+const C=QB.CHECK, NPAPERS=QB.YEARS.length;
+const skills=[];
+function build(){
+  QB.TOPICS.forEach(t=>{ const T=C.topics[t.id]; if(!T) return; T.skills.forEach(s=>{ s.topic=t.id; s.key=t.id+'.'+s.id; s.exam=[]; s.prac=[]; skills.push(s); }); });
+  QB.parts.forEach(p=>{ const T=C.topics[p.topic]; if(!T) return; const s=T.skills.find(s=>s.re.test(p.sub||'')); if(s) (p.practice?s.prac:s.exam).push(p); });
+  skills.forEach(s=>{ s.years=new Set(s.exam.map(p=>p.year)).size; s.prac.sort((a,b)=>(a.origin==='slides'?0:1)-(b.origin==='slides'?0:1)); });
+}
+const heat=n=>n>=7?['h3','hot']:n>=4?['h2','often']:n>=1?['h1','sometimes']:['h0','practice only'];
+const w=s=>Math.max(s.years,0.5);
+const state=s=>st[s.key]||{};
+function qlab(p){ return p.practice?'P'+p.q+(p.label||''):p.year.replace(/^20(\d\d)-(\d\d)$/,'$1–$2')+' Q'+p.q+(p.label||''); }
+function links(ps,max){ return ps.slice(0,max).map(p=>`<a class="${p.practice&&p.origin==='slides'?'s':''}" href="solutions.html#${p.id}" title="${(p.sub||'').replace(/"/g,'&quot;')}">${qlab(p)}</a>`).join('')+(ps.length>max?` <span style="color:var(--dim);font-size:13px">+${ps.length-max} more</span>`:''); }
+function score(){ let tot=0,got=0; skills.forEach(s=>{ const x=state(s); tot+=w(s); got+=w(s)*(x.g?1:x.s?0.4:0); }); return tot?got/tot:0; }
+function planItems(){
+  return skills.filter(s=>!state(s).g).map(s=>({s,pr:w(s)*(state(s).s?0.6:1)+(C.topics[s.topic].note?-5:0)})).sort((a,b)=>b.pr-a.pr||b.s.exam.length-a.s.exam.length).map(x=>x.s);
+}
+function renderPlan(){
+  const left=planItems(), T=s=>C.topics[s.topic], tn=s=>QB.topic(s.topic).name;
+  const nNew=left.filter(s=>!state(s).s).length, nRev=left.length-nNew;
+  $('#planSub').textContent=left.length?`${left.length} of ${skills.length} skills left · ${nNew} not started · ${nRev} studied but not confident yet. Highest exam frequency first.`:'';
+  if(!left.length){ $('#plan').innerHTML='<div class="done-all">Every skill has a good grip. Do one full past paper against the clock (try 2023–24), then rest well before the exam.</div>'; return; }
+  $('#plan').innerHTML=left.slice(0,planN).map((s,i)=>{ const x=state(s), t=T(s), [hc,hl]=heat(s.years);
+    const why=x.s?'You studied this but do not have a grip yet: skip the reading, go straight to the questions and solve them without the solution open.':'Not started yet: read first, then practise.';
+    const exam=s.exam.slice().sort((a,b)=>QB.YEARS.indexOf(a.year)-QB.YEARS.indexOf(b.year));
+    return `<article class="card ${x.s?'p-rev':'p-new'}">
+      <div class="meta"><span class="tag id">#${i+1}</span><span class="heat ${hc}">${hl}</span><span class="tag">${tn(s)}</span>${s.years?`<span class="tag">asked in ${s.years} of ${NPAPERS} papers</span>`:''}${t.note?'<span class="tag out">not in current slides</span>':''}</div>
+      <p class="sub" style="margin:4px 0 2px">${s.name}</p>
+      <p class="why">${why}</p>
+      <ul class="do">
+        ${x.s?'':`<li><b>Read</b>${t.slides.map(k=>C.slides[k]).concat(t.books).join(' · ')}</li>`}
+        ${exam.length?`<li><b>Past finals</b><span class="qlinks">${links(exam,8)}</span></li>`:''}
+        ${s.prac.length?`<li><b>Practice</b><span class="qlinks">${links(s.prac,6)}</span> <a class="btn ghost" style="padding:2px 10px;font-size:13px" href="practice.html#${s.topic}">all ${tn(s)} practice</a></li>`:''}
+      </ul>
+      <div class="row" style="margin-top:8px">${x.s?'':`<button type="button" class="btn ghost" data-mark="${s.key}" data-v="s">Mark studied</button> `}<button type="button" class="btn" data-mark="${s.key}" data-v="g">I have a good grip ✓</button></div>
+    </article>`; }).join('');
+  $('#plan').querySelectorAll('[data-mark]').forEach(b=>b.addEventListener('click',()=>{ const k=b.dataset.mark; st[k]=Object.assign({},st[k]); st[k][b.dataset.v]=true; if(b.dataset.v==='g') st[k].s=true; save(); render(); }));
+}
+function renderList(){
+  let h='';
+  QB.TOPICS.forEach(t=>{ const T=C.topics[t.id]; if(!T) return; const ss=skills.filter(s=>s.topic===t.id);
+    const tw=ss.reduce((a,s)=>a+w(s),0), tg=ss.reduce((a,s)=>a+w(s)*(state(s).g?1:state(s).s?0.4:0),0), nd=ss.filter(s=>state(s).g).length;
+    const vis=ss.filter(s=>!hideDone||!state(s).g); if(!vis.length) return;
+    h+=`<div class="tsec"><div class="thead"><h3>${t.name}</h3><small>${nd}/${ss.length} with a good grip</small><div class="meter tm"><i style="width:${Math.round(100*tg/tw)}%"></i></div></div>
+      <p class="tref">${T.slides.map(k=>C.slides[k]).concat(T.books).join(' · ')}${T.note?' · '+T.note:''}</p>`+
+      vis.map(s=>{ const x=state(s), [hc,hl]=heat(s.years);
+        return `<div class="skill ${x.g?'done':''}"><label><input type="checkbox" data-k="${s.key}" data-v="s" ${x.s?'checked':''}>Studied</label><label class="g"><input type="checkbox" data-k="${s.key}" data-v="g" ${x.g?'checked':''}>Good grip</label>
+          <span class="nm">${s.name}</span>
+          <span class="fq"><span class="heat ${hc}">${hl}</span>${s.years?`${s.years}/${NPAPERS} papers · `:''}<a href="#" data-open="${s.key}">${s.exam.length} past question${s.exam.length===1?'':'s'} · ${s.prac.length} practice</a></span>
+          <span class="fq qlinks" id="q-${s.key.replace('.','-')}" hidden>${links(s.exam,40)}${links(s.prac,40)}</span></div>`; }).join('')+'</div>'; });
+  $('#list').innerHTML=h||'<p class="empty">Everything has a good grip.</p>';
+  $('#list').querySelectorAll('input[data-k]').forEach(c=>c.addEventListener('change',()=>{ const k=c.dataset.k; st[k]=Object.assign({},st[k]); st[k][c.dataset.v]=c.checked; if(c.dataset.v==='g'&&c.checked) st[k].s=true; if(c.dataset.v==='s'&&!c.checked) st[k].g=false; save(); render(); }));
+  $('#list').querySelectorAll('[data-open]').forEach(a=>a.addEventListener('click',e=>{ e.preventDefault(); const el=document.getElementById('q-'+a.dataset.open.replace('.','-')); el.hidden=!el.hidden; }));
+}
+function render(){
+  const p=Math.round(100*score()); $('#pct').textContent=p+'%'; $('#bar').style.width=p+'%';
+  const g=skills.filter(s=>state(s).g).length, s=skills.filter(s=>state(s).s&&!state(s).g).length;
+  $('#readyTxt').textContent=`exam-weighted readiness · ${g} good grip · ${s} studied · ${skills.length-g-s} not started`;
+  renderPlan(); renderList();
+}
+document.querySelectorAll('#planSec .seg button').forEach(b=>b.addEventListener('click',()=>{ planN=+b.dataset.n; document.querySelectorAll('#planSec .seg button').forEach(x=>x.classList.toggle('on',x===b)); renderPlan(); }));
+$('#hideDone').addEventListener('change',e=>{ hideDone=e.target.checked; renderList(); });
+$('#reset').addEventListener('click',()=>{ if(confirm('Clear all your ticks?')){ st={}; save(); render(); } });
+QB.load(()=>{ build(); render(); });
+})();
+</script>
+</body>
+</html>
