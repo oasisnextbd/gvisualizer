@@ -45,7 +45,7 @@ function one(p){
   const prev=same[i-1], next=same[i+1];
   const sib=p.siblings.length>1?`<div class="siblings">${p.siblings.map(id=>{ const s=QB.byId[id]; return `<a href="#${id}" class="${id===p.id?'on':''}">${s.practice?'P':'Q'}${s.q}${s.label}</a>`; }).join('')}</div>`:'';
   const rep=(p.repeats||[]).map(r=>QB.byId[r]?`<a href="#${r}">${QB.label(QB.byId[r])}</a>`:r).join(', ');
-  return `<div class="crumbs"><a href="solutions.html">Solutions</a> › <a href="#year-${p.key}">${QB.title(p.key)}</a> › ${p.practice?'P':'Q'}${p.q}${p.label} · <a href="${home}#${p.topic}">${t.name}</a></div>${p.practice&&p.ref?`<p class="lede" style="margin-top:4px">${p.origin==='slides'?'From the slides':'Potential final'} · ${QB.md(p.ref).replace(/<\/?p>/g,'')}</p>`:''}
+  return `<div class="crumbs"><a href="solutions.html">Solutions</a> › <a href="#year-${p.key}">${QB.title(p.key)}</a> › ${p.practice?'P':'Q'}${p.q}${p.label} · <a href="${home}#${p.topic}">${t.name}</a></div>${p.practice&&p.ref?`<p class="lede" style="margin-top:4px">${p.origin==='slides'?'From the slides':p.origin==='wankat'?'Wankat ★ exercise':'Potential final'} · ${QB.md(p.ref).replace(/<\/?p>/g,'')}</p>`:''}
   <h1 style="font-size:clamp(26px,4vw,36px)">${QB.md(p.sub||QB.label(p)).replace(/<\/?p>/g,'')}</h1>
   <div class="meta" style="display:flex;flex-wrap:wrap;gap:6px"><span class="tag id">${QB.label(p)}</span>${p.marks?`<span class="tag marks">${p.marks} marks</span>`:''}<span class="tag t-${p.type}">${p.type}</span>${p.syllabus==='out'?'<span class="tag out">not in current slides</span>':p.syllabus==='partial'?'<span class="tag partial">partly in slides</span>':''}${rep?`<span class="tag rep">also asked: ${rep}</span>`:''}</div>
   ${sib}
