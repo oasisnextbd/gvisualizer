@@ -1,6 +1,8 @@
-/* CHE 301 question bank: shared data registry, loader and renderer */
+/* gvisualizer question bank: shared data registry, loader and renderer.
+   Defaults are CHE 301; another course sets window.QB_COURSE={topics,years,sets} before loading this file. */
 (function(){
-const TOPICS=[
+const COURSE=window.QB_COURSE||{};
+const TOPICS=COURSE.topics||[
   {id:'intro',name:'Introduction & modes',ch:'01'},
   {id:'conduction',name:'Steady conduction',ch:'02'},
   {id:'insulation',name:'Critical insulation',ch:'02'},
@@ -16,8 +18,8 @@ const TOPICS=[
   {id:'evaporator',name:'Evaporators',ch:'10'},
   {id:'other',name:'Other (radiation, transient)',ch:'–'}
 ];
-const YEARS=['2023-24','2022-23','2021-22','2020-21','2018-19','2017-18','2016-17','2015-16','2014-15','2013-14','2012-13','2011-12'];
-const SETS=['intro','conduction','insulation','generation','convection-basics','boundary-layer','forced-convection','natural-convection','condensation','boiling','heat-exchangers','shell-tube','evaporator'].map(t=>'practice-'+t);   /* book-style practice sets, files data/<name>.js */
+const YEARS=COURSE.years||['2023-24','2022-23','2021-22','2020-21','2018-19','2017-18','2016-17','2015-16','2014-15','2013-14','2012-13','2011-12'];
+const SETS=(COURSE.sets||['intro','conduction','insulation','generation','convection-basics','boundary-layer','forced-convection','natural-convection','condensation','boiling','heat-exchangers','shell-tube','evaporator']).map(t=>'practice-'+t);   /* book-style practice sets, files data/<name>.js */
 const keyOf=p=>p.practice?'practice-'+String(p.set||'set').toLowerCase().replace(/[^a-z0-9]+/g,'-'):p.year;
 const papers={}, parts=[], byId={};
 const QB={TOPICS,YEARS,SETS,papers,parts,byId,keyOf,
