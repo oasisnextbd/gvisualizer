@@ -54,8 +54,11 @@ function md(src){
       if(rows.length>1&&/^\|?\s*:?-{2,}/.test(rows[1])){ h+='<thead><tr>'+cells(rows[0]).map(c=>'<th>'+inline(c,[])+'</th>').join('')+'</tr></thead>'; body=rows.slice(2); }
       h+='<tbody>'+body.map(r=>'<tr>'+cells(r).map(c=>'<td>'+inline(c,[])+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>'; out+=h; continue; }
     if(t.startsWith('>')){ flush(); const b=[]; while(i<L.length&&L[i].trim().startsWith('>')){ b.push(L[i].trim().replace(/^>\s?/,'')); i++; } out+='<div class="note">'+md(b.join('\n'))+'</div>'; continue; }
-    if(/^(-|\*|\d+[.)])\s/.test(t)){ flush(); const ol=/^\d/.test(t); let h=ol?'<ol>':'<ul>';
-      while(i<L.length&&/^\s*(-|\*|\d+[.)])\s/.test(L[i])){ let item=L[i].trim().replace(/^(-|\*|\d+[.)])\s/,''); i++; while(i<L.length&&L[i].trim()&&/^\s{2,}/.test(L[i])&&!/^\s*(-|\*|\d+[.)])\s/.test(L[i])){ item+=' '+L[i].trim(); i++; } h+='<li>'+inline(item,[])+'</li>'; }
+    if(/^(-|\*|\d+[.)])\s/.test(t)){ flush(); const ol=/^\d/.test(t); let h=ol?(parseInt(t,10)>1?'<ol start="'+parseInt(t,10)+'">':'<ol>'):'<ul>';
+      const ind=L[i].match(/^\s*/)[0].length;
+      while(i<L.length&&/^\s*(-|\*|\d+[.)])\s/.test(L[i])&&L[i].match(/^\s*/)[0].length<=ind){ let item=L[i].trim().replace(/^(-|\*|\d+[.)])\s/,''); i++; while(i<L.length&&L[i].trim()&&/^\s{2,}/.test(L[i])&&!/^\s*(-|\*|\d+[.)])\s/.test(L[i])){ item+=' '+L[i].trim(); i++; }
+        let sub=''; if(i<L.length&&/^\s*(-|\*|\d+[.)])\s/.test(L[i])&&L[i].match(/^\s*/)[0].length>=ind+2){ const sl=[]; while(i<L.length&&L[i].trim()&&L[i].match(/^\s*/)[0].length>=ind+2){ sl.push(L[i].replace(new RegExp('^\\s{'+(ind+2)+'}'),'')); i++; } sub=md(sl.join('\n')); }
+        h+='<li>'+inline(item,[])+sub+'</li>'; }
       out+=h+(ol?'</ol>':'</ul>'); continue; }
     para.push(t); i++; }
   flush(); return out;
