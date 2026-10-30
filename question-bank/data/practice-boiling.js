@@ -13,6 +13,8 @@ QB.paper({ year: "Practice", set: "Boiling", date: "", marks: 0, practice: true,
 
 **Assumptions:** steady; stable film boiling over the whole surface; vapour film properties at the film temperature.
 
+![Horizontal wire in stable film boiling with radiation across the vapour film](fig/practice-boiling-P1.svg)
+
 1. **Regime:** $\Delta T_{excess} = T_s - T_{sat} = 350 - 100 = 250^\circ\mathrm{C}$. This is far above the roughly 30°C of the critical point, and above the Leidenfrost point (about 120°C), so the wire is in **film boiling**.
 
 2. **Properties** (as on the slide). Water at 100°C: $h_{fg} = 2257\times10^3\,\mathrm{J/kg}$, $\rho_l = 957.9\,\mathrm{kg/m^3}$. Vapour at $T_f = (350 + 100)/2 = 225^\circ\mathrm{C}$ (498 K): $\rho_v = 0.441\,\mathrm{kg/m^3}$, $c_{pv} = 1977\,\mathrm{J/kg\,K}$, $\mu_v = 1.73\times10^{-5}\,\mathrm{kg/m\,s}$, $k_v = 0.0357\,\mathrm{W/m\,K}$.
@@ -85,7 +87,9 @@ $$(q/A)_{brass} = 3\times10^5\times10.17 = 3.05\times10^6\,\mathrm{Btu/h\,ft^2}\
           sub: "Boiling curve and regimes I–VI", type: "sketch",
           syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 08, pp. 52–63 (boiling curve, regions I–VI; asked in many finals, e.g. 2015-16 Q2a, 2021-22 Q4a, 2022-23 Q8a)`,
           text: String.raw`Sketch the pool-boiling curve for water at 1 atm and describe each region (I to VI), giving typical excess temperatures.`,
-          solution: String.raw`**Sketch:** log heat flux $\dot q$ (W/m², $10^3$ to $10^7$) against log excess temperature $\Delta T_{excess} = T_s - T_{sat}$ (1 to 1000°C). The curve rises gently to A (about 5°C), then steeply through B (about 10°C) to the peak C ($\dot q_{max} \approx 1\,\mathrm{MW/m^2}$ at about 30°C). It falls to the minimum D (Leidenfrost point, about 120°C, $\dot q_{min} \approx 2\times10^4\,\mathrm{W/m^2}$), then rises again through E (film boiling, where radiation grows at high $\Delta T$). Label the regions above the curve.
+          solution: String.raw`![Pool boiling curve for water at 1 atm with regimes I to VI and points A to E](fig/common-boiling-curve.svg)
+
+**Sketch:** log heat flux $\dot q$ (W/m², $10^3$ to $10^7$) against log excess temperature $\Delta T_{excess} = T_s - T_{sat}$ (1 to 1000°C). The curve rises gently to A (about 5°C), then steeply through B (about 10°C) to the peak C ($\dot q_{max} \approx 1\,\mathrm{MW/m^2}$ at about 30°C). It falls to the minimum D (Leidenfrost point, about 120°C, $\dot q_{min} \approx 2\times10^4\,\mathrm{W/m^2}$), then rises again through E (film boiling, where radiation grows at high $\Delta T$). Label the regions above the curve.
 
 | Region | $\Delta T_{excess}$ (water, 1 atm) | What happens |
 |---|---|---|
@@ -100,7 +104,9 @@ $$(q/A)_{brass} = 3\times10^5\times10.17 = 3.05\times10^6\,\mathrm{Btu/h\,ft^2}\
           sub: "Burnout and hysteresis of an electrically heated wire", type: "theory",
           syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 08, pp. 63–65 (points a and b, burnout; C to E jump, D on cooling)`,
           text: String.raw`Explain why an electrically heated (heat-flux-controlled) wire "burns out" when the heat flux is raised just above the critical value, and what happens when the power is then reduced.`,
-          solution: String.raw`- With electric heating, the **heat flux** is the controlled variable and the wall temperature adjusts to it.
+          solution: String.raw`![Heat-flux-controlled heater: burnout jump C → E and the return D → nucleate branch](fig/practice-boiling-P3b-sol.svg)
+
+- With electric heating, the **heat flux** is the controlled variable and the wall temperature adjusts to it.
 - Up to point C (or a), raising the power moves the wire up the nucleate-boiling branch.
 - Just beyond C, a small rise in $\Delta T$ *reduces* the flux the liquid can remove (transition branch). The wire must still dissipate the electrical power, so its temperature keeps rising. The operating point **jumps** horizontally at constant $\dot q \approx \dot q_{max}$ to point E (or b) on the film-boiling branch.
 - For water, $T_s$ at E is often above 1000°C, beyond the melting point of most wire materials, so the wire melts. This is **burnout**, and $\dot q_{max}$ is also called the burnout heat flux.
@@ -121,6 +127,8 @@ $$(q/A)_{brass} = 3\times10^5\times10.17 = 3.05\times10^6\,\mathrm{Btu/h\,ft^2}\
           solution: String.raw`**Given:** $D = 0.3\,\mathrm{m}$, $\Delta T_{excess} = 108 - 100 = 8^\circ\mathrm{C}$.
 
 **Assumptions:** steady; uniform bottom temperature; only the bottom transfers heat; nucleate boiling, since $\Delta T$ is between 5 and 30°C.
+
+![Water boiling in the 30 cm pan](fig/practice-boiling-P4.svg)
 
 1. **Rohsenow correlation** (SI form on the slide)
 
@@ -185,6 +193,8 @@ Water at 100°C: $\rho_l = 957.9\,\mathrm{kg/m^3}$, $h_{fg} = 2257\,\mathrm{kJ/k
 
 **Assumptions:** uniform surface temperature at the instant considered; vapour properties at $T_f = 300^\circ\mathrm{C}$ (CoolProp/IAPWS); saturated pool.
 
+![Steel ball quenched in saturated water, surrounded by a vapour film](fig/practice-boiling-P5.svg)
+
 1. **Film-boiling flux on a sphere** ($C_{film} = 0.67$)
 
 $$\dot q_{film} = 0.67\left[\frac{9.81\times0.04353^3\times0.384\times(957.9 - 0.384)\times[2.257\times10^6 + 0.4\times2013\times400]}{2.031\times10^{-5}\times0.02\times400}\right]^{1/4}\times400 = 7.03\times10^4\,\mathrm{W/m^2}$$
@@ -244,7 +254,9 @@ $$\dot q_{max} = C_{cr}h_{fg}[\sigma g\rho_v^2(\rho_l - \rho_v)]^{1/4}\quad(\tex
           sub: "Flow boiling regimes in a heated tube", type: "sketch",
           syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of final 2023-24 Q1(b) (flow vs pool boiling); Slides 08, pp. 82–88`,
           text: String.raw`Sketch the flow regimes, and the variation of the heat-transfer coefficient, along a uniformly heated vertical tube in which a subcooled liquid enters and superheated vapour leaves. How does external flow boiling differ from pool boiling?`,
-          solution: String.raw`**Sketch:** a vertical tube with flow upward. Beside it, mark the regimes in order and plot h against the length (or vapour quality).
+          solution: String.raw`![Flow regimes along a heated vertical tube and the variation of h](fig/practice-boiling-P6c-sol.svg)
+
+**Sketch:** a vertical tube with flow upward. Beside it, mark the regimes in order and plot h against the length (or vapour quality).
 
 1. **Single-phase liquid (subcooled) forced convection:** h is modest and roughly constant.
 2. **Bubbly flow:** bubbles form at the wall (subcooled, then saturated nucleate boiling) and are swept into the core. h rises.

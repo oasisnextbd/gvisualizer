@@ -15,6 +15,8 @@ QB.paper({ year: "Practice", set: "Natural convection", date: "", marks: 0, prac
 
 **Assumptions:** steady; isothermal plate; one face transfers heat; radiation not asked; air an ideal gas so $\beta = 1/T_f$.
 
+![Vertical plate 4 m high and 10 m wide at 60°C in still air at 10°C](fig/practice-natural-convection-P1.svg)
+
 1. **Film temperature**
 
 $$T_f = \frac{T_w + T_\infty}{2} = \frac{60 + 10}{2} = 35^\circ\mathrm{C} = 308\,\mathrm{K}$$
@@ -64,6 +66,8 @@ This is about 10% lower than Churchill–Chu.
 
 **Assumptions:** steady; uniform surface temperature; quiescent air at 1 atm; ideal gas.
 
+![Horizontal hot-water pipe: end view with the rising plume and side view](fig/practice-natural-convection-P2.svg)
+
 1. **Film temperature and properties:** $T_f = (70 + 20)/2 = 45^\circ\mathrm{C} = 318\,\mathrm{K}$. Air at 45°C, 1 atm (Çengel Table A-15, as on the slide): $k = 0.02699\,\mathrm{W/m\,K}$, $\nu = 1.749\times10^{-5}\,\mathrm{m^2/s}$, $\mathrm{Pr} = 0.7241$, $\beta = 1/318\,\mathrm{K^{-1}}$.
 
 2. **Rayleigh number** (characteristic length = diameter)
@@ -110,6 +114,8 @@ Air at the film temperature of 60°C, 1 atm: $k = 0.02808\,\mathrm{W/m\,K}$, $\n
           solution: String.raw`**Given:** $L = 0.6\,\mathrm{m}$, $T_s = 90^\circ\mathrm{C}$, $T_\infty = 30^\circ\mathrm{C}$, $A_s = 0.36\,\mathrm{m^2}$ (one face).
 
 **Assumptions:** steady; isothermal surface; back face insulated; radiation ignored.
+
+![The 0.6 m square plate vertical, hot face up and hot face down](fig/practice-natural-convection-P3.svg)
 
 1. **Rayleigh number** with $L_c = L = 0.6\,\mathrm{m}$ (height)
 
@@ -172,7 +178,9 @@ $$\dot Q = hA_s(T_s - T_\infty) = 2.97\times0.36\times60 = 64.2\,\mathrm{W}$$
 $$\rho\left(u\frac{\partial u}{\partial x} + v\frac{\partial u}{\partial y}\right) = g\rho\beta(T - T_\infty) + \mu\frac{\partial^2u}{\partial y^2}$$
 
 State the assumptions, including the Boussinesq approximation.`,
-          solution: String.raw`**Assumptions:** steady, laminar, two-dimensional flow; Newtonian fluid with constant properties, **except** that the density difference that drives the flow is kept in the body-force term (Boussinesq approximation); gravity acts in the $-x$ direction.
+          solution: String.raw`![Natural-convection boundary layers on hot and cold vertical plates (x along the plate, y normal)](fig/common-nc-vertical-plate.svg)
+
+**Assumptions:** steady, laminar, two-dimensional flow; Newtonian fluid with constant properties, **except** that the density difference that drives the flow is kept in the body-force term (Boussinesq approximation); gravity acts in the $-x$ direction.
 
 1. **Boundary-layer x-momentum equation** with the weight of the fluid:
 
@@ -241,6 +249,8 @@ $$\frac{d}{d\eta}\left[\eta(1 - \eta)^2\right] = (1 - \eta)(1 - 3\eta) = 0\;\Rig
 
 The maximum is at one third of the boundary-layer thickness, where $\eta(1 - \eta)^2 = 4/27 = 0.148$ (the peak of the $u/u_x$ curve on the slide).
 
+![Integral profiles: θ = (1 − y/δ)² and the velocity hump with its maximum at y = δ/3](fig/practice-natural-convection-P4b-sol.svg)
+
 > **Sketch:** u is zero at the wall and at $y = \delta$, with a single peak near $y = \delta/3$. T falls monotonically from $T_w$ to $T_\infty$ with zero slope at $y = \delta$. Unlike forced convection, the velocity is zero at the outer edge.`,
           answer: String.raw`$\theta = (1 - y/\delta)^2$; $u \propto (y/\delta)(1 - y/\delta)^2$ with $c = -g\beta\Delta T/(2\nu u_x)$; maximum at $y = \delta/3$.` },
         { id: "practice-natural-convection-P4c", label: "(c)", marks: "", topic: "natural-convection",
@@ -282,6 +292,8 @@ The buoyancy term carries the coefficient $\mathrm{Gr}/\mathrm{Re}^2$ (the Archi
 
 **Assumptions:** steady; laminar or turbulent handled by Churchill–Chu; radiation neglected; ideal gas.
 
+![Uniform-flux vertical panel with the mid-height point](fig/practice-natural-convection-P5.svg)
+
 **Method (slide):** for uniform flux, use the isothermal relation with $\Delta T = T_{L/2} - T_\infty$ and evaluate the properties at $T_f = (T_{L/2} + T_\infty)/2$:
 
 $$\mathrm{Nu} = \frac{hL}{k} = \frac{\dot q_sL}{k(T_{L/2} - T_\infty)}$$
@@ -322,7 +334,9 @@ $\mathrm{Ra} = 3.6\times10^8 < 10^9$: laminar. The simple form $0.59\mathrm{Ra}^
           sub: "Vertical cylinder as a plate: criterion", type: "numerical",
           syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Variation on Slides 07, p. 25 (vertical cylinder treated as a plate when D ≥ 35L/Gr^(1/4))`,
           text: String.raw`Can a 10-cm-diameter pipe be treated as a vertical flat plate? What is the smallest diameter for which this is allowed?`,
-          solution: String.raw`1. **Grashof number on the height** ($T_f = 50^\circ\mathrm{C}$, $\beta = 1/323.15\,\mathrm{K^{-1}}$)
+          solution: String.raw`![Vertical pipe treated as a vertical plate when the boundary layer is thin compared with D](fig/practice-natural-convection-P6.svg)
+
+1. **Grashof number on the height** ($T_f = 50^\circ\mathrm{C}$, $\beta = 1/323.15\,\mathrm{K^{-1}}$)
 
 $$\mathrm{Gr}_L = \frac{g\beta(T_s - T_\infty)L^3}{\nu^2} = \frac{9.81\times(1/323.15)\times60\times1.5^3}{(1.804\times10^{-5})^2} = 1.89\times10^{10}$$
 
@@ -376,7 +390,9 @@ Without gravity (for example in an orbiting spacecraft) there is no buoyancy, so
           sub: "Profiles on hot and cold vertical plates", type: "sketch",
           syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of finals 2016-17 Q2(a), 2018-19 Q3(a)`,
           text: String.raw`Sketch the velocity and temperature profiles in the natural-convection boundary layer on (i) a hot vertical plate and (ii) a cold vertical plate in a quiescent fluid. Show the laminar and turbulent parts.`,
-          solution: String.raw`**(i) Hot plate ($T_s > T_\infty$).** Fluid next to the plate is heated, becomes lighter and rises, so the boundary layer starts at the bottom edge and thickens upward.
+          solution: String.raw`![Velocity and temperature profiles on a hot plate (layer grows upward) and a cold plate (mirror image, grows downward)](fig/common-nc-vertical-plate.svg)
+
+**(i) Hot plate ($T_s > T_\infty$).** Fluid next to the plate is heated, becomes lighter and rises, so the boundary layer starts at the bottom edge and thickens upward.
 
 - *Velocity profile:* u = 0 at the wall (no slip), rises to a maximum at about $\delta/3$, and falls back to zero at the outer edge $y = \delta$. Arrows point **upward**.
 - *Temperature profile:* T falls from $T_s$ at the wall to $T_\infty$ at $y = \delta$, with zero slope at the edge.
@@ -390,7 +406,9 @@ Without gravity (for example in an orbiting spacecraft) there is no buoyancy, so
           sub: "Orientation of horizontal hot plates", type: "theory",
           syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of finals 2020-21 Q4(c), 2023-24 Q7(b)`,
           text: String.raw`A hot horizontal plate loses heat in a cooler room. Explain why the loss is much smaller when the hot face points down than when it points up. Which correlations apply for a cold plate?`,
-          solution: String.raw`- **Hot face up:** heated air rises freely from the whole surface in plumes, and fresh cool air flows in from the sides. The currents are strong, so h is high: $\mathrm{Nu} = 0.54\mathrm{Ra}^{1/4}$ ($10^4$–$10^7$) or $0.15\mathrm{Ra}^{1/3}$ ($10^7$–$10^{11}$).
+          solution: String.raw`![Flow patterns over horizontal hot and cold plates facing up and down](fig/practice-natural-convection-P7c-sol.svg)
+
+- **Hot face up:** heated air rises freely from the whole surface in plumes, and fresh cool air flows in from the sides. The currents are strong, so h is high: $\mathrm{Nu} = 0.54\mathrm{Ra}^{1/4}$ ($10^4$–$10^7$) or $0.15\mathrm{Ra}^{1/3}$ ($10^7$–$10^{11}$).
 - **Hot face down:** the heated air wants to rise but the plate is in the way. It must creep sideways under the plate and escape at the edges, giving a thick, sluggish layer: $\mathrm{Nu} = 0.27\mathrm{Ra}^{1/4}$ ($10^5$–$10^{11}$), roughly half the hot-up value.
 - **Cold plate:** gravity reverses the picture, since the cooled fluid sinks. A **cold face down** behaves like a hot face up (strong currents), and a **cold face up** behaves like a hot face down (weak).
 - Use $L_c = A_s/p$ (area over perimeter) and the film temperature in all horizontal-plate correlations.`,
@@ -409,6 +427,8 @@ Air at 92.5°C, 1 atm: $k = 0.03116\,\mathrm{W/m\,K}$, $\nu = 2.237\times10^{-5}
           solution: String.raw`**Given:** $D = 0.15\,\mathrm{m}$, $T_s = 160^\circ\mathrm{C}$, $T_\infty = T_{surr} = 25^\circ\mathrm{C}$, $\varepsilon = 0.8$, $L = 1\,\mathrm{m}$.
 
 **Assumptions:** steady; uniform surface temperature; large surroundings; ideal gas.
+
+![Uninsulated horizontal steam line losing heat by natural convection and radiation](fig/practice-natural-convection-P8.svg)
 
 1. **Film temperature:** $T_f = (160 + 25)/2 = 92.5^\circ\mathrm{C} = 365.65\,\mathrm{K}$, so $\beta = 1/365.65 = 2.735\times10^{-3}\,\mathrm{K^{-1}}$. (Properties are Holman A-5 values interpolated between 350 and 400 K.)
 
@@ -453,6 +473,8 @@ Air at 15°C, 1 atm: $k = 0.02530\,\mathrm{W/m\,K}$, $\nu = 1.465\times10^{-5}\,
 
 **Assumptions:** steady; uniform surface temperature; wall resistance negligible; radiation neglected.
 
+![Cold sphere in still air: the cooled air sinks in a plume below it](fig/practice-natural-convection-P9.svg)
+
 1. **Film temperature:** $T_f = (2 + 28)/2 = 15^\circ\mathrm{C} = 288.15\,\mathrm{K}$, so $\beta = 1/288.15\,\mathrm{K^{-1}}$. A cold surface drives a downward flow, but the correlation uses $|T_s - T_\infty| = 26\,\mathrm{K}$.
 
 2. **Rayleigh number**
@@ -492,6 +514,8 @@ Air at 15°C: $k = 0.02530\,\mathrm{W/m\,K}$, $\nu = 1.465\times10^{-5}\,\mathrm
 
 **Assumptions:** steady; isothermal plate; one face only; radiation neglected.
 
+![Cold plate with the exposed face up (weak flow) and down (strong flow)](fig/practice-natural-convection-P10.svg)
+
 1. **Characteristic length and Ra** ($T_f = 15^\circ\mathrm{C}$, $\beta = 1/288.15\,\mathrm{K^{-1}}$)
 
 $$L_c = \frac{A}{p} = \frac{0.6}{3.2} = 0.1875\,\mathrm{m}$$
@@ -521,7 +545,9 @@ $$h = \frac{38.1\times0.02530}{0.1875} = 5.14\,\mathrm{W/m^2K},\qquad \dot Q = 5
           sub: "Inclined plate (g cos θ)", type: "numerical",
           syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of Çengel inclined-plate problems; inclined-plate rule from Slides 07, p. 21`,
           text: String.raw`Find the natural-convection heat loss from the underside, and compare it with the loss if the panel were vertical.`,
-          solution: String.raw`**Rule (slide):** for the lower surface of a hot inclined plate (or the upper surface of a cold one), use the vertical-plate relations with g replaced by $g\cos\theta$, provided $\mathrm{Ra} < 10^9$.
+          solution: String.raw`![Roof panel inclined 40° from the vertical, hot face down; g cos θ along the plate](fig/practice-natural-convection-P11.svg)
+
+**Rule (slide):** for the lower surface of a hot inclined plate (or the upper surface of a cold one), use the vertical-plate relations with g replaced by $g\cos\theta$, provided $\mathrm{Ra} < 10^9$.
 
 **Assumptions:** steady; isothermal; radiation neglected.
 

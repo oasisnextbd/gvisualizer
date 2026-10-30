@@ -15,6 +15,8 @@ QB.paper({ year: "Practice", set: "Condensation", date: "", marks: 0, practice: 
 
 **Assumptions:** laminar film condensation; uniform wall temperature; condensate falls from tube to tube down each column; $\rho_v \ll \rho_l$.
 
+![Square bank of 100 tubes: N = 10 tubes in each vertical column](fig/practice-condensation-P1.svg)
+
 1. **Properties** (as on the slide). Liquid at $T_f = (100 + 98)/2 = 99^\circ\mathrm{C}$: $\rho_l = 960\,\mathrm{kg/m^3}$, $\mu_l = 2.82\times10^{-4}\,\mathrm{kg/m\,s}$, $k_l = 0.68\,\mathrm{W/m\,K}$. At $T_{sat}$: $h_{fg} = 2255\,\mathrm{kJ/kg}$.
 
 With $\Delta T = 2^\circ\mathrm{C}$, the correction $0.68c_{pl}\Delta T \approx 5.7\,\mathrm{kJ/kg}$ is only 0.25% of $h_{fg}$, so the slide uses $h_{fg}$ directly. Also $\rho_l(\rho_l - \rho_v) \approx \rho_l^2$.
@@ -56,6 +58,8 @@ At $T_{sat} = 40^\circ\mathrm{C}$ (7.38 kPa): $h_{fg} = 2407\times10^3\,\mathrm{
 
 **Assumptions:** steady laminar film condensation on a single isothermal horizontal tube; vapour at rest.
 
+![Steam condensing on a horizontal condenser tube](fig/practice-condensation-P2.svg)
+
 1. **Modified latent heat** (accounts for subcooling of the film)
 
 $$h^*_{fg} = h_{fg} + 0.68c_{pl}(T_{sat} - T_s) = 2407\times10^3 + 0.68\times4178\times10 = 2435\times10^3\,\mathrm{J/kg}$$
@@ -95,7 +99,9 @@ $$\dot Q = hA_s(T_{sat} - T_s) = 9292\times0.09425\times10 = 8758\,\mathrm{W}$$
           text: String.raw`State Nusselt's assumptions and derive the film thickness $\delta(x)$, the local coefficient $h_x$ and the average coefficient
 
 $$h = 0.943\left[\frac{g\rho_l(\rho_l - \rho_v)h_{fg}k_l^3}{\mu_l(T_{sat} - T_s)L}\right]^{1/4}$$`,
-          solution: String.raw`**Assumptions (Nusselt):**
+          solution: String.raw`![Nusselt film on a vertical plate: δ(x), element dx, half-parabola velocity and linear temperature profiles](fig/practice-condensation-P3a-sol.svg)
+
+**Assumptions (Nusselt):**
 1. Plate and vapour at constant $T_s$ and $T_{sat}$; the temperature varies linearly across the film.
 2. Heat crosses the film by conduction only.
 3. The vapour is slow, so there is no shear at the liquid–vapour interface.
@@ -146,7 +152,9 @@ since $\frac{4}{3}\times0.25^{1/4} = 0.943$.
           text: String.raw`Define the film Reynolds number and show that it equals $4\dot m/(p\mu_l)$. Give the flow regimes. Then show that for $\rho_v \ll \rho_l$ the laminar average coefficient can be written
 
 $$h = 1.47\,k_l\,\mathrm{Re}^{-1/3}\left(\frac{g}{\nu_l^2}\right)^{1/3}$$`,
-          solution: String.raw`**Film Reynolds number.** The hydraulic diameter of a film of thickness $\delta$ on a wetted perimeter p is $D_h = 4A_c/p = 4p\delta/p = 4\delta$. With mean velocity $V_l$ and $\dot m = \rho_lV_lA_c$:
+          solution: String.raw`![Film regimes down a vertical plate and the film cross-section used for D_h = 4δ](fig/practice-condensation-P3b-sol.svg)
+
+**Film Reynolds number.** The hydraulic diameter of a film of thickness $\delta$ on a wetted perimeter p is $D_h = 4A_c/p = 4p\delta/p = 4\delta$. With mean velocity $V_l$ and $\dot m = \rho_lV_lA_c$:
 
 $$\mathrm{Re} = \frac{D_h\rho_lV_l}{\mu_l} = \frac{4A_c\rho_lV_l}{p\mu_l} = \frac{4\rho_lV_l\delta}{\mu_l} = \frac{4\dot m}{p\mu_l}$$
 
@@ -180,6 +188,8 @@ Data: at 100°C, $h_{fg} = 2257\,\mathrm{kJ/kg}$, $\rho_v = 0.598\,\mathrm{kg/m^
           solution: String.raw`**Given:** $L = 1.2\,\mathrm{m}$, $b = 1\,\mathrm{m}$, $T_{sat} = 100^\circ\mathrm{C}$, $T_s = 80^\circ\mathrm{C}$, $\Delta T = 20\,\mathrm{K}$.
 
 **Assumptions:** steady; isothermal plate; quiescent saturated vapour; properties as given (IAPWS values).
+
+![Condensate film on the 1.2 m vertical plate](fig/practice-condensation-P4.svg)
 
 1. **Modified latent heat**
 
@@ -227,7 +237,9 @@ $$\dot m = \frac{\dot Q}{h^*_{fg}} = \frac{1.537\times10^5}{2.314\times10^6} = 0
           sub: "Vertical vs horizontal tube", type: "numerical",
           syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Variation on Slides 08, pp. 19, 23–25 (vertical tube as plate; horizontal tube; L = 2.77D)`,
           text: String.raw`Calculate the condensation rate when the tube is (i) vertical and (ii) horizontal, using the laminar Nusselt relations. Which orientation is better and why?`,
-          solution: String.raw`**Assumptions:** laminar film; the vertical tube is treated as a plate of height L (D is much larger than the film thickness); $T_{sat} = 100^\circ\mathrm{C}$, $\Delta T = 10\,\mathrm{K}$.
+          solution: String.raw`![The same tube vertical and horizontal](fig/practice-condensation-P5.svg)
+
+**Assumptions:** laminar film; the vertical tube is treated as a plate of height L (D is much larger than the film thickness); $T_{sat} = 100^\circ\mathrm{C}$, $\Delta T = 10\,\mathrm{K}$.
 
 1. $h^*_{fg} = 2257\times10^3 + 0.68\times4210\times10 = 2286\times10^3\,\mathrm{J/kg}$
 
@@ -261,7 +273,9 @@ The horizontal tube condenses about 2.15 times more. The two are equal only when
           sub: "Inclined surface (g cos θ)", type: "numerical",
           syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 08, p. 22 (inclined plates: replace g by g cos θ)`,
           text: String.raw`If the condensing surface were instead a flat plate 1.5 m long, inclined at 60° from the vertical (condensing on its upper face, laminar film), by what factor would its coefficient differ from the vertical-plate value? Evaluate it.`,
-          solution: String.raw`For laminar film condensation on the upper face of a plate inclined at $\theta$ from the vertical, only the component $g\cos\theta$ drives the film down the plate. Since $h \propto g^{1/4}$:
+          solution: String.raw`![Plate inclined 60° from the vertical: only g cos θ drives the film](fig/practice-condensation-P5b.svg)
+
+For laminar film condensation on the upper face of a plate inclined at $\theta$ from the vertical, only the component $g\cos\theta$ drives the film down the plate. Since $h \propto g^{1/4}$:
 
 $$h_{incl} = h_{vert}(\cos\theta)^{1/4} = 5801\times(\cos60^\circ)^{1/4} = 5801\times0.841 = 4878\,\mathrm{W/m^2K}$$
 
@@ -281,6 +295,8 @@ Data: at 50 kPa, $T_{sat} = 81.3^\circ\mathrm{C}$, $h_{fg} = 2304.7\,\mathrm{kJ/
           solution: String.raw`**Given:** $n = 256$, $N = 16$ tubes per column, $D = 0.025\,\mathrm{m}$, $L = 2\,\mathrm{m}$, $\Delta T = 81.3 - 65 = 16.3\,\mathrm{K}$.
 
 **Assumptions:** laminar film; condensate drains straight down each column; uniform wall temperature; steam velocity low.
+
+![16 × 16 tube bank: N = 16 tubes per column](fig/practice-condensation-P6.svg)
 
 1. $h^*_{fg} = 2304.7\times10^3 + 0.68\times4192\times16.3 = 2351\times10^3\,\mathrm{J/kg}$
 
@@ -363,6 +379,8 @@ Data: at 100°C, $h_{fg} = 2257\,\mathrm{kJ/kg}$, $\rho_v = 0.598\,\mathrm{kg/m^
 
 **Assumptions:** steady; quiescent saturated vapour; isothermal plate.
 
+![Condensate film on the 3 m vertical plate](fig/practice-condensation-P8.svg)
+
 1. $h^*_{fg} = 2257\times10^3 + 0.68\times4197\times40 = 2371\times10^3\,\mathrm{J/kg}$
 
 2. **Useful constants**
@@ -412,6 +430,8 @@ Data: at 30 kPa, $T_{sat} = 69.1^\circ\mathrm{C}$, $h_{fg} = 2335.3\,\mathrm{kJ/
 **Find:** L.
 
 **Assumptions:** laminar film; condensate falls down each column of 12 tubes; uniform wall temperature; h does not depend on L for a horizontal tube.
+
+![12 × 12 tube bank: N = 12 tubes per column, length to be found](fig/practice-condensation-P9.svg)
 
 1. **Modified latent heat**
 

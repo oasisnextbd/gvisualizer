@@ -15,6 +15,8 @@ Tube data (Kern Table 10, 1 in 13 BWG): ID 0.810 in, flow area per tube 0.515 in
           text: String.raw`Make the heat balance, find the true temperature difference $\Delta t = F_T\times\mathrm{LMTD}$ and the caloric temperatures, and decide which fluid goes in the tubes. (Kerosene $c = 0.605$, crude $c = 0.49$ Btu/lb·°F; $K_c = 0.20$ with the crude controlling.)`,
           solution: String.raw`**Given:** kerosene (hot) $W = 43{,}800$ lb/h, $T_1 = 390$, $T_2 = 200$°F; crude (cold) $w = 149{,}000$ lb/h, $t_1 = 100$, $t_2 = 170$°F.
 
+![Kern Ex. 7.3: kerosene in the shell, crude in four tube passes](fig/practice-shell-tube-P1.svg)
+
 ### 1. Heat balance
 $$Q = WC(T_1 - T_2) = 43{,}800(0.605)(190) = 5.03\times10^6\ \mathrm{Btu/h}$$
 $$Q = wc(t_2 - t_1) = 149{,}000(0.49)(70) = 5.11\times10^6\ \mathrm{Btu/h}$$
@@ -149,7 +151,9 @@ Properties at the caloric temperatures (slides): 76°API gasoline $\mu = 0.2$ cP
           syllabus: "in", repeats: [], origin: "slides",
           ref: String.raw`Slides Heat Exchanger Part 2, pp. 2–17 (design example, iterations 1 and 2; Kern Tables 8, 9)`,
           text: String.raw`Find the caloric temperatures ($K_c = 1$), the heat duty and gasoline flow, the LMTD and $F_T$ for a 1-2 exchanger, and the area for an assumed $U = 45$ Btu/h·ft²·°F. Choose the tube count and shell for 16 ft tubes with 2 passes and check the tube-side Reynolds number; then repeat with 24 ft tubes and 6 passes.`,
-          solution: String.raw`### 1. Caloric temperatures
+          solution: String.raw`![Kerosene in the tubes, gasoline in the shell](fig/practice-shell-tube-P2.svg)
+
+### 1. Caloric temperatures
 $$r = \frac{\Delta t_c}{\Delta t_h} = \frac{T_2 - t_1}{T_1 - t_2} = \frac{120 - 75}{160 - 120} = 1.125$$
 (The slide prints $(120 - 70)/40 = 1.25$, a typo; either gives about the same $F_c$.) Gasoline 76°API gives $K_c = 1$, and Kern Fig. 17 gives $F_c = 0.455$.
 $$T_c = 120 + 0.455(160 - 120) = 138.2\,°\mathrm{F},\qquad t_c = 75 + 0.455(120 - 75) = 95.5\,°\mathrm{F}$$
@@ -252,7 +256,9 @@ $$\%\ \text{overdesign} = \frac{A - A_{reqd}}{A_{reqd}} = \frac{2312 - 2105}{210
           syllabus: "in", repeats: [], origin: "slides",
           ref: String.raw`Variation of slides HX Part 1, file 3 pp. 5–11 (existing-exchanger steps 4–5, 9)`,
           text: String.raw`An exchanger has a 25 in ID shell with 238 tubes, 1 in OD 14 BWG (ID 0.834 in, flow area 0.546 in², 0.2618 ft²/ft), 16 ft long on a 1¼ in square pitch, arranged for 4 tube passes; baffles are 10 in apart. 120,000 lb/h of a liquid ($\mu = 1.0$ cP, $s = 0.85$) flows in the tubes and 80,000 lb/h of another ($\mu = 0.8$ cP) in the shell. Find $a_t$, $G_t$, $Re_t$ and the tube velocity; $a_s$, $D_e$, $G_s$, $Re_s$; the number of shell crossings and the heat-transfer area. Would 2 tube passes (252 tubes in the same shell) be acceptable?`,
-          solution: String.raw`### Tube side
+          solution: String.raw`![Baffle spacing, shell ID and pitch clearance C′ that set the shell flow area](fig/practice-shell-tube-P3.svg)
+
+### Tube side
 1. $$a_t = \frac{N_ta'_t}{144n} = \frac{238(0.546)}{144(4)} = 0.2256\ \mathrm{ft^2}$$
 2. $$G_t = \frac{w}{a_t} = \frac{120{,}000}{0.2256} = 531{,}900\ \mathrm{lb/h\,ft^2}$$
 3. $D = 0.834/12 = 0.0695$ ft; $\mu = 1.0(2.42) = 2.42$ lb/ft·h.
@@ -310,7 +316,9 @@ $F_T > 0.75$: a 1-2 exchanger is acceptable.`,
           syllabus: "in", repeats: [], origin: "slides",
           ref: String.raw`Slides HX Part 1, file 2 pp. 50–52 (Holman Figs. 10-8 and 10-9); file 3 p. 6 (F_T > 0.75)`,
           text: String.raw`A hot stream is cooled from 300 to 150°F while a cold stream is heated from 100 to 200°F. Can a 1-2 exchanger be used? If not, find $F_T$ for a 2-4 exchanger and the true temperature difference.`,
-          solution: String.raw`1. LMTD (counterflow): ends $300 - 200 = 100$°F and $150 - 100 = 50$°F.
+          solution: String.raw`![Two 1-2 shells in series (2-4 arrangement)](fig/practice-shell-tube-P4b.svg)
+
+1. LMTD (counterflow): ends $300 - 200 = 100$°F and $150 - 100 = 50$°F.
 $$\mathrm{LMTD} = \frac{100 - 50}{\ln 2} = 72.1\,°\mathrm{F}$$
 
 2. $$R = \frac{300 - 150}{200 - 100} = 1.5,\qquad S = \frac{200 - 100}{300 - 100} = 0.50$$
@@ -404,7 +412,9 @@ Use the arithmetic mean temperatures as caloric temperatures.`,
           syllabus: "in", repeats: [], origin: "potential",
           ref: String.raw`Asked in finals like 2015-16 Q1(b), 2018-19 Q1(a)`,
           text: String.raw`Which fluid should flow through the tubes? Give reasons.`,
-          solution: String.raw`**Cooling water in the tubes, gas oil in the shell.**
+          solution: String.raw`![1-4 exchanger: water in the tubes, gas oil in the shell](fig/practice-shell-tube-P6.svg)
+
+**Cooling water in the tubes, gas oil in the shell.**
 - Water is the fouling, scale-forming stream; tube insides are easy to clean mechanically, the shell side is not.
 - Water is the corrosive stream: only the tubes (and channels) need corrosion-resistant material, not the shell.
 - The more viscous oil gains more from the shell side, where the baffled cross-flow gives turbulence at lower Re (Kern Fig. 28).
@@ -422,6 +432,8 @@ $$w = \frac{Q}{c(t_2 - t_1)} = \frac{2.496\times10^6}{1.0(30)} = 83{,}200\ \math
 
 ### 2. Profile (sketch)
 Temperature vs. length. The oil line falls from 220°F at the shell inlet to 140°F at the outlet. The water rises from 85 to 115°F in four passes, drawn as a zig-zag of four rising segments below the oil line. Hot-end difference $220 - 115 = 105$°F, cold-end difference $140 - 85 = 55$°F; no temperature cross ($T_2 = 140 > t_2 = 115$).
+
+![Temperature profile: gas oil in one shell pass, water zig-zagging through four tube passes](fig/practice-shell-tube-P6b-sol.svg)
 
 ### 3. LMTD and $F_T$
 $$\mathrm{LMTD} = \frac{105 - 55}{\ln(105/55)} = 77.3\,°\mathrm{F}$$
@@ -540,7 +552,9 @@ $R_d = 0.0038 \ge 0.003$, $\Delta P_T = 2.6$ psi, $\Delta P_s = 1.2$ psi: **the 
           syllabus: "in", repeats: [], origin: "potential",
           ref: String.raw`Style of Kern Ex. 7.3; asked in finals like 2020-21 Q1(a)`,
           text: String.raw`Find the crude outlet temperature and the true temperature difference. Which stream goes in the tubes?`,
-          solution: String.raw`1. Heat balance:
+          solution: String.raw`![1-6 exchanger: crude in the tubes, gas oil in the shell](fig/practice-shell-tube-P7.svg)
+
+1. Heat balance:
 $$Q = WC(T_1 - T_2) = 70{,}000(0.56)(100) = 3.92\times10^6\ \mathrm{Btu/h}$$
 $$t_2 = t_1 + \frac{Q}{wc} = 100 + \frac{3.92\times10^6}{105{,}000(0.48)} = 177.8\,°\mathrm{F}$$
 
@@ -653,7 +667,9 @@ Tube counts, ¾ in OD on 1 in square pitch (Kern Table 9):
           syllabus: "in", repeats: [], origin: "potential",
           ref: String.raw`Style of the Heat Exchanger Part 2 design example; asked in finals like 2021-22 Q1`,
           text: String.raw`Find the toluene flow, LMTD and $F_T$ for a 1-2 exchanger, the area for an assumed $U_D$ from Kern Table 8, and a first tube count and shell (2 passes). Check the tube-side Reynolds number.`,
-          solution: String.raw`### 1. Heat balance
+          solution: String.raw`![Naphtha in the shell, toluene in the tubes](fig/practice-shell-tube-P8.svg)
+
+### 1. Heat balance
 $$Q = WC(T_1 - T_2) = 100{,}000(0.53)(70) = 3.71\times10^6\ \mathrm{Btu/h}$$
 $$w = \frac{3.71\times10^6}{0.42(40)} = 220{,}800\ \mathrm{lb/h\ toluene}$$
 
@@ -751,7 +767,9 @@ $$\Delta P_s = \frac{0.00185(301{,}200)^2(1.771)(21.3)}{5.22\times10^{10}(0.0792
           syllabus: "in", repeats: [], origin: "potential",
           ref: String.raw`Kern design step #11 (closer baffles raise h_o, subject to ΔP); style of Kern ch. 7 problems`,
           text: String.raw`Estimate $h_o$, $\Delta P_s$ and $U_C$ if the baffle spacing is halved to 6 in.`,
-          solution: String.raw`**Scaling:** $a_s \propto B$, so halving $B$ doubles $G_s$ and $Re_s$. Properties unchanged.
+          solution: String.raw`![Baffle spacing 12 in versus 6 in](fig/practice-shell-tube-P9.svg)
+
+**Scaling:** $a_s \propto B$, so halving $B$ doubles $G_s$ and $Re_s$. Properties unchanged.
 
 1. Film coefficient: $h_o \propto j_H \propto Re_s^{0.55}$:
 $$h_o' = 160(2)^{0.55} = 234\ \mathrm{Btu/h\,ft^2\,°F}$$
@@ -825,7 +843,9 @@ $$U_C = \frac{187(210)}{187 + 210} = 99.0\ \mathrm{Btu/h\,ft^2\,°F}\ (+9\%)$$
           syllabus: "in", repeats: [], origin: "potential",
           ref: String.raw`Slides HX Part 1, file 1 pp. 21–30; asked in finals like 2012-13 Q8(b)`,
           text: String.raw`Compare square and triangular tube pitch. Why are segmental baffles used, and what limits the baffle spacing?`,
-          solution: String.raw`| | Square pitch | Triangular pitch |
+          solution: String.raw`![Square and triangular tube pitch](fig/practice-heat-exchangers-P5a-sol.svg)
+
+| | Square pitch | Triangular pitch |
 |---|---|---|
 | Cleaning | Easy: straight lanes between rows | Hard: outside only chemically |
 | Tubes per shell | Fewer | More (≈ 15% more) |
@@ -843,7 +863,9 @@ $$U_C = \frac{187(210)}{187 + 210} = 99.0\ \mathrm{Btu/h\,ft^2\,°F}\ (+9\%)$$
           syllabus: "in", repeats: [], origin: "potential",
           ref: String.raw`Slides HX Part 1, file 1 pp. 16–19; asked in finals like 2011-12 Q3(b)`,
           text: String.raw`Compare fixed-tubesheet, U-tube and floating-head exchangers. Which would you choose for (i) cooling water against a clean oil with a small temperature difference, (ii) a high-pressure clean gas with a large temperature difference, (iii) a dirty crude at 400°F against kerosene?`,
-          solution: String.raw`| Type | Thermal expansion | Cleaning | Cost / notes |
+          solution: String.raw`![Fixed tubesheet, U-tube and floating-head constructions](fig/practice-shell-tube-P10c-sol.svg)
+
+| Type | Thermal expansion | Cleaning | Cost / notes |
 |---|---|---|---|
 | Fixed tubesheet (BEM) | Not absorbed: needs an expansion bellows if the shell–tube ΔT is large | Tube inside mechanical; shell side chemical only | Cheapest, most used |
 | U-tube (BEU) | Absorbed: each tube expands freely | Tube inside very difficult (bends); bundle removable | Same price, cheaper at high pressure (one tubesheet); full counterflow only with an F shell |
@@ -860,7 +882,9 @@ Choices:
           syllabus: "in", repeats: [], origin: "potential",
           ref: String.raw`Slides HX Part 1, file 3 pp. 6, 13, 17; Part 2 pp. 32–33`,
           text: String.raw`Why should $F_T$ be greater than 0.75? What is a temperature cross? Distinguish over-surface from overdesign.`,
-          solution: String.raw`- **$F_T > 0.75$:** on the steep part of the $F_T$ chart a small error in the terminal temperatures (or a small change in operation) changes $F_T$ a lot, so the design is unreliable; a low $F_T$ also means much of the surface is wasted. Below 0.75, add shell passes (2-4, 3-6 or shells in series).
+          solution: String.raw`![Temperature cross in a 1-2 exchanger](fig/practice-shell-tube-P10d-sol.svg)
+
+- **$F_T > 0.75$:** on the steep part of the $F_T$ chart a small error in the terminal temperatures (or a small change in operation) changes $F_T$ a lot, so the design is unreliable; a low $F_T$ also means much of the surface is wasted. Below 0.75, add shell passes (2-4, 3-6 or shells in series).
 - **Temperature cross:** the cold outlet exceeds the hot outlet, $t_2 > T_2$. In a 1-2 exchanger part of the surface then transfers heat "backwards", and beyond a limit (the vertical end of the $R$ curve) the duty is impossible however large the exchanger.
 - **Over-surface** $= (U_C - U_D)/U_C$: the fraction of extra area provided to allow for fouling ($R_d$).
 - **Overdesign** $= (A - A_{reqd})/A_{reqd}$: the extra area installed beyond what the calculated design coefficient needs, because standard tube counts and shells come in steps; ≤ 10% is acceptable.`,

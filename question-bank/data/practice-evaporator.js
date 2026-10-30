@@ -16,6 +16,8 @@ QB.paper({ year: "Practice", set: "Evaporators", date: "", marks: 0, practice: t
 
 **Assumptions:** feed enters near the shell saturation temperature (sensible heat neglected, as in Kern); steam condensate leaves saturated; no heat loss.
 
+![Power-plant evaporator: steam in the tubes, vapour to the condenser, blowdown](fig/practice-evap-P1.svg)
+
 1. Steam-table data: shell at 19.7 psia → $t_{sat} = 227^\circ$F (slide uses 226°F), $\lambda = 961$ Btu/lb; steam at 300°F (67.0 psia) → $\lambda_s = 910$ Btu/lb.
 
 2. Heat load (vaporisation):
@@ -66,6 +68,8 @@ $$\frac{Q}{A} = U_D\,\Delta t = 605 \times 74 = 44{,}800\ \mathrm{Btu/h\,ft^2}$$
 
 **Assumptions:** feed near saturation; saturated condensate; base $U = 700$.
 
+![Power-plant evaporator feeding a deaerating heater](fig/practice-evap-P2.svg)
+
 1. Steam tables: 35.4 psia → $t_{sat} = 260^\circ$F, $\lambda = 938.7$ Btu/lb. Steam at 310°F (77.7 psia) → $\lambda_s = 902.7$ Btu/lb.
 
 2. Heat load:
@@ -109,7 +113,9 @@ $$w_B = 0.10\times27{,}800 = 2{,}780\ \mathrm{lb/h}$$`,
           sub: "Parallel-feed multiple effect: distillate per lb steam", type: "numerical",
           syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 10 p. 9 (Kern Fig. 14.8)`,
           text: String.raw`Show how the figures of 1.9, 2.60 and 3.25 lb of distilled water per lb of steam arise, and explain why each succeeding effect makes less vapor than the steam it receives.`,
-          solution: String.raw`Distilled water = steam condensate (1.0 lb) + all vapor condensed (in the next effect's tubes or in the condenser).
+          solution: String.raw`![Parallel-feed triple effect with the flows per lb of steam (Fig. 14.8c)](fig/practice-evap-P3.svg)
+
+Distilled water = steam condensate (1.0 lb) + all vapor condensed (in the next effect's tubes or in the condenser).
 
 | Arrangement | Feed, lb | Vapor per effect, lb | Blowdown, lb | Distilled water, lb |
 |---|---|---|---|---|
@@ -163,6 +169,8 @@ $$10{,}530 - 6{,}150 = 4{,}380\ \mathrm{lb/h}\ (\approx 42\%)$$
 **Find:** $W_s$, $A_1, A_2, A_3$, condenser water, economy.
 
 **Assumptions:** negligible BPR; $c = 1$; condensate saturated; no losses; start with equal pressure drop per effect.
+
+![Triple-effect forward-feed evaporator with the given data](fig/practice-evap-P4.svg)
 
 1. Material balance:
 $$\text{solids} = 0.10\times50{,}000 = 5000;\quad \text{product} = \frac{5000}{0.50} = 10{,}000;\quad w_{1-3} = 50{,}000 - 10{,}000 = 40{,}000\ \mathrm{lb/h}$$
@@ -219,6 +227,8 @@ $$\frac{40{,}000}{19{,}050} = 2.10\ \mathrm{lb\ evaporated/lb\ steam}$$
 **Find:** $w_1, w_2, w_3, W_s$, $A_1, A_2, A_3$.
 
 **Assumptions:** as stated; $c = 1$.
+
+![Triple-effect forward-feed evaporator](fig/practice-evap-P5.svg)
 
 1. Material balance: solids $= 0.08\times60{,}000 = 4800$; product $= 4800/0.40 = 12{,}000$; evaporation $w_{1-3} = 48{,}000$ lb/h.
 
@@ -295,6 +305,8 @@ Data (from Kern's charts, as used on the slides): liquid enthalpy at 108°F = 16
 **Find:** $W$, $t_{in}$, $q_p$, $q_v$, steam, $\Delta t_w$.
 
 **Assumptions:** 80% vaporisation; recycle liquid at 235°F; steam condenses isothermally.
+
+![Vaporizer with drum and recirculation to the pump suction](fig/practice-evap-P6.svg)
 
 1. Total liquid to the shell (limit vaporisation to 80%):
 $$W = \frac{19{,}750}{0.80} = 24{,}700\ \mathrm{lb/h};\quad \text{recycle} = 24{,}700 - 19{,}750 = 4950\ \mathrm{lb/h}\ \text{at } 235^\circ\mathrm{F}$$
@@ -422,6 +434,8 @@ $$\Delta P_v = \frac{0.00142\times233{,}000^2\times1.27\times23}{5.22\times10^{1
 
 **Assumptions:** feed near saturation; condensate saturated; base 700.
 
+![Power-plant evaporator for make-up water](fig/practice-evap-P8.svg)
+
 1. Steam tables: 11.5 psia → $t_{sat} = 200^\circ$F, $\lambda = 977.7$ Btu/lb. Steam 260°F (35.4 psia) → $\lambda_s = 938.6$ Btu/lb.
 
 2. Heat load:
@@ -468,6 +482,8 @@ Both are less than 9% of 400,000 Btu/h·ft²: no vapor binding.
 
 **Assumptions:** no BPR, $c = 1$, saturated condensate, no losses.
 
+![Single-effect evaporator with barometric condenser](fig/practice-evap-P9.svg)
+
 1. Material balance:
 $$\text{solids} = 0.08\times20{,}000 = 1600;\quad \text{product} = \frac{1600}{0.30} = 5333\ \mathrm{lb/h};\quad E = 20{,}000 - 5333 = 14{,}667\ \mathrm{lb/h}$$
 
@@ -502,6 +518,8 @@ $$\frac{E\lambda_1}{t_{out} - t_{in}} = \frac{1.476\times10^7}{145 - 80} = 227{,
 **Find:** $w_1, w_2, W_s, A_1, A_2$, $x_1$, economy, condenser water.
 
 **Assumptions:** $c = 1$; no BPR; saturated condensate.
+
+![Double-effect forward-feed evaporator](fig/practice-evap-P10.svg)
 
 1. Material balance: solids $= 3600$ lb/h; product $= 3600/0.40 = 9000$; $E = w_1 + w_2 = 21{,}000$ lb/h.
 
@@ -552,6 +570,8 @@ $$\frac{w_2\lambda_2}{120 - 85} = \frac{11{,}180\times1022.1}{35} = 326{,}500\ \
 **Find:** $w_1, w_2, w_3, W_s, A_i$, intermediate concentrations, economy, condenser water.
 
 **Assumptions:** $c = 1$; no BPR; saturated condensate; pumps add negligible heat.
+
+![Triple-effect backward-feed evaporator: feed enters effect 3, liquor pumped 3 → 2 → 1](fig/practice-evap-P11.svg)
 
 1. Material balance: solids 4000 lb/h; product $4000/0.45 = 8889$ lb/h; $E = w_1 + w_2 + w_3 = 31{,}111$ lb/h.
 
@@ -606,6 +626,8 @@ $$\frac{w_3\lambda_3}{115 - 80} = \frac{8670\times1021.7}{35} = 253{,}000\ \math
 
 **Assumptions:** same pressures (temperatures) for both arrangements; $c = 1$.
 
+![The double effect in forward and backward feed](fig/practice-evap-P12.svg)
+
 1. Material balance: solids 2500 lb/h; product 5000 lb/h; $E = w_1 + w_2 = 20{,}000$ lb/h.
 
 2. Steam tables: 30 psia → $T_s = 250.3^\circ$F, $\lambda_s = 945.2$; 16 psia → $t_1 = 216.3^\circ$F, $\lambda_1 = 967.4$; 2.0 psia → $t_2 = 126.0^\circ$F, $\lambda_2 = 1021.7$ Btu/lb. $\Delta t_1 = 34.0$, $\Delta t_2 = 90.3^\circ$F.
@@ -640,7 +662,9 @@ Backward feed saves $13{,}670 - 12{,}760 = 910$ lb/h of steam (6.6%) because the
           sub: "Forward vs backward feed: advantages and disadvantages", type: "theory",
           syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Slides 10 p. 13–14 (Fig. 14.21 a, b)`,
           text: String.raw`State the advantages and disadvantages of forward and backward feed, and say when each is preferred.`,
-          solution: String.raw`| | Forward feed | Backward feed |
+          solution: String.raw`![Forward feed versus backward feed (triple effect)](fig/common-evaporator-feeds.svg)
+
+| | Forward feed | Backward feed |
 |---|---|---|
 | Liquor flow | effect 1 → last, same direction as vapor; flows by pressure difference | last → effect 1, against the vapor; needs a **pump** between every pair of effects |
 | Feed heating | feed must be heated to $t_1$ by prime steam (lower economy with cold feed) | cold feed heated by low-pressure vapor in the last effect (higher economy with cold feed) |
@@ -680,6 +704,8 @@ Backward feed saves $13{,}670 - 12{,}760 = 910$ lb/h of steam (6.6%) because the
 **Find:** $W$, $t_{in}$, $q_p$, $q_v$, $W_{steam}$, $\Delta t_w$.
 
 **Assumptions:** constant liquid $c$ for mixing; steam condenses isothermally; condensate saturated.
+
+![n-Butane vaporizer with drum and recirculation](fig/practice-evap-P13.svg)
 
 1. Circulation: $W = 15{,}000/0.80 = 18{,}750$ lb/h; recycle $= 3750$ lb/h at 230°F.
 
@@ -761,7 +787,9 @@ $$\Delta P_v = \frac{0.00154\times169{,}800^2\times1.104\times19}{5.22\times10^{
           sub: "Design flux below maximum; vapor binding", type: "theory",
           syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Slides 10 p. 2, 3, 8 (boiling curve, blanketing, flux at less than maximum)`,
           text: String.raw`What is vapor binding (blanketing)? Why are commercial evaporators designed for a flux well below the maximum, and why may the operating $\Delta t$ exceed the critical value of about 45°F?`,
-          solution: String.raw`- **Boiling curve (Fig. 14.2):** for water boiling from a pool, the flux $Q/A$ rises steeply with the wall-to-liquid difference $(\Delta t)_w$ in nucleate boiling, reaches a maximum $(Q/A)_{max} \approx 400{,}000$ Btu/h·ft² at the **critical** $(\Delta t)_w \approx 45$–50°F (1 atm), and then falls; the coefficient $h_v$ also peaks there.
+          solution: String.raw`![Pool boiling curve: the maximum flux at C is where vapour binding starts](fig/common-boiling-curve.svg)
+
+- **Boiling curve (Fig. 14.2):** for water boiling from a pool, the flux $Q/A$ rises steeply with the wall-to-liquid difference $(\Delta t)_w$ in nucleate boiling, reaches a maximum $(Q/A)_{max} \approx 400{,}000$ Btu/h·ft² at the **critical** $(\Delta t)_w \approx 45$–50°F (1 atm), and then falls; the coefficient $h_v$ also peaks there.
 - **Vapor binding / blanketing:** beyond the critical point bubbles form faster than they can leave; they coalesce into a vapor film that covers the surface. The vapor's low conductivity insulates the surface, so $h$ and the flux drop sharply (and the wall temperature can rise dangerously).
 - **Flux is the real index:** binding depends on how fast vapor is generated per unit area, i.e. on the flux, not on the overall $\Delta t$.
 - **Why Δt may exceed 45°F:** the overall $\Delta t$ between steam and boiling liquid includes the condensing-film, wall and scale resistances. At a design flux far below the maximum (e.g. $700\times0.85\times100 = 60{,}000$ Btu/h·ft² at $\Delta t = 100^\circ$F), the actual boiling-film $(\Delta t)_w$ is small, so there is no binding.

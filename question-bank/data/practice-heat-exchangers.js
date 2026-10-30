@@ -13,7 +13,9 @@ QB.paper({ year: "Practice", set: "Heat exchangers: LMTD, double pipe", date: ""
           text: String.raw`For a double-pipe heat exchanger in parallel flow, show that the heat transfer rate is $q = UA\,\Delta T_m$, where $\Delta T_m$ is the log mean temperature difference
 $$\Delta T_m=\frac{(T_{h2}-T_{c2})-(T_{h1}-T_{c1})}{\ln[(T_{h2}-T_{c2})/(T_{h1}-T_{c1})]}$$
 Show also that the same expression holds for counterflow if the temperature differences are taken at the two ends of the exchanger.`,
-          solution: String.raw`**Set-up.** Hot fluid (mass flow $\dot m_h$, specific heat $c_h$) and cold fluid ($\dot m_c$, $c_c$) flow in the same direction. Station 1 is the inlet end and station 2 the outlet end. Let $\Delta T = T_h - T_c$ be the local temperature difference at a position where the heat-transfer area from the inlet is $A$.
+          solution: String.raw`![Parallel-flow double pipe with the element dA, and the temperature profiles along the area](fig/practice-heat-exchangers-P1a-sol.svg)
+
+**Set-up.** Hot fluid (mass flow $\dot m_h$, specific heat $c_h$) and cold fluid ($\dot m_c$, $c_c$) flow in the same direction. Station 1 is the inlet end and station 2 the outlet end. Let $\Delta T = T_h - T_c$ be the local temperature difference at a position where the heat-transfer area from the inlet is $A$.
 
 1. Energy balance on an element of area $dA$. The hot fluid gives up $dq$ and the cold fluid gains it:
 $$dq = -\dot m_h c_h\,dT_h = \dot m_c c_c\,dT_c$$
@@ -78,6 +80,8 @@ Also implied: steady state, and each fluid has a single temperature over its cro
           text: String.raw`A hot fluid is cooled from 300°F to 200°F and a cold fluid is heated from 100°F to 150°F. Find the LMTD for counterflow and for parallel flow. Which arrangement needs less area for the same $U$ and duty?`,
           solution: String.raw`**Given:** $T_1 = 300$, $T_2 = 200$°F; $t_1 = 100$, $t_2 = 150$°F.
 
+![Profiles for counterflow and parallel flow with the terminal differences](fig/practice-heat-exchangers-P2a-sol.svg)
+
 1. **Counterflow** (hot inlet meets cold outlet):
 $\Delta t_2 = T_1 - t_2 = 300 - 150 = 150$°F, $\Delta t_1 = T_2 - t_1 = 200 - 100 = 100$°F.
 $$\mathrm{LMTD}_{cf} = \frac{150 - 100}{\ln(150/100)} = \frac{50}{0.4055} = 123.3\,°\mathrm{F}$$
@@ -97,7 +101,9 @@ Counterflow gives the larger LMTD, so it needs about 12% less area (parallel flo
           syllabus: "in", repeats: [], origin: "slides",
           ref: String.raw`Slides HX Part 1, file 2 pp. 6–8 (150→200°F cold variant)`,
           text: String.raw`The hot fluid is again cooled from 300°F to 200°F, but the cold fluid must now be heated from 150°F to 200°F. Find the LMTD for both arrangements and comment.`,
-          solution: String.raw`1. **Counterflow:** $\Delta t_2 = 300 - 200 = 100$°F, $\Delta t_1 = 200 - 150 = 50$°F.
+          solution: String.raw`![With a cold outlet of 200°F, parallel flow needs the outlets to meet (infinite area)](fig/practice-heat-exchangers-P2b-sol.svg)
+
+1. **Counterflow:** $\Delta t_2 = 300 - 200 = 100$°F, $\Delta t_1 = 200 - 150 = 50$°F.
 $$\mathrm{LMTD}_{cf} = \frac{100 - 50}{\ln 2} = 72.1\,°\mathrm{F}$$
 
 2. **Parallel flow:** $\Delta t_2 = 300 - 150 = 150$°F, $\Delta t_1 = 200 - 200 = 0$°F.
@@ -113,7 +119,9 @@ In counterflow the cold outlet faces the hot *inlet*, so $t_2$ can even exceed $
           syllabus: "in", repeats: ["2018-19-Q4a"], origin: "slides",
           ref: String.raw`Slides HX Part 1, file 2 pp. 9–12 (cold fluid 100→275°F, steam at 300°F)`,
           text: String.raw`A cold fluid is heated from 100°F to 275°F by saturated steam condensing at 300°F. Should the exchanger be arranged for parallel flow or counterflow?`,
-          solution: String.raw`The steam condenses at constant temperature, $T_1 = T_2 = 300$°F.
+          solution: String.raw`![Isothermal condensing steam: both arrangements give the same LMTD](fig/practice-heat-exchangers-P2c-sol.svg)
+
+The steam condenses at constant temperature, $T_1 = T_2 = 300$°F.
 
 1. **Counterflow:** $\Delta t_2 = 300 - 100 = 200$°F, $\Delta t_1 = 300 - 275 = 25$°F.
 2. **Parallel flow:** $\Delta t_2 = 300 - 100 = 200$°F, $\Delta t_1 = 300 - 275 = 25$°F.
@@ -140,6 +148,8 @@ for either arrangement.
 **Find:** area $A$.
 
 **Assumptions:** $c_{p,water} = 4.18$ kJ/kg·°C (the value implied on the slide); constant $U$; no heat loss.
+
+![1-2 exchanger with water in the shell and oil in the tubes](fig/practice-heat-exchangers-P3.svg)
 
 1. Heat duty from the water side:
 $$q = \dot m c_p\,\Delta t = 1.133(4180)(75 - 35) = 1.895\times10^5\ \mathrm{W}$$
@@ -171,7 +181,9 @@ $$A = \frac{q}{U F\,\Delta T_m} = \frac{1.895\times10^5}{320(0.81)(37.44)} = 19.
           syllabus: "in", repeats: [], origin: "slides",
           ref: String.raw`Slides HX Part 1, file 2 pp. 13–17 (resistances, U_i, U_o, h_io, fouling)`,
           text: String.raw`For the inner pipe of a double-pipe exchanger (inside radius $r_i$, outside radius $r_o$, wall conductivity $k$, length $L$), write the thermal resistances in series and obtain $U_i$ and $U_o$. Explain why Kern uses $h_{io} = h_i\,(ID/OD)$ and $U = h_{io}h_o/(h_{io}+h_o)$, and how fouling is added.`,
-          solution: String.raw`1. Resistances in series from the inner fluid A to the outer fluid B:
+          solution: String.raw`![Inner pipe cross-section and the series resistance circuit](fig/practice-heat-exchangers-P4a-sol.svg)
+
+1. Resistances in series from the inner fluid A to the outer fluid B:
 $$q = \frac{T_A - T_B}{\dfrac{1}{h_iA_i} + \dfrac{\ln(r_o/r_i)}{2\pi kL} + \dfrac{1}{h_oA_o}}$$
 with $A_i = 2\pi r_iL$ and $A_o = 2\pi r_oL$.
 
@@ -229,7 +241,9 @@ so about 19% more area must be installed ($96.5/80.9 = 1.19$).`,
           syllabus: "in", repeats: [], origin: "slides",
           ref: String.raw`Slides HX Part 1, file 1 pp. 23–27; Kern Fig. 28 inset`,
           text: String.raw`Derive the shell-side equivalent diameter $D_e = 4\times$(flow area)/(wetted perimeter) for square and triangular tube layouts, and evaluate it for 1 in OD tubes on a 1¼ in pitch (both layouts) and for 1¼ in OD tubes on a $1\tfrac{9}{16}$ in triangular pitch. Compare with the values in the inset of Kern Fig. 28.`,
-          solution: String.raw`**Square pitch.** The unit cell is a square of side $P_T$ with one tube (four quarter-tubes) in it. Free area $= P_T^2 - \pi d_o^2/4$; wetted perimeter $= \pi d_o$.
+          solution: String.raw`![Unit cells for square and triangular pitch](fig/practice-heat-exchangers-P5a-sol.svg)
+
+**Square pitch.** The unit cell is a square of side $P_T$ with one tube (four quarter-tubes) in it. Free area $= P_T^2 - \pi d_o^2/4$; wetted perimeter $= \pi d_o$.
 $$D_e = \frac{4\left(P_T^2 - \pi d_o^2/4\right)}{\pi d_o}$$
 
 **Triangular pitch.** The unit cell is an equilateral triangle of side $P_T$ (height $0.86P_T$) containing half a tube (three 60° sectors). Free area $= \tfrac12P_T(0.86P_T) - \tfrac12\pi d_o^2/4$; wetted perimeter $= \tfrac12\pi d_o$.
@@ -254,6 +268,8 @@ The small differences for triangular pitch come from using 0.86 for $\sin 60° =
           ref: String.raw`Slides HX Part 1, file 2 pp. 22, 25, 32 (Kern Eqs. 6.3, 6.4 and Table 6.2)`,
           text: String.raw`A double-pipe exchanger is made of 3 in × 2 in IPS schedule 40 pipe (3 in pipe ID = 3.068 in; 2 in pipe OD = 2.38 in, ID = 2.067 in). Find the flow areas of the annulus and the inner pipe, the annulus equivalent diameter for heat transfer $D_e$ and for pressure drop $D'_e$, and explain why they differ.`,
           solution: String.raw`**Given:** $D_2 = 3.068$ in (outer pipe ID), $D_1 = 2.38$ in (inner pipe OD), inner pipe ID $D = 2.067$ in.
+
+![Annulus of the 3 in × 2 in IPS double pipe](fig/practice-heat-exchangers-P5b.svg)
 
 1. Flow areas:
 $$a_a = \frac{\pi(D_2^2 - D_1^2)}{4} = \frac{\pi(9.413 - 5.664)}{4} = 2.94\ \mathrm{in^2},\qquad a_p = \frac{\pi D^2}{4} = \frac{\pi(2.067)^2}{4} = 3.36\ \mathrm{in^2}$$
@@ -289,7 +305,9 @@ Pipe data (Kern Table 11): 1¼ in IPS OD 1.66 in, ID 1.38 in, 0.435 ft² outside
           syllabus: "in", repeats: ["2018-19-Q2"], origin: "slides",
           ref: String.raw`Slides HX Part 1, file 2 pp. 26–44 (Kern Ex. 6.1, thermal design)`,
           text: String.raw`How many hairpins are required? What dirt factor does the selected exchanger actually provide?`,
-          solution: String.raw`**Find:** number of 20-ft hairpins, actual $R_d$.
+          solution: String.raw`![Benzene in the inner pipe, toluene in the annulus of a 20 ft hairpin](fig/practice-heat-exchangers-P6.svg)
+
+**Find:** number of 20-ft hairpins, actual $R_d$.
 
 **Assumptions:** counterflow; $\phi = (\mu/\mu_w)^{0.14} = 1$ (both liquids below 1 cP); properties at the arithmetic means, since neither fluid is viscous at the cold terminal and the ranges are moderate.
 
@@ -387,6 +405,8 @@ below 10 psi ✓ (no return loss is added for the inner pipe, as in the slides).
 
 **Assumptions:** counterflow; $\phi = 1$; arithmetic-mean properties (moderate ranges, both fluids thin); Kern Fig. 24 read with its turbulent line $j_H \approx 0.027Re^{0.8}$.
 
+![Water in the inner pipe, oil in the annulus of a 3 in × 2 in hairpin](fig/practice-heat-exchangers-P7.svg)
+
 ### 1. Heat balance
 $$Q = wc(t_2 - t_1) = 12{,}000(1.0)(110 - 80) = 360{,}000\ \mathrm{Btu/h}$$
 $$T_2 = T_1 - \frac{Q}{WC} = 175 - \frac{360{,}000}{9000(0.50)} = 95\,°\mathrm{F}$$
@@ -457,7 +477,9 @@ $$Re'_a = \frac{0.0573(4.40\times10^5)}{2.90} = 8690,\qquad f = 0.0035 + \frac{0
           syllabus: "in", repeats: [], origin: "slides",
           ref: String.raw`Slides HX Part 1, file 1 pp. 42–45 (temperature profiles)`,
           text: String.raw`Sketch the temperature profiles (temperature vs. length or area) in a heat exchanger for: (i) parallel flow; (ii) counterflow, without phase change; (iii) a condensing vapour heating a liquid; (iv) a hot liquid boiling a liquid; (v) both fluids changing phase (condensing against evaporating); (vi) a superheated vapour that is desuperheated, condensed and subcooled while heating a cold liquid in counterflow. State what each profile means for the LMTD.`,
-          solution: String.raw`All sketches: temperature on the vertical axis, length (or area) from 0 to $L$ on the horizontal axis, hot curve above the cold curve.
+          solution: String.raw`![Temperature profiles for the six cases](fig/practice-heat-exchangers-P8-sol.svg)
+
+All sketches: temperature on the vertical axis, length (or area) from 0 to $L$ on the horizontal axis, hot curve above the cold curve.
 
 1. **Parallel flow.** Both fluids enter at $x = 0$. The hot curve falls and the cold curve rises; both are concave and approach each other. The gap is largest at the inlet and smallest at the outlet, and $t_2 < T_2$ always.
 
@@ -528,6 +550,8 @@ i.e. about 35% more surface (117 ft² instead of 86.4 ft²).
 
 **Assumptions:** steady, constant $U$; inside terms referred to the outside area by $A_o/A_i = d_o/d_i = 1.2$.
 
+![Oil in the annulus, water in the inner tube of the hairpin](fig/practice-heat-exchangers-P10.svg)
+
 1. Resistances per unit outside area:
 
 | Term | Expression | m²·K/W |
@@ -593,7 +617,9 @@ $$U_o'' = \left[0.004615 - 0.001786\right]^{-1} = 353\ \mathrm{W/m^2K}\ (+63\%)$
           syllabus: "in", repeats: [], origin: "potential",
           ref: String.raw`Style of Holman ch. 10 / Kern ch. 6; asked in finals like 2020-21 Q2(d), 2018-19 Q4(a), 2021-22 Q2(a)`,
           text: String.raw`Find the LMTD (does the flow direction matter?), the area, the number of hairpins and the steam consumption.`,
-          solution: String.raw`**Properties (CoolProp):** saturated steam at 200 kPa: $T_{sat} = 120.2$°C, $h_{fg} = 2201.5$ kJ/kg. Water at the mean 50°C: $c_p = 4.181$ kJ/kg·K.
+          solution: String.raw`![Water heated by steam condensing in the annulus](fig/practice-heat-exchangers-P11.svg)
+
+**Properties (CoolProp):** saturated steam at 200 kPa: $T_{sat} = 120.2$°C, $h_{fg} = 2201.5$ kJ/kg. Water at the mean 50°C: $c_p = 4.181$ kJ/kg·K.
 
 **Assumptions:** steam condenses at constant $T_{sat}$ (no superheat or subcooling); constant $U$; no losses.
 
