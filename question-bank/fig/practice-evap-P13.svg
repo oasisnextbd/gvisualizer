@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" width="700" height="400" font-family="Helvetica, Arial, sans-serif">
+<title>n-Butane vaporizer with recirculation</title>
+<defs>
+<marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#1E2B3A"/></marker>
+<marker id="as-ink" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#1E2B3A"/></marker>
+<marker id="ah-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#D2552B"/></marker>
+<marker id="as-hot" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#D2552B"/></marker>
+<marker id="ah-cold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#0B7C8C"/></marker>
+<marker id="as-cold" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#0B7C8C"/></marker>
+<marker id="ah-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#9AA8B8"/></marker>
+<marker id="as-grey" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#9AA8B8"/></marker>
+<marker id="ah-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#B7840A"/></marker>
+<marker id="as-acc" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#B7840A"/></marker>
+<marker id="ah-sec" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#55667D"/></marker>
+<marker id="as-sec" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#55667D"/></marker>
+<pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern>
+<pattern id="mhatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="6" stroke="#9AA8B8" stroke-width="1"/></pattern>
+</defs>
+<rect width="700" height="400" fill="#FFFFFF"/>
+<rect x="250" y="170" width="220" height="80" rx="6" fill="#F4F6F9" stroke="#1E2B3A" stroke-width="2"/>
+<path d="M242,164 L202,164 Q190,164 190,176 L190,244 Q190,256 202,256 L242,256 Z" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M478,164 L510,164 Q530,164 530,210.0 Q530,256 510,256 L478,256 Z" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="242" y="160" width="8" height="100" fill="url(#mhatch)" stroke="#1E2B3A" stroke-width="1.5"/>
+<rect x="470" y="160" width="8" height="100" fill="url(#mhatch)" stroke="#1E2B3A" stroke-width="1.5"/>
+<line x1="242" y1="180.833" x2="478" y2="180.833" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="242" y1="185.833" x2="478" y2="185.833" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="242" y1="191.5" x2="478" y2="191.5" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="242" y1="196.5" x2="478" y2="196.5" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="242" y1="202.167" x2="478" y2="202.167" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="242" y1="207.167" x2="478" y2="207.167" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="242" y1="212.833" x2="478" y2="212.833" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="242" y1="217.833" x2="478" y2="217.833" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="242" y1="223.5" x2="478" y2="223.5" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="242" y1="228.5" x2="478" y2="228.5" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="242" y1="234.167" x2="478" y2="234.167" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="242" y1="239.167" x2="478" y2="239.167" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="192" y1="210" x2="242" y2="210" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="286.667" y1="170" x2="286.667" y2="230" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="323.333" y1="190" x2="323.333" y2="250" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="360" y1="170" x2="360" y2="230" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="396.667" y1="190" x2="396.667" y2="250" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="433.333" y1="170" x2="433.333" y2="230" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="256.3" y1="194.0" x2="282.3" y2="194.0" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah-hot)"/>
+<line x1="439.7" y1="194.0" x2="465.7" y2="194.0" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah-hot)"/>
+<line x1="282.3" y1="226.0" x2="256.3" y2="226.0" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah-hot)"/>
+<line x1="465.7" y1="226.0" x2="439.7" y2="226.0" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah-hot)"/>
+<rect x="203" y="140" width="18" height="24" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<rect x="203" y="256" width="18" height="24" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<line x1="212" y1="116" x2="212" y2="162" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah-hot)"/>
+<line x1="212" y1="258" x2="212" y2="304" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah-hot)"/>
+<rect x="255.333" y="146" width="18" height="24" fill="#F4F6F9" stroke="#1E2B3A" stroke-width="1.5"/>
+<rect x="446.667" y="250" width="18" height="24" fill="#F4F6F9" stroke="#1E2B3A" stroke-width="1.5"/>
+<line x1="264.333" y1="122" x2="264.333" y2="168" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<line x1="455.667" y1="252" x2="455.667" y2="298" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<path d="M264.3,176.0 C268.1,186.7 276.8,239.3 286.7,240.0 C296.5,240.7 311.1,180.0 323.3,180.0 C335.6,180.0 347.8,240.0 360.0,240.0 C372.2,240.0 384.4,180.0 396.7,180.0 C408.9,180.0 423.5,229.3 433.3,240.0 C443.2,250.7 451.9,243.3 455.7,244.0" fill="none" stroke="#0B7C8C" stroke-width="1.8" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/>
+<rect x="560" y="70" width="64" height="170" rx="22" fill="#F4F6F9" stroke="#1E2B3A" stroke-width="1.8"/>
+<rect x="561.5" y="170" width="61" height="68.5" rx="20" fill="#D9F0F2" stroke="none" stroke-width="0"/>
+<text x="592" y="256" font-size="11.5" text-anchor="middle" fill="#1E2B3A">drum</text>
+<path d="M455.6666666666667,298 L455.6666666666667,310 L540,310 L540,150 L558,150" fill="none" stroke="#0B7C8C" stroke-width="2" marker-end="url(#ah-cold)" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="592" y1="70" x2="592" y2="30" stroke="#9AA8B8" stroke-width="2.2" marker-end="url(#ah-grey)"/>
+<text x="586" y="22" font-size="11.5" text-anchor="end" fill="#55667D">butane vapour 15,000 lb/h</text>
+<text x="586" y="36.375" font-size="11.5" text-anchor="end" fill="#55667D">268 psia, 230°F</text>
+<path d="M592.0,240 L592.0,345 L110,345 L110,300" fill="none" stroke="#0B7C8C" stroke-width="2" marker-end="url(#ah-cold)" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="330" y="339" font-size="11.5" text-anchor="middle" fill="#0B7C8C">unvaporised liquid at 230°F returned to pump suction</text>
+<path d="M20,300 L106,300" fill="none" stroke="#0B7C8C" stroke-width="2" marker-end="url(#ah-cold)" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="20" y="278" font-size="11.5" fill="#0B7C8C">Feed (storage)</text>
+<text x="20" y="292.375" font-size="11.5" fill="#0B7C8C">80°F</text>
+<path d="M110,300 L110,90 L264.3333333333333,90 L264.3333333333333,122" fill="none" stroke="#0B7C8C" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="110" cy="250" r="10" fill="#FFFFFF" stroke="#1E2B3A" stroke-width="1.4"/>
+<path d="M106,254 L110,244 L114,254" fill="none" stroke="#1E2B3A" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="124" y="254" font-size="11" fill="#1E2B3A">pump</text>
+<text x="118" y="68" font-size="11.5" fill="#0B7C8C">15,000/0.8 lb/h</text>
+<text x="118" y="82.375" font-size="11.5" fill="#0B7C8C">mixed temperature</text>
+<text x="200" y="130" font-size="11.5" text-anchor="end" fill="#D2552B">steam</text>
+<text x="200" y="144.375" font-size="11.5" text-anchor="end" fill="#D2552B">125 psia</text>
+<text x="206" y="300" font-size="11.5" text-anchor="end" fill="#D2552B">condensate</text>
+<text x="350" y="374" font-size="11.5" text-anchor="middle" fill="#1E2B3A">1-2: 13¼ in shell, 56 tubes 1 in 16 BWG × 16 ft;</text>
+<text x="350" y="389" font-size="11.5" text-anchor="middle" fill="#1E2B3A">butane in shell (≤ 80% vaporised), steam in tubes</text>
+</svg>

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 545" width="700" height="545" font-family="Helvetica, Arial, sans-serif">
+<title>Flow boiling regimes in a uniformly heated vertical tube</title>
+<defs>
+<marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#1E2B3A"/></marker>
+<marker id="as-ink" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#1E2B3A"/></marker>
+<marker id="ah-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#D2552B"/></marker>
+<marker id="as-hot" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#D2552B"/></marker>
+<marker id="ah-cold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#0B7C8C"/></marker>
+<marker id="as-cold" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#0B7C8C"/></marker>
+<marker id="ah-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#9AA8B8"/></marker>
+<marker id="as-grey" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#9AA8B8"/></marker>
+<marker id="ah-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#B7840A"/></marker>
+<marker id="as-acc" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#B7840A"/></marker>
+<marker id="ah-sec" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#55667D"/></marker>
+<marker id="as-sec" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#55667D"/></marker>
+<pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern>
+<pattern id="mhatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="6" stroke="#9AA8B8" stroke-width="1"/></pattern>
+</defs>
+<rect width="700" height="545" fill="#FFFFFF"/>
+<rect x="120" y="30" width="70" height="460" fill="#FFFFFF" stroke="#1E2B3A" stroke-width="2"/>
+<rect x="122" y="283" width="66" height="205" fill="#D9F0F2" stroke="none" stroke-width="0"/>
+<rect x="122" y="181.8" width="8" height="101.2" fill="#D9F0F2" stroke="none" stroke-width="0"/>
+<path d="M130,195.8 L130,283.0" fill="none" stroke="#0B7C8C" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="180" y="181.8" width="8" height="101.2" fill="#D9F0F2" stroke="none" stroke-width="0"/>
+<path d="M180,195.8 L180,283.0" fill="none" stroke="#0B7C8C" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="179.626" cy="408.92" r="2.1131" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1"/>
+<circle cx="132.583" cy="402.72" r="3.47194" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1"/>
+<circle cx="164.165" cy="373.609" r="3.21189" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1"/>
+<circle cx="160.767" cy="388.682" r="2.31677" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1"/>
+<circle cx="151.256" cy="378.323" r="3.44602" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1"/>
+<circle cx="181.72" cy="409.007" r="3.08835" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1"/>
+<circle cx="152.022" cy="371.407" r="2.07185" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1"/>
+<circle cx="129.482" cy="382.262" r="2.63693" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1"/>
+<circle cx="148.521" cy="405.827" r="3.05151" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1"/>
+<circle cx="158.268" cy="369.634" r="2.04772" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1"/>
+<circle cx="145.558" cy="364.146" r="3.02045" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1"/>
+<circle cx="181.929" cy="393.831" r="2.36369" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1"/>
+<circle cx="176.253" cy="400.581" r="3.4688" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1"/>
+<circle cx="176.956" cy="398.711" r="3.5795" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1"/>
+<circle cx="147.104" cy="410.75" r="3.9238" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1"/>
+<circle cx="136.704" cy="398.221" r="3.4303" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1"/>
+<circle cx="152.916" cy="385.876" r="2.98003" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1"/>
+<circle cx="177.941" cy="384.246" r="3.66305" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1"/>
+<rect x="134" y="292.2" width="42" height="26" rx="12" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1.2"/>
+<rect x="134" y="326.2" width="42" height="26" rx="12" fill="#FFFFFF" stroke="#9AA8B8" stroke-width="1.2"/>
+<circle cx="147.112" cy="129.333" r="1.8" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="0.8"/>
+<circle cx="176.584" cy="106.048" r="1.8" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="0.8"/>
+<circle cx="158.656" cy="131.402" r="1.8" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="0.8"/>
+<circle cx="167.084" cy="107.461" r="1.8" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="0.8"/>
+<circle cx="139.978" cy="98.5216" r="1.8" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="0.8"/>
+<circle cx="165.777" cy="89.767" r="1.8" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="0.8"/>
+<circle cx="177.029" cy="95.4012" r="1.8" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="0.8"/>
+<circle cx="177.214" cy="97.6879" r="1.8" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="0.8"/>
+<circle cx="179.698" cy="119.583" r="1.8" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="0.8"/>
+<circle cx="155.229" cy="109.18" r="1.8" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="0.8"/>
+<circle cx="163.176" cy="113.055" r="1.8" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="0.8"/>
+<circle cx="144.84" cy="92.0716" r="1.8" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="0.8"/>
+<circle cx="155.642" cy="132.165" r="1.8" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="0.8"/>
+<circle cx="161.656" cy="84.7607" r="1.8" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="0.8"/>
+<circle cx="134.204" cy="145" r="3" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="0.8"/>
+<circle cx="133.259" cy="155" r="3" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="0.8"/>
+<circle cx="135.077" cy="165" r="3" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="0.8"/>
+<circle cx="127.914" cy="175" r="3" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="0.8"/>
+<line x1="110" y1="76" x2="360" y2="76" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="110" y1="140.4" x2="360" y2="140.4" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="110" y1="181.8" x2="360" y2="181.8" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="110" y1="283" x2="360" y2="283" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="110" y1="352" x2="360" y2="352" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="110" y1="416.4" x2="360" y2="416.4" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="202" y="57" font-size="12" fill="#1E2B3A">Single-phase vapour</text>
+<text x="202" y="112.2" font-size="12" fill="#1E2B3A">Mist flow</text>
+<text x="202" y="165.1" font-size="12" fill="#1E2B3A">Transition (dry-out)</text>
+<text x="202" y="236.4" font-size="12" fill="#1E2B3A">Annular flow</text>
+<text x="202" y="321.5" font-size="12" fill="#1E2B3A">Slug flow</text>
+<text x="202" y="388.2" font-size="12" fill="#1E2B3A">Bubbly flow</text>
+<text x="202" y="457.2" font-size="12" fill="#1E2B3A">Single-phase liquid</text>
+<line x1="80" y1="60" x2="116" y2="60" stroke="#D2552B" stroke-width="1.4" marker-end="url(#ah-hot)"/>
+<line x1="80" y1="115" x2="116" y2="115" stroke="#D2552B" stroke-width="1.4" marker-end="url(#ah-hot)"/>
+<line x1="80" y1="170" x2="116" y2="170" stroke="#D2552B" stroke-width="1.4" marker-end="url(#ah-hot)"/>
+<line x1="80" y1="225" x2="116" y2="225" stroke="#D2552B" stroke-width="1.4" marker-end="url(#ah-hot)"/>
+<line x1="80" y1="280" x2="116" y2="280" stroke="#D2552B" stroke-width="1.4" marker-end="url(#ah-hot)"/>
+<line x1="80" y1="335" x2="116" y2="335" stroke="#D2552B" stroke-width="1.4" marker-end="url(#ah-hot)"/>
+<line x1="80" y1="390" x2="116" y2="390" stroke="#D2552B" stroke-width="1.4" marker-end="url(#ah-hot)"/>
+<line x1="80" y1="445" x2="116" y2="445" stroke="#D2552B" stroke-width="1.4" marker-end="url(#ah-hot)"/>
+<text x="76" y="44" font-size="11" fill="#D2552B">q″ (uniform)</text>
+<line x1="155" y1="516" x2="155" y2="494" stroke="#0B7C8C" stroke-width="2" marker-end="url(#ah-cold)"/>
+<text x="163" y="514" font-size="11" fill="#0B7C8C">subcooled liquid in</text>
+<line x1="155" y1="32" x2="155" y2="10" stroke="#9AA8B8" stroke-width="2" marker-end="url(#ah-grey)"/>
+<text x="163" y="22" font-size="11" fill="#55667D">superheated vapour out</text>
+<line x1="460" y1="490" x2="670" y2="490" stroke="#1E2B3A" stroke-width="1.3" marker-end="url(#ah-ink)"/>
+<line x1="460" y1="30" x2="460" y2="490" stroke="#1E2B3A" stroke-width="1.3"/>
+<text x="670" y="508" font-size="13" text-anchor="end" font-style="italic" fill="#1E2B3A">h</text>
+<text x="454" y="40" font-size="11" text-anchor="end" fill="#55667D">height</text>
+<path d="M475.5,30.0 C476.1,36.1 475.5,56.1 479.3,66.8 C483.2,77.5 493.8,83.7 498.6,94.4 C503.5,105.1 498.6,121.2 508.3,131.2 C518.0,141.2 535.0,147.3 556.6,154.2 C578.2,161.1 622.6,165.7 637.7,172.6 C652.9,179.5 648.0,184.9 647.4,195.6 C646.8,206.3 639.4,222.4 633.9,237.0 C628.4,251.6 621.0,269.2 614.6,283.0 C608.1,296.8 604.9,306.8 595.2,319.8 C585.6,332.8 569.5,348.2 556.6,361.2 C543.7,374.2 527.6,387.3 518.0,398.0 C508.3,408.7 502.5,415.6 498.6,425.6 C494.8,435.6 495.4,447.1 494.8,457.8 C494.1,468.5 494.8,484.6 494.8,490.0" fill="none" stroke="#B7840A" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="663.7" y="176.4" font-size="11" text-anchor="end" fill="#B7840A">highest</text>
+<text x="523" y="53" font-size="11" fill="#B7840A">lowest</text>
+<text x="565" y="524" font-size="11.5" text-anchor="middle" fill="#55667D">heat-transfer coefficient</text>
+</svg>

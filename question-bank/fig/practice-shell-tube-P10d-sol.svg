@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" width="640" height="330" font-family="Helvetica, Arial, sans-serif">
+<title>Temperature cross in a 1-2 exchanger</title>
+<defs>
+<marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#1E2B3A"/></marker>
+<marker id="as-ink" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#1E2B3A"/></marker>
+<marker id="ah-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#D2552B"/></marker>
+<marker id="as-hot" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#D2552B"/></marker>
+<marker id="ah-cold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#0B7C8C"/></marker>
+<marker id="as-cold" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#0B7C8C"/></marker>
+<marker id="ah-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#9AA8B8"/></marker>
+<marker id="as-grey" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#9AA8B8"/></marker>
+<marker id="ah-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#B7840A"/></marker>
+<marker id="as-acc" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#B7840A"/></marker>
+<marker id="ah-sec" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#55667D"/></marker>
+<marker id="as-sec" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#55667D"/></marker>
+<pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern>
+<pattern id="mhatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="6" stroke="#9AA8B8" stroke-width="1"/></pattern>
+</defs>
+<rect width="640" height="330" fill="#FFFFFF"/>
+<line x1="70" y1="280" x2="590" y2="280" stroke="#1E2B3A" stroke-width="1.4" marker-end="url(#ah-ink)"/>
+<line x1="70" y1="280" x2="70" y2="40" stroke="#1E2B3A" stroke-width="1.4" marker-end="url(#ah-ink)"/>
+<text x="590" y="298" font-size="12" text-anchor="end" fill="#1E2B3A">length</text>
+<text x="62" y="34" font-size="12" fill="#1E2B3A">T</text>
+<path d="M100.0,76.8 L111.0,81.6 L122.0,86.3 L133.0,90.8 L144.0,95.2 L155.0,99.4 L166.0,103.5 L177.0,107.5 L188.0,111.4 L199.0,115.2 L210.0,118.9 L221.0,122.4 L232.0,125.9 L243.0,129.2 L254.0,132.5 L265.0,135.6 L276.0,138.7 L287.0,141.6 L298.0,144.5 L309.0,147.3 L320.0,150.0 L331.0,152.6 L342.0,155.2 L353.0,157.7 L364.0,160.1 L375.0,162.4 L386.0,164.7 L397.0,166.9 L408.0,169.0 L419.0,171.1 L430.0,173.1 L441.0,175.0 L452.0,176.9 L463.0,178.8 L474.0,180.6 L485.0,182.3 L496.0,184.0 L507.0,185.6 L518.0,187.2 L529.0,188.7 L540.0,190.2" fill="none" stroke="#D2552B" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M100.0,253.2 L111.0,250.1 L122.0,247.0 L133.0,244.1 L144.0,241.2 L155.0,238.4 L166.0,235.6 L177.0,232.9 L188.0,230.3 L199.0,227.8 L210.0,225.3 L221.0,222.8 L232.0,220.5 L243.0,218.2 L254.0,215.9 L265.0,213.7 L276.0,211.6 L287.0,209.5 L298.0,207.5 L309.0,205.5 L320.0,203.5 L331.0,201.6 L342.0,199.8 L353.0,198.0 L364.0,196.2 L375.0,194.5 L386.0,192.9 L397.0,191.2 L408.0,189.6 L419.0,188.1 L430.0,186.6 L441.0,185.1 L452.0,183.7 L463.0,182.3 L474.0,180.9 L485.0,179.6 L496.0,178.3 L507.0,177.0 L518.0,175.8 L529.0,174.6 L540.0,173.4" fill="none" stroke="#0B7C8C" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M100.0,139.8 L111.0,141.6 L122.0,142.9 L133.0,144.0 L144.0,145.1 L155.0,146.2 L166.0,147.2 L177.0,148.1 L188.0,149.1 L199.0,150.0 L210.0,150.9 L221.0,151.8 L232.0,152.6 L243.0,153.5 L254.0,154.3 L265.0,155.1 L276.0,155.9 L287.0,156.7 L298.0,157.5 L309.0,158.3 L320.0,159.1 L331.0,159.9 L342.0,160.6 L353.0,161.4 L364.0,162.1 L375.0,162.9 L386.0,163.6 L397.0,164.3 L408.0,165.1 L419.0,165.8 L430.0,166.5 L441.0,167.2 L452.0,167.9 L463.0,168.6 L474.0,169.3 L485.0,170.0 L496.0,170.7 L507.0,171.4 L518.0,172.0 L529.0,172.7 L540.0,173.4" fill="none" stroke="#0B7C8C" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M381.6,163.3 L386.0,163.6 L390.4,163.9 L394.8,164.2 L399.2,164.5 L403.6,164.8 L408.0,165.1 L412.4,165.3 L416.8,165.6 L421.2,165.9 L425.6,166.2 L430.0,166.5 L434.4,166.8 L438.8,167.1 L443.2,167.3 L447.6,167.6 L452.0,167.9 L456.4,168.2 L460.8,168.5 L465.2,168.7 L469.6,169.0 L474.0,169.3 L478.4,169.6 L482.8,169.9 L487.2,170.1 L491.6,170.4 L496.0,170.7 L500.4,171.0 L504.8,171.2 L509.2,171.5 L513.6,171.8 L518.0,172.0 L522.4,172.3 L526.8,172.6 L531.2,172.9 L535.6,173.1 L540.0,173.4 L540.0,190.2 L535.6,189.6 L531.2,189.0 L526.8,188.4 L522.4,187.8 L518.0,187.2 L513.6,186.6 L509.2,185.9 L504.8,185.3 L500.4,184.6 L496.0,184.0 L491.6,183.3 L487.2,182.6 L482.8,181.9 L478.4,181.3 L474.0,180.6 L469.6,179.9 L465.2,179.1 L460.8,178.4 L456.4,177.7 L452.0,176.9 L447.6,176.2 L443.2,175.4 L438.8,174.7 L434.4,173.9 L430.0,173.1 L425.6,172.3 L421.2,171.5 L416.8,170.7 L412.4,169.9 L408.0,169.0 L403.6,168.2 L399.2,167.3 L394.8,166.5 L390.4,165.6 L386.0,164.7 L381.6,163.8 Z" fill="#F3E3B5" stroke="none" stroke-width="0" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="298.0" y1="144.5" x2="342.0" y2="155.2" stroke="#D2552B" stroke-width="2.6" marker-end="url(#ah-hot)"/>
+<line x1="232.0" y1="220.5" x2="276.0" y2="211.6" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<line x1="276.0" y1="155.9" x2="232.0" y2="152.6" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<text x="94" y="80.8" font-size="12" text-anchor="end" fill="#D2552B">T<tspan dy="3.6" font-size="8.6">1</tspan><tspan dy="-3.6">​</tspan></text>
+<text x="546" y="200.2" font-size="12" fill="#D2552B">T<tspan dy="3.6" font-size="8.6">2</tspan><tspan dy="-3.6">​</tspan></text>
+<text x="94" y="257.2" font-size="12" text-anchor="end" fill="#0B7C8C">t<tspan dy="3.6" font-size="8.6">1</tspan><tspan dy="-3.6">​</tspan></text>
+<text x="94" y="143.8" font-size="12" text-anchor="end" fill="#0B7C8C">t<tspan dy="3.6" font-size="8.6">2</tspan><tspan dy="-3.6">​</tspan></text>
+<text x="166" y="102" font-size="12" fill="#D2552B">shell fluid (hot), one pass</text>
+<text x="210" y="232.2" font-size="12" fill="#0B7C8C">tube pass 1</text>
+<text x="144" y="129.6" font-size="12" fill="#0B7C8C">tube pass 2</text>
+<text x="390.4" y="91.5" font-size="11.5" fill="#B7840A">temperature cross:</text>
+<text x="390.4" y="105.875" font-size="11.5" fill="#B7840A">t<tspan dy="3.4" font-size="8.3">2</tspan><tspan dy="-3.4">​</tspan> &gt; T<tspan dy="3.4" font-size="8.3">2</tspan><tspan dy="-3.4">​</tspan>; in the shaded</text>
+<text x="390.4" y="120.25" font-size="11.5" fill="#B7840A">zone heat flows back</text>
+<text x="390.4" y="134.625" font-size="11.5" fill="#B7840A">from tube to shell fluid</text>
+<line x1="416.8" y1="139.8" x2="496" y2="171.3" stroke="#B7840A" stroke-width="1"/>
+</svg>

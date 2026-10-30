@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 450" width="700" height="450" font-family="Helvetica, Arial, sans-serif">
+<title>Natural convection from horizontal hot and cold plates</title>
+<defs>
+<marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#1E2B3A"/></marker>
+<marker id="as-ink" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#1E2B3A"/></marker>
+<marker id="ah-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#D2552B"/></marker>
+<marker id="as-hot" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#D2552B"/></marker>
+<marker id="ah-cold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#0B7C8C"/></marker>
+<marker id="as-cold" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#0B7C8C"/></marker>
+<marker id="ah-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#9AA8B8"/></marker>
+<marker id="as-grey" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#9AA8B8"/></marker>
+<marker id="ah-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#B7840A"/></marker>
+<marker id="as-acc" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#B7840A"/></marker>
+<marker id="ah-sec" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#55667D"/></marker>
+<marker id="as-sec" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#55667D"/></marker>
+<pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern>
+<pattern id="mhatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="6" stroke="#9AA8B8" stroke-width="1"/></pattern>
+</defs>
+<rect width="700" height="450" fill="#FFFFFF"/>
+<text x="175" y="26" font-size="12.5" text-anchor="middle" font-weight="bold" fill="#1E2B3A">Hot face up: strong plume</text>
+<rect x="100" y="155" width="150" height="10" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<line x1="100" y1="155" x2="250" y2="155" stroke="#D2552B" stroke-width="4"/>
+<rect x="100" y="165" width="150" height="9" fill="url(#hatch)" stroke="#C98A00" stroke-width="1"/>
+<path d="M86.0,141.0 L159,145.0" fill="none" stroke="#D2552B" stroke-width="1.8" marker-end="url(#ah-hot)" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M264.0,141.0 L191,145.0" fill="none" stroke="#D2552B" stroke-width="1.8" marker-end="url(#ah-hot)" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M175,145.0 L175,85.0" fill="none" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah-hot)" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M133.0,141.0 Q133.0,115.0 139.0,93.0" fill="none" stroke="#D2552B" stroke-width="1.5" marker-end="url(#ah-hot)" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M217.0,141.0 Q217.0,115.0 211.0,93.0" fill="none" stroke="#D2552B" stroke-width="1.5" marker-end="url(#ah-hot)" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="175" y="210" font-size="12" text-anchor="middle" fill="#55667D">Nu = 0.54 Ra<tspan dy="-4.6" font-size="8.6">1/4</tspan><tspan dy="4.6">​</tspan> or 0.15 Ra<tspan dy="-4.6" font-size="8.6">1/3</tspan><tspan dy="4.6">​</tspan></text>
+<text x="525" y="26" font-size="12.5" text-anchor="middle" font-weight="bold" fill="#1E2B3A">Hot face down: weak edge flow</text>
+<rect x="450" y="85" width="150" height="10" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<line x1="450" y1="95" x2="600" y2="95" stroke="#D2552B" stroke-width="4"/>
+<rect x="450" y="76" width="150" height="9" fill="url(#hatch)" stroke="#C98A00" stroke-width="1"/>
+<path d="M515,105.0 L456.0,105.0 Q434.0,105.0 434.0,77.0" fill="none" stroke="#D2552B" stroke-width="1.8" marker-end="url(#ah-hot)" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M535,105.0 L594.0,105.0 Q616.0,105.0 616.0,77.0" fill="none" stroke="#D2552B" stroke-width="1.8" marker-end="url(#ah-hot)" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M456.0,95.0 Q525,125.0 594.0,95.0" fill="none" stroke="#D2552B" stroke-width="1" stroke-dasharray="3 3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="525" y="210" font-size="12" text-anchor="middle" fill="#55667D">Nu = 0.27 Ra<tspan dy="-4.6" font-size="8.6">1/4</tspan><tspan dy="4.6">​</tspan></text>
+<text x="175" y="241" font-size="12.5" text-anchor="middle" font-weight="bold" fill="#1E2B3A">Cold face down: strong (sinking)</text>
+<rect x="100" y="260" width="150" height="10" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<line x1="100" y1="270" x2="250" y2="270" stroke="#0B7C8C" stroke-width="4"/>
+<rect x="100" y="251" width="150" height="9" fill="url(#hatch)" stroke="#C98A00" stroke-width="1"/>
+<path d="M86.0,284.0 L159,280.0" fill="none" stroke="#0B7C8C" stroke-width="1.8" marker-end="url(#ah-cold)" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M264.0,284.0 L191,280.0" fill="none" stroke="#0B7C8C" stroke-width="1.8" marker-end="url(#ah-cold)" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M175,280.0 L175,340.0" fill="none" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M133.0,284.0 Q133.0,310.0 139.0,332.0" fill="none" stroke="#0B7C8C" stroke-width="1.5" marker-end="url(#ah-cold)" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M217.0,284.0 Q217.0,310.0 211.0,332.0" fill="none" stroke="#0B7C8C" stroke-width="1.5" marker-end="url(#ah-cold)" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="175" y="425" font-size="12" text-anchor="middle" fill="#55667D">same as hot face up</text>
+<text x="525" y="241" font-size="12.5" text-anchor="middle" font-weight="bold" fill="#1E2B3A">Cold face up: weak</text>
+<rect x="450" y="340" width="150" height="10" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<line x1="450" y1="340" x2="600" y2="340" stroke="#0B7C8C" stroke-width="4"/>
+<rect x="450" y="350" width="150" height="9" fill="url(#hatch)" stroke="#C98A00" stroke-width="1"/>
+<path d="M515,330.0 L456.0,330.0 Q434.0,330.0 434.0,358.0" fill="none" stroke="#0B7C8C" stroke-width="1.8" marker-end="url(#ah-cold)" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M535,330.0 L594.0,330.0 Q616.0,330.0 616.0,358.0" fill="none" stroke="#0B7C8C" stroke-width="1.8" marker-end="url(#ah-cold)" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M456.0,340.0 Q525,310.0 594.0,340.0" fill="none" stroke="#0B7C8C" stroke-width="1" stroke-dasharray="3 3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="525" y="425" font-size="12" text-anchor="middle" fill="#55667D">same as hot face down</text>
+<line x1="350" y1="10" x2="350" y2="420" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="20" y1="220" x2="680" y2="220" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="350" y="442" font-size="11.5" text-anchor="middle" fill="#55667D">Red face: T<tspan dy="3.4" font-size="8.3">s</tspan><tspan dy="-3.4">​</tspan> &gt; T<tspan dy="3.4" font-size="8.3">∞</tspan><tspan dy="-3.4">​</tspan>; teal face: T<tspan dy="3.4" font-size="8.3">s</tspan><tspan dy="-3.4">​</tspan> &lt; T<tspan dy="3.4" font-size="8.3">∞</tspan><tspan dy="-3.4">​</tspan>; hatched: insulated back.  L<tspan dy="3.4" font-size="8.3">c</tspan><tspan dy="-3.4">​</tspan> = A<tspan dy="3.4" font-size="8.3">s</tspan><tspan dy="-3.4">​</tspan>/p</text>
+</svg>

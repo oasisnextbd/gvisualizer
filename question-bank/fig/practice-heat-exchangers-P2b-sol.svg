@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 290" width="700" height="290" font-family="Helvetica, Arial, sans-serif">
+<title>Cold fluid 150→200°F against hot fluid 300→200°F</title>
+<defs>
+<marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#1E2B3A"/></marker>
+<marker id="as-ink" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#1E2B3A"/></marker>
+<marker id="ah-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#D2552B"/></marker>
+<marker id="as-hot" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#D2552B"/></marker>
+<marker id="ah-cold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#0B7C8C"/></marker>
+<marker id="as-cold" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#0B7C8C"/></marker>
+<marker id="ah-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#9AA8B8"/></marker>
+<marker id="as-grey" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#9AA8B8"/></marker>
+<marker id="ah-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#B7840A"/></marker>
+<marker id="as-acc" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#B7840A"/></marker>
+<marker id="ah-sec" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#55667D"/></marker>
+<marker id="as-sec" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#55667D"/></marker>
+<pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern>
+<pattern id="mhatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="6" stroke="#9AA8B8" stroke-width="1"/></pattern>
+</defs>
+<rect width="700" height="290" fill="#FFFFFF"/>
+<text x="175" y="19" font-size="13" text-anchor="middle" font-weight="bold" fill="#1E2B3A">Counterflow</text>
+<line x1="39" y1="249" x2="329" y2="249" stroke="#1E2B3A" stroke-width="1.3" marker-end="url(#ah-ink)"/>
+<line x1="39" y1="249" x2="39" y2="23" stroke="#1E2B3A" stroke-width="1.3" marker-end="url(#ah-ink)"/>
+<text x="33" y="21" font-size="12" text-anchor="end" font-style="italic" fill="#1E2B3A">T</text>
+<text x="178" y="265" font-size="11" text-anchor="middle" fill="#55667D">length</text>
+<text x="85" y="265" font-size="11" text-anchor="middle" fill="#55667D">0</text>
+<text x="271" y="265" font-size="11" text-anchor="middle" font-style="italic" fill="#55667D">L</text>
+<path d="M85.0,64.2 C88.1,66.0 97.4,71.6 103.6,75.3 C109.8,78.9 116.0,82.5 122.2,86.0 C128.4,89.6 134.6,93.1 140.8,96.5 C147.0,99.9 153.2,103.3 159.4,106.6 C165.6,110.0 171.8,113.2 178.0,116.5 C184.2,119.7 190.4,122.9 196.6,126.0 C202.8,129.1 209.0,132.2 215.2,135.3 C221.4,138.3 227.6,141.3 233.8,144.3 C240.0,147.2 246.2,150.1 252.4,153.0 C258.6,155.9 267.9,160.0 271.0,161.5" fill="none" stroke="#D2552B" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="170.6" y1="112.6" x2="189.2" y2="122.2" stroke="#D2552B" stroke-width="2.4" marker-end="url(#ah-hot)"/>
+<path d="M85.0,161.5 C88.1,162.4 97.4,165.2 103.6,167.0 C109.8,168.8 116.0,170.6 122.2,172.4 C128.4,174.2 134.6,175.9 140.8,177.6 C147.0,179.3 153.2,181.0 159.4,182.7 C165.6,184.3 171.8,186.0 178.0,187.6 C184.2,189.2 190.4,190.8 196.6,192.4 C202.8,193.9 209.0,195.5 215.2,197.0 C221.4,198.5 227.6,200.0 233.8,201.5 C240.0,203.0 246.2,204.4 252.4,205.9 C258.6,207.3 267.9,209.4 271.0,210.1" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="189.2" y1="190.5" x2="170.6" y2="185.6" stroke="#0B7C8C" stroke-width="2.4" marker-end="url(#ah-cold)"/>
+<text x="79" y="68.1818" font-size="11" text-anchor="end" fill="#D2552B">300</text>
+<text x="277" y="165.455" font-size="11" fill="#D2552B">200</text>
+<text x="79" y="165.455" font-size="11" text-anchor="end" fill="#0B7C8C">200</text>
+<text x="277" y="214.091" font-size="11" fill="#0B7C8C">150</text>
+<line x1="93" y1="159.455" x2="93" y2="66.1818" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#ah-grey)" marker-start="url(#as-grey)"/>
+<text x="98" y="116.818" font-size="11" fill="#55667D">100</text>
+<line x1="263" y1="208.091" x2="263" y2="163.455" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#ah-grey)" marker-start="url(#as-grey)"/>
+<text x="258" y="189.773" font-size="11" text-anchor="end" fill="#55667D">50</text>
+<text x="175" y="283" font-size="11" text-anchor="middle" fill="#55667D">LMTD = 72.1°F</text>
+<text x="525" y="19" font-size="13" text-anchor="middle" font-weight="bold" fill="#1E2B3A">Parallel flow</text>
+<line x1="389" y1="249" x2="679" y2="249" stroke="#1E2B3A" stroke-width="1.3" marker-end="url(#ah-ink)"/>
+<line x1="389" y1="249" x2="389" y2="23" stroke="#1E2B3A" stroke-width="1.3" marker-end="url(#ah-ink)"/>
+<text x="383" y="21" font-size="12" text-anchor="end" font-style="italic" fill="#1E2B3A">T</text>
+<text x="528" y="265" font-size="11" text-anchor="middle" fill="#55667D">length</text>
+<text x="435" y="265" font-size="11" text-anchor="middle" fill="#55667D">0</text>
+<text x="621" y="265" font-size="11" text-anchor="middle" font-style="italic" fill="#55667D">L</text>
+<path d="M435.0,64.2 C438.1,68.1 447.4,80.7 453.6,87.6 C459.8,94.6 466.0,100.5 472.2,105.9 C478.4,111.3 484.6,115.9 490.8,120.1 C497.0,124.3 503.2,127.9 509.4,131.2 C515.6,134.5 521.8,137.2 528.0,139.8 C534.2,142.3 540.4,144.5 546.6,146.5 C552.8,148.5 559.0,150.2 565.2,151.7 C571.4,153.3 577.6,154.6 583.8,155.8 C590.0,157.0 596.2,158.0 602.4,159.0 C608.6,159.9 617.9,161.0 621.0,161.5" fill="none" stroke="#D2552B" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="520.6" y1="136.6" x2="539.2" y2="144.0" stroke="#D2552B" stroke-width="2.4" marker-end="url(#ah-hot)"/>
+<path d="M435.0,210.1 C438.1,208.1 447.4,201.8 453.6,198.4 C459.8,194.9 466.0,191.9 472.2,189.2 C478.4,186.5 484.6,184.2 490.8,182.1 C497.0,180.0 503.2,178.2 509.4,176.6 C515.6,175.0 521.8,173.6 528.0,172.3 C534.2,171.0 540.4,169.9 546.6,168.9 C552.8,167.9 559.0,167.1 565.2,166.3 C571.4,165.5 577.6,164.9 583.8,164.3 C590.0,163.7 596.2,163.2 602.4,162.7 C608.6,162.2 617.9,161.7 621.0,161.5" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="520.6" y1="173.9" x2="539.2" y2="170.2" stroke="#0B7C8C" stroke-width="2.4" marker-end="url(#ah-cold)"/>
+<text x="429" y="68.1818" font-size="11" text-anchor="end" fill="#D2552B">300</text>
+<text x="627" y="165.455" font-size="11" fill="#D2552B">200</text>
+<text x="429" y="214.091" font-size="11" text-anchor="end" fill="#0B7C8C">150</text>
+<text x="627" y="165.455" font-size="11" fill="#0B7C8C">200</text>
+<line x1="443" y1="208.091" x2="443" y2="66.1818" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#ah-grey)" marker-start="url(#as-grey)"/>
+<text x="448" y="141.136" font-size="11" fill="#55667D">150</text>
+<text x="525" y="283" font-size="11" text-anchor="middle" fill="#55667D">outlets meet: ΔT<tspan dy="3.3" font-size="7.9">2</tspan><tspan dy="-3.3">​</tspan> = 0, A → ∞</text>
+</svg>

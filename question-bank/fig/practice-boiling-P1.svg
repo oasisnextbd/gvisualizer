@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 290" width="600" height="290" font-family="Helvetica, Arial, sans-serif">
+<title>Film boiling on a horizontal heating wire</title>
+<defs>
+<marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#1E2B3A"/></marker>
+<marker id="as-ink" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#1E2B3A"/></marker>
+<marker id="ah-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#D2552B"/></marker>
+<marker id="as-hot" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#D2552B"/></marker>
+<marker id="ah-cold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#0B7C8C"/></marker>
+<marker id="as-cold" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#0B7C8C"/></marker>
+<marker id="ah-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#9AA8B8"/></marker>
+<marker id="as-grey" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#9AA8B8"/></marker>
+<marker id="ah-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#B7840A"/></marker>
+<marker id="as-acc" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#B7840A"/></marker>
+<marker id="ah-sec" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#55667D"/></marker>
+<marker id="as-sec" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#55667D"/></marker>
+<pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern>
+<pattern id="mhatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="6" stroke="#9AA8B8" stroke-width="1"/></pattern>
+</defs>
+<rect width="600" height="290" fill="#FFFFFF"/>
+<rect x="20" y="40" width="280" height="236" rx="6" fill="#D9F0F2" stroke="#0B7C8C" stroke-width="1"/>
+<circle cx="160" cy="165" r="50" fill="#F4F6F9" stroke="#9AA8B8" stroke-width="1.6" stroke-dasharray="4 3"/>
+<circle cx="160" cy="165" r="34" fill="#FBE2D6" stroke="#D2552B" stroke-width="2.5"/>
+<text x="160" y="169" font-size="11.5" text-anchor="middle" fill="#1E2B3A">T<tspan dy="3.4" font-size="8.3">s</tspan><tspan dy="-3.4">​</tspan> = 350°C</text>
+<circle cx="155.807" cy="101" r="8" fill="#F4F6F9" stroke="#9AA8B8" stroke-width="1.4"/>
+<circle cx="160.708" cy="71" r="10" fill="#F4F6F9" stroke="#9AA8B8" stroke-width="1.4"/>
+<line x1="126" y1="233" x2="194" y2="233" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#ah-grey)" marker-start="url(#as-grey)"/>
+<text x="160" y="251.6" font-size="12" text-anchor="middle" fill="#55667D">D = 5 mm</text>
+<line x1="194.769" y1="152.345" x2="206.045" y2="148.241" stroke="#B7840A" stroke-width="1.3" marker-end="url(#ah-acc)"/>
+<line x1="125.231" y1="152.345" x2="113.955" y2="148.241" stroke="#B7840A" stroke-width="1.3" marker-end="url(#ah-acc)"/>
+<line x1="125.231" y1="177.655" x2="113.955" y2="181.759" stroke="#B7840A" stroke-width="1.3" marker-end="url(#ah-acc)"/>
+<line x1="194.769" y1="177.655" x2="206.045" y2="181.759" stroke="#B7840A" stroke-width="1.3" marker-end="url(#ah-acc)"/>
+<text x="30" y="60" font-size="11.5" fill="#0B7C8C">saturated water, 1 atm (T<tspan dy="3.4" font-size="8.3">sat</tspan><tspan dy="-3.4">​</tspan> = 100°C)</text>
+<text x="320" y="70" font-size="12.5" fill="#1E2B3A">Stable vapour film around the wire</text>
+<text x="320" y="89" font-size="12.5" fill="#1E2B3A">(ΔT<tspan dy="3.8" font-size="9.0">excess</tspan><tspan dy="-3.8">​</tspan> = 250°C: film boiling)</text>
+<text x="320" y="108" font-size="12.5" fill="#1E2B3A"></text>
+<text x="320" y="127" font-size="12.5" fill="#1E2B3A">q″<tspan dy="3.8" font-size="9.0">film</tspan><tspan dy="-3.8">​</tspan>: conduction across the film</text>
+<text x="320" y="146" font-size="12.5" fill="#1E2B3A">q″<tspan dy="3.8" font-size="9.0">rad</tspan><tspan dy="-3.8">​</tspan> = εσ(T<tspan dy="3.8" font-size="9.0">s</tspan><tspan dy="-3.8">​</tspan>⁴ − T<tspan dy="3.8" font-size="9.0">sat</tspan><tspan dy="-3.8">​</tspan>⁴), ε = 0.05</text>
+<text x="320" y="165" font-size="12.5" fill="#1E2B3A">q″<tspan dy="3.8" font-size="9.0">total</tspan><tspan dy="-3.8">​</tspan> = q″<tspan dy="3.8" font-size="9.0">film</tspan><tspan dy="-3.8">​</tspan> + ¾ q″<tspan dy="3.8" font-size="9.0">rad</tspan><tspan dy="-3.8">​</tspan></text>
+<text x="320" y="184" font-size="12.5" fill="#1E2B3A"></text>
+<text x="320" y="203" font-size="12.5" fill="#1E2B3A">Q = πDL q″<tspan dy="3.8" font-size="9.0">total</tspan><tspan dy="-3.8">​</tspan>,  L = 1 m</text>
+<text x="216" y="147" font-size="11" fill="#55667D">vapour film</text>
+</svg>

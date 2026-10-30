@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 390" width="700" height="390" font-family="Helvetica, Arial, sans-serif">
+<title>Gas oil–crude 1-6 exchanger</title>
+<defs>
+<marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#1E2B3A"/></marker>
+<marker id="as-ink" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#1E2B3A"/></marker>
+<marker id="ah-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#D2552B"/></marker>
+<marker id="as-hot" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#D2552B"/></marker>
+<marker id="ah-cold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#0B7C8C"/></marker>
+<marker id="as-cold" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#0B7C8C"/></marker>
+<marker id="ah-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#9AA8B8"/></marker>
+<marker id="as-grey" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#9AA8B8"/></marker>
+<marker id="ah-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#B7840A"/></marker>
+<marker id="as-acc" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#B7840A"/></marker>
+<marker id="ah-sec" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#55667D"/></marker>
+<marker id="as-sec" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#55667D"/></marker>
+<pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern>
+<pattern id="mhatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="6" stroke="#9AA8B8" stroke-width="1"/></pattern>
+</defs>
+<rect width="700" height="390" fill="#FFFFFF"/>
+<rect x="230" y="130" width="300" height="130" rx="6" fill="#F4F6F9" stroke="#1E2B3A" stroke-width="2"/>
+<path d="M222,124 L182,124 Q170,124 170,136 L170,254 Q170,266 182,266 L222,266 Z" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M538,124 L570,124 Q590,124 590,195.0 Q590,266 570,266 L538,266 Z" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="222" y="120" width="8" height="150" fill="url(#mhatch)" stroke="#1E2B3A" stroke-width="1.5"/>
+<rect x="530" y="120" width="8" height="150" fill="url(#mhatch)" stroke="#1E2B3A" stroke-width="1.5"/>
+<line x1="222" y1="140.25" x2="538" y2="140.25" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="145.25" x2="538" y2="145.25" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="149.75" x2="538" y2="149.75" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="154.75" x2="538" y2="154.75" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="159.25" x2="538" y2="159.25" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="164.25" x2="538" y2="164.25" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="168.75" x2="538" y2="168.75" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="173.75" x2="538" y2="173.75" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="178.25" x2="538" y2="178.25" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="183.25" x2="538" y2="183.25" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="187.75" x2="538" y2="187.75" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="192.75" x2="538" y2="192.75" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="197.25" x2="538" y2="197.25" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="202.25" x2="538" y2="202.25" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="206.75" x2="538" y2="206.75" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="211.75" x2="538" y2="211.75" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="216.25" x2="538" y2="216.25" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="221.25" x2="538" y2="221.25" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="225.75" x2="538" y2="225.75" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="230.75" x2="538" y2="230.75" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="235.25" x2="538" y2="235.25" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="240.25" x2="538" y2="240.25" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="244.75" x2="538" y2="244.75" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="222" y1="249.75" x2="538" y2="249.75" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="172" y1="157" x2="222" y2="157" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="538" y1="176" x2="584" y2="176" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="172" y1="195" x2="222" y2="195" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="538" y1="214" x2="584" y2="214" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="172" y1="233" x2="222" y2="233" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="280" y1="130" x2="280" y2="227.5" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="330" y1="162.5" x2="330" y2="260" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="380" y1="130" x2="380" y2="227.5" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="430" y1="162.5" x2="430" y2="260" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="480" y1="130" x2="480" y2="227.5" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="243.0" y1="147.5" x2="269.0" y2="147.5" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<line x1="263.0" y1="147.5" x2="289.0" y2="147.5" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<line x1="269.0" y1="166.5" x2="243.0" y2="166.5" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<line x1="289.0" y1="166.5" x2="263.0" y2="166.5" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<line x1="243.0" y1="185.5" x2="269.0" y2="185.5" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<line x1="263.0" y1="185.5" x2="289.0" y2="185.5" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<line x1="269.0" y1="204.5" x2="243.0" y2="204.5" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<line x1="289.0" y1="204.5" x2="263.0" y2="204.5" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<line x1="243.0" y1="223.5" x2="269.0" y2="223.5" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<line x1="263.0" y1="223.5" x2="289.0" y2="223.5" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<line x1="269.0" y1="242.5" x2="243.0" y2="242.5" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<line x1="289.0" y1="242.5" x2="263.0" y2="242.5" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<rect x="183" y="100" width="18" height="24" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<rect x="183" y="266" width="18" height="24" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<line x1="192" y1="76" x2="192" y2="122" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<line x1="192" y1="268" x2="192" y2="314" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<rect x="242" y="106" width="18" height="24" fill="#F4F6F9" stroke="#1E2B3A" stroke-width="1.5"/>
+<rect x="500" y="260" width="18" height="24" fill="#F4F6F9" stroke="#1E2B3A" stroke-width="1.5"/>
+<line x1="251" y1="82" x2="251" y2="128" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah-hot)"/>
+<line x1="509" y1="262" x2="509" y2="308" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah-hot)"/>
+<path d="M251.0,136.0 C255.8,154.0 266.8,242.0 280.0,243.8 C293.2,245.5 313.3,146.2 330.0,146.2 C346.7,146.2 363.3,243.8 380.0,243.8 C396.7,243.8 413.3,146.2 430.0,146.2 C446.7,146.2 466.8,225.8 480.0,243.8 C493.2,261.7 504.2,252.3 509.0,254.0" fill="none" stroke="#D2552B" stroke-width="1.8" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/>
+<text x="180" y="82" font-size="12" text-anchor="end" fill="#0B7C8C">Crude in, 100°F</text>
+<text x="180" y="97" font-size="12" text-anchor="end" fill="#0B7C8C">105,000 lb/h (tubes)</text>
+<text x="180" y="300" font-size="12" text-anchor="end" fill="#0B7C8C">Crude out, t<tspan dy="3.6" font-size="8.6">2</tspan><tspan dy="-3.6">​</tspan> = ?</text>
+<text x="263" y="86" font-size="12" fill="#D2552B">Gas oil in, 300°F</text>
+<text x="263" y="101" font-size="12" fill="#D2552B">70,000 lb/h (shell)</text>
+<text x="521" y="294" font-size="12" fill="#D2552B">Gas oil out, 200°F</text>
+<text x="350" y="352" font-size="12" text-anchor="middle" fill="#55667D">23¼ in ID shell, 302 tubes ¾ in OD 16 BWG × 16 ft, 1 in square pitch,</text>
+<text x="350" y="367" font-size="12" text-anchor="middle" fill="#55667D">25% cut baffles at 5 in; R<tspan dy="3.6" font-size="8.6">d</tspan><tspan dy="-3.6">​</tspan> = 0.004, ΔP ≤ 10 psi each side</text>
+<text x="380" y="294" font-size="11.5" text-anchor="middle" fill="#1E2B3A">1 shell pass, 6 tube passes</text>
+</svg>

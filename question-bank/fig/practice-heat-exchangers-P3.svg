@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 380" width="700" height="380" font-family="Helvetica, Arial, sans-serif">
+<title>1-2 exchanger: water in the shell, oil in two tube passes</title>
+<defs>
+<marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#1E2B3A"/></marker>
+<marker id="as-ink" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#1E2B3A"/></marker>
+<marker id="ah-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#D2552B"/></marker>
+<marker id="as-hot" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#D2552B"/></marker>
+<marker id="ah-cold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#0B7C8C"/></marker>
+<marker id="as-cold" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#0B7C8C"/></marker>
+<marker id="ah-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#9AA8B8"/></marker>
+<marker id="as-grey" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#9AA8B8"/></marker>
+<marker id="ah-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#B7840A"/></marker>
+<marker id="as-acc" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#B7840A"/></marker>
+<marker id="ah-sec" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L10,5 L0,9 Z" fill="#55667D"/></marker>
+<marker id="as-sec" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,1 L0,5 L10,9 Z" fill="#55667D"/></marker>
+<pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern>
+<pattern id="mhatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="6" stroke="#9AA8B8" stroke-width="1"/></pattern>
+</defs>
+<rect width="700" height="380" fill="#FFFFFF"/>
+<rect x="220" y="130" width="300" height="120" rx="6" fill="#F4F6F9" stroke="#1E2B3A" stroke-width="2"/>
+<path d="M212,124 L172,124 Q160,124 160,136 L160,244 Q160,256 172,256 L212,256 Z" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M528,124 L560,124 Q580,124 580,190.0 Q580,256 560,256 L528,256 Z" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="212" y="120" width="8" height="140" fill="url(#mhatch)" stroke="#1E2B3A" stroke-width="1.5"/>
+<rect x="520" y="120" width="8" height="140" fill="url(#mhatch)" stroke="#1E2B3A" stroke-width="1.5"/>
+<line x1="212" y1="144.167" x2="528" y2="144.167" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="212" y1="149.167" x2="528" y2="149.167" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="212" y1="161.5" x2="528" y2="161.5" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="212" y1="166.5" x2="528" y2="166.5" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="212" y1="178.833" x2="528" y2="178.833" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="212" y1="183.833" x2="528" y2="183.833" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="212" y1="196.167" x2="528" y2="196.167" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="212" y1="201.167" x2="528" y2="201.167" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="212" y1="213.5" x2="528" y2="213.5" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="212" y1="218.5" x2="528" y2="218.5" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="212" y1="230.833" x2="528" y2="230.833" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="212" y1="235.833" x2="528" y2="235.833" stroke="#9AA8B8" stroke-width="1"/>
+<line x1="162" y1="190" x2="212" y2="190" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="270" y1="130" x2="270" y2="220" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="320" y1="160" x2="320" y2="250" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="370" y1="130" x2="370" y2="220" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="420" y1="160" x2="420" y2="250" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="470" y1="130" x2="470" y2="220" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="233.0" y1="164.0" x2="259.0" y2="164.0" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah-hot)"/>
+<line x1="263.0" y1="164.0" x2="289.0" y2="164.0" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah-hot)"/>
+<line x1="259.0" y1="216.0" x2="233.0" y2="216.0" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah-hot)"/>
+<line x1="289.0" y1="216.0" x2="263.0" y2="216.0" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah-hot)"/>
+<rect x="173" y="100" width="18" height="24" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<rect x="173" y="256" width="18" height="24" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<line x1="182" y1="76" x2="182" y2="122" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah-hot)"/>
+<line x1="182" y1="258" x2="182" y2="304" stroke="#D2552B" stroke-width="2.2" marker-end="url(#ah-hot)"/>
+<rect x="232" y="106" width="18" height="24" fill="#F4F6F9" stroke="#1E2B3A" stroke-width="1.5"/>
+<rect x="490" y="250" width="18" height="24" fill="#F4F6F9" stroke="#1E2B3A" stroke-width="1.5"/>
+<line x1="241" y1="82" x2="241" y2="128" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<line x1="499" y1="252" x2="499" y2="298" stroke="#0B7C8C" stroke-width="2.2" marker-end="url(#ah-cold)"/>
+<path d="M241.0,136.0 C245.8,152.5 256.8,233.5 270.0,235.0 C283.2,236.5 303.3,145.0 320.0,145.0 C336.7,145.0 353.3,235.0 370.0,235.0 C386.7,235.0 403.3,145.0 420.0,145.0 C436.7,145.0 456.8,218.5 470.0,235.0 C483.2,251.5 494.2,242.5 499.0,244.0" fill="none" stroke="#0B7C8C" stroke-width="1.8" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/>
+<text x="170" y="82" font-size="12" text-anchor="end" fill="#D2552B">Oil in, 110°C</text>
+<text x="170" y="97" font-size="12" text-anchor="end" fill="#D2552B">c = 1.9 kJ/kg·°C</text>
+<text x="170" y="298" font-size="12" text-anchor="end" fill="#D2552B">Oil out, 75°C</text>
+<text x="253" y="86" font-size="12" fill="#0B7C8C">Water in, 35°C</text>
+<text x="253" y="101" font-size="12" fill="#0B7C8C">68 kg/min</text>
+<text x="511" y="294" font-size="12" fill="#0B7C8C">Water out, 75°C</text>
+<text x="350" y="366" font-size="12" text-anchor="middle" fill="#55667D">1 shell pass, 2 tube passes; U = 320 W/m²·°C; A = q/(U F ΔT<tspan dy="3.6" font-size="8.6">lm,cf</tspan><tspan dy="-3.6">​</tspan>)</text>
+</svg>
