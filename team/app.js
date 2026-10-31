@@ -113,6 +113,7 @@ function detail(c, el) {
   el.innerHTML = `<div class="meta" style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag">${esc(KINDS[c.kind])}</span><span class="tag">${esc(c.author)}</span><span class="cm-dim">${esc(when(c.createdAt))}</span></div>
     <p>${partLink(c)}</p><div class="cm-text">${QB.md(c.text || '')}</div>
     ${c.hasImage ? '<div id="ph"><button class="cm-link" id="lp">Show photo</button></div>' : ''}
+    <div class="cm-row" style="margin-top:6px"><button class="btn" id="qa">Approve &amp; make public</button><button class="btn ghost" id="qd">Decline (hide)</button>${me.isAdmin ? '<button class="btn ghost" id="qx">Delete for good</button>' : ''}<span class="cm-dim" id="m0"></span></div>
     <label>Status<select id="st">${STATUSES.map(s => `<option ${c.status === s ? 'selected' : ''}>${s}</option>`).join('')}</select></label>
     <label><input type="checkbox" id="pub" ${c.public ? 'checked' : ''}> Public: every signed-in student sees it under the solution</label>
     <label>Reply to the student (shown with their comment; math as $...$)<textarea id="rp" rows="3">${esc(c.reply || '')}</textarea></label>
@@ -125,9 +126,28 @@ function detail(c, el) {
   QB.typeset(el);
   const lp = el.querySelector('#lp');
   if (lp) lp.onclick = async () => { const d = await F.getDoc(F.doc(db, 'commentImages', c.id)); el.querySelector('#ph').innerHTML = d.exists() ? `<img class="cm-img" src="${d.data().data}" alt="Attached photo">` : 'Photo missing'; };
+  const quick = async (patch, msg) => {
+    try {
+      await F.updateDoc(F.doc(db, 'comments', c.id), { ...patch, replyBy: me.email, updatedAt: F.serverTimestamp() });
+      el.querySelector('#m0').textContent = msg; setTimeout(comments, 500);
+    } catch (e) { el.querySelector('#m0').textContent = niceError(e); }
+  };
+  el.querySelector('#qa').onclick = () => quick({ status: 'approved', public: true }, 'Approved: students now see it under the solution.');
+  el.querySelector('#qd').onclick = () => quick({ status: 'declined', public: false }, 'Declined and hidden from students.');
+  const qx = el.querySelector('#qx');
+  if (qx) qx.onclick = async () => {
+    if (!confirm('Delete this comment (and its photo) permanently? This cannot be undone.')) return;
+    try {
+      if (c.hasImage) await F.deleteDoc(F.doc(db, 'commentImages', c.id)).catch(() => {});
+      await F.deleteDoc(F.doc(db, 'comments', c.id));
+      el.querySelector('#m0').textContent = 'Deleted.'; setTimeout(comments, 500);
+    } catch (e) { el.querySelector('#m0').textContent = niceError(e); }
+  };
+  el.querySelector('#st').onchange = e => { if (e.target.value === 'declined') el.querySelector('#pub').checked = false; };
+  el.querySelector('#pub').onchange = e => { if (e.target.checked && el.querySelector('#st').value === 'declined') el.querySelector('#st').value = 'approved'; };
   el.querySelector('#sv').onclick = async () => {
     try {
-      const st = el.querySelector('#st').value, pub = el.querySelector('#pub').checked;
+      const st = el.querySelector('#st').value, pub = el.querySelector('#pub').checked && el.querySelector('#st').value !== 'declined';
       await F.updateDoc(F.doc(db, 'comments', c.id), { status: pub && st === 'new' ? 'approved' : st, public: pub, reply: el.querySelector('#rp').value.trim() || null, replyBy: me.email, updatedAt: F.serverTimestamp() });
       el.querySelector('#m1').textContent = 'Saved.'; setTimeout(comments, 500);
     } catch (e) { el.querySelector('#m1').textContent = niceError(e); }
