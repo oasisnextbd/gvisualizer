@@ -32,7 +32,7 @@
 <text x="542.5" y="334" text-anchor="middle">Heat transferred, Q (or length)</text>
 <text x="366" y="175" text-anchor="middle" transform="rotate(-90 366 175)">T</text>
 <text x="532.5" y="30" text-anchor="middle" font-weight="bold">(ii) Desuperheat + condense / sensible</text>
-<path d="M420,85 L475,140 L630,140 L655,158" fill="none" stroke="#D2552B" stroke-width="2.6"/>
+<path d="M420.0,85.0 C438.3,103.3 456.7,140.0 475.0,140.0 C526.7,140.0 578.3,140.0 630.0,140.0 C638.3,140.0 646.7,152.0 655.0,158.0" fill="none" stroke="#D2552B" stroke-width="2.6"/>
 <line x1="440" y1="105" x2="452" y2="117" stroke="#D2552B" stroke-width="2.6" marker-end="url(#ah)"/>
 <line x1="610" y1="140" x2="625" y2="140" stroke="#D2552B" stroke-width="2.6" marker-end="url(#ah)"/>
 <line x1="475" y1="75" x2="475" y2="300" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="4 3"/>
