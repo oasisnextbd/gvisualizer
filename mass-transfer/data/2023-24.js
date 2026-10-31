@@ -156,7 +156,7 @@ The same holds at the bottom: $\bar{V} = V - (1-q)F$ is also proportional to F a
       parts: [
         { id: "2023-24-Q2a", label: "(a)", marks: "15",
           topic: "flash", sub: "Flash system sketch: pump, heater, valve, drum, demister",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2011-12-Q5a", "2012-13-Q6a", "2017-18-Q5b", "2018-19-Q5a", "2020-21-Q5c"],
           text: String.raw`Sketch and label a typical flash distillation system with liquid feed. State subsequently the purpose of using the pump, heater and demister.`,
           solution: String.raw`![Flash system: liquid feed, pump, heater, pressure-reducing valve, flash drum with demister, vapor and liquid products](fig/2023-24-Q2a-sol.svg)
 
@@ -238,7 +238,7 @@ Table 2: Mole fractions of ethanol at different temperatures and 1 atm
       parts: [
         { id: "2023-24-Q3a", label: "(a)", marks: "35 (a+b)",
           topic: "advanced-distillation", sub: "Minimum reflux: partial condenser, open steam, subcooled feed",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2015-16-Q2b"],
           text: String.raw`Find the minimum external reflux ratio.`,
           solution: String.raw`This is the last problem in the slides' Part C deck (Wankat 4.D-type).
 
@@ -343,7 +343,7 @@ Beyond these come excessive entrainment and flooding; at the low end, weeping an
           answer: String.raw`Bubble, foam, froth and spray regimes (then entrainment/flooding); froth is best: good mixing and efficiency with reasonable vapor capacity, away from weeping and spray/flooding.` },
         { id: "2023-24-Q4b", label: "(b)", marks: "8+8",
           topic: "column-design", sub: "Flow-pattern selection; downcomer and weir designs",
-          type: "sketch", syllabus: "in", repeats: ["2022-23-Q1b"],
+          type: "sketch", syllabus: "in", repeats: ["2012-13-Q4d", "2021-22-Q4c", "2022-23-Q1b"],
           text: String.raw`In addition to choosing the type of tray, the designer of a distillation column must select the flow pattern on the trays and design the weirs and downcomers.
 
 i. Show graphically the selection guide of appropriate flow pattern for sieve trays.
@@ -377,7 +377,7 @@ ii. Draw the possible designs for downcomer and weir.`,
           answer: String.raw`(i) Reverse flow at low liquid rates, cross flow for average, double pass then four-pass at high rates/large D. (ii) Downcomers: circular pipe, straight segmental (most common), sloped segmental, envelope; weirs: straight, adjustable (avoid), notched.` },
         { id: "2023-24-Q4c", label: "(c)", marks: "6",
           topic: "column-design", sub: "Sieve tray geometry sketch",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2011-12-Q8e"],
           text: String.raw`With a hand-drawing, show the tray geometry for a typical sieve tray in distillation columns.`,
           solution: String.raw`![Cross-flow sieve tray: side view with downcomers, outlet weir, froth and tray spacing; top view with inlet area, perforated active area and segmental downcomer](fig/2023-24-Q4c-sol.svg)
 
@@ -444,7 +444,7 @@ To get **better separation** from two feeds of different concentration you must 
           answer: String.raw`In one equilibrium stage only the overall mixing point M matters, so all streams can simply be mixed together; better separation needs a countercurrent cascade with the feeds kept separate (two-feed extractor).` },
         { id: "2023-24-Q5c", label: "(c)", marks: "5",
           topic: "leaching", sub: "Assumptions for constant underflow and overflow in washing",
-          type: "theory", syllabus: "in", repeats: ["2022-23-Q4b"],
+          type: "theory", syllabus: "in", repeats: ["2015-16-Q8b", "2016-17-Q8a", "2017-18-Q2a", "2022-23-Q4b"],
           text: String.raw`What assumptions should we make if we wish to have underflow and overflow liquid flow-rates equal in washing? Explain the reasons.`,
           solution: String.raw`The underflow liquid rate is (per unit dry solids S)
 
@@ -612,7 +612,7 @@ $$N = \frac{\ln\left[\frac{x_0}{x_N}\left(1-\frac{U}{O}\right)+\frac{U}{O}\right
           answer: String.raw`U = 146 kg/h per 1000 kg/h wet sand; taking O = 500 kg/h (misprint), y₁ = 0.014 wt% salt; about 2.4 stages (Kremser 2.35) → 3 countercurrent stages.` },
         { id: "2023-24-Q7b", label: "(b)", marks: "6",
           topic: "leaching", sub: "Leaching vs washing",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2012-13-Q2a", "2017-18-Q2b"],
           text: String.raw`How does leaching differ from washing? Explain.`,
           solution: String.raw`| | Washing | Leaching (solid–liquid extraction) |
 |---|---|---|
@@ -626,7 +626,7 @@ Washing can be seen as a **special case of leaching** in which the solute only h
           answer: String.raw`In washing the solute is in the entrained liquid and is displaced (y = x, constant solids flow, fast); in leaching it is part of the solid and must dissolve and diffuse out (y ≠ x, varying solids flow, slow, effective m_E).` },
         { id: "2023-24-Q7c", label: "(c)", marks: "6",
           topic: "leaching", sub: "Why an effective equilibrium constant in leaching",
-          type: "theory", syllabus: "in", repeats: ["2022-23-Q1e"],
+          type: "theory", syllabus: "in", repeats: ["2018-19-Q2b", "2022-23-Q1e"],
           text: String.raw`Why do we have to use effective equilibrium constant in leaching? Explain.`,
           solution: String.raw`The simple leaching analysis assumes **no liquid entrained with the solid** and **equilibrium stages**. In practice both are faulty:
 

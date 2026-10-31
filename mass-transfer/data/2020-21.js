@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2020-21-Q1a", label: "(a)", marks: "10",
           topic: "column-design", sub: "Valve trays: turndown and flexibility",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2011-12-Q8b", "2012-13-Q4b", "2016-17-Q5e"],
           text: String.raw`"The main advantage of a valve tray over other trays is it offers a better turndown ratio and is more flexible" — justify this statement.`,
           solution: String.raw`**Turndown ratio** = (maximum vapor rate at which the tray works acceptably) / (minimum vapor rate at which it still works acceptably). At the top end the limit is flooding or entrainment. At the bottom end it is weeping or dumping and the efficiency loss that follows.
 
@@ -171,7 +171,7 @@ The quick textbook estimate $N \times S = 4 \times 1.5 = 6$ ft counts one tray s
       parts: [
         { id: "2020-21-Q3a", label: "(a)", marks: "10",
           topic: "immiscible-extraction", sub: "Solvent selection with sustainability",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2017-18-Q4a", "2022-23-Q3a"],
           text: String.raw`In recent years sustainability has become one of the main concerns in chemical process design. How would you select a solvent if sustainability needs to be considered in designing an extraction process?`,
           solution: String.raw`**Technical criteria (slides)**
 - **High distribution coefficient** $K_D = y/x$ for the desired solute, which gives a low solvent rate and few stages.
@@ -226,7 +226,7 @@ A solute-free mass-ratio calculation ($X = x/(1-x)$, $F_D = 398$, $F_S = 199.98$
       parts: [
         { id: "2020-21-Q4", label: "", marks: "35",
           topic: "partial-extraction", sub: "Countercurrent extraction on a right triangle: solubility curve, Δ point, extract composition",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2013-14-Q4"],
           text: String.raw`Pure isopropyl ether (C) of 450 kg/h is being used to extract an aqueous solution of 150 kg/h with 30 wt% acetic acid (A) and 70% water (B) by countercurrent multistage extraction. The equilibrium data at 20°C, 1 atm, are given in the table. The desired exit acetic acid concentration in the aqueous phase is 4%.
 (a) In a right-angle triangle, plot the solubility curve.
 (b) Locate the delta point.
@@ -339,7 +339,7 @@ This is exact if α is constant. For an ideal (Raoult's law) system $\alpha = P_
           answer: String.raw`Data include non-ideality, varying α, azeotropes and pinches. The α equation is a symmetric ideal-solution curve, adequate only when α is nearly constant (e.g. benzene–toluene); it fails for alcohol–water.` },
         { id: "2020-21-Q5c", label: "(c)", marks: "5+5",
           topic: "flash", sub: "Flash process sketch and role of the heater",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2011-12-Q5a", "2012-13-Q6a", "2017-18-Q5b", "2018-19-Q5a", "2023-24-Q2a"],
           text: String.raw`Sketch the basic flash distillation process and rationalize the use of a heater in this process.`,
           solution: String.raw`![Flash system: feed pumped to high pressure, heated, throttled through a valve into a drum with demister; vapor V, y leaves the top and liquid L, x the bottom](fig/2020-21-Q5c-sol.svg)
 
@@ -353,7 +353,7 @@ This is exact if α is constant. For an ideal (Raoult's law) system $\alpha = P_
           answer: String.raw`Pump → heater → valve → drum (demister, V at top, L at bottom). The heater adds the enthalpy that the isenthalpic valve converts into vaporization; $Q_H$ sets $h_F$ and so V/F.` },
         { id: "2020-21-Q5d", label: "(d)", marks: "10",
           topic: "flash", sub: "Benzene–toluene flash with α = 2.4",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2016-17-Q2a"],
           text: String.raw`A mixture that is 40 mole % benzene and 60 mole % toluene is to be flashed in a flash distillation system. Feed is 100 kg moles/day. We desire a liquid product that is 30 mole % benzene. The relative volatility is 2.4. Determine (i) vapor composition, (ii) liquid flow rate.`,
           solution: String.raw`**Given:** $z = 0.40$, $F = 100$ kmol/day, $x = 0.30$, $\alpha = 2.4$.
 
@@ -378,7 +378,7 @@ $$L = F(1 - V/F) = 100(0.517) = 51.7\ \mathrm{kmol/day}, \qquad V = 48.3\ \mathr
       parts: [
         { id: "2020-21-Q6a", label: "(a)", marks: "8",
           topic: "column-balances", sub: "Purposes of reflux and boilup",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2016-17-Q1b"],
           text: String.raw`What are the purposes of reflux and boilup?`,
           solution: String.raw`**Background (slides, cascade to column):** a simple flash cascade gives a pure top product only with large losses of intermediate streams. Returning streams countercurrently removes those losses. Reflux and boilup are the end versions of these returned streams.
 
@@ -448,7 +448,7 @@ A mass-basis comparison would be misleading (ethanol 838 against water 2257 kJ/k
           answer: String.raw`CMO means L and V are constant within each section; it holds when molar λ is equal, sensible heat and heat of mixing are negligible, and the column is adiabatic. It makes the operating lines straight. Check: ethanol–water λ = 38.6 against 40.7 MJ/kmol (within 5%), so CMO is valid.` },
         { id: "2020-21-Q6d", label: "(d)", marks: "6+6",
           topic: "mccabe-thiele", sub: "Feed-line slopes: superheated vapor and subcooled liquid",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2011-12-Q6a"],
           text: String.raw`Show the flow profile, calculate the feed line slope, and compare the feed lines for the following cases:
 (i) A superheated vapor feed where 1 mole of liquid will vaporize on the feed stage for each 9 moles of feed input.
 (ii) A liquid feed subcooled by 35°F. Average liquid heat capacity is 30 Btu/lb-mole·°F and λ = 15000 Btu/lb-mole.`,
@@ -485,7 +485,7 @@ $$q = \frac{H - h_F}{H - h} = \frac{\lambda + C_p\Delta T}{\lambda} = 1 + \frac{
       parts: [
         { id: "2020-21-Q7a", label: "(a)", marks: "23",
           topic: "mccabe-thiele", sub: "Ethanol–propanol, α = 2.1, L/D = 3, q = 0.4: stages and feed",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2016-17-Q3a"],
           text: String.raw`Find the number of stages and the best feed location for a column separating ethanol and propanol, α = 2.1. Feed composition = 0.48, $x_D$ = 0.96, $x_B$ = 0.04. Constant molal overflow can be assumed, and reflux is a saturated liquid. Column has a total condenser and a partial reboiler. Pressure is 101.3 kPa. Reflux ratio and feed quality are 3 and 0.4, respectively.`,
           solution: String.raw`**Given:** $\alpha = 2.1$, $z = 0.48$, $x_D = 0.96$, $x_B = 0.04$, $L/D = 3$, $q = 0.4$; total condenser, partial reboiler.
 
@@ -569,7 +569,7 @@ $$E_{MV} = \frac{y_n - y_{n+1}}{y_n^* - y_{n+1}}$$
       parts: [
         { id: "2020-21-Q8a", label: "(a)", marks: "6",
           topic: "batch", sub: "Advantages of batch over continuous distillation",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2013-14-Q3a", "2015-16-Q7a", "2022-23-Q8a"],
           text: String.raw`Discuss the advantages of batch distillation compared to continuous distillation.`,
           solution: String.raw`- **Flexibility:** one column can separate many different feeds and products at different times (campaigns). Product purity can be changed simply by changing the reflux policy.
 - **Small or occasional throughput:** economical when the amount is small, or when distillation is needed only occasionally or the plant does not run continuously (a batch is finished in one or two shifts, 8–16 h).
@@ -583,7 +583,7 @@ The disadvantages, for balance: more energy per kmol of product for multistage s
           answer: String.raw`Flexible (many products in one column), suited to small or occasional or varying feeds, several cuts from one column, handles dirty residues, low capital cost, and batch traceability.` },
         { id: "2020-21-Q8b", label: "(b)", marks: "6",
           topic: "batch", sub: "Energy use: batch vs continuous",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2016-17-Q1g"],
           text: String.raw`Assuming that either batch or continuous distillation could be used, which would use less energy? Explain why.`,
           solution: String.raw`**For multistage (column) separations, continuous distillation uses less energy.**
 - A continuous column runs at steady state at a chosen reflux close to the optimum (1.05–1.25 $R_{min}$). Its feed enters at the optimum stage, and heat integration is possible (feed–bottoms exchange, heat pumps).
@@ -597,7 +597,7 @@ So the slide question "which systems need less energy in batch?" is answered by 
           answer: String.raw`Multistage: continuous uses less (steady optimum reflux, heat integration; batch needs rising reflux and reheating). Single-stage: simple batch and batch steam distillation use less than their continuous counterparts (slide answer: "a and c").` },
         { id: "2020-21-Q8c", label: "(c)", marks: "23",
           topic: "batch", sub: "Methanol–water batch, still + 1 stage, constant L0/D = 1.85: Rayleigh",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2015-16-Q7b"],
           text: String.raw`We wish to use a distillation system with a still pot plus a column with one equilibrium stage to batch distill a mixture of methanol and water. A total condenser is used. The feed is 57 mole % methanol. We desire a final bottoms concentration of 15 mole % methanol. Pressure is 1 atm. Reflux is a saturated liquid, and $L_0/D$ is constant at 1.85. Find $W_{final}$, D, and $x_{D,avg}$. Calculate on the basis of 1 kg mole of feed.
 
 VLE data for methanol–water, mole % methanol at 1 atm:

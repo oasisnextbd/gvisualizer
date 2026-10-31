@@ -111,7 +111,7 @@ $$
       parts: [
         { id: "2013-14-Q3a", label: "(a)", marks: "15",
           topic: "batch", sub: "Batch vs continuous distillation; which industries use which",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2015-16-Q7a", "2020-21-Q8a", "2022-23-Q8a"],
           text: String.raw`Discuss the advantages and disadvantages of batch distillation compared to continuous distillation. Would you expect to see batch or continuous distillation in the following industries? Why?
 
 (i) Large basic chemical plant
@@ -179,7 +179,7 @@ This is the equilibrium relation of a washing stage. With constant underflow U a
       parts: [
         { id: "2013-14-Q4", label: "", marks: "35",
           topic: "partial-extraction", sub: "Countercurrent extraction, acetic acid–water–isopropyl ether: Smin, N, extract",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2020-21-Q4"],
           text: String.raw`Pure isopropyl ether is being used to extract an aqueous solution of 150 kg/h with 30 wt% acetic acid and 70 wt% water by countercurrent multi-stage extraction. The exit concentration in the aqueous phase is 10 wt%.
 
 (a) Find the minimum isopropyl ether rate for this separation.
@@ -260,7 +260,7 @@ A mixture of benzene and toluene containing 40 mole percent benzene is to be sep
       parts: [
         { id: "2013-14-Q5a", label: "(a)", marks: "5",
           topic: "mccabe-thiele", sub: "Is CMO valid? Check with enthalpy data",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2016-17-Q1c"],
           text: String.raw`Given the above data can you make the assumption of constant molal overflow for this unit? Give your reasoning.`,
           solution: String.raw`CMO needs (1) equal molar latent heats, (2) negligible sensible-heat changes and heat of mixing, (3) adiabatic column, constant pressure. Check (1) with the table, $\lambda = H - h$:
 
@@ -347,7 +347,7 @@ Fraction of stage 7 $= (0.1654 - 0.10)/(0.1654 - 0.0872) = 0.84$.
       parts: [
         { id: "2013-14-Q6a", label: "(a)", marks: "10",
           topic: "flash", sub: "Reusing existing distillation equipment and flash drums",
-          type: "theory", syllabus: "partial", repeats: [],
+          type: "theory", syllabus: "partial", repeats: ["2015-16-Q4c"],
           text: String.raw`What are the reasons for reusing old distillation equipment? What conditions must be fulfilled to reuse an existing flash drum? List some steps you can take to reuse an existing flash drum if the above condition is not fulfilled?`,
           solution: String.raw`> From Wankat section 2.10 (Using existing flash drums) and 4.13 (New uses for old columns); not in the current slides.
 
@@ -375,7 +375,7 @@ $$
           answer: String.raw`Reuse because cheaper and faster; drum must be sound and have V_max ≥ (V/F)F; otherwise add demister/chevrons, cut feed or V/F, drums in parallel or series, raise pressure, or buy a new drum.` },
         { id: "2013-14-Q6b", label: "(b)", marks: "25",
           topic: "flash", sub: "Methanol–water flash: V/F, products, vertical drum size",
-          type: "numerical", syllabus: "partial", repeats: [],
+          type: "numerical", syllabus: "partial", repeats: ["2021-22-Q6b"],
           text: String.raw`A mixture of methanol and water in a flash drum is at 1 atm pressure. Equilibrium data at this pressure are listed as follows. (The data are in mole percentages)
 
 | methanol vapor | 0 | 13.4 | 23.0 | 30.4 | 36.5 | 41.8 | 51.7 | 57.9 | 66.5 | 72.9 | 77.9 | 82.5 | 87.0 | 91.5 | 95.8 | 97.9 | 100 |

@@ -89,7 +89,7 @@ $$K_{ref} = \sum_i \frac{y_i}{\alpha_i}, \qquad x_i = \frac{y_i/\alpha_i}{\sum_j
       parts: [
         { id: "2011-12-Q2a", label: "(a)", marks: "15",
           topic: "absorption", sub: "Kremser–Souders–Brown (KSB) equation: derivation and assumptions",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2012-13-Q1a", "2015-16-Q8a"],
           text: String.raw`What is KSB equation? Derive an expression for calculating the number of stages in gas-liquid absorption. Write down the assumptions you have to make.`,
           solution: String.raw`**KSB equation** = Kremser–Souders–Brown equation (Kremser 1930; Souders and Brown 1932). It is the analytical solution of the stage-by-stage balances for a countercurrent cascade with a straight operating line and a straight equilibrium line. It gives the number of equilibrium stages without drawing a McCabe–Thiele diagram.
 
@@ -300,7 +300,7 @@ $$V_{j+1} = V_1 + L_j - 35, \qquad y_{j+1} = \frac{V_1 y_1 + L_j y_j - 35}{V_{j+
       parts: [
         { id: "2011-12-Q5a", label: "(a)", marks: "10",
           topic: "flash", sub: "Basic flash distillation process (sketch and explanation)",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2012-13-Q6a", "2017-18-Q5b", "2018-19-Q5a", "2020-21-Q5c", "2023-24-Q2a"],
           text: String.raw`Sketch and explain the basic flash distillation process.`,
           solution: String.raw`![Flash distillation: pump, heater, valve, flash drum with demister](fig/2011-12-Q5a-sol.svg)
 
@@ -356,7 +356,7 @@ so $V/F = 1/3$. The operating line slope is $-L/V = -2$.
       parts: [
         { id: "2011-12-Q6a", label: "(a)", marks: "5×3=15",
           topic: "mccabe-thiele", sub: "Feed-line slopes: two-phase, superheated vapor, subcooled liquid",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2020-21-Q6d"],
           text: String.raw`Calculate the feed line slope for the following cases and show them on a y–x diagram.
 
 (i) A two-phase feed where 60% of the feed is vaporized under column conditions.
@@ -546,7 +546,7 @@ $$x_{D,avg} = \frac{F x_F - W x_W}{D} = \frac{20.0 - 74.0(0.03)}{26.0} = 0.684$$
           answer: String.raw`The R that minimizes total annual cost (capital falls with R while energy rises). Typically $R_{opt} \approx 1.05$–$1.25\,R_{min}$.` },
         { id: "2011-12-Q8b", label: "(b)", marks: "5",
           topic: "column-design", sub: "Sieve vs bubble-cap vs valve trays",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2012-13-Q4b", "2016-17-Q5e", "2020-21-Q1a"],
           text: String.raw`Compare the relative advantages and disadvantages of sieve, bubble cap and valve tray.`,
           solution: String.raw`| feature | sieve | valve | bubble-cap |
 |---|---|---|---|
@@ -591,7 +591,7 @@ where $x_n^*$ is in equilibrium with $y_n$.
           answer: String.raw`$E_{MV} = (y_n - y_{n+1})/(y_n^* - y_{n+1})$ and $E_{ML} = (x_{n-1} - x_n)/(x_{n-1} - x_n^*)$. They assume well-mixed liquid and vapor, and they fail for large trays with gradients ($E_{MV} > 1$), entrainment and weeping, and multicomponent systems.` },
         { id: "2011-12-Q8d", label: "(d)", marks: "6",
           topic: "column-design", sub: "Types of downcomers and weirs (schematics)",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2016-17-Q5a"],
           text: String.raw`Draw the schematic diagrams of different types of down comers and weirs.`,
           solution: String.raw`![Downcomers: circular pipe, straight segmental, sloped segmental, envelope; weirs: straight, adjustable, notched](fig/2011-12-Q8d-sol.svg)
 
@@ -610,7 +610,7 @@ where $x_n^*$ is in equilibrium with $y_n$.
           answer: String.raw`Downcomers: circular pipe, straight segmental (most common), sloped segmental and envelope. Weirs: straight (2–4 in), adjustable (avoid) and notched (low liquid rates).` },
         { id: "2011-12-Q8e", label: "(e)", marks: "6",
           topic: "column-design", sub: "Sieve tray geometry (layout sketch)",
-          type: "sketch", syllabus: "partial", repeats: [],
+          type: "sketch", syllabus: "partial", repeats: ["2023-24-Q4c"],
           text: String.raw`Show sieve tray geometry with a neat sketch.`,
           solution: String.raw`> The slides show the cross-flow sieve tray anatomy. The layout numbers below are from Wankat §10.5 (Figure 10-20, Eqs. 10-20 to 10-22).
 
@@ -628,7 +628,7 @@ where $x_n^*$ is in equilibrium with $y_n$.
           answer: String.raw`Cross-flow tray: segmental inlet and outlet downcomers (about 10–15% of area each), triangular-pitch holes (d_o 1/8–1 in, pitch 2.5–5 d_o, β ≈ 10%), calming zones, and an outlet weir 2–4 in high with $l_w/D$ 0.6–0.75.` },
         { id: "2011-12-Q8f", label: "(f)", marks: "6",
           topic: "column-design", sub: "Pressure heads on a sieve tray and downcomer backup",
-          type: "sketch", syllabus: "partial", repeats: [],
+          type: "sketch", syllabus: "partial", repeats: ["2012-13-Q4e", "2015-16-Q4d"],
           text: String.raw`Show different pressure heads on a sieve tray with a neat sketch.`,
           solution: String.raw`> The slides list "pressure drop, downcomer backup" in the hydraulics roadmap. The detail below follows Wankat Figure 10-21 and Eq. 10-23.
 

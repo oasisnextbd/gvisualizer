@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2012-13-Q1a", label: "(a)", marks: "12",
           topic: "absorption", sub: "Kremser equation: assumptions, applicability, advantages",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2011-12-Q2a", "2015-16-Q8a"],
           text: String.raw`Write a short note on 'Kremser Equation' of absorption-stripping indicating the assumptions, applicability and advantages.`,
           solution: String.raw`The Kremser equation is the analytical solution of the stage-by-stage balances for a countercurrent cascade when **both the operating line and the equilibrium line are straight**. It replaces McCabe–Thiele stepping by one formula.
 
@@ -85,7 +85,7 @@ $$
       parts: [
         { id: "2012-13-Q2a", label: "(a)", marks: "15",
           topic: "leaching", sub: "Washing vs leaching: principle, operation, equilibrium, operating line",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2017-18-Q2b", "2023-24-Q7b"],
           text: String.raw`Make a comparison between 'Washing' and 'Leaching' on the basis of principle, operation, equilibrium relationship and operating equation.`,
           solution: String.raw`| basis | Washing | Leaching (solid–liquid extraction) |
 |---|---|---|
@@ -226,7 +226,7 @@ $$
           answer: String.raw`Efficiency is low at weeping, rises to a maximum near the design velocity, then drops steeply with excessive entrainment and flooding.` },
         { id: "2012-13-Q4b", label: "(b)", marks: "12",
           topic: "column-design", sub: "Sieve vs bubble-cap vs valve trays",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2011-12-Q8b", "2016-17-Q5e", "2020-21-Q1a"],
           text: String.raw`Discuss the relative advantages and disadvantages of sieve, bubble cap and valve trays used in distillation column.`,
           solution: String.raw`| feature | sieve tray | valve tray | bubble-cap tray |
 |---|---|---|---|
@@ -266,7 +266,7 @@ $$
           answer: String.raw`O'Connell gives overall efficiency E_o from αμ (feed viscosity × relative volatility at average conditions) to convert equilibrium stages to real trays; conservative for sieve and valve trays.` },
         { id: "2012-13-Q4d", label: "(d)", marks: "5",
           topic: "column-design", sub: "Flow pattern selection guide for sieve trays",
-          type: "sketch", syllabus: "partial", repeats: [],
+          type: "sketch", syllabus: "partial", repeats: ["2021-22-Q4c", "2022-23-Q1b", "2023-24-Q4b"],
           text: String.raw`Draw the diagram which can be used as a guide to select proper flow pattern for sieve trays.`,
           solution: String.raw`> The slides explain cross-flow, multipass and reverse flow; the selection chart itself is Wankat Fig. 10-4 (Huang and Hodson, 1958). The boundaries below are approximate readings of that chart.
 
@@ -280,7 +280,7 @@ $$
           answer: String.raw`Liquid rate vs diameter chart: reverse flow at low liquid rate, cross flow in the middle, double (multi) pass at high liquid rate in large columns.` },
         { id: "2012-13-Q4e", label: "(e)", marks: "5",
           topic: "column-design", sub: "Pressure heads on a sieve tray",
-          type: "sketch", syllabus: "partial", repeats: [],
+          type: "sketch", syllabus: "partial", repeats: ["2011-12-Q8f", "2015-16-Q4d"],
           text: String.raw`Show different pressure heads on a sieve tray with a neat sketch.`,
           solution: String.raw`> Listed in the slides' hydraulics topics; the sketch and equation follow Wankat Fig. 10-21 and Eq. (10-23).
 
@@ -382,7 +382,7 @@ $$
       parts: [
         { id: "2012-13-Q6a", label: "(a)", marks: "10",
           topic: "flash", sub: "Flash distillation system: schematic and working",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2011-12-Q5a", "2017-18-Q5b", "2018-19-Q5a", "2020-21-Q5c", "2023-24-Q2a"],
           text: String.raw`Draw the schematic diagram of a flash distillation system. Label the diagram and describe the working principle.`,
           solution: String.raw`![Flash distillation system: pump, heater, throttling valve, flash drum with demister, vapor and liquid products](fig/2012-13-Q6a-sol.svg)
 
@@ -570,7 +570,7 @@ If even total reflux cannot meet the specs, only more stages or a change in α (
           answer: String.raw`Operate: higher or variable reflux, slower boilup, cut/recycle fractions, change pressure, relax specs; equipment: more or better stages/packing, bigger condenser and reboiler, columns in series, hybrid processes.` },
         { id: "2012-13-Q8c", label: "(c)", marks: "15",
           topic: "advanced-distillation", sub: "Zero reflux, below minimum reflux, total reflux on McCabe–Thiele",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2021-22-Q5c", "2022-23-Q6b"],
           text: String.raw`What happens if we use (i) zero reflux; (ii) less than minimum reflux; (iii) total reflux in distillation operation? Explain with the help of McCabe-Thiele diagram.`,
           solution: String.raw`![Three McCabe–Thiele sketches: zero reflux, reflux below minimum, total reflux](fig/2012-13-Q8c-sol.svg)
 

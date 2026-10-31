@@ -63,7 +63,7 @@ Heuristics (slides): 1–2 stages → mixer-settler; 3–5 → sieve tray, packe
           answer: String.raw`Liquid–liquid systems have small Δρ, need energy to disperse and time to coalesce, risk emulsions, and vary widely in properties and stage needs. Hence mixer-settlers, static columns, agitated or pulsed columns, centrifugal and membrane contactors, against essentially trays or packing for V–L.` },
         { id: "2021-22-Q1d", label: "(d)", marks: "7",
           topic: "partial-extraction", sub: "Difference point when R1 = E0",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2017-18-Q3a", "2022-23-Q1d"],
           text: String.raw`Consider a right triangular equilibrium diagram for a partially miscible extraction system. When $E_0 > R_1$ the difference point is on the left side of the diagram; and when $R_1 > E_0$ the difference point is on the right of the diagram. What happens when $R_1 = E_0$? Answer the question using a logical argument.`,
           solution: String.raw`**Definition (slides):** $\Delta = E_0 - R_1 = E_j - R_{j+1} = E_N - R_{N+1}$, a fictitious stream with coordinates
 
@@ -116,7 +116,7 @@ Typical example (slides): natural gas or refinery gas sweetening. An amine absor
           answer: String.raw`To regenerate and recycle the (costly) solvent and recover the solute. The absorber runs at high P and low T, the stripper at low P and high T with heat exchange, as in amine gas sweetening.` },
         { id: "2021-22-Q2b", label: "(b)", marks: "10",
           topic: "absorption", sub: "Absorber vs stripper comparison",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2016-17-Q6c", "2017-18-Q1a", "2018-19-Q1a", "2022-23-Q2a"],
           text: String.raw`Make a comparison between the absorption and stripping process in direction of mass transfer, relative position of equilibrium and operating lines and basis for the determination of column diameter.`,
           solution: String.raw`| Aspect | Absorption | Stripping (desorption) |
 |---|---|---|
@@ -135,7 +135,7 @@ Typical example (slides): natural gas or refinery gas sweetening. An amine absor
           answer: String.raw`Absorption moves solute gas → liquid, with the operating line above equilibrium and the pinch at the bottom ($L_{min}$). Stripping moves liquid → gas, with the operating line below equilibrium and the pinch at the top ($V_{min}$). Both are sized like distillation at the end with the largest total gas flow.` },
         { id: "2021-22-Q2c", label: "(c)", marks: "18",
           topic: "absorption", sub: "CO2 stripper with N2, Murphree efficiency 40%",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2018-19-Q1c"],
           text: String.raw`We wish to design a stripping column to remove carbon dioxide from water. This is done by heating the water and passing it counter-current to a nitrogen stream in a staged stripper. Operation is isothermal and isobaric at 60°C and 1 atm pressure. The water contains $9.2\times10^{-6}$ mole fraction CO₂ and flows at 100,000 lb/hr. Nitrogen (N₂) enters the column as pure nitrogen and flows at 2500 ft³/hr. Nitrogen is at 1 atm and 60°C. We desire an outlet water concentration that is $2\times10^{-7}$ mole fraction CO₂. Ignore nitrogen solubility in water and ignore the volatility of the water. The respective Henry's law constant, H at 60°C is 3410 atm/mole fraction. Use a Murphree vapor efficiency of 40%. Determine the outlet vapor composition and number of real stages needed.`,
           solution: String.raw`**Given:** $x_0 = 9.2\times10^{-6}$, $x_N = 2\times10^{-7}$, $y_{N+1} = 0$; water 100,000 lb/h; N₂ 2500 ft³/h at 60°C and 1 atm; H = 3410 atm/mole frac (also Wankat Table 12-1); $E_{MV} = 0.40$.
 
@@ -178,7 +178,7 @@ This gives about 5.06 real stages, so 6 trays, matching Kremser.
       parts: [
         { id: "2021-22-Q3a", label: "(a)", marks: "6",
           topic: "immiscible-extraction", sub: "Choosing extractor type",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2016-17-Q7a", "2018-19-Q4a"],
           text: String.raw`Propose appropriate extractor type for the followings: (i) liquids containing suspended solids (ii) liquids with high viscosity (iii) corrosive material`,
           solution: String.raw`| Duty | Suitable extractors | Avoid | Reason |
 |---|---|---|---|
@@ -190,7 +190,7 @@ General heuristics (slides): 1–2 stages → mixer-settler; 3–5 → sieve tra
           answer: String.raw`(i) Mixer-settler (or Karr/pulsed column); (ii) mechanically agitated: mixer-settler, RDC or Karr (centrifugal if Δρ is small); (iii) no moving parts: packed or spray columns in resistant materials, or pulsed sieve-plate columns.` },
         { id: "2021-22-Q3b", label: "(b)", marks: "17",
           topic: "immiscible-extraction", sub: "Acetic acid into 3-heptanol, countercurrent Kremser (slide D4)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2017-18-Q3b"],
           text: String.raw`We have a mixture of acetic acid in water and wish to extract this with 3-heptanol at 25°C. Equilibrium is (wt fraction acetic acid in solvent)/(wt fraction acetic acid in water) = 0.828. The inlet water solution flows at 550 lb/hr and is 0.0097 wt fraction acetic acid. We desire an outlet water concentration of 0.00046 wt fraction acetic acid. The solvent flow rate is 700 lb/hr. The entering solvent contains 0.0003 wt fraction acetic acid. Determine the outlet solvent concentration and the number of equilibrium stages required. Is this an economical way to extract acetic acid?`,
           solution: String.raw`**Given:** $R = 550$ lb/h, $x_0 = 0.0097$, $x_N = 0.00046$; $E = 700$ lb/h, $y_{N+1} = 0.0003$; $y = 0.828x$.
 
@@ -281,7 +281,7 @@ $$y_{j+1} = \frac{U}{O}x_j + \left(y_{N+1} - \frac{U}{O}x_N\right)$$
           answer: String.raw`Solid properties (porosity ε, $\rho_s$, settling, i.e. liquid entrained per kg solid) set the underflow $U = (\text{solids})\,\varepsilon\rho_f/[(1-\varepsilon)\rho_s]$. The solids rate appears only implicitly through U, in the operating-line slope U/O (equilibrium stays y = x).` },
         { id: "2021-22-Q4b", label: "(b)", marks: "12",
           topic: "leaching", sub: "Sugar leaching, 11 stages, effective mE = 1.18: Kremser recovery",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2017-18-Q2c"],
           text: String.raw`In the leaching of sugar from sugar cane, water is used as the solvent. Typically about 11 stages are used in a countercurrent Rotocel or other leaching system. On a volumetric basis, liquid flow rate/solid flow rate = 0.95. The effective equilibrium constant is $m_E$ = 1.18, where $m_E$ = (concentration, g/liter, in liquid)/(concentration, g/liter, in solid). If pure water is used as the inlet solvent, predict the recovery of sugar in the solvent.`,
           solution: String.raw`**Given:** N = 11; $F_{solv}/F_{solid} = 0.95$ (volumetric); $y = m_Ex$ with $m_E = 1.18$ (g/L basis); $y_{N+1} = 0$.
 
@@ -303,7 +303,7 @@ $$\frac{x_N}{x_0} = \frac{1 - 1.121}{1 - 1.121^{12}} = \frac{-0.121}{1 - 3.938} 
           answer: String.raw`$m_EF_{solv}/F_{solid} = 1.121$; $x_N/x_0 = 0.041$; recovery of sugar ≈ 95.9%.` },
         { id: "2021-22-Q4c", label: "(c)", marks: "6+4",
           topic: "column-design", sub: "Choosing liquid flow pattern (graph) and best way to get overall efficiency",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2012-13-Q4d", "2022-23-Q1b", "2023-24-Q4b"],
           text: String.raw`In the context of staged distillation column design, answer the followings: (i) How to find the appropriate liquid flow patterns for a given condition/problem? [Show graphically]. (ii) State briefly the best way to determine overall column efficiency.`,
           solution: String.raw`### (i) Liquid flow pattern
 - The two variables are the **liquid flow rate** (gal/min) and the **tower diameter** (ft, set by the vapor load from the flooding calculation).
@@ -356,7 +356,7 @@ $$x = \frac{95.635/46.07}{95.635/46.07 + 4.365/18.015} = \frac{2.0759}{2.0759 + 
           answer: String.raw`95.6 wt% (x = 0.894) is the minimum-boiling azeotrope: y = x and α = 1 there, so ordinary distillation at 1 atm cannot cross it; entrainers, pressure swing, sieves or membranes are needed.` },
         { id: "2021-22-Q5c", label: "(c)", marks: "7",
           topic: "advanced-distillation", sub: "Total reflux and minimum reflux on McCabe–Thiele",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2012-13-Q8c", "2022-23-Q6b"],
           text: String.raw`Explain total reflux and minimum reflux with the help of McCabe Thiele diagrams.`,
           solution: String.raw`### Total reflux (R = L/D = ∞)
 - All the overhead is returned and all the boilup is kept: $D = B = 0$ and F = 0 at steady state.
@@ -376,7 +376,7 @@ $$R_{min} = \frac{(L/V)_{min}}{1 - (L/V)_{min}} = 1.10$$
           answer: String.raw`Total reflux: D = B = 0, both operating lines on y = x, giving $N_{min}$. Minimum reflux: the operating line touches the equilibrium curve (pinch at the feed line or a tangent point), giving N → ∞; $R_{min} = (L/V)_{min}/[1-(L/V)_{min}]$.` },
         { id: "2021-22-Q5d", label: "(d)", marks: "7",
           topic: "batch", sub: "Variable reflux batch distillation for constant xD",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2022-23-Q8b"],
           text: String.raw`Explain the steps that can be followed to obtain constant distillate composition using batch distillation column with proper diagrams.`,
           solution: String.raw`As the still-pot liquid is depleted of the light component, a fixed number of stages with fixed L/V would give a falling $x_D$. To **hold $x_D$ constant the reflux ratio must increase during the run** (variable reflux).
 
@@ -457,7 +457,7 @@ $$u_{perm} = K_{drum}\sqrt{(\rho_L - \rho_V)/\rho_V}$$
           answer: String.raw`Read each labelled tie line's ends: on the boiling line gives (T, x), on the dew line gives (T, y); use the auxiliary line for intermediate T. Plot T–x and T–y on one graph: e.g. 89°C: 0.17/0.62; 84°C: 0.34/0.73; 80.7°C: 0.63/0.80 wt frac; azeotrope 0.956 at about 78°C.` },
         { id: "2021-22-Q6b", label: "(b)", marks: "20",
           topic: "flash", sub: "Methanol–water flash for x = 0.20 and horizontal drum sizing (h/D = 4)",
-          type: "numerical", syllabus: "partial", repeats: [],
+          type: "numerical", syllabus: "partial", repeats: ["2013-14-Q6b"],
           text: String.raw`We are separating a mixture of methanol and water in a flash drum at 1 atm pressure. If the feed is 30 mol% methanol and we desire a liquid product that is 20 mol% methanol, what V/F must be used? For a feed rate of 1000 lbmol/h, determine product flow rates and composition. The equilibrium data are attached (y–x figure for methanol–water at 1 atm). Now, you are required to design a horizontal flash drum by calculating the total length (h) and diameter. Use h/D = 4. Required information: density of methanol = 0.7914 g/cc; density of water = 1 g/cc; MW of methanol = 32.04; MW of water = 18.01;
 
 $$K_{drum}(\mathrm{vertical}) = \exp[A + B\ln F_{lv} + C(\ln F_{lv})^2 + D(\ln F_{lv})^3 + E(\ln F_{lv})^4]$$

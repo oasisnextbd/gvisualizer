@@ -25,7 +25,7 @@ Worked check from the slides: hexane–heptane, $V = 160$ kmol/h, $M_V = 86.74$,
           answer: String.raw`(1) V (kmol/h) → mass flow via M_V; (2) ρ_V = PM_V/RT → Q_V; (3) u ≈ 75% of flooding → A = Q_V/u (+ downcomer area) → D = √(4A/π), size top and bottom, take the larger.` },
         { id: "2022-23-Q1b", label: "(b)", marks: "7",
           topic: "column-design", sub: "Flow-pattern selection guide for sieve trays",
-          type: "sketch", syllabus: "in", repeats: ["2023-24-Q4b"],
+          type: "sketch", syllabus: "in", repeats: ["2012-13-Q4d", "2021-22-Q4c", "2023-24-Q4b"],
           text: String.raw`Flow pattern on the trays is also an important design parameter for distillation columns. With an appropriate diagram, demonstrate the selection guide of flow pattern for sieve trays.`,
           solution: String.raw`The flow pattern is chosen from the **liquid rate** and the **tower diameter** (Huang–Hodson guide in Wankat Ch. 10 and the slides):
 
@@ -63,7 +63,7 @@ Consequences:
           answer: String.raw`F = 5 for 3 solutes; T and p fix 2; "independent solutes" makes each solute's equilibrium independent of the other two concentrations, so one assumption fixes the remaining 2 DOF (valid only when dilute).` },
         { id: "2022-23-Q1d", label: "(d)", marks: "7",
           topic: "partial-extraction", sub: "Difference point when R1 = E0",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2017-18-Q3a", "2021-22-Q1d"],
           text: String.raw`When $E_0 > R_1$ the difference point is on the left-side of the right triangular equilibrium diagram; and when $R_1 > E_0$ the difference point is on the right of the diagram. What happens when $R_1 = E_0$? Answer this question using a logical argument.`,
           solution: String.raw`The difference point is a fictitious stream defined by the passing-stream balance
 
@@ -85,7 +85,7 @@ So stage stepping is still possible: alternate tie lines with lines **parallel**
           answer: String.raw`Δ has zero flow, so its coordinates go to infinity: the difference point is at infinity and all operating lines are parallel to E0R1.` },
         { id: "2022-23-Q1e", label: "(e)", marks: "7",
           topic: "leaching", sub: "Why an effective equilibrium constant in leaching",
-          type: "theory", syllabus: "in", repeats: ["2023-24-Q7c"],
+          type: "theory", syllabus: "in", repeats: ["2018-19-Q2b", "2023-24-Q7c"],
           text: String.raw`Justify with proper reasoning the use of "effective equilibrium constant" in the analysis of leaching process.`,
           solution: String.raw`The simple leaching model (McCabe–Thiele or Kremser) assumes isothermal, isobaric operation, no solvent dissolving in the solid, **no liquid entrained with the solid**, an insoluble solid matrix, negligible heat of mixing, **equilibrium stages** and no solid in the overflow. Two of these are usually wrong:
 
@@ -111,7 +111,7 @@ Limitation: $m_E$ is **not a fundamental thermodynamic quantity**. It depends on
       parts: [
         { id: "2022-23-Q2a", label: "(a)", marks: "5",
           topic: "absorption", sub: "What makes a column a stripper or an absorber",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2016-17-Q6c", "2017-18-Q1a", "2018-19-Q1a", "2021-22-Q2b"],
           text: String.raw`What controls whether a column is a stripper or an absorber?`,
           solution: String.raw`The **direction of mass transfer**, which is set by where the operating line lies relative to the equilibrium line:
 
@@ -201,7 +201,7 @@ and $y_5 = 0.65(0.000493) - 0.000320 = 0$ ✓ (pure air).
       parts: [
         { id: "2022-23-Q3a", label: "(a)", marks: "7",
           topic: "immiscible-extraction", sub: "Solvent selection criteria",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2017-18-Q4a", "2020-21-Q3a"],
           text: String.raw`Selection of a proper solvent is very important for the development of an economical extraction system. State solvent-selection criteria for an extraction system.`,
           solution: String.raw`A good extraction solvent should have:
 
@@ -313,7 +313,7 @@ This is why leaching is analysed with an **effective equilibrium constant** $m_E
           answer: String.raw`Lower: diffusion of solute out of the solid is very slow and the interfacial area cannot be increased by mixing, and the underflow entrains liquid, so stages rarely reach equilibrium.` },
         { id: "2022-23-Q4b", label: "(b)", marks: "10+6",
           topic: "leaching", sub: "Underflow liquid rate in washing and constant-flow assumptions",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2015-16-Q8b", "2016-17-Q8a", "2017-18-Q2a", "2023-24-Q5c"],
           text: String.raw`A washing operation is processing 10,000 kg/h of wet solids. The liquid is essentially water with a density of 1000 kg/m³, the dry solids have a density of 1500 kg/m³, and the porosity is measured as $\varepsilon = 0.40$. What is the flow rate of the underflow liquid in kg/h? Also state all the crucial assumptions which are required for the stage-to-stage calculation of washing process.`,
           solution: String.raw`**Given:** wet solids (solids + entrained liquid) 10,000 kg/h; $\rho_f = 1000$ kg/m³, $\rho_s = 1500$ kg/m³, $\varepsilon = 0.40$ (volume fraction of liquid in the wet solids).
 
@@ -511,7 +511,7 @@ $$\bar{V} = \frac{8.05\times10^5}{620 - 94} = 1530\ \mathrm{kg/h}$$
           answer: String.raw`D = 2200 kg/h, B = 800 kg/h; Q_R ≈ 8.05 × 10⁵ kcal/h; V̄ ≈ 1530 kg/h (h_F ≈ −28, h_C ≈ 48, H_D ≈ 328, h_B ≈ 94, H_V ≈ 620 kcal/kg).` },
         { id: "2022-23-Q6b", label: "(b)", marks: "10",
           topic: "advanced-distillation", sub: "Total reflux and minimum reflux on McCabe–Thiele",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2012-13-Q8c", "2021-22-Q5c"],
           text: String.raw`Explain the concepts of total reflux and minimum reflux and how they relate to McCabe Thiele diagram.`,
           solution: String.raw`**Total reflux** ($R = L/D \to \infty$)
 
@@ -586,7 +586,7 @@ Check: $\bar{L} - \bar{V} = 598 = B$ ✓.`,
           answer: String.raw`D = 402, B = 598 kmol/h; x_D = (0.985 iC₅, 0.015 nC₆, 0), x_B = (0.0067, 0.4916, 0.5017); L = 1005, V = 1407, L̄ = 1605, V̄ = 1007 kmol/h.` },
         { id: "2022-23-Q7b", label: "(b)", marks: "13",
           topic: "advanced-distillation", sub: "Column cannot reach product purity: remedies",
-          type: "theory", syllabus: "partial", repeats: [],
+          type: "theory", syllabus: "partial", repeats: ["2016-17-Q1f"],
           text: String.raw`What should be done if the current column is unable to achieve the desired product purity?`,
           solution: String.raw`First find the cause, then use the operating handles in order of cost.
 
@@ -617,7 +617,7 @@ Check: $\bar{L} - \bar{V} = 598 = B$ ✓.`,
       parts: [
         { id: "2022-23-Q8a", label: "(a)", marks: "6",
           topic: "batch", sub: "Batch vs continuous distillation: pros and cons",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2013-14-Q3a", "2015-16-Q7a", "2020-21-Q8a"],
           text: String.raw`Discuss the benefits and drawbacks of using batch distillation in contrast to continuous distillation.`,
           solution: String.raw`| Benefits of batch | Drawbacks of batch |
 |---|---|
@@ -631,7 +631,7 @@ Continuous distillation is preferred for large, steady flows (refineries, bulk c
           answer: String.raw`Batch is flexible (many feeds/products, small volumes, easy cleaning) but uses more energy and labour, has down time, and has time-varying operation.` },
         { id: "2022-23-Q8b", label: "(b)", marks: "6",
           topic: "batch", sub: "Variable reflux ratio (constant x_D) batch distillation",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2021-22-Q5d"],
           text: String.raw`Explain the variable reflux ratio method of batch distillation.`,
           solution: String.raw`In multistage batch distillation (still pot + column with N stages + total condenser) the still composition $x_W$ falls as light component is removed. In the **variable-reflux** mode the reflux ratio is **increased continuously** so that the **distillate composition $x_D$ stays constant**.
 

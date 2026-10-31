@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2018-19-Q1a", label: "(a)", marks: "5+4",
           topic: "absorption", sub: "Reversing mass transfer in a gas plant; what makes a column an absorber or stripper",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2016-17-Q6c", "2017-18-Q1a", "2021-22-Q2b", "2022-23-Q2a"],
           text: String.raw`How can the direction of mass transfer be reversed in a gas/liquid system as it is in a complete gas plant? What controls whether a column is a stripper or an absorber?`,
           solution: String.raw`![Gas treatment plant: absorber at low T and high p, heated rich solvent stripped at high T and low p, lean solvent recycled](fig/2018-19-Q1a-sol.svg)
 
@@ -45,7 +45,7 @@ $$p_A = H x_A \;\Rightarrow\; y_A = \frac{H}{p_{tot}}x_A = m\,x_A$$
           answer: String.raw`Negligible heat of absorption, isothermal and isobaric, insoluble carrier, nonvolatile solvent (plus dilute for constant L/V). Henry's law y = (H/p)x is valid for dilute, sparingly soluble gases (ideal dilute solution), is linear and T-dependent, and allows Kremser.` },
         { id: "2018-19-Q1c", label: "(c)", marks: "17",
           topic: "absorption", sub: "CO2 stripping from water with N2 at 60 °C, Kremser stages",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2021-22-Q2c"],
           text: String.raw`We wish to design a stripping column to remove carbon dioxide from water. This is done by heating the water and passing it countercurrent to a nitrogen stream in a staged stripper. Operation is at 60 °C and 1 atm. The water contains 9.2×10$^{-6}$ mole fraction CO$_2$ and flows at 100,000 lb/hr. Nitrogen (N$_2$) enters the column as pure nitrogen and flows at 2500 ft$^3$/hr. Nitrogen is at 1 atm and 60 °C. We desire an outlet water concentration that is 2×10$^{-7}$ mole fraction CO$_2$. Ignore nitrogen solubility in water and ignore the volatility of the water. The Henry's law constant at 60 °C is 3410. Determine the number of stages needed using Kremser equation.`,
           solution: String.raw`This is Wankat Problem 12.D6 (slide Problem D6) without the Murphree efficiency, i.e. equilibrium stages.
 
@@ -111,7 +111,7 @@ $$\frac{x_N}{x_0} = \frac{1-2.667}{1-359.6} = \frac{-1.667}{-358.6} = 0.00465$$
           answer: String.raw`mO/U = 10/3.75 = 2.667; xN/x0 = (1 − 2.667)/(1 − 2.667⁶) = 0.00465; NaOH recovery ≈ 99.5 %.` },
         { id: "2018-19-Q2b", label: "(b)", marks: "6+6",
           topic: "leaching", sub: "Leaching vs washing; why an effective equilibrium constant is used",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q1e", "2023-24-Q7c"],
           text: String.raw`Explain properly how leaching differs from washing. Justify adequately the use of effective equilibrium constant for leaching.`,
           solution: String.raw`### Leaching vs washing (6)
 | aspect | Washing | Leaching |
@@ -221,7 +221,7 @@ Position: if $E_0 > R_1$ ($\Delta > 0$), $\Delta$ is on the **left** of the diag
           answer: String.raw`Δ = Ej − Rj+1 is constant; locate it by (1) intersecting lines E0R1 and ENRN+1, (2) its coordinates xA,Δ, xD,Δ from the balances, or (3) the lever-arm rule on a known line. Left side if E0 > R1, right side if R1 > E0, infinity if equal.` },
         { id: "2018-19-Q3c", label: "(c)", marks: "16",
           topic: "immiscible-extraction", sub: "Benzoic acid from water into pure benzene, 100 mol/h feed, 10 mol/h solvent",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2015-16-Q5b"],
           text: String.raw`A water solution containing 0.005 mole fraction benzoic acid is to be extracted using pure benzene as the solvent. If the feed rate is 100 moles/hr and the solvent rate is 10 moles/hr, find the number of equilibrium stages required to reduce the water concentration to 0.0001 mole fraction benzoic acid. Operation is isothermal at 6 °C, where equilibrium data can be represented as
 
 Mole fraction of benzoic acid in water = 0.0446 × (mole fraction of benzoic acid in benzene).`,
@@ -264,7 +264,7 @@ $$N = \frac{\ln\left[\left(1-\frac{R}{mE}\right)\frac{x_0 - x_N^*}{x_N-x_N^*}+\f
       parts: [
         { id: "2018-19-Q4a", label: "(a)", marks: "4+4",
           topic: "immiscible-extraction", sub: "Extractor selection for suspended solids and corrosive material",
-          type: "theory", syllabus: "partial", repeats: [],
+          type: "theory", syllabus: "partial", repeats: ["2016-17-Q7a", "2021-22-Q3a"],
           text: String.raw`Select and justify appropriate type(s) of extractor when it is required to handle:
 
 (i) liquids containing suspended solids
@@ -340,7 +340,7 @@ Ordering: $A_T > A_{net} > A_{active} > A_{hole}$.`,
       parts: [
         { id: "2018-19-Q5a", label: "(a)", marks: "10",
           topic: "flash", sub: "Labelled schematic of a flash distillation system and working principle",
-          type: "sketch", syllabus: "in", repeats: ["2017-18-Q5b"],
+          type: "sketch", syllabus: "in", repeats: ["2011-12-Q5a", "2012-13-Q6a", "2017-18-Q5b", "2020-21-Q5c", "2023-24-Q2a"],
           text: String.raw`Draw the schematic diagram of a flash distillation system. Label the diagram and describe the working principle.`,
           solution: String.raw`![Flash system: pump, heater, throttle valve, flash drum with demister; vapour V, y from top and liquid L, x from bottom](fig/2018-19-Q5a-sol.svg)
 
@@ -500,7 +500,7 @@ Chart-reading sensitivity: $H_1$ = 395–415 kcal/kg gives 2.96–2.74; Wankat's
       parts: [
         { id: "2018-19-Q7a", label: "(a)", marks: "4+6=10",
           topic: "advanced-distillation", sub: "Murphree vapour efficiency model; proof that EMV can exceed 1",
-          type: "derivation", syllabus: "in", repeats: ["2017-18-Q5c"],
+          type: "derivation", syllabus: "in", repeats: ["2015-16-Q4a", "2017-18-Q5c"],
           text: String.raw`What is Murphree vapor Efficiency, $E_{MV}$? Describe the Murphree Efficiency Model with a neat diagram and prove that $E_{MV}$ can be greater than 1.`,
           solution: String.raw`### Definition (4)
 $$E_{MV} = \frac{y_{out} - y_{in}}{y^*_{out} - y_{in}} = \frac{y_n - y_{n+1}}{y_n^* - y_{n+1}}$$

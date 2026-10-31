@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2017-18-Q1a", label: "(a)", marks: "9",
           topic: "absorption", sub: "Absorption vs stripping: purpose, line positions, diameter basis",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2016-17-Q6c", "2018-19-Q1a", "2021-22-Q2b", "2022-23-Q2a"],
           text: String.raw`Make a comparison between absorption and stripping processes on the basis of:
 
 (i) purpose of use
@@ -103,7 +103,7 @@ Fraction of stage 5: $(X_N - X_4)/(X_5-X_4) = (0.000763-0.000528)/(0.000834-0.00
       parts: [
         { id: "2017-18-Q2a", label: "(a)", marks: "6+4+4",
           topic: "leaching", sub: "Washing: McCabe–Thiele assumptions, when to use Kremser, role of solid",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2015-16-Q8b", "2016-17-Q8a", "2022-23-Q4b", "2023-24-Q5c"],
           text: String.raw`State the assumptions required for McCabe–Thiele analysis for washing. When should Kremser analytical calculation be used for washing? How does the solid enter into washing calculations?`,
           solution: String.raw`### Assumptions (constant underflow and overflow)
 Washing equilibrium is $y = x$ (same solute concentration in the overflow and in the liquid entrained in the underflow). For a straight operating line we need constant liquid flows. The underflow liquid is
@@ -127,7 +127,7 @@ The solid is an inert carrier: it does not appear in the equilibrium ($y = x$) a
           answer: String.raw`Constant U and O need: no solids in overflow and none dissolve, constant ρf and ρs, constant porosity. Kremser applies to countercurrent washing directly (m = 1, constant U/O). The solid only fixes the entrained liquid U.` },
         { id: "2017-18-Q2b", label: "(b)", marks: "6",
           topic: "leaching", sub: "How leaching differs from washing",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2012-13-Q2a", "2023-24-Q7b"],
           text: String.raw`Explain adequately how leaching differs from washing.`,
           solution: String.raw`| aspect | Washing | Leaching |
 |---|---|---|
@@ -143,7 +143,7 @@ Washing can be viewed as a special case of leaching in which the solid does not 
           answer: String.raw`In washing the solute sits in the entrained liquid (y = x, constant solids); in leaching it is part of the solid and must dissolve and diffuse out (y ≠ x, solids flow changes, slow, use effective mE).` },
         { id: "2017-18-Q2c", label: "(c)", marks: "15",
           topic: "leaching", sub: "Sugar from cane: 11-stage countercurrent leaching, Kremser with mE",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2021-22-Q4b"],
           text: String.raw`In the leaching of sugar from sugar cane, water is used as the solvent. Typically about 11 stages are used in a countercurrent Rotocel or other leaching system. On a volumetric basis liquid flow rate/solid flow rate = 0.95. The effective equilibrium constant is $M_E$ = 1.18, where $M_E$ = (concentration, g/liter in liquid)/(concentration g/liter in solid). If pure water is used as the inlet solvent, predict the recovery of sugar in the solvent.`,
           solution: String.raw`This is Wankat Problem 14.D8 (slide Problem D7).
 
@@ -170,7 +170,7 @@ $$\frac{x_N - x_N^*}{x_0 - x_N^*} = \frac{1 - m_E F_{solv}/F_{solid}}{1 - (m_E F
       parts: [
         { id: "2017-18-Q3a", label: "(a)", marks: "12+6",
           topic: "partial-extraction", sub: "Countercurrent stages on a triangular diagram; Δ when R1 = E0",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2021-22-Q1d", "2022-23-Q1d"],
           text: String.raw`For a partially miscible countercurrent liquid–liquid extraction:
 
 (i) Consider that the initial feed (raffinate) and solvent (extract) are completely specified. All required equilibrium data are given in right triangular diagram. The solute concentration in raffinate is required to be reduced to a desired low value. With the help of clean hand drawing, demonstrate the determination of equilibrium stages required for this separation. (12)
@@ -208,7 +208,7 @@ $$x_{A,\Delta} = \frac{E_0y_{A,0}-R_1x_{A,1}}{E_0-R_1}, \qquad x_{D,\Delta} = \f
           answer: String.raw`Find M on SF, EN on line R1M, Δ = intersection of E0R1 and ENF extended; step tie line Rj→Ej then line ΔEj→Rj+1 until EN is passed (Ex. 13-4: ≈ 6 stages). If R1 = E0, Δ is at infinity and all operating lines are parallel.` },
         { id: "2017-18-Q3b", label: "(b)", marks: "17",
           topic: "immiscible-extraction", sub: "Acetic acid from water into 3-heptanol, Kremser (m = 0.828)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2021-22-Q3b"],
           text: String.raw`We have a mixture of acetic acid in water and wish to extract this with 3-heptanol at 25 °C. Equilibrium is
 $$\frac{\text{Wt frac acetic acid in solvent}}{\text{Wt frac acetic acid in water}} = 0.828$$
 The inlet water solution flows at 550 lb/hr and is 0.0097 wt frac acetic acid. We desire an outlet water concentration of 0.00046 wt frac acetic acid. The solvent flow rate is 700 lb/hr. The entering solvent contains 0.0003 wt frac acetic acid. Find the outlet solvent concentration and the number of equilibrium stages required (use the Kremser equation).`,
@@ -238,7 +238,7 @@ $$N = \frac{\ln[(-0.0538)(16.40)+1.0538]}{\ln 0.9489} = \frac{\ln(0.1715)}{-0.05
       parts: [
         { id: "2017-18-Q4a", label: "(a)", marks: "5",
           topic: "immiscible-extraction", sub: "Properties of a good extraction solvent",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2020-21-Q3a", "2022-23-Q3a"],
           text: String.raw`What are some of the properties you would look for in a good solvent to be used for liquid–liquid extraction?`,
           solution: String.raw`- **High selectivity** for the solute over contaminants: $\alpha = K_{desired}/K_{undesired}$ large.
 - **Large distribution coefficient** $K_{desired}$ for the solute, so less solvent is needed.
@@ -343,7 +343,7 @@ IV. Reflux and Boil up of Continuous Column`,
           answer: String.raw`Stripping column: feed on top, reboiler only. Lewis: CMO stage-by-stage alternating equilibrium and operating equations. Inverted column: feed at bottom, condenser only, no reboiler. Reflux L0/D and boilup V̄/B supply the liquid and vapour; more of either means fewer stages but more energy.` },
         { id: "2017-18-Q5b", label: "(b)", marks: "9",
           topic: "flash", sub: "Flash distillation process with schematic",
-          type: "sketch", syllabus: "in", repeats: ["2018-19-Q5a"],
+          type: "sketch", syllabus: "in", repeats: ["2011-12-Q5a", "2012-13-Q6a", "2018-19-Q5a", "2020-21-Q5c", "2023-24-Q2a"],
           text: String.raw`Describe the flash distillation process with schematic diagram.`,
           solution: String.raw`![Flash system: pump, heater, throttle valve, flash drum with demister; vapour V, y from top and liquid L, x from bottom](fig/2017-18-Q5b-sol.svg)
 
@@ -357,7 +357,7 @@ Equations: $F = L + V$, $Fz = Lx + Vy$, $Fh_F + Q_{flash} = Lh_L + VH_V$; operat
           answer: String.raw`Pump → heater → throttle valve (isenthalpic, partial vaporization) → flash drum (one equilibrium stage, demister); vapour V,y overhead, liquid L,x bottom.` },
         { id: "2017-18-Q5c", label: "(c)", marks: "8",
           topic: "advanced-distillation", sub: "Murphree vapour efficiency and when EMV > 1",
-          type: "theory", syllabus: "in", repeats: ["2018-19-Q7a"],
+          type: "theory", syllabus: "in", repeats: ["2015-16-Q4a", "2018-19-Q7a"],
           text: String.raw`What is Murphree efficiency, $E_{MV}$? Under what conditions $E_{MV} > 1$?`,
           solution: String.raw`**Definition:** fraction of the ideal (equilibrium) change in vapour composition that a real tray achieves:
 $$E_{MV} = \frac{y_n - y_{n+1}}{y_n^* - y_{n+1}}$$
