@@ -58,10 +58,12 @@ function route(){
   v.innerHTML=QB.byId[h]?one(QB.byId[h]):h.startsWith('year-')?paper(h.slice(5)):index();
   document.title=QB.byId[h]?QB.label(QB.byId[h])+' · CHE 301 Solutions':'CHE 301 Solutions';
   QB.typeset(v); window.scrollTo(0,0);
+  window.dispatchEvent(new CustomEvent('qb:part',{detail:{id:QB.byId[h]?h:null}}));
 }
 window.addEventListener('hashchange',route);
 QB.load(route);
 })();
 </script>
+<script type="module" src="../shared/community.js"></script>
 </body>
 </html>

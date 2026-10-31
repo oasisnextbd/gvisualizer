@@ -1,0 +1,169 @@
+rules_version = '2';
+
+// gvisualizer: student sign-in, comments and team-published notes.
+//
+// Who is who:
+//   owner      oasisnextbd@gmail.com (the company account): everything, including admins.
+//   admin      everything, except changing the owner or other admins.
+//              omayer120495@gmail.com (the founder) is a built-in admin.
+//   moderator  comments and notes.
+//   student    an allowed member (members/{email}, not blocked) with a verified email:
+//              reads approved comments and posts their own.
+//   anyone     reads the team notes (the course content itself is public for now).
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ------------------------------------------------------------ people
+    function signedIn() {
+      return request.auth != null && request.auth.token.email_verified == true;
+    }
+    function me() {
+      return request.auth.token.email.lower();
+    }
+    function isOwner() {
+      return signedIn() && me() == 'oasisnextbd@gmail.com';
+    }
+    function isFounder() {
+      return signedIn() && me() == 'omayer120495@gmail.com';
+    }
+    function builtIn(email) {
+      return email == 'oasisnextbd@gmail.com' || email == 'omayer120495@gmail.com';
+    }
+    function teamDoc() {
+      return /databases/$(database)/documents/team/$(me());
+    }
+    function inTeam() {
+      return signedIn() && exists(teamDoc());
+    }
+    function role() {
+      return get(teamDoc()).data.role;
+    }
+    function isAdmin() {
+      return isOwner() || isFounder() || (inTeam() && role() == 'admin');
+    }
+    function isMod() {
+      return isAdmin() || (inTeam() && role() == 'moderator');
+    }
+    function memberDoc() {
+      return /databases/$(database)/documents/members/$(me());
+    }
+    function isStudent() {
+      return signedIn() && exists(memberDoc()) && get(memberDoc()).data.get('blocked', false) != true;
+    }
+    function canPost() {
+      return isStudent() || isMod();
+    }
+    function changed() {
+      return request.resource.data.diff(resource.data).affectedKeys();
+    }
+    function str(v, max) {
+      return v is string && v.size() <= max;
+    }
+    function optStr(v, max) {
+      return v == null || str(v, max);
+    }
+    function course(v) {
+      return v in ['che301', 'che303'];
+    }
+
+    // ------------------------------------------------------------ team
+    // The owner and the founder are constants, never documents.
+    // The owner manages admins and moderators; admins manage moderators only.
+    function teamFields() {
+      return request.resource.data.keys().hasOnly(['role', 'name', 'by', 'at'])
+        && request.resource.data.role in ['admin', 'moderator']
+        && optStr(request.resource.data.get('name', null), 80)
+        && request.resource.data.by == me();
+    }
+    match /team/{email} {
+      allow get: if signedIn() && (email == me() || isMod());
+      allow list: if isMod();
+      allow create: if isAdmin() && teamFields() && email == email.lower() && !builtIn(email)
+        && (isOwner() || request.resource.data.role == 'moderator');
+      allow update: if isAdmin() && teamFields()
+        && (isOwner() || (resource.data.role == 'moderator' && request.resource.data.role == 'moderator'));
+      allow delete: if isAdmin() && email != me() && (isOwner() || resource.data.role == 'moderator');
+    }
+
+    // When each team member last opened the dashboard (written by themselves).
+    match /seen/{email} {
+      allow read: if isMod();
+      allow write: if isMod() && email == me()
+        && request.resource.data.keys().hasOnly(['at']) && request.resource.data.at == request.time;
+    }
+
+    // ------------------------------------------------------------ allowed students
+    match /members/{email} {
+      allow get: if signedIn() && (email == me() || isMod());
+      allow list: if isMod();
+      allow create, update: if isAdmin()
+        && request.resource.data.keys().hasOnly(['id', 'name', 'kind', 'blocked', 'by', 'at'])
+        && optStr(request.resource.data.get('id', null), 20)
+        && optStr(request.resource.data.get('name', null), 80)
+        && request.resource.data.kind in ['student', 'guest']
+        && request.resource.data.blocked is bool
+        && request.resource.data.by == me()
+        && email == email.lower();
+      allow delete: if isAdmin();
+    }
+
+    // ------------------------------------------------------------ comments
+    // Students create their own comment once; only the team changes it afterwards.
+    match /comments/{id} {
+      allow get, list: if isMod()
+        || (signedIn() && resource.data.author == me())
+        || (canPost() && resource.data.public == true);
+      allow create: if canPost()
+        && request.resource.data.keys().hasOnly(['course', 'part', 'kind', 'text', 'hasImage', 'author', 'authorId', 'status', 'public', 'createdAt'])
+        && course(request.resource.data.course)
+        && str(request.resource.data.part, 60)
+        && request.resource.data.kind in ['error', 'method', 'doubt', 'request']
+        && str(request.resource.data.text, 4000) && request.resource.data.text.size() > 0
+        && request.resource.data.hasImage is bool
+        && request.resource.data.author == me()
+        && str(request.resource.data.authorId, 40)
+        && request.resource.data.status == 'new'
+        && request.resource.data.public == false
+        && request.resource.data.createdAt == request.time;
+      allow update: if isMod()
+        && changed().hasOnly(['status', 'public', 'reply', 'replyBy', 'updatedAt', 'noted'])
+        && request.resource.data.status in ['new', 'reviewing', 'approved', 'fixed', 'declined']
+        && request.resource.data.public is bool
+        && optStr(request.resource.data.get('reply', null), 4000);
+      allow delete: if isAdmin();
+    }
+
+    // Photo of handwritten working, stored with the same id as its comment.
+    match /commentImages/{id} {
+      function parent() {
+        return get(/databases/$(database)/documents/comments/$(id)).data;
+      }
+      allow get: if isMod()
+        || (signedIn() && resource.data.author == me())
+        || (canPost() && parent().public == true);
+      allow create: if canPost()
+        && request.resource.data.keys().hasOnly(['data', 'author', 'createdAt'])
+        && request.resource.data.data is string
+        && request.resource.data.data.size() <= 950000
+        && request.resource.data.data.matches('^data:image/jpeg;base64,.*')
+        && request.resource.data.author == me()
+        && parent().author == me() && parent().hasImage == true
+        && request.resource.data.createdAt == request.time;
+      allow delete: if isAdmin();
+    }
+
+    // ------------------------------------------------------------ team notes
+    // notes/{course}_{partId}: corrections, alternative methods, "under review" flags.
+    match /notes/{id} {
+      allow read: if true;
+      allow write: if isMod()
+        && request.resource.data.keys().hasOnly(['course', 'part', 'items', 'updatedAt', 'updatedBy'])
+        && course(request.resource.data.course)
+        && str(request.resource.data.part, 60)
+        && id == request.resource.data.course + '_' + request.resource.data.part
+        && request.resource.data.items is list && request.resource.data.items.size() <= 20
+        && request.resource.data.updatedBy == me();
+      allow delete: if isMod();
+    }
+  }
+}

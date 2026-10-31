@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>gvisualizer team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../question-bank/qb.css">
+<link rel="stylesheet" href="../shared/community.css">
+<script src="../theme.js"></script>
+<script src="../question-bank/qb.js"></script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+<style>
+.tm{display:grid;grid-template-columns:220px 1fr;gap:22px;align-items:start}
+.tm-nav{position:sticky;top:12px;display:flex;flex-direction:column;gap:4px}
+.tm-nav a{display:flex;justify-content:space-between;padding:9px 12px;border-radius:12px;color:var(--ink);text-decoration:none;font-family:var(--f-display);font-weight:600}
+.tm-nav a.on,.tm-nav a:hover{background:var(--panel-2);color:var(--flow)}
+.tm-nav .n{color:var(--dim);font-weight:500}
+.tm-me{background:var(--panel);border:2px solid var(--edge);border-radius:14px;padding:10px 12px;margin-bottom:8px}
+.tm-me b{display:block;overflow:hidden;text-overflow:ellipsis}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:14px 0}
+.tile{background:var(--panel);border:2px solid var(--edge);border-radius:16px;padding:14px}
+.tile .k{color:var(--dim);font-size:14px}.tile .v{font-family:var(--f-display);font-size:32px;font-weight:700}
+.tm-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.tm-bar .search{flex:0 1 200px}
+.tm-row{display:grid;grid-template-columns:110px 1fr auto;gap:10px;align-items:center;padding:10px 12px;border:2px solid var(--edge);border-radius:12px;margin:6px 0;background:var(--panel);cursor:pointer}
+.tm-row:hover{border-color:var(--gold)}
+.tm-row .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tm-detail{background:var(--panel);border:2px solid var(--edge);border-radius:16px;padding:16px 18px;margin:12px 0}
+.tm-detail textarea,.tm-detail select,.tm-detail input[type=text]{display:block;width:100%;box-sizing:border-box;font:inherit;margin-top:4px}
+.tm-detail label{display:block;margin:10px 0 0;font-size:14px;color:var(--dim)}
+table.tm-t{width:100%;border-collapse:collapse;font-size:14px}
+.tm-t td,.tm-t th{border-bottom:1px solid var(--edge);padding:6px 8px;text-align:left}
+.st-new{color:var(--heat)}.st-reviewing{color:var(--gold-ink)}.st-approved,.st-fixed{color:var(--good)}.st-declined{color:var(--dim)}
+.tm-login{max-width:440px;margin:40px auto;background:var(--panel);border:2px solid var(--edge);border-radius:18px;padding:22px}
+.tm-login input{display:block;width:100%;box-sizing:border-box;margin-top:4px}
+@media (max-width:760px){.tm{grid-template-columns:1fr}.tm-nav{position:static;flex-direction:row;flex-wrap:wrap}.tm-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="top">
+    <a class="backbtn" href="../" aria-label="Back">← Back</a>
+    <a class="brand" href="./">gvisualizer <span>Team</span></a>
+    <button type="button" class="themebtn">☀ Day</button>
+  </div>
+  <div id="app"><p class="empty">Loading…</p></div>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
