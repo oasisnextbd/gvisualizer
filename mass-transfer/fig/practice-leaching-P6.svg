@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 310" width="720" height="310" font-family="Helvetica, Arial, sans-serif">
+<title>Cross-flow sand washing with wash-water reuse: outlets of stages N, N-1, N-2 feed stages 3, 2, 1</title>
+<rect width="100%" height="100%" fill="#FFFFFF"/><g transform="translate(10,4) scale(0.95)">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker>
+<marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker></defs>
+<g stroke="#1E2B3A" stroke-width="2" fill="#F4F6F9">
+<rect x="70" y="120" width="50" height="44"/><rect x="160" y="120" width="50" height="44"/><rect x="250" y="120" width="50" height="44"/>
+<rect x="400" y="120" width="50" height="44"/><rect x="490" y="120" width="50" height="44"/><rect x="580" y="120" width="50" height="44"/></g>
+<g font-size="13" text-anchor="middle" fill="#1E2B3A" font-weight="bold"><text x="95" y="147">N</text><text x="185" y="147">N−1</text><text x="275" y="147">N−2</text><text x="425" y="147">3</text><text x="515" y="147">2</text><text x="605" y="147">1</text></g>
+<g stroke="#1E2B3A" stroke-width="2" fill="none">
+<path d="M690,142 L632,142" marker-end="url(#a)"/><path d="M580,142 L542,142" marker-end="url(#a)"/><path d="M490,142 L452,142" marker-end="url(#a)"/>
+<path d="M400,142 L360,142" stroke-dasharray="4 4"/><path d="M340,142 L302,142" marker-end="url(#a)"/><path d="M250,142 L212,142" marker-end="url(#a)"/><path d="M160,142 L122,142" marker-end="url(#a)"/><path d="M70,142 L20,142" marker-end="url(#a)"/></g>
+<text x="690" y="190" font-size="12" text-anchor="end" fill="#1E2B3A">wet sand feed</text><text x="690" y="206" font-size="12" text-anchor="end" fill="#1E2B3A">x0 = 0.035</text>
+<text x="8" y="126" font-size="12" fill="#1E2B3A">washed sand, xN</text>
+<g stroke="#0B7C8C" stroke-width="2" fill="none">
+<path d="M95,60 L95,118" marker-end="url(#b)"/><path d="M185,60 L185,118" marker-end="url(#b)"/><path d="M275,60 L275,118" marker-end="url(#b)"/>
+<path d="M95,166 L95,280 L425,280 L425,166" marker-end="url(#b)"/>
+<path d="M185,166 L185,262 L515,262 L515,166" marker-end="url(#b)"/>
+<path d="M275,166 L275,244 L605,244 L605,166" marker-end="url(#b)"/>
+<path d="M425,118 L425,90"/><path d="M515,118 L515,90"/><path d="M605,118 L605,90"/></g>
+<g font-size="11" fill="#0B7C8C"><text x="425" y="84" text-anchor="middle">to drain</text><text x="515" y="84" text-anchor="middle">to drain</text><text x="605" y="84" text-anchor="middle">to drain</text></g>
+<text x="20" y="48" font-size="12" text-anchor="start" fill="#0B7C8C">pure wash water, 0.2 kg per 1000 cm³ wet sand on each stage 4 … N</text>
+<text x="350" y="298" font-size="11" text-anchor="middle" fill="#55667D">overflow of N → stage 3, of N−1 → stage 2, of N−2 → stage 1</text>
+</g></svg>
