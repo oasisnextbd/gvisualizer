@@ -159,7 +159,7 @@ Round up to a standard $D = 2.0$ ft.
 
 8. Height: $h_{total}/D = 3$ to 5, so $h_{total} = 6$ to 10 ft (for example 8 ft with $h/D = 4$).
 
-![Vertical flash drum: diameter from the permissible vapor velocity, height from the hV, hf and hL rules](fig/practice-flash-P15-sol.svg)
+![Vertical flash drum: diameter from the permissible vapor velocity, height from the hV, hf and hL rules](fig/practice-flash-P16-sol.svg)
 
 > Book answer (2.D1e): $D = 1.705$ ft, use 2.0 ft; length 6 to 10 ft ✓. The small difference comes from the book using $V/F = 0.25$ (V = 250 lbmol/h) from its graphical part (c).`,
           answer: String.raw`$K_{drum} = 0.444$ ft/s, $u_{perm} = 14.3$ ft/s, $A_c = 2.40$ ft², $D = 1.75$ ft → use 2.0 ft; $h_{total} = 6$–10 ft.` },
@@ -516,13 +516,51 @@ $$E = \frac{V}{F}\sum y_iH_{V,i} + \frac{L}{F}\sum x_ih_{L,i} - h_F$$
 > Book answer (2.F3): $T_{drum} \approx 57.3$ °C, $V/F = 0.513$ ✓ within the enthalpy-data uncertainty. The answer is most sensitive to propane's liquid heat capacity (propane is near its critical point at 95 °C): $C_{P,L}$ = 2.6 to 3.4 kJ/(kg·K) moves $T_{drum}$ from 50.5 to 59.8 °C.`,
         answer: String.raw`$T_{drum} \approx 56$ °C (book 57.3 °C), $V/F \approx 0.51$ (book 0.513); $x$ ≈ 0.144/0.101/0.756, $y$ ≈ 0.882/0.082/0.036 (C₃/nC₅/nC₈).` } ] },
 
-    { id: "practice-flash-P12", q: 12, section: "F", compulsory: false, stem: String.raw``,
+    { id: "practice-flash-P12", q: 12, section: "W", compulsory: false, stem: String.raw``,
+      parts: [ { id: "practice-flash-P12", label: "", marks: "", topic: "flash",
+        sub: "Three-still cascade for ethylene glycol–water at 228 mmHg (Raoult's law)", type: "numerical", syllabus: "in", repeats: [],
+        origin: "wankat", ref: String.raw`Wankat 3e, Problem 2.F2 (answer listed in the back of the book; treated as starred)`,
+        text: String.raw`Ethylene glycol–water is flash distilled in a cascade of three stills connected as shown; all operate at 228 mmHg. The feed is 40 mol% water (water is the more volatile component). One-third of the feed to still 1 is vaporized, two-thirds of the feed to still 2 is vaporized and one-half of the feed to still 3 is vaporized. Find the compositions of $L_3$ and $V_3$.
+
+![Cascade of three flash stills: L1 feeds still 2, V2 feeds still 3](fig/practice-flash-P12.svg)`,
+        solution: String.raw`**Given:** $p = 228$ mmHg in all stills; $z = 0.40$ water; $(V/F)_1 = 1/3$, $(V/F)_2 = 2/3$, $(V/F)_3 = 1/2$. From the figure: $L_1$ is the feed to still 2 and $V_2$ is the feed to still 3. Basis $F = 100$ kmol/h (the compositions do not depend on it).
+
+**Assumptions:** each still is an equilibrium stage; the liquid is an ideal solution (Raoult's law), as asked; Antoine vapor pressures, $\log_{10}p^{sat}(\mathrm{mmHg}) = A - B/(T + C)$, $T$ in °C:
+- water: $A = 8.07131$, $B = 1730.63$, $C = 233.426$ (1–100 °C) and $A = 8.14019$, $B = 1810.94$, $C = 244.485$ (100–374 °C), the standard constants tabulated in Perry's and Lange's handbooks;
+- ethylene glycol: $A = 8.09083$, $B = 2088.936$, $C = 203.454$ (Lange's Handbook, Dean, as tabulated by Yaws). Check: it gives 756 mmHg at the normal boiling point 197.3 °C and 16 mmHg at 100 °C.
+
+At 228 mmHg pure water boils at 69.5 °C and pure glycol at 160.9 °C.
+
+1. **Binary flash with Raoult's law.** At a trial $T$ the tie line is
+$$x = \frac{p - p_G^{sat}}{p_W^{sat} - p_G^{sat}}, \qquad y = \frac{x\,p_W^{sat}}{p}$$
+and $T$ is adjusted until the lever rule $V/F = (z - x)/(y - x)$ is satisfied (the drum temperature lies between the feed's bubble and dew points).
+
+2. **Still 1** ($z = 0.40$, $V/F = 1/3$; feed bubble point 91.4 °C, dew point 148.1 °C):
+$$T_1 = 114.5\ ^\circ\mathrm{C}, \quad x_1 = 0.161, \quad y_1 = 0.878, \quad \alpha = p_W^{sat}/p_G^{sat} = 37.6$$
+$V_1 = 33.3$, $L_1 = 66.7$ kmol/h.
+
+3. **Still 2** (feed $L_1$: $z_2 = 0.161$, $V/F = 2/3$):
+$$T_2 = 154.1\ ^\circ\mathrm{C}, \quad x_2 = 0.0136, \quad y_2 = 0.235, \quad \alpha = 22.3$$
+$V_2 = 44.4$, $L_2 = 22.2$ kmol/h.
+
+4. **Still 3** (feed $V_2$, partly condensed: $z_3 = 0.235$, $V/F = 1/2$):
+$$T_3 = 146.5\ ^\circ\mathrm{C}, \quad x_3 = 0.031, \quad y_3 = 0.438, \quad \alpha = 24.4$$
+$V_3 = L_3 = 22.2$ kmol/h.
+
+5. **Check** (water over the whole cascade): $33.3(0.878) + 22.2(0.0136) + 22.2(0.438) + 22.2(0.031) = 29.3 + 0.3 + 9.7 + 0.7 = 40.0 = Fz$ ✓
+
+![Water–ethylene glycol y–x diagram at 228 mmHg (Raoult's law) with the operating lines of the three stills](fig/practice-flash-P12-sol.svg)
+
+> Book answer (2.F2): $x_3 = 0.22$, $y_3 = 0.461$. The ideal-solution model gives $y_3 = 0.438$, close to the book, but $x_3 = 0.031$, far from 0.22. The book's pair implies a local relative volatility $\alpha = (0.461/0.539)/(0.22/0.78) = 3.0$, while the pure-component vapor-pressure ratio at 120–150 °C is about 20–40. Water–glycol deviates somewhat from Raoult's law (water is held more strongly by glycol, $\gamma_W < 1$), which lowers $\alpha$ and raises the liquid water content. A drop to $\alpha \approx 3$, though, would need much more non-ideality than this system is usually reported to have. The book answer was most likely obtained from a different (experimental) data set, or it carries an error. With the data stated here, report $x_3 \approx 0.03$ and $y_3 \approx 0.44$, and note that measured VLE data should be used for design.`,
+        answer: String.raw`Raoult's law: $x_3 = 0.031$, $y_3 = 0.438$ (stills at 114.5, 154.1 and 146.5 °C). Book: $x_3 = 0.22$, $y_3 = 0.461$; $y_3$ agrees, but $x_3$ does not, which points to non-ideal or different VLE data behind the book's answer.` } ] },
+
+    { id: "practice-flash-P13", q: 13, section: "F", compulsory: false, stem: String.raw``,
       parts: [
-        { id: "practice-flash-P12a", label: "(a)", marks: "10", topic: "flash",
+        { id: "practice-flash-P13a", label: "(a)", marks: "10", topic: "flash",
           sub: "Flash distillation system: sketch and role of each unit", type: "sketch", syllabus: "in", repeats: [],
           origin: "potential", ref: String.raw`Slides 03 (flash system, process flow, drum components)`,
           text: String.raw`Draw a labelled sketch of a flash distillation system and explain the job of the pump, heater, valve, drum internals and demister. Why is the drum usually operated adiabatically, and where does the energy for vaporization come from?`,
-          solution: String.raw`![Flash distillation system: pump, heater, valve and flash drum with demister](fig/practice-flash-P12-sol.svg)
+          solution: String.raw`![Flash distillation system: pump, heater, valve and flash drum with demister](fig/practice-flash-P13-sol.svg)
 
 1. **Pump:** raises the feed pressure so that the feed stays liquid when it is heated.
 2. **Heater:** heats the pressurized liquid to $T_F$. This stored sensible heat is the energy that will vaporize part of the feed.
@@ -533,7 +571,7 @@ $$E = \frac{V}{F}\sum y_iH_{V,i} + \frac{L}{F}\sum x_ih_{L,i} - h_F$$
 
 **Adiabatic operation:** the drum is insulated and $Q_{flash} = 0$. The latent heat for the vapor comes from the sensible heat of the hot feed: $Fh_F = Lh_L + VH_V$, so the products are colder than the feed ($T_{drum} < T_F$).`,
           answer: String.raw`Pump → heater → valve (isenthalpic, partial vaporization) → drum with distributor, disengagement space, demister and liquid holdup; energy for vaporization is the feed's sensible heat, so $T_{drum} < T_F$.` },
-        { id: "practice-flash-P12b", label: "(b)", marks: "12", topic: "flash",
+        { id: "practice-flash-P13b", label: "(b)", marks: "12", topic: "flash",
           sub: "Degrees of freedom of a flash system: C + 5", type: "derivation", syllabus: "in", repeats: [],
           origin: "potential", ref: String.raw`Slides 03 ("DOF for a Flash System", "DOF for a Binary Flash Drum")`,
           text: String.raw`Count the variables and independent equations of the complete flash system (pump, heater, valve, drum) for a C-component feed and show that the degrees of freedom are C + 5. How many variables remain to be specified for a binary flash once the feed and $Q_{flash}$ are fixed? Give two common choices.`,
@@ -570,7 +608,7 @@ $$\mathrm{DOF} = N_v - N_e = (3C + 9) - (2C + 4) = C + 5$$
 $$(C + 5) - (C + 3) = 2$$
 This matches the phase rule for the drum ($F = C - P + 2 = 2 - 2 + 2 = 2$). Typical pairs: $(p_{drum}, T_{drum})$; $(p_{drum}, V/F)$; $(p_{drum}, x)$ or $(p_{drum}, y)$. With $p_{drum}$ and $V/F$ the sequential solution works; with $T_F$ given instead, $T_{drum}$ is unknown and the balances are solved simultaneously.`,
           answer: String.raw`$N_v = 3C + 9$, $N_e = 2C + 4$, DOF = C + 5; after F, $T_F$, $p_F$, $z_i$, $Q_{flash}$ are fixed, 2 remain (e.g. $p_{drum}$ and V/F, or $p_{drum}$ and $T_{drum}$).` },
-        { id: "practice-flash-P12c", label: "(c)", marks: "13", topic: "flash",
+        { id: "practice-flash-P13c", label: "(c)", marks: "13", topic: "flash",
           sub: "Derive the flash operating line and its q and f forms", type: "derivation", syllabus: "in", repeats: [],
           origin: "potential", ref: String.raw`Slides 03 ("Flash Equations", "Operating Line")`,
           text: String.raw`Starting from the drum mass balances, derive the flash operating line $y = -(L/V)x + (F/V)z$. Rewrite it in terms of the fraction vaporized $f = V/F$ and the fraction remaining liquid $q = L/F$. Show that it always passes through $y = x = z$, and state its slope for $f = 0$, $0.5$ and $1$.`,
@@ -603,7 +641,7 @@ $$y = -\frac{q}{1 - q}x + \frac{z}{1 - q}$$
 **Exam tip:** always mark $(z, z)$ on the diagonal first, then draw the line with slope $-L/V$ from it.`,
           answer: String.raw`$y = -(L/V)x + (F/V)z = -\frac{1-f}{f}x + \frac{z}{f} = -\frac{q}{1-q}x + \frac{z}{1-q}$; passes through (z, z); slope −∞, −1, 0 for f = 0, 0.5, 1.` } ] },
 
-    { id: "practice-flash-P13", q: 13, section: "F", compulsory: false,
+    { id: "practice-flash-P14", q: 14, section: "F", compulsory: false,
       stem: String.raw`500 kmol/h of an ethanol–water feed with 25 mol% ethanol is flashed at 1 atm. Use the ethanol–water VLE data at 1 atm (Wankat Table 2-1):
 
 | $x$ | 0 | 0.019 | 0.0721 | 0.0966 | 0.1238 | 0.1661 | 0.2337 | 0.2608 | 0.3273 | 0.3965 | 0.5198 |
@@ -611,7 +649,7 @@ $$y = -\frac{q}{1 - q}x + \frac{z}{1 - q}$$
 | $y$ | 0 | 0.170 | 0.3891 | 0.4375 | 0.4704 | 0.5089 | 0.5445 | 0.5580 | 0.5826 | 0.6122 | 0.6599 |
 | $T$, °C | 100 | 95.5 | 89.0 | 86.7 | 85.3 | 84.1 | 82.7 | 82.3 | 81.5 | 80.7 | 79.7 |`,
       parts: [
-        { id: "practice-flash-P13a", label: "(a)", marks: "8", topic: "flash",
+        { id: "practice-flash-P14a", label: "(a)", marks: "8", topic: "flash",
           sub: "Range of attainable vapor and liquid compositions", type: "numerical", syllabus: "in", repeats: [],
           origin: "potential", ref: String.raw`Style of Slides 03 ethanol–water problem; own numbers`,
           text: String.raw`What are the richest vapor and the leanest liquid this drum can produce if V/F is free to vary? Give the drum temperature in each case.`,
@@ -625,7 +663,7 @@ $$x_{min} = x^*(0.25) = 0.033, \qquad T \approx 93.3\ ^\circ\mathrm{C}\ \text{(d
 
 So the vapor can never be richer than 0.553 and the liquid never leaner than 0.033.`,
           answer: String.raw`$y_{max} = 0.553$ at ≈ 82.4 °C; $x_{min} \approx 0.033$ at ≈ 93.3 °C.` },
-        { id: "practice-flash-P13b", label: "(b)", marks: "15", topic: "flash",
+        { id: "practice-flash-P14b", label: "(b)", marks: "15", topic: "flash",
           sub: "Products for V/F = 0.3 (graphical and checked numerically)", type: "numerical", syllabus: "in", repeats: [],
           origin: "potential", ref: String.raw`Own numbers; method of Slides 03 (McCabe–Thiele for flash)`,
           text: String.raw`The drum vaporizes 30% of the feed. Write the operating line, find $x$, $y$, $T_{drum}$ and the product flow rates, and check the component balance.`,
@@ -641,9 +679,9 @@ $$x = 0.146, \qquad y = 0.493, \qquad T_{drum} \approx 84.6\ ^\circ\mathrm{C}$$
 
 4. **Check:** $150(0.493) + 350(0.146) = 73.9 + 51.1 = 125.0 = 500(0.25)$ ✓
 
-![Ethanol–water y–x diagram for z = 0.25 with the limiting lines and the operating lines for V/F = 0.3 and for x = 0.05](fig/practice-flash-P13-sol.svg)`,
+![Ethanol–water y–x diagram for z = 0.25 with the limiting lines and the operating lines for V/F = 0.3 and for x = 0.05](fig/practice-flash-P14-sol.svg)`,
           answer: String.raw`$y = -2.333x + 0.833$; $x = 0.146$, $y = 0.493$, $T \approx 84.6$ °C; V = 150, L = 350 kmol/h.` },
-        { id: "practice-flash-P13c", label: "(c)", marks: "12", topic: "flash",
+        { id: "practice-flash-P14c", label: "(c)", marks: "12", topic: "flash",
           sub: "V/F needed to strip the liquid to 5 mol% ethanol", type: "numerical", syllabus: "in", repeats: [],
           origin: "potential", ref: String.raw`Own numbers`,
           text: String.raw`The liquid product is to contain only 5 mol% ethanol. Find the required V/F, the vapor composition and both flow rates. Comment on the result.`,
@@ -659,9 +697,9 @@ $$\frac{V}{F} = \frac{z - x}{y - x} = \frac{0.25 - 0.05}{0.320 - 0.05} = 0.741$$
 **Comment:** to clean the liquid, three-quarters of the feed must be boiled off, and the vapor is then only 32% ethanol, barely richer than the feed. One flash stage cannot give both a pure vapor and a lean liquid; that needs a cascade (column).`,
           answer: String.raw`$y = 0.320$, $V/F = 0.741$; V = 370.7, L = 129.3 kmol/h — a single stage cannot make both products pure.` } ] },
 
-    { id: "practice-flash-P14", q: 14, section: "F", compulsory: false, stem: String.raw``,
+    { id: "practice-flash-P15", q: 15, section: "F", compulsory: false, stem: String.raw``,
       parts: [
-        { id: "practice-flash-P14a", label: "(a)", marks: "10", topic: "flash",
+        { id: "practice-flash-P15a", label: "(a)", marks: "10", topic: "flash",
           sub: "Derive the Rachford–Rice equation", type: "derivation", syllabus: "partial", repeats: [],
           origin: "potential", ref: String.raw`Wankat 3e, Section 2.6 (Eqs. 2-38 to 2-42); slides give K values only`,
           text: String.raw`For a multicomponent isothermal flash with known $F$, $z_i$, $T_{drum}$ and $p_{drum}$, derive the Rachford–Rice equation for V/F and explain why it is preferred to using $\sum x_i = 1$ directly.`,
@@ -683,7 +721,7 @@ is always negative, so $f$ falls monotonically and has a single root between 0 a
 
 5. A two-phase answer exists only if $f(0) = \sum z_iK_i - 1 > 0$ (feed above its bubble point) and $f(1) = 1 - \sum z_i/K_i < 0$ (below its dew point).`,
           answer: String.raw`$\sum_i (K_i - 1)z_i/[1 + (K_i - 1)V/F] = 0$; monotonic (f′ < 0), single root, good Newton convergence.` },
-        { id: "practice-flash-P14b", label: "(b)", marks: "25", topic: "flash",
+        { id: "practice-flash-P15b", label: "(b)", marks: "25", topic: "flash",
           sub: "Isothermal flash of propane, n-butane, n-pentane with given K values", type: "numerical", syllabus: "partial", repeats: [],
           origin: "potential", ref: String.raw`Own numbers; K values from the DePriester fit (Wankat Eq. 2-30) at 300 kPa, 40 °C`,
           text: String.raw`200 kmol/h of 30 mol% propane, 30 mol% n-butane and 40 mol% n-pentane is flashed at 300 kPa and 40 °C, where (DePriester) $K_{C3} = 3.86$, $K_{C4} = 1.32$ and $K_{C5} = 0.44$. Check that the feed splits into two phases, then find V/F, V, L and the product compositions. Start Newton's method at V/F = 0.5.`,
@@ -715,9 +753,9 @@ is always negative, so $f$ falls monotonically and has a single root between 0 a
 **Exam tip:** both sums must come to 1.000 at the converged V/F; if they do not, the iteration has not converged.`,
           answer: String.raw`$V/F = 0.693$; V = 138.7, L = 61.3 kmol/h; $x$ = 0.101/0.246/0.654, $y$ = 0.388/0.324/0.288 (C₃/C₄/C₅).` } ] },
 
-    { id: "practice-flash-P15", q: 15, section: "F", compulsory: false, stem: String.raw``,
+    { id: "practice-flash-P16", q: 16, section: "F", compulsory: false, stem: String.raw``,
       parts: [
-        { id: "practice-flash-P15a", label: "(a)", marks: "8", topic: "flash",
+        { id: "practice-flash-P16a", label: "(a)", marks: "8", topic: "flash",
           sub: "Using an existing flash drum that is too small", type: "theory", syllabus: "partial", repeats: [],
           origin: "potential", ref: String.raw`Wankat 3e, Section 2.10`,
           text: String.raw`An existing vertical drum must handle a new flash duty, but $(V/F)F$ exceeds the drum's maximum vapor capacity. List the options open to the engineer.`,
@@ -731,7 +769,7 @@ is always negative, so $f$ falls monotonically and has a single root between 0 a
 - Raise the operating pressure: $\rho_V$ rises, so the drum can take more moles of vapor, but the relative volatility and temperatures change.
 - Buy or build a new drum, or combine the options above, choosing the cheapest and quickest.`,
           answer: String.raw`Demister/chevrons, lower F, lower V/F, drums in parallel or series, higher pressure, or a new drum.` },
-        { id: "practice-flash-P15b", label: "(b)", marks: "27", topic: "flash",
+        { id: "practice-flash-P16b", label: "(b)", marks: "27", topic: "flash",
           sub: "Benzene–toluene flash (α = 2.5) and vertical drum size", type: "numerical", syllabus: "partial", repeats: [],
           origin: "potential", ref: String.raw`Own numbers; drum sizing by Wankat Eqs. 2-64 to 2-68`,
           text: String.raw`800 kmol/h of 50 mol% benzene, 50 mol% toluene is flashed at 1 atm with V/F = 0.5. Take $\alpha_{BT} = 2.5$; the drum temperature is 95.5 °C. (i) Find $x$ and $y$ analytically. (ii) Size a vertical drum ($h_{total}/D = 4$). Data: $\rho_L = 800$ kg/m³; vapor ideal gas; $MW_B = 78.11$, $MW_T = 92.14$; $K_{drum} = \exp[A + B\ln F_{lv} + C(\ln F_{lv})^2 + D(\ln F_{lv})^3 + E(\ln F_{lv})^4]$ ft/s with $A = -1.8775$, $B = -0.8146$, $C = -0.1871$, $D = -0.01452$, $E = -0.001015$.`,
@@ -760,7 +798,7 @@ Use $D = 1.4$ m (about 4.5 ft).
 
 7. Height: $h_{total} = 4D = 5.6$ m. Check that $h_V$ (≥ 48 in) and $h_f$ (≥ 18 in) fit and that the liquid pool gives the required surge time; if $h/D$ came out below 3 or above 5, change the surge volume or use a horizontal drum.
 
-![Vertical flash drum: diameter from the permissible vapor velocity, height from the hV, hf and hL rules](fig/practice-flash-P15-sol.svg)
+![Vertical flash drum: diameter from the permissible vapor velocity, height from the hV, hf and hL rules](fig/practice-flash-P16-sol.svg)
 
 **Exam tip:** the diameter is set by the vapor, not the liquid. Keep $u_{perm}$, $\rho_V$ and $A_c$ in one unit system; $K_{drum}$ from the correlation is in ft/s.`,
           answer: String.raw`(i) $x = 0.387$, $y = 0.613$, V = L = 400 kmol/h. (ii) $F_{lv} = 0.061$, $K_{drum} = 0.446$ ft/s, $u_{perm} = 2.31$ m/s, $A_c = 1.45$ m², D ≈ 1.4 m, $h_{total} \approx 5.6$ m.` } ] }
