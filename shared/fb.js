@@ -39,17 +39,26 @@ export function shortName(email) {
 }
 
 // Everything the pages need to know about the person signed in.
-// state = { user, email, verified, member, blocked, role, isOwner, isAdmin, isMod, canPost }
+// state = { user, email, verified, emailVerified, teamVerified, request, member, blocked, role, isOwner, isAdmin, isMod, canPost }
+// verified: the email link was opened (emailVerified), or the team verified this exact account
+// (members/{email}.verifiedUid == uid) after checking the student's ID card. Team roles need emailVerified.
 async function describe(c, user) {
-  const s = { user, email: '', verified: false, member: null, blocked: false, role: '', isOwner: false, isAdmin: false, isMod: false, canPost: false, dbError: '' };
+  const s = { user, email: '', verified: false, emailVerified: false, teamVerified: false, request: null, member: null, blocked: false, role: '', isOwner: false, isAdmin: false, isMod: false, canPost: false, dbError: '' };
   if (!user) return s;
   s.email = (user.email || '').toLowerCase();
-  s.verified = !!user.emailVerified;
-  if (!s.verified) return s;
-  s.isOwner = s.email === OWNER;
+  s.emailVerified = !!user.emailVerified;
   const { F, db } = c;
-  try { const t = await F.getDoc(F.doc(db, 'team', s.email)); if (t.exists()) s.role = t.data().role; } catch (e) { s.dbError = e.code || 'error'; }
   try { const m = await F.getDoc(F.doc(db, 'members', s.email)); if (m.exists()) { s.member = m.data(); s.blocked = !!s.member.blocked; } } catch (e) { s.dbError = e.code || 'error'; }
+  s.teamVerified = !s.emailVerified && !!s.member && s.member.verifiedUid === user.uid;
+  s.verified = s.emailVerified || s.teamVerified;
+  if (!s.verified) {
+    try { const r = await F.getDoc(F.doc(db, 'verifyRequests', user.uid)); if (r.exists()) s.request = r.data(); } catch (e) { /* rules not published yet */ }
+    if (s.dbError === 'permission-denied') s.dbError = '';
+    return s;
+  }
+  if (!s.emailVerified) { s.canPost = !s.dbError && !!s.member && !s.blocked; return s; }
+  s.isOwner = s.email === OWNER;
+  try { const t = await F.getDoc(F.doc(db, 'team', s.email)); if (t.exists()) s.role = t.data().role; } catch (e) { s.dbError = e.code || 'error'; }
   if (s.email === FOUNDER) s.role = 'admin';
   if (s.isOwner) s.role = 'owner';
   s.isAdmin = s.isOwner || s.role === 'admin';
@@ -96,6 +105,15 @@ export async function signUp(id, password) {
 export async function resendVerification() {
   const c = await fb();
   if (c.auth.currentUser) await c.A.sendEmailVerification(c.auth.currentUser, emulator ? undefined : { url: continueUrl() });
+}
+// "Email not arriving? Ask the team to verify me": the team checks the student's ID card and binds this account.
+export async function requestTeamVerify(name) {
+  const c = await fb();
+  const u = c.auth.currentUser; if (!u) throw new Error('Sign in first.');
+  const email = (u.email || '').toLowerCase();
+  await c.F.setDoc(c.F.doc(c.db, 'verifyRequests', u.uid), { email, studentId: (idOf(email) || email.split('@')[0]).slice(0, 20),
+    name: name ? String(name).trim().slice(0, 80) : null, accountCreated: (u.metadata && u.metadata.creationTime || '').slice(0, 40) || null, createdAt: c.F.serverTimestamp() });
+  return refresh();
 }
 export async function resetPassword(id) {
   const c = await fb();

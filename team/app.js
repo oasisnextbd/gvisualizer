@@ -21,11 +21,12 @@ if (!enabled) {
 // ------------------------------------------------------------ shell
 function render() {
   if (!me || !me.user) return loginView();
-  if (!me.verified) return say(`<h2>Verify your email</h2><p class="lede">Open the verification link sent to <b>${esc(me.email)}</b>, then reload. Team members can also sign in with Google.</p><button class="btn ghost" id="out">Sign out</button>`);
+  if (!me.verified && !me.emailVerified) return say(`<h2>Verify your email</h2><p class="lede">Open the verification link sent to <b>${esc(me.email)}</b>, then reload. Team members can also sign in with Google.</p><button class="btn ghost" id="out">Sign out</button>`);
+  if (!me.emailVerified) return say(`<h2>Not on the team</h2><p class="lede"><b>${esc(me.email)}</b> was verified by the team as a student. Team members sign in with Google, or with an email whose verification link they opened.</p><button class="btn ghost" id="out">Sign out</button>`);
   if (me.dbError && !me.isOwner) return say(`<h2>Database not ready</h2><p class="lede">The database refused the request (${esc(me.dbError)}). If Firebase was just set up, publish <b>firebase/firestore.rules</b> in the console (Firestore → Rules) and reload.</p><button class="btn ghost" id="out">Sign out</button>`);
   if (!me.isMod) return say(`<h2>Not on the team</h2><p class="lede"><b>${esc(me.email)}</b> is signed in but is not on the team list. Ask the owner (${esc(OWNER)}) or an admin to add you.</p><button class="btn ghost" id="out">Sign out</button>`);
   if (!seenSaved) { seenSaved = true; C.F.setDoc(C.F.doc(C.db, 'seen', me.email), { at: C.F.serverTimestamp() }).catch(() => {}); }
-  const tabs = [['overview', 'Overview'], ['comments', 'Comments'], ['notes', 'Notes']].concat(me.isAdmin ? [['students', 'Students'], ['team', 'Team']] : []);
+  const tabs = [['overview', 'Overview'], ['comments', 'Comments'], ['notes', 'Notes'], ['students', 'Students']].concat(me.isAdmin ? [['team', 'Team']] : []);
   if (!tabs.some(t => t[0] === view.tab)) view.tab = 'overview';
   app.innerHTML = `<div class="tm"><nav class="tm-nav">
       <div class="tm-me"><b>${esc(me.email)}</b><span class="tag">${esc(me.role)}</span></div>
@@ -58,13 +59,14 @@ async function overview() {
   try {
     const cnt = async q => (await F.getCountFromServer(q)).data().count;
     const col = F.collection(db, 'comments');
-    const [n, r, a, all, nt] = await Promise.all([
+    const [n, r, a, all, nt, vr] = await Promise.all([
       cnt(F.query(col, F.where('status', '==', 'new'))), cnt(F.query(col, F.where('status', '==', 'reviewing'))),
-      cnt(F.query(col, F.where('public', '==', true))), cnt(col), cnt(F.collection(db, 'notes'))]);
+      cnt(F.query(col, F.where('public', '==', true))), cnt(col), cnt(F.collection(db, 'notes')), cnt(F.collection(db, 'verifyRequests'))]);
     const mem = me.isAdmin ? await cnt(F.collection(db, 'members')) : null;
     main(`<h1>Hello, ${esc(shortName(me.email))}</h1>
       <div class="tiles">
         <a class="tile" href="#comments" style="text-decoration:none;color:inherit"><div class="k">New comments</div><div class="v">${n}</div></a>
+        <a class="tile" href="#students" style="text-decoration:none;color:inherit"><div class="k">Verification requests</div><div class="v" id="vr">${vr}</div></a>
         <div class="tile"><div class="k">Being reviewed</div><div class="v">${r}</div></div>
         <div class="tile"><div class="k">Public (approved)</div><div class="v">${a}</div></div>
         <div class="tile"><div class="k">All comments</div><div class="v">${all}</div></div>
@@ -187,22 +189,53 @@ async function notes() {
 async function students() {
   const { F, db } = C;
   try {
-    const all = (await F.getDocs(F.collection(db, 'members'))).docs.map(d => ({ email: d.id, ...d.data() })).sort((a, b) => a.email.localeCompare(b.email));
+    const [mem, reqs] = await Promise.all([F.getDocs(F.collection(db, 'members')), F.getDocs(F.collection(db, 'verifyRequests'))]);
+    const all = mem.docs.map(d => ({ email: d.id, ...d.data() })).sort((a, b) => a.email.localeCompare(b.email));
+    const requests = reqs.docs.map(d => ({ uid: d.id, ...d.data() })).sort((a, b) => (a.createdAt?.seconds || 0) - (b.createdAt?.seconds || 0));
+    const have = new Map(all.map(r => [r.email, r]));
+    const inRange = email => { const id = +(String(email).match(/^(\d{7})@/) || [])[1]; return String(email).endsWith('@' + DOMAIN) && DEFAULT_RANGES.some(([a, b]) => id >= a && id <= b); };
     const q = view.q.toLowerCase();
     const rows = all.filter(r => !q || (r.email + ' ' + (r.name || '')).toLowerCase().includes(q));
-    const m = main(`<h1>Allowed people</h1>
-      <p class="lede">Only people on this list can read approved comments and post. Students sign in with <b>ID@${esc(DOMAIN)}</b> (they verify their mailbox first).</p>
-      <div class="tm-detail"><h3>Allow a range of student IDs</h3>
+    const fmt = s => { const d = s ? new Date(s) : null; return d && !isNaN(d) ? d.toLocaleString(undefined, { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }) : '?'; };
+    const m = main(`<h1>Students</h1>
+      <div class="tm-detail"><h3>Verification requests (${requests.length})</h3>
+        <p class="cm-dim">For students whose verification email never arrived. <b>Check their student ID card</b> (in person or a photo over a channel you trust) before approving. Approving binds the BUET email to that one account, so ask the student to confirm <b>when they created the account</b>: if someone else registered their email first, decline and block it.</p>
+        ${requests.length ? `<table class="tm-t"><thead><tr><th>Email</th><th>ID / name</th><th>Account created</th><th>Requested</th><th></th></tr></thead><tbody>
+        ${requests.map(r => { const mb = have.get(r.email); const note = !mb ? (inRange(r.email) ? 'in the allowed range, not on the list yet' : '<b>not on the allowed list</b>') : mb.blocked ? '<b>blocked</b>' : mb.verifiedUid && mb.verifiedUid !== r.uid ? '<b>already verified for another account</b>' : 'on the allowed list';
+          return `<tr><td>${esc(r.email)}<br><span class="cm-dim">${note}</span></td><td>${esc(r.studentId || '')}${r.name ? '<br>' + esc(r.name) : ''}</td><td class="cm-dim">${esc(fmt(r.accountCreated))}</td><td class="cm-dim">${esc(r.createdAt ? fmt(r.createdAt.toDate()) : '')}</td>
+          <td><button class="btn" data-ok="${esc(r.uid)}">Approve</button> <button class="cm-link" data-no="${esc(r.uid)}">Decline</button></td></tr>`; }).join('')}
+        </tbody></table>` : '<p class="empty">No requests waiting.</p>'}<p class="cm-msg" id="vm"></p></div>
+      ${me.isAdmin ? `<div class="tm-detail"><h3>Allow a range of student IDs</h3>
+        <p class="cm-dim">Only people on this list can read approved comments and post. Students sign in with <b>ID@${esc(DOMAIN)}</b> and verify their mailbox (or ask the team, above).</p>
         <div class="tm-bar"><input class="search" id="r1" placeholder="from, e.g. 2202001"><input class="search" id="r2" placeholder="to, e.g. 2202120"><button class="btn" id="ar">Allow range</button></div>
         <div class="tm-bar"><button class="btn ghost" id="ad">Allow ${DEFAULT_RANGES.map(r => r.join('–')).join(' and ')}</button><span class="cm-dim" id="rm"></span></div>
         <h3>Add one person</h3><p class="cm-dim">For a teacher, a senior or anyone outside the ranges (any email, including Gmail).</p>
-        <div class="tm-bar"><input class="search" id="oe" placeholder="email"><input class="search" id="on" placeholder="name (optional)"><select class="search" id="ok"><option value="guest">guest</option><option value="student">student</option></select><button class="btn" id="ao">Add</button></div></div>
+        <div class="tm-bar"><input class="search" id="oe" placeholder="email"><input class="search" id="on" placeholder="name (optional)"><select class="search" id="ok"><option value="guest">guest</option><option value="student">student</option></select><button class="btn" id="ao">Add</button></div></div>` : '<p class="cm-dim">Admins manage the allowed list; moderators approve verification requests.</p>'}
+      <h3>Allowed people</h3>
       <div class="tm-bar"><input class="search" id="sq" placeholder="Search email or name" value="${esc(view.q)}"><span class="cm-dim">${rows.length} of ${all.length}</span></div>
-      <table class="tm-t"><thead><tr><th>Email</th><th>Kind</th><th>Status</th><th></th></tr></thead><tbody>
-      ${rows.slice(0, 400).map(r => `<tr><td>${esc(r.email)}${r.name ? ' · ' + esc(r.name) : ''}</td><td>${esc(r.kind)}</td><td>${r.blocked ? '<span class="st-new">blocked</span>' : 'allowed'}</td>
-        <td><button class="cm-link" data-b="${esc(r.email)}">${r.blocked ? 'Unblock' : 'Block'}</button> · <button class="cm-link" data-x="${esc(r.email)}">Remove</button></td></tr>`).join('')}
+      <table class="tm-t"><thead><tr><th>Email</th><th>Kind</th><th>Status</th>${me.isAdmin ? '<th></th>' : ''}</tr></thead><tbody>
+      ${rows.slice(0, 400).map(r => `<tr><td>${esc(r.email)}${r.name ? ' · ' + esc(r.name) : ''}</td><td>${esc(r.kind)}</td><td>${r.blocked ? '<span class="st-new">blocked</span>' : 'allowed'}${r.verifiedUid ? ' · <span class="cm-dim">verified by ' + esc(shortName(r.verifiedBy || 'team')) + '</span>' : ''}</td>
+        ${me.isAdmin ? `<td><button class="cm-link" data-b="${esc(r.email)}">${r.blocked ? 'Unblock' : 'Block'}</button> · <button class="cm-link" data-x="${esc(r.email)}">Remove</button></td>` : ''}</tr>`).join('')}
       </tbody></table>`);
-    const have = new Map(all.map(r => [r.email, r]));
+    const vmsg = t => { m.querySelector('#vm').textContent = t; };
+    m.querySelectorAll('[data-ok]').forEach(b => b.onclick = async () => {
+      const r = requests.find(x => x.uid === b.dataset.ok), mb = have.get(r.email);
+      try {
+        if (mb && mb.blocked) throw new Error(r.email + ' is blocked. Unblock it first (admins).');
+        if (mb && mb.verifiedUid && mb.verifiedUid !== r.uid && !confirm(r.email + ' is already verified for another account. Move the verification to this request\'s account?')) return;
+        const v = { verifiedUid: r.uid, verifiedBy: me.email, verifiedAt: F.serverTimestamp() };
+        if (mb) await F.updateDoc(F.doc(db, 'members', r.email), v);
+        else {
+          if (!inRange(r.email) && !confirm(r.email + ' is not on the allowed list. Allow it and verify?')) return;
+          await F.setDoc(F.doc(db, 'members', r.email), { id: (r.email.match(/^(\d{7})@/) || [])[1] || null, name: r.name || null, kind: 'student', blocked: false, by: me.email, at: F.serverTimestamp(), ...v });
+        }
+        await F.deleteDoc(F.doc(db, 'verifyRequests', r.uid));
+        vmsg('Verified ' + r.email + '.'); setTimeout(students, 600);
+      } catch (e) { vmsg(niceError(e)); }
+    });
+    m.querySelectorAll('[data-no]').forEach(b => b.onclick = async () => { const r = requests.find(x => x.uid === b.dataset.no); if (!confirm('Decline the request from ' + r.email + '?')) return; try { await F.deleteDoc(F.doc(db, 'verifyRequests', r.uid)); students(); } catch (e) { vmsg(niceError(e)); } });
+    let t; m.querySelector('#sq').oninput = e => { clearTimeout(t); t = setTimeout(() => { view.q = e.target.value; students(); }, 300); };
+    if (!me.isAdmin) return;
     const msg = t => { m.querySelector('#rm').textContent = t; };
     const allow = async ranges => {
       const list = [];
@@ -220,13 +253,12 @@ async function students() {
     m.querySelector('#ao').onclick = async () => {
       const email = m.querySelector('#oe').value.trim().toLowerCase();
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return msg('Type a full email address.');
-      try { await F.setDoc(F.doc(db, 'members', email), { id: (email.match(/^(\d{7})@/) || [])[1] || null, name: m.querySelector('#on').value.trim() || null, kind: m.querySelector('#ok').value, blocked: false, by: me.email, at: F.serverTimestamp() }); students(); }
+      try { await F.setDoc(F.doc(db, 'members', email), { id: (email.match(/^(\d{7})@/) || [])[1] || null, name: m.querySelector('#on').value.trim() || null, kind: m.querySelector('#ok').value, blocked: false, by: me.email, at: F.serverTimestamp() }, { merge: true }); students(); }
       catch (e) { msg(niceError(e)); }
     };
-    let t; m.querySelector('#sq').oninput = e => { clearTimeout(t); t = setTimeout(() => { view.q = e.target.value; students(); }, 300); };
     m.querySelectorAll('[data-b]').forEach(b => b.onclick = async () => {
       const r = have.get(b.dataset.b);
-      try { await F.setDoc(F.doc(db, 'members', r.email), { id: r.id || null, name: r.name || null, kind: r.kind || 'student', blocked: !r.blocked, by: me.email, at: F.serverTimestamp() }); students(); } catch (e) { msg(niceError(e)); }
+      try { await F.updateDoc(F.doc(db, 'members', r.email), { blocked: !r.blocked, by: me.email, at: F.serverTimestamp() }); students(); } catch (e) { msg(niceError(e)); }
     });
     m.querySelectorAll('[data-x]').forEach(b => b.onclick = async () => { if (confirm('Remove ' + b.dataset.x + ' from the allowed list?')) { try { await F.deleteDoc(F.doc(db, 'members', b.dataset.x)); students(); } catch (e) { msg(niceError(e)); } } });
   } catch (e) { fail(e); }
@@ -236,9 +268,9 @@ async function students() {
 const ROLE_INFO = {
   owner: ['Owner', 'Everything, including admins and the company account.'],
   admin: ['Admin', 'Everything, except changing the owner or other admins: comments, notes, allowed students, moderators.'],
-  moderator: ['Moderator', 'Comments and notes: review, reply, approve, publish corrections and methods.']
+  moderator: ['Moderator', 'Comments and notes: review, reply, approve, publish corrections and methods; approve student verification requests.']
 };
-const CAN_SEE = { owner: 'Everything', admin: 'Everything except changing the owner or admins', moderator: 'Comments, Notes' };
+const CAN_SEE = { owner: 'Everything', admin: 'Everything except changing the owner or admins', moderator: 'Comments, Notes, verification requests' };
 async function team() {
   const { F, db } = C;
   try {

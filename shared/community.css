@@ -32,3 +32,5 @@
 .cm-form label{display:block;margin:10px 0 0;font-size:14px;color:var(--dim)}
 .cm-form select,.cm-form textarea{display:block;width:100%;margin-top:4px;box-sizing:border-box;font:inherit}
 .cm-form textarea{min-height:110px;resize:vertical}
+.cm-team-v{border-top:1px solid var(--edge);margin-top:14px;padding-top:10px}
+.cm-team-v label{display:block;margin:6px 0}

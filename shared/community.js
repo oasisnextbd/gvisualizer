@@ -1,7 +1,7 @@
 // gvisualizer: sign-in, team notes and the "Suggest / report" box on solution pages.
 // Loaded as a module by question-bank/solutions.html and mass-transfer/solutions.html.
 // Stays completely silent until Firebase is configured (shared/config.js).
-import { enabled, fb, onUser, signIn, signUp, signOut, resetPassword, resendVerification, recheck, niceError, esc, when, shortName, DOMAIN } from './fb.js';
+import { enabled, fb, onUser, signIn, signUp, signOut, resetPassword, resendVerification, recheck, requestTeamVerify, niceError, esc, when, shortName, DOMAIN } from './fb.js';
 
 const COURSE = location.pathname.includes('/mass-transfer/') ? 'che303' : 'che301';
 const KINDS = { error: 'Error in the question or solution', method: 'Easier or alternative method', doubt: 'Doubt: I do not understand a step', request: 'Missing: add a question or topic' };
@@ -43,7 +43,7 @@ function paintHeader() {
   const on = state && state.user;
   $('.cm-signin', b).hidden = !!on;
   $('.cm-me', b).hidden = !on;
-  if (on) $('.cm-id', b).textContent = shortName(state.email) + (state.verified ? '' : ' (verify email)');
+  if (on) $('.cm-id', b).textContent = shortName(state.email) + (state.verified ? '' : state.request ? ' (waiting for team)' : ' (verify email)');
 }
 
 // ------------------------------------------------------------ sign-in modal
@@ -72,6 +72,16 @@ function addModal() {
       <p>We sent a verification link to <b class="cm-v-email"></b>. Open it, then come back and press <b>I have verified</b>.</p>
       <p class="cm-dim">Not there? Look in the <b>Junk</b> folder of Outlook (outlook.office.com); it can take a minute.</p>
       <div class="cm-row"><button type="button" class="btn cm-do-check">I have verified</button><button type="button" class="btn ghost cm-do-resend">Send again</button></div>
+      <div class="cm-team-v">
+        <div class="cm-tv-ask">
+          <p class="cm-dim"><b>Email not arriving?</b> The team can verify you instead: send a request, then show your student ID card to a team member.</p>
+          <label>Your name (optional, helps the team find you)<input class="search cm-tv-name" autocomplete="name"></label>
+          <button type="button" class="btn ghost cm-do-tv">Ask the team to verify me</button>
+        </div>
+        <div class="cm-tv-sent" hidden>
+          <p><b>Request sent</b> <span class="cm-dim cm-tv-when"></span>: show your student ID card to a team member. When they approve it, press <b>I have verified</b> (or just reload the page).</p>
+        </div>
+      </div>
     </div>
     <p class="cm-msg" aria-live="polite"></p>
   </div>`;
@@ -90,16 +100,25 @@ function addModal() {
     await resetPassword(id); msg('Password reset link sent. Check your inbox and Junk folder.');
   }));
   $('.cm-do-resend', m).addEventListener('click', () => busy(async () => { await resendVerification(); msg('Sent again. Check Junk too.'); }));
-  $('.cm-do-check', m).addEventListener('click', () => busy(async () => { const s = await recheck(); if (s.verified) afterAuth(s); else msg('Not verified yet. Open the link in the email first.'); }));
+  $('.cm-do-check', m).addEventListener('click', () => busy(async () => { const s = await recheck(); paintVerify(); if (s.verified) afterAuth(s); else msg(s.request ? 'Not verified yet: the team has not approved your request yet.' : 'Not verified yet. Open the link in the email first.'); }));
+  $('.cm-do-tv', m).addEventListener('click', () => busy(async () => { await requestTeamVerify($('.cm-tv-name', m).value); paintVerify(); msg(''); }));
 }
 function openModal(pane) {
   const m = $('.cm-modal'); m.hidden = false;
   m.querySelectorAll('.cm-pane').forEach(p => { p.hidden = p.dataset.pane !== pane; });
   $('.cm-msg', m).textContent = '';
-  if (pane === 'verify' && state) $('.cm-v-email', m).textContent = state.email;
+  if (pane === 'verify' && state) { $('.cm-v-email', m).textContent = state.email; paintVerify(); }
   const f = m.querySelector(`[data-pane="${pane}"] input`); if (f) f.focus();
 }
 function closeModal() { $('.cm-modal').hidden = true; }
+// The "ask the team" part of the verify pane remembers a request already sent (it is stored in the database).
+function paintVerify() {
+  const m = $('.cm-modal'); if (!m) return;
+  const r = state && state.request;
+  $('.cm-tv-ask', m).hidden = !!r;
+  $('.cm-tv-sent', m).hidden = !r;
+  if (r) $('.cm-tv-when', m).textContent = r.createdAt ? '(' + when(r.createdAt) + ')' : '';
+}
 function afterAuth(s) {
   if (!s.verified) return openModal('verify');
   closeModal();
@@ -132,14 +151,16 @@ async function renderBox(id, sol) {
   let box = $('#view .cm-box');
   if (!box) { box = document.createElement('section'); box.className = 'cm-box'; sol.parentNode.insertBefore(box, sol.nextSibling); }
   const s = state;
-  const key = id + '|' + (s && s.user ? [s.email, s.verified, s.canPost, s.blocked, s.dbError].join(',') : '-');
+  const key = id + '|' + (s && s.user ? [s.email, s.verified, s.canPost, s.blocked, s.dbError, !!s.request].join(',') : '-');
   if (box.dataset.key === key) return;
   box.dataset.key = key;
   let h = '<h3>Suggestions and doubts</h3>';
   if (!s || !s.user) {
     h += `<p class="cm-dim">Found an error, an easier method, or stuck on a step? BUET ChE students can sign in to tell the team.</p><button type="button" class="btn ghost cm-open">Sign in to post</button>`;
+  } else if (!s.verified && s.request) {
+    h += `<p class="cm-dim">Your request to be verified by the team was sent. Show your student ID card to a team member; once they approve it you can post here.</p><button type="button" class="btn ghost cm-verify">Check again</button>`;
   } else if (!s.verified) {
-    h += `<p class="cm-dim">Verify your email to post: open the link we sent to <b>${esc(s.email)}</b> (check Junk).</p><button type="button" class="btn ghost cm-verify">I have verified</button>`;
+    h += `<p class="cm-dim">Verify your email to post: open the link we sent to <b>${esc(s.email)}</b> (check Junk). Email not arriving? The team can verify you instead.</p><button type="button" class="btn ghost cm-verify">I have verified / ask the team</button>`;
   } else if (s.dbError) {
     h += '<p class="cm-dim">Suggestions are being set up and are not open yet. Please try again later.</p>';
   } else if (!s.canPost) {
@@ -215,7 +236,7 @@ async function shrink(file) {
 
 async function send(id, box) {
   const msg = t => { $('.cm-msg2', box).textContent = t; };
-  const text = $('.cm-text', box).value.trim();
+  const text = $('textarea.cm-text', box).value.trim();
   if (!text) return msg('Write a few words first.');
   if (text.length > 4000) return msg('Please keep it under 4000 characters.');
   const btn = $('.cm-send', box); btn.disabled = true; msg('Sending…');
@@ -227,7 +248,7 @@ async function send(id, box) {
     await F.setDoc(ref, { course: COURSE, part: id, kind: $('.cm-kind', box).value, text, hasImage: !!data,
       author: state.email, authorId: shortName(state.email).slice(0, 40), status: 'new', public: false, createdAt: F.serverTimestamp() });
     if (data) await F.setDoc(F.doc(db, 'commentImages', ref.id), { data, author: state.email, createdAt: F.serverTimestamp() });
-    $('.cm-text', box).value = ''; $('.cm-photo', box).value = '';
+    $('textarea.cm-text', box).value = ''; $('.cm-photo', box).value = '';
     msg('Sent. Thank you! You will see the status and any reply here.');
     loadList(id, box);
   } catch (e) { msg(niceError(e)); }

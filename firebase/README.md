@@ -36,6 +36,34 @@ On any solution page: **Sign in → Create account** with the student ID (e.g. 2
 check Junk) → **I have verified**. Only verified emails on the allowed list can read approved comments or post.
 Forgotten passwords: **Forgot password?** in the same box.
 
+## When the verification email never arrives (BUET Outlook)
+
+BUET's Microsoft 365 may silently drop mail from `noreply@gvisualizer-4cd05.firebaseapp.com`. Two fixes, use both:
+
+**1. Send the emails through Gmail (better delivery).** Turn on 2-step verification for oasisnextbd@gmail.com,
+create an app password at <https://myaccount.google.com/apppasswords>, then in the console:
+*Authentication → Templates → SMTP settings → Enable* with
+
+| Field | Value |
+|---|---|
+| Sender address | oasisnextbd@gmail.com |
+| SMTP server host | smtp.gmail.com |
+| Port | 587 |
+| Username | oasisnextbd@gmail.com |
+| Password | the 16-character app password |
+| SMTP security mode | STARTTLS |
+
+**2. Team verification (no email needed).** In the "Check your BUET email" box a student presses
+**Ask the team to verify me** (this stores `verifyRequests/{their uid}`). A moderator or admin opens the
+dashboard → **Students → Verification requests**, checks the student's ID card, asks when they created the
+account (shown next to the request) and presses **Approve**. That binds `members/{email}.verifiedUid` to that one
+account, so the student can post at once (they press *I have verified* or reload). **Decline** removes the request.
+If the student says they did not create that account, someone else registered their email: decline, and an admin
+blocks or removes that email (then delete the account under *Authentication → Users* so the student can register).
+Team roles never come from team verification: team members still need Google sign-in or a verified email.
+
+The rules changed for this, so **re-publish `firebase/firestore.rules`** (Firestore → Rules → paste → Publish).
+
 ## Free-plan limits (Spark)
 
 - Firestore: 50,000 reads, 20,000 writes and 1 GiB stored per day/total; enough for a few hundred students.

@@ -7,15 +7,22 @@ rules_version = '2';
 //   admin      everything, except changing the owner or other admins.
 //              omayer120495@gmail.com (the founder) is a built-in admin.
 //   moderator  comments and notes.
-//   student    an allowed member (members/{email}, not blocked) with a verified email:
+//   student    an allowed member (members/{email}, not blocked) who is verified, either by the
+//              email link (email_verified) or by the team (members/{email}.verifiedUid == their uid,
+//              set after checking their ID card when the email never arrives):
 //              reads approved comments and posts their own.
 //   anyone     reads the team notes (the course content itself is public for now).
 service cloud.firestore {
   match /databases/{database}/documents {
 
     // ------------------------------------------------------------ people
+    // Signed in with an email address (verified or not).
+    function authed() {
+      return request.auth != null && request.auth.token.email is string;
+    }
+    // Email proven by the verification link, or by Google sign-in. Team roles need this.
     function signedIn() {
-      return request.auth != null && request.auth.token.email_verified == true;
+      return authed() && request.auth.token.email_verified == true;
     }
     function me() {
       return request.auth.token.email.lower();
@@ -47,8 +54,16 @@ service cloud.firestore {
     function memberDoc() {
       return /databases/$(database)/documents/members/$(me());
     }
+    // Verified by the team: the member document is bound to this exact account (uid).
+    function teamVerified() {
+      return authed() && exists(memberDoc()) && get(memberDoc()).data.get('verifiedUid', '') == request.auth.uid;
+    }
+    // Verified either way (students); team roles still use signedIn().
+    function verified() {
+      return signedIn() || teamVerified();
+    }
     function isStudent() {
-      return signedIn() && exists(memberDoc()) && get(memberDoc()).data.get('blocked', false) != true;
+      return verified() && exists(memberDoc()) && get(memberDoc()).data.get('blocked', false) != true;
     }
     function canPost() {
       return isStudent() || isMod();
@@ -93,25 +108,53 @@ service cloud.firestore {
     }
 
     // ------------------------------------------------------------ allowed students
+    // Team verification: binds the member document to one account (uid) of a verify request.
+    function verifyFields() {
+      return request.resource.data.verifiedUid is string && request.resource.data.verifiedUid.size() <= 128
+        && request.resource.data.verifiedBy == me()
+        && request.resource.data.verifiedAt == request.time;
+    }
     match /members/{email} {
-      allow get: if signedIn() && (email == me() || isMod());
+      function memberFields() {
+        return request.resource.data.keys().hasOnly(['id', 'name', 'kind', 'blocked', 'by', 'at', 'verifiedUid', 'verifiedBy', 'verifiedAt'])
+          && optStr(request.resource.data.get('id', null), 20)
+          && optStr(request.resource.data.get('name', null), 80)
+          && request.resource.data.kind in ['student', 'guest']
+          && request.resource.data.blocked is bool
+          && email == email.lower();
+      }
+      // Unverified accounts may read their own document, to see whether the team verified them.
+      allow get: if (authed() && email == me()) || isMod();
       allow list: if isMod();
-      allow create, update: if isAdmin()
-        && request.resource.data.keys().hasOnly(['id', 'name', 'kind', 'blocked', 'by', 'at'])
-        && optStr(request.resource.data.get('id', null), 20)
-        && optStr(request.resource.data.get('name', null), 80)
-        && request.resource.data.kind in ['student', 'guest']
-        && request.resource.data.blocked is bool
-        && request.resource.data.by == me()
-        && email == email.lower();
+      allow create: if (isAdmin() && memberFields() && request.resource.data.by == me()
+          && (!('verifiedUid' in request.resource.data) || verifyFields()))
+        || (isMod() && memberFields() && request.resource.data.by == me() && verifyFields()
+          && request.resource.data.kind == 'student' && request.resource.data.blocked == false);
+      allow update: if (isAdmin() && memberFields() && request.resource.data.by == me()
+          && (!changed().hasAny(['verifiedUid', 'verifiedBy', 'verifiedAt']) || verifyFields()))
+        || (isMod() && memberFields() && changed().hasOnly(['verifiedUid', 'verifiedBy', 'verifiedAt']) && verifyFields());
       allow delete: if isAdmin();
+    }
+
+    // "Email not arriving? Ask the team to verify me": one request per account, keyed by uid.
+    match /verifyRequests/{uid} {
+      allow get: if (authed() && uid == request.auth.uid) || isMod();
+      allow list: if isMod();
+      allow create, update: if authed() && uid == request.auth.uid
+        && request.resource.data.keys().hasOnly(['email', 'studentId', 'name', 'accountCreated', 'createdAt'])
+        && request.resource.data.email == me()
+        && str(request.resource.data.studentId, 20)
+        && optStr(request.resource.data.get('name', null), 80)
+        && optStr(request.resource.data.get('accountCreated', null), 40)
+        && request.resource.data.createdAt == request.time;
+      allow delete: if isMod() || (authed() && uid == request.auth.uid);
     }
 
     // ------------------------------------------------------------ comments
     // Students create their own comment once; only the team changes it afterwards.
     match /comments/{id} {
       allow get, list: if isMod()
-        || (signedIn() && resource.data.author == me())
+        || (verified() && resource.data.author == me())
         || (canPost() && resource.data.public == true);
       allow create: if canPost()
         && request.resource.data.keys().hasOnly(['course', 'part', 'kind', 'text', 'hasImage', 'author', 'authorId', 'status', 'public', 'createdAt'])
@@ -139,7 +182,7 @@ service cloud.firestore {
         return get(/databases/$(database)/documents/comments/$(id)).data;
       }
       allow get: if isMod()
-        || (signedIn() && resource.data.author == me())
+        || (verified() && resource.data.author == me())
         || (canPost() && parent().public == true);
       allow create: if canPost()
         && request.resource.data.keys().hasOnly(['data', 'author', 'createdAt'])
