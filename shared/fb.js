@@ -13,7 +13,9 @@ export function fb() {
     const [A0, A, F] = await Promise.all([
       import(SDK + '/firebase-app.js'), import(SDK + '/firebase-auth.js'), import(SDK + '/firebase-firestore.js')]);
     const cfg = emulator || !firebaseConfig ? { apiKey: 'demo-key', authDomain: 'localhost', projectId: 'demo-gvisualizer', appId: 'demo-app' } : firebaseConfig;
-    const app = A0.initializeApp(cfg);
+    // The team dashboard uses its own named app, so its Google session is stored separately and
+    // signing in there does not replace a student's sign-in on the solution pages (and vice versa).
+    const app = A0.initializeApp(cfg, /\/team\//.test(location.pathname) ? 'team' : '[DEFAULT]');
     const auth = A.getAuth(app);
     const db = F.getFirestore(app);
     if (emulator) {
