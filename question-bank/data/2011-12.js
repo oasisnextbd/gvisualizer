@@ -161,7 +161,7 @@ The exchanger is **not suitable** as specified. It is about 9% short of surface 
       parts: [
         { id: "2011-12-Q2a", label: "(a)", marks: "8",
           topic: "natural-convection", sub: "Grashof number; Gr/Re²",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-natural-convection-P4a"],
           text: String.raw`Write down the physical significance of the Grashof number. How do you relate the Grashof number to the Reynolds number?`,
           solution: String.raw`**Definition**
 
@@ -188,7 +188,7 @@ $$\frac{\mathrm{Gr}_L}{\mathrm{Re}_L^2} = \frac{g\beta\Delta T L^3/\nu^2}{(u_\in
           answer: String.raw`Gr = buoyancy/viscous force ratio (the "Re" of free convection). $\mathrm{Gr}/\mathrm{Re}^2$ = buoyancy/inertia; $\ll1$ forced, $\sim1$ mixed, $\gg1$ natural convection.` },
         { id: "2011-12-Q2b", label: "(b)", marks: "7",
           topic: "natural-convection", sub: "Rayleigh number",
-          type: "theory", syllabus: "in", repeats: ["2022-23-Q7a"],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q7a", "practice-natural-convection-P4a"],
           text: String.raw`Define the term "Rayleigh number". What is the importance of the Rayleigh number?`,
           solution: String.raw`**Definition:** the Rayleigh number is the product of the Grashof and Prandtl numbers:
 
@@ -247,7 +247,7 @@ $$q = \bar h A (T_s - T_\infty) = 4.82\times(0.5\times0.4)\times100 = 96.4\,\mat
       parts: [
         { id: "2011-12-Q3a", label: "(a)", marks: "10",
           topic: "condensation", sub: "Film vs dropwise condensation",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-condensation-P7a"],
           text: String.raw`Discuss the different types of condensation processes. Which process is more preferable and why?`,
           solution: String.raw`Condensation happens when a vapour touches a surface below its saturation temperature $T_{sat}$. The latent heat $h_{fg}$ is released to the surface.
 
@@ -275,7 +275,7 @@ $$q = \bar h A (T_s - T_\infty) = 4.82\times(0.5\times0.4)\times100 = 96.4\,\mat
           answer: String.raw`Film (continuous wetting film, film is the resistance) vs dropwise (droplets, bare surface, $h$ 5–10× higher). Dropwise is preferable for heat transfer, but it is not sustainable, so design uses film condensation.` },
         { id: "2011-12-Q3b", label: "(b)", marks: "5",
           topic: "shell-tube", sub: "U-tube exchanger pros and cons",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-shell-tube-P10a"],
           text: String.raw`What are the advantages and disadvantages of a U-tube type heat exchanger?`,
           solution: String.raw`A U-tube exchanger (TEMA type **BEU** in the slides) has tubes bent into a U and rolled into a **single stationary tube sheet**. There is no second tube sheet and no floating head.
 
@@ -294,7 +294,7 @@ $$q = \bar h A (T_s - T_\infty) = 4.82\times(0.5\times0.4)\times100 = 96.4\,\mat
           answer: String.raw`Pros: absorbs thermal expansion, same price but cheaper at high pressure, removable bundle. Cons: tube insides very hard to clean, full counterflow only with an F shell, tubes hard to replace, even passes only.` },
         { id: "2011-12-Q3c", label: "(c)", marks: "10",
           topic: "heat-exchangers", sub: "Temperature profiles with phase change",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-heat-exchangers-P8"],
           text: String.raw`Draw the temperature distribution profile for a parallel-flow heat exchanger where (i) both fluids change phase, and (ii) one fluid is partially condensed.`,
           solution: String.raw`![Parallel flow: (i) both fluids change phase; (ii) one fluid partially condensed](fig/2011-12-Q3c-sol.svg)
 
@@ -564,7 +564,7 @@ $$\dot Q = 4\pi\times45\times\frac{0.08\times0.10}{0.10 - 0.08}\times(200 - 80) 
           answer: String.raw`Multilayer reflective foils with spacers in a high vacuum: vacuum stops convection and gas conduction, foils act as radiation shields, so $k_{app} \sim 10^{-5}$ W/m·K (cryogenics).` },
         { id: "2011-12-Q6c", label: "(c)", marks: "8+7",
           topic: "insulation", sub: "Critical radius: derivation + pipe",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-insulation-P2"],
           text: String.raw`What is the critical thickness of insulation? Derive the equation for the critical thickness. What will happen if the thickness of insulation is greater than the critical thickness?
 
 Calculate the critical thickness of insulation for asbestos ($k = 0.17$ W/m·°C) surrounding a pipe exposed to room air at 20°C with $h = 3$ W/m²·°C. Calculate the heat loss from a 200°C, 5.0 cm diameter pipe when covered with the critical thickness of insulation and without insulation.`,
@@ -619,7 +619,7 @@ The critical insulation *raises* the loss by about 25% (105.7 vs 84.8 W/m).
       parts: [
         { id: "2011-12-Q7a", label: "(a)", marks: "10",
           topic: "boundary-layer", sub: "Reynolds–Colburn analogy",
-          type: "derivation", syllabus: "in", repeats: ["2014-15-Q3a", "2015-16-Q8a", "2016-17-Q8a", "2017-18-Q8a", "2020-21-Q7a", "2022-23-Q3a"],
+          type: "derivation", syllabus: "in", repeats: ["2014-15-Q3a", "2015-16-Q8a", "2016-17-Q8a", "2017-18-Q8a", "2020-21-Q7a", "2022-23-Q3a", "practice-boundary-layer-P6"],
           text: String.raw`Derive the Reynolds–Colburn analogy and state its significance in heat transfer.`,
           solution: String.raw`**Assumptions:** steady, incompressible, laminar flow over a flat plate at zero pressure gradient; constant properties; plate at uniform $T_w$.
 
@@ -802,7 +802,7 @@ $$\boxed{\varepsilon_M = \ell^2\left|\frac{d\bar u}{dy}\right|}$$
           answer: String.raw`$\ell$ = distance a turbulent lump travels before mixing; $\tau_t = \rho\ell^2|d\bar u/dy|\,d\bar u/dy$ gives $\varepsilon_M = \ell^2|d\bar u/dy|$ (and $\varepsilon_H \approx \varepsilon_M$).` },
         { id: "2011-12-Q8b", label: "(b)", marks: "10",
           topic: "boundary-layer", sub: "Thermal boundary layer on a flat plate",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-boundary-layer-P12a"],
           text: String.raw`Describe the thermal boundary layer formation for forced convection on an isothermal flat plate. Indicate the relative thickness of the hydrodynamic and thermal boundary layers for common fluids.`,
           solution: String.raw`![Relative thickness of the velocity (δ) and thermal (δt) boundary layers](fig/2011-12-Q8b-sol.svg)
 
@@ -830,7 +830,7 @@ Pr = 1 means momentum and heat diffuse at the same rate, so the two layers coinc
           answer: String.raw`Thermal BL: region where T goes from $T_s$ to $T_\infty$, growing like $\sqrt x$. $\delta_t/\delta \approx \mathrm{Pr}^{-1/3}/1.026$: ≈ equal for gases, thinner for water and oils, much thicker for liquid metals.` },
         { id: "2011-12-Q8c", label: "(c)", marks: "5+10",
           topic: "convection-basics", sub: "Bulk (mixing-cup) temperature",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-convection-basics-P4a"],
           text: String.raw`What is the bulk temperature? Why is it called the "mixing cup" temperature? Determine the bulk temperature for laminar flow in a tube, given the temperature distribution
 
 $$T - T_c = \frac{1}{\alpha}\frac{\partial T}{\partial x}\frac{u_0 r_0^2}{4}\left[\left(\frac{r}{r_0}\right)^2 - \frac{1}{4}\left(\frac{r}{r_0}\right)^4\right]$$

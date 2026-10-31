@@ -159,7 +159,7 @@ $$\frac{1}{U_D} = \frac{1}{U_C} + R_d,\qquad R_d = R_{di}\frac{d_o}{d_i} + R_{do
       parts: [
         { id: "2013-14-Q3a", label: "(a)", marks: "20",
           topic: "condensation", sub: "Nusselt analysis of laminar film condensation, vertical plate",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-condensation-P3a"],
           text: String.raw`Analyze mathematically the film condensation on a vertical plate (condensate flow is laminar) and show that
 $$\mathrm{Nu}_x = \left[\frac{\rho(\rho-\rho_v)g h_{fg}x^3}{4\mu k(T_g-T_w)}\right]^{1/4}$$`,
           solution: String.raw`![Laminar condensate film on a vertical plate: δ(x), u(y) and linear T(y)](fig/2013-14-Q3a-sol.svg)
@@ -206,7 +206,7 @@ $$\bar h = 0.943\left[\frac{\rho(\rho-\rho_v)g h_{fg}k^3}{L\mu(T_g-T_w)}\right]^
           answer: String.raw`$u = \frac{(\rho-\rho_v)g}{\mu}(\delta y - y^2/2)$, $\delta^4 = \frac{4\mu k\Delta T x}{\rho(\rho-\rho_v)g h_{fg}}$, $h_x = k/\delta$ → $\mathrm{Nu}_x = x/\delta$ as required; $\bar h = 0.943[\dots]^{1/4}$.` },
         { id: "2013-14-Q3b", label: "(b)", marks: "15",
           topic: "boiling", sub: "Boiling curve and regimes",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-boiling-P3a"],
           text: String.raw`Draw the "Heat flux" vs. "Temperature excess" curve and explain the different regimes of boiling.`,
           solution: String.raw`![Pool boiling curve, q″ vs ΔT excess, with the boiling regimes](fig/common-boiling-curve.svg)
 
@@ -259,7 +259,7 @@ Arrows: tube fluid in → pass 1 → turns in the floating head → pass 2 → o
           answer: String.raw`Shell, tube bundle, stationary and floating tube sheets, channel with pass partition, floating head, baffles, tie rods, nozzles, supports.` },
         { id: "2013-14-Q4b", label: "(b)", marks: "10",
           topic: "heat-exchangers", sub: "LMTD derivation (double pipe)",
-          type: "derivation", syllabus: "in", repeats: ["2017-18-Q2b"],
+          type: "derivation", syllabus: "in", repeats: ["2017-18-Q2b", "practice-heat-exchangers-P1a"],
           text: String.raw`In a double-pipe heat exchanger the temperature difference between hot fluid and cold fluid varies continuously along the length of the exchanger. Therefore, some kind of mean temperature difference is to be used for heat transfer calculations. Show mathematically that log-mean temperature difference is appropriate for this.`,
           solution: String.raw`![Parallel-flow profiles with the element dA used in the LMTD derivation](fig/2013-14-Q4b-sol.svg)
 
@@ -337,7 +337,7 @@ $$U_o \approx 7.5\times10^3\ \mathrm{W/m^2K}\qquad (U_i = U_o d_o/d_i \approx 8.
       parts: [
         { id: "2013-14-Q5a", label: "(a)", marks: "15",
           topic: "conduction", sub: "Conduction through a hollow sphere",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-conduction-P8a"],
           text: String.raw`Derive an expression for the heat flow rate through a hollow sphere with inside radius $r_i$, outside radius $r_o$ and constant thermal conductivity $k$. The inside and outside surfaces of the hollow sphere are held at constant temperature $T_i$ and $T_o$, respectively. State the assumptions, if any.`,
           solution: String.raw`**Assumptions:** steady state; 1-D radial conduction ($T = T(r)$ only, uniform surface temperatures); constant $k$; no heat generation; homogeneous isotropic material.
 
@@ -389,7 +389,7 @@ $$T_{s,i} = T_\infty + qR_{tot} = 25 + 488.5(0.06602) = 57.2\,°\mathrm{C}$$
       parts: [
         { id: "2013-14-Q6a", label: "(a)", marks: "7",
           topic: "boundary-layer", sub: "Hydrodynamic vs thermal boundary layers",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-boundary-layer-P12a"],
           text: String.raw`With the help of schematics, explain the differences between hydrodynamic and thermal boundary layers.`,
           solution: String.raw`![Velocity and thermal boundary layers on a flat plate](fig/common-bl-flat-plate.svg)
 
@@ -411,7 +411,7 @@ Relative size is set by Pr: $\delta_t \approx \delta$ for gases, $\delta_t < \de
           answer: String.raw`Velocity BL: $u$ from 0 to $u_\infty$, set by ν; thermal BL: $T$ from $T_w$ to $T_\infty$, set by α; $\delta_t/\delta \approx \mathrm{Pr}^{-1/3}$.` },
         { id: "2013-14-Q6b", label: "(b)", marks: "28",
           topic: "boundary-layer", sub: "Integral derivation of δ = 4.64√(νx/u∞)",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-boundary-layer-P1"],
           text: String.raw`Starting from the given simplified continuity and momentum equations, derive the expression for the laminar boundary layer thickness for a fluid flowing past a flat plate:
 $$\delta = 4.64\sqrt{\frac{\nu x}{u_\infty}}$$
 where $u_\infty$ is the fluid velocity outside the boundary layer. Other symbols have their usual meanings. Also state the assumptions you make to derive the equation.

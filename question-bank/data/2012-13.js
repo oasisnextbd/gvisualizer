@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2012-13-Q1a", label: "(a)", marks: "10",
           topic: "insulation", sub: "Critical radius of insulation – sphere",
-          type: "derivation", syllabus: "partial", repeats: [],
+          type: "derivation", syllabus: "partial", repeats: ["practice-insulation-P4a"],
           text: String.raw`Derive a relationship for the critical radius of insulation for a sphere.`,
           solution: String.raw`> The slides derive the cylinder case ($r_c = k/h$); the sphere follows exactly the same steps.
 
@@ -155,7 +155,7 @@ $$\eta = \frac{x}{2\sqrt{\alpha t}} = \frac{0.025}{2\sqrt{(8.4\times10^{-5})(60)
           answer: String.raw`Normal liquids Pr ~ 1–10, liquid metals ~ 0.001–0.03 (high k), polymer melts ~ $10^3$ and above (high μ).` },
         { id: "2012-13-Q3b", label: "(b)", marks: "10",
           topic: "convection-basics", sub: "Nusselt vs Biot number",
-          type: "theory", syllabus: "partial", repeats: [],
+          type: "theory", syllabus: "partial", repeats: ["practice-convection-basics-P8a"],
           text: String.raw`Distinguish the Nusselt number and the Biot number. Discuss their physical significance in heat transfer analysis.`,
           solution: String.raw`Both have the form $hL/k$, but the $k$ belongs to different materials.
 
@@ -207,7 +207,7 @@ $$L = \frac{A}{\pi D} = \frac{0.516}{\pi(0.025)} = 6.57\,\mathrm{m}$$
       parts: [
         { id: "2012-13-Q4a", label: "(a)", marks: "5+8",
           topic: "convection-basics", sub: "Bulk temperature; eddy viscosity & mixing length",
-          type: "theory", syllabus: "partial", repeats: [],
+          type: "theory", syllabus: "partial", repeats: ["practice-convection-basics-P4a"],
           text: String.raw`Write short notes on: (i) Bulk temperature; (ii) Eddy viscosity and Prandtl mixing length.`,
           solution: String.raw`### (i) Bulk (mixing-cup) temperature
 - In a tube the temperature varies over the cross-section, so a single reference temperature is needed for $q = h(T_w - T_b)$.
@@ -227,7 +227,7 @@ $$\tau_t = \rho\, l^2\left|\frac{d\bar u}{dy}\right|\frac{d\bar u}{dy}, \qquad \
           answer: String.raw`$T_b = \int\rho u c_p T\,dA/\int\rho u c_p\,dA$; $\varepsilon_M = l^2|d\bar u/dy|$ with mixing length $l = \kappa y$.` },
         { id: "2012-13-Q4b", label: "(b)", marks: "10",
           topic: "boundary-layer", sub: "Fluid friction vs heat transfer (Reynolds–Colburn)",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-boundary-layer-P6"],
           text: String.raw`Describe the relation between fluid friction and heat transfer.`,
           solution: String.raw`**Idea:** the same molecular/turbulent mechanism transports momentum and heat, so wall shear (friction) and wall heat flux are related – the Reynolds analogy.
 
@@ -248,7 +248,7 @@ Also holds for turbulent plate flow and (with $f/8$) for turbulent tube flow: $\
           answer: String.raw`Reynolds–Colburn analogy: $\mathrm{St}\,\mathrm{Pr}^{2/3} = C_f/2$ (= $f/8$ in tubes); Pr = 1 gives St = $C_f/2$.` },
         { id: "2012-13-Q4c", label: "(c)", marks: "12",
           topic: "boundary-layer", sub: "δ(x) from the integral momentum method",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-boundary-layer-P1"],
           text: String.raw`Prove that the boundary layer thickness over a flat plate is a function of the distance from the leading edge and depends on the local Reynolds number.`,
           solution: String.raw`![Integral momentum control volume in the flat-plate boundary layer](fig/2013-14-Q6b-sol.svg)
 
@@ -411,7 +411,7 @@ $F_T$ corrects the counterflow LMTD, so the slides' LMTD assumptions apply (exch
       parts: [
         { id: "2012-13-Q6a", label: "(a)", marks: "6",
           topic: "natural-convection", sub: "Grashof vs Reynolds number",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-natural-convection-P4a", "practice-natural-convection-P7a"],
           text: String.raw`What are the differences between the Grashof number and the Reynolds number? Mention their definitions, physical significance, etc.`,
           solution: String.raw`| | Reynolds number | Grashof number |
 |---|---|---|
@@ -483,7 +483,7 @@ Free-convection velocities are very small (cm/s), so the probe must not disturb 
       parts: [
         { id: "2012-13-Q7a", label: "(a)", marks: "2+2+3",
           topic: "condensation", sub: "Dropwise vs film; non-condensables; film Re",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-condensation-P7a"],
           text: String.raw`Why are higher heat transfer rates experienced in dropwise condensation than in film condensation? What will happen to the condensation phenomena if non-condensable gases are present in the system? How is the Reynolds number defined for film condensation?`,
           solution: String.raw`**Dropwise vs film.** In film condensation the whole wall is covered by a continuous liquid film, which is the main thermal resistance (heat must conduct through it). In dropwise condensation the vapour condenses as droplets that grow, coalesce and roll off, sweeping the surface clean; much of the surface is bare or covered by very thin films, so the resistance is far lower. h for dropwise can be 5–10 times (or more) the film value.
 
@@ -495,7 +495,7 @@ $\dot m$ = condensate flow at the bottom (kg/s), $p$ = wetted perimeter (plate w
           answer: String.raw`Dropwise: no continuous film resistance → h 5–10× higher. Non-condensables form a diffusion barrier and lower h sharply. $\mathrm{Re} = 4\dot m/(p\mu_l)$.` },
         { id: "2012-13-Q7b", label: "(b)", marks: "1+2+5",
           topic: "boiling", sub: "Pool boiling; subcooled vs saturated; nucleate vs film",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-boiling-P6a"],
           text: String.raw`What is pool boiling? What is meant by subcooled and saturated boiling? Distinguish between nucleate and film boiling.`,
           solution: String.raw`![Pool boiling curve: nucleate and film boiling regimes](fig/common-boiling-curve.svg)
 
@@ -573,7 +573,7 @@ By service (Kern ch. 1):
           answer: String.raw`Thermal design = sizing area and geometry so the unit takes the heat load with acceptable ΔP on both streams (mechanical design follows). Types: double pipe, shell-and-tube, plate, plate-fin, air-cooled, scraped-surface; services: exchangers, coolers, heaters, condensers, chillers, reboilers, evaporators.` },
         { id: "2012-13-Q8b", label: "(b)", marks: "3+2",
           topic: "shell-tube", sub: "Components; pitch, clearance, arrangement, BWG",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-shell-tube-P10a"],
           text: String.raw`Write the names of the components of shell-and-tube heat exchangers. Give the definitions of (i) tube pitch, (ii) clearance, (iii) arrangement, (iv) BWG.`,
           solution: String.raw`![Components of a 1-2 shell-and-tube exchanger](fig/common-st-1-2.svg)
 
@@ -599,7 +599,7 @@ By service (Kern ch. 1):
           answer: String.raw`TEMA, ASME VIII, API 660/661, HEI; the TEMA sheet lists size/type, process data for both sides, duty, MTD, U, ΔP, fouling and full construction details.` },
         { id: "2012-13-Q8d", label: "(d)", marks: "2+2+6",
           topic: "shell-tube", sub: "TEMA designation; plate-and-frame limits; extended surfaces",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-shell-tube-P5a"],
           text: String.raw`What do you mean by "SIZE 23-192 TYPE AES"? Mention the design limitations of a plate-and-frame heat exchanger. Why are extended surface heat exchangers used? Explain with examples.`,
           solution: String.raw`**SIZE 23-192 TYPE AES** (TEMA designation):
 - 23 = nominal shell inside diameter, 23 in; 192 = straight tube length, 192 in (16 ft).

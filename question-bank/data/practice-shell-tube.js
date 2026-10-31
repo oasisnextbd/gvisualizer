@@ -10,7 +10,7 @@ Tube data (Kern Table 10, 1 in 13 BWG): ID 0.810 in, flow area per tube 0.515 in
       parts: [
         { id: "practice-shell-tube-P1a", label: "(a)", marks: "", topic: "shell-tube",
           sub: "Heat balance, LMTD, F_T and caloric temperatures", type: "numerical",
-          syllabus: "in", repeats: [], origin: "slides",
+          syllabus: "in", repeats: ["2017-18-Q1a", "2017-18-Q1b", "2017-18-Q1c", "2017-18-Q1d", "2017-18-Q1e"], origin: "slides",
           ref: String.raw`Slides HX Part 1, file 3 pp. 19–28 (Kern Ex. 7.3, steps 1–3; Figs. 17 and 18)`,
           text: String.raw`Make the heat balance, find the true temperature difference $\Delta t = F_T\times\mathrm{LMTD}$ and the caloric temperatures, and decide which fluid goes in the tubes. (Kerosene $c = 0.605$, crude $c = 0.49$ Btu/lb·°F; $K_c = 0.20$ with the crude controlling.)`,
           solution: String.raw`**Given:** kerosene (hot) $W = 43{,}800$ lb/h, $T_1 = 390$, $T_2 = 200$°F; crude (cold) $w = 149{,}000$ lb/h, $t_1 = 100$, $t_2 = 170$°F.
@@ -42,7 +42,7 @@ The shell-side and tube-side flow areas will be nearly equal, so the **larger st
 
         { id: "practice-shell-tube-P1b", label: "(b)", marks: "", topic: "shell-tube",
           sub: "h_o and h_io with the wall-temperature correction φ", type: "numerical",
-          syllabus: "in", repeats: [], origin: "slides",
+          syllabus: "in", repeats: ["2017-18-Q1a", "2017-18-Q1b", "2017-18-Q1c", "2017-18-Q1d", "2017-18-Q1e"], origin: "slides",
           ref: String.raw`Slides HX Part 1, file 3 pp. 29–36 (Kern Ex. 7.3, steps 4–10; Figs. 24, 28)`,
           text: String.raw`Find the shell-side and tube-side film coefficients, including the viscosity correction $\phi = (\mu/\mu_w)^{0.14}$.
 
@@ -78,7 +78,7 @@ $$h_o = \frac{h_o}{\phi_s}\phi_s = 169(0.96) = 162,\qquad h_{io} = 109(1.11) = 1
 
         { id: "practice-shell-tube-P1c", label: "(c)", marks: "", topic: "shell-tube",
           sub: "U_C, U_D and R_d", type: "numerical",
-          syllabus: "in", repeats: [], origin: "slides",
+          syllabus: "in", repeats: ["2017-18-Q1a", "2017-18-Q1b", "2017-18-Q1c", "2017-18-Q1d", "2017-18-Q1e"], origin: "slides",
           ref: String.raw`Slides HX Part 1, file 3 pp. 37–38 (Kern Ex. 7.3, steps 11–13)`,
           text: String.raw`Find the clean and design overall coefficients and the dirt factor the exchanger provides.`,
           solution: String.raw`1. Clean coefficient:
@@ -95,7 +95,7 @@ $$R_d = \frac{U_C - U_D}{U_CU_D} = \frac{69.3 - 55.8}{69.3(55.8)} = 0.00348\ \ma
 
         { id: "practice-shell-tube-P1d", label: "(d)", marks: "", topic: "shell-tube",
           sub: "Shell-side and tube-side pressure drops; suitability", type: "numerical",
-          syllabus: "in", repeats: [], origin: "slides",
+          syllabus: "in", repeats: ["2017-18-Q1a", "2017-18-Q1b", "2017-18-Q1c", "2017-18-Q1d", "2017-18-Q1e"], origin: "slides",
           ref: String.raw`Slides HX Part 1, file 3 pp. 39–43 (Kern Ex. 7.3, ΔP; Figs. 26, 27, 29)`,
           text: String.raw`Calculate both pressure drops (kerosene $s = 0.73$, crude $s = 0.83$) and state whether the exchanger is suitable. Fill in the key TEMA-sheet values.`,
           solution: String.raw`### Shell side
@@ -339,7 +339,7 @@ $F_T > 0.75$, so two shell passes (two shells in series, or one F-shell with a l
       parts: [
         { id: "practice-shell-tube-P5a", label: "(a)", marks: "", topic: "shell-tube",
           sub: "Rating vs design: Kern design steps", type: "theory",
-          syllabus: "in", repeats: [], origin: "slides",
+          syllabus: "in", repeats: ["2012-13-Q8d", "2016-17-Q1a"], origin: "slides",
           ref: String.raw`Slides HX Part 1, file 2 p. 49; file 3 pp. 5–18 (existing exchanger and design steps #1–#14)`,
           text: String.raw`Distinguish between rating an existing shell-and-tube exchanger and designing a new one. List the steps of the Kern trial-and-error design procedure and the acceptance criteria used at each check.`,
           solution: String.raw`**Rating (existing exchanger).** Geometry is known (shell ID, baffle spacing, tube number, OD, BWG, length, pitch, passes). Calculate $h_{io}$, $h_o$, $U_C$, $U_D = Q/(A\,\Delta t)$ and $R_d = (U_C - U_D)/(U_CU_D)$. The exchanger is suitable if $R_{d,calc} \ge R_{d,required}$ **and** $\Delta P_T$, $\Delta P_s$ are within the allowed values.
@@ -365,7 +365,7 @@ $F_T > 0.75$, so two shell passes (two shells in series, or one F-shell with a l
 
         { id: "practice-shell-tube-P5b", label: "(b)", marks: "", topic: "shell-tube",
           sub: "TEMA classes and designations", type: "theory",
-          syllabus: "in", repeats: [], origin: "slides",
+          syllabus: "in", repeats: ["2012-13-Q8d", "2016-17-Q1a"], origin: "slides",
           ref: String.raw`Slides HX Part 1, file 3 pp. 44–51 (TEMA scope, classes, letter codes, spec sheet)`,
           text: String.raw`What is TEMA? State its scope and the three classes. Interpret the designation "Size 31-288, Type BEU" and state the two other letter codes used for (i) a removable channel and cover with a split-ring floating head and (ii) a fixed-tubesheet exchanger with bonnets at both ends.`,
           solution: String.raw`**TEMA** (Tubular Exchanger Manufacturers Association) publishes the mechanical standards for shell-and-tube exchangers; most process-industry exchangers are built to it.
@@ -409,7 +409,7 @@ Use the arithmetic mean temperatures as caloric temperatures.`,
       parts: [
         { id: "practice-shell-tube-P6a", label: "(a)", marks: "4", topic: "shell-tube",
           sub: "Which fluid in the tubes?", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential",
+          syllabus: "in", repeats: ["2015-16-Q1b", "2015-16-Q4c", "2018-19-Q1a", "2020-21-Q2c"], origin: "potential",
           ref: String.raw`Asked in finals like 2015-16 Q1(b), 2018-19 Q1(a)`,
           text: String.raw`Which fluid should flow through the tubes? Give reasons.`,
           solution: String.raw`![1-4 exchanger: water in the tubes, gas oil in the shell](fig/practice-shell-tube-P6.svg)
@@ -423,7 +423,7 @@ Use the arithmetic mean temperatures as caloric temperatures.`,
 
         { id: "practice-shell-tube-P6b", label: "(b)", marks: "7", topic: "shell-tube",
           sub: "Heat balance, temperature profile, LMTD and F_T", type: "numerical",
-          syllabus: "in", repeats: [], origin: "potential",
+          syllabus: "in", repeats: ["2015-16-Q1b", "2015-16-Q4c", "2018-19-Q1a", "2020-21-Q2c"], origin: "potential",
           ref: String.raw`Style of Kern Ex. 7.3; asked in finals like 2020-21 Q1(a), 2023-24 Q2(a)`,
           text: String.raw`Make the heat balance, sketch the temperature profile and find the true temperature difference.`,
           solution: String.raw`### 1. Heat balance
@@ -444,7 +444,7 @@ $$\Delta t = 0.927(77.3) = 71.7\,°\mathrm{F}$$`,
 
         { id: "practice-shell-tube-P6c", label: "(c)", marks: "14", topic: "shell-tube",
           sub: "Kern rating: h_io (Fig. 24) and h_o (Fig. 28) with φ", type: "numerical",
-          syllabus: "in", repeats: [], origin: "potential",
+          syllabus: "in", repeats: ["2015-16-Q1b", "2015-16-Q4c", "2018-19-Q1a", "2020-21-Q2c"], origin: "potential",
           ref: String.raw`Style of Kern Ex. 7.3; asked in finals like 2017-18 Q1(b), 2020-21 Q1(b)`,
           text: String.raw`Determine the tube-side and shell-side film coefficients.`,
           solution: String.raw`**Assumptions:** properties at the arithmetic means (given); water $\phi_t = 1$; chart values read from Kern Fig. 24 (tube side) and Fig. 28 (shell side, curve fit $j_H \approx 0.36Re^{0.55}$).
@@ -477,7 +477,7 @@ $$h_o = 106.8(0.926) = 98.9\ \mathrm{Btu/h\,ft^2\,°F}$$
 
         { id: "practice-shell-tube-P6d", label: "(d)", marks: "6", topic: "shell-tube",
           sub: "U_C, U_D and dirt factor", type: "numerical",
-          syllabus: "in", repeats: [], origin: "potential",
+          syllabus: "in", repeats: ["2015-16-Q1b", "2015-16-Q4c", "2018-19-Q1a", "2020-21-Q2c"], origin: "potential",
           ref: String.raw`Style of Kern Ex. 7.3; asked in finals like 2017-18 Q1(c), 2023-24 Q2(c)`,
           text: String.raw`Calculate the clean and design overall coefficients and the dirt factor.`,
           solution: String.raw`1. $$U_C = \frac{h_{io}h_o}{h_{io} + h_o} = \frac{661(98.9)}{661 + 98.9} = 86.0\ \mathrm{Btu/h\,ft^2\,°F}$$
@@ -491,7 +491,7 @@ $$h_o = 106.8(0.926) = 98.9\ \mathrm{Btu/h\,ft^2\,°F}$$
 
         { id: "practice-shell-tube-P6e", label: "(e)", marks: "8", topic: "shell-tube",
           sub: "Pressure drops and suitability", type: "numerical",
-          syllabus: "in", repeats: [], origin: "potential",
+          syllabus: "in", repeats: ["2015-16-Q1b", "2015-16-Q4c", "2018-19-Q1a", "2020-21-Q2c"], origin: "potential",
           ref: String.raw`Style of Kern Ex. 7.3; asked in finals like 2017-18 Q1(d), 2018-19 Q1(d)`,
           text: String.raw`Calculate the tube-side and shell-side pressure drops and state whether the exchanger is suitable.`,
           solution: String.raw`### Tube side (water, $s = 1.0$, $n = 4$, $L = 16$ ft)
@@ -512,7 +512,7 @@ $R_d = 0.0038 \ge 0.003$, $\Delta P_T = 2.6$ psi, $\Delta P_s = 1.2$ psi: **the 
 
         { id: "practice-shell-tube-P6f", label: "(f)", marks: "6", topic: "shell-tube",
           sub: "TEMA specification sheet", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential",
+          syllabus: "in", repeats: ["2015-16-Q1b", "2015-16-Q4c", "2018-19-Q1a", "2020-21-Q2c"], origin: "potential",
           ref: String.raw`Asked in finals like 2018-19 Q1(e), 2022-23 Q5(d)`,
           text: String.raw`Fill in the main entries of a TEMA specification sheet for this exchanger.`,
           solution: String.raw`| Item | Shell side | Tube side |
@@ -821,7 +821,7 @@ $$U_C = \frac{187(210)}{187 + 210} = 99.0\ \mathrm{Btu/h\,ft^2\,°F}\ (+9\%)$$
       parts: [
         { id: "practice-shell-tube-P10a", label: "(a)", marks: "6", topic: "shell-tube",
           sub: "Tube-side vs shell-side fluid", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential",
+          syllabus: "in", repeats: ["2011-12-Q3b", "2012-13-Q8b"], origin: "potential",
           ref: String.raw`Asked in finals like 2015-16 Q4(c), 2020-21 Q2(c); slides Part 2 p. 7 and Ex. 7.3`,
           text: String.raw`List the factors that decide which fluid is placed in the tubes of a shell-and-tube exchanger.`,
           solution: String.raw`**Put in the tubes:**
@@ -840,7 +840,7 @@ $$U_C = \frac{187(210)}{187 + 210} = 99.0\ \mathrm{Btu/h\,ft^2\,°F}\ (+9\%)$$
 
         { id: "practice-shell-tube-P10b", label: "(b)", marks: "5", topic: "shell-tube",
           sub: "Square vs triangular pitch; baffles", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential",
+          syllabus: "in", repeats: ["2011-12-Q3b", "2012-13-Q8b"], origin: "potential",
           ref: String.raw`Slides HX Part 1, file 1 pp. 21–30; asked in finals like 2012-13 Q8(b)`,
           text: String.raw`Compare square and triangular tube pitch. Why are segmental baffles used, and what limits the baffle spacing?`,
           solution: String.raw`![Square and triangular tube pitch](fig/practice-heat-exchangers-P5a-sol.svg)
@@ -860,7 +860,7 @@ $$U_C = \frac{187(210)}{187 + 210} = 99.0\ \mathrm{Btu/h\,ft^2\,°F}\ (+9\%)$$
 
         { id: "practice-shell-tube-P10c", label: "(c)", marks: "6", topic: "shell-tube",
           sub: "Fixed tubesheet, U-tube and floating head", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential",
+          syllabus: "in", repeats: ["2011-12-Q3b", "2012-13-Q8b"], origin: "potential",
           ref: String.raw`Slides HX Part 1, file 1 pp. 16–19; asked in finals like 2011-12 Q3(b)`,
           text: String.raw`Compare fixed-tubesheet, U-tube and floating-head exchangers. Which would you choose for (i) cooling water against a clean oil with a small temperature difference, (ii) a high-pressure clean gas with a large temperature difference, (iii) a dirty crude at 400°F against kerosene?`,
           solution: String.raw`![Fixed tubesheet, U-tube and floating-head constructions](fig/practice-shell-tube-P10c-sol.svg)
@@ -879,7 +879,7 @@ Choices:
 
         { id: "practice-shell-tube-P10d", label: "(d)", marks: "5", topic: "shell-tube",
           sub: "F_T below 0.75, temperature cross, over-surface vs overdesign", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential",
+          syllabus: "in", repeats: ["2011-12-Q3b", "2012-13-Q8b"], origin: "potential",
           ref: String.raw`Slides HX Part 1, file 3 pp. 6, 13, 17; Part 2 pp. 32–33`,
           text: String.raw`Why should $F_T$ be greater than 0.75? What is a temperature cross? Distinguish over-surface from overdesign.`,
           solution: String.raw`![Temperature cross in a 1-2 exchanger](fig/practice-shell-tube-P10d-sol.svg)

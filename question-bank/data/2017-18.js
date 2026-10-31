@@ -19,7 +19,7 @@ Physical properties at caloric temperature:
       parts: [
         { id: "2017-18-Q1a", label: "(a)", marks: "5",
           topic: "shell-tube", sub: "Temperature profile, LMTD and F_T (1-4 exchanger)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-shell-tube-P1a"],
           text: String.raw`Draw a temperature profile along the heat exchanger length, and find the log mean temperature difference.`,
           solution: String.raw`**Given:** kerosene (hot) $T_1 = 390$°F → $T_2 = 200$°F (see misprint note); crude (cold) $t_1 = 100$°F → $t_2 = 170$°F; 1 shell pass, 4 tube passes (a 1-4 exchanger, read on the 1-2 $F_T$ chart).
 
@@ -51,7 +51,7 @@ $$\Delta t = F_T\,\mathrm{LMTD} = 0.892 \times 152.2 = 135.7\,°\mathrm{F}$$
 
         { id: "2017-18-Q1b", label: "(b)", marks: "14",
           topic: "shell-tube", sub: "Kern method: tube-side h_i and shell-side h_o",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-shell-tube-P1a"],
           text: String.raw`Determine the tube side and shell side heat transfer coefficients, $h_i$ and $h_o$, respectively.`,
           solution: String.raw`**Given:** 158 tubes, 1 in OD, 13 BWG, 16 ft, 4 passes, 1.25 in square pitch; shell ID $D_s = 21.25$ in, baffle spacing $B = 5$ in.
 Tube data (Kern Table 10, 1 in 13 BWG): ID $= 0.810$ in, flow area per tube $a'_t = 0.515\ \mathrm{in^2}$, outside surface $a'' = 0.2618\ \mathrm{ft^2/ft}$.
@@ -90,7 +90,7 @@ $$h_{io} = h_i\frac{ID}{OD} = 152.3\times\frac{0.810}{1.0} = 123\ \mathrm{Btu/h\
 
         { id: "2017-18-Q1c", label: "(c)", marks: "7",
           topic: "shell-tube", sub: "Clean and design U, dirt factor",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-shell-tube-P1a"],
           text: String.raw`Find the dirt factor.`,
           solution: String.raw`**Given:** $h_{io} = 123.4$, $h_o = 166.1$ Btu/h·ft²·°F (part b); $Q = 5.11\times10^6$ Btu/h, $\Delta t = 135.7$°F (part a).
 
@@ -111,7 +111,7 @@ $$R_d = \frac{U_C-U_D}{U_C U_D} = \frac{70.8-56.9}{70.8(56.9)} = 0.0034\ \mathrm
 
         { id: "2017-18-Q1d", label: "(d)", marks: "12",
           topic: "shell-tube", sub: "Pressure drops and suitability check",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-shell-tube-P1a"],
           text: String.raw`Perform all the necessary calculations and check if the exchanger is suitable for use.`,
           solution: String.raw`**Criteria:** $R_d \ge 0.003$ and $\Delta P \le 10$ psi on each side.
 
@@ -141,7 +141,7 @@ $$\Delta P_r = \frac{4n}{s}\frac{V^2}{2g'} = \frac{4(4)}{0.83}(0.148) = 2.9\ \ma
 
         { id: "2017-18-Q1e", label: "(e)", marks: "7",
           topic: "shell-tube", sub: "TEMA specification sheet",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-shell-tube-P1a"],
           text: String.raw`Fill in the attached TEMA sheet and attach it to your answer script.`,
           solution: String.raw`Key rows of the TEMA heat-exchanger specification sheet (values from parts a–d; kerosene inlet taken as 390°F):
 
@@ -195,7 +195,7 @@ Sketch: temperature vs. fractional length. Two shell-fluid curves (one per shell
           answer: String.raw`Two shell passes (longitudinal baffle) and four tube passes (pass partitions); the profile is closer to counter-flow than a 1-2, so it tolerates a temperature cross and gives higher $F_T$.` },
         { id: "2017-18-Q2b", label: "(b)", marks: "20",
           topic: "heat-exchangers", sub: "LMTD derivation",
-          type: "derivation", syllabus: "in", repeats: ["2013-14-Q4b"],
+          type: "derivation", syllabus: "in", repeats: ["2013-14-Q4b", "practice-heat-exchangers-P1a"],
           text: String.raw`Derive the basic equation to calculate LMTD. List the assumptions you make to derive this.`,
           solution: String.raw`**Assumptions (the five listed in the slides)**
 1. The exchanger is insulated from its surroundings: heat is exchanged only between the hot and cold fluids (no heat loss).
@@ -240,7 +240,7 @@ For parallel flow the same result follows with $\Delta t_1 = T_1 - t_1$, $\Delta
       parts: [
         { id: "2017-18-Q3a", label: "(a)", marks: "12",
           topic: "boiling", sub: "Pool boiling curve, burnout and Leidenfrost point",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-boiling-P3a"],
           text: String.raw`Draw a pool boiling curve and explain the boiling behavior during *burnout condition* and *Leidenfrost point*.`,
           solution: String.raw`**Sketch:** log heat flux $q''$ (vertical) vs. log excess temperature $\Delta T_e = T_s - T_{sat}$ (horizontal) for water at 1 atm. The curve rises gently (natural convection, up to $\Delta T_e \approx 5$°C), then steeply (nucleate boiling) to a peak $q''_{max} \approx 1$ MW/m² at $\Delta T_e \approx 30$°C (point C, **critical heat flux / burnout**), falls through the transition region to a minimum at $\Delta T_e \approx 120$°C (point D, **Leidenfrost point**, $q''_{min}$), then rises again in film boiling. Mark points A (onset of nucleate boiling), B (isolated bubbles → jets and columns), C, D, and the dashed jump from C horizontally to E in film boiling at $\Delta T_e \approx 1000$°C.
 
@@ -396,7 +396,7 @@ $$\frac{\partial^2 T}{\partial x^2} + \frac{\partial^2 T}{\partial y^2} + \frac{
           answer: String.raw`$\nabla\cdot(k\nabla T) + \dot q = \rho c\,\partial T/\partial t$; for constant $k$: $\nabla^2T + \dot q/k = (1/\alpha)\partial T/\partial t$.` },
         { id: "2017-18-Q5b", label: "(b)", marks: "10",
           topic: "insulation", sub: "Critical radius of insulation, cylinder",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-insulation-P1"],
           text: String.raw`What is the significance of "critical thickness of insulation"? Derive the equation for critical thickness of insulation for a cylindrical pipe.`,
           solution: String.raw`**Significance:** adding insulation to a small pipe or wire increases the conduction resistance but also increases the outer surface area, which decreases the convection resistance. Up to a certain outer radius (the critical radius) the second effect wins, so the heat loss *increases* as insulation is added. Hence:
 - for steam/hot pipes the outer radius must exceed $r_c$ for insulation to reduce heat loss;
@@ -417,7 +417,7 @@ Critical thickness $= r_c - r_i = k/h - r_i$ (meaningful when $r_i < k/h$).
           answer: String.raw`$r_{c,cyl} = k/h$; heat loss is maximum at $r_c$, so insulation reduces loss only when the outer radius exceeds $k/h$.` },
         { id: "2017-18-Q5c", label: "(c)", marks: "10",
           topic: "convection-basics", sub: "Bulk (mixing-cup) temperature",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-convection-basics-P4a"],
           text: String.raw`Define bulk temperature in case of forced convection in tubes. What is "Mixing Cup" temperature?`,
           solution: String.raw`**Bulk temperature:** in tube flow there is no free-stream temperature; the reference temperature is the energy-averaged temperature over the cross-section:
 $$T_b = \frac{\int_0^R \rho\,u\,c_p\,T\,2\pi r\,dr}{\int_0^R \rho\,u\,c_p\,2\pi r\,dr}$$
@@ -436,7 +436,7 @@ It is used in $q = h(T_w - T_b)$ and in the energy balance $q = \dot m c_p (T_{b
       parts: [
         { id: "2017-18-Q6a", label: "(a)", marks: "10",
           topic: "boundary-layer", sub: "Thermal boundary layer on a flat plate",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-boundary-layer-P12a"],
           text: String.raw`Describe the thermal boundary layer formation for forced convection on an isothermal flat plate. Indicate the relative thickness of hydrodynamic and thermal boundary layers for common fluids.`,
           solution: String.raw`**Formation:** fluid at uniform $T_\infty$ and $u_\infty$ meets a plate held at $T_w$. The fluid particles touching the plate take the plate temperature (no-slip, thermal equilibrium). They exchange energy with the next layer by conduction, so a region develops near the wall in which temperature varies from $T_w$ to $T_\infty$. This region grows downstream as more fluid is affected. The **thermal boundary-layer thickness** $\delta_t$ is the distance from the wall where
 $$\frac{T - T_w}{T_\infty - T_w} = 0.99$$
@@ -458,7 +458,7 @@ $$\frac{\delta_t}{\delta} = \frac{1}{1.026}\mathrm{Pr}^{-1/3}$$
           answer: String.raw`$\delta_t$ grows from the leading edge where $T$ goes from $T_w$ to 99% of $T_\infty$; $\delta_t/\delta \approx \mathrm{Pr}^{-1/3}/1.026$ — about equal for gases, thinner for water and oils, much thicker for liquid metals.` },
         { id: "2017-18-Q6b", label: "(b)", marks: "10",
           topic: "forced-convection", sub: "Dittus–Boelter equation and validity",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-forced-convection-P12a"],
           text: String.raw`Write down the Dittus Boelter equation with its applicability ranges.`,
           solution: String.raw`**Dittus–Boelter equation** (fully developed turbulent flow in smooth tubes):
 $$\mathrm{Nu}_d = \frac{hd}{k} = 0.023\,\mathrm{Re}_d^{0.8}\,\mathrm{Pr}^n$$
@@ -478,7 +478,7 @@ Accuracy about ±25%.`,
           answer: String.raw`$\mathrm{Nu} = 0.023\mathrm{Re}^{0.8}\mathrm{Pr}^n$ ($n$ = 0.4 heating, 0.3 cooling); $\mathrm{Re} > 10^4$, $0.6 < \mathrm{Pr} < 100$, $L/d > 10$, smooth tube, moderate ΔT, properties at bulk T.` },
         { id: "2017-18-Q6c", label: "(c)", marks: "7",
           topic: "convection-basics", sub: "Nusselt and Prandtl numbers",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-convection-basics-P8a"],
           text: String.raw`Define Nusselt number and Prandtl number. Explain their physical significance.`,
           solution: String.raw`**Nusselt number**
 $$\mathrm{Nu} = \frac{hL}{k}$$
@@ -556,7 +556,7 @@ $$q' = 842 + 198 \approx 1040\ \mathrm{W/m}$$
           answer: String.raw`Two parallel branches, each (half-cylinder conduction + half-surface convection); $q' \approx 842 + 198 \approx 1040$ W per metre of pipe.` },
         { id: "2017-18-Q7b", label: "(b)", marks: "13",
           topic: "boundary-layer", sub: "Laminar boundary-layer thickness on a flat plate",
-          type: "numerical", syllabus: "in", repeats: ["2015-16-Q7b", "2016-17-Q7d"],
+          type: "numerical", syllabus: "in", repeats: ["2015-16-Q7b", "2016-17-Q7d", "practice-boundary-layer-P2a"],
           text: String.raw`Atmospheric air at 300 K flows over a flat plate at a speed of 2 m/s. If the viscosity of air at 300 K is $1.85\times10^{-5}$ kg/m·s, calculate the boundary layer thickness at distance of 20 cm and 40 cm from the leading edge of the plate.
 
 Given relations: $u/u_\infty = \tfrac{3}{2}(y/\delta) - \tfrac{1}{2}(y/\delta)^3$, $\delta/x = 4.64/\mathrm{Re}_x^{1/2}$, $\tau_w = C_f\,\rho u_\infty^2/2$.`,
@@ -579,7 +579,7 @@ $$\mathrm{Re}_x = 5.09\times10^4\ (\text{laminar}),\qquad \delta = \frac{4.64(0.
           answer: String.raw`$\delta(20\ \mathrm{cm}) \approx 5.8$ mm, $\delta(40\ \mathrm{cm}) \approx 8.2$ mm (Re = 2.5×10⁴ and 5.1×10⁴, laminar).` },
         { id: "2017-18-Q7c", label: "(c)", marks: "7",
           topic: "forced-convection", sub: "Distortion of the parabolic profile by heating/cooling",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-forced-convection-P12a"],
           text: String.raw`We know that the laminar velocity profile in a tube is parabolic. For heating or cooling, this parabolic velocity profile is changed to some extent. Draw few of those profiles.`,
           solution: String.raw`**Sketch:** velocity $u$ (horizontal) vs radial position $r$ from $-R$ to $+R$ (vertical) — three profiles on one diagram:
 1. **Isothermal flow:** the parabola $u/u_{max} = 1 - (r/R)^2$.
@@ -599,7 +599,7 @@ All three enclose the same flow rate.
       parts: [
         { id: "2017-18-Q8a", label: "(a)", marks: "11",
           topic: "boundary-layer", sub: "Reynolds–Colburn analogy",
-          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2015-16-Q8a", "2016-17-Q8a", "2020-21-Q7a", "2022-23-Q3a"],
+          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2015-16-Q8a", "2016-17-Q8a", "2020-21-Q7a", "2022-23-Q3a", "practice-boundary-layer-P6"],
           text: String.raw`Derive the relation known as Reynold's–Colburn analogy.`,
           solution: String.raw`**Assumptions:** steady, incompressible, laminar flow over a flat plate; zero pressure gradient; constant properties; plate heated from the leading edge; cubic velocity and temperature profiles (integral method); $\mathrm{Pr} \gtrsim 0.7$ so that $\delta_t < \delta$.
 

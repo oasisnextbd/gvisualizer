@@ -342,7 +342,7 @@ So the same annulus has two different "diameters". Using the wrong one changes R
           answer: String.raw`Viscosity creates the no-slip boundary layer, sets the flow regime (Re, Gr) and δ_t/δ (Pr), damps buoyant flow, distorts the profile when it varies with T ($(\mu/\mu_w)^{0.14}$), and sets friction and pumping cost.` },
         { id: "2023-24-Q3c", label: "(c)", marks: "6",
           topic: "convection-basics", sub: "Meaning of Nusselt number; Nu ≈ 1",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-convection-basics-P8a"],
           text: String.raw`Discuss how the Nusselt number helps in understanding convective heat transfer. What does it mean if Nu ≈ 1?`,
           solution: String.raw`$$\mathrm{Nu} = \frac{hL_c}{k} = \frac{q''_{conv}}{q''_{cond}} = \frac{h\Delta T}{k\Delta T/L_c} = \left.\frac{\partial\theta^*}{\partial y^*}\right|_{wall}$$
 
@@ -481,7 +481,7 @@ On a sunny day, the heat flux from the reflector was 2000 W/m² and the surface 
       parts: [
         { id: "2023-24-Q5a", label: "(a)", marks: "8",
           topic: "boundary-layer", sub: "Cubic temperature profile in the thermal BL",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-boundary-layer-P3"],
           text: String.raw`As the reflectors are long enough, the surfaces approximately behave like a flat plate system for a small horizon. Develop the expression for the temperature profile at a distance y in the boundary layer with thermal boundary layer thickness ($\delta_t$), surface temperature ($T_w$) and free stream temperature ($T_\infty$).`,
           solution: String.raw`**Assumptions:** steady, 2-D, laminar, incompressible flow over a flat plate; constant properties; negligible viscous dissipation; plate at uniform $T_w$; the profile is similar at every x, so it can be written in terms of $y/\delta_t$.
 
@@ -669,7 +669,7 @@ $$\frac{h_{horiz}}{h_{vert}} = \frac{0.729}{0.943}\left(\frac{L}{D}\right)^{1/4}
       parts: [
         { id: "2023-24-Q7a", label: "(a)", marks: "9+16",
           topic: "condensation", sub: "Re-form of Nusselt h; condenser tube bank",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-condensation-P3a"],
           text: String.raw`The condenser of a steam power plant operates at a pressure of 4.25 kPa. The steam that enters the tube is slightly superheated with 10°C of superheat. The condenser consists of 100 horizontal tubes arranged in a 10 × 10 square array. The tubes are 8 m long and have an outer diameter of 3 cm. The tube surfaces are maintained at 18°C. The condensate that leaves the condenser is 5°C sub-cooled.
 
 (i) In most cases $\rho_v \ll \rho_l$ and thus $\rho_l - \rho_v \approx \rho_l$. Using this approximation, prove that the average heat transfer coefficient of a vertical flat plate has the following relationship with the Re number (a simplified version of the Nusselt equation for condensation), where the symbols have their usual meaning:
@@ -736,7 +736,7 @@ On a strict energy basis (superheat + $h_{fg}$ + 5°C subcooling $= 19.2 + 2431 
           answer: String.raw`(i) Eliminating ΔT·L with $\mathrm{Re} = 4Lh\Delta T/(\mu_lh^*_{fg})$ gives $h = (4\times0.943^4)^{1/3}k_l\mathrm{Re}^{-1/3}(g/\nu_l^2)^{1/3} = 1.47\ldots$ (ii) $T_{sat} = 30^\circ$C, $h^*_{fg} = 2.484$ MJ/kg, $h \approx 4.6$ kW/m²°C, A = 75.4 m², $\dot Q \approx 4.19$ MW, $\dot m \approx 1.69$ kg/s.` },
         { id: "2023-24-Q7b", label: "(b)", marks: "5+5",
           topic: "natural-convection", sub: "Inclined hot plate and horizontal cold plate profiles",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-natural-convection-P7a"],
           text: String.raw`Draw the boundary layer profile for the following natural convection heating/cooling system and explain the reason for the shape and distortion of the profile.
 
 (i) The top and bottom surfaces of the inclined hot flat plate

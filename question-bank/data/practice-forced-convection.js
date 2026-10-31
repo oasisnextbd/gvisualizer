@@ -28,7 +28,7 @@ $$\frac{q}{L} = h\pi d(T_w - T_b) = 64.85\pi(0.0254)(20) = 103.5\,\mathrm{W/m}$$
           answer: String.raw`ρ = 1.493 kg/m³, Re = 14 756, Nu = 42.7, h = 64.85 W/m²·°C, so q/L = 103.5 W/m.` },
         { id: "practice-forced-convection-P1b", label: "(b)", marks: "", topic: "forced-convection",
           sub: "Bulk-temperature rise from an energy balance", type: "numerical",
-          syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 06, p. 18`,
+          syllabus: "in", repeats: ["2016-17-Q8b"], origin: "slides", ref: String.raw`Slides 06, p. 18`,
           text: String.raw`How much would the bulk temperature increase over a 3 m length of the tube?`,
           solution: String.raw`1. **Mass flow:**
 $$\dot m = \rho u_m\frac{\pi d^2}{4} = 1.493(10)\frac{\pi(0.0254)^2}{4} = 7.565\times10^{-3}\,\mathrm{kg/s}$$
@@ -431,7 +431,7 @@ $$T_e = 100 - (100 - 40)e^{-0.257} = 53.6^\circ\mathrm{C},\qquad q = 0.08(2005)(
       parts: [
         { id: "practice-forced-convection-P12a", label: "(a)", marks: "6", topic: "forced-convection",
           sub: "Dittus–Boelter: statement, range and modifications", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Asked in finals like 2015-16 Q8(b), 2016-17 Q7(a), 2017-18 Q6(b), 2020-21 Q6(a)`,
+          syllabus: "in", repeats: ["2015-16-Q8b", "2015-16-Q8c", "2016-17-Q1d", "2016-17-Q7a", "2017-18-Q6b", "2017-18-Q7c", "2020-21-Q6a", "2022-23-Q1a", "2022-23-Q2b"], origin: "potential", ref: String.raw`Asked in finals like 2015-16 Q8(b), 2016-17 Q7(a), 2017-18 Q6(b), 2020-21 Q6(a)`,
           text: String.raw`Write the Dittus–Boelter equation, state the conditions under which it is valid, and state which correlations replace it when (i) the wall-to-fluid temperature difference is large and (ii) the tube is short.`,
           solution: String.raw`**Equation:**
 $$\mathrm{Nu}_d = 0.023\,\mathrm{Re}_d^{0.8}\mathrm{Pr}^n,\qquad n = 0.4\ \text{(fluid heated)},\quad n = 0.3\ \text{(fluid cooled)}$$
@@ -446,7 +446,7 @@ Properties are evaluated at the mean bulk temperature.
           answer: String.raw`$\mathrm{Nu} = 0.023\,\mathrm{Re}^{0.8}\mathrm{Pr}^n$ (n = 0.4 heating, 0.3 cooling) for developed turbulent flow in smooth tubes, 0.6 < Pr < 100, moderate ΔT; Sieder–Tate for large ΔT; Nusselt's $(d/L)^{0.055}$ form for short tubes.` },
         { id: "practice-forced-convection-P12b", label: "(b)", marks: "6", topic: "forced-convection",
           sub: "Distortion of the laminar velocity profile by heating/cooling", type: "sketch",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Asked in finals like 2015-16 Q8(c), 2016-17 Q1(d), 2017-18 Q7(c), 2022-23 Q2(b)`,
+          syllabus: "in", repeats: ["2015-16-Q8b", "2015-16-Q8c", "2016-17-Q1d", "2016-17-Q7a", "2017-18-Q6b", "2017-18-Q7c", "2020-21-Q6a", "2022-23-Q1a", "2022-23-Q2b"], origin: "potential", ref: String.raw`Asked in finals like 2015-16 Q8(c), 2016-17 Q1(d), 2017-18 Q7(c), 2022-23 Q2(b)`,
           text: String.raw`Sketch how the parabolic laminar velocity profile in a tube changes when (i) a liquid is heated and (ii) a gas is heated. Relate this to the $(\mu/\mu_w)^{0.14}$ factor.`,
           solution: String.raw`**Sketch:** the tube cross-section with the radius on the vertical axis (−R to +R) and the velocity on the horizontal axis. Draw three profiles with the same mean velocity:
 1. **Isothermal:** a parabola, $u = 2u_m[1 - (r/R)^2]$.
@@ -459,7 +459,7 @@ Properties are evaluated at the mean bulk temperature.
           answer: String.raw`Liquid heated / gas cooled: flatter profile (faster near the wall); gas heated / liquid cooled: more peaked. This is captured by $(\mu/\mu_w)^{0.14}$ and by n = 0.4/0.3.` },
         { id: "practice-forced-convection-P12c", label: "(c)", marks: "5", topic: "forced-convection",
           sub: "Liquid metals in forced convection", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Slides 06, p. 34 (liquid metal heat transfer); cousin of 2022-23 Q1(a)`,
+          syllabus: "in", repeats: ["2015-16-Q8b", "2015-16-Q8c", "2016-17-Q1d", "2016-17-Q7a", "2017-18-Q6b", "2017-18-Q7c", "2020-21-Q6a", "2022-23-Q1a", "2022-23-Q2b"], origin: "potential", ref: String.raw`Slides 06, p. 34 (liquid metal heat transfer); cousin of 2022-23 Q1(a)`,
           text: String.raw`Why are liquid metals used as coolants in some applications, and how does their low Prandtl number affect the velocity and thermal boundary layers?`,
           solution: String.raw`**Advantages:** very high thermal conductivity, giving high heat-transfer rates. This suits cases where a large heat load must be removed from a small space (e.g. nuclear reactors). They stay liquid at high temperature, which allows compact exchangers.
 
@@ -469,7 +469,7 @@ Properties are evaluated at the mean bulk temperature.
           answer: String.raw`High k, so high h, compact designs and high-temperature service (but corrosive and reactive). Pr ≈ 0.01 gives $\delta_t \gg \delta$ and a blunt velocity profile over the thermal layer, so Pr ≥ 0.6 correlations are invalid.` },
         { id: "practice-forced-convection-P12d", label: "(d)", marks: "4", topic: "forced-convection",
           sub: "Choosing a tube-flow correlation", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Slides 06, p. 35 (convective heat-transfer calculation chart)`,
+          syllabus: "in", repeats: ["2015-16-Q8b", "2015-16-Q8c", "2016-17-Q1d", "2016-17-Q7a", "2017-18-Q6b", "2017-18-Q7c", "2020-21-Q6a", "2022-23-Q1a", "2022-23-Q2b"], origin: "potential", ref: String.raw`Slides 06, p. 35 (convective heat-transfer calculation chart)`,
           text: String.raw`Outline the steps in choosing a correlation for convection inside a tube, listing the checks you must make.`,
           solution: String.raw`1. **Fluid properties at the right temperature:** mean bulk temperature (assume an outlet temperature and iterate if needed); $\mu_w$ at the wall temperature for Sieder–Tate.
 2. **Re and Pr with the correct length:** d, or $D_h = 4A/P$ for ducts and annuli.

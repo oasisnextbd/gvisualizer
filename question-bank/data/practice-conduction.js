@@ -274,7 +274,7 @@ $\sum R = 0.0212 + 0.00046 + 1/(10\cdot2\pi\cdot0.057) = 0.301$ °C/W, so $q/L =
       parts: [
         { id: "practice-conduction-P8a", label: "(a)", marks: "6", topic: "conduction",
           sub: "Thermal resistance of a spherical shell", type: "derivation",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of Holman Sec. 2-4 (sphere); cousin of 2013-14 Q5(a) and 2015-16 Q5(b)`,
+          syllabus: "in", repeats: ["2013-14-Q5a", "2015-16-Q5b"], origin: "potential", ref: String.raw`Style of Holman Sec. 2-4 (sphere); cousin of 2013-14 Q5(a) and 2015-16 Q5(b)`,
           text: String.raw`Show that the conduction resistance of a spherical shell of radii $r_1$ and $r_2$ and constant conductivity $k$ is $R = (r_2 - r_1)/(4\pi k r_1 r_2)$.`,
           solution: String.raw`**Assumptions:** steady; radial 1-D; no generation; constant $k$.
 
@@ -289,7 +289,7 @@ A convection surface adds $1/(h\,4\pi r^2)$ in series.`,
           answer: String.raw`$q = 4\pi k(T_1-T_2)/(1/r_1-1/r_2)$, so $R_{sphere} = (r_2-r_1)/(4\pi k r_1 r_2)$.` },
         { id: "practice-conduction-P8b", label: "(b)", marks: "12", topic: "conduction",
           sub: "Insulated spherical ice-water tank: heat gain and melting rate", type: "numerical",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of Çengel ch. 3 (spherical tank of iced water); cousin of 2018-19 Q5(b) and 2021-22 Q6(b) boil-off problems`,
+          syllabus: "in", repeats: ["2013-14-Q5a", "2015-16-Q5b"], origin: "potential", ref: String.raw`Style of Çengel ch. 3 (spherical tank of iced water); cousin of 2018-19 Q5(b) and 2021-22 Q6(b) boil-off problems`,
           text: String.raw`A spherical steel tank ($k = 15$ W/m·°C) of 3 m inner diameter and 2 cm wall thickness stores ice-water at 0°C. It is covered with 5 cm of insulation ($k = 0.04$ W/m·°C). The surroundings are at 25°C with a combined outside coefficient of 12 W/m²·°C. Taking the inner steel surface at 0°C and the latent heat of fusion of ice as 333.7 kJ/kg, find the rate of heat gain, the mass of ice that melts per day, and the outer surface temperature. How much ice would melt per day without insulation?`,
           solution: String.raw`**Given:** $r_1 = 1.50$, $r_2 = 1.52$, $r_3 = 1.57$ m; $k_s = 15$, $k_i = 0.04$ W/m·°C; $h_o = 12$ W/m²·°C; $T_1 = 0$°C, $T_\infty = 25$°C; $h_{if} = 333.7$ kJ/kg.
 

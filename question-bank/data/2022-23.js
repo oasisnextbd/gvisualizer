@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2022-23-Q1a", label: "(a)", marks: "5",
           topic: "forced-convection", sub: "Liquid metals: blunt velocity profile",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-forced-convection-P12a"],
           text: String.raw`"For liquid metals the velocity profile has a very blunt shape over most of the thermal boundary layer." Explain.`,
           solution: String.raw`- Liquid metals (Na, K, NaK, Hg, Pb–Bi) have a very high thermal conductivity and a normal viscosity. Their Prandtl number is very low: $\mathrm{Pr} = \nu/\alpha \approx 0.004$–$0.03$.
 - Heat diffuses much faster than momentum, so the thermal boundary layer is much thicker than the velocity boundary layer: $\delta_t/\delta \sim \mathrm{Pr}^{-1/2} \gg 1$. In a tube, the thermal entry length is also far shorter than the hydrodynamic one.
@@ -119,7 +119,7 @@ The **glass fibre blanket**: $2.632/2.907 = 90.5\%$ of the total resistance. Cha
       parts: [
         { id: "2022-23-Q2a", label: "(a)", marks: "12",
           topic: "generation", sub: "Solid cylinder with generation: centre temperature",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-generation-P2"],
           text: String.raw`From the given general heat conduction equation in a cylindrical system, derive the equation for the temperature at the centre of the cylinder.
 
 $$\frac{1}{r}\frac{d}{dr}\left(r\frac{dT}{dr}\right) + \frac{\dot q}{k} = 0$$`,
@@ -153,7 +153,7 @@ $$T_0 = T_\infty + \frac{\dot q R}{2h} + \frac{\dot q R^2}{4k}$$`,
           answer: String.raw`$T(r) = T_s + \frac{\dot qR^2}{4k}(1 - r^2/R^2)$, so $T_0 = T_s + \dot qR^2/(4k)$ $\left[= T_\infty + \frac{\dot qR}{2h} + \frac{\dot qR^2}{4k}\right]$.` },
         { id: "2022-23-Q2b", label: "(b)", marks: "6",
           topic: "forced-convection", sub: "Property variation distorts velocity profile",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-forced-convection-P12a"],
           text: String.raw`"Wide temperature differences can have a significant impact on fluid properties that ends up altering the velocity profile." Explain with appropriate schematics.`,
           solution: String.raw`![Velocity-profile distortion when the fluid is heated or cooled](fig/common-velocity-distortion.svg)
 
@@ -214,7 +214,7 @@ Check: $L/D_h = 100 > 10$, so the fully developed assumption holds.`,
       parts: [
         { id: "2022-23-Q3a", label: "(a)", marks: "16",
           topic: "boundary-layer", sub: "Reynolds–Colburn analogy",
-          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2015-16-Q8a", "2016-17-Q8a", "2017-18-Q8a", "2020-21-Q7a"],
+          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2015-16-Q8a", "2016-17-Q8a", "2017-18-Q8a", "2020-21-Q7a", "practice-boundary-layer-P6"],
           text: String.raw`Consider a fluid flowing past a flat plate where the friction coefficient is $C_f$. The velocity distribution and laminar boundary-layer thickness can be expressed by
 
 $$\frac{u}{u_\infty} = \frac32\frac{y}{\delta} - \frac12\left(\frac{y}{\delta}\right)^3, \qquad \delta = 4.64\sqrt{\frac{\nu x}{u_\infty}}$$
@@ -636,7 +636,7 @@ The exchanger is **not suitable** as specified. It is about 9% short of surface 
       parts: [
         { id: "2022-23-Q6a", label: "(a)", marks: "12",
           topic: "condensation", sub: "Nusselt analysis, vertical plate",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-condensation-P3a"],
           text: String.raw`Analyse mathematically film condensation on a vertical plate (laminar condensate flow) and show that
 
 $$\mathrm{Nu}_x = \frac{hx}{k} = \left[\frac{\rho(\rho - \rho_v)g\,h_{fg}\,x^3}{4\mu k(T_g - T_w)}\right]^{1/4}$$
@@ -743,7 +743,7 @@ This is $30 < \mathrm{Re} < 1800$: the film is laminar but wavy, which is consis
       parts: [
         { id: "2022-23-Q7a", label: "(a)", marks: "5",
           topic: "natural-convection", sub: "Rayleigh number",
-          type: "theory", syllabus: "in", repeats: ["2011-12-Q2b"],
+          type: "theory", syllabus: "in", repeats: ["2011-12-Q2b", "practice-natural-convection-P4a"],
           text: String.raw`Define the term "Rayleigh number". What is the importance of the Rayleigh number?`,
           solution: String.raw`**Definition:** the Rayleigh number is the product of the Grashof and Prandtl numbers:
 
@@ -811,7 +811,7 @@ The slides give no design equations for plate exchangers; the performance figure
           answer: String.raw`Gasketed corrugated plates clamped in a frame, giving alternate hot and cold channels. High $U$, compact, close approach, easy to clean and expand; limited by gasket pressure and temperature.` },
         { id: "2022-23-Q7d", label: "(d)", marks: "15",
           topic: "condensation", sub: "Horizontal tube bank condenser (3×4)",
-          type: "numerical", syllabus: "in", repeats: ["2015-16-Q3a"],
+          type: "numerical", syllabus: "in", repeats: ["2015-16-Q3a", "practice-condensation-P2a"],
           text: String.raw`The condenser of a steam power plant operates at a pressure of 7.38 kPa. Steam at this pressure condenses on the outer surfaces of 12 horizontal tubes (a rectangular array 3 tubes high and 4 tubes wide) through which cooling water circulates. The tube outer diameter is 3 cm and the outer surfaces are maintained at 30°C. Determine (i) the rate of heat transfer to the cooling water circulating in the pipes and (ii) the rate of condensation of steam per unit length of a horizontal pipe.
 
 Properties of water at the saturation temperature of 40°C corresponding to 7.38 kPa: $h_{fg} = 2407\times10^3$ J/kg and $\rho_v$ = 0.05 kg/m³.`,
@@ -858,7 +858,7 @@ $$\dot m_{per\ tube} = \frac{0.0328}{12} = 2.73\times10^{-3}\,\mathrm{kg/s\ per\
       parts: [
         { id: "2022-23-Q8a", label: "(a)", marks: "10",
           topic: "boiling", sub: "Pool boiling curve; burnout",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-boiling-P3a"],
           text: String.raw`Draw a typical pool boiling curve and discuss the heat transfer behaviour in the different regimes. Explain the "burnout" phenomenon.`,
           solution: String.raw`![Pool boiling curve with its regimes, the critical heat flux and the Leidenfrost point](fig/common-boiling-curve.svg)
 

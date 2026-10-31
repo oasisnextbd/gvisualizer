@@ -162,7 +162,7 @@ So the same annulus has two "diameters", one for the film coefficient and one fo
           answer: String.raw`Heat transfer uses the heated perimeter: $D_e = (D_2^2-D_1^2)/D_1$. Pressure drop uses the wetted perimeter: $D'_e = D_2 - D_1$.` },
         { id: "2020-21-Q2b", label: "(b)", marks: "6",
           topic: "convection-basics", sub: "Physical meaning of Nusselt number",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-convection-basics-P8a"],
           text: String.raw`"Nusselt number is also considered as dimensionless heat transfer coefficient" – explain.`,
           solution: String.raw`At the wall the fluid is at rest, so the heat convected away must be conducted through the fluid layer touching the wall:
 $$h(T_w - T_\infty) = -k\left.\frac{\partial T}{\partial y}\right|_{y=0}$$
@@ -175,7 +175,7 @@ $$Nu = \frac{hL}{k} = -\left.\frac{\partial \theta}{\partial Y}\right|_{Y=0}$$
           answer: String.raw`$Nu = hL/k = -(\partial\theta/\partial Y)_{wall}$: it is $h$ scaled by $k/L$, i.e. convection compared with conduction through the same layer.` },
         { id: "2020-21-Q2c", label: "(c)", marks: "6",
           topic: "shell-tube", sub: "Choosing the tube-side and shell-side fluids",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-shell-tube-P6a"],
           text: String.raw`For a shell and tube heat exchanger, mention few criteria to decide shell side and tube side fluid.`,
           solution: String.raw`Put in the **tubes**:
 - **Fouling / dirty fluid** (e.g. cooling water, kerosene in the course example): tubes are easier to clean mechanically.
@@ -229,7 +229,7 @@ $$N = \frac{14.33}{0.438} = 32.7 \;\Rightarrow\; 33\ \text{hairpins}$$
       parts: [
         { id: "2020-21-Q3a", label: "(a)", marks: "18",
           topic: "heat-exchangers", sub: "LMTD derivation and assumptions",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-heat-exchangers-P1a"],
           text: String.raw`Derive the working equation of LMTD and state the assumptions made for the derivation.`,
           solution: String.raw`**Assumptions (the five listed in the slides)**
 1. The exchanger is insulated from its surroundings: heat is exchanged only between the hot and cold fluids (no heat loss).
@@ -299,7 +299,7 @@ $$\dot m' = \frac{q'}{h^*_{fg}} = \frac{1.133\times10^6}{2.455\times10^6} = 0.46
       parts: [
         { id: "2020-21-Q4a", label: "(a)", marks: "6",
           topic: "boiling", sub: "Critical heat flux and the factors that affect it",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-boiling-P6a"],
           text: String.raw`What is the critical heat flux of a pool boiling curve? List the factors that can influence the critical heat flux.`,
           solution: String.raw`![Pool boiling curve with its regimes, the critical heat flux and the Leidenfrost point](fig/common-boiling-curve.svg)
 
@@ -319,7 +319,7 @@ $$\dot q_{max} = C_{cr}h_{fg}\left[\sigma g\rho_v^2(\rho_l - \rho_v)\right]^{1/4
           answer: String.raw`CHF is the peak of the nucleate boiling curve (burnout point). It depends on $h_{fg}$, $\sigma$, densities, pressure, heater geometry and size ($C_{cr}$), gravity, subcooling, surface wettability and flow velocity.` },
         { id: "2020-21-Q4b", label: "(b)", marks: "6",
           topic: "boiling", sub: "Why h_total = h_film + 3/4 h_rad in film boiling",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-boiling-P6a"],
           text: String.raw`Why does total heat transfer during film boiling consider only 75% of radiation heat transfer? Explain the reason for not considering total radiation heat transfer.`,
           solution: String.raw`In film boiling (surface far above $T_{sat}$) heat crosses the vapour film by **conduction/convection** and by **radiation**:
 $$\dot q_{rad} = \varepsilon\sigma(T_s^4 - T_{sat}^4),\qquad h_{rad} = \frac{\dot q_{rad}}{T_s - T_{sat}}$$
@@ -333,7 +333,7 @@ So only ¾ of the radiation coefficient is added: the remaining quarter is cance
           answer: String.raw`Radiation thickens the vapour film and so lowers the film (conduction) coefficient. The net gain is only about $\tfrac34 h_{rad}$: $h_{total} = h_{film} + \tfrac34 h_{rad}$.` },
         { id: "2020-21-Q4c", label: "(c)", marks: "7",
           topic: "natural-convection", sub: "Hot surface facing down gives the lowest h",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-natural-convection-P7a"],
           text: String.raw`"Natural convection heat transfer is typically lowest in the case of the horizontal orientation with hot surface facing down" – explain with schematics.`,
           solution: String.raw`Buoyancy acts vertically: air heated by a hot surface becomes lighter and wants to **rise**.
 
@@ -389,7 +389,7 @@ So the total is about 32 W. Radiation (equivalent $h_r \approx 6.1$ W/m²K) is t
       parts: [
         { id: "2020-21-Q5a", label: "(a)", marks: "7",
           topic: "convection-basics", sub: "Bulk (mixing-cup) temperature",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-convection-basics-P4a"],
           text: String.raw`What is bulk temperature? Why is it called 'Mixing Cup' temperature?`,
           solution: String.raw`In tube flow the temperature varies over the cross-section, so a single reference temperature is defined from the **energy carried by the flow**:
 $$T_b = \frac{\int_A \rho u c_p T\,dA}{\int_A \rho u c_p\,dA} = \frac{\int_0^{r_0} \rho u c_p T\,2\pi r\,dr}{\int_0^{r_0}\rho u c_p\,2\pi r\,dr}$$
@@ -402,7 +402,7 @@ Simplified form (used when no profile information is given): $T_b \approx (T_1 +
           answer: String.raw`$T_b = \int\rho u c_p T\,dA/\int\rho u c_p\,dA$ is the energy-averaged temperature. It is the temperature the fluid would reach if the flow were collected and mixed in a cup.` },
         { id: "2020-21-Q5b", label: "(b)", marks: "10",
           topic: "boundary-layer", sub: "Thermal boundary layer on an isothermal plate; δt vs δ",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-boundary-layer-P12a"],
           text: String.raw`Describe the thermal boundary layer formation for forced convection on an isothermal flat plate. Indicate the relative thickness of hydrodynamic and thermal boundary layers for common fluids.`,
           solution: String.raw`![Velocity and thermal boundary layers on a flat plate](fig/common-bl-flat-plate.svg)
 
@@ -464,7 +464,7 @@ and at steady state the Laplace equation $\dfrac{\partial^2 T}{\partial x^2} + \
       parts: [
         { id: "2020-21-Q6a", label: "(a)", marks: "5",
           topic: "forced-convection", sub: "Dittus–Boelter equation and its range",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-forced-convection-P12a"],
           text: String.raw`Write down Dittus-Boelter equation with its applicability ranges.`,
           solution: String.raw`$$Nu_d = \frac{hd}{k} = 0.023\,Re_d^{0.8}\,Pr^{n}$$
 - $n = 0.4$ when the fluid is being **heated**, $n = 0.3$ when it is being **cooled**.
@@ -479,7 +479,7 @@ and at steady state the Laplace equation $\dfrac{\partial^2 T}{\partial x^2} + \
           answer: String.raw`$Nu = 0.023Re^{0.8}Pr^n$ ($n = 0.4$ heating, 0.3 cooling), for turbulent flow in smooth tubes, $Re > 10^4$, $0.6 < Pr < 100$, $L/d > 10$–60, moderate ΔT.` },
         { id: "2020-21-Q6b", label: "(b)", marks: "10",
           topic: "convection-basics", sub: "Stanton and Prandtl numbers",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-convection-basics-P8a"],
           text: String.raw`Define Stanton number and Prandtl number. Explain their physical significance. What are the typical values of Prandtl number for gas and liquid metals?`,
           solution: String.raw`**Stanton number**
 $$St = \frac{h}{\rho c_p u} = \frac{Nu}{Re\,Pr}$$
@@ -502,7 +502,7 @@ $$Pr = \frac{\nu}{\alpha} = \frac{c_p\mu}{k}$$
           answer: String.raw`$St = h/(\rho c_p u) = Nu/(RePr)$: wall heat transfer compared with the fluid's heat capacity flow. $Pr = \nu/\alpha$: momentum vs thermal diffusion. Gases $Pr \approx 0.7$–1; liquid metals ≈ 0.01.` },
         { id: "2020-21-Q6c", label: "(c)", marks: "20",
           topic: "forced-convection", sub: "Laminar tube flow, constant wall temperature (Sieder–Tate)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-forced-convection-P2"],
           text: String.raw`Water at 60°C enters a tube of 1-in (2.54 cm) diameter at a mean flow velocity of 2 cm/s. Calculate the exit water temperature if the tube is 3.0 m long and the wall temperature is constant at 80°C.`,
           solution: String.raw`**Given:** $T_{b1} = 60$°C, $d = 0.0254$ m, $u_m = 0.02$ m/s, $L = 3$ m, $T_w = 80$°C.
 
@@ -538,7 +538,7 @@ Heat gained: $q = 41.75(12.0) = 500$ W.
       parts: [
         { id: "2020-21-Q7a", label: "(a)", marks: "18",
           topic: "boundary-layer", sub: "Reynolds–Colburn analogy from the cubic profile",
-          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2015-16-Q8a", "2016-17-Q8a", "2017-18-Q8a", "2022-23-Q3a"],
+          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2015-16-Q8a", "2016-17-Q8a", "2017-18-Q8a", "2022-23-Q3a", "practice-boundary-layer-P6"],
           text: String.raw`The velocity distribution and the laminar boundary layer thickness for the fluid can be expressed by the following equations, respectively:
 $$\frac{u}{u_\infty} = \frac{3}{2}\frac{y}{\delta} - \frac{1}{2}\left(\frac{y}{\delta}\right)^3,\qquad \delta = 4.64\sqrt{\frac{\nu x}{u_\infty}}$$
 where $u_\infty$ is the fluid velocity outside the boundary layer and other symbols have their usual meanings. Derive the Reynolds–Colburn analogy using the above equations and state its significance in heat transfer.`,
@@ -612,7 +612,7 @@ $$q = 11.22(0.18)(70) = 141.3\ \mathrm{W}$$
       parts: [
         { id: "2020-21-Q8a", label: "(a)", marks: "15",
           topic: "insulation", sub: "Critical radius of insulation for a cylinder",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-insulation-P1"],
           text: String.raw`Derive the equation for critical radius of insulation in a cylindrical system. What would you suggest for reducing heat loss if the bare pipe radius is smaller than the critical radius of insulation? Explain your answer with a schematic of heat loss vs. radius.`,
           solution: String.raw`**Assumptions:** steady, 1-D radial conduction; insulation conductivity $k$ constant; pipe surface at $T_i$ (radius $r_i$); outer surface convects to $T_\infty$ with constant $h$; length $L$.
 

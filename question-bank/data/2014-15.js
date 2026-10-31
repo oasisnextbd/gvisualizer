@@ -105,7 +105,7 @@ $$T_{s,B}=300+198.0(0.1273)=325\ \mathrm{K}$$
       parts: [
         { id: "2014-15-Q2a", label: "(a)", marks: "9+6",
           topic: "insulation", sub: "Critical radius of a cylinder",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-insulation-P1"],
           text: String.raw`Derive the equation for the critical radius of insulation in a cylindrical system. What would you do to reduce heat loss if the bare pipe radius is smaller than the critical radius of insulation? Explain your answer with a schematic of heat loss vs. radius.`,
           solution: String.raw`![Heat loss vs radius: maximum at rc = k/h; cases rᵢ < rc and rᵢ > rc](fig/common-critical-radius.svg)
 
@@ -171,7 +171,7 @@ Check: aluminium/insulation interface $T_2=250-80(3.84\times10^{-4})\approx 249.
       parts: [
         { id: "2014-15-Q3a", label: "(a)", marks: "15",
           topic: "boundary-layer", sub: "Reynolds–Colburn analogy derivation",
-          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2015-16-Q8a", "2016-17-Q8a", "2017-18-Q8a", "2020-21-Q7a", "2022-23-Q3a"],
+          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2015-16-Q8a", "2016-17-Q8a", "2017-18-Q8a", "2020-21-Q7a", "2022-23-Q3a", "practice-boundary-layer-P6"],
           text: String.raw`Consider a fluid flowing past a flat plate where the friction coefficient is $C_f$. The velocity distribution and the laminar boundary layer thickness for the fluid can be expressed by the following equations, respectively:
 
 $$\frac{u}{u_\infty}=\frac{3}{2}\frac{y}{\delta}-\frac{1}{2}\left(\frac{y}{\delta}\right)^3,\qquad \delta=4.64\sqrt{\frac{\nu x}{u_\infty}}$$
@@ -223,7 +223,7 @@ This is the Reynolds–Colburn analogy. For $Pr = 1$ it reduces to Reynolds' ana
           answer: String.raw`$C_{fx}/2 = 0.332\,Re_x^{-1/2}$ and $St_x = 0.332\,Re_x^{-1/2}Pr^{-2/3}$, so $St_x Pr^{2/3} = C_{fx}/2$ (Reynolds–Colburn analogy).` },
         { id: "2014-15-Q3b", label: "(b)", marks: "10+10",
           topic: "boundary-layer", sub: "Heat transfer and drag via the analogy",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-boundary-layer-P5a"],
           text: String.raw`Air at 27°C and 1 atm flows over a flat plate at a speed of 2 m/s. The plate is heated over its entire length to a temperature of 60°C. Calculate the heat transferred in the first 40 cm of the plate. Also compute the drag force exerted on the first 40 cm of the plate using the analogy between fluid friction and heat transfer.
 
 [HINT: Use the average heat transfer coefficient to calculate the heat transfer Stanton number.]`,
@@ -278,7 +278,7 @@ $$D=\bar\tau_w\,(L\times1)=0.0137(0.4)=5.48\times10^{-3}\ \mathrm{N}$$
       parts: [
         { id: "2014-15-Q4a", label: "(a)", marks: "10",
           topic: "convection-basics", sub: "Nusselt and Prandtl numbers",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-convection-basics-P8a"],
           text: String.raw`Define the Nusselt number and Prandtl number. Explain their physical significance. What are the typical values of Prandtl number for gases and liquid metals?`,
           solution: String.raw`### Nusselt number
 $$Nu=\frac{hL_c}{k_f}$$
@@ -372,7 +372,7 @@ Check with the LMTD: $\Delta T_{lm}=\dfrac{130-113.6}{\ln(130/113.6)}=121.6$ K, 
       parts: [
         { id: "2014-15-Q5a", label: "(a)", marks: "5",
           topic: "natural-convection", sub: "Rayleigh number and transition",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-natural-convection-P4a"],
           text: String.raw`The Rayleigh number is important to characterize the laminar-to-turbulent transition of a free convection boundary layer flow. True/False? Explain your answer.`,
           solution: String.raw`**True.**
 
@@ -386,7 +386,7 @@ which includes both the momentum and the thermal diffusion that damp disturbance
           answer: String.raw`True: transition is governed by $Ra = Gr\,Pr$ (buoyancy vs viscous and thermal diffusion), with $Ra_c\approx10^9$ on a vertical plate.` },
         { id: "2014-15-Q5b", label: "(b)", marks: "5",
           topic: "natural-convection", sub: "Forced vs free convection",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-natural-convection-P7a"],
           text: String.raw`Write down the differences between forced convection and free convection.`,
           solution: String.raw`| Aspect | Forced convection | Free (natural) convection |
 |---|---|---|
@@ -436,7 +436,7 @@ $$\boxed{D_e=\frac{4\left(\dfrac12P_T\times0.86P_T-\dfrac12\cdot\dfrac{\pi d_o^2
           answer: String.raw`Square: $D_e=4(P_T^2-\pi d_o^2/4)/(\pi d_o)$. Triangular: $D_e=4(\tfrac12P_T\cdot0.86P_T-\tfrac12\pi d_o^2/4)/(\tfrac12\pi d_o)$.` },
         { id: "2014-15-Q5d", label: "(d)", marks: "5",
           topic: "heat-exchangers", sub: "Temperature profiles: boiling and condensing",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-heat-exchangers-P8"],
           text: String.raw`Draw the temperature distribution profile for double-pipe heat exchanger equipment for (i) boiling and (ii) condensing cases.`,
           solution: String.raw`![Double-pipe temperature profiles: (i) boiling, (ii) condensing](fig/2014-15-Q5d-sol.svg)
 
@@ -471,7 +471,7 @@ Axes for both sketches: temperature $T$ (vertical) vs. length along the exchange
           answer: String.raw`Counterflow keeps $\Delta T$ more uniform, gives the larger LMTD (less area), allows $t_2 > T_2$, and its effectiveness can approach 1; parallel flow is capped at $1/(1+C_r)$.` },
         { id: "2014-15-Q5f", label: "(f)", marks: "5",
           topic: "natural-convection", sub: "Criterion: natural vs forced (Gr/Re²)",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-natural-convection-P7a"],
           text: String.raw`What are the criteria to know whether natural or forced convection dominates?`,
           solution: String.raw`The ratio of buoyancy to inertia forces is $Gr/Re^2$:
 
@@ -491,7 +491,7 @@ Other points: if there is no imposed velocity it is natural convection; low velo
       parts: [
         { id: "2014-15-Q6a", label: "(a)", marks: "25",
           topic: "condensation", sub: "Nusselt film condensation on a vertical plate",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-condensation-P3a"],
           text: String.raw`A vertical plate of length $L$ and width $b$ is maintained at temperature $T_s$. The outside vapour temperature is $T_{sat}$, where $T_s < T_{sat}$.
 
 (i) Find the mass flow rate of the condensate at a location $x$ where the boundary layer (film) thickness is $\delta$.

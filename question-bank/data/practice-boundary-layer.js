@@ -70,7 +70,7 @@ $$\delta_{20} = \frac{4.64(0.2)}{(25\,444)^{1/2}} = 0.00582\,\mathrm{m},\qquad \
           answer: String.raw`ρ = 1.177 kg/m³; Re = 25 444 and 50 887 (laminar); δ = 5.82 mm at 20 cm and 8.23 mm at 40 cm.` },
         { id: "practice-boundary-layer-P2b", label: "(b)", marks: "", topic: "boundary-layer",
           sub: "Mass flow entering the boundary layer", type: "numerical",
-          syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 05, p. 23 (mass entrained between x = 20 cm and 40 cm)`,
+          syllabus: "in", repeats: ["2015-16-Q7b", "2016-17-Q7d", "2017-18-Q7b"], origin: "slides", ref: String.raw`Slides 05, p. 23 (mass entrained between x = 20 cm and 40 cm)`,
           text: String.raw`Calculate the mass flow that enters the boundary layer from the free stream between $x = 20$ cm and $x = 40$ cm.`,
           solution: String.raw`1. **Mass flow inside the layer** at any x (per unit depth), with the cubic profile:
 $$\int_0^\delta\rho u\,dy = \rho u_\infty\delta\int_0^1\left(\tfrac32\eta - \tfrac12\eta^3\right)d\eta = \rho u_\infty\delta\left(\tfrac34 - \tfrac18\right) = \frac58\rho u_\infty\delta$$
@@ -151,7 +151,7 @@ $$\overline{\mathrm{Nu}}_L = \frac{\bar hL}{k} = 0.664\,\mathrm{Re}_L^{1/2}\math
       parts: [
         { id: "practice-boundary-layer-P5a", label: "(a)", marks: "", topic: "boundary-layer",
           sub: "Heat transferred in the first 20 cm (slide example)", type: "numerical",
-          syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 05, pp. 29–30`,
+          syllabus: "in", repeats: ["2014-15-Q3b"], origin: "slides", ref: String.raw`Slides 05, pp. 29–30`,
           text: String.raw`Calculate the heat transferred in the first 20 cm of the plate.`,
           solution: String.raw`**Given:** $T_\infty = 27$°C, $T_w = 60$°C, $u_\infty = 2$ m/s, $x = 0.2$ m, 1 m depth.
 
@@ -200,7 +200,7 @@ $$D = \bar\tau_wA = 0.0136(0.4) = 5.44\times10^{-3}\,\mathrm{N} = 5.44\,\mathrm{
       parts: [
         { id: "practice-boundary-layer-P6", label: "", marks: "", topic: "boundary-layer",
           sub: "Reynolds–Colburn analogy: St Pr^(2/3) = C_f/2", type: "derivation",
-          syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2015-16-Q8a", "2016-17-Q8a", "2017-18-Q8a", "2020-21-Q7a", "2022-23-Q3a"], origin: "slides", ref: String.raw`Slides 05, pp. 31–33 (fluid friction and heat transfer)`,
+          syllabus: "in", repeats: ["2011-12-Q7a", "2012-13-Q4b", "2014-15-Q3a", "2015-16-Q8a", "2016-17-Q8a", "2017-18-Q8a", "2018-19-Q7c", "2020-21-Q7a", "2021-22-Q5b", "2022-23-Q3a"], origin: "slides", ref: String.raw`Slides 05, pp. 31–33 (fluid friction and heat transfer)`,
           text: String.raw`Starting from the definition of the friction coefficient and the cubic velocity profile, derive the Reynolds–Colburn analogy for laminar flow over a flat plate,
 $$\mathrm{St}_x\mathrm{Pr}^{2/3} = \frac{C_{fx}}{2}$$
 State its use and its limitations.`,
@@ -393,7 +393,7 @@ The analogy estimate is 7% lower, the same 7% by which the measured drag is belo
       parts: [
         { id: "practice-boundary-layer-P12a", label: "(a)", marks: "6", topic: "boundary-layer",
           sub: "Velocity vs thermal boundary layer (sketch)", type: "sketch",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Asked in finals like 2013-14 Q6(a), 2017-18 Q6(a), 2018-19 Q7(b), 2020-21 Q5(b)`,
+          syllabus: "in", repeats: ["2011-12-Q8b", "2013-14-Q6a", "2017-18-Q6a", "2018-19-Q7b", "2020-21-Q5b"], origin: "potential", ref: String.raw`Asked in finals like 2013-14 Q6(a), 2017-18 Q6(a), 2018-19 Q7(b), 2020-21 Q5(b)`,
           text: String.raw`With a neat sketch, explain how the velocity and thermal boundary layers develop on a heated flat plate, and how their thicknesses are defined.`,
           solution: String.raw`**Sketch:** a flat plate along the x-axis, with flow at $u_\infty$, $T_\infty$ arriving from the left. Draw two curves growing from the leading edge roughly as $\sqrt x$:
 - the velocity-layer edge δ, with the velocity profile rising from 0 at the wall to $0.99u_\infty$ at δ;
@@ -411,7 +411,7 @@ For Pr > 1 draw $\delta_t$ below δ. Mark "boundary-layer region" and "inviscid 
           answer: String.raw`δ: where $u = 0.99u_\infty$; $\delta_t$: where $T - T_w = 0.99(T_\infty - T_w)$; both grow as $\sqrt x$ and their ratio is fixed by Pr ($\delta_t/\delta \approx \mathrm{Pr}^{-1/3}/1.026$).` },
         { id: "practice-boundary-layer-P12b", label: "(b)", marks: "5", topic: "boundary-layer",
           sub: "Liquid metals vs oils: relative boundary-layer thickness", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Cousin of 2016-17 Q7(c) and 2022-23 Q1(a)`,
+          syllabus: "in", repeats: ["2011-12-Q8b", "2013-14-Q6a", "2017-18-Q6a", "2018-19-Q7b", "2020-21-Q5b"], origin: "potential", ref: String.raw`Cousin of 2016-17 Q7(c) and 2022-23 Q1(a)`,
           text: String.raw`Compare the velocity and thermal boundary layers for a liquid metal (Pr ≈ 0.01) and a heavy oil (Pr ≈ 1000). Why does the cubic-profile result for $\delta_t/\delta$ fail for liquid metals?`,
           solution: String.raw`- **Liquid metal (Pr ≪ 1):** α ≫ ν because the conductivity is very high, so heat diffuses much faster than momentum and $\delta_t \gg \delta$. Across most of the thermal layer the fluid moves at nearly $u_\infty$, giving a "blunt" (almost slug) velocity profile.
 - **Heavy oil (Pr ≫ 1):** momentum diffuses much faster than heat, so $\delta_t \ll \delta$ (≈ 0.1δ for Pr = 1000). The whole thermal layer sits in the slow, nearly linear part of the velocity profile next to the wall.
@@ -421,7 +421,7 @@ For Pr > 1 draw $\delta_t$ below δ. Mark "boundary-layer region" and "inviscid 
           answer: String.raw`Liquid metal: $\delta_t \gg \delta$ (heat diffuses fast; blunt velocity profile). Oil: $\delta_t \ll \delta$. The cubic result assumes ζ < 1, so it is valid only for Pr ≳ 0.7.` },
         { id: "practice-boundary-layer-P12c", label: "(c)", marks: "4", topic: "boundary-layer",
           sub: "Why h decreases along the plate", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of Holman Sec. 5-6`,
+          syllabus: "in", repeats: ["2011-12-Q8b", "2013-14-Q6a", "2017-18-Q6a", "2018-19-Q7b", "2020-21-Q5b"], origin: "potential", ref: String.raw`Style of Holman Sec. 5-6`,
           text: String.raw`Explain why the local heat-transfer coefficient on a laminar flat plate decreases with x, and why the average coefficient over a length L is twice the local value at L.`,
           solution: String.raw`- $h_x = 3k/(2\delta_t)$: the thermal layer thickens as $x^{1/2}$, so the insulating fluid layer between wall and free stream grows. The wall gradient falls and $h_x \propto x^{-1/2}$. At the leading edge $\delta_t \to 0$ and $h_x \to \infty$.
 - Averaging $Cx^{-1/2}$ over 0 to L gives $\bar h = \frac1L\int_0^LCx^{-1/2}dx = 2CL^{-1/2} = 2h_L$. The high values near the leading edge pull the average up to twice the trailing-edge value.`,

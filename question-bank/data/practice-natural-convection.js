@@ -172,7 +172,7 @@ $$\dot Q = hA_s(T_s - T_\infty) = 2.97\times0.36\times60 = 64.2\,\mathrm{W}$$
       parts: [
         { id: "practice-natural-convection-P4a", label: "(a)", marks: "", topic: "natural-convection",
           sub: "Free-convection momentum equation (Boussinesq)", type: "derivation",
-          syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 07, pp. 9–12 (velocity and temperature profiles)`,
+          syllabus: "in", repeats: ["2011-12-Q2a", "2011-12-Q2b", "2012-13-Q6a", "2014-15-Q5a", "2016-17-Q2a", "2018-19-Q3a", "2021-22-Q3a", "2022-23-Q7a"], origin: "slides", ref: String.raw`Slides 07, pp. 9–12 (velocity and temperature profiles)`,
           text: String.raw`Starting from the x-momentum boundary-layer equation with gravity, show that for free convection
 
 $$\rho\left(u\frac{\partial u}{\partial x} + v\frac{\partial u}{\partial y}\right) = g\rho\beta(T - T_\infty) + \mu\frac{\partial^2u}{\partial y^2}$$
@@ -208,7 +208,7 @@ The first term on the right is the **buoyancy force**. It couples the velocity f
           answer: String.raw`Using $\partial p/\partial x = -\rho_\infty g$ and $\rho_\infty - \rho = \rho\beta(T - T_\infty)$ turns the gravity and pressure terms into the buoyancy term $g\rho\beta(T - T_\infty)$.` },
         { id: "practice-natural-convection-P4b", label: "(b)", marks: "", topic: "natural-convection",
           sub: "Integral profiles: temperature and velocity", type: "derivation",
-          syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 07, pp. 12–14`,
+          syllabus: "in", repeats: ["2011-12-Q2a", "2011-12-Q2b", "2012-13-Q6a", "2014-15-Q5a", "2016-17-Q2a", "2018-19-Q3a", "2021-22-Q3a", "2022-23-Q7a"], origin: "slides", ref: String.raw`Slides 07, pp. 12–14`,
           text: String.raw`Take $\delta_t = \delta$. Using a quadratic temperature profile and a cubic velocity profile $u/u_x = a + by + cy^2 + dy^3$, derive
 
 $$\frac{T - T_\infty}{T_w - T_\infty} = \left(1 - \frac{y}{\delta}\right)^2,\qquad \frac{u}{u_x} = \frac{\beta\delta^2g(T_w - T_\infty)}{4u_x\nu}\frac{y}{\delta}\left(1 - \frac{y}{\delta}\right)^2$$
@@ -255,7 +255,7 @@ The maximum is at one third of the boundary-layer thickness, where $\eta(1 - \et
           answer: String.raw`$\theta = (1 - y/\delta)^2$; $u \propto (y/\delta)(1 - y/\delta)^2$ with $c = -g\beta\Delta T/(2\nu u_x)$; maximum at $y = \delta/3$.` },
         { id: "practice-natural-convection-P4c", label: "(c)", marks: "", topic: "natural-convection",
           sub: "Grashof number and Gr/Re² criterion", type: "theory",
-          syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 07, pp. 15–17 (Gr, Ra, Gr/Re²)`,
+          syllabus: "in", repeats: ["2011-12-Q2a", "2011-12-Q2b", "2012-13-Q6a", "2014-15-Q5a", "2016-17-Q2a", "2018-19-Q3a", "2021-22-Q3a", "2022-23-Q7a"], origin: "slides", ref: String.raw`Slides 07, pp. 15–17 (Gr, Ra, Gr/Re²)`,
           text: String.raw`Define the Grashof and Rayleigh numbers and give their physical meaning. By making the momentum equation of (a) dimensionless, show why $\mathrm{Gr}/\mathrm{Re}^2$ decides whether natural or forced convection dominates. State the critical Gr for a vertical plate.`,
           solution: String.raw`**Definitions**
 
@@ -371,7 +371,7 @@ $$A = \pi DL = \pi\times0.25\times1.5 = 1.178\,\mathrm{m^2},\qquad \dot Q = hA\D
       parts: [
         { id: "practice-natural-convection-P7a", label: "(a)", marks: "6", topic: "natural-convection",
           sub: "Natural vs forced convection; Gr vs Re", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of finals 2011-12 Q2(a), 2021-22 Q3(a)(b), 2022-23 Q7(a)`,
+          syllabus: "in", repeats: ["2012-13-Q6a", "2014-15-Q5b", "2014-15-Q5f", "2020-21-Q4c", "2021-22-Q3b", "2023-24-Q7b"], origin: "potential", ref: String.raw`Style of finals 2011-12 Q2(a), 2021-22 Q3(a)(b), 2022-23 Q7(a)`,
           text: String.raw`Distinguish between natural and forced convection. What does the Grashof number represent, and how does its role compare with that of the Reynolds number?`,
           solution: String.raw`| | Forced convection | Natural convection |
 |---|---|---|
@@ -388,7 +388,7 @@ Without gravity (for example in an orbiting spacecraft) there is no buoyancy, so
           answer: String.raw`Natural convection is driven by buoyancy, forced convection by external means; Gr (buoyancy/viscous) plays the role of Re, sets laminar vs turbulent ($\mathrm{Gr}_{cr} \approx 10^9$), and $\mathrm{Gr}/\mathrm{Re}^2$ weighs the two modes.` },
         { id: "practice-natural-convection-P7b", label: "(b)", marks: "6", topic: "natural-convection",
           sub: "Profiles on hot and cold vertical plates", type: "sketch",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of finals 2016-17 Q2(a), 2018-19 Q3(a)`,
+          syllabus: "in", repeats: ["2012-13-Q6a", "2014-15-Q5b", "2014-15-Q5f", "2020-21-Q4c", "2021-22-Q3b", "2023-24-Q7b"], origin: "potential", ref: String.raw`Style of finals 2016-17 Q2(a), 2018-19 Q3(a)`,
           text: String.raw`Sketch the velocity and temperature profiles in the natural-convection boundary layer on (i) a hot vertical plate and (ii) a cold vertical plate in a quiescent fluid. Show the laminar and turbulent parts.`,
           solution: String.raw`![Velocity and temperature profiles on a hot plate (layer grows upward) and a cold plate (mirror image, grows downward)](fig/common-nc-vertical-plate.svg)
 
@@ -404,7 +404,7 @@ Without gravity (for example in an orbiting spacecraft) there is no buoyancy, so
           answer: String.raw`Velocity: zero at the wall and at $y = \delta$, peak near $\delta/3$; temperature monotone from $T_s$ to $T_\infty$. On a hot plate the flow rises from the bottom edge; on a cold plate it falls from the top edge (mirror image).` },
         { id: "practice-natural-convection-P7c", label: "(c)", marks: "5", topic: "natural-convection",
           sub: "Orientation of horizontal hot plates", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of finals 2020-21 Q4(c), 2023-24 Q7(b)`,
+          syllabus: "in", repeats: ["2012-13-Q6a", "2014-15-Q5b", "2014-15-Q5f", "2020-21-Q4c", "2021-22-Q3b", "2023-24-Q7b"], origin: "potential", ref: String.raw`Style of finals 2020-21 Q4(c), 2023-24 Q7(b)`,
           text: String.raw`A hot horizontal plate loses heat in a cooler room. Explain why the loss is much smaller when the hot face points down than when it points up. Which correlations apply for a cold plate?`,
           solution: String.raw`![Flow patterns over horizontal hot and cold plates facing up and down](fig/practice-natural-convection-P7c-sol.svg)
 

@@ -52,7 +52,7 @@ At $T_{sat} = 40^\circ\mathrm{C}$ (7.38 kPa): $h_{fg} = 2407\times10^3\,\mathrm{
       parts: [
         { id: "practice-condensation-P2a", label: "(a)", marks: "", topic: "condensation",
           sub: "Single horizontal tube: heat transfer", type: "numerical",
-          syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 08, pp. 39–45 (7.38 kPa condenser, Çengel Ex. 10-4 style; the finals' 3×4 version is 2015-16 Q3a / 2022-23 Q7d)`,
+          syllabus: "in", repeats: ["2015-16-Q3a", "2022-23-Q7d"], origin: "slides", ref: String.raw`Slides 08, pp. 39–45 (7.38 kPa condenser, Çengel Ex. 10-4 style; the finals' 3×4 version is 2015-16 Q3a / 2022-23 Q7d)`,
           text: String.raw`Determine the rate of heat transfer to the cooling water per metre length of one pipe.`,
           solution: String.raw`**Given:** $T_{sat} = 40^\circ\mathrm{C}$, $T_s = 30^\circ\mathrm{C}$, $D = 0.03\,\mathrm{m}$, $L = 1\,\mathrm{m}$.
 
@@ -82,7 +82,7 @@ $$\dot Q = hA_s(T_{sat} - T_s) = 9292\times0.09425\times10 = 8758\,\mathrm{W}$$
           answer: String.raw`$h^*_{fg} = 2435\,\mathrm{kJ/kg}$, $h \approx 9290\,\mathrm{W/m^2K}$, $\dot Q \approx 8.76\,\mathrm{kW}$ per m of pipe.` },
         { id: "practice-condensation-P2b", label: "(b)", marks: "", topic: "condensation",
           sub: "Single horizontal tube: condensation rate", type: "numerical",
-          syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 08, p. 45`,
+          syllabus: "in", repeats: ["2015-16-Q3a", "2022-23-Q7d"], origin: "slides", ref: String.raw`Slides 08, p. 45`,
           text: String.raw`Determine the rate of condensation of steam per unit length of a horizontal pipe.`,
           solution: String.raw`$$\dot m = \frac{\dot Q}{h^*_{fg}} = \frac{8758}{2435\times10^3} = 3.60\times10^{-3}\,\mathrm{kg/s} \approx 13.0\,\mathrm{kg/h}\ \text{per metre}$$
 
@@ -95,7 +95,7 @@ $$\dot Q = hA_s(T_{sat} - T_s) = 9292\times0.09425\times10 = 8758\,\mathrm{W}$$
       parts: [
         { id: "practice-condensation-P3a", label: "(a)", marks: "", topic: "condensation",
           sub: "Nusselt analysis: δ(x), h_x and average h", type: "derivation",
-          syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 08, pp. 10–18 (Nusselt 1916 analysis; asked in finals 2013-14 Q3a, 2014-15 Q6a, 2022-23 Q6a)`,
+          syllabus: "in", repeats: ["2013-14-Q3a", "2014-15-Q6a", "2022-23-Q6a", "2023-24-Q7a"], origin: "slides", ref: String.raw`Slides 08, pp. 10–18 (Nusselt 1916 analysis; asked in finals 2013-14 Q3a, 2014-15 Q6a, 2022-23 Q6a)`,
           text: String.raw`State Nusselt's assumptions and derive the film thickness $\delta(x)$, the local coefficient $h_x$ and the average coefficient
 
 $$h = 0.943\left[\frac{g\rho_l(\rho_l - \rho_v)h_{fg}k_l^3}{\mu_l(T_{sat} - T_s)L}\right]^{1/4}$$`,
@@ -148,7 +148,7 @@ since $\frac{4}{3}\times0.25^{1/4} = 0.943$.
           answer: String.raw`$\delta = [4\mu_lk_l\Delta Tx/(g\rho_l(\rho_l - \rho_v)h_{fg})]^{1/4}$, $h_x = k_l/\delta$, $h = \tfrac{4}{3}h_L = 0.943[g\rho_l(\rho_l - \rho_v)h_{fg}k_l^3/(\mu_l\Delta TL)]^{1/4}$.` },
         { id: "practice-condensation-P3b", label: "(b)", marks: "", topic: "condensation",
           sub: "Film Reynolds number and h = 1.47 k Re^(−1/3)(g/ν²)^(1/3)", type: "derivation",
-          syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 08, pp. 6–9 and 20 (film Re, hydraulic diameter, regimes; asked in 2014-15 Q6a, 2023-24 Q7a(i))`,
+          syllabus: "in", repeats: ["2013-14-Q3a", "2014-15-Q6a", "2022-23-Q6a", "2023-24-Q7a"], origin: "slides", ref: String.raw`Slides 08, pp. 6–9 and 20 (film Re, hydraulic diameter, regimes; asked in 2014-15 Q6a, 2023-24 Q7a(i))`,
           text: String.raw`Define the film Reynolds number and show that it equals $4\dot m/(p\mu_l)$. Give the flow regimes. Then show that for $\rho_v \ll \rho_l$ the laminar average coefficient can be written
 
 $$h = 1.47\,k_l\,\mathrm{Re}^{-1/3}\left(\frac{g}{\nu_l^2}\right)^{1/3}$$`,
@@ -329,7 +329,7 @@ $$\dot m = \frac{\dot Q}{h^*_{fg}} = \frac{3.389\times10^6}{2.351\times10^6} = 1
       parts: [
         { id: "practice-condensation-P7a", label: "(a)", marks: "6", topic: "condensation",
           sub: "Film vs dropwise condensation", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of finals 2011-12 Q3(a), 2012-13 Q7(a); Slides 08, pp. 3–4, 29–30`,
+          syllabus: "in", repeats: ["2011-12-Q3a", "2012-13-Q7a"], origin: "potential", ref: String.raw`Style of finals 2011-12 Q3(a), 2012-13 Q7(a); Slides 08, pp. 3–4, 29–30`,
           text: String.raw`Distinguish between film and dropwise condensation. Why is dropwise condensation preferred, and why are condensers still designed for film condensation? How can dropwise condensation be promoted?`,
           solution: String.raw`| | Film condensation | Dropwise condensation |
 |---|---|---|
@@ -344,7 +344,7 @@ $$\dot m = \frac{\dot Q}{h^*_{fg}} = \frac{3.389\times10^6}{2.351\times10^6} = 1
           answer: String.raw`Film: wetted surface with a resistive film; dropwise: non-wetted, drops roll off, h more than 10 times higher. It is hard to sustain, so equipment is designed for film condensation; it can be promoted with additives, surface treatments or Teflon/noble-metal coatings.` },
         { id: "practice-condensation-P7b", label: "(b)", marks: "5", topic: "condensation",
           sub: "Non-condensable gases and vapour velocity", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of final 2012-13 Q7(a); Slides 08, pp. 27–28`,
+          syllabus: "in", repeats: ["2011-12-Q3a", "2012-13-Q7a"], origin: "potential", ref: String.raw`Style of final 2012-13 Q7(a); Slides 08, pp. 27–28`,
           text: String.raw`Explain the effect on the condensation heat-transfer coefficient of (i) a small amount of air in the steam and (ii) a high vapour velocity.`,
           solution: String.raw`**(i) Non-condensable gas.** As the vapour condenses, the air it carried cannot condense. It collects next to the liquid film as a gas-rich layer. Vapour must then *diffuse* through this layer to reach the film, and its partial pressure, and so the interface saturation temperature, drops. This adds a large resistance: less than 1% air (by mass) in steam can cut h by more than half. Condensers are therefore vented, and air is removed continuously (air ejectors). The effect is weaker when the vapour moves fast and sweeps the gas away.
 
@@ -356,7 +356,7 @@ Nusselt's analysis assumes zero interfacial shear, i.e. stagnant vapour.`,
           answer: String.raw`Air builds up a diffusion barrier at the interface and lowers the interface temperature (less than 1% air can halve h). Downward vapour flow thins the film and raises h; upward flow thickens it and lowers h.` },
         { id: "practice-condensation-P7c", label: "(c)", marks: "4", topic: "condensation",
           sub: "Modified latent heat (subcooling and superheat)", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Slides 08, pp. 16–18; style of final 2023-24 Q7(a)(ii) (superheated vapour, subcooled condensate)`,
+          syllabus: "in", repeats: ["2011-12-Q3a", "2012-13-Q7a"], origin: "potential", ref: String.raw`Slides 08, pp. 16–18; style of final 2023-24 Q7(a)(ii) (superheated vapour, subcooled condensate)`,
           text: String.raw`Explain the terms in $h^*_{fg} = h_{fg} + 0.68c_{pl}(T_{sat} - T_s) + c_{pv}(T_v - T_{sat})$ and where each property is evaluated.`,
           solution: String.raw`- $h_{fg}$: latent heat released when 1 kg of saturated vapour condenses (evaluated at $T_{sat}$).
 - $0.68c_{pl}(T_{sat} - T_s)$: the condensate film is cooled below $T_{sat}$ toward the wall temperature, releasing extra sensible heat. The factor 0.68 (Rohsenow) accounts for the actual, non-linear temperature profile and the enthalpy-flux weighting across the film. $c_{pl}$ is evaluated at the film temperature $(T_{sat} + T_s)/2$.

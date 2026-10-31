@@ -262,7 +262,7 @@ Check: $36.5 + 43.5 = 80$ W ✓. The maximum lies at $x_m = 0.0914$ m, where the
       parts: [
         { id: "practice-generation-P8a", label: "(a)", marks: "10", topic: "generation",
           sub: "Derivation: tube with generation, insulated outside, cooled inside", type: "derivation",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of Holman Prob. 2-series; cousin of 2021-22 Q8(a) (tube insulated at r2, cooled at r1)`,
+          syllabus: "in", repeats: ["2021-22-Q8a"], origin: "potential", ref: String.raw`Style of Holman Prob. 2-series; cousin of 2021-22 Q8(a) (tube insulated at r2, cooled at r1)`,
           text: String.raw`Taking the inner surface temperature as $T_1$, derive the temperature distribution $T(r)$, state where the maximum temperature occurs and give the heat removed per unit length.`,
           solution: String.raw`**Assumptions:** steady; radial 1-D; uniform $\dot q$; constant $k$.
 
@@ -292,7 +292,7 @@ All heat generated leaves through the inner surface: $q' = \dot q\pi(r_2^2 - r_1
           answer: String.raw`$T - T_1 = \dfrac{\dot q}{4k}(r_1^2 - r^2) + \dfrac{\dot qr_2^2}{2k}\ln(r/r_1)$; maximum at $r_2$; $q' = \dot q\pi(r_2^2 - r_1^2)$, all removed at $r_1$.` },
         { id: "practice-generation-P8b", label: "(b)", marks: "8", topic: "generation",
           sub: "Numbers: inner wall and maximum temperatures of a cooled tube", type: "numerical",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Numerical companion to part (a); style of Holman heat-generation exercises`,
+          syllabus: "in", repeats: ["2021-22-Q8a"], origin: "potential", ref: String.raw`Numerical companion to part (a); style of Holman heat-generation exercises`,
           text: String.raw`For $r_1 = 1$ cm, $r_2 = 2$ cm, $k = 25$ W/m·°C and $\dot q = 4\times10^7$ W/m³, the coolant inside is at 50°C with $h = 10{,}000$ W/m²·°C. Find the heat removed per metre, the inner-surface temperature and the maximum temperature.`,
           solution: String.raw`**Given:** $r_1 = 0.01$, $r_2 = 0.02$ m, $k = 25$ W/m·°C, $\dot q = 4\times10^7$ W/m³, $T_c = 50$°C, $h = 10^4$ W/m²·°C.
 

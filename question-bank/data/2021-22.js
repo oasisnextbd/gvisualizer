@@ -222,7 +222,7 @@ $C_w = 200/20 = 10$ kW/°C, $\varepsilon = 0.667$, $NTU = 1.099$, $A = 11.0$ m²
       parts: [
         { id: "2021-22-Q3a", label: "(a)", marks: "10",
           topic: "natural-convection", sub: "Grashof number and the onset of natural convection",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-natural-convection-P4a"],
           text: String.raw`Define Grashof number. Discuss the application of Grashof number in determining the occurrence of natural heating convection.`,
           solution: String.raw`**Definition**
 $$Gr_L = \frac{g\beta(T_w - T_\infty)L^3}{\nu^2}$$
@@ -242,7 +242,7 @@ $g$ is gravity, $\beta$ the volume expansion coefficient ($= 1/T$ in K for an id
           answer: String.raw`$Gr = g\beta\Delta TL^3/\nu^2$ (buoyancy/viscous). $Gr/Re^2$ shows whether natural convection matters, $Gr$ (or $Ra$) ≈ 10⁹ marks turbulence, and $Nu = C(GrPr)^n$ gives $h$.` },
         { id: "2021-22-Q3b", label: "(b)", marks: "5",
           topic: "natural-convection", sub: "Natural vs forced convection",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-natural-convection-P7a"],
           text: String.raw`Distinguish natural and forced convection heat transfer.`,
           solution: String.raw`| | Natural (free) convection | Forced convection |
 |---|---|---|
@@ -289,7 +289,7 @@ $$T_s = T_\infty + \frac{q''}{h} = 30 + \frac{800}{5.91} = 165\ \mathrm{°C}$$
       parts: [
         { id: "2021-22-Q4a", label: "(a)", marks: "15",
           topic: "boiling", sub: "Regimes of pool boiling (boiling curve)",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-boiling-P3a"],
           text: String.raw`Discuss the different regimes of boiling heat transfer.`,
           solution: String.raw`![Pool boiling curve with its regimes, the critical heat flux and the Leidenfrost point](fig/common-boiling-curve.svg)
 
@@ -378,7 +378,7 @@ Notes: per unit length, $R' = \ln(r_2/r_1)/(2\pi k)$ (m·K/W). Composite cylinde
           answer: String.raw`$q = 2\pi kL(T_1 - T_2)/\ln(r_2/r_1)$ → $R_{cyl} = \ln(r_2/r_1)/(2\pi kL)$, with a logarithmic temperature profile.` },
         { id: "2021-22-Q5b", label: "(b)", marks: "8",
           topic: "boundary-layer", sub: "Reynolds–Colburn analogy and its use",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-boundary-layer-P6"],
           text: String.raw`Explain the Reynolds Colburn analogy for laminar flow over a plate. How can it be used to calculate heat transfer coefficient?`,
           solution: String.raw`![Velocity and thermal boundary layers on a flat plate](fig/common-bl-flat-plate.svg)
 
@@ -498,7 +498,7 @@ Split: cylinder 645 W (79%), ends 172 W (21%).
       parts: [
         { id: "2021-22-Q7a", label: "(a)", marks: "20",
           topic: "forced-convection", sub: "Laminar tube flow, constant heat flux: Nu = 4.364",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-forced-convection-P5"],
           text: String.raw`Consider a tube-flow system under developed flow conditions where the flow remains laminar. The wall temperature is $T_w$, the radius of the tube is $r_0$, and the velocity at the center of the tube is $u_0$. If the temperature along the center of the tube is $T_c$, starting from the following temperature profile show that the Nusselt number is constant. State the necessary assumptions you made to derive the equation.
 $$T - T_c = \frac{1}{\alpha}\frac{\partial T}{\partial x}\frac{u_0r_0^2}{4}\left[\left(\frac{r}{r_0}\right)^2 - \frac{1}{4}\left(\frac{r}{r_0}\right)^4\right]$$`,
           solution: String.raw`**Assumptions**
@@ -561,7 +561,7 @@ $$q = 422 + 6000 = 6422\ \mathrm{W} \approx 6.4\ \mathrm{kW}$$
       parts: [
         { id: "2021-22-Q8a", label: "(a)", marks: "14+6",
           topic: "generation", sub: "Tube with generation, insulated outside, cooled inside",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-generation-P8a"],
           text: String.raw`Consider a long solid tube, insulated at the outer radius $r_2$ and cooled at the inner radius $r_1$, with uniform heat generation $\dot q$ (W/m³) within the solid.
 (i) Starting from the general energy equation (below), obtain the general solution for the temperature distribution in the tube.
 $$\frac{1}{r}\frac{d}{dr}\left(r\frac{dT}{dr}\right) + \frac{\dot q}{k} = 0$$

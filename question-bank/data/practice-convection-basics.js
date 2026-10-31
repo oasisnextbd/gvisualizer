@@ -168,7 +168,7 @@ $$T_b = \bar T = \frac{\displaystyle\int_0^{r_0}\rho\,2\pi r\,dr\,u\,c_p\,T}{\di
           answer: String.raw`$T_b = \int\rho u c_p T\,dA/\int\rho u c_p\,dA$, the flow-weighted (mixing-cup) temperature that carries the energy flow; $(T_1 + T_2)/2$ is only an approximate mean bulk value.` },
         { id: "practice-convection-basics-P4b", label: "(b)", marks: "", topic: "convection-basics",
           sub: "Bulk vs area-average temperature for given profiles", type: "numerical",
-          syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 05, pp. 36 and 38 (bulk-temperature integral applied to laminar profiles)`,
+          syllabus: "in", repeats: ["2011-12-Q8c", "2012-13-Q4a", "2017-18-Q5c", "2020-21-Q5a"], origin: "slides", ref: String.raw`Slides 05, pp. 36 and 38 (bulk-temperature integral applied to laminar profiles)`,
           text: String.raw`In laminar flow in a tube of radius $r_0$ the velocity is $u = u_0[1 - (r/r_0)^2]$, and at one section the temperature profile is approximately $T = T_w - (T_w - T_c)[1 - (r/r_0)^2]$ with $T_w = 90$°C and centre-line temperature $T_c = 50$°C. Find the bulk temperature and compare it with the area-average temperature and with $(T_w + T_c)/2$.`,
           solution: String.raw`**Given:** parabolic $u$ and parabolic $T$; $T_w = 90$°C, $T_c = 50$°C; constant $\rho$, $c_p$.
 
@@ -311,7 +311,7 @@ Gr is the ratio of buoyancy to viscous forces and plays the role that Re plays i
       parts: [
         { id: "practice-convection-basics-P8a", label: "(a)", marks: "8", topic: "convection-basics",
           sub: "Physical significance of Re, Nu, Pr, St, Gr", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Asked in finals like 2014-15 Q4(a), 2015-16 Q8(d), 2017-18 Q6(c), 2020-21 Q6(b)`,
+          syllabus: "in", repeats: ["2012-13-Q3b", "2014-15-Q4a", "2016-17-Q1f", "2016-17-Q7b", "2017-18-Q6c", "2020-21-Q2b", "2020-21-Q6b", "2023-24-Q3c"], origin: "potential", ref: String.raw`Asked in finals like 2014-15 Q4(a), 2015-16 Q8(d), 2017-18 Q6(c), 2020-21 Q6(b)`,
           text: String.raw`Define the Reynolds, Nusselt, Prandtl, Stanton and Grashof numbers and state the physical significance of each.`,
           solution: String.raw`| Group | Definition | Physical meaning |
 |---|---|---|
@@ -325,7 +325,7 @@ Typical Pr: liquid metals 0.004–0.03, gases about 0.7–1, water 1.7–13, oil
           answer: String.raw`Re: inertia/viscous; Nu: convection/conduction (dimensionless h); Pr: ν/α (momentum vs heat diffusion); St: Nu/(Re Pr) (heat transferred/heat capacity of flow); Gr: buoyancy/viscous.` },
         { id: "practice-convection-basics-P8b", label: "(b)", marks: "4", topic: "convection-basics",
           sub: "Nusselt vs Biot number", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Cousin of 2012-13 Q3(b)`,
+          syllabus: "in", repeats: ["2012-13-Q3b", "2014-15-Q4a", "2016-17-Q1f", "2016-17-Q7b", "2017-18-Q6c", "2020-21-Q2b", "2020-21-Q6b", "2023-24-Q3c"], origin: "potential", ref: String.raw`Cousin of 2012-13 Q3(b)`,
           text: String.raw`Both Nu and Bi have the form $hL/k$. Explain the difference.`,
           solution: String.raw`- **Nusselt** $\mathrm{Nu} = hL/k_{fluid}$: $k$ is the conductivity of the **fluid**. It compares convection with conduction inside the same fluid layer, and it is what correlations predict.
 - **Biot** $\mathrm{Bi} = hL/k_{solid}$: $k$ is the conductivity of the **solid**, and $h$ is the convection coefficient at its surface. It is the ratio of the internal (conduction) resistance of the solid, $L/k_s$, to the external convection resistance, $1/h$. Bi ≪ 1 (< 0.1) means the solid is nearly isothermal (lumped analysis).
@@ -334,7 +334,7 @@ Nu describes the fluid; Bi describes how the solid responds to that fluid.`,
           answer: String.raw`Nu uses $k$ of the fluid (convection vs conduction in the fluid); Bi uses $k$ of the solid (internal vs surface resistance of the body).` },
         { id: "practice-convection-basics-P8c", label: "(c)", marks: "3", topic: "convection-basics",
           sub: "What Nu ≈ 1 means", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Cousin of 2023-24 Q3(c)`,
+          syllabus: "in", repeats: ["2012-13-Q3b", "2014-15-Q4a", "2016-17-Q1f", "2016-17-Q7b", "2017-18-Q6c", "2020-21-Q2b", "2020-21-Q6b", "2023-24-Q3c"], origin: "potential", ref: String.raw`Cousin of 2023-24 Q3(c)`,
           text: String.raw`A measurement across a fluid layer gives Nu ≈ 1. What does this say about the heat-transfer mechanism?`,
           solution: String.raw`$\mathrm{Nu} = \dot q_{conv}/\dot q_{cond} = 1$ means the heat flux equals what pure conduction through a stagnant layer would give. Either the fluid is not moving (e.g. a fluid layer heated from above, or a slow, very viscous laminar flow) or the motion does not help. Any bulk fluid motion that carries energy raises Nu above 1.`,
           answer: String.raw`Nu ≈ 1 means the heat transfer is by conduction only: the fluid is effectively stagnant.` }

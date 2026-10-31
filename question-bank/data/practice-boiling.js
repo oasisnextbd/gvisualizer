@@ -85,7 +85,7 @@ $$(q/A)_{brass} = 3\times10^5\times10.17 = 3.05\times10^6\,\mathrm{Btu/h\,ft^2}\
       parts: [
         { id: "practice-boiling-P3a", label: "(a)", marks: "", topic: "boiling",
           sub: "Boiling curve and regimes I–VI", type: "sketch",
-          syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 08, pp. 52–63 (boiling curve, regions I–VI; asked in many finals, e.g. 2015-16 Q2a, 2021-22 Q4a, 2022-23 Q8a)`,
+          syllabus: "in", repeats: ["2013-14-Q3b", "2015-16-Q2a", "2017-18-Q3a", "2021-22-Q4a", "2022-23-Q8a"], origin: "slides", ref: String.raw`Slides 08, pp. 52–63 (boiling curve, regions I–VI; asked in many finals, e.g. 2015-16 Q2a, 2021-22 Q4a, 2022-23 Q8a)`,
           text: String.raw`Sketch the pool-boiling curve for water at 1 atm and describe each region (I to VI), giving typical excess temperatures.`,
           solution: String.raw`![Pool boiling curve for water at 1 atm with regimes I to VI and points A to E](fig/common-boiling-curve.svg)
 
@@ -102,7 +102,7 @@ $$(q/A)_{brass} = 3\times10^5\times10.17 = 3.05\times10^6\,\mathrm{Btu/h\,ft^2}\
           answer: String.raw`I free convection (to about 5°C); II–III nucleate (5–30°C, peak $\dot q_{max}$ at C); IV transition (falling flux, to the Leidenfrost minimum at about 120°C); V stable film; VI film plus radiation.` },
         { id: "practice-boiling-P3b", label: "(b)", marks: "", topic: "boiling",
           sub: "Burnout and hysteresis of an electrically heated wire", type: "theory",
-          syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 08, pp. 63–65 (points a and b, burnout; C to E jump, D on cooling)`,
+          syllabus: "in", repeats: ["2013-14-Q3b", "2015-16-Q2a", "2017-18-Q3a", "2021-22-Q4a", "2022-23-Q8a"], origin: "slides", ref: String.raw`Slides 08, pp. 63–65 (points a and b, burnout; C to E jump, D on cooling)`,
           text: String.raw`Explain why an electrically heated (heat-flux-controlled) wire "burns out" when the heat flux is raised just above the critical value, and what happens when the power is then reduced.`,
           solution: String.raw`![Heat-flux-controlled heater: burnout jump C → E and the return D → nucleate branch](fig/practice-boiling-P3b-sol.svg)
 
@@ -224,7 +224,7 @@ $$\dot q_{min} = 0.09\rho_vh_{fg}\left[\frac{\sigma g(\rho_l - \rho_v)}{(\rho_l 
       parts: [
         { id: "practice-boiling-P6a", label: "(a)", marks: "6", topic: "boiling",
           sub: "Critical heat flux: what affects it", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of finals 2016-17 Q1(b), 2020-21 Q4(a); Slides 08, pp. 70–71`,
+          syllabus: "in", repeats: ["2012-13-Q7b", "2016-17-Q1b", "2016-17-Q1g", "2020-21-Q4a", "2020-21-Q4b"], origin: "potential", ref: String.raw`Style of finals 2016-17 Q1(b), 2020-21 Q4(a); Slides 08, pp. 70–71`,
           text: String.raw`What is the critical heat flux? On what does it depend, and on what does it not depend? Why is it of prime engineering importance?`,
           solution: String.raw`**Definition:** the maximum heat flux attainable in nucleate pool boiling (point C on the boiling curve). Beyond it, vapour leaves the surface so fast that it blankets it and blocks the liquid supply.
 
@@ -243,7 +243,7 @@ $$\dot q_{max} = C_{cr}h_{fg}[\sigma g\rho_v^2(\rho_l - \rho_v)]^{1/4}\quad(\tex
           answer: String.raw`CHF is the nucleate-boiling peak. It scales with $h_{fg}[\sigma g\rho_v^2(\rho_l - \rho_v)]^{1/4}$, peaks at about $P_{cr}/3$, and depends on heater geometry ($C_{cr}$) but not on $C_{sf}$, $\mu$, k or $c_p$. Exceeding it causes burnout in flux-controlled heaters.` },
         { id: "practice-boiling-P6b", label: "(b)", marks: "4", topic: "boiling",
           sub: "Why only ¾ of the radiation is added in film boiling", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of finals 2016-17 Q1(g), 2020-21 Q4(b); Slides 08, p. 73`,
+          syllabus: "in", repeats: ["2012-13-Q7b", "2016-17-Q1b", "2016-17-Q1g", "2020-21-Q4a", "2020-21-Q4b"], origin: "potential", ref: String.raw`Style of finals 2016-17 Q1(g), 2020-21 Q4(b); Slides 08, p. 73`,
           text: String.raw`In film boiling, the total heat flux is taken as $\dot q_{total} = \dot q_{film} + \tfrac{3}{4}\dot q_{rad}$. Explain why the radiation flux is not simply added, and when radiation must be included.`,
           solution: String.raw`- Conduction and convection across the vapour film ($\dot q_{film}$) and radiation from the hot wall to the liquid ($\dot q_{rad} = \varepsilon\sigma(T_s^4 - T_{sat}^4)$) act in parallel, but they are **not independent**.
 - Radiation absorbed at the liquid interface produces more vapour, which **thickens the film**. A thicker film lowers the conduction term. Simply adding the two would overestimate the total.
@@ -252,7 +252,7 @@ $$\dot q_{max} = C_{cr}h_{fg}[\sigma g\rho_v^2(\rho_l - \rho_v)]^{1/4}\quad(\tex
           answer: String.raw`Radiation thickens the vapour film and so reduces the film-conduction term; the net effect is about $\tfrac{3}{4}\dot q_{rad}$ (for $\dot q_{rad} < \dot q_{film}$). It matters above about 300°C and for high emissivity.` },
         { id: "practice-boiling-P6c", label: "(c)", marks: "6", topic: "boiling",
           sub: "Flow boiling regimes in a heated tube", type: "sketch",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of final 2023-24 Q1(b) (flow vs pool boiling); Slides 08, pp. 82–88`,
+          syllabus: "in", repeats: ["2012-13-Q7b", "2016-17-Q1b", "2016-17-Q1g", "2020-21-Q4a", "2020-21-Q4b"], origin: "potential", ref: String.raw`Style of final 2023-24 Q1(b) (flow vs pool boiling); Slides 08, pp. 82–88`,
           text: String.raw`Sketch the flow regimes, and the variation of the heat-transfer coefficient, along a uniformly heated vertical tube in which a subcooled liquid enters and superheated vapour leaves. How does external flow boiling differ from pool boiling?`,
           solution: String.raw`![Flow regimes along a heated vertical tube and the variation of h](fig/practice-boiling-P6c-sol.svg)
 
@@ -270,7 +270,7 @@ $$\dot q_{max} = C_{cr}h_{fg}[\sigma g\rho_v^2(\rho_l - \rho_v)]^{1/4}\quad(\tex
           answer: String.raw`Liquid, then bubbly, slug, annular (h maximum), transition or dry-out (h falls), mist, and vapour. Forced flow raises both the nucleate flux and CHF compared with pool boiling.` },
         { id: "practice-boiling-P6d", label: "(d)", marks: "4", topic: "boiling",
           sub: "Pool vs flow, subcooled vs saturated boiling", type: "theory",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of final 2012-13 Q7(b); Slides 08, pp. 47–51`,
+          syllabus: "in", repeats: ["2012-13-Q7b", "2016-17-Q1b", "2016-17-Q1g", "2020-21-Q4a", "2020-21-Q4b"], origin: "potential", ref: String.raw`Style of final 2012-13 Q7(b); Slides 08, pp. 47–51`,
           text: String.raw`Distinguish between (i) boiling and evaporation, (ii) pool and flow boiling, and (iii) subcooled and saturated boiling.`,
           solution: String.raw`- **Evaporation vs boiling:** evaporation occurs at a liquid–vapour interface when the vapour pressure is below the saturation pressure of the liquid; no bubbles form. Boiling occurs at a **solid–liquid** interface heated sufficiently above $T_{sat}$, with bubbles forming at the surface.
 - **Pool vs flow boiling:** in pool boiling the liquid is stagnant, and motion comes only from natural convection and the rise of bubbles (for example a kettle). In flow (forced-convection) boiling a pump or external flow moves the liquid over or through the heated surface (for example boiler tubes).

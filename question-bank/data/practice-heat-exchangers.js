@@ -8,7 +8,7 @@ QB.paper({ year: "Practice", set: "Heat exchangers: LMTD, double pipe", date: ""
       parts: [
         { id: "practice-heat-exchangers-P1a", label: "(a)", marks: "", topic: "heat-exchangers",
           sub: "LMTD derivation (parallel flow)", type: "derivation",
-          syllabus: "in", repeats: ["2017-18-Q2b", "2020-21-Q3a", "2013-14-Q4b"], origin: "slides",
+          syllabus: "in", repeats: ["2013-14-Q4b", "2017-18-Q2b", "2020-21-Q3a"], origin: "slides",
           ref: String.raw`Slides HX Part 1, file 1 pp. 46–51 (LMTD derivation, parallel flow)`,
           text: String.raw`For a double-pipe heat exchanger in parallel flow, show that the heat transfer rate is $q = UA\,\Delta T_m$, where $\Delta T_m$ is the log mean temperature difference
 $$\Delta T_m=\frac{(T_{h2}-T_{c2})-(T_{h1}-T_{c1})}{\ln[(T_{h2}-T_{c2})/(T_{h1}-T_{c1})]}$$
@@ -51,7 +51,7 @@ with $\Delta t_1$ and $\Delta t_2$ the hot-minus-cold differences at the two end
 
         { id: "practice-heat-exchangers-P1b", label: "(b)", marks: "", topic: "heat-exchangers",
           sub: "Assumptions behind the LMTD", type: "theory",
-          syllabus: "in", repeats: [], origin: "slides",
+          syllabus: "in", repeats: ["2013-14-Q4b", "2017-18-Q2b", "2020-21-Q3a"], origin: "slides",
           ref: String.raw`Slides HX Part 1, file 1 p. 51; file 2 p. 50`,
           text: String.raw`List the assumptions made in deriving the LMTD. Which of them is usually the most serious in practice, and why?`,
           solution: String.raw`Assumptions (slides):
@@ -178,7 +178,7 @@ $$A = \frac{q}{U F\,\Delta T_m} = \frac{1.895\times10^5}{320(0.81)(37.44)} = 19.
       parts: [
         { id: "practice-heat-exchangers-P4a", label: "(a)", marks: "", topic: "heat-exchangers",
           sub: "Overall U based on inside and outside areas; h_io", type: "derivation",
-          syllabus: "in", repeats: [], origin: "slides",
+          syllabus: "in", repeats: ["2018-19-Q8b"], origin: "slides",
           ref: String.raw`Slides HX Part 1, file 2 pp. 13–17 (resistances, U_i, U_o, h_io, fouling)`,
           text: String.raw`For the inner pipe of a double-pipe exchanger (inside radius $r_i$, outside radius $r_o$, wall conductivity $k$, length $L$), write the thermal resistances in series and obtain $U_i$ and $U_o$. Explain why Kern uses $h_{io} = h_i\,(ID/OD)$ and $U = h_{io}h_o/(h_{io}+h_o)$, and how fouling is added.`,
           solution: String.raw`![Inner pipe cross-section and the series resistance circuit](fig/practice-heat-exchangers-P4a-sol.svg)
@@ -206,7 +206,7 @@ $U_D$ (design or dirty coefficient) is used to size the area, so the exchanger s
 
         { id: "practice-heat-exchangers-P4b", label: "(b)", marks: "", topic: "heat-exchangers",
           sub: "Clean and dirty U for a 1¼ in IPS inner pipe", type: "numerical",
-          syllabus: "in", repeats: [], origin: "slides",
+          syllabus: "in", repeats: ["2018-19-Q8b"], origin: "slides",
           ref: String.raw`Variation with fresh numbers of slides HX Part 1, file 2 pp. 13–17`,
           text: String.raw`The inner pipe of a double-pipe exchanger is 1¼ in IPS schedule 40 steel (OD 1.66 in, ID 1.38 in, $k = 26$ Btu/h·ft·°F). The film coefficients are $h_i = 250$ (based on the inside surface) and $h_o = 180$ Btu/h·ft²·°F. A fouling factor of 0.001 h·ft²·°F/Btu is to be provided for each stream. Find (i) $h_{io}$, (ii) the clean coefficient $U_C$ by Kern's method and with the wall resistance included, (iii) the design coefficient $U_D$, and (iv) the percentage loss of $U$ due to fouling.`,
           solution: String.raw`**Given:** $D_o = 1.66/12 = 0.1383$ ft, $D_i = 1.38/12 = 0.1150$ ft; $h_i = 250$, $h_o = 180$; $R_{di} = R_{do} = 0.001$.
@@ -355,7 +355,7 @@ slightly more than the 0.002 required.
 
         { id: "practice-heat-exchangers-P6b", label: "(b)", marks: "", topic: "heat-exchangers",
           sub: "Double pipe pressure drops (annulus and pipe)", type: "numerical",
-          syllabus: "in", repeats: [], origin: "slides",
+          syllabus: "in", repeats: ["2018-19-Q2"], origin: "slides",
           ref: String.raw`Slides HX Part 1, file 2 pp. 45–48 (Kern Ex. 6.1, pressure drop)`,
           text: String.raw`Calculate the pressure drop of each stream in the three-hairpin exchanger and check it against the allowable 10 psi. Use $f = 0.0035 + 0.264/(DG/\mu)^{0.42}$ and $\Delta F = 4fG^2L/(2g\rho^2D)$ with $g = 4.18\times10^8$ ft/h², and one velocity head per hairpin for the annulus entrance and exit losses.`,
           solution: String.raw`**Given:** total length $L = 120$ ft; $\rho = 62.5s$: toluene $0.87(62.5) = 54.3$ lb/ft³, benzene $0.88(62.5) = 55.0$ lb/ft³.
@@ -474,7 +474,7 @@ $$Re'_a = \frac{0.0573(4.40\times10^5)}{2.90} = 8690,\qquad f = 0.0035 + \frac{0
       parts: [
         { id: "practice-heat-exchangers-P8", label: "", marks: "", topic: "heat-exchangers",
           sub: "Temperature profiles: sensible and phase-change cases", type: "sketch",
-          syllabus: "in", repeats: [], origin: "slides",
+          syllabus: "in", repeats: ["2011-12-Q3c", "2014-15-Q5d", "2016-17-Q3b"], origin: "slides",
           ref: String.raw`Slides HX Part 1, file 1 pp. 42–45 (temperature profiles)`,
           text: String.raw`Sketch the temperature profiles (temperature vs. length or area) in a heat exchanger for: (i) parallel flow; (ii) counterflow, without phase change; (iii) a condensing vapour heating a liquid; (iv) a hot liquid boiling a liquid; (v) both fluids changing phase (condensing against evaporating); (vi) a superheated vapour that is desuperheated, condensed and subcooled while heating a cold liquid in counterflow. State what each profile means for the LMTD.`,
           solution: String.raw`![Temperature profiles for the six cases](fig/practice-heat-exchangers-P8-sol.svg)

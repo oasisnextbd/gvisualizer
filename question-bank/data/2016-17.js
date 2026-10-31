@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2016-17-Q1a", label: "(a)", marks: "9",
           topic: "shell-tube", sub: "TEMA component naming",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-shell-tube-P5a"],
           text: String.raw`Identify the following labeled sections of a shell and tube heat exchanger from Figure 1(a).
 
 ![Figure 1(a): TEMA type AES shell-and-tube exchanger with numbered parts](fig/2016-17-Q1a.svg)`,
@@ -33,7 +33,7 @@ QB.paper({
           answer: String.raw`TEMA AES exchanger: 1 channel, 3 channel flange, 4 channel cover, 5 channel nozzle, 6 stationary tubesheet, 7 tubes, 8 shell, 9 shell cover, 10/11 shell flanges, 12 shell nozzle, 13 shell cover flange, 15 floating tubesheet, 16 floating head cover, 17 its flange, 18 backing device, 27 tie rods, 28 baffles, 29 impingement plate, 31 pass partition, 32 vent, 33 drain, 34 instrument connection, 35 saddle, 36 lifting lug.` },
         { id: "2016-17-Q1b", label: "(b)", marks: "6",
           topic: "boiling", sub: "Critical heat flux",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-boiling-P6a"],
           text: String.raw`What is the critical heat flux of a pool boiling curve? List the factors that can influence the critical heat flux.`,
           solution: String.raw`**Critical (maximum, burnout) heat flux** $\dot q_{max}$ is the peak of the pool boiling curve, reached at the end of the nucleate boiling regime (end of region III, point C or "a"). Beyond it bubbles form so fast that they merge into a vapour blanket that insulates the surface, so any further rise in $\Delta T_{excess}$ *lowers* the heat flux (transition boiling). For a heat-flux-controlled heater (electric element, nuclear rod), exceeding $\dot q_{max}$ even slightly makes the surface jump to the film boiling curve at a very high temperature (point E), which usually melts it: **burnout**. For water at 1 atm, $\dot q_{max} \approx 1.1$–$1.3\,\mathrm{MW/m^2}$ at $\Delta T_{excess} \approx 30^\circ\mathrm{C}$.
 
@@ -79,7 +79,7 @@ $$D_e = \frac{4(2.6875 - 1.5708)}{\tfrac{1}{2}\pi(2)} = \frac{4.467}{3.1416} = 1
           answer: String.raw`$P_T = 2.5$ in, $D_e \approx 1.42$ in ($0.118$ ft).` },
         { id: "2016-17-Q1d", label: "(d)", marks: "6",
           topic: "forced-convection", sub: "Velocity-profile distortion on heating/cooling",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-forced-convection-P12a"],
           text: String.raw`How does the velocity profile of a fluid deviate from the isothermal condition during cooling and heating? Show the typical velocity profiles for liquid and gas for these conditions.`,
           solution: String.raw`With a large wall-to-fluid temperature difference, the viscosity near the wall differs from that in the core, so the laminar profile is no longer the isothermal parabola.
 
@@ -125,7 +125,7 @@ They are related by $R_{th} = R/A$. Example: 10 cm of insulation with $k = 0.04$
           answer: String.raw`$R_{th} = \Delta x/(kA)$ (°C/W) is the resistance of the whole wall; the R-value $= \Delta x/k$ (°C·m²/W) is the resistance per unit area used to rate insulation. $R_{th} = R/A$.` },
         { id: "2016-17-Q1f", label: "(f)", marks: "6",
           topic: "convection-basics", sub: "Nusselt number as dimensionless h",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-convection-basics-P8a"],
           text: String.raw`"Nusselt number is also considered as dimensionless heat transfer coefficient" – explain.`,
           solution: String.raw`1. At the wall the fluid is at rest, so the heat leaves by conduction into the fluid and is carried away by convection:
 $$q'' = -k\left.\frac{\partial T}{\partial y}\right|_{y=0} = h\,(T_w - T_\infty)\quad\Rightarrow\quad h = \frac{-k\,(\partial T/\partial y)_{0}}{T_w - T_\infty}$$
@@ -142,7 +142,7 @@ It is the factor by which fluid motion increases heat transfer over pure conduct
           answer: String.raw`$\mathrm{Nu} = hL/k = (\partial\theta^*/\partial y^*)_{wall}$, i.e. $h$ made dimensionless by $k/L$. It equals convective flux ÷ conductive flux across the same layer, and Nu = 1 means pure conduction.` },
         { id: "2016-17-Q1g", label: "(g)", marks: "6",
           topic: "boiling", sub: "Film boiling: why ¾ of radiation",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-boiling-P6a"],
           text: String.raw`Why does total heat transfer during film boiling consider only 75% of radiation heat transfer? Explain the reason for not considering total radiation heat transfer.`,
           solution: String.raw`In stable film boiling the surface is covered by a continuous vapour film. Heat crosses the film by (1) conduction/convection through the vapour and (2) radiation from the hot surface (above about 300°C) straight to the liquid.
 
@@ -165,7 +165,7 @@ So the factor ¾ is not "75% of the radiation is lost". It is the net gain left 
       parts: [
         { id: "2016-17-Q2a", label: "(a)", marks: "13",
           topic: "natural-convection", sub: "Velocity/temperature profiles, Gr, Pr, Ra",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-natural-convection-P4a"],
           text: String.raw`With the help of schematics show the typical velocity and temperature profiles for a natural convection system where the vertical plate is (i) hotter and (ii) cooler than the ambient temperature. How do they differ from the forced convection system? Also explain the important dimensionless numbers involved in natural convection process.`,
           solution: String.raw`### (i) Hot vertical plate ($T_w > T_\infty$)
 - Fluid next to the plate is heated, becomes lighter and rises. The boundary layer starts at the **bottom** (leading edge) and thickens **upward**.
@@ -267,7 +267,7 @@ At 30 cm/s, natural convection dominates.
           answer: String.raw`A pack of gasketed corrugated plates is clamped in a frame. Corner ports and gaskets send the hot and cold streams through alternate channels (usually counterflow), and the corrugations give high turbulence and high U. The unit is compact and easy to clean, but limited in pressure and temperature by the gaskets.` },
         { id: "2016-17-Q3b", label: "(b)", marks: "6",
           topic: "heat-exchangers", sub: "Temperature profiles with phase change",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-heat-exchangers-P8"],
           text: String.raw`Draw the temperature profiles of the hot and cold streams for the following situations:
 
 (i) cold fluid is evaporating and hot fluid is saturated steam
@@ -500,7 +500,7 @@ The outer surface is at $T_2 = T_1 - \dot Q R_{glass} = -4.5^\circ$C.
       parts: [
         { id: "2016-17-Q6a", label: "(a)", marks: "5+10",
           topic: "insulation", sub: "Critical radius of insulation (cylinder)",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-insulation-P1"],
           text: String.raw`What is the significance of "critical thickness of insulation"? Derive the equation for critical thickness of insulation for a cylindrical pipe.`,
           solution: String.raw`### Significance
 Adding insulation to a small pipe or wire does two opposite things:
@@ -594,7 +594,7 @@ $$\dot Q_{rad} = 0.95 \times 5.67\times10^{-8} \times 1.4 \times (303^4 - 298^4)
       parts: [
         { id: "2016-17-Q7a", label: "(a)", marks: "5",
           topic: "forced-convection", sub: "Dittus–Boelter equation and range",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-forced-convection-P12a"],
           text: String.raw`Write down Dittus–Boelter equation with its applicability ranges.`,
           solution: String.raw`$$\mathrm{Nu}_d = \frac{hd}{k} = 0.023\,\mathrm{Re}_d^{0.8}\,\mathrm{Pr}^{\,n},\qquad n = \begin{cases}0.4 & \text{heating of the fluid } (T_w > T_b)\\ 0.3 & \text{cooling of the fluid } (T_w < T_b)\end{cases}$$
 
@@ -610,7 +610,7 @@ It is not valid for liquid metals (Pr ≪ 1), laminar or transitional flow, or r
           answer: String.raw`$\mathrm{Nu} = 0.023\,\mathrm{Re}^{0.8}\mathrm{Pr}^n$ ($n = 0.4$ heating, 0.3 cooling), for smooth tubes with Re > 10⁴, 0.6 < Pr < 100, L/d > 10, moderate ΔT, and properties at bulk temperature.` },
         { id: "2016-17-Q7b", label: "(b)", marks: "8",
           topic: "convection-basics", sub: "Nusselt and Prandtl numbers",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-convection-basics-P8a"],
           text: String.raw`Define Nusselt number and Prandtl number. Explain their physical significance.`,
           solution: String.raw`**Nusselt number**
 $$\mathrm{Nu} = \frac{hL_c}{k} = \frac{h\,\Delta T}{k\,\Delta T/L_c} = \frac{\text{convective heat flux}}{\text{conductive heat flux across the same fluid layer}}$$
@@ -648,7 +648,7 @@ $$\mathrm{Pr} = \frac{\nu}{\alpha} = \frac{c_p\mu}{k}$$
           answer: String.raw`Agree. The free-electron conduction gives liquid metals a very high k, so α ≫ ν and Pr ≈ 0.004–0.03, versus ≈ 0.7 for gases (where ν ≈ α). Their thermal BL is far thicker than the velocity BL.` },
         { id: "2016-17-Q7d", label: "(d)", marks: "14",
           topic: "boundary-layer", sub: "Laminar δ on a flat plate",
-          type: "numerical", syllabus: "in", repeats: ["2015-16-Q7b", "2017-18-Q7b"],
+          type: "numerical", syllabus: "in", repeats: ["2015-16-Q7b", "2017-18-Q7b", "practice-boundary-layer-P2a"],
           text: String.raw`Atmospheric air at 300 K flows over a flat plate at a speed of 2 m/s. If the viscosity of air at 300 K is 1.85 × 10⁻⁵ kg/m·s, calculate the boundary layer thickness at distances of 20 cm and 40 cm from the leading edge of the plate.`,
           solution: String.raw`**Given:** air at 1 atm and 300 K, $u_\infty = 2$ m/s, $\mu = 1.85\times10^{-5}$ kg/m·s; $x = 0.2$ and $0.4$ m.
 
@@ -680,7 +680,7 @@ $$\delta_{0.4} = \frac{4.64 \times 0.4}{\sqrt{50{,}890}} = 8.23\times10^{-3}\ \m
       parts: [
         { id: "2016-17-Q8a", label: "(a)", marks: "18",
           topic: "boundary-layer", sub: "Reynolds–Colburn analogy derivation",
-          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2015-16-Q8a", "2017-18-Q8a", "2020-21-Q7a", "2022-23-Q3a"],
+          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2015-16-Q8a", "2017-18-Q8a", "2020-21-Q7a", "2022-23-Q3a", "practice-boundary-layer-P6"],
           text: String.raw`Consider a fluid flowing past a rough flat plate where the friction coefficient is $C_f$. The velocity distribution and the laminar boundary layer thickness for the fluid can be expressed by the following equations respectively
 
 $$\frac{u}{u_\infty} = \frac{3}{2}\frac{y}{\delta} - \frac{1}{2}\left(\frac{y}{\delta}\right)^3,\qquad \delta = 4.64\sqrt{\frac{\nu x}{u_\infty}}$$
@@ -733,7 +733,7 @@ The same relation holds for average values: $\overline{\mathrm{St}}\,\mathrm{Pr}
           answer: String.raw`$C_{fx}/2 = 0.323\,\mathrm{Re}_x^{-1/2}$ (Blasius 0.332); $\delta_t/\delta = \mathrm{Pr}^{-1/3}/1.026$; $\mathrm{Nu}_x = 0.332\,\mathrm{Re}_x^{1/2}\mathrm{Pr}^{1/3}$, so $\mathrm{St}_x\mathrm{Pr}^{2/3} = 0.332\,\mathrm{Re}_x^{-1/2} = C_{fx}/2$.` },
         { id: "2016-17-Q8b", label: "(b)", marks: "17",
           topic: "forced-convection", sub: "Turbulent tube flow, constant heat flux (Dittus–Boelter)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-forced-convection-P1a"],
           text: String.raw`Air at 2 atm and 473 K is heated as it flows through a tube with a diameter of 1 inch at a velocity of 10 m/s. Calculate the heat transfer per unit length of tube if a constant-heat-flux condition is maintained at the wall and the wall temperature is 20°C above the air temperature, all along the length of the tube. You can use the following correlation,
 
 $$\mathrm{Nu} = 0.023\,\mathrm{Re}^{0.8}\,\mathrm{Pr}^{0.4}$$

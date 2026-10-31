@@ -47,7 +47,7 @@ $$\Delta t = F_T\,\mathrm{LMTD} = 0.808(37.9) = 30.6^\circ\mathrm{F}$$
           answer: String.raw`LMTD = 37.9 °F; with R = 2.73, S = 0.268, $F_T$ = 0.81 → Δt = 30.6 °F.` },
         { id: "2015-16-Q1b", label: "(b)", marks: "3",
           topic: "shell-tube", sub: "Which fluid in the tubes",
-          type: "theory", syllabus: "in", repeats: ["2012-13-Q5a"],
+          type: "theory", syllabus: "in", repeats: ["2012-13-Q5a", "practice-shell-tube-P6a"],
           text: String.raw`Which liquid would you place in the tube side and why?`,
           solution: String.raw`**Well water in the tubes, phosphate solution in the shell.**
 - Well (raw) water is the fouling, scale-forming stream; deposits inside straight tubes are easily removed mechanically, whereas the shell side is hard to clean.
@@ -161,7 +161,7 @@ The dirt factor exceeds the requirement and both pressure drops are within 10 ps
       parts: [
         { id: "2015-16-Q2a", label: "(a)", marks: "15",
           topic: "boiling", sub: "Leidenfrost point; pool boiling curve",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-boiling-P3a"],
           text: String.raw`What is the Leidenfrost point? With the help of a neat sketch of the pool boiling curve, discuss the main regimes of the curve.`,
           solution: String.raw`**Leidenfrost point:** the point of **minimum heat flux** $q_{min}$ on the boiling curve (water at 1 atm: $\Delta T_e \approx 120^\circ$C), where a stable vapour film first covers the whole surface. Beyond it the liquid no longer wets the surface (e.g. water droplets "dance" on a very hot pan, floating on their own vapour).
 
@@ -209,7 +209,7 @@ $\Rightarrow \Delta T_e = 19.3^\circ$C
       parts: [
         { id: "2015-16-Q3a", label: "(a)", marks: "15",
           topic: "condensation", sub: "Steam condenser, 3 × 4 horizontal tube bank",
-          type: "numerical", syllabus: "in", repeats: ["2022-23-Q7d"],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q7d", "practice-condensation-P2a"],
           text: String.raw`The condenser of a steam power plant operates at a pressure of 7.38 kPa. Steam at this pressure condenses on the outer surfaces of 12 horizontal tubes (arranged in a rectangular array of 3 tubes high and 4 tubes wide) through which cooling water circulates. The outer diameter of the pipes is 3 cm, and the outer surfaces of the pipes are maintained at 30°C. Determine (a) the rate of heat transfer to the cooling water circulating in the pipes and (b) the rate of condensation of steam per unit length of a horizontal pipe.
 
 The properties of water at the saturation temperature of 40°C corresponding to 7.38 kPa are $h_{fg} = 2407\times10^3$ J/kg and $\rho_v = 0.05\,\mathrm{kg/m^3}$.`,
@@ -290,7 +290,7 @@ $$D_e = \frac{4\left(\dfrac12P_T\times0.86P_T - \dfrac12\dfrac{\pi d_o^2}{4}\rig
           answer: String.raw`$P_T = 1$ in: square $D_e = 0.95$ in; triangular $D_e = 0.71$ in (Kern table 0.73).` },
         { id: "2015-16-Q4c", label: "(c)", marks: "6",
           topic: "shell-tube", sub: "Factors for shell-side vs tube-side fluid",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-shell-tube-P6a"],
           text: String.raw`List some factors that should be considered during the selection of fluid for the shell side and the tube side.`,
           solution: String.raw`Put in the **tubes**:
 - **Corrosive** fluid – only tubes, tube sheets and channels need expensive alloy.
@@ -362,7 +362,7 @@ $$\frac{\partial^2T}{\partial x^2} + \frac{\partial^2T}{\partial y^2} + \frac{\p
           answer: String.raw`$\nabla\cdot(k\nabla T) + \dot q = \rho c\,\partial T/\partial t$; constant k: $\nabla^2T + \dot q/k = (1/\alpha)\partial T/\partial t$.` },
         { id: "2015-16-Q5b", label: "(b)", marks: "16",
           topic: "conduction", sub: "Hollow sphere – heat flow",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-conduction-P8a"],
           text: String.raw`Derive an expression for the heat flow from a hollow sphere. The inside and outside surfaces of the hollow sphere are maintained at $T_i$ and $T_o$ temperatures respectively.`,
           solution: String.raw`**Assumptions:** steady state, radial (1-D) conduction only, constant k, no heat generation; inner radius $r_i$ at $T_i$, outer radius $r_o$ at $T_o$.
 
@@ -403,7 +403,7 @@ Q is independent of r (steady, no generation) though the flux $Q/(4\pi r^2)$ fal
       parts: [
         { id: "2015-16-Q6a", label: "(a)", marks: "5+8",
           topic: "insulation", sub: "Critical insulation thickness – cylinder",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-insulation-P1"],
           text: String.raw`Discuss the phenomenon called "critical insulation thickness". Derive the equation for the critical insulation thickness for a pipe.`,
           solution: String.raw`**Phenomenon:** adding insulation of outer radius r to a pipe of radius $r_1$ adds conduction resistance $\ln(r/r_1)/(2\pi kL)$, but at the same time enlarges the outer surface, which *reduces* the convection resistance $1/(2\pi rLh)$. For small pipes (or poor h, i.e. low-h surroundings) the second effect wins at first: heat loss **increases** with insulation up to a maximum at $r = r_c$, then decreases. Insulation reduces heat loss only if $r_1 \ge r_c$ or if enough is added to go well beyond $r_c$. Electric wires use this to dissipate more heat through thin insulation.
 
@@ -420,7 +420,7 @@ $$\frac{dR_{tot}}{dr} = \frac{1}{2\pi kL}\frac{1}{r} - \frac{1}{2\pi Lh}\frac{1}
           answer: String.raw`$r_c = k/h$ (cylinder); below $r_c$, insulation increases heat loss.` },
         { id: "2015-16-Q6b", label: "(b)", marks: "22",
           topic: "conduction", sub: "Insulated steam pipe – resistance network",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-conduction-P4"],
           text: String.raw`Steam at 320°C flows in a cast iron pipe (k = 80 W/m·°C) whose inner and outer diameters are 5 cm and 5.5 cm, respectively. The pipe is covered with 3-cm-thick glass wool insulation with k = 0.05 W/m·°C. Heat is lost to the surroundings at 5°C by natural convection and radiation, with a combined heat transfer coefficient of $18\,\mathrm{W/m^2\,^\circ C}$. Taking the heat transfer coefficient inside the pipe to be $60\,\mathrm{W/m^2\,^\circ C}$, determine the rate of heat loss from the steam per unit length of the pipe. Also determine the temperature drops across the pipe shell and the insulation.`,
           solution: String.raw`**Given:** $r_1 = 0.025$ m, $r_2 = 0.0275$ m, $r_3 = r_2 + 0.03 = 0.0575$ m; $k_p = 80$, $k_{ins} = 0.05$ W/m·°C; $h_i = 60$, $h_o = 18\,\mathrm{W/m^2\,^\circ C}$; $T_{\infty1} = 320^\circ$C, $T_{\infty2} = 5^\circ$C; L = 1 m.
 
@@ -450,7 +450,7 @@ $$\frac{dR_{tot}}{dr} = \frac{1}{2\pi kL}\frac{1}{r} - \frac{1}{2\pi Lh}\frac{1}
       parts: [
         { id: "2015-16-Q7a", label: "(a)", marks: "22",
           topic: "boundary-layer", sub: "Integral method: δ = 4.64√(νx/u∞)",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-boundary-layer-P1"],
           text: String.raw`An incompressible fluid is flowing past a smooth flat plate. Starting from the continuity and momentum equations for the system, show that the approximate thickness of the boundary layer is given by
 $$\delta = 4.64\sqrt{\frac{\nu x}{u_\infty}}$$
 The notations have their usual meanings. Notes for Q.7(a), for incompressible flow past a smooth flat plate:
@@ -489,7 +489,7 @@ i.e. $\delta/x = 4.64/\sqrt{\mathrm{Re}_x}$ (exact Blasius: 5.0). The energy equ
           answer: String.raw`Integral momentum eq. + cubic profile → $\delta\,d\delta = (140/13)(\nu/u_\infty)dx$ → $\delta = 4.64\sqrt{\nu x/u_\infty}$.` },
         { id: "2015-16-Q7b", label: "(b)", marks: "13",
           topic: "boundary-layer", sub: "Air at 2 m/s – δ at 20 and 40 cm",
-          type: "numerical", syllabus: "in", repeats: ["2016-17-Q7d", "2017-18-Q7b"],
+          type: "numerical", syllabus: "in", repeats: ["2016-17-Q7d", "2017-18-Q7b", "practice-boundary-layer-P2a"],
           text: String.raw`Atmospheric air at 300 K flows over a flat plate at a speed of 2 m/s. If the viscosity of air at 300 K is $1.85\times10^{-5}$ kg/m·s, calculate the boundary layer thickness at distances of 20 cm and 40 cm from the leading edge of the plate.`,
           solution: String.raw`**Given:** air, p = 1 atm = 101 325 Pa, T = 300 K, $u_\infty = 2$ m/s, $\mu = 1.85\times10^{-5}$ kg/m·s; x = 0.2 and 0.4 m.
 
@@ -512,7 +512,7 @@ $$\delta = \frac{4.64(0.4)}{\sqrt{50\,890}} = 8.23\times10^{-3}\,\mathrm{m} = 8.
       parts: [
         { id: "2015-16-Q8a", label: "(a)", marks: "11",
           topic: "boundary-layer", sub: "Reynolds–Colburn analogy",
-          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2016-17-Q8a", "2017-18-Q8a", "2020-21-Q7a", "2022-23-Q3a"],
+          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2016-17-Q8a", "2017-18-Q8a", "2020-21-Q7a", "2022-23-Q3a", "practice-boundary-layer-P6"],
           text: String.raw`Derive the relation known as the Reynolds–Colburn analogy. Write a few words on its applicability.`,
           solution: String.raw`**Assumptions:** laminar flow over a flat plate, constant properties, $dp/dx = 0$, negligible viscous dissipation.
 
@@ -537,7 +537,7 @@ This is the **Reynolds–Colburn analogy**. Since both sides vary as $x^{-1/2}$,
           answer: String.raw`$\mathrm{St}\,\mathrm{Pr}^{2/3} = C_f/2$ (= $f/8$ in tubes), valid for 0.6 < Pr < 60 with no form drag; Pr = 1 → St = $C_f/2$.` },
         { id: "2015-16-Q8b", label: "(b)", marks: "11",
           topic: "forced-convection", sub: "Dittus–Boelter: range and modifications",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-forced-convection-P12a"],
           text: String.raw`Write the equation known as the Dittus–Boelter equation. Write its applicability ranges. Write a few modifications of this equation as suggested by different researchers.`,
           solution: String.raw`**Dittus–Boelter (fully developed turbulent flow in smooth tubes):**
 $$\mathrm{Nu}_d = 0.023\,\mathrm{Re}_d^{0.8}\mathrm{Pr}^n, \qquad n = 0.4 \text{ (fluid heated)}, \; n = 0.3 \text{ (fluid cooled)}$$
@@ -559,7 +559,7 @@ Properties at the mean bulk temperature.
           answer: String.raw`$\mathrm{Nu} = 0.023\mathrm{Re}^{0.8}\mathrm{Pr}^n$ (n = 0.4 heating, 0.3 cooling), Re > $10^4$, 0.6 < Pr < 160, L/d > 10; modified by Sieder–Tate, Nusselt $(d/L)^{0.055}$, Petukhov, Gnielinski.` },
         { id: "2015-16-Q8c", label: "(c)", marks: "5",
           topic: "forced-convection", sub: "Distortion of the laminar velocity profile",
-          type: "sketch", syllabus: "partial", repeats: [],
+          type: "sketch", syllabus: "partial", repeats: ["practice-forced-convection-P12a"],
           text: String.raw`We know that the laminar velocity profile in a tube is parabolic. For heating or cooling, this parabolic velocity profile is changed to some extent. Draw a few of those profiles.`,
           solution: String.raw`**Sketch:** radial position r/R (−1 to +1, vertical axis) versus axial velocity u (horizontal axis) for laminar flow in a tube; three curves with the same mean velocity:
 1. **Isothermal flow** – the standard parabola $u/u_{max} = 1 - (r/R)^2$, $u_{max} = 2u_m$.

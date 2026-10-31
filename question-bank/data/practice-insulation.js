@@ -6,7 +6,7 @@ QB.paper({ year: "Practice", set: "Critical insulation", date: "", marks: 0, pra
       parts: [
         { id: "practice-insulation-P1", label: "", marks: "", topic: "insulation",
           sub: "Derivation: critical radius for a cylinder, r_c = k/h", type: "derivation",
-          syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 02 Conduction I, slides 38–40 (critical thickness of insulation, Holman Fig. 2-7)`,
+          syllabus: "in", repeats: ["2014-15-Q2a", "2015-16-Q6a", "2016-17-Q6a", "2017-18-Q5b", "2020-21-Q8a"], origin: "slides", ref: String.raw`Slides 02 Conduction I, slides 38–40 (critical thickness of insulation, Holman Fig. 2-7)`,
           text: String.raw`A pipe of outer radius $r_i$ at $T_i$ is covered with insulation of conductivity $k$ to an outer radius $r_o$ and loses heat by convection ($h$) to $T_\infty$. Show that there is a critical radius $r_o = k/h$ at which the heat loss is a maximum. Sketch $q$ against $r_o$ and explain what it means for insulating a pipe.`,
           solution: String.raw`**Assumptions (slides):** (1) steady state; (2) 1-D radial heat flow; (3) negligible wall resistance (pipe surface at $T_i$); (4) constant insulation properties; (5) radiation between surface and surroundings neglected (or lumped into $h$); $h$ independent of $r_o$.
 
@@ -135,7 +135,7 @@ $D$ is a minimum, so $q$ is a **maximum** at $r_c = 2k/h$, twice the cylinder va
           answer: String.raw`$q = 4\pi\Delta T/[(1/r_i - 1/r_o)/k + 1/(hr_o^2)]$; $dq/dr_o = 0 \Rightarrow r_c = 2k/h$ (a maximum).` },
         { id: "practice-insulation-P4b", label: "(b)", marks: "8", topic: "insulation",
           sub: "Coated spherical bead: does the coating help?", type: "numerical",
-          syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of Holman Prob. 2-series on critical radius of a sphere; numerical companion to part (a)`,
+          syllabus: "in", repeats: ["2012-13-Q1a"], origin: "potential", ref: String.raw`Style of Holman Prob. 2-series on critical radius of a sphere; numerical companion to part (a)`,
           text: String.raw`A spherical electronic sensor of 12 mm diameter has its surface at 90°C in air at 20°C ($h = 20$ W/m²·°C). It is to be coated with epoxy ($k = 0.1$ W/m·°C). Find the critical radius, the heat loss bare and at the critical radius, and the coating radius at which the loss returns to the bare value. What is the least loss that any thickness of coating could achieve?`,
           solution: String.raw`**Given:** $r_i = 0.006$ m, $\Delta T = 70$°C, $k = 0.1$ W/m·°C, $h = 20$ W/m²·°C.
 

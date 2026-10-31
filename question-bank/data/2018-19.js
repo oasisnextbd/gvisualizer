@@ -13,7 +13,7 @@ Viscosities at the caloric temperature for distilled water and raw water are 1.9
       parts: [
         { id: "2018-19-Q1a", label: "(a)", marks: "5",
           topic: "shell-tube", sub: "Which fluid in the tubes?",
-          type: "theory", syllabus: "in", repeats: ["2014-15-Q8"],
+          type: "theory", syllabus: "in", repeats: ["2014-15-Q8", "practice-shell-tube-P6a"],
           text: String.raw`Which fluid would you place in the tube side? Explain your reason.`,
           solution: String.raw`**Raw water goes in the tubes; distilled water in the shell.**
 
@@ -194,7 +194,7 @@ $$\Delta P_s=\frac{fG_s^2D_s(N+1)}{5.22\times10^{10}D_es\phi_s}=\frac{0.00197(6.
       parts: [
         { id: "2018-19-Q2", label: "", marks: "30",
           topic: "heat-exchangers", sub: "Double pipe: benzene–toluene hairpins",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-heat-exchangers-P6a"],
           text: String.raw`It is desired to heat 9820 lb/hr of cold benzene from 80 to 120°F using 6330 lb/hr of hot toluene, which is cooled from 160 to 100°F. The specific gravities at 68°F are 0.88 and 0.87, respectively. A fouling factor of 0.001 should be provided for each stream. A number of 20 ft hairpins of 2 by $1\tfrac14$ in IPS pipe are available. How many hairpins are required?`,
           solution: String.raw`> This is Kern Example 6.1, worked in full in the slides (double-pipe "calculation involved", steps 1–7). The chart readings below are the slides' values.
 
@@ -277,7 +277,7 @@ These match the slides (149, 115, 50.5 ft², 116 ft, $R_d = 0.0023$). With the c
       parts: [
         { id: "2018-19-Q3a", label: "(a)", marks: "12",
           topic: "natural-convection", sub: "Grashof number; profiles on a vertical plate",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-natural-convection-P4a"],
           text: String.raw`What is the Grashof number? Discuss its implication in a natural convection system. With a neat sketch show the temperature and velocity profiles on a vertical surface during natural convection.`,
           solution: String.raw`### Grashof number
 $$Gr_L=\frac{g\beta(T_s-T_\infty)L^3}{\nu^2}=\frac{\text{buoyancy force}}{\text{viscous force}}\left(\times\frac{\text{inertia}}{\text{viscous}}\right)$$
@@ -590,7 +590,7 @@ $$q'=\bar h\,\pi D\,(T_w-T_\infty)=7.00\,\pi(0.20)(188)=827\ \mathrm{W/m}$$
           answer: String.raw`$T_f=399$ K, $GrPr\approx3.8\times10^7$ (laminar, $C=0.53$, $m=1/4$), $Nu\approx41.7$, $\bar h\approx7.0\ \mathrm{W/m^2K}$, $q'\approx827$ W/m.` },
         { id: "2018-19-Q7b", label: "(b)", marks: "11",
           topic: "boundary-layer", sub: "Velocity and thermal boundary layers on a heated plate",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-boundary-layer-P12a"],
           text: String.raw`Describe the thermal boundary layer formation and the hydrodynamic (velocity) boundary layer formation on a heated isothermal flat plate for forced convection heat transfer.`,
           solution: String.raw`Set-up: fluid at $u_\infty$, $T_\infty$ approaches a flat plate held at $T_s>T_\infty$; $x$ along the plate from the leading edge, $y$ normal to it.
 
@@ -618,7 +618,7 @@ Sketch: plate along the horizontal axis; two curves growing from the leading edg
           answer: String.raw`No-slip creates a velocity layer ($u:0\to u_\infty$, $\delta\propto\sqrt{x}$); wall-fluid thermal equilibrium creates a thermal layer ($T:T_s\to T_\infty$); $h$ comes from conduction at the wall and falls as $\delta_t$ grows; $\delta_t/\delta\approx Pr^{-1/3}$.` },
         { id: "2018-19-Q7c", label: "(c)", marks: "7",
           topic: "boundary-layer", sub: "Colburn analogy → Nu = 0.0395 Re^¾ Pr^⅓",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-boundary-layer-P6"],
           text: String.raw`Colburn recommended that for forced convection heat transfer in turbulent flow in tubes, over a wide range of Prandtl number, the relation
 
 $$St\,Pr^{2/3}=\frac{C_f}{2}$$
@@ -686,7 +686,7 @@ $$T_{s,o}=T_{\infty,o}+q'R_o=25+31.9(0.4681)=39.9\ ^\circ\mathrm C\le40\ ^\circ\
           answer: String.raw`$R_{tot}\approx2.98$ m·°C/W, $q'\approx31.9$ W per metre of pipe; outer surface $\approx39.9$°C (limit met).` },
         { id: "2018-19-Q8b", label: "(b)", marks: "10",
           topic: "heat-exchangers", sub: "Overall U_o for a double-pipe exchanger",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["practice-heat-exchangers-P4a"],
           text: String.raw`Derive an expression for the overall heat transfer coefficient based on the outside surface area of the inner pipe ($U_o$) for a double-pipe heat exchanger. Assume that the hot fluid flows in the inner pipe and the cold fluid in the annulus.`,
           solution: String.raw`**Set-up:** inner pipe of inside radius $r_i$, outside radius $r_o$, length $L$, wall conductivity $k$. Hot fluid inside ($T_h$, coefficient $h_i$), cold fluid in the annulus ($T_c$, coefficient $h_o$). Areas $A_i=2\pi r_iL$, $A_o=2\pi r_oL$.
 
