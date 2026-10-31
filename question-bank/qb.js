@@ -29,7 +29,7 @@ const QB={TOPICS,YEARS,SETS,papers,parts,byId,keyOf,
   load(done){ const files=YEARS.concat(SETS); let left=files.length; files.forEach(y=>{ const s=document.createElement('script'); s.src='data/'+y+'.js'; s.onload=s.onerror=()=>{ if(--left===0){ parts.sort(cmp); done(); } }; document.head.appendChild(s); }); },
   label:p=>p.practice?`Practice · ${p.set} P${p.q}${p.label||''}`:`${p.year} · Q${p.q}${p.label?p.label:''}`,
   title:k=>{ const P=papers[k]; return P&&P.practice?'Practice: '+P.set:k; },
-  md, typeset
+  md, typeset, typesetLazy
 };
 function rank(p){ const i=YEARS.indexOf(p.key); return i<0?YEARS.length:i; }
 function cmp(a,b){ return rank(a)-rank(b)||(a.key<b.key?-1:a.key>b.key?1:0)||a.q-b.q||a.idx-b.idx; }
@@ -63,7 +63,10 @@ function md(src){
     para.push(t); i++; }
   flush(); return out;
 }
+// Long lists: typeset each card only when it comes near the screen (typesetting hundreds of formulas at once is slow on phones).
+function typesetLazy(root,sel){ if(root.__io) root.__io.disconnect(); const items=root.querySelectorAll(sel||'.card'); if(!('IntersectionObserver' in window)||!items.length) return typeset(root);
+  const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ io.unobserve(e.target); typeset(e.target); } }),{rootMargin:'800px 0px'}); root.__io=io; items.forEach(c=>io.observe(c)); }
 function typeset(el){ if(window.MathJax&&MathJax.typesetPromise){ MathJax.typesetClear&&MathJax.typesetClear([el]); MathJax.typesetPromise([el]).catch(()=>{}); } else { (window.__mjq=window.__mjq||[]).push(el); } }
-window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'},startup:{ready(){ MathJax.startup.defaultReady(); (window.__mjq||[]).forEach(e=>MathJax.typesetPromise([e]).catch(()=>{})); }}};
+window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'},startup:{typeset:false,ready(){ MathJax.startup.defaultReady(); (window.__mjq||[]).forEach(e=>MathJax.typesetPromise([e]).catch(()=>{})); }}};
 window.QB=QB;
 })();

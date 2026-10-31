@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>CHE 301 Practice</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
@@ -77,7 +78,7 @@ function render(){
     if(f.length) h+=`<div class="kind"><span class="dot f"></span>Potential finals <small>book-style, exam length</small></div>`+f.map(card).join('');
     h+='</section>'; });
   $('#list').innerHTML=h||(pr().length?'<p class="empty">No practice problems match these filters.</p>':'<p class="empty">Practice sets are being added.</p>');
-  QB.typeset($('#list'));
+  QB.typesetLazy($('#list'));
 }
 document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{ st.kind=b.dataset.k; render(); }));
 let tq; $('#q').addEventListener('input',e=>{ clearTimeout(tq); tq=setTimeout(()=>{ st.q=e.target.value.trim(); render(); },200); });

@@ -21,7 +21,9 @@ function start() {
   addHeader();
   addModal();
   window.addEventListener('qb:part', e => show(e.detail && e.detail.id));
-  onUser(s => { state = s; paintHeader(); if (part) show(part, true); });
+  // Load Firebase after the page has drawn (it is ~190 KB); a click on Sign in loads it at once anyway.
+  const later = window.requestIdleCallback ? f => requestIdleCallback(f, { timeout: 2500 }) : f => setTimeout(f, 1200);
+  later(() => onUser(s => { state = s; paintHeader(); if (part) show(part, true); }));
   // the page may have routed before this module loaded
   const h = decodeURIComponent(location.hash.slice(1));
   if (h && window.QB && QB.byId && QB.byId[h]) show(h);

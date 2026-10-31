@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ChE 303 Question Bank</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
@@ -79,7 +80,7 @@ function render(){
       html+='</section>'; });
   }
   $('#list').innerHTML=html||'<p class="empty">No questions match these filters.</p>';
-  QB.typeset($('#list'));
+  QB.typesetLazy($('#list'));
 }
 $('#byTopic').addEventListener('click',()=>{ st.by='topic'; st.sel=null; history.replaceState(null,'',location.pathname); render(); });
 $('#byYear').addEventListener('click',()=>{ st.by='year'; st.sel=null; history.replaceState(null,'',location.pathname); render(); });
