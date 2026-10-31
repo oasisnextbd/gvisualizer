@@ -112,7 +112,7 @@ $$y_D = \frac{2.5(0.6278)}{1 + 1.5(0.6278)} = 0.8083$$
 
     { id: "practice-advanced-distillation-P3", q: 3, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-advanced-distillation-P3a", label: "", marks: "", topic: "advanced-distillation",
-        sub: "Open (direct) steam heating, methanol–water, L0/D = 3", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Open (direct) steam heating, methanol–water, L0/D = 3", type: "numerical", syllabus: "in", repeats: ["2021-22-Q7b"],
         origin: "slides", ref: String.raw`Slides 05 (Fractional Distillation Part C), pp. 18–20; Wankat 3e, Example 4-4`,
         text: String.raw`A feed of 350 kmol/h, 60 mol% methanol and 40 mol% water, enters as a two-phase mixture with $V_F/F = 0.3$. The insulated column has a total condenser with saturated-liquid reflux at $L_0/D = 3.0$. The distillate should be 95 mol% methanol and the bottoms 8 mol% methanol. There is no reboiler: saturated steam at 1 atm is sparged into the bottom of the column. Pressure is 1 atm.
 
@@ -242,7 +242,7 @@ Tray 7 is the first whose liquid is below the intersection (0.597), so it is the
       stem: String.raw`A column separates 1000 mol/h of 32 mol% ethanol and 68 mol% water. The feed is a subcooled liquid that condenses 1 mol of vapor on the feed plate for every 4 mol of feed. The column has a partial condenser and is heated by open steam (pure saturated water vapor). We want a distillate vapor $y_D = 0.75$ and bottoms $x_B = 0.10$. CMO is valid. Use ethanol–water VLE at 1 atm (Wankat Table 2-1).`,
       parts: [
         { id: "practice-advanced-distillation-P5a", label: "(a)", marks: "", topic: "advanced-distillation",
-          sub: "Minimum reflux with partial condenser and subcooled feed (tangent pinch)", type: "numerical", syllabus: "in", repeats: [],
+          sub: "Minimum reflux with partial condenser and subcooled feed (tangent pinch)", type: "numerical", syllabus: "in", repeats: ["2015-16-Q2b", "2023-24-Q3a"],
           origin: "slides", ref: String.raw`Slides 05 (Fractional Distillation Part C), p. 30; Wankat 3e, Problem 4.D33*`,
           text: String.raw`Find the minimum external reflux ratio.`,
           solution: String.raw`**Data:** Wankat Table 2-1 (ethanol–water, 1 atm), smooth monotone interpolation.
@@ -257,7 +257,7 @@ $$\left(\frac{L}{V}\right)_{min} = 0.393, \qquad \left(\frac{L}{D}\right)_{min} 
 **Book answer:** $(L/D)_{min} = 0.659$ ✓ (agrees within graph-reading accuracy: the tangent sits on the flat part of the curve, where a change of 0.003 in y moves the result by about 0.01).`,
           answer: String.raw`$(L/V)_{min} \approx 0.393$, $(L/D)_{min} \approx 0.65$ (tangent pinch near x = 0.50). Book: 0.659.` },
         { id: "practice-advanced-distillation-P5b", label: "(b)", marks: "", topic: "advanced-distillation",
-          sub: "Real stages with EMV = 2/3, partial condenser + open steam", type: "numerical", syllabus: "in", repeats: [],
+          sub: "Real stages with EMV = 2/3, partial condenser + open steam", type: "numerical", syllabus: "in", repeats: ["2015-16-Q2b", "2023-24-Q3a"],
           origin: "slides", ref: String.raw`Slides 05 (Fractional Distillation Part C), p. 30; Wankat 3e, Problem 4.D33*`,
           text: String.raw`Use $L/D = 2.0(L/D)_{min}$ and find the number of real stages and the real optimum feed location if $E_{MV} = 2/3$ on all stages.`,
           solution: String.raw`**Assumptions:** the partial condenser is an equilibrium contact; every column tray has $E_{MV} = 2/3$; open steam replaces the reboiler.
@@ -296,7 +296,7 @@ $x_B = 0.10$ is passed on tray 10: fraction $= (0.1679 - 0.10)/(0.1679 - 0.0379)
 **Book answer:** "9 real stages + partial condenser, feed third real stage from the bottom", i.e. feed on tray 7 of 9 from the top ✓ for the feed tray. Our count is 9.5 trays: the last tray falls on the steep low-x part of the ethanol curve, where small reading differences decide whether 9 trays just suffice. Use the book's L/D = 1.318 and the count is still 9.4, so round up to 10 in a design.`,
           answer: String.raw`L/D = 1.29: top $y = 0.564x + 0.327$, bottom $y = 2.026(x - 0.10)$. About 9.5, so 10 real trays + partial condenser, feed on tray 7 from the top. Book: 9 real trays, feed 3rd from the bottom.` },
         { id: "practice-advanced-distillation-P5c", label: "(c)", marks: "", topic: "advanced-distillation",
-          sub: "Open steam flow rate", type: "numerical", syllabus: "in", repeats: [],
+          sub: "Open steam flow rate", type: "numerical", syllabus: "in", repeats: ["2015-16-Q2b", "2023-24-Q3a"],
           origin: "slides", ref: String.raw`Slides 05 (Fractional Distillation Part C), p. 30; Wankat 3e, Problem 4.D33*`,
           text: String.raw`Find the steam flow rate used.`,
           solution: String.raw`With saturated steam and CMO, the vapor in the stripping section equals the steam flow:
@@ -311,7 +311,7 @@ In mass terms, $758.6 \times 18.015 = 13{,}670$ g/h of steam per 1000 mol/h of f
 
     { id: "practice-advanced-distillation-P6", q: 6, section: "W", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-advanced-distillation-P6a", label: "", marks: "", topic: "advanced-distillation",
-        sub: "Direct cooling with saturated water instead of a condenser: top operating line", type: "derivation", syllabus: "in", repeats: [],
+        sub: "Direct cooling with saturated water instead of a condenser: top operating line", type: "derivation", syllabus: "in", repeats: ["2015-16-Q3a"],
         origin: "wankat", ref: String.raw`Wankat 3e, Problem 4.D22*`,
         text: String.raw`When water is the more volatile component, the condenser can be replaced by direct cooling: pure liquid water (C) is fed to the top stage, and the vapor leaving the top stage is the distillate. Take $y_D = 0.92$, $x_B = 0.04$, $z = 0.4$ (all mole fractions water), saturated-vapor feed of 1000 kmol/h, 1 atm, CMO, cooling water a saturated liquid, and $C/D = 3/4$.
 
@@ -666,7 +666,7 @@ Fraction of stage 14: $(0.0283 - 0.02)/(0.0283 - 0.0041) = 0.34$.
 
     { id: "practice-advanced-distillation-P15", q: 15, section: "W", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-advanced-distillation-P15a", label: "", marks: "", topic: "mccabe-thiele",
-        sub: "Is CMO valid? Five binary systems by latent heat comparison", type: "theory", syllabus: "in", repeats: [],
+        sub: "Is CMO valid? Five binary systems by latent heat comparison", type: "theory", syllabus: "in", repeats: ["2016-17-Q1c"],
         origin: "wankat", ref: String.raw`Wankat 3e, Problem 4.F3*`,
         text: String.raw`For distillation of each of the following systems, is constant molal overflow (CMO) valid? (a) methanol–water; (b) isopropanol–water; (c) acetic acid–water; (d) n-butane–n-pentane; (e) benzene–toluene.`,
         solution: String.raw`**Test:** CMO needs equal molar latent heats (plus small sensible-heat and heat-of-mixing effects, and an adiabatic column). Compare $\Delta H_{vap}$ per mole at the normal boiling points. A difference of a few percent is fine; about 10–15% is marginal.

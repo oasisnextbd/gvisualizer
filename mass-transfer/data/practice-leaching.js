@@ -3,7 +3,7 @@ QB.paper({ year: "Practice", set: "Washing & leaching", date: "", marks: 0, prac
   questions: [
     { id: "practice-leaching-P1", q: 1, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-leaching-P1a", label: "", marks: "", topic: "leaching",
-        sub: "Countercurrent washing recovery by Kremser (lime–soda NaOH)", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Countercurrent washing recovery by Kremser (lime–soda NaOH)", type: "numerical", syllabus: "in", repeats: ["2016-17-Q8b", "2018-19-Q2a"],
         origin: "slides", ref: String.raw`Slides: Washing and Leaching, p. 9 (Example 14-1; Wankat 3e Example 14-1)`,
         text: String.raw`In the lime–soda process a slurry of CaCO₃ particles in dilute NaOH solution is washed in a four-stage countercurrent system. The underflow carries about 3 kg liquid per kg dry CaCO₃, the wash water is pure, and 8 kg wash water per kg dry CaCO₃ is used. Predict the fraction of NaOH recovered in the wash liquor.`,
         solution: String.raw`**Given (basis 1 kg/h dry CaCO₃):** U = 3 kg/h underflow liquid, O = 8 kg/h overflow, N = 4, $y_{N+1}$ = 0.
@@ -23,7 +23,7 @@ $$\frac{x_N - x_N^*}{x_0 - x_N^*} = \frac{1 - mO/U}{1 - (mO/U)^{N+1}} = \frac{1 
 
     { id: "practice-leaching-P2", q: 2, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-leaching-P2a", label: "", marks: "", topic: "leaching",
-        sub: "Washing salt from beach sand: countercurrent stages and cross-flow outlet", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Washing salt from beach sand: countercurrent stages and cross-flow outlet", type: "numerical", syllabus: "in", repeats: ["2023-24-Q7a"],
         origin: "slides", ref: String.raw`Slides: Washing and Leaching, pp. 10–11 (Problem D2); Wankat 3e, Problem 14.D2*`,
         text: String.raw`Wet beach sand for a glass factory carries 40 % by volume of seawater (0.035 wt frac salt) between the grains. Densities: water 1.0 g/cm³ (constant), dry sand 1.8 g/cm³ including air, sand without air 3.0 g/cm³.
 a. The water entrained in the product must contain 0.002 wt frac salt. With 0.5 kg of pure wash water per 1000 cm³ of wet sand fed, how many countercurrent stages are needed, and what is the outlet wash-water concentration?
@@ -90,7 +90,7 @@ Fraction of stage 6 = (0.0085 − 0.006)/(0.0085 − 0.0030) = 0.46 → N = 5.46
 
     { id: "practice-leaching-P4", q: 4, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-leaching-P4a", label: "", marks: "", topic: "leaching",
-        sub: "Sugar from cane with an effective equilibrium constant (Kremser)", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Sugar from cane with an effective equilibrium constant (Kremser)", type: "numerical", syllabus: "in", repeats: ["2017-18-Q2c", "2021-22-Q4b"],
         origin: "slides", ref: String.raw`Slides: Washing and Leaching, p. 19 (Problem D7); Wankat 3e, Problem 14.D8*`,
         text: String.raw`Sugar is leached from sugar cane with water in an 11-stage countercurrent Rotocel. On a volumetric basis liquid flow/solid flow = 0.95. The effective equilibrium constant is $m_E$ = 1.18 [(g/L in liquid)/(g/L in solid)]. With pure water as solvent, predict the sugar recovery.`,
         solution: String.raw`**Assumptions:** constant volumetric flows of solid ($F_{solid}$) and solvent ($F_{solv}$); effective linear equilibrium y = $m_E$x in concentration units (it lumps entrainment and non-equilibrium stages, valid for these conditions only); pure solvent so $x_N^* = y_{N+1}/m = 0$. Then the Kremser equation applies.

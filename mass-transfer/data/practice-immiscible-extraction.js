@@ -52,7 +52,7 @@ $X_4 = 0.00426 < X_N = 0.00503$, so the 4th stage is partial: fraction $= (0.013
 
     { id: "practice-immiscible-extraction-P2", q: 2, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-immiscible-extraction-P2a", label: "", marks: "", topic: "immiscible-extraction",
-        sub: "Four-stage cross-flow extraction with the same solvent", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Four-stage cross-flow extraction with the same solvent", type: "numerical", syllabus: "in", repeats: ["2012-13-Q3b"],
         origin: "slides", ref: String.raw`Slides: Immiscible Extraction, pp. 24–27 (Example 16.2, Wankat 2nd ed.)`,
         text: String.raw`The 11.5 wt % acetic acid–water feed of Problem 1 is now treated in a four-stage cross-flow cascade. The same total amount of pure 1-butanol is used ($F_D/F_S = 0.850$ overall), divided equally among the four stages. Operation is at 1 atm and 26.7 °C with $y = 1.613x$. Find the outlet concentrations of all streams.`,
         solution: String.raw`**Given:** $X_0 = 0.1299$ (ratio), pure solvent to each stage ($Y_{j,in} = 0$), $F_{S,j} = F_S/4$, so $F_D/F_{S,j} = 4(0.850) = 3.40$.
@@ -81,7 +81,7 @@ These values agree with the slide's graph ($Y_1 \approx 0.147$, $X_4 \approx 0.0
 
     { id: "practice-immiscible-extraction-P3", q: 3, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-immiscible-extraction-P3a", label: "", marks: "", topic: "immiscible-extraction",
-        sub: "Kremser equation for dilute extraction (acetic acid into 3-heptanol)", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Kremser equation for dilute extraction (acetic acid into 3-heptanol)", type: "numerical", syllabus: "in", repeats: ["2017-18-Q3b", "2021-22-Q3b"],
         origin: "slides", ref: String.raw`Slides: Immiscible Extraction, pp. 22–23 (Problem D4); Wankat 3e, Problem 13.D4*`,
         text: String.raw`Acetic acid is extracted from water into 3-heptanol at 25 °C, where (wt frac acid in solvent)/(wt frac acid in water) = 0.828. The aqueous feed is 550 lb/h with 0.0097 wt frac acid and must leave at 0.00046 wt frac. The solvent flow is 700 lb/h and enters with 0.0003 wt frac acid. Using the Kremser equation, find the outlet solvent concentration and the number of equilibrium stages. Is this an economical way to extract acetic acid?`,
         solution: String.raw`**Given:** R = 550 lb/h, E = 700 lb/h, $x_0 = 0.0097$, $x_N = 0.00046$, $y_{N+1} = 0.0003$, $m = 0.828$, b = 0.
@@ -107,7 +107,7 @@ $$N = \frac{\ln\left[\left(1 - \frac{mE}{R}\right)\frac{y_{N+1} - y_1^*}{y_1 - y
 
     { id: "practice-immiscible-extraction-P4", q: 4, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-immiscible-extraction-P4a", label: "", marks: "", topic: "immiscible-extraction",
-        sub: "Dilute two-solute countercurrent extraction (oleic and linoleic acids)", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Dilute two-solute countercurrent extraction (oleic and linoleic acids)", type: "numerical", syllabus: "in", repeats: ["2022-23-Q3b"],
         origin: "slides", ref: String.raw`Slides: Immiscible Extraction, pp. 28–30 (Problem D6); Wankat 3e, Problem 13.D9*`,
         text: String.raw`A 1500 kg/h feed of methylcellosolve + 10 % water contains 0.003 wt frac linoleic acid and 0.0025 wt frac oleic acid. It is extracted in a simple countercurrent cascade with 750 kg/h of pure heptane. 99 % of the oleic acid must be recovered in the extract. Distribution coefficients (heptane/methylcellosolve, mass-ratio units): oleic 4.14, linoleic 2.17. Find N and the recovery of linoleic acid in the extract.`,
         solution: String.raw`**Given:** R = 1500 kg/h, E = 750 kg/h, $y_{N+1} = 0$; oleic $x_0 = 0.0025$, $m_o = 4.14$; linoleic $x_0 = 0.003$, $m_L = 2.17$.
@@ -135,7 +135,7 @@ If a whole number of stages (6) is built, the oleic recovery rises to 99.3 % and
 
     { id: "practice-immiscible-extraction-P5", q: 5, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-immiscible-extraction-P5a", label: "", marks: "", topic: "immiscible-extraction",
-        sub: "Temperature-swing extraction and back-extraction (benzene, Kremser)", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Temperature-swing extraction and back-extraction (benzene, Kremser)", type: "numerical", syllabus: "in", repeats: ["2013-14-Q2"],
         origin: "slides", ref: String.raw`Slides: Immiscible Extraction, pp. 31–32 (Problem D9); Wankat 3e, Problem 13.D15*`,
         text: String.raw`Acetic acid is extracted from water with benzene, and a temperature shift regenerates the benzene and returns the acid to a water phase (figure). Column 1 (40 °C, N = 11): aqueous feed R = 100 kg/h with $x_0 = 0.01$ wt frac acid, raffinate $x_N = 0.0008$; benzene E = 1000 kg/h circulates between the columns. Column 2 (25 °C, N = 9): pure water R′ enters ($x'_0 = 0$) and strips the acid from the benzene. Distribution coefficients (wt frac acid in benzene / wt frac in water): 0.1022 at 40 °C, 0.0328 at 25 °C.
 
@@ -172,7 +172,7 @@ $$\frac{6.92 \times 10^{-6} - 0}{0.000927 - 0} = 0.007470 = \frac{1 - R'/(mE)}{1
 
     { id: "practice-immiscible-extraction-P6", q: 6, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-immiscible-extraction-P6a", label: "", marks: "", topic: "immiscible-extraction",
-        sub: "Benzoic acid from water into benzene (Kremser in mole fractions)", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Benzoic acid from water into benzene (Kremser in mole fractions)", type: "numerical", syllabus: "in", repeats: ["2015-16-Q5b", "2018-19-Q3c"],
         origin: "slides", ref: String.raw`Slides: Immiscible Extraction, p. 33 (first problem; Wankat 2nd ed.)`,
         text: String.raw`A water solution with 0.005 mole frac benzoic acid (100 mol/h) is extracted countercurrently with 10 mol/h of pure benzene at 6 °C to reduce the water to 0.0001 mole frac benzoic acid. Equilibrium: (mole frac benzoic acid in water) = 0.0446 × (mole frac benzoic acid in benzene). Find the number of equilibrium stages.`,
         solution: String.raw`**Given:** R = 100 mol/h, E = 10 mol/h, $x_0 = 0.005$, $x_N = 0.0001$, $y_{N+1} = 0$; $x = 0.0446y \Rightarrow y = mx$ with $m = 1/0.0446 = 22.42$.

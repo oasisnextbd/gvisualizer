@@ -89,7 +89,7 @@ $$K_{ref} = \sum_i \frac{y_i}{\alpha_i}, \qquad x_i = \frac{y_i/\alpha_i}{\sum_j
       parts: [
         { id: "2011-12-Q2a", label: "(a)", marks: "15",
           topic: "absorption", sub: "Kremser–Souders–Brown (KSB) equation: derivation and assumptions",
-          type: "derivation", syllabus: "in", repeats: ["2012-13-Q1a", "2015-16-Q8a"],
+          type: "derivation", syllabus: "in", repeats: ["2012-13-Q1a", "2015-16-Q8a", "practice-absorption-P5"],
           text: String.raw`What is KSB equation? Derive an expression for calculating the number of stages in gas-liquid absorption. Write down the assumptions you have to make.`,
           solution: String.raw`**KSB equation** = Kremser–Souders–Brown equation (Kremser 1930; Souders and Brown 1932). It is the analytical solution of the stage-by-stage balances for a countercurrent cascade with a straight operating line and a straight equilibrium line. It gives the number of equilibrium stages without drawing a McCabe–Thiele diagram.
 
@@ -356,7 +356,7 @@ so $V/F = 1/3$. The operating line slope is $-L/V = -2$.
       parts: [
         { id: "2011-12-Q6a", label: "(a)", marks: "5×3=15",
           topic: "mccabe-thiele", sub: "Feed-line slopes: two-phase, superheated vapor, subcooled liquid",
-          type: "numerical", syllabus: "in", repeats: ["2020-21-Q6d"],
+          type: "numerical", syllabus: "in", repeats: ["2020-21-Q6d", "practice-mccabe-thiele-P2a"],
           text: String.raw`Calculate the feed line slope for the following cases and show them on a y–x diagram.
 
 (i) A two-phase feed where 60% of the feed is vaporized under column conditions.
@@ -388,7 +388,7 @@ The paper gives no z; any z gives the same slopes. The sketch uses z = 0.5, and 
           answer: String.raw`(i) q = 0.4, slope −0.667. (ii) q = −1/3, slope +0.25. (iii) q = 1.07, slope +15.3.` },
         { id: "2011-12-Q6b", label: "(b)", marks: "20",
           topic: "mccabe-thiele", sub: "Benzene–toluene column: D, B, ideal plates and feed plate (q = 1/3)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-mccabe-thiele-P7a"],
           text: String.raw`A continuous fractionating column is to be designed to separate 30,000 kg/hr of a mixture of 40 percent benzene and 60 percent toluene into an overhead product containing 97 percent benzene and a bottom product containing 98% toluene. These percentages are by weight. A reflux ratio of 3.5 mole to 1 mole of product is to be used. The molal latent heats of benzene and toluene are 7360 and 7960 cal/gm-mole, respectively. Benzene and toluene form an ideal system with a relative volatility of about 2.5. The feed has a boiling point of 95 °C at a pressure of 1 atm.
 
 (i) Calculate the moles of overhead product and bottom product per hour.

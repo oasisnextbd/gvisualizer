@@ -41,7 +41,7 @@ Equivalent fractional form: $\dfrac{y_{N+1}-y_1}{y_{N+1}-y_0^*} = \dfrac{A^{N+1}
           answer: String.raw`Kremser: analytical N for countercurrent cascades with straight operating and equilibrium lines (dilute, constant L/V, Henry's law, isothermal); fast, exact and handles rating problems.` },
         { id: "2012-13-Q1b", label: "(b)", marks: "23",
           topic: "absorption", sub: "Concentrated CO2 absorber in mole ratios, 1.5 Lmin",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-absorption-P2"],
           text: String.raw`It is required to absorb CO$_2$ into water from a gas stream containing 90 mole% N$_2$ and 10 mole% CO$_2$. The inlet water is pure and is at 10°C. The operation can be assumed to be isothermal and is at 10 atm pressure. If the liquid flow rate is 1.5 times the minimum liquid flow rate, how many equilibrium stages are required to absorb 92% of the CO$_2$? Choose a basis of 1 mole/hr of entering gas. Consider an equilibrium relationship of $y = 87.6x$.`,
           solution: String.raw`This is Example 15-1 of the slides (Wankat Example 12-1) with the equilibrium given directly: $y = 87.6x$ (that is $H/P = 876/10$; Wankat Table 12-1 gives H = 876 atm at 5 °C, the paper writes 10 °C but gives the slope, so use 87.6).
 
@@ -171,7 +171,7 @@ $$
           answer: String.raw`Mixer–settlers (one high-efficiency stage each), sieve-tray/packed columns (cheap, 3–5 stages), mechanically agitated columns such as RDC/Karr (many stages, high capacity).` },
         { id: "2012-13-Q3b", label: "(b)", marks: "23",
           topic: "immiscible-extraction", sub: "Four-stage cross-flow extraction, acetic acid–water–1-butanol",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-immiscible-extraction-P2a"],
           text: String.raw`An 11.5 wt% mixture of acetic acid in water is to be extracted with pure 1-butanol at 1 atm pressure and 26.7°C temperature in a four-stage cross-flow immiscible system. The ratio of water to pure 1-butanol flow rate is same for each stage and is equal to 3.39. Determine the outlet concentration of all streams. Assume that equilibrium follows $y = 1.613x$ relationship.`,
           solution: String.raw`This is Example 16-2 of the slides (Wankat Example 13-2): the countercurrent solvent of Example 16-1 ($F_D/F_S = 0.848$) is split equally over four stages, so each stage has $F_D/F_{S,j} = 4(0.848) = 3.39$.
 
@@ -396,7 +396,7 @@ $$
           answer: String.raw`Pump → heater → valve (isenthalpic pressure drop, partial vaporization) → flash drum (one equilibrium stage, demister) → vapor top, liquid bottom.` },
         { id: "2012-13-Q6b", label: "(b)", marks: "25",
           topic: "flash", sub: "Ethanol–water flash from 200 °C liquid feed using the H-x chart",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-flash-P7"],
           text: String.raw`A flash drum is to treat 1200 kg/hr of an ethanol-water mixture. The feed is 35 wt% ethanol and is heated to 200°C. The flash drum operates at a pressure of 1 kg/cm$^2$. Find: T$_{drum}$, weight fractions of liquid and vapor products, and liquid and vapor flow rates.
 
 Given data:

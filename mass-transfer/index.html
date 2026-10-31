@@ -54,7 +54,8 @@ function rail(list){
 }
 function card(p){
   const t=QB.topic(p.topic);
-  const rep=(p.repeats||[]).filter(r=>QB.byId[r]||r).map(r=>`<span class="tag rep" title="Same problem">also ${r.split('-Q')[0]}</span>`).join('');
+  const ex=(p.repeats||[]).filter(r=>!r.startsWith('practice-')), np=(p.repeats||[]).length-ex.length;
+  const rep=ex.map(r=>`<span class="tag rep" title="Same problem">also ${r.split('-Q')[0]}</span>`).join('')+(np?`<span class="tag rep" title="Worked in the Practice section">in Practice</span>`:'');
   return `<article class="card" id="c-${p.id}">
     <div class="meta"><span class="tag id">${QB.label(p)}</span>${p.marks?`<span class="tag marks">${p.marks} marks</span>`:''}<span class="tag t-${p.type}">${p.type}</span>${st.by==='year'?`<span class="tag">${t.name}</span>`:''}${p.practice?'<span class="tag rep">practice (book-style)</span>':''}${p.syllabus==='out'?'<span class="tag out">not in current slides</span>':p.syllabus==='partial'?'<span class="tag partial">partly in slides</span>':''}${rep}</div>
     ${p.sub?`<p class="sub">${QB.md(p.sub).replace(/^<p>|<\/p>$/g,'')}</p>`:''}

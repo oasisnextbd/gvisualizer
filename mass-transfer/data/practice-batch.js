@@ -3,7 +3,7 @@ QB.paper({ year: "Practice", set: "Batch distillation", date: "", marks: 0, prac
   questions: [
     { id: "practice-batch-P1", q: 1, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-batch-P1a", label: "", marks: "", topic: "batch",
-        sub: "Simple Rayleigh distillation with a specified average distillate (trial and error)", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Simple Rayleigh distillation with a specified average distillate (trial and error)", type: "numerical", syllabus: "in", repeats: ["2017-18-Q8a"],
         origin: "slides", ref: String.raw`Batch distillation slides, pp. 8–9 (Example 11-1); Wankat 3e, Example 9-1`,
         text: String.raw`A simple batch still (one equilibrium stage) separates methanol from water at 1 atm. The charge is 50 mol of 80 mol% methanol. We want an average distillate of 89.2 mol% methanol. Find the amount of distillate, the amount left in the still pot, and the final still-pot composition. Use the methanol–water VLE table (Wankat Table 2-7, slides Table 3-3).`,
         solution: String.raw`**Given:** F = 50 mol, $x_F = 0.80$, $x_{D,avg} = 0.892$.
@@ -49,7 +49,7 @@ Check: $20.5(0.667) + 29.5(0.892) = 13.7 + 26.3 = 40.0 = Fx_F$ ✓.
 
     { id: "practice-batch-P2", q: 2, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-batch-P2a", label: "", marks: "", topic: "batch",
-        sub: "Simple batch still, methanol–water 75% → 55% (Rayleigh + Simpson)", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Simple batch still, methanol–water 75% → 55% (Rayleigh + Simpson)", type: "numerical", syllabus: "in", repeats: ["2022-23-Q8c"],
         origin: "slides", ref: String.raw`Batch distillation slides, pp. 10–11 (Problem D2); Wankat 3e, Problem 9.D2*`,
         text: String.raw`A simple batch still (one equilibrium stage) separates methanol from water at 1 atm. The charge is 100 mol of 75 mol% methanol, and the final bottoms should be 55 mol% methanol. Find the distillate collected, the amount left in the still pot and the average distillate composition (Table 2-7 VLE).`,
         solution: String.raw`**Given:** F = 100 mol, $x_F = 0.75$, $x_{W,final} = 0.55$.
@@ -72,7 +72,7 @@ $$x_{D,avg} = \frac{100(0.75) - 35.3(0.55)}{64.7} = \frac{75 - 19.4}{64.7} = 0.8
 
     { id: "practice-batch-P3", q: 3, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-batch-P3a", label: "", marks: "", topic: "batch",
-        sub: "Multistage batch at constant reflux, ethanol–water, still + 2 stages", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Multistage batch at constant reflux, ethanol–water, still + 2 stages", type: "numerical", syllabus: "in", repeats: ["2016-17-Q4"],
         origin: "slides", ref: String.raw`Batch distillation slides, pp. 13–15 (Example 11-2); Wankat 3e, Example 9-2`,
         text: String.raw`We batch distill 50 kmol of 32 mol% ethanol, 68 mol% water at 1 atm. The system is a still pot plus two equilibrium stages and a total condenser, with L/D = 2/3 (saturated reflux). The final still-pot composition is 4.5 mol% ethanol. Find the average distillate composition, the final charge in the still pot and the amount of distillate.`,
         solution: String.raw`**Given:** F = 50 kmol, $x_F = 0.32$, $x_{W,final} = 0.045$, L/D = 2/3, 3 equilibrium contacts (2 stages + still).
@@ -110,7 +110,7 @@ $$x_{D,avg} = \frac{50(0.32) - 27.0(0.045)}{23.0} = 0.642$$
 
     { id: "practice-batch-P4", q: 4, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-batch-P4a", label: "", marks: "", topic: "batch",
-        sub: "Still + 1 stage at constant L0/D = 1.85, methanol–water 57% → 15%", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Still + 1 stage at constant L0/D = 1.85, methanol–water 57% → 15%", type: "numerical", syllabus: "in", repeats: ["2015-16-Q7b", "2020-21-Q8c"],
         origin: "slides", ref: String.raw`Batch distillation slides, pp. 16–17 (Problem D3); Wankat 3e, Problem 9.D3*`,
         text: String.raw`A still pot plus a column with one equilibrium stage and a total condenser batch-distills methanol–water at 101.3 kPa. The feed is 57 mol% methanol and the final bottoms 15 mol% methanol. Reflux is a saturated liquid with constant $L_0/D = 1.85$. Find $W_{final}$, $D_{total}$ and $x_{D,avg}$ per 1 kmol of feed (Table 2-7 VLE).`,
         solution: String.raw`**Given:** F = 1 kmol, $x_F = 0.57$, $x_{W,final} = 0.15$, $L_0/D = 1.85$, two equilibrium contacts (1 stage + still).
@@ -146,7 +146,7 @@ $$x_{D,avg} = \frac{0.57 - 0.401(0.15)}{0.599} = 0.851$$
       stem: String.raw`A normal batch distillation of methanol and water uses a still pot (an equilibrium stage) and a column with two equilibrium stages, i.e. three equilibrium contacts, a total condenser and saturated reflux. The reflux ratio is varied so that $x_D$ stays constant at 0.84. The charge is F = 10 kmol of 40 mol% methanol, and the final still-pot composition is 8 mol%. 1 atm, CMO, Table 2-7 VLE.`,
       parts: [
         { id: "practice-batch-P5a", label: "(a)", marks: "", topic: "batch",
-          sub: "Variable reflux at constant xD: initial and final L0/D", type: "numerical", syllabus: "in", repeats: [],
+          sub: "Variable reflux at constant xD: initial and final L0/D", type: "numerical", syllabus: "in", repeats: ["2021-22-Q5d"],
           origin: "slides", ref: String.raw`Batch distillation slides, pp. 18, 24–25 (Problem D4, solution labelled 9-D16); Wankat 3e, Problem 9.D16*`,
           text: String.raw`What initial and what final external reflux ratios $L_0/D$ must be used?`,
           solution: String.raw`**Method (slides):** with $x_D$ and the number of contacts fixed, find by trial the slope L/V for which 3 steps from $(x_D, x_D)$ end at the current still-pot composition. The Rayleigh equation is not needed because $x_D$ is constant.
@@ -178,7 +178,7 @@ $$\left(\frac{L_0}{D}\right)_{final} = \frac{0.869}{0.131} = 6.6$$
 **Slide/book:** $(L/V)_a = 0.3214$, $(L_0/D)_{initial}$ = 0.47 ✓. $(L/V)_b = 0.8452$, $(L_0/D)_{final}$ = 5.46: our 6.6 is higher. The final condition is close to the total-reflux limit (3 contacts at total reflux from $x_W$ = 0.08 reach only $x_D$ = 0.87), so L/D is extremely sensitive. With the book's L/V = 0.845 the third step ends at $x_W$ = 0.087 instead of 0.080. A small graphical error in $x_W$ is a large error in L/D.`,
           answer: String.raw`$(L_0/D)_{initial}$ ≈ 0.47 (L/V = 0.317); $(L_0/D)_{final}$ ≈ 6.6 (L/V = 0.869). Book: 0.47 and 5.46; the final value is very sensitive near total reflux.` },
         { id: "practice-batch-P5b", label: "(b)", marks: "", topic: "batch",
-          sub: "Variable reflux: distillate and final still-pot amounts by mass balance", type: "numerical", syllabus: "in", repeats: [],
+          sub: "Variable reflux: distillate and final still-pot amounts by mass balance", type: "numerical", syllabus: "in", repeats: ["2021-22-Q5d"],
           origin: "slides", ref: String.raw`Batch distillation slides, p. 25; Wankat 3e, Problem 9.D16*`,
           text: String.raw`How much distillate is withdrawn, and what is the final amount $W_{final}$ left in the still pot?`,
           solution: String.raw`With constant $x_D$, overall balances over the whole batch are enough:
@@ -193,7 +193,7 @@ The Rayleigh equation with constant $x_D$ gives the same result: $\ln(F/W) = \in
 
     { id: "practice-batch-P6", q: 6, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-batch-P6a", label: "", marks: "", topic: "batch",
-        sub: "Batch vs continuous: advantages, disadvantages and choice by industry", type: "theory", syllabus: "in", repeats: [],
+        sub: "Batch vs continuous: advantages, disadvantages and choice by industry", type: "theory", syllabus: "in", repeats: ["2013-14-Q3a", "2015-16-Q7a", "2020-21-Q8a", "2022-23-Q8a"],
         origin: "slides", ref: String.raw`Batch distillation slides, p. 22 (Problem A4, from an earlier Wankat edition)`,
         text: String.raw`Discuss the advantages and disadvantages of batch distillation compared with continuous distillation. Would you expect batch or continuous distillation in: (a) a large basic chemical plant; (b) a fine chemicals plant; (c) a petroleum refinery; (d) a petrochemical plant; (e) a pharmaceutical plant; (f) a cryogenic air separation plant for oxygen; (g) a solvent-recovery still in a painting operation; (h) a farmer's ethanol facility? Why?`,
         solution: String.raw`**Advantages of batch**
@@ -222,7 +222,7 @@ The Rayleigh equation with constant $x_D$ gives the same result: $\ln(F/W) = \in
 
     { id: "practice-batch-P7", q: 7, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-batch-P7a", label: "", marks: "", topic: "batch",
-        sub: "Which batch systems use less energy than continuous? (MCQ)", type: "theory", syllabus: "in", repeats: [],
+        sub: "Which batch systems use less energy than continuous? (MCQ)", type: "theory", syllabus: "in", repeats: ["2016-17-Q1g", "2020-21-Q8b"],
         origin: "slides", ref: String.raw`Batch distillation slides, p. 23; Wankat 3e, Problem 9.A5`,
         text: String.raw`Which system(s) need less energy as batch than as continuous distillation for the same separation? (a) simple batch vs one-stage continuous; (b) multistage batch vs multistage continuous; (c) batch vs continuous steam distillation; (d) all; (e) a and b; (f) a and c; (g) b and c; (h) none. Explain.`,
         solution: String.raw`**Answer: (f), a and c.**

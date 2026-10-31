@@ -44,7 +44,7 @@ $x_3 = 0.0207$ is essentially $x_B = 0.0202$ (a fourth contact would add only 3 
     { id: "practice-mccabe-thiele-P2", q: 2, section: "S", compulsory: false, stem: String.raw`Calculate the slope of the feed line for each of the following feeds.`,
       parts: [
         { id: "practice-mccabe-thiele-P2a", label: "(a)", marks: "", topic: "mccabe-thiele",
-        sub: "Two-phase feed, 80 % vaporized", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Two-phase feed, 80 % vaporized", type: "numerical", syllabus: "in", repeats: ["2011-12-Q6a", "2020-21-Q6d"],
         origin: "slides", ref: String.raw`Slides 4B, "Feed Line Calculations" (a); Wankat 3e, Example 4-2a`,
         text: String.raw`A two-phase feed of which 80 % is vaporized at column conditions.`,
         solution: String.raw`For a two-phase feed the liquid part joins the liquid flow: $\bar{L} = L + L_F = L + 0.2F$, so
@@ -53,14 +53,14 @@ $$q = \frac{\bar{L} - L}{F} = 0.2,\qquad \text{slope} = \frac{q}{q - 1} = \frac{
 ![The feed lines of this question drawn through a common z](fig/practice-mccabe-thiele-P2-sol.svg)`,
         answer: String.raw`q = 0.2, slope = −0.25.` },
         { id: "practice-mccabe-thiele-P2b", label: "(b)", marks: "", topic: "mccabe-thiele",
-        sub: "Superheated vapor, 1 mol liquid vaporized per 9 mol feed", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Superheated vapor, 1 mol liquid vaporized per 9 mol feed", type: "numerical", syllabus: "in", repeats: ["2011-12-Q6a", "2020-21-Q6d"],
         origin: "slides", ref: String.raw`Slides 4B, "Feed Line Calculations" (b); Wankat 3e, Example 4-2b`,
         text: String.raw`A superheated vapor feed; 1 mol of liquid vaporizes on the feed stage for every 9 mol of feed.`,
         solution: String.raw`Cooling the feed to saturation vaporizes $v = F/9$ of the liquid coming down: $\bar{L} = L - F/9$ and $\bar{V} = V + F + F/9$. Hence
 $$q = \frac{\bar{L} - L}{F} = -\frac{1}{9} = -0.111,\qquad \text{slope} = \frac{-1/9}{-1/9 - 1} = \frac{1}{10} = 0.10$$`,
         answer: String.raw`q = −1/9, slope = +0.10.` },
         { id: "practice-mccabe-thiele-P2c", label: "(c)", marks: "", topic: "mccabe-thiele",
-        sub: "Liquid subcooled by 35 °F", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Liquid subcooled by 35 °F", type: "numerical", syllabus: "in", repeats: ["2011-12-Q6a", "2020-21-Q6d"],
         origin: "slides", ref: String.raw`Slides 4B, "Feed Line Calculations" (c); Wankat 3e, Example 4-2c`,
         text: String.raw`A liquid feed subcooled by 35 °F; average liquid heat capacity 30 Btu/(lbmol °F), λ = 15 000 Btu/lbmol.`,
         solution: String.raw`The vapor that condenses, $c$, heats the feed to its bubble point: $c\lambda = FC_{PL}(T_{BP} - T_F)$. Then $\bar{L} = L + F + c$ and
@@ -68,7 +68,7 @@ $$q = 1 + \frac{C_{PL}(T_{BP} - T_F)}{\lambda} = 1 + \frac{30(35)}{15\,000} = 1.
 Even 35 °F of subcooling gives a nearly vertical feed line.`,
         answer: String.raw`q = 1.07, slope = 15.3.` },
         { id: "practice-mccabe-thiele-P2d", label: "(d)", marks: "", topic: "mccabe-thiele",
-        sub: "Ethanol–water 40 mol% at 40 °C, q from the H–x chart", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Ethanol–water 40 mol% at 40 °C, q from the H–x chart", type: "numerical", syllabus: "in", repeats: ["2011-12-Q6a", "2020-21-Q6d"],
         origin: "slides", ref: String.raw`Slides 4B, "Feed Line Calculations" (d); Wankat 3e, Example 4-2d`,
         text: String.raw`An ethanol–water feed, 40 mol% ethanol, at 40 °C and 1 kg/cm².`,
         solution: String.raw`Use $q = (H - h_F)/(H - h)$ with all enthalpies at the same composition, so the molar mass cancels and the mass-basis chart can be used.
@@ -126,7 +126,7 @@ Fraction of the last step: $(0.039 - 0.020)/(0.039 - 0.006) = 0.57$, so 13.6 con
     { id: "practice-mccabe-thiele-P4", q: 4, section: "S", compulsory: false, stem: String.raw`A column (total condenser, partial reboiler, saturated-liquid reflux, CMO, 1 atm) separates ethanol from n-propanol with constant $\alpha = 2.1$. $z = 0.48$, $x_D = 0.96$, $x_B = 0.04$. Find the number of stages and the optimum feed location for the cases below.`,
       parts: [
         { id: "practice-mccabe-thiele-P4a", label: "(a)", marks: "", topic: "mccabe-thiele",
-        sub: "Ethanol–propanol α = 2.1, L/D = 3: effect of q (0.4 and 2.0)", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Ethanol–propanol α = 2.1, L/D = 3: effect of q (0.4 and 2.0)", type: "numerical", syllabus: "in", repeats: ["2016-17-Q3a", "2020-21-Q7a"],
         origin: "slides", ref: String.raw`Slides 4B, "Problem: Ethanol-Propanol System" (a) (also asked in the 2016-17 and 2020-21 finals for q = 0.4)`,
         text: String.raw`$L/D = 3$ with (i) $q = 0.4$ and (ii) $q = 2.0$.`,
         solution: String.raw`**Equilibrium:** $y = \dfrac{2.1x}{1 + 1.1x}$, inverse $x = \dfrac{y}{2.1 - 1.1y}$.
@@ -152,7 +152,7 @@ Result: 12.2 contacts → 13 = 12 stages + partial reboiler, feed on stage 6.
 **Comparison:** the subcooled feed ($q = 2$) raises $\bar{L}$ and $\bar{V}$ (more boilup), moves the intersection away from the equilibrium curve and saves about 3.5 stages; the feed stage moves up.`,
         answer: String.raw`(i) q = 0.4: 15.7 contacts → 15 stages + reboiler, feed on stage 8; (ii) q = 2.0: 12.2 contacts → 12 stages + reboiler, feed on stage 6.` },
         { id: "practice-mccabe-thiele-P4b", label: "(b)", marks: "", topic: "mccabe-thiele",
-        sub: "Ethanol–propanol α = 2.1, q = 0.4: effect of L/D (2.5 and 6)", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Ethanol–propanol α = 2.1, q = 0.4: effect of L/D (2.5 and 6)", type: "numerical", syllabus: "in", repeats: ["2016-17-Q3a", "2020-21-Q7a"],
         origin: "slides", ref: String.raw`Slides 4B, "Problem: Ethanol-Propanol System" (b)`,
         text: String.raw`$q = 0.4$ with (i) $L/D = 2.5$ and (ii) $L/D = 6$.`,
         solution: String.raw`Feed line as in (a)(i): $y = -0.667x + 0.80$.
@@ -241,7 +241,7 @@ $$y_k = \frac{\bar{L}}{\bar{V}}x_{k-1} - \left(\frac{\bar{L}}{\bar{V}} - 1\right
 | $y$ | 0.21 | 0.37 | 0.51 | 0.64 | 0.72 | 0.79 | 0.86 | 0.91 | 0.96 | 0.98 |`,
       parts: [
         { id: "practice-mccabe-thiele-P7a", label: "(a)", marks: "", topic: "mccabe-thiele",
-        sub: "Benzene–toluene: product flow rates", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Benzene–toluene: product flow rates", type: "numerical", syllabus: "in", repeats: ["2011-12-Q6b"],
         origin: "slides", ref: String.raw`Slides 4B, "Problem: Benzene-Toluene System" (a); Seader, Henley & Roper 3e, ch. 7 (McCabe–Thiele worked example)`,
         text: String.raw`Find the top and bottom product flow rates.`,
         solution: String.raw`In mass units, $D = F\dfrac{z - x_B}{x_D - x_B} = 30\,\dfrac{0.40 - 0.02}{0.97 - 0.02} = 12.0$ kg/h and $B = 18.0$ kg/h.
@@ -249,7 +249,7 @@ $$y_k = \frac{\bar{L}}{\bar{V}}x_{k-1} - \left(\frac{\bar{L}}{\bar{V}} - 1\right
 In moles ($M_B = 78.11$, $M_T = 92.14$): $z = 0.440$, $x_D = 0.974$, $x_B = 0.0235$; $\bar{M}_F = 85.96$, $F = 0.349$ kmol/h, $D = 0.153$ kmol/h, $B = 0.196$ kmol/h.`,
         answer: String.raw`D = 12.0 kg/h (0.153 kmol/h), B = 18.0 kg/h (0.196 kmol/h).` },
         { id: "practice-mccabe-thiele-P7b", label: "(b)", marks: "", topic: "mccabe-thiele",
-        sub: "Benzene–toluene, R = 3.5: number of stages", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Benzene–toluene, R = 3.5: number of stages", type: "numerical", syllabus: "in", repeats: ["2011-12-Q6b"],
         origin: "slides", ref: String.raw`Slides 4B, "Problem: Benzene-Toluene System" (b); Seader, Henley & Roper 3e, ch. 7 (McCabe–Thiele worked example)`,
         text: String.raw`Find the number of equilibrium stages with the given equilibrium data.`,
         solution: String.raw`**Assumptions:** CMO, total condenser, partial reboiler, saturated-liquid feed ($q = 1$); data interpolated with a monotone curve through (0, 0) and (1, 1).

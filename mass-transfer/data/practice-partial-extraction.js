@@ -38,7 +38,7 @@ Acetone recovered in the extract ≈ 0.296(537)/[0.55(250) + 0.1(400)] ≈ 90 %,
 
     { id: "practice-partial-extraction-P2", q: 2, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-partial-extraction-P2a", label: "", marks: "", topic: "partial-extraction",
-        sub: "Countercurrent extraction: E_N, difference point and stage stepping (acetic acid–water–IPE)", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Countercurrent extraction: E_N, difference point and stage stepping (acetic acid–water–IPE)", type: "numerical", syllabus: "in", repeats: ["2015-16-Q5a", "2017-18-Q3a"],
         origin: "slides", ref: String.raw`Slides: Extraction of Partially Miscible Systems, pp. 17–19 (Example 18-2; Wankat 3e Example 13-4, Table 13-5)`,
         text: String.raw`1000 kg/h of 35 wt % acetic acid (A) in water (D) is extracted countercurrently with 1475 kg/h of pure isopropyl ether (S) at 20 °C and 1 atm. The raffinate leaving must contain 10 wt % acid. Find the outlet concentrations and the number of equilibrium stages. Equilibrium data (Treybal; wt %, rows in equilibrium):
 
@@ -88,7 +88,7 @@ $E_6$ passes $y_{A,N} = 0.156$: fraction of stage 6 = (0.156 − 0.144)/(0.178 �
 
     { id: "practice-partial-extraction-P3", q: 3, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-partial-extraction-P3a", label: "", marks: "", topic: "partial-extraction",
-        sub: "Three-stage countercurrent: stepping from E_N with Δ = E_N − F (no trial)", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Three-stage countercurrent: stepping from E_N with Δ = E_N − F (no trial)", type: "numerical", syllabus: "in", repeats: ["2018-19-Q3a", "2021-22-Q3c"],
         origin: "slides", ref: String.raw`Slides: Extraction of Partially Miscible Systems, pp. 20–21 (Problem D9); Wankat 3e, Problem 13.D28*`,
         text: String.raw`Acetic acid is extracted from water with isopropyl ether at 20 °C and 1 atm (data of Problem 2) in a column with three equilibrium stages. The feed is 1000 kg/h of 40 wt % acid, 60 wt % water. The extract leaving is 2500 kg/h with 20 wt % acid. The entering extract (not pure ether) contains no water. Find (a) the exit raffinate concentration, (b) the entering extract concentration, and (c) the flow rates of the exit raffinate and entering extract.`,
         solution: String.raw`**Given:** $R_{N+1} = F = 1000$ kg/h at (0.60, 0.40); $E_N$ = 2500 kg/h, $y_{A,N} = 0.20$ on the extract curve; N = 3; $y_{D,0} = 0$.
@@ -118,7 +118,7 @@ $$0.141(R_1 + 1500) + 400 = 0.308R_1 + 500 \Rightarrow R_1 = 673\ \mathrm{kg/h},
 
     { id: "practice-partial-extraction-P4", q: 4, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-partial-extraction-P4a", label: "", marks: "", topic: "partial-extraction",
-        sub: "Single stage with two feeds and solvent (methylcyclohexane–n-heptane–aniline)", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Single stage with two feeds and solvent (methylcyclohexane–n-heptane–aniline)", type: "numerical", syllabus: "in", repeats: ["2023-24-Q5b"],
         origin: "slides", ref: String.raw`Slides: Extraction of Partially Miscible Systems, pp. 26–27 (Problem D1); Wankat 3e, Problem 13.D21*`,
         text: String.raw`Methylcyclohexane (A) is extracted from n-heptane (D) into aniline (S). Feed 1: 100 kg/h of 60 % A, 40 % D; feed 2: 50 kg/h of 20 % A, 80 % D; both are mixed with 200 kg/h of pure aniline in one equilibrium stage. (a) Find the extract and raffinate compositions. (b) Find the extract flow rate. Equilibrium data (wt %, Varteressian and Fenske):
 
@@ -156,7 +156,7 @@ $$E = 350\frac{0.200 - 0.407}{0.0596 - 0.407} = 208\ \mathrm{kg/h},\qquad R = 14
 
     { id: "practice-partial-extraction-P5", q: 5, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-partial-extraction-P5a", label: "", marks: "", topic: "partial-extraction",
-        sub: "Two-feed extraction column: external balances and the two difference points", type: "derivation", syllabus: "in", repeats: [],
+        sub: "Two-feed extraction column: external balances and the two difference points", type: "derivation", syllabus: "in", repeats: ["2022-23-Q3c"],
         origin: "slides", ref: String.raw`Slides: Extraction of Partially Miscible Systems, pp. 22–25 (Figs. 18-19, 18-20; Eqs. 18-22 to 18-25)`,
         text: String.raw`A countercurrent extraction column receives solvent $E_0 = S$ at stage 1, feed $F_1 = R_{N+1}$ at stage N and a second feed $F_2$ at an intermediate stage $N_F$. The feeds, solvent and the raffinate concentration $x_{A,1}$ are specified. Derive the external balances, show how to locate M, $E_N$ and $R_1$, and explain how the stages are stepped off with two difference points. Illustrate with $F_1$ = 1000 kg/h (40 % acetic acid, 60 % water), $F_2$ = 500 kg/h (15 % acid), S = 2000 kg/h pure IPE and $x_{A,1}$ = 0.05 (data of Problem 2).`,
         solution: String.raw`**External balances** (overall, acid, water):

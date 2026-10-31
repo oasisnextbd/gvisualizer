@@ -121,7 +121,7 @@ $$\bar{L}=L+qF,\qquad \bar{V}=V-(1-q)F,\qquad q=\frac{H-h_F}{H-h}$$
           answer: String.raw`CMO gives constant L, V above and $\bar{L}$, $\bar{V}$ below, with steps only at the feed: subcooled (q > 1) $\bar{L}$ = L + qF > L + F and $\bar{V}$ = V + (q − 1)F > V; two-phase $\bar{L}$ = L + qF and $\bar{V}$ = V − (1 − q)F < V.`},
         { id: "2015-16-Q2b", label: "(b)", marks: "25",
           topic: "advanced-distillation", sub: "Open steam column: minimum reflux, stages at 2Rmin and steam rate (ethanol–water)",
-          type: "numerical", syllabus: "in", repeats: ["2023-24-Q3a"],
+          type: "numerical", syllabus: "in", repeats: ["2023-24-Q3a", "practice-advanced-distillation-P5a"],
           text: String.raw`A distillation column is separating 1000 moles/hr of a 32 mole% ethanol, 68 mole% water mixture. The feed enters as a sub-cooled liquid that will condense one mole of vapor on the feed plate for every four moles of feed. The column has a total condenser and uses open steam heating. A distillate product $y_D$ = 0.75 and a bottoms product $x_B$ = 0.1 are desired. CMO is valid. The steam used is pure saturated water vapor. (VLE data table for ethanol–water attached.)
 
 (i) Find the minimum reflux ratio, $(L/D)_{min}$.
@@ -189,7 +189,7 @@ Check: $F + S = 1758.6 = D + B = 221.7 + 1536.9$ ✓.
       parts: [
         { id: "2015-16-Q3a", label: "(a)", marks: "17",
           topic: "mccabe-thiele", sub: "Top operating line with direct cooling water instead of a condenser",
-          type: "derivation", syllabus: "partial", repeats: [],
+          type: "derivation", syllabus: "partial", repeats: ["practice-advanced-distillation-P6a"],
           text: String.raw`When water is the more volatile component we do not need a condenser but can use direct cooling water as shown in the Figure for Q. 3(a). We set $y_D$ = 0.92, $x_B$ = 0.04, z = 0.4 (all mole fractions water), feed is a saturated vapor, feed rate is 1000 kmoles/hr, P = 1 atm, CMO is valid, the entering cooling water (C) is a saturated liquid and is pure water ($x_c$ = 0), and C/D = 3/4. Derive and plot the top operating line. Note that external balances (that is, balances around the entire column) are not required.
 
 (Figure: column with cooling water C, $x_C$ entering stage 1 at the top and vapor D, $y_D$ leaving the top; feed F, z at the middle; stage N at the bottom with $x_N$, $\bar{L}$ to a partial reboiler $Q_R$ and $\bar{V}$, $y_{N+1}$ returning; bottoms B, $x_B$; $Q_{col}$ = 0.)`,
@@ -219,7 +219,7 @@ $$\boxed{y=0.75x+0.17}$$
           answer: String.raw`With L = C and V = D (CMO, saturated cooling water): y = (C/D)x + $y_D$ − (C/D)$x_C$ = 0.75x + 0.17 (using $x_C$ = 1, pure water; the printed $x_C$ = 0 is a misprint). The line passes through (1, 0.92), meets y = x at 0.68 and the feed line y = 0.4 at x = 0.307.`},
         { id: "2015-16-Q3b", label: "(b)", marks: "18",
           topic: "column-balances", sub: "Condenser and reboiler duties from the ethanol–water H–x chart (two-phase feed)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-column-balances-P5"],
           text: String.raw`A distillation column is separating ethanol from water at a pressure of 1 kg/cm². A two-phase feed of 20 wt% ethanol at 93°C is input at 100 kg/min. The column has a total condenser and a partial reboiler. The distillate composition is 90 wt% ethanol. Distillate and reflux are at 20°C. Bottoms composition is 1 wt% ethanol. Reflux ratio is $L_0/D$ = 3. Find $Q_C$ (condenser heat load) and $Q_R$ (reboiler heat load). (Enthalpy–composition diagram is attached.)`,
           solution: String.raw`> This is the Part A side-stream slide problem (Wankat 3.D5) without the side stream.
 
@@ -352,7 +352,7 @@ The total tray pressure drop is $h_{\Delta p,dry} + h_{weir} + h_{crest}$ (plus 
       parts: [
         { id: "2015-16-Q5a", label: "(a)", marks: "25",
           topic: "partial-extraction", sub: "Countercurrent extraction with the difference point (acetic acid–water–isopropyl ether)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-partial-extraction-P2a"],
           text: String.raw`A solution of acetic acid (A) in water (D) is to be extracted using isopropyl ether as the solvent (S). The feed is 1000 kg/hr of a solution containing 35 wt% acid and 65 wt% water. The solvent is pure and its flow rate is 1475 kg/hr. The exiting raffinate stream should contain 10 wt% acetic acid. Find the outlet concentrations and the number of equilibrium stages required for this separation. The equilibrium data are given below (triangular diagram attached).
 
 | Water layer $x_A$ | $x_D$ | $x_S$ | Ether layer $y_A$ | $y_D$ | $y_S$ |
@@ -411,7 +411,7 @@ Fraction of stage 6 = (0.156 − 0.132)/(0.160 − 0.132) = 0.84, so **N ≈ 5.8
           answer: String.raw`M at $x_A$ = 0.141; $R_1$ = 633 kg/h (10% acid, 87.9% water); $E_N$ = 1842 kg/h (15.6% acid, 5.1% water, 79.3% ether); Δ at ($x_D$, $x_A$) = (−0.66, −0.075); N ≈ 5.8 → 6 equilibrium stages.`},
         { id: "2015-16-Q5b", label: "(b)", marks: "10",
           topic: "immiscible-extraction", sub: "Dilute countercurrent extraction of benzoic acid by Kremser",
-          type: "numerical", syllabus: "in", repeats: ["2018-19-Q3c"],
+          type: "numerical", syllabus: "in", repeats: ["2018-19-Q3c", "practice-immiscible-extraction-P6a"],
           text: String.raw`A water solution containing 0.005 mol fraction benzoic acid is to be extracted using pure benzene as the solvent. If the feed rate is 100 moles/hr and the solvent rate is 10 moles/hr, find the number of equilibrium stages required to reduce the water concentration to 0.0001 mole fraction benzoic acid. Operation is isothermal at 6°C, where equilibrium data can be represented as: mole fraction of benzoic acid in water = 0.0446 × (mole fraction of benzoic acid in benzene).`,
           solution: String.raw`**Given:** R (water) = 100 mol/h with $x_0$ = 0.005; E (benzene) = 10 mol/h with $y_{N+1}$ = 0; $x_N$ = 0.0001; $x = 0.0446y$, so $y = mx$ with m = 1/0.0446 = 22.42.
 **Find:** N.
@@ -460,7 +460,7 @@ Result: **N = 4.13 → 5 equilibrium stages**.
           answer: String.raw`Insoluble carrier and nonvolatile solvent (constant G and L), isothermal and isobaric columns with negligible heat of absorption, equilibrium stages, steady state with recycled solvent; work in mole ratios because the gas is concentrated.`},
         { id: "2015-16-Q6b", label: "(b)", marks: "15",
           topic: "absorption", sub: "Concentrated absorber in mole ratios: outlet liquid and number of stages",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-absorption-P8a"],
           text: String.raw`Calculate the number of stages in the absorber and the liquid concentration leaving.`,
           solution: String.raw`> Wankat Problem 12.D13 (slides D13); the slide's graphical answer is 8 stages.
 
@@ -504,7 +504,7 @@ The operating line and the equilibrium curve come close together at the dilute (
           answer: String.raw`G = 1190, L = 796 mol/day; $X_{out}$ = 0.2613 (x = 0.207); stepping in mole ratios gives 8.8 → 9 equilibrium stages.`},
         { id: "2015-16-Q6c", label: "(c)", marks: "15",
           topic: "absorption", sub: "Existing 4-stage stripper: trial-and-error stripping gas rate",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-absorption-P8a"],
           text: String.raw`If the stripper is an already existing column with four equilibrium stages, calculate the gas flow rate of stream B (concentration is 0.5 mole% A) and the outlet gas concentration from the stripper.`,
           solution: String.raw`**Given:** liquid in at the top $X_{in}$ = 0.2613 (absorber outlet); liquid out at the bottom $X_{out}$ = 0.00503 (back to the absorber); L = 796 mol solvent/day; stream B enters the bottom with $Y_{in}$ = 0.00503; equilibrium y = 3x; N = 4.
 **Find:** G (stream B) and $Y_{out}$.
@@ -539,7 +539,7 @@ The liquid entering stage 1 is $X_0$ = 0.2613 = $X_{in}$ ✓.
       parts: [
         { id: "2015-16-Q7a", label: "(a)", marks: "10",
           topic: "batch", sub: "Batch versus continuous distillation",
-          type: "theory", syllabus: "in", repeats: ["2013-14-Q3a", "2020-21-Q8a", "2022-23-Q8a"],
+          type: "theory", syllabus: "in", repeats: ["2013-14-Q3a", "2020-21-Q8a", "2022-23-Q8a", "practice-batch-P6a"],
           text: String.raw`Discuss the differences between batch and continuous distillation column.`,
           solution: String.raw`| aspect | batch distillation | continuous distillation |
 |---|---|---|
@@ -557,7 +557,7 @@ The liquid entering stage 1 is $X_0$ = 0.2613 = $X_{in}$ ✓.
           answer: String.raw`Batch: unsteady, charge in the still, enriching section only, versatile and small-scale, changing compositions, Rayleigh-based design, more energy. Continuous: steady state, feed at an optimum stage with both sections, large single-product throughput, more energy-efficient.`},
         { id: "2015-16-Q7b", label: "(b)", marks: "25",
           topic: "batch", sub: "Constant-reflux batch distillation, still + 1 stage, methanol–water (Rayleigh)",
-          type: "numerical", syllabus: "in", repeats: ["2020-21-Q8c"],
+          type: "numerical", syllabus: "in", repeats: ["2020-21-Q8c", "practice-batch-P4a"],
           text: String.raw`A one stage batch distillation column is used to distill a mixture of methanol and water at $L_0/D$ = 1.85. 1 kg mole of feed contains 57 mole% methanol. It is desired that the final bottoms concentration of methanol is 15 mole%. Find $W_{final}$, D and $x_{D,avg}$ for this system. Equilibrium data (mol% methanol):
 
 | x | 0 | 2 | 4 | 6 | 8 | 10 | 15 | 20 | 30 | 40 | 50 | 60 | 70 | 80 | 90 | 100 |
@@ -616,7 +616,7 @@ $$\ln\frac{F}{W_{final}}=\int_{x_{W,final}}^{x_F}\frac{dx_W}{x_D-x_W}$$
       parts: [
         { id: "2015-16-Q8a", label: "(a)", marks: "20",
           topic: "absorption", sub: "Derivation of the Kremser equation (gas-phase form)",
-          type: "derivation", syllabus: "in", repeats: ["2011-12-Q2a", "2012-13-Q1a"],
+          type: "derivation", syllabus: "in", repeats: ["2011-12-Q2a", "2012-13-Q1a", "practice-absorption-P5"],
           text: String.raw`Starting from the operating line equation prove the Kremser equation in the form
 $$N=\frac{\ln\left[\left(1-\frac{mV}{L}\right)\left(\frac{y_{N+1}-y_1^*}{y_1-y_1^*}\right)+\frac{mV}{L}\right]}{\ln\left(\frac{L}{mV}\right)}$$`,
           solution: String.raw`**Assumptions (slides):**

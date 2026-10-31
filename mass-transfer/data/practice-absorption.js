@@ -53,7 +53,7 @@ $$N = \frac{\ln\left[\left(1 - \dfrac{1}{A}\right)\dfrac{y_{N+1} - y_1^*}{y_1 - 
       stem: String.raw``,
       parts: [
         { id: "practice-absorption-P2", label: "", marks: "", topic: "absorption",
-          sub: "Concentrated CO₂ absorber in mole ratios with 1.5 L_min", type: "numerical", syllabus: "in", repeats: [],
+          sub: "Concentrated CO₂ absorber in mole ratios with 1.5 L_min", type: "numerical", syllabus: "in", repeats: ["2012-13-Q1b", "2017-18-Q1c"],
           origin: "slides", ref: String.raw`Slides Absorption & Stripping, Example 15-1 (Wankat 3e Example 12-3)`,
           text: String.raw`A gas of 90 mol% N₂ and 10 mol% CO₂ is to be contacted with pure water at 5 °C and 10 atm, with cooling coils keeping the operation isothermal. 92% of the CO₂ must be absorbed, using a liquid rate of 1.5 times the minimum. How many equilibrium stages are required? Use a basis of 1 mol/h of entering gas. Henry's constant for CO₂ at 5 °C is 876 atm/mole fraction.`,
           solution: String.raw`**Given:** $y_{N+1} = 0.10$, 92% absorbed, $x_0 = 0$, $p = 10$ atm, $H = 876$ atm/mole fraction. Basis: 1 mol/h of feed gas.
@@ -132,7 +132,7 @@ $$N = \frac{\ln\left[\left(1 - \dfrac1S\right)\dfrac{X_0 - X_N^*}{X_N - X_N^*} +
       stem: String.raw``,
       parts: [
         { id: "practice-absorption-P4", label: "", marks: "", topic: "absorption",
-          sub: "Comparison of absorber and stripper", type: "theory", syllabus: "in", repeats: [],
+          sub: "Comparison of absorber and stripper", type: "theory", syllabus: "in", repeats: ["2016-17-Q6c", "2017-18-Q1a", "2021-22-Q2b", "2022-23-Q2a"],
           origin: "slides", ref: String.raw`Slides Absorption & Stripping, Comparison between Absorber and Stripper`,
           text: String.raw`Compare an absorber and a stripper under these headings: principle, application, equilibrium relationship, operating equation, direction of mass transfer, relative position of the equilibrium and operating lines, and stepping off.`,
           solution: String.raw`| heading | absorber | stripper |
@@ -154,7 +154,7 @@ $$N = \frac{\ln\left[\left(1 - \dfrac1S\right)\dfrac{X_0 - X_N^*}{X_N - X_N^*} +
       stem: String.raw``,
       parts: [
         { id: "practice-absorption-P5", label: "", marks: "", topic: "absorption",
-          sub: "Derivation of the Kremser equation (gas-phase form)", type: "derivation", syllabus: "in", repeats: [],
+          sub: "Derivation of the Kremser equation (gas-phase form)", type: "derivation", syllabus: "in", repeats: ["2011-12-Q2a", "2015-16-Q8a"],
           origin: "slides", ref: String.raw`Slides Absorption & Stripping, Kremser equation and its derivation (Wankat 3e §12.4)`,
           text: String.raw`State the assumptions and derive the Kremser equation for a dilute countercurrent absorber with N equilibrium stages, in the gas-phase form
 $$\frac{y_{N+1} - y_1}{y_1 - y_1^*} = \frac{(L/mV) - (L/mV)^{N+1}}{1 - (L/mV)}$$
@@ -219,7 +219,7 @@ $$\frac{x_N - x_N^*}{x_0 - x_N^*} = \frac{1 - S}{1 - S^{N+1}} \;\Rightarrow\; x_
       stem: String.raw``,
       parts: [
         { id: "practice-absorption-P7", label: "", marks: "", topic: "absorption",
-          sub: "CO₂ stripper with nitrogen and E_MV = 40%: McCabe–Thiele and Kremser", type: "numerical", syllabus: "in", repeats: [],
+          sub: "CO₂ stripper with nitrogen and E_MV = 40%: McCabe–Thiele and Kremser", type: "numerical", syllabus: "in", repeats: ["2018-19-Q1c", "2021-22-Q2c"],
           origin: "slides", ref: String.raw`Slides Absorption & Stripping, Problem D6; Wankat 3e Problem 12.D6*`,
           text: String.raw`CO₂ is to be stripped from water by heating the water and passing it countercurrent to nitrogen in a staged stripper, isothermal and isobaric at 60 °C and 1 atm. The water contains $9.2\times10^{-6}$ mole fraction CO₂ and flows at 100,000 lb/h. Pure N₂ enters at 2500 ft³/h (measured at 1 atm and 60 °C). The outlet water must be $2\times10^{-7}$ mole fraction CO₂. Ignore N₂ solubility and water volatility. Henry's constant for CO₂ at 60 °C is 3410 atm/mole fraction. With a Murphree vapor efficiency of 40%, find the outlet vapor composition and the number of real stages.`,
           solution: String.raw`**Given:** $x_0 = 9.2\times10^{-6}$ (liquid in, top), $x_N = 2\times10^{-7}$ (out, bottom), $y_{N+1} = 0$, $E_{MV} = 0.40$, $T = 60$ °C, $p = 1$ atm.
@@ -258,7 +258,7 @@ $$N_{actual} = -\frac{\ln\left\{\left[1 - \dfrac{mV}{L}\right]\left[\dfrac{y_{N+
       stem: String.raw`A gas treatment plant has an absorber that removes an obnoxious impurity A from a gas, and a stripper that regenerates the solvent using part of the treated gas, heated (stream B, 0.5 mol% A). The absorber operates at 1.5 atm and 24 °C with equilibrium $y = 0.5x$. The stripper operates at 1 atm and 92 °C with $y = 3.0x$ (mole fractions). The feed gas is 1400 mol/day with 15 mol% A in an insoluble carrier (air). The treated gas must be 0.5 mol% A. The liquid entering the absorber is 800 mol/day with 0.5 mol% A.`,
       parts: [
         { id: "practice-absorption-P8a", label: "(a)", marks: "", topic: "absorption",
-          sub: "Gas-plant absorber: stages and leaving liquid (mole ratios)", type: "numerical", syllabus: "in", repeats: [],
+          sub: "Gas-plant absorber: stages and leaving liquid (mole ratios)", type: "numerical", syllabus: "in", repeats: ["2015-16-Q6b", "2015-16-Q6c"],
           origin: "slides", ref: String.raw`Slides Absorption & Stripping, Problem D13; Wankat 3e Problem 12.D23a*`,
           text: String.raw`Calculate the number of stages in the absorber and the concentration of the liquid leaving it.`,
           solution: String.raw`**Assumptions:** carrier insoluble and solvent nonvolatile (constant G and L on a solute-free basis); isothermal. The gas is concentrated (15%), so use mole ratios.
@@ -297,7 +297,7 @@ $$N_{actual} = -\frac{\ln\left\{\left[1 - \dfrac{mV}{L}\right]\left[\dfrac{y_{N+
 **Book answer:** N = 8 equilibrium stages, $X_{out} = 0.2614$. The outlet liquid matches ✓. For the stage count, careful stepping gives 8.8, i.e. 9 stages. The many small steps near the origin are easy to miss on the book's coarse graph.`,
           answer: String.raw`G = 1190, L = 796 mol/day; X_out = 0.2613 (book 0.2614 ✓); N ≈ 8.8 → 9 equilibrium stages (book quotes 8 from its graph).` },
         { id: "practice-absorption-P8b", label: "(b)", marks: "", topic: "absorption",
-          sub: "Existing 4-stage stripper: stripping-gas rate by trial and error", type: "numerical", syllabus: "in", repeats: [],
+          sub: "Existing 4-stage stripper: stripping-gas rate by trial and error", type: "numerical", syllabus: "in", repeats: ["2015-16-Q6b", "2015-16-Q6c"],
           origin: "slides", ref: String.raw`Slides Absorption & Stripping, Problem D13; Wankat 3e Problem 12.D23b*`,
           text: String.raw`The stripper is an existing column with four equilibrium stages. Calculate the gas flow rate of stream B (0.5 mol% A) and the outlet gas concentration from the stripper.`,
           solution: String.raw`**Stripper streams:**
@@ -350,7 +350,7 @@ $$N = \frac{\ln\left[\left(1 - \dfrac1S\right)\dfrac{X_{in} - X_N^*}{X_{out} - X
       stem: String.raw``,
       parts: [
         { id: "practice-absorption-P10", label: "", marks: "", topic: "absorption",
-          sub: "Outlet concentrations of a 4-stage ammonia stripper (Kremser)", type: "numerical", syllabus: "in", repeats: [],
+          sub: "Outlet concentrations of a 4-stage ammonia stripper (Kremser)", type: "numerical", syllabus: "in", repeats: ["2022-23-Q2c"],
           origin: "wankat", ref: String.raw`Wankat 3e, Problem 12.D10*`,
           text: String.raw`A stripping tower with four equilibrium stages removes ammonia from wastewater using air at 80 °F and 1 atm. The inlet air is pure and the inlet water contains 0.02 mole fraction NH₃. $L/V = 0.65$; equilibrium is $y = 1.414x$. Find the outlet concentrations.`,
           solution: String.raw`**Assumptions:** constant L/V, isothermal, straight equilibrium line. (At 2 mol% this is dilute enough for Kremser, as the problem intends.)

@@ -116,7 +116,7 @@ Typical example (slides): natural gas or refinery gas sweetening. An amine absor
           answer: String.raw`To regenerate and recycle the (costly) solvent and recover the solute. The absorber runs at high P and low T, the stripper at low P and high T with heat exchange, as in amine gas sweetening.` },
         { id: "2021-22-Q2b", label: "(b)", marks: "10",
           topic: "absorption", sub: "Absorber vs stripper comparison",
-          type: "theory", syllabus: "in", repeats: ["2016-17-Q6c", "2017-18-Q1a", "2018-19-Q1a", "2022-23-Q2a"],
+          type: "theory", syllabus: "in", repeats: ["2016-17-Q6c", "2017-18-Q1a", "2018-19-Q1a", "2022-23-Q2a", "practice-absorption-P4"],
           text: String.raw`Make a comparison between the absorption and stripping process in direction of mass transfer, relative position of equilibrium and operating lines and basis for the determination of column diameter.`,
           solution: String.raw`| Aspect | Absorption | Stripping (desorption) |
 |---|---|---|
@@ -135,7 +135,7 @@ Typical example (slides): natural gas or refinery gas sweetening. An amine absor
           answer: String.raw`Absorption moves solute gas → liquid, with the operating line above equilibrium and the pinch at the bottom ($L_{min}$). Stripping moves liquid → gas, with the operating line below equilibrium and the pinch at the top ($V_{min}$). Both are sized like distillation at the end with the largest total gas flow.` },
         { id: "2021-22-Q2c", label: "(c)", marks: "18",
           topic: "absorption", sub: "CO2 stripper with N2, Murphree efficiency 40%",
-          type: "numerical", syllabus: "in", repeats: ["2018-19-Q1c"],
+          type: "numerical", syllabus: "in", repeats: ["2018-19-Q1c", "practice-absorption-P7"],
           text: String.raw`We wish to design a stripping column to remove carbon dioxide from water. This is done by heating the water and passing it counter-current to a nitrogen stream in a staged stripper. Operation is isothermal and isobaric at 60°C and 1 atm pressure. The water contains $9.2\times10^{-6}$ mole fraction CO₂ and flows at 100,000 lb/hr. Nitrogen (N₂) enters the column as pure nitrogen and flows at 2500 ft³/hr. Nitrogen is at 1 atm and 60°C. We desire an outlet water concentration that is $2\times10^{-7}$ mole fraction CO₂. Ignore nitrogen solubility in water and ignore the volatility of the water. The respective Henry's law constant, H at 60°C is 3410 atm/mole fraction. Use a Murphree vapor efficiency of 40%. Determine the outlet vapor composition and number of real stages needed.`,
           solution: String.raw`**Given:** $x_0 = 9.2\times10^{-6}$, $x_N = 2\times10^{-7}$, $y_{N+1} = 0$; water 100,000 lb/h; N₂ 2500 ft³/h at 60°C and 1 atm; H = 3410 atm/mole frac (also Wankat Table 12-1); $E_{MV} = 0.40$.
 
@@ -190,7 +190,7 @@ General heuristics (slides): 1–2 stages → mixer-settler; 3–5 → sieve tra
           answer: String.raw`(i) Mixer-settler (or Karr/pulsed column); (ii) mechanically agitated: mixer-settler, RDC or Karr (centrifugal if Δρ is small); (iii) no moving parts: packed or spray columns in resistant materials, or pulsed sieve-plate columns.` },
         { id: "2021-22-Q3b", label: "(b)", marks: "17",
           topic: "immiscible-extraction", sub: "Acetic acid into 3-heptanol, countercurrent Kremser (slide D4)",
-          type: "numerical", syllabus: "in", repeats: ["2017-18-Q3b"],
+          type: "numerical", syllabus: "in", repeats: ["2017-18-Q3b", "practice-immiscible-extraction-P3a"],
           text: String.raw`We have a mixture of acetic acid in water and wish to extract this with 3-heptanol at 25°C. Equilibrium is (wt fraction acetic acid in solvent)/(wt fraction acetic acid in water) = 0.828. The inlet water solution flows at 550 lb/hr and is 0.0097 wt fraction acetic acid. We desire an outlet water concentration of 0.00046 wt fraction acetic acid. The solvent flow rate is 700 lb/hr. The entering solvent contains 0.0003 wt fraction acetic acid. Determine the outlet solvent concentration and the number of equilibrium stages required. Is this an economical way to extract acetic acid?`,
           solution: String.raw`**Given:** $R = 550$ lb/h, $x_0 = 0.0097$, $x_N = 0.00046$; $E = 700$ lb/h, $y_{N+1} = 0.0003$; $y = 0.828x$.
 
@@ -217,7 +217,7 @@ $$= \frac{\ln[0.1715]}{-0.0524} = 33.6$$
           answer: String.raw`$y_1 = 0.00756$ wt frac; mE/R = 1.054; N = 33.6, so 34 stages. Not economical: m < 1 and the solvent rate is only 1.06 $E_{min}$, giving many stages and a dilute extract that is costly to recover.` },
         { id: "2021-22-Q3c", label: "(c)", marks: "12",
           topic: "partial-extraction", sub: "Graphical method: exit raffinate and entering extract composition (given extract product)",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-partial-extraction-P3a"],
           text: String.raw`We are extracting (partially miscible extraction) formic acid from water with isobutyl ether at 30°C and 1 atm pressure. The column has the equilibrium stages. The entering feed rate is 1200 kg/hr. The feed is 40 wt% formic acid and 60 wt% water. The exiting extract stream has a flow rate of 2500 kg/hr and is 20 wt% formic acid. The entering extract stream (which is not pure isobutyl ether) contains no water. Consider a reasonable equilibrium diagram and demonstrate graphically how the followings can be determined: (i) The exit raffinate concentration (ii) The required entering extract stream concentration`,
           solution: String.raw`**Assumptions:** the number of stages is missing in the paper ("The column has the equilibrium stages"). As in the parent slide problem D9 (Wankat 13.D14), **3 equilibrium stages** are assumed. No formic acid–water–isobutyl ether data are given, so the construction below uses the acetic acid–water–isopropyl ether tie lines (Wankat Table 13-5) as the "reasonable equilibrium diagram". The numbers are illustrative; the method is the answer.
 
@@ -281,7 +281,7 @@ $$y_{j+1} = \frac{U}{O}x_j + \left(y_{N+1} - \frac{U}{O}x_N\right)$$
           answer: String.raw`Solid properties (porosity ε, $\rho_s$, settling, i.e. liquid entrained per kg solid) set the underflow $U = (\text{solids})\,\varepsilon\rho_f/[(1-\varepsilon)\rho_s]$. The solids rate appears only implicitly through U, in the operating-line slope U/O (equilibrium stays y = x).` },
         { id: "2021-22-Q4b", label: "(b)", marks: "12",
           topic: "leaching", sub: "Sugar leaching, 11 stages, effective mE = 1.18: Kremser recovery",
-          type: "numerical", syllabus: "in", repeats: ["2017-18-Q2c"],
+          type: "numerical", syllabus: "in", repeats: ["2017-18-Q2c", "practice-leaching-P4a"],
           text: String.raw`In the leaching of sugar from sugar cane, water is used as the solvent. Typically about 11 stages are used in a countercurrent Rotocel or other leaching system. On a volumetric basis, liquid flow rate/solid flow rate = 0.95. The effective equilibrium constant is $m_E$ = 1.18, where $m_E$ = (concentration, g/liter, in liquid)/(concentration, g/liter, in solid). If pure water is used as the inlet solvent, predict the recovery of sugar in the solvent.`,
           solution: String.raw`**Given:** N = 11; $F_{solv}/F_{solid} = 0.95$ (volumetric); $y = m_Ex$ with $m_E = 1.18$ (g/L basis); $y_{N+1} = 0$.
 
@@ -376,7 +376,7 @@ $$R_{min} = \frac{(L/V)_{min}}{1 - (L/V)_{min}} = 1.10$$
           answer: String.raw`Total reflux: D = B = 0, both operating lines on y = x, giving $N_{min}$. Minimum reflux: the operating line touches the equilibrium curve (pinch at the feed line or a tangent point), giving N → ∞; $R_{min} = (L/V)_{min}/[1-(L/V)_{min}]$.` },
         { id: "2021-22-Q5d", label: "(d)", marks: "7",
           topic: "batch", sub: "Variable reflux batch distillation for constant xD",
-          type: "sketch", syllabus: "in", repeats: ["2022-23-Q8b"],
+          type: "sketch", syllabus: "in", repeats: ["2022-23-Q8b", "practice-batch-P5a"],
           text: String.raw`Explain the steps that can be followed to obtain constant distillate composition using batch distillation column with proper diagrams.`,
           solution: String.raw`As the still-pot liquid is depleted of the light component, a fixed number of stages with fixed L/V would give a falling $x_D$. To **hold $x_D$ constant the reflux ratio must increase during the run** (variable reflux).
 
@@ -457,7 +457,7 @@ $$u_{perm} = K_{drum}\sqrt{(\rho_L - \rho_V)/\rho_V}$$
           answer: String.raw`Read each labelled tie line's ends: on the boiling line gives (T, x), on the dew line gives (T, y); use the auxiliary line for intermediate T. Plot T–x and T–y on one graph: e.g. 89°C: 0.17/0.62; 84°C: 0.34/0.73; 80.7°C: 0.63/0.80 wt frac; azeotrope 0.956 at about 78°C.` },
         { id: "2021-22-Q6b", label: "(b)", marks: "20",
           topic: "flash", sub: "Methanol–water flash for x = 0.20 and horizontal drum sizing (h/D = 4)",
-          type: "numerical", syllabus: "partial", repeats: ["2013-14-Q6b"],
+          type: "numerical", syllabus: "partial", repeats: ["2013-14-Q6b", "practice-flash-P2a"],
           text: String.raw`We are separating a mixture of methanol and water in a flash drum at 1 atm pressure. If the feed is 30 mol% methanol and we desire a liquid product that is 20 mol% methanol, what V/F must be used? For a feed rate of 1000 lbmol/h, determine product flow rates and composition. The equilibrium data are attached (y–x figure for methanol–water at 1 atm). Now, you are required to design a horizontal flash drum by calculating the total length (h) and diameter. Use h/D = 4. Required information: density of methanol = 0.7914 g/cc; density of water = 1 g/cc; MW of methanol = 32.04; MW of water = 18.01;
 
 $$K_{drum}(\mathrm{vertical}) = \exp[A + B\ln F_{lv} + C(\ln F_{lv})^2 + D(\ln F_{lv})^3 + E(\ln F_{lv})^4]$$
@@ -568,7 +568,7 @@ Fraction of the last stage = $(0.074 - 0.05)/(0.074 - 0.028) = 0.52$.
           answer: String.raw`F₁ line x = 0.70; F₂ line y = 0.0909x + 0.364 (q = −0.1); $(L/V)_{min}$ = 0.592, so L/D = 2(L/D)min = 2.90 (misprint: 2(L/V)min > 1); top line y = 0.744x + 0.2435; 14.5, so 15 stages incl. reboiler; F₁ on stage 8, F₂ on stage 12.` },
         { id: "2021-22-Q7b", label: "(b)", marks: "7",
           topic: "advanced-distillation", sub: "Open steam distillation: McCabe–Thiele and applicability",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-advanced-distillation-P3a"],
           text: String.raw`Explain open steam distillation with McCabe-Thiele analysis and write down its applicability.`,
           solution: String.raw`**What it is:** instead of a reboiler, saturated steam S is sparged directly into the bottom stage. It supplies both heat and stripping vapor. The heavy component (water) is the steam itself.
 

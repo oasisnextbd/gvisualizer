@@ -55,7 +55,7 @@ $$
       parts: [
         { id: "2013-14-Q2", label: "", marks: "35",
           topic: "immiscible-extraction", sub: "Temperature-swing extraction/back-extraction, two Kremser columns",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-immiscible-extraction-P5a"],
           text: String.raw`The system shown in the Fig. for Q. No. 2 is extracting acetic acid from water using benzene as the solvent. The temperature shift is used to regenerate the solvent and return the acid to the water phase.
 
 (a) Determine $y_1$ and $y_{N+1}$ (Units are in wt. fraction) for the column at 40°C.
@@ -111,7 +111,7 @@ $$
       parts: [
         { id: "2013-14-Q3a", label: "(a)", marks: "15",
           topic: "batch", sub: "Batch vs continuous distillation; which industries use which",
-          type: "theory", syllabus: "in", repeats: ["2015-16-Q7a", "2020-21-Q8a", "2022-23-Q8a"],
+          type: "theory", syllabus: "in", repeats: ["2015-16-Q7a", "2020-21-Q8a", "2022-23-Q8a", "practice-batch-P6a"],
           text: String.raw`Discuss the advantages and disadvantages of batch distillation compared to continuous distillation. Would you expect to see batch or continuous distillation in the following industries? Why?
 
 (i) Large basic chemical plant
@@ -375,7 +375,7 @@ $$
           answer: String.raw`Reuse because cheaper and faster; drum must be sound and have V_max ≥ (V/F)F; otherwise add demister/chevrons, cut feed or V/F, drums in parallel or series, raise pressure, or buy a new drum.` },
         { id: "2013-14-Q6b", label: "(b)", marks: "25",
           topic: "flash", sub: "Methanol–water flash: V/F, products, vertical drum size",
-          type: "numerical", syllabus: "partial", repeats: ["2021-22-Q6b"],
+          type: "numerical", syllabus: "partial", repeats: ["2021-22-Q6b", "practice-flash-P2a"],
           text: String.raw`A mixture of methanol and water in a flash drum is at 1 atm pressure. Equilibrium data at this pressure are listed as follows. (The data are in mole percentages)
 
 | methanol vapor | 0 | 13.4 | 23.0 | 30.4 | 36.5 | 41.8 | 51.7 | 57.9 | 66.5 | 72.9 | 77.9 | 82.5 | 87.0 | 91.5 | 95.8 | 97.9 | 100 |

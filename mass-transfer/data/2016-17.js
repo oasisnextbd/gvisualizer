@@ -55,7 +55,7 @@ $$x_A=\frac{1-K_B}{K_A-K_B},\qquad y_A=K_Ax_A$$
           answer: String.raw`Reflux gives liquid in the enriching section (vapor enrichment, top cooling, sets L/V); boilup gives vapor in the stripping section (liquid stripping, bottom heating, sets $\bar{V}$/B); together they make a constant-pressure countercurrent column with controllable internal flows and pure products at both ends.`},
         { id: "2016-17-Q1c", label: "(c)", marks: "4",
           topic: "mccabe-thiele", sub: "Quick check of CMO validity",
-          type: "theory", syllabus: "in", repeats: ["2013-14-Q5a"],
+          type: "theory", syllabus: "in", repeats: ["2013-14-Q5a", "practice-advanced-distillation-P15a"],
           text: String.raw`What is the quickest method to determine if Constant Molal Overflow (CMO) is valid in a given situation?`,
           solution: String.raw`CMO assumes that the **molar latent heat of vaporization is about the same** for every composition, and that the column is adiabatic, with negligible sensible heat and heat-of-mixing effects.
 
@@ -123,7 +123,7 @@ For an existing column (N and diameter fixed):
           answer: String.raw`Raise L/D and boilup (up to flooding/heat-duty limits), use the optimum feed tray, adjust feed q, reduce feed rate, change pressure (raise α), improve tray efficiency or packing, add stages/a second column, or relax a specification.`},
         { id: "2016-17-Q1g", label: "(g)", marks: "6",
           topic: "batch", sub: "Energy use: batch versus continuous distillation",
-          type: "theory", syllabus: "in", repeats: ["2020-21-Q8b"],
+          type: "theory", syllabus: "in", repeats: ["2020-21-Q8b", "practice-batch-P7a"],
           text: String.raw`Explain which type of distillation, batch or continuous, would use less energy.`,
           solution: String.raw`**Multistage separations: continuous distillation uses less energy.**
 - A continuous column runs at steady state at the optimum reflux (≈ 1.05–1.25 $R_{min}$), with the feed on the optimum stage and both enriching and stripping sections.
@@ -143,7 +143,7 @@ So, in the slide MCQ: simple batch beats one-stage continuous; multistage batch 
       parts: [
         { id: "2016-17-Q2a", label: "(a)", marks: "14",
           topic: "flash", sub: "Binary flash with constant α: vapor composition and liquid rate",
-          type: "numerical", syllabus: "in", repeats: ["2020-21-Q5d"],
+          type: "numerical", syllabus: "in", repeats: ["2020-21-Q5d", "practice-flash-P4"],
           text: String.raw`A mixture that is 40 mole% benzene and 60 mole% toluene is to be flashed in a flash distillation system. Feed is 100 kg moles/day. We desire a liquid product that is 30 mole% benzene. The relative volatility is $\alpha_{BT}$ = 2.4. Find: (i) vapor composition, (ii) liquid flow rate.`,
           solution: String.raw`> This is the slide problem "Benzene–Toluene System (α given)" (flash deck).
 
@@ -203,7 +203,7 @@ That is about 13.2 MW.
       parts: [
         { id: "2016-17-Q3a", label: "(a)", marks: "22",
           topic: "mccabe-thiele", sub: "McCabe–Thiele with constant α (ethanol–propanol), two-phase feed q = 0.4",
-          type: "numerical", syllabus: "in", repeats: ["2020-21-Q7a"],
+          type: "numerical", syllabus: "in", repeats: ["2020-21-Q7a", "practice-mccabe-thiele-P4a"],
           text: String.raw`Determine the number of stages and the best feed location for a column separating ethanol and propanol, α = 2.1. Feed composition = 0.48, $x_D$ = 0.96, $x_B$ = 0.04. Constant molal overflow can be assumed, and reflux is a saturated liquid. Column has a total condenser and a partial reboiler. Pressure is 101.3 kPa. It is given that L/D = 3 and q = 0.4.`,
           solution: String.raw`> Slide problem "Ethanol–Propanol System" (Part B deck, Wankat 4.D7-type).
 
@@ -283,7 +283,7 @@ Compared with (a): 14.7 equilibrium trays (15.7 stages minus the reboiler) becom
       parts: [
         { id: "2016-17-Q4", label: "", marks: "30",
           topic: "batch", sub: "Constant-reflux multistage batch distillation, ethanol–water (Wankat Example 9-2)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-batch-P3a"],
           text: String.raw`We wish to batch distill 50 kg moles of a 32 mole% ethanol, 68 mole% water feed. The system has a still pot plus two equilibrium stages and a total condenser. Reflux is returned as a saturated liquid, and we use L/D = 2/3. We desire a final still pot composition of 4.5 mole% ethanol. Determine the average distillate composition, the final charge in the still pot, and the amount of distillate collected. Pressure is 1 atm. Use Figure (4) for equilibrium data (y versus x diagram for ethanol–water at 1 atm).`,
           solution: String.raw`> Wankat Example 9-2 (batch slides "Example 11-2"); the graphical area there is 0.608.
 
@@ -485,7 +485,7 @@ $$N=\frac{\ln\left[\left(1-\frac{mV}{L}\right)\frac{y_{N+1}-y_1^*}{y_1-y_1^*}+\f
           answer: String.raw`$y_1$ = 0.00101, $x_N$ = 0.00249, L/V = 3.6, A = L/mV = 1.423; graphical N ≈ 3.6, Kremser N = 3.67 → 4 theoretical stages.`},
         { id: "2016-17-Q6c", label: "(c)", marks: "6",
           topic: "absorption", sub: "Absorber or stripper? Position of the stripping operating line",
-          type: "theory", syllabus: "in", repeats: ["2017-18-Q1a", "2018-19-Q1a", "2021-22-Q2b", "2022-23-Q2a"],
+          type: "theory", syllabus: "in", repeats: ["2017-18-Q1a", "2018-19-Q1a", "2021-22-Q2b", "2022-23-Q2a", "practice-absorption-P4"],
           text: String.raw`How do you know if the column is an absorber or a stripper? Why does the operating line for stripping stay below the equilibrium curve?`,
           solution: String.raw`**Absorber or stripper:** look at the direction of solute transfer, which you can see from the end compositions compared with equilibrium.
 - **Absorber:** solute goes from gas to liquid. The gas leaves leaner than it entered ($y_1 < y_{N+1}$) and the liquid leaves richer. Everywhere $y > y^*(x)$, so the operating line lies **above** the equilibrium curve on y–x.
@@ -590,7 +590,7 @@ Then $y_{j+1} = \frac{U}{O}x_j + \left(y_{N+1} - \frac{U}{O}x_N\right)$ is a str
           answer: String.raw`Solids not in the overflow and insoluble, constant densities (dilute), constant porosity → constant U and O; solute not held by the solid (y = x), equilibrium stages, isothermal/isobaric.`},
         { id: "2016-17-Q8b", label: "(b)", marks: "18",
           topic: "leaching", sub: "Countercurrent washing recovery by Kremser and McCabe–Thiele (NaOH from CaCO3)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-leaching-P1a"],
           text: String.raw`During production of sodium hydroxide by the lime soda process, a slurry of CaCO₃ particles in a dilute sodium hydroxide solution emerges. A four stage counter-current washing system is used. The underflow entrains approximately 4 kg liquid/kg calcium carbonate solids. The inlet water is pure water. If 10 kg wash water/kg calcium carbonate solids is used, predict the recovery of NaOH in the wash liquor. First determine with the Kremser equation, then verify with the McCabe–Thiele method.`,
           solution: String.raw`> Wankat Example 14-1 with 4 kg/kg (instead of 3) entrained and 10 kg/kg (instead of 8) wash water.
 

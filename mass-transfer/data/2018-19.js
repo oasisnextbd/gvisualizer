@@ -45,7 +45,7 @@ $$p_A = H x_A \;\Rightarrow\; y_A = \frac{H}{p_{tot}}x_A = m\,x_A$$
           answer: String.raw`Negligible heat of absorption, isothermal and isobaric, insoluble carrier, nonvolatile solvent (plus dilute for constant L/V). Henry's law y = (H/p)x is valid for dilute, sparingly soluble gases (ideal dilute solution), is linear and T-dependent, and allows Kremser.` },
         { id: "2018-19-Q1c", label: "(c)", marks: "17",
           topic: "absorption", sub: "CO2 stripping from water with N2 at 60 °C, Kremser stages",
-          type: "numerical", syllabus: "in", repeats: ["2021-22-Q2c"],
+          type: "numerical", syllabus: "in", repeats: ["2021-22-Q2c", "practice-absorption-P7"],
           text: String.raw`We wish to design a stripping column to remove carbon dioxide from water. This is done by heating the water and passing it countercurrent to a nitrogen stream in a staged stripper. Operation is at 60 °C and 1 atm. The water contains 9.2×10$^{-6}$ mole fraction CO$_2$ and flows at 100,000 lb/hr. Nitrogen (N$_2$) enters the column as pure nitrogen and flows at 2500 ft$^3$/hr. Nitrogen is at 1 atm and 60 °C. We desire an outlet water concentration that is 2×10$^{-7}$ mole fraction CO$_2$. Ignore nitrogen solubility in water and ignore the volatility of the water. The Henry's law constant at 60 °C is 3410. Determine the number of stages needed using Kremser equation.`,
           solution: String.raw`This is Wankat Problem 12.D6 (slide Problem D6) without the Murphree efficiency, i.e. equilibrium stages.
 
@@ -88,7 +88,7 @@ Fraction of stage 3 (linear) = $(6.745 - 2.0)/(6.745 - 1.353) = 0.88$, about 2.9
       parts: [
         { id: "2018-19-Q2a", label: "(a)", marks: "17",
           topic: "leaching", sub: "Countercurrent washing of CaCO3 slurry, 5 stages, Kremser recovery of NaOH",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-leaching-P1a"],
           text: String.raw`In the production of sodium hydroxide by the lime soda process, a slurry of calcium carbonate particles in a dilute sodium hydroxide solution results. A five-stage counter current washing system is used. The underflow entrains approximately 3.75 kg liquid/kg dry calcium carbonate solids. The inlet water is pure water. If 10 kg wash water/kg dry calcium carbonate solids is used, predict the recovery of NaOH in the wash liquor.`,
           solution: String.raw`Same method as Wankat Example 14-1 (slides: 4 stages, 3 kg/kg, 8 kg/kg, recovery 0.98755), with new numbers.
 
@@ -160,7 +160,7 @@ It is easy to measure and use, but it is **not a fundamental property**: it depe
       parts: [
         { id: "2018-19-Q3a", label: "(a)", marks: "13",
           topic: "partial-extraction", sub: "Acetic acid–water–IPE, 3 countercurrent stages: exit raffinate and entering extract",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-partial-extraction-P3a"],
           text: String.raw`Assume that you are extracting acetic acid from water with isopropylether in a countercurrent cascade. Equilibrium data are given as right triangular diagram. The column has three equilibrium stages. The entering feed rate is 500 kg/h. The feed is 40 wt% acetic acid and 60 wt% water. The exiting extract stream has a flow rate of 1250 kg/h and is 20 wt% acetic acid. The entering extract stream (which is not pure isopropyl ether) contains no water. With the help of clear hand drawing and proper labeling, demonstrate the determination of:
 
 (i) exit raffinate concentration
@@ -221,7 +221,7 @@ Position: if $E_0 > R_1$ ($\Delta > 0$), $\Delta$ is on the **left** of the diag
           answer: String.raw`Δ = Ej − Rj+1 is constant; locate it by (1) intersecting lines E0R1 and ENRN+1, (2) its coordinates xA,Δ, xD,Δ from the balances, or (3) the lever-arm rule on a known line. Left side if E0 > R1, right side if R1 > E0, infinity if equal.` },
         { id: "2018-19-Q3c", label: "(c)", marks: "16",
           topic: "immiscible-extraction", sub: "Benzoic acid from water into pure benzene, 100 mol/h feed, 10 mol/h solvent",
-          type: "numerical", syllabus: "in", repeats: ["2015-16-Q5b"],
+          type: "numerical", syllabus: "in", repeats: ["2015-16-Q5b", "practice-immiscible-extraction-P6a"],
           text: String.raw`A water solution containing 0.005 mole fraction benzoic acid is to be extracted using pure benzene as the solvent. If the feed rate is 100 moles/hr and the solvent rate is 10 moles/hr, find the number of equilibrium stages required to reduce the water concentration to 0.0001 mole fraction benzoic acid. Operation is isothermal at 6 °C, where equilibrium data can be represented as
 
 Mole fraction of benzoic acid in water = 0.0446 × (mole fraction of benzoic acid in benzene).`,
@@ -460,7 +460,7 @@ With $D$ and $B$ known, $Q_C$ follows from the reflux ratio and $Q_R$ from the o
           answer: String.raw`F = D + B, Fz = DxD + BxB, FhF + QC + QR = DhD + BhB; condenser QC = −(1 + L0/D)D(H1 − hD), reboiler y = y*(xB). Hence D = F(z − xB)/(xD − xB), B = F(xD − z)/(xD − xB).` },
         { id: "2018-19-Q6c", label: "(c)", marks: "20",
           topic: "column-balances", sub: "Ethanol–water column with direct steam injection: L/D from H–x chart",
-          type: "numerical", syllabus: "in", repeats: ["2017-18-Q7a"],
+          type: "numerical", syllabus: "in", repeats: ["2017-18-Q7a", "practice-column-balances-P3"],
           text: String.raw`A distillation column separating ethanol from water is shown in Figure for Q 6(c). Pressure of the system is 1 kg/cm$^2$. Instead of having a reboiler, steam (pure water vapor) is injected directly into the bottom of the column to provide heat. The injected steam is a saturated vapor. The feed is 30 wt% ethanol and is at 20 °C. Feed flow rate is 100 kg/min. Reflux is a saturated liquid. We desire a distillate concentration of 60 wt% ethanol and a bottom product that is 5 wt% ethanol. The steam is input at 100 kg/min flow rate. What is the external reflux ratio L/D? (Enthalpy–composition diagram for ethanol–water at 1 kg/cm$^2$ attached.)
 
 ![Column with total condenser Q_C, reflux L, distillate D, x_D; feed F, z; steam S, y_S injected at the bottom; bottoms B, x_B; Q_col = 0](fig/2018-19-Q6c.svg)`,

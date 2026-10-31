@@ -51,7 +51,7 @@ My result agrees with the slide (24 trays, 14.7 m).
       stem: String.raw`Check-your-understanding questions on column equipment.`,
       parts: [
         { id: "practice-column-design-P2a", label: "(a)", marks: "", topic: "column-design",
-          sub: "Tray choice for a clean feed that swings ±40%", type: "theory", syllabus: "in", repeats: [],
+          sub: "Tray choice for a clean feed that swings ±40%", type: "theory", syllabus: "in", repeats: ["2020-21-Q1a"],
           origin: "slides", ref: String.raw`Slides 06, Check Your Understanding: Equipment, Q1`,
           text: String.raw`A new column's feed rate swings ±40% from season to season, and the feed is clean. Would you choose sieve, valve or bubble-cap trays? Why?`,
           solution: String.raw`**Valve trays.**
@@ -62,14 +62,14 @@ My result agrees with the slide (24 trays, 14.7 m).
 - Valve and sieve trays have about the same efficiency at the design point, so nothing is lost there.`,
           answer: String.raw`Valve trays: good turndown for a ±40% swing, clean service removes their fouling drawback, and they are far cheaper than bubble caps.` },
         { id: "practice-column-design-P2b", label: "(b)", marks: "", topic: "column-design",
-          sub: "Why two- and four-pass trays but not three-pass", type: "theory", syllabus: "in", repeats: [],
+          sub: "Why two- and four-pass trays but not three-pass", type: "theory", syllabus: "in", repeats: ["2020-21-Q1a"],
           origin: "slides", ref: String.raw`Slides 06, Check Your Understanding: Equipment, Q2`,
           text: String.raw`Why are two-pass and four-pass trays common, while three-pass trays are avoided?`,
           solution: String.raw`- **Why multiple passes are needed:** liquid capacity grows with weir length ($\propto D$), while vapor capacity grows with area ($\propto D^2$). In a large column at high liquid rate, a single cross-flow pass runs out of weir length (and has a large liquid gradient) before it runs out of vapor area. Splitting the liquid into 2 or 4 passes shortens the flow path and raises the total weir length.
 - **Why not three:** with 2 or 4 passes the layout is symmetric. Each pass gets the same weir length, path length and active area, so the liquid splits evenly by itself. Three passes cannot be made symmetric: the centre pass and the two side passes differ in length and weir length. The liquid then maldistributes, the passes are loaded unequally, and efficiency falls.`,
           answer: String.raw`Passes are added when weir length (∝ D) limits liquid capacity; 2 and 4 passes are symmetric and split the liquid evenly, while 3 passes cannot be made symmetric and maldistribute the liquid.` },
         { id: "practice-column-design-P2c", label: "(c)", marks: "", topic: "column-design",
-          sub: "Adjustable weirs to fix turndown", type: "theory", syllabus: "in", repeats: [],
+          sub: "Adjustable weirs to fix turndown", type: "theory", syllabus: "in", repeats: ["2020-21-Q1a"],
           origin: "slides", ref: String.raw`Slides 06, Check Your Understanding: Equipment, Q3`,
           text: String.raw`An operator proposes adjustable weirs to fix poor turndown. What is your response?`,
           solution: String.raw`Avoid them.
@@ -78,7 +78,7 @@ My result agrees with the slide (24 trays, 14.7 m).
 - **Better fixes:** a **notched (picket-fence) weir**, which keeps a reasonable crest height at low liquid rates and costs only a little more than a straight weir; or **valve trays**, if the problem is low vapor rate (weeping).`,
           answer: String.raw`Reject adjustable weirs (easily maladjusted: weeping or dry trays). Use notched weirs for low liquid rates, or valve trays for vapor turndown.` },
         { id: "practice-column-design-P2d", label: "(d)", marks: "", topic: "column-design",
-          sub: "Chimney tray and the stage count", type: "theory", syllabus: "in", repeats: [],
+          sub: "Chimney tray and the stage count", type: "theory", syllabus: "in", repeats: ["2020-21-Q1a"],
           origin: "slides", ref: String.raw`Slides 06, Check Your Understanding: Equipment, Q4`,
           text: String.raw`Why must a chimney tray be left out when converting equilibrium stages to real trays?`,
           solution: String.raw`A chimney tray has a **solid deck with no holes or valves**. Vapor passes up through chimneys with hats, and the liquid collects on the deck to be drawn off (side draw, pump feed). Vapor and liquid never bubble through each other, so **no mass transfer** happens there and it is not an equilibrium stage. If you count it as a tray, the column will be one real stage short. Add it to the height as an extra tray space, plus the liquid holdup it needs, but not to $N_{act}$.`,

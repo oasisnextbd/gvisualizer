@@ -59,7 +59,7 @@ Then $V = (2/3)(100) = 66.7$ kmol/h and $L = 33.3$ kmol/h.
 | $T$, °C | 100 | 96.4 | 93.5 | 91.2 | 89.3 | 87.7 | 84.4 | 81.7 | 78.0 | 75.3 | 73.1 | 71.2 | 69.3 | 67.6 | 66.0 | 65.0 | 64.5 |`,
       parts: [
         { id: "practice-flash-P2a", label: "(a)", marks: "", topic: "flash",
-          sub: "Methanol–water: z = 0.60, 40% vaporized", type: "numerical", syllabus: "in", repeats: [],
+          sub: "Methanol–water: z = 0.60, 40% vaporized", type: "numerical", syllabus: "in", repeats: ["2013-14-Q6b", "2021-22-Q6b"],
           origin: "slides", ref: String.raw`Slides 03 (Flash distillation), "Problem: Flash Separator for Methanol and Water"; Wankat 3e, Problem 2.D1*`,
           text: String.raw`The feed is 60 mol% methanol, F = 100 kmol/h, and 40% of the feed is vaporized. Find the vapor and liquid mole fractions and flow rates.`,
           solution: String.raw`**Given:** $z = 0.60$, $V/F = 0.40$, $F = 100$ kmol/h, $p = 1$ atm.
@@ -82,7 +82,7 @@ $$x = 0.485, \qquad y = 0.772, \qquad T_{drum} \approx 73.4\ ^\circ\mathrm{C}$$
 > Book answer (2.D1a): $y = 0.77$, $x = 0.48$ ✓`,
           answer: String.raw`$x = 0.485$, $y = 0.772$; V = 40 kmol/h, L = 60 kmol/h ($T \approx 73.4$ °C).` },
         { id: "practice-flash-P2b", label: "(b)", marks: "", topic: "flash",
-          sub: "Same flash with F = 1500 kmol/h", type: "numerical", syllabus: "in", repeats: [],
+          sub: "Same flash with F = 1500 kmol/h", type: "numerical", syllabus: "in", repeats: ["2013-14-Q6b", "2021-22-Q6b"],
           origin: "slides", ref: String.raw`Slides 03, methanol–water problem; Wankat 3e, Problem 2.D1*`,
           text: String.raw`Repeat (a) for a feed rate of 1500 kmol/h.`,
           solution: String.raw`$z$, $p$ and $V/F$ are unchanged, so the operating line $y = -1.5x + 1.5$ and the compositions are unchanged: $x = 0.485$, $y = 0.772$.
@@ -94,7 +94,7 @@ Flows scale with $F$: $V = 0.40(1500) = 600$ kmol/h and $L = 900$ kmol/h.
 **Exam tip:** a bigger feed needs a wider drum and a bigger heater; it does not change $x$ or $y$.`,
           answer: String.raw`Same $x = 0.485$, $y = 0.772$; V = 600 kmol/h, L = 900 kmol/h.` },
         { id: "practice-flash-P2c", label: "(c)", marks: "", topic: "flash",
-          sub: "V/F needed for a specified liquid, z = 0.30, x = 0.20", type: "numerical", syllabus: "in", repeats: [],
+          sub: "V/F needed for a specified liquid, z = 0.30, x = 0.20", type: "numerical", syllabus: "in", repeats: ["2013-14-Q6b", "2021-22-Q6b"],
           origin: "slides", ref: String.raw`Slides 03, methanol–water problem; Wankat 3e, Problem 2.D1*`,
           text: String.raw`The feed is 30 mol% methanol and a liquid product of 20 mol% methanol is wanted. What V/F is needed? For F = 1000 lbmol/h, find the product flow rates and compositions.`,
           solution: String.raw`**Given:** $z = 0.30$, $x = 0.20$, $F = 1000$ lbmol/h.
@@ -111,7 +111,7 @@ $$\frac{V}{F} = \frac{z - x}{y - x} = \frac{0.30 - 0.20}{0.579 - 0.20} = 0.264$$
 > Book answer (2.D1c): $V/F = 0.25$, $y = 0.58$. With $y = 0.58$ the lever rule gives $0.10/0.38 = 0.263$, so the book's 0.25 is a rounded graphical value; 0.264 is the consistent result.`,
           answer: String.raw`$V/F = 0.264$; vapor 263.9 lbmol/h at $y = 0.579$, liquid 736.1 lbmol/h at $x = 0.20$ ($T = 81.7$ °C).` },
         { id: "practice-flash-P2d", label: "(d)", marks: "", topic: "flash",
-          sub: "Feed rate and composition from the liquid product", type: "numerical", syllabus: "in", repeats: [],
+          sub: "Feed rate and composition from the liquid product", type: "numerical", syllabus: "in", repeats: ["2013-14-Q6b", "2021-22-Q6b"],
           origin: "slides", ref: String.raw`Slides 03, methanol–water problem; Wankat 3e, Problem 2.D1*`,
           text: String.raw`The drum is run so that the liquid is 45 mol% methanol, L = 1500 kmol/h and V/F = 0.2. What must the feed flow rate and composition be?`,
           solution: String.raw`1. Equilibrium at $x = 0.45$ (between the 40 and 50 mol% points): $y = 0.755$ ($T \approx 74.2$ °C).
@@ -127,7 +127,7 @@ On the y–x diagram this is the line of slope $-L/V = -4$ through (0.45, 0.755)
 > Book answer (2.D1d): $F = 37.5$ kmol/h. That value corresponds to $L = 30$ kmol/h ($30/0.8 = 37.5$), the number used in an earlier edition. With the 3rd-edition $L = 1500$ kmol/h, $F = 1875$ kmol/h; the feed composition does not depend on $L$.`,
           answer: String.raw`$F = 1875$ kmol/h (V = 375), $z = 0.511$. (Book's 37.5 kmol/h corresponds to L = 30 kmol/h.)` },
         { id: "practice-flash-P2e", label: "(e)", marks: "", topic: "flash",
-          sub: "Vertical flash drum size for part (c)", type: "numerical", syllabus: "partial", repeats: [],
+          sub: "Vertical flash drum size for part (c)", type: "numerical", syllabus: "partial", repeats: ["2013-14-Q6b", "2021-22-Q6b"],
           origin: "slides", ref: String.raw`Wankat 3e, Problem 2.D1e* (not on the slide; drum sizing, Wankat Section 2.9, Eqs. 2-64 to 2-68)`,
           text: String.raw`Size a vertical flash drum for part (c). Data: $\rho_{water} = 1.00$ g/cm³, $\rho_{methanol,L} = 0.7914$ g/cm³, $MW_{water} = 18.01$, $MW_{methanol} = 32.04$. Treat the vapor as an ideal gas.`,
           solution: String.raw`> The slides show the drum components but not the sizing equations; the method is Wankat Section 2.9 and appears in past finals.
@@ -164,7 +164,7 @@ Round up to a standard $D = 2.0$ ft.
 > Book answer (2.D1e): $D = 1.705$ ft, use 2.0 ft; length 6 to 10 ft ✓. The small difference comes from the book using $V/F = 0.25$ (V = 250 lbmol/h) from its graphical part (c).`,
           answer: String.raw`$K_{drum} = 0.444$ ft/s, $u_{perm} = 14.3$ ft/s, $A_c = 2.40$ ft², $D = 1.75$ ft → use 2.0 ft; $h_{total} = 6$–10 ft.` },
         { id: "practice-flash-P2f", label: "(f)", marks: "", topic: "flash",
-          sub: "Flash at a specified drum temperature, 77 °C", type: "numerical", syllabus: "in", repeats: [],
+          sub: "Flash at a specified drum temperature, 77 °C", type: "numerical", syllabus: "in", repeats: ["2013-14-Q6b", "2021-22-Q6b"],
           origin: "slides", ref: String.raw`Slides 03, methanol–water problem part f; Wankat 3e, Problem 2.D1f*`,
           text: String.raw`If z = 0.4, p = 1 atm and $T_{drum}$ = 77 °C, find V/F, $x_m$ and $y_m$.`,
           solution: String.raw`1. With $p$ and $T$ fixed, a binary two-phase system has no freedom left ($F = C - P + 2 = 2$, both used), so $x$ and $y$ come straight from the T–x–y data.
@@ -180,7 +180,7 @@ $$\frac{V}{F} = \frac{z - x}{y - x} = \frac{0.40 - 0.334}{0.689 - 0.334} = 0.186
 > Book answer (2.D1f): $V/F = 0.17$. The result is very sensitive to $x$ because $z - x$ is small; 0.17 to 0.19 all agree within the accuracy of reading 77 °C off the data.`,
           answer: String.raw`$x_m \approx 0.334$, $y_m \approx 0.689$, $V/F \approx 0.18$ (book 0.17).` },
         { id: "practice-flash-P2g", label: "(g)", marks: "", topic: "flash",
-          sub: "Flash with a specified vapor composition, y = 0.892", type: "numerical", syllabus: "in", repeats: [],
+          sub: "Flash with a specified vapor composition, y = 0.892", type: "numerical", syllabus: "in", repeats: ["2013-14-Q6b", "2021-22-Q6b"],
           origin: "slides", ref: String.raw`Slides 03, methanol–water problem part g; Wankat 3e, Problem 2.D1g*`,
           text: String.raw`If F = 50 mol/h, z = 0.8, p = 1 atm and $y_m$ = 0.892, find V, L and $x_m$.`,
           solution: String.raw`1. Equilibrium: $y = 0.892$ lies between $y = 0.870$ ($x = 0.70$) and $y = 0.915$ ($x = 0.80$):
@@ -244,7 +244,7 @@ The second drum raises the vapor purity from 0.665 to 0.830, at the cost of a sm
 
     { id: "practice-flash-P4", q: 4, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-flash-P4", label: "", marks: "", topic: "flash",
-        sub: "Benzene–toluene flash with α = 2.4 for a specified liquid", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Benzene–toluene flash with α = 2.4 for a specified liquid", type: "numerical", syllabus: "in", repeats: ["2016-17-Q2a", "2020-21-Q5d"],
         origin: "slides", ref: String.raw`Slides 03, "Problem: Benzene-Toluene System (α given)"`,
         text: String.raw`A 40 mol% benzene, 60 mol% toluene mixture (100 kmol/day) is flashed. The liquid product must be 30 mol% benzene. The relative volatility is 2.4. Find (a) the vapor composition and (b) the liquid flow rate.`,
         solution: String.raw`**Given:** $z = 0.40$, $x = 0.30$, $F = 100$ kmol/day, $\alpha_{BT} = 2.4$.
@@ -268,7 +268,7 @@ $$V = 48.3\ \mathrm{kmol/day}, \qquad L = F - V = 51.7\ \mathrm{kmol/day}$$
     { id: "practice-flash-P5", q: 5, section: "W", compulsory: false,
       stem: String.raw``,
       parts: [ { id: "practice-flash-P5", label: "", marks: "", topic: "flash",
-        sub: "Two drums in series, liquid from drum 1 reflashed: work backwards", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Two drums in series, liquid from drum 1 reflashed: work backwards", type: "numerical", syllabus: "in", repeats: ["2022-23-Q5b"],
         origin: "wankat", ref: String.raw`Wankat 3e, Problem 2.D2*`,
         text: String.raw`Two flash drums at 1 atm are connected as shown: the liquid from drum 1 is pumped, heated and flashed in drum 2. The feed to drum 1 is 10,000 kmol/h of methanol–water with 55 mol% methanol. Drum 2 runs at $(V/F)_2 = 0.7$ and its liquid product is 25 mol% methanol. Use Wankat Table 2-7 (data in P2).
 
@@ -349,7 +349,7 @@ Two phases exist because $f(0) = \sum z_iK_i - 1 = 3.10 > 0$ and $f(1) = 1 - \su
 
     { id: "practice-flash-P7", q: 7, section: "W", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-flash-P7", label: "", marks: "", topic: "flash",
-        sub: "Ethanol–water flash from a hot feed: simultaneous solution on the H–x chart", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Ethanol–water flash from a hot feed: simultaneous solution on the H–x chart", type: "numerical", syllabus: "in", repeats: ["2012-13-Q6b"],
         origin: "wankat", ref: String.raw`Wankat 3e, Problem 2.D9*`,
         text: String.raw`A 30 wt% ethanol–water feed, 1000 kg/h, is at 200 °C (as a pressurized liquid) and is flashed into a drum at 1 kg/cm². Find $T_{drum}$, the weight fractions of the liquid and vapor products, and the liquid and vapor flow rates. Use the ethanol–water enthalpy–composition chart at 1 kg/cm² (Wankat Fig. 2-4).`,
         solution: String.raw`**Given:** $F = 1000$ kg/h, $z = 0.30$ wt fraction ethanol, $T_F = 200$ °C, $p = 1$ kg/cm² (0.968 atm), adiabatic drum.

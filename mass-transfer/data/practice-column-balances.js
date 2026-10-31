@@ -93,7 +93,7 @@ $$Q_C = Dh_D + Bh_B - F_1h_{F1} - F_2h_{F2} - Q_R = 43\,580 + 73\,540 - 80\,000 
 
     { id: "practice-column-balances-P3", q: 3, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-column-balances-P3", label: "", marks: "", topic: "column-balances",
-        sub: "Open (direct) steam instead of a reboiler: find L/D", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Open (direct) steam instead of a reboiler: find L/D", type: "numerical", syllabus: "in", repeats: ["2017-18-Q7a", "2018-19-Q6c"],
         origin: "slides", ref: String.raw`Slides 3A, "Problem: External Balances for No Reboiler Column"; Wankat 3e, Problem 3.D2*`,
         text: String.raw`An ethanol–water column at 1 kg/cm² has no reboiler: saturated steam (pure water vapor) is injected directly into the bottom at 100 kg/min. The feed is 100 kg/min of 30 wt% ethanol at 20 °C. Reflux is a saturated liquid. The distillate must be 60 wt% ethanol and the bottoms 5 wt% ethanol. The column is adiabatic and has a total condenser. Find the external reflux ratio $L/D$ (H–x data: Wankat Figure 2-4).`,
         solution: String.raw`**Given:** $F = 100$ kg/min, $z = 0.30$, 20 °C; steam $S = 100$ kg/min, $y_S = 0$, saturated vapor; $x_D = 0.60$, $x_B = 0.05$ (wt fractions); saturated reflux.
@@ -125,7 +125,7 @@ In one line: $\dfrac{L}{D} = \dfrac{Fh_F + SH_S - Dh_D - Bh_B}{D(H_1 - h_D)} - 1
 
     { id: "practice-column-balances-P4", q: 4, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-column-balances-P4", label: "", marks: "", topic: "column-balances",
-        sub: "Cold pure-ethanol reflux instead of a condenser; total reboiler: find V̄", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Cold pure-ethanol reflux instead of a condenser; total reboiler: find V̄", type: "numerical", syllabus: "in", repeats: ["2022-23-Q6a"],
         origin: "slides", ref: String.raw`Slides 3A, "Problem: External Balances for No Condenser Column"; Wankat 3e, Problem 3.D3*`,
         text: String.raw`An ethanol–water column at 1 kg/cm² has no condenser. Instead, a stream $C = 1000$ kg/h of pure saturated liquid ethanol is fed to the top stage as reflux. The feed is 2000 kg/h of 40 wt% ethanol at −20 °C. The distillate (vapor leaving the top stage) must be 80 wt% ethanol and the bottoms 5 wt% ethanol. A total reboiler is used and the boilup is a saturated vapor. Set up the balances, solve them in symbols for the boilup $\bar{V}$, read the enthalpies from Wankat Figure 2-4 and find $\bar{V}$.`,
         solution: String.raw`**Given:** $F = 2000$ kg/h, $z = 0.40$, −20 °C; $C = 1000$ kg/h, $x_C = 1.0$, saturated liquid; $y_D = 0.80$; $x_B = 0.05$; total reboiler; $Q_{col} = 0$.
@@ -158,7 +158,7 @@ $$\bar{V} = \frac{8.06\times10^5}{622 - 90} = 1515\ \mathrm{kg/h}$$
 
     { id: "practice-column-balances-P5", q: 5, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-column-balances-P5", label: "", marks: "", topic: "column-balances",
-        sub: "Column with a liquid side draw and subcooled reflux: D, B, Q_C, Q_R", type: "numerical", syllabus: "in", repeats: [],
+        sub: "Column with a liquid side draw and subcooled reflux: D, B, Q_C, Q_R", type: "numerical", syllabus: "in", repeats: ["2015-16-Q3b"],
         origin: "slides", ref: String.raw`Slides 3A, "Problem: External Balances for Column with Side-Stream"; Wankat 3e, Problem 3.D5*`,
         text: String.raw`An ethanol–water column at 1 kg/cm² receives 100 kg/min of a two-phase feed, 20 wt% ethanol at 93 °C. It has a total condenser and a partial reboiler. The distillate is 90 wt% ethanol; distillate and reflux are at 20 °C; $L_0/D = 3$. The bottoms is 1 wt% ethanol. A saturated-liquid side stream of 10 kg/min, 70 wt% ethanol, is withdrawn above the feed stage. Find $D$, $B$, $Q_C$ and $Q_R$ (H–x data: Wankat Figure 2-4).`,
         solution: String.raw`**Given:** $F = 100$ kg/min, $z = 0.20$, 93 °C; $S = 10$ kg/min, $x_S = 0.70$; $x_D = 0.90$ at 20 °C; $x_B = 0.01$; $L_0/D = 3$.

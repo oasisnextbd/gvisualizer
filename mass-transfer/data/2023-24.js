@@ -238,7 +238,7 @@ Table 2: Mole fractions of ethanol at different temperatures and 1 atm
       parts: [
         { id: "2023-24-Q3a", label: "(a)", marks: "35 (a+b)",
           topic: "advanced-distillation", sub: "Minimum reflux: partial condenser, open steam, subcooled feed",
-          type: "numerical", syllabus: "in", repeats: ["2015-16-Q2b"],
+          type: "numerical", syllabus: "in", repeats: ["2015-16-Q2b", "practice-advanced-distillation-P5a"],
           text: String.raw`Find the minimum external reflux ratio.`,
           solution: String.raw`This is the last problem in the slides' Part C deck (Wankat 4.D-type).
 
@@ -430,7 +430,7 @@ The other limit, total reflux-like operation, is infinite solvent (or gas), givi
           answer: String.raw`Absorber: (L/V)min when the operating line touches equilibrium (usually at the rich end, x_N = y_{N+1}/m); stripper: (V/L)min (max L/V) when it touches at the liquid inlet (y₁ = m x₀); both give infinite stages, so operate at about 1.2–2 times the minimum.` },
         { id: "2023-24-Q5b", label: "(b)", marks: "5",
           topic: "partial-extraction", sub: "Feeding two feeds and solvent to a single mixer-settler",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["practice-partial-extraction-P4a"],
           text: String.raw`If we wish to conduct partially miscible extraction with two feeds and a solvent in single stage extractor (mixer-settler), how should we feed all the streams in the system for better separation? Give your reason.`,
           solution: String.raw`**It does not matter how the streams are fed: mix them all in the one mixer** (together, or pre-mix the two feeds and then add solvent).
 
@@ -566,7 +566,7 @@ Overall: pyridine left in the final raffinate $= 364(0.0597) = 21.7$ kg/h, so 85
       parts: [
         { id: "2023-24-Q7a", label: "(a)", marks: "23",
           topic: "leaching", sub: "Countercurrent washing of beach sand: stages by McCabe–Thiele",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-leaching-P2a"],
           text: String.raw`You wish to collect sand from the beach for a glass factory. However, the wet sand carries with it seawater entrained between the sand grains. Several studies have shown that 30% by volume seawater is consistently carried with the sand. The seawater is 0.05 wt% salt, which must be removed by a washing process. Densities: Water: 1.0 g/cm³ (assume constant); Dry sand: 2.5 g/cm³. You desire a final wet sand product in which the entrained water has 0.002 wt% salt. For each 1000 kg/hr of wet sand fed you will use 0.5 kg/hr of pure wash water. In a countercurrent washing process, how many stages are required? What is the outlet concentration of the wash water? You must use McCabe Thiele method to answer this question (graphically).`,
           solution: String.raw`This is a version of slide Problem D2 (Wankat 14.D2).
 

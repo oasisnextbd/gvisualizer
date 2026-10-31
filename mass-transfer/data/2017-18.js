@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2017-18-Q1a", label: "(a)", marks: "9",
           topic: "absorption", sub: "Absorption vs stripping: purpose, line positions, diameter basis",
-          type: "theory", syllabus: "in", repeats: ["2016-17-Q6c", "2018-19-Q1a", "2021-22-Q2b", "2022-23-Q2a"],
+          type: "theory", syllabus: "in", repeats: ["2016-17-Q6c", "2018-19-Q1a", "2021-22-Q2b", "2022-23-Q2a", "practice-absorption-P4"],
           text: String.raw`Make a comparison between absorption and stripping processes on the basis of:
 
 (i) purpose of use
@@ -44,7 +44,7 @@ Column diameter in both is found the same way as for a distillation column: floo
           answer: String.raw`The stripper regenerates the loaded solvent (heat/lower p reverses the equilibrium) so the solvent is recycled and the solute recovered; this closes the solvent loop of a gas plant.` },
         { id: "2017-18-Q1c", label: "(c)", marks: "20",
           topic: "absorption", sub: "Concentrated CO2 absorber, 1.5 Lmin, 95 % absorbed (mole ratios)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-absorption-P2"],
           text: String.raw`A gas stream contains 90 mole % N$_2$ and 10 mole % CO$_2$. We wish to absorb the CO$_2$ into water. The inlet water is at 5 °C and can be considered as pure. Because of cooling coils, operation can be assumed to be isothermal. Operation is at 10 atm. If the liquid flow rate is 1.5 times the minimum liquid flow rate, how many equilibrium stages are required to absorb 95 % of the CO$_2$? The Henry's law constant, H, for CO$_2$ in water at 5 °C is 875. Choose a basis of 1 mole/hr of entering gas. (Graph papers to be attached with answer script.)`,
           solution: String.raw`This is Wankat Example 12-3 (slide Example 15-1) with 95 % instead of 92 % absorption.
 
@@ -143,7 +143,7 @@ Washing can be viewed as a special case of leaching in which the solid does not 
           answer: String.raw`In washing the solute sits in the entrained liquid (y = x, constant solids); in leaching it is part of the solid and must dissolve and diffuse out (y ≠ x, solids flow changes, slow, use effective mE).` },
         { id: "2017-18-Q2c", label: "(c)", marks: "15",
           topic: "leaching", sub: "Sugar from cane: 11-stage countercurrent leaching, Kremser with mE",
-          type: "numerical", syllabus: "in", repeats: ["2021-22-Q4b"],
+          type: "numerical", syllabus: "in", repeats: ["2021-22-Q4b", "practice-leaching-P4a"],
           text: String.raw`In the leaching of sugar from sugar cane, water is used as the solvent. Typically about 11 stages are used in a countercurrent Rotocel or other leaching system. On a volumetric basis liquid flow rate/solid flow rate = 0.95. The effective equilibrium constant is $M_E$ = 1.18, where $M_E$ = (concentration, g/liter in liquid)/(concentration g/liter in solid). If pure water is used as the inlet solvent, predict the recovery of sugar in the solvent.`,
           solution: String.raw`This is Wankat Problem 14.D8 (slide Problem D7).
 
@@ -170,7 +170,7 @@ $$\frac{x_N - x_N^*}{x_0 - x_N^*} = \frac{1 - m_E F_{solv}/F_{solid}}{1 - (m_E F
       parts: [
         { id: "2017-18-Q3a", label: "(a)", marks: "12+6",
           topic: "partial-extraction", sub: "Countercurrent stages on a triangular diagram; Δ when R1 = E0",
-          type: "sketch", syllabus: "in", repeats: ["2021-22-Q1d", "2022-23-Q1d"],
+          type: "sketch", syllabus: "in", repeats: ["2021-22-Q1d", "2022-23-Q1d", "practice-partial-extraction-P2a"],
           text: String.raw`For a partially miscible countercurrent liquid–liquid extraction:
 
 (i) Consider that the initial feed (raffinate) and solvent (extract) are completely specified. All required equilibrium data are given in right triangular diagram. The solute concentration in raffinate is required to be reduced to a desired low value. With the help of clean hand drawing, demonstrate the determination of equilibrium stages required for this separation. (12)
@@ -208,7 +208,7 @@ $$x_{A,\Delta} = \frac{E_0y_{A,0}-R_1x_{A,1}}{E_0-R_1}, \qquad x_{D,\Delta} = \f
           answer: String.raw`Find M on SF, EN on line R1M, Δ = intersection of E0R1 and ENF extended; step tie line Rj→Ej then line ΔEj→Rj+1 until EN is passed (Ex. 13-4: ≈ 6 stages). If R1 = E0, Δ is at infinity and all operating lines are parallel.` },
         { id: "2017-18-Q3b", label: "(b)", marks: "17",
           topic: "immiscible-extraction", sub: "Acetic acid from water into 3-heptanol, Kremser (m = 0.828)",
-          type: "numerical", syllabus: "in", repeats: ["2021-22-Q3b"],
+          type: "numerical", syllabus: "in", repeats: ["2021-22-Q3b", "practice-immiscible-extraction-P3a"],
           text: String.raw`We have a mixture of acetic acid in water and wish to extract this with 3-heptanol at 25 °C. Equilibrium is
 $$\frac{\text{Wt frac acetic acid in solvent}}{\text{Wt frac acetic acid in water}} = 0.828$$
 The inlet water solution flows at 550 lb/hr and is 0.0097 wt frac acetic acid. We desire an outlet water concentration of 0.00046 wt frac acetic acid. The solvent flow rate is 700 lb/hr. The entering solvent contains 0.0003 wt frac acetic acid. Find the outlet solvent concentration and the number of equilibrium stages required (use the Kremser equation).`,
@@ -455,7 +455,7 @@ Fraction of stage 7: $(0.1688-0.10)/(0.1688-0.0962) = 0.95$.
       parts: [
         { id: "2017-18-Q7a", label: "(a)", marks: "15",
           topic: "column-balances", sub: "Ethanol–water column with direct steam injection: L/D from H–x chart",
-          type: "numerical", syllabus: "in", repeats: ["2018-19-Q6c"],
+          type: "numerical", syllabus: "in", repeats: ["2018-19-Q6c", "practice-column-balances-P3"],
           text: String.raw`A distillation column separating ethanol from water is shown. Pressure is 1 kg/cm$^2$. Instead of having a reboiler, steam (pure water vapor) is injected directly into the bottom of the column to provide heat. The injected steam is a saturated vapor. The feed is 30 wt % ethanol and is at 20 °C. Feed flow rate is 100 kg/min. Reflux is a saturated liquid. We desire a distillate concentration of 60 wt % ethanol and a bottoms product that is 5 wt % ethanol. The steam is input at 100 kg/min. What is the external reflux ratio, L/D? (Enthalpy–composition diagram for ethanol–water at 1 kg/cm$^2$ attached.)
 
 ![Column with total condenser Q_C, reflux L, distillate D, x_D; feed F, z; steam S, y_S injected at the bottom; bottoms B, x_B; Q_col = 0](fig/2017-18-Q7a.svg)`,
@@ -527,7 +527,7 @@ First-bubble vapour: $y_{C2} = 8.57(0.10) = 0.857$, $y_{C5} = 0.333(0.35) = 0.11
       parts: [
         { id: "2017-18-Q8a", label: "(a)", marks: "18",
           topic: "batch", sub: "Simple Rayleigh distillation, methanol–water, 50 mol at 80 %, xD,avg = 0.892",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-batch-P1a"],
           text: String.raw`We wish to use a simple batch still (one equilibrium stage) to separate methanol from water. The feed charge to the still pot is 50 moles of an 80 mol% methanol mixture. We desire an average distillate concentration of 89.2 mol% methanol. Find the amount of distillate collected, the amount of material left in the still pot, and the concentration of material in the still pot. Pressure is 1 atm. Methanol–water equilibrium data at 1 atm are given in Table 1.`,
           solution: String.raw`This is Wankat Example 9-1 (slide Example 11-1). Table 1 is not attached to the paper; use methanol–water VLE at 1 atm, Wankat Table 2-7 (slides Table 3-3).
 

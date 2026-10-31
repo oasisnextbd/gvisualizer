@@ -111,7 +111,7 @@ Limitation: $m_E$ is **not a fundamental thermodynamic quantity**. It depends on
       parts: [
         { id: "2022-23-Q2a", label: "(a)", marks: "5",
           topic: "absorption", sub: "What makes a column a stripper or an absorber",
-          type: "theory", syllabus: "in", repeats: ["2016-17-Q6c", "2017-18-Q1a", "2018-19-Q1a", "2021-22-Q2b"],
+          type: "theory", syllabus: "in", repeats: ["2016-17-Q6c", "2017-18-Q1a", "2018-19-Q1a", "2021-22-Q2b", "practice-absorption-P4"],
           text: String.raw`What controls whether a column is a stripper or an absorber?`,
           solution: String.raw`The **direction of mass transfer**, which is set by where the operating line lies relative to the equilibrium line:
 
@@ -154,7 +154,7 @@ Overall balance (for the end point): $G(Y_{N+1} - Y_1) = L(X_N - X_0)$.
           answer: String.raw`With insoluble carrier and nonvolatile solvent: Y_{j+1} = (L/G) X_j + (Y_1 − (L/G) X_0), a straight line in mole-ratio units Y = y/(1−y), X = x/(1−x).` },
         { id: "2022-23-Q2c", label: "(c)", marks: "17",
           topic: "absorption", sub: "Ammonia stripper, 4 stages, Kremser",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-absorption-P10"],
           text: String.raw`A stripping tower with four equilibrium stages is being used to remove ammonia from waste water using air as the stripping agent. Operation is at 80°F and 1 atm. The inlet air is pure air, and the inlet water contains 0.02 mole fraction ammonia. The column operates at $L/V = 0.65$. Equilibrium data in mole fraction are given as $y = 1.414x$. Determine the outlet concentrations.`,
           solution: String.raw`**Given:** N = 4 equilibrium stages, $x_0 = 0.02$ (water in, top), $y_{N+1} = 0$ (pure air in, bottom), $L/V = 0.65$, $y = 1.414x$ (80 °F, 1 atm).
 
@@ -215,7 +215,7 @@ and $y_5 = 0.65(0.000493) - 0.000320 = 0$ ✓ (pure air).
           answer: String.raw`High selectivity and high K_d, low miscibility with the diluent, easy recovery, good density difference/physical properties for settling, and safe, stable, cheap and available.` },
         { id: "2022-23-Q3b", label: "(b)", marks: "20",
           topic: "immiscible-extraction", sub: "Multisolute dilute extraction (oleic/linoleic), Kremser",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-immiscible-extraction-P4a"],
           text: String.raw`We have a mixture of linoleic and oleic acids dissolved in methylcellosolve and 10% water. Feed is 0.003 wt frac linoleic acid and 0.0025 wt frac oleic acid. Feed flow rate is 1500 kg/h. A simple countercurrent extractor will be used with 750 kg/h of pure heptane as solvent. We desire a 99% recovery of the oleic acid in the extract products. The equilibrium distribution constant, $K_d$ for the given condition are 2.17 and 4.14 for linoleic and oleic acids, respectively. Find the required number of stages, N and the recovery of linoleic acid in the extract product.`,
           solution: String.raw`This is slide Problem D6 (Wankat 13.D6).
 
@@ -255,7 +255,7 @@ About **87.7%** of the linoleic acid also goes to the extract (86.5% with 5 stag
           answer: String.raw`N = 5.44 → 6 equilibrium stages (mE/R = 2.07 for oleic); linoleic acid recovery ≈ 0.877 (y₁ = 0.00526).` },
         { id: "2022-23-Q3c", label: "(c)", marks: "8",
           topic: "partial-extraction", sub: "Two-feed extractor: difference-point procedure",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["practice-partial-extraction-P5a"],
           text: String.raw`Consider that the specifications of feeds and fresh solvent are fully known. Show the solution procedure using difference-point on a right triangular diagram for a two-feed extractor.`,
           solution: String.raw`**Set-up** (Wankat 1988, Fig. 18-19, as in the slides): solvent $E_0 = S$ enters stage 1, raffinate $R_1$ leaves stage 1; feed $F_1 = R_{N+1}$ enters stage N; the intermediate feed $F_2$ enters stage $N_f$; extract $E_N$ leaves stage N. Specified: $S, F_1, F_2$ and their compositions, plus the raffinate composition $x_{A,1}$ (the design spec).
 
@@ -398,7 +398,7 @@ This gives a wider operating range for liquid flow at little extra cost. By cont
           answer: String.raw`Read (x, y) at each labelled tie line (e.g. 95 °C: 0.04/0.32; 90: 0.13/0.55; 85: 0.25/0.68; 82: 0.43/0.75; 80: 0.61/0.80) and plot T-x and T-y; the curves meet at the azeotrope 0.956 wt, 77.65 °C.` },
         { id: "2022-23-Q5b", label: "(b)", marks: "20",
           topic: "flash", sub: "Two flash drums in series (methanol–water)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-flash-P5"],
           text: String.raw`Two flash distillation chambers are hooked together as shown below. Both are at 1 atm pressure. The feed to the first drum is a binary mixture of methanol and water that is 55 mol% methanol. The feed flow rate is 10,000 kmol/h. The second flash drum operates with $(V/F)_2 = 0.7$ and the liquid product composition is 25 mol% methanol. Equilibrium data are given in Table Q. 5(b).
 
 (i) What is the fraction vaporized in the first flash drum?
@@ -455,7 +455,7 @@ Flows: $V_1 = 1449$, $L_1 = 8551$, $V_2 = 0.7(8551) = 5986$, $L_2 = 2565$ kmol/h
       parts: [
         { id: "2022-23-Q6a", label: "(a)", marks: "25",
           topic: "column-balances", sub: "No-condenser column with cold ethanol reflux: boilup from H-x chart",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-column-balances-P4"],
           text: String.raw`A distillation column separating ethanol from water is shown as below. Pressure is 1 kg/cm². Instead of having a condenser, a stream of pure liquid ethanol is added directly to the column to serve as the reflux. This stream is a saturated liquid. The feed is 40 wt% ethanol and is at −20°C. Feed flow rate is 2000 kg/h. We desire a distillate concentration of 80 wt% ethanol and a bottom composition of 5 wt% ethanol. A total reboiler is used, and the boilup is a saturated vapor. The cooling stream is input at C = 1000 kg/h. Find the external boilup rate, $\bar{V}$.
 
 Note: Set up the equations, solve in equation form for $\bar{V}$ for all required terms, read off all required enthalpies from the enthalpy composition diagram in Figure Q. 6(a), and then calculate a numerical answer.
@@ -617,7 +617,7 @@ Check: $\bar{L} - \bar{V} = 598 = B$ ✓.`,
       parts: [
         { id: "2022-23-Q8a", label: "(a)", marks: "6",
           topic: "batch", sub: "Batch vs continuous distillation: pros and cons",
-          type: "theory", syllabus: "in", repeats: ["2013-14-Q3a", "2015-16-Q7a", "2020-21-Q8a"],
+          type: "theory", syllabus: "in", repeats: ["2013-14-Q3a", "2015-16-Q7a", "2020-21-Q8a", "practice-batch-P6a"],
           text: String.raw`Discuss the benefits and drawbacks of using batch distillation in contrast to continuous distillation.`,
           solution: String.raw`| Benefits of batch | Drawbacks of batch |
 |---|---|
@@ -650,7 +650,7 @@ $$D_{total} = F\frac{x_F - x_{W,final}}{x_D - x_{W,final}},\qquad W_{final} = F 
           answer: String.raw`L/D is raised during the run so x_D stays constant; each L/D (N fixed) gives an x_W on the McCabe–Thiele diagram, initial and final L/D come from x_F and x_W,final, and D_total = F(x_F − x_W)/(x_D − x_W).` },
         { id: "2022-23-Q8c", label: "(c)", marks: "23",
           topic: "batch", sub: "Simple batch (Rayleigh) methanol–water 75% → 55%",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["practice-batch-P2a"],
           text: String.raw`We wish to use a simple batch still (one equilibrium stage) to separate methanol from water. The feed charge to the still pot is 100 moles of a 75 mol% methanol mixture. We desire a final bottoms concentration of 55 mol% methanol. Find the amount of distillate collected, the amount of material left in the still pot, and the average concentration of distillate. Pressure is 1 atm. Equilibrium data are given in Table 8(c).
 
 (Table 8(c) is the same methanol–water VLE table as Table Q.5(b), 1 atm, mol%.)`,
