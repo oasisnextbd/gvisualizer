@@ -27,11 +27,17 @@ Hot end $390 - 170 = 220$°F; cold end $200 - 100 = 100$°F.
 $$\mathrm{LMTD} = \frac{220 - 100}{2.3\log(220/100)} = 152.2\,°\mathrm{F}\ \ (\text{slides: } 152.5)$$
 $$R = \frac{T_1 - T_2}{t_2 - t_1} = \frac{190}{70} = 2.71,\qquad S = \frac{t_2 - t_1}{T_1 - t_1} = \frac{70}{390 - 100} = 0.241$$
 Kern Fig. 18 (1-2, also used for 1-4): $F_T = 0.905$ (the analytical 1-2 formula gives 0.892).
+
+![How to read Kern Fig. 18: S = 0.241 → R = 2.71 curve → F_T = 0.905](fig/practice-shell-tube-P1a-read.svg)
+
 $$\Delta t = F_T\,\mathrm{LMTD} = 0.905(152.5) = 138\,°\mathrm{F}$$
 $F_T > 0.75$, so one shell pass is acceptable.
 
 ### 3. Caloric temperatures
 $$\frac{\Delta t_c}{\Delta t_h} = \frac{100}{220} = 0.455,\qquad K_c = 0.20\ \ \Rightarrow\ \ F_c = 0.42\ \ \text{(Kern Fig. 17)}$$
+
+![How to read Kern Fig. 17: Δt_c/Δt_h = 0.455 → K_c = 0.20 curve → F_c = 0.42](fig/practice-shell-tube-P1a-read2.svg)
+
 $$T_c = T_2 + F_c(T_1 - T_2) = 200 + 0.42(190) = 280\,°\mathrm{F}$$
 $$t_c = t_1 + F_c(t_2 - t_1) = 100 + 0.42(70) = 129\,°\mathrm{F}$$
 (The arithmetic means, 295 and 135°F, would overstate the kerosene temperature; the caloric temperature is used because the crude viscosity varies strongly with temperature.)
@@ -54,6 +60,9 @@ $$a_s = \frac{ID\times C'B}{144P_T} = \frac{21.25(0.25)(5)}{144(1.25)} = 0.1475\
 3. $D_e = 0.99/12 = 0.0825$ ft (Fig. 28 inset, 1 in on 1¼ in square); $\mu = 0.40(2.42) = 0.97$ lb/ft·h.
 $$Re_s = \frac{D_eG_s}{\mu} = \frac{0.0825(297{,}000)}{0.97} = 25{,}300$$
 4. Kern Fig. 28: $j_H = 93$.
+
+![How to read Kern Fig. 28: Re_s = 25,300 → shell-side line → j_H = 93](fig/practice-shell-tube-P1b-read.svg)
+
 5. $(c\mu/k)^{1/3} = (0.59\times0.97/0.0765)^{1/3} = 1.95$
 $$\frac{h_o}{\phi_s} = j_H\frac{k}{D_e}\left(\frac{c\mu}{k}\right)^{1/3} = 93\times\frac{0.0765}{0.0825}\times1.95 = 169\ \mathrm{Btu/h\,ft^2\,°F}$$
 
@@ -63,6 +72,9 @@ $$\frac{h_o}{\phi_s} = j_H\frac{k}{D_e}\left(\frac{c\mu}{k}\right)^{1/3} = 93\ti
 8. $D = 0.81/12 = 0.0675$ ft; $\mu = 3.6(2.42) = 8.7$ lb/ft·h.
 $$Re_t = \frac{DG_t}{\mu} = \frac{0.0675(1{,}060{,}000)}{8.7} = 8220,\qquad L/D = \frac{16}{0.0675} = 237$$
 9. Kern Fig. 24 (transition region, $L/D = 237$): $j_H = 31$.
+
+![How to read Kern Fig. 24 in the transition region: Re = 8220 → L/D = 237 curve → j_H = 31](fig/practice-shell-tube-P1b-read2.svg)
+
 10. $(c\mu/k)^{1/3} = (0.49\times8.7/0.077)^{1/3} = 3.81$
 $$\frac{h_i}{\phi_t} = 31\times\frac{0.077}{0.0675}\times3.81 = 135,\qquad \frac{h_{io}}{\phi_t} = 135\times\frac{0.81}{1.0} = 109$$
 
@@ -100,13 +112,22 @@ $$R_d = \frac{U_C - U_D}{U_CU_D} = \frac{69.3 - 55.8}{69.3(55.8)} = 0.00348\ \ma
           text: String.raw`Calculate both pressure drops (kerosene $s = 0.73$, crude $s = 0.83$) and state whether the exchanger is suitable. Fill in the key TEMA-sheet values.`,
           solution: String.raw`### Shell side
 1. $Re_s = 25{,}300$: Kern Fig. 29, $f = 0.00175$ ft²/in².
+
+![How to read Kern Fig. 29: Re_s = 25,300 → f = 0.00175 ft²/in²](fig/practice-shell-tube-P1d-read.svg)
+
 2. Number of crosses: $N + 1 = 12L/B = 12(16)/5 = 38.4$ (the slides round to 39); $D_s = 21.25/12 = 1.77$ ft.
 3. $$\Delta P_s = \frac{fG_s^2D_s(N+1)}{5.22\times10^{10}D_es\phi_s} = \frac{0.00175(297{,}000)^2(1.77)(39)}{5.22\times10^{10}(0.0825)(0.73)(0.96)} = 3.5\ \mathrm{psi}$$
 
 ### Tube side
 4. $Re_t = 8220$: Kern Fig. 26, $f = 0.000285$ ft²/in².
+
+![How to read Kern Fig. 26: Re_t = 8220 → f = 0.000285 ft²/in²](fig/practice-shell-tube-P1d-read2.svg)
+
 5. $$\Delta P_t = \frac{fG_t^2Ln}{5.22\times10^{10}Ds\phi_t} = \frac{0.000285(1{,}060{,}000)^2(16)(4)}{5.22\times10^{10}(0.0675)(0.83)(1.11)} = 6.3\ \mathrm{psi}$$
 6. Return loss: Kern Fig. 27 at $G_t = 1.06\times10^6$, $V^2/2g' = 0.15$ psi (check: $V = G_t/(3600\times62.5) = 4.71$ ft/s, $V^2/2g'\times62.5/144 = 0.150$).
+
+![How to read Kern Fig. 27: G_t = 1.06×10⁶ lb/h·ft² → V²/2g′ = 0.15 psi](fig/practice-shell-tube-P1d-read3.svg)
+
 $$\Delta P_r = \frac{4n}{s}\frac{V^2}{2g'} = \frac{4(4)}{0.83}(0.15) = 2.9\ \mathrm{psi}$$
 7. $\Delta P_T = 6.3 + 2.9 = 9.2$ psi.
 
@@ -156,6 +177,9 @@ Properties at the caloric temperatures (slides): 76°API gasoline $\mu = 0.2$ cP
 ### 1. Caloric temperatures
 $$r = \frac{\Delta t_c}{\Delta t_h} = \frac{T_2 - t_1}{T_1 - t_2} = \frac{120 - 75}{160 - 120} = 1.125$$
 (The slide prints $(120 - 70)/40 = 1.25$, a typo; either gives about the same $F_c$.) Gasoline 76°API gives $K_c = 1$, and Kern Fig. 17 gives $F_c = 0.455$.
+
+![How to read Kern Fig. 17: Δt_c/Δt_h = 1.125 → K_c = 1 curve → F_c = 0.455](fig/practice-shell-tube-P2a-read.svg)
+
 $$T_c = 120 + 0.455(160 - 120) = 138.2\,°\mathrm{F},\qquad t_c = 75 + 0.455(120 - 75) = 95.5\,°\mathrm{F}$$
 
 ### 2. Heat balance (no heat loss)
@@ -166,6 +190,8 @@ $$\dot m_g = \frac{3.24\times10^6}{0.57(40)} = 142{,}105\ \mathrm{lb/h}$$
 Ends: $160 - 120 = 40$°F and $120 - 75 = 45$°F.
 $$\Delta T_{lm} = \frac{40 - 45}{\ln(40/45)} = 42.5\,°\mathrm{F}\ \ (\text{slides: } 42.75)$$
 $R = 40/45 = 0.889$, $S = 45/85 = 0.529$; Holman Fig. 10-8: $F_T = 0.802$.
+
+![How to read Holman Fig. 10-8: P = 0.529 → R = 0.889 curve → F_T = 0.802](fig/practice-shell-tube-P2a-read2.svg)
 
 ### 4. Area for $U_{assm} = 45$
 Kern Table 8 gives 40–75 for light organics against light organics; 45 is assumed.
@@ -199,12 +225,17 @@ $\phi_t = 1$. $(c\mu/k)^{1/3} = (0.48\times3.872/0.083)^{1/3} = 2.819$.
 $$h_i = j_H\frac{k}{d_i}\left(\frac{c\mu}{k}\right)^{1/3} = 42\times\frac{0.083}{0.834/12}\times2.819 = 141.3\ \mathrm{Btu/h\,ft^2\,°F}$$
 (The Sieder–Tate line $0.027Re^{0.8}$ would give $j_H = 48$; the chart reads lower near $Re = 10^4$, with $L/D = 345$.)
 
+![How to read Kern Fig. 24: Re = 11,571 → j_H = 42](fig/practice-shell-tube-P2b-read.svg)
+
 ### Shell side (gasoline)
 1. $B = 0.5D_s = 15.5$ in; $C' = 1.25 - 1 = 0.25$ in.
 2. $$D_e = \frac{4(P_T^2 - \pi d_o^2/4)}{\pi d_o} = \frac{4(1.5625 - 0.7854)}{\pi(1)} = 0.99\ \mathrm{in} = 0.082\ \mathrm{ft}$$
 3. $$a_s = \frac{C'BD_s}{P_T} = \frac{(0.25/12)(15.5/12)(31/12)}{1.25/12} = 0.667\ \mathrm{ft^2}\ \ (\text{slides: } 0.675)$$
 4. $$G_s = \frac{142{,}105}{0.675} = 210{,}526\ \mathrm{lb/h\,ft^2},\qquad Re_s = \frac{0.082(210{,}526)}{0.484} = 35{,}668$$
 5. $j_H = 110$; $(c\mu/k)^{1/3} = (0.57\times0.484/0.075)^{1/3} = 1.544$; $\phi_s = 1$.
+
+![How to read Kern Fig. 28: Re_s = 35,668 → j_H = 110](fig/practice-shell-tube-P2b-read2.svg)
+
 $$h_o = 110\times\frac{0.075}{0.082}\times1.544 = 155.3\ \mathrm{Btu/h\,ft^2\,°F}$$
 
 ### Overall coefficient
@@ -222,6 +253,9 @@ $$\frac{U_{o,cal} - U_{o,assm}}{U_{o,assm}} = \frac{53.5 - 45}{45} = 18.9\% < 30
           text: String.raw`Check the tube-side (Kern Fig. 26: $f = 0.00028$ ft²/in²) and shell-side (Fig. 29: $f = 0.00165$ ft²/in²) pressure drops, then find the percentage over-surface and overdesign.`,
           solution: String.raw`### Tube side (kerosene, $n_p = 6$, $L = 24$ ft)
 1. $f = 0.00028\times144 = 0.0403$ (dimensionless).
+
+![How to read Kern Fig. 26: Re_t = 11,571 → f = 0.00028 ft²/in²](fig/practice-shell-tube-P2c-read.svg)
+
 2. $$a_t = \frac{368(0.546)}{6(144)} = 0.232\ \mathrm{ft^2},\qquad G_t = \frac{150{,}000}{0.232} = 646{,}552\ \mathrm{lb/h\,ft^2}$$
 3. Friction (the slides' form; $7.5\times10^{12} \approx 144\times5.22\times10^{10}$):
 $$\Delta P_t = \frac{fG_t^2Ln_p}{7.5\times10^{12}d_is_k\phi_t} = \frac{0.0403(646{,}552)^2(24)(6)}{7.5\times10^{12}(0.834/12)(0.80)(1)} = 5.81\ \mathrm{psi}$$
@@ -230,8 +264,13 @@ $$\Delta P_{rt} = 1.334\times10^{-13}(2n_p - 1.5)\frac{G_t^2}{s_k} = 1.334\times
 5. $\Delta P_T = 5.81 + 0.73 = 6.54$ psi < 10 psi ✓
 (Kern's $4n/s$ velocity heads, Fig. 27, give $\Delta P_r = (24/0.8)(0.055) = 1.66$ psi and $\Delta P_T = 7.5$ psi, still acceptable.)
 
+![How to read Kern Fig. 27: G_t = 646,552 lb/h·ft² → V²/2g′ = 0.055 psi](fig/practice-shell-tube-P2c-read3.svg)
+
 ### Shell side (gasoline)
 6. Number of baffles $n_b = L/B = 24/(15.5/12) = 18.6 \approx 19$, so $n_b + 1 = 20$ crossings. $f = 0.00165\times144 = 0.2376$.
+
+![How to read Kern Fig. 29: Re_s = 35,668 → f = 0.00165 ft²/in²](fig/practice-shell-tube-P2c-read2.svg)
+
 $$\Delta P_s = \frac{fG_s^2D_s(n_b + 1)}{7.5\times10^{12}D_es_g\phi_s} = \frac{0.2376(210{,}526)^2(20)(31/12)}{7.5\times10^{12}(0.082)(0.685)(1)} = 1.4\ \mathrm{psi} < 7\ ✓$$
 (the computed value is 1.3 psi; one shell pass, so no shell return loss).
 
@@ -296,6 +335,9 @@ With 252 tubes and $n = 2$: $a_t = 252(0.546)/(144\times2) = 0.478$ ft², $G_t =
 1. Terminal differences: hot end $\Delta t_h = T_1 - t_2 = 350 - 155 = 195$°F; cold end $\Delta t_c = T_2 - t_1 = 180 - 95 = 85$°F.
 
 2. Caloric factor: $\Delta t_c/\Delta t_h = 85/195 = 0.436$. Kern Fig. 17 with $K_c = 0.30$: $F_c \approx 0.41$. (Kern's Eq. 5.28, $F_c = \dfrac{1/K_c + r/(r-1)}{1 + \ln(K_c + 1)/\ln r} - \dfrac{1}{K_c}$ with $r = 0.436$, gives 0.410.)
+
+![How to read Kern Fig. 17: Δt_c/Δt_h = 0.436 → K_c = 0.30 curve → F_c ≈ 0.41](fig/practice-shell-tube-P4a-read.svg)
+
 $$T_c = T_2 + F_c(T_1 - T_2) = 180 + 0.41(170) = 250\,°\mathrm{F}$$
 $$t_c = t_1 + F_c(t_2 - t_1) = 95 + 0.41(60) = 120\,°\mathrm{F}$$
 The arithmetic means would be 265 and 125°F; for a viscous oil the caloric temperatures, weighted toward the cold end where $U$ is lowest, are the better choice.
@@ -306,6 +348,8 @@ $$\mathrm{LMTD} = \frac{195 - 85}{\ln(195/85)} = 132.5\,°\mathrm{F}$$
 4. Correction factor:
 $$R = \frac{T_1 - T_2}{t_2 - t_1} = \frac{170}{60} = 2.83,\qquad S = \frac{t_2 - t_1}{T_1 - t_1} = \frac{60}{255} = 0.235$$
 Kern Fig. 18 / Holman Fig. 10-8: $F_T \approx 0.89$ (analytical 0.890).
+
+![How to read Kern Fig. 18: S = 0.235 → R = 2.83 curve → F_T ≈ 0.89](fig/practice-shell-tube-P4a-read2.svg)
 
 5. $$\Delta t = F_T\,\mathrm{LMTD} = 0.89(132.5) = 118\,°\mathrm{F}$$
 $F_T > 0.75$: a 1-2 exchanger is acceptable.`,
@@ -325,7 +369,12 @@ $$\mathrm{LMTD} = \frac{100 - 50}{\ln 2} = 72.1\,°\mathrm{F}$$
 
 3. **1-2 exchanger.** On Holman Fig. 10-8 the $R = 1.5$ curve drops vertically at about $S = 0.46$; $S = 0.50$ lies beyond it. Analytically, the 1-2 formula has a real value only for $S < 2/(R + 1 + \sqrt{R^2 + 1}) = 0.465$. So no 1-2 exchanger, however large, can do this duty: there is a temperature cross ($t_2 = 200 > T_2 = 150$) that one shell pass cannot handle.
 
+![How to read Holman Fig. 10-8: the R = 1.5 curve ends at P = 0.465, so P = 0.50 has no F (1-2 impossible)](fig/practice-shell-tube-P4b-read.svg)
+
 4. **2-4 exchanger** (Holman Fig. 10-9, two shell passes): $F_T \approx 0.86$ (analytical 0.864, from the 1-2 formula applied to each of two shells in series).
+
+![How to read Holman Fig. 10-9 (2 shell passes): P = 0.50 → R = 1.5 curve → F_T ≈ 0.86](fig/practice-shell-tube-P4b-read2.svg)
+
 $$\Delta t = 0.86(72.1) = 62\,°\mathrm{F}$$
 $F_T > 0.75$, so two shell passes (two shells in series, or one F-shell with a longitudinal baffle) are acceptable. Three shell passes would give $F_T \approx 0.94$.
 
@@ -439,6 +488,9 @@ Temperature vs. length. The oil line falls from 220°F at the shell inlet to 140
 $$\mathrm{LMTD} = \frac{105 - 55}{\ln(105/55)} = 77.3\,°\mathrm{F}$$
 $$R = \frac{80}{30} = 2.67,\qquad S = \frac{30}{220 - 85} = 0.222$$
 Kern Fig. 18 (1-2 curves, valid for 1-4): $F_T = 0.93$ (analytical 0.927).
+
+![How to read Kern Fig. 18: S = 0.222 → R = 2.67 curve → F_T = 0.93](fig/practice-shell-tube-P6b-read.svg)
+
 $$\Delta t = 0.927(77.3) = 71.7\,°\mathrm{F}$$`,
           answer: String.raw`$Q = 2.50\times10^6$ Btu/h, water 83,200 lb/h; LMTD = 77.3°F, $R = 2.67$, $S = 0.222$, $F_T = 0.93$, $\Delta t = 71.7$°F.` },
 
@@ -455,6 +507,9 @@ $$\Delta t = 0.927(77.3) = 71.7\,°\mathrm{F}$$`,
 3. $D = 0.834/12 = 0.0695$ ft; $\mu = 0.68(2.42) = 1.65$ lb/ft·h.
 $$Re_t = \frac{0.0695(685{,}700)}{1.65} = 28{,}960,\qquad L/D = 230$$
 4. Kern Fig. 24: $j_H \approx 92$ (the Sieder–Tate line $0.027Re^{0.8}$ gives 100; the chart reads a little lower).
+
+![How to read Kern Fig. 24: Re = 28,960 → j_H ≈ 92](fig/practice-shell-tube-P6c-read.svg)
+
 5. $(c\mu/k)^{1/3} = (1.0\times1.65/0.363)^{1/3} = 1.655$
 $$h_i = j_H\frac{k}{D}\left(\frac{c\mu}{k}\right)^{1/3} = 92\times\frac{0.363}{0.0695}\times1.655 = 793\ \mathrm{Btu/h\,ft^2\,°F}$$
 $$h_{io} = h_i\frac{ID}{OD} = 793(0.834) = 661\ \mathrm{Btu/h\,ft^2\,°F}$$
@@ -465,6 +520,9 @@ $$a_s = \frac{19.25(0.25)(10)}{144(1.25)} = 0.2674\ \mathrm{ft^2},\qquad G_s = \
 7. $D_e = 0.99/12 = 0.0825$ ft; $\mu = 1.5(2.42) = 3.63$ lb/ft·h.
 $$Re_s = \frac{0.0825(224{,}400)}{3.63} = 5100$$
 8. Kern Fig. 28: $j_H \approx 39$.
+
+![How to read Kern Fig. 28: Re_s = 5100 → j_H ≈ 39](fig/practice-shell-tube-P6c-read2.svg)
+
 9. $(c\mu/k)^{1/3} = (0.52\times3.63/0.077)^{1/3} = 2.905$
 $$\frac{h_o}{\phi_s} = 39.4\times\frac{0.077}{0.0825}\times2.905 = 106.8\ \mathrm{Btu/h\,ft^2\,°F}$$
 10. Wall temperature check:
@@ -496,13 +554,22 @@ $$h_o = 106.8(0.926) = 98.9\ \mathrm{Btu/h\,ft^2\,°F}$$
           text: String.raw`Calculate the tube-side and shell-side pressure drops and state whether the exchanger is suitable.`,
           solution: String.raw`### Tube side (water, $s = 1.0$, $n = 4$, $L = 16$ ft)
 1. $Re_t = 28{,}960$: Kern Fig. 26, $f \approx 0.000195$ ft²/in² (fit $4[0.0035 + 0.264Re^{-0.42}]/144$).
+
+![How to read Kern Fig. 26: Re_t = 28,960 → f ≈ 0.000195 ft²/in²](fig/practice-shell-tube-P6e-read.svg)
+
 2. $$\Delta P_t = \frac{fG_t^2Ln}{5.22\times10^{10}Ds\phi_t} = \frac{0.000195(685{,}700)^2(16)(4)}{5.22\times10^{10}(0.0695)(1.0)(1.0)} = 1.6\ \mathrm{psi}$$
 3. Return loss: $V = 3.05$ ft/s, $V^2/2g'\times(62.5/144) = 0.063$ psi (Fig. 27).
+
+![How to read Kern Fig. 27: G_t = 685,700 lb/h·ft² (V = 3.05 ft/s) → V²/2g′ = 0.063 psi](fig/practice-shell-tube-P6e-read2.svg)
+
 $$\Delta P_r = \frac{4n}{s}\frac{V^2}{2g'} = \frac{16}{1.0}(0.063) = 1.0\ \mathrm{psi}$$
 4. $\Delta P_T = 1.6 + 1.0 = 2.6$ psi < 10 ✓
 
 ### Shell side (gas oil, $s = 0.82$)
 5. $Re_s = 5100$: Kern Fig. 29, $f \approx 0.0024$ ft²/in².
+
+![How to read Kern Fig. 29: Re_s = 5100 → f ≈ 0.0024 ft²/in²](fig/practice-shell-tube-P6e-read3.svg)
+
 6. $N + 1 = 12L/B = 12(16)/10 = 19.2$; $D_s = 19.25/12 = 1.604$ ft.
 7. $$\Delta P_s = \frac{fG_s^2D_s(N+1)}{5.22\times10^{10}D_es\phi_s} = \frac{0.0024(224{,}400)^2(1.604)(19.2)}{5.22\times10^{10}(0.0825)(0.82)(0.926)} = 1.2\ \mathrm{psi} < 10\ ✓$$
 
@@ -563,6 +630,9 @@ $$\mathrm{LMTD} = \frac{122.2 - 100}{\ln(122.2/100)} = 110.7\,°\mathrm{F}$$
 
 3. $$R = \frac{100}{77.8} = 1.29,\qquad S = \frac{77.8}{300 - 100} = 0.389$$
 Kern Fig. 18 (1-2 curves hold for 1-6): $F_T \approx 0.88$ (analytical 0.883).
+
+![How to read Kern Fig. 18: S = 0.389 → R = 1.29 curve → F_T ≈ 0.88](fig/practice-shell-tube-P7a-read.svg)
+
 $$\Delta t = 0.883(110.7) = 97.8\,°\mathrm{F}$$
 
 4. **Allocation:** crude in the tubes (larger stream, dirtier, cleanable side); gas oil in the shell.`,
@@ -579,6 +649,9 @@ $V = G_t/(3600\times62.5\times0.85) = 5.2$ ft/s.
 2. $D = 0.620/12 = 0.0517$ ft; $\mu = 1.5(2.42) = 3.63$ lb/ft·h.
 $$Re_t = \frac{0.0517(994{,}700)}{3.63} = 14{,}160,\qquad L/D = 310$$
 3. Kern Fig. 24: $j_H \approx 50$ (Sieder–Tate line gives 56; the chart is lower near $10^4$).
+
+![How to read Kern Fig. 24: Re = 14,160 → j_H ≈ 50](fig/practice-shell-tube-P7b-read.svg)
+
 4. $(c\mu/k)^{1/3} = (0.48\times3.63/0.077)^{1/3} = 2.83$
 $$h_i = 50\times\frac{0.077}{0.0517}\times2.83 = 211,\qquad h_{io} = 211\times\frac{0.620}{0.75} = 174\ \mathrm{Btu/h\,ft^2\,°F}$$
 
@@ -588,6 +661,9 @@ $$a_s = \frac{23.25(0.25)(5)}{144(1.0)} = 0.2018\ \mathrm{ft^2},\qquad G_s = \fr
 6. $D_e = 0.95/12 = 0.0792$ ft (¾ in on 1 in square); $\mu = 1.2(2.42) = 2.90$ lb/ft·h.
 $$Re_s = \frac{0.0792(346{,}800)}{2.90} = 9460$$
 7. Kern Fig. 28: $j_H \approx 55$. $(c\mu/k)^{1/3} = (0.56\times2.90/0.075)^{1/3} = 2.79$
+
+![How to read Kern Fig. 28: Re_s = 9460 → j_H ≈ 55](fig/practice-shell-tube-P7b-read2.svg)
+
 $$h_o = 55.3\times\frac{0.075}{0.0792}\times2.79 = 146\ \mathrm{Btu/h\,ft^2\,°F}$$`,
           answer: String.raw`Tube: $G_t = 9.95\times10^5$, $V = 5.2$ ft/s, $Re_t = 14{,}160$, $j_H \approx 50$, $h_i \approx 211$, $h_{io} \approx 174$; shell: $G_s = 3.47\times10^5$, $Re_s = 9460$, $j_H \approx 55$, $h_o \approx 146$ Btu/h·ft²·°F.` },
 
@@ -609,13 +685,22 @@ far above the 0.004 required: thermally the exchanger is large for this duty.`,
           text: String.raw`Calculate the pressure drops and decide whether the exchanger is suitable.`,
           solution: String.raw`### Tube side (crude, $n = 6$)
 1. $Re_t = 14{,}160$: Kern Fig. 26, $f \approx 0.00026$ ft²/in².
+
+![How to read Kern Fig. 26: Re_t = 14,160 → f ≈ 0.00026 ft²/in²](fig/practice-shell-tube-P7d-read.svg)
+
 2. $$\Delta P_t = \frac{0.00026(994{,}700)^2(16)(6)}{5.22\times10^{10}(0.0517)(0.85)(1)} = 10.8\ \mathrm{psi}$$
 3. Return loss: $V = G_t/(3600\times62.5) = 4.42$ ft/s, $V^2/2g'\times62.5/144 = 0.132$ psi (Fig. 27).
+
+![How to read Kern Fig. 27: G_t = 994,700 lb/h·ft² (V = 4.42 ft/s) → V²/2g′ = 0.132 psi](fig/practice-shell-tube-P7d-read2.svg)
+
 $$\Delta P_r = \frac{4(6)}{0.85}(0.132) = 3.7\ \mathrm{psi}$$
 4. $\Delta P_T = 10.8 + 3.7 = 14.5$ psi > 10 ✗
 
 ### Shell side (gas oil)
 5. $Re_s = 9460$: Fig. 29, $f \approx 0.00217$ ft²/in²; $N + 1 = 12(16)/5 = 38.4$; $D_s = 23.25/12 = 1.94$ ft.
+
+![How to read Kern Fig. 29: Re_s = 9460 → f ≈ 0.00217 ft²/in²](fig/practice-shell-tube-P7d-read3.svg)
+
 $$\Delta P_s = \frac{0.00217(346{,}800)^2(1.94)(38.4)}{5.22\times10^{10}(0.0792)(0.80)(1)} = 5.9\ \mathrm{psi} < 10\ ✓$$
 
 ### Verdict
@@ -632,10 +717,18 @@ $R_d$ is ample, but the tube-side pressure drop (14.5 psi) exceeds the allowed 1
 1. Tube side:
 $$a_t = \frac{308(0.302)}{144(4)} = 0.1615\ \mathrm{ft^2},\quad G_t = 650{,}200,\quad Re_t = \frac{0.0517(650{,}200)}{3.63} = 9250$$
 2. Kern Fig. 24 (transition, $L/D = 310$): $j_H \approx 35$.
+
+![How to read Kern Fig. 24 in the transition region: Re = 9250 → L/D = 310 curve → j_H ≈ 35](fig/practice-shell-tube-P7e-read.svg)
+
 $$h_i = 35\times\frac{0.077}{0.0517}\times2.83 = 146,\qquad h_{io} = 146(0.827) = 120\ \mathrm{Btu/h\,ft^2\,°F}$$
 3. $$U_C = \frac{120(146)}{120 + 146} = 66.0;\quad A = 308(16)(0.1963) = 967\ \mathrm{ft^2};\quad U_D = \frac{3.92\times10^6}{967(97.8)} = 41.4$$
 $$R_d = \frac{66.0 - 41.4}{66.0(41.4)} = 0.0090 > 0.004\ ✓$$
 4. Pressure drop: $f \approx 0.00028$ ft²/in² at $Re = 9250$;
+
+![How to read Kern Fig. 26: Re_t = 9250 → f ≈ 0.00028 ft²/in²; and Fig. 27 for the return loss](fig/practice-shell-tube-P7e-read2.svg)
+
+![How to read Kern Fig. 27: G_t = 650,200 lb/h·ft² (V = 2.89 ft/s) → V²/2g′ = 0.056 psi](fig/practice-shell-tube-P7e-read3.svg)
+
 $$\Delta P_t = \frac{0.00028(650{,}200)^2(16)(4)}{5.22\times10^{10}(0.0517)(0.85)} = 3.3\ \mathrm{psi}$$
 $V = 650{,}200/(3600\times62.5) = 2.89$ ft/s, $V^2/2g' = 0.056$ psi, $\Delta P_r = (16/0.85)(0.056) = 1.1$ psi.
 $\Delta P_T = 3.3 + 1.1 = 4.4$ psi < 10 ✓
@@ -677,6 +770,9 @@ $$w = \frac{3.71\times10^6}{0.42(40)} = 220{,}800\ \mathrm{lb/h\ toluene}$$
 Ends: $200 - 120 = 80$°F and $130 - 80 = 50$°F.
 $$\mathrm{LMTD} = \frac{80 - 50}{\ln(80/50)} = 63.8\,°\mathrm{F}$$
 $R = 70/40 = 1.75$, $S = 40/120 = 0.333$; Fig. 10-8: $F_T \approx 0.87$ (analytical 0.871) > 0.75 ✓.
+
+![How to read Holman Fig. 10-8: P = 0.333 → R = 1.75 curve → F_T ≈ 0.87](fig/practice-shell-tube-P8a-read.svg)
+
 $$\Delta t = 0.871(63.8) = 55.6\,°\mathrm{F}$$
 
 ### 3. Assumed U and area
@@ -700,11 +796,17 @@ $V = 2.4$ ft/s (0.72 m/s), on the low side but acceptable for a first trial.`,
           solution: String.raw`### Tube side (toluene)
 $a_t = 460(0.302)/(144\times2) = 0.482$ ft²; $G_t = 220{,}800/0.482 = 457{,}800$; $Re_t = 19{,}550$.
 Kern Fig. 24: $j_H \approx 66$ (Sieder–Tate fit 73). $(c\mu/k)^{1/3} = (0.42\times1.21/0.085)^{1/3} = 1.815$.
+
+![How to read Kern Fig. 24: Re = 19,550 → j_H ≈ 66](fig/practice-shell-tube-P8b-read.svg)
+
 $$h_i = 66\times\frac{0.085}{0.0517}\times1.815 = 196\ \mathrm{Btu/h\,ft^2\,°F},\qquad h_{io} = 196(0.620/0.75) = 162$$
 
 ### Shell side (naphtha)
 $a_s = 27(0.25)(11)/(144\times1.0) = 0.516$ ft²; $G_s = 100{,}000/0.516 = 193{,}900$; $D_e = 0.95/12 = 0.0792$ ft;
 $$Re_s = \frac{0.0792(193{,}900)}{0.45\times2.42} = 14{,}100\quad\Rightarrow\quad j_H \approx 69\ \text{(Fig. 28)}$$
+
+![How to read Kern Fig. 28: Re_s = 14,100 → j_H ≈ 69](fig/practice-shell-tube-P8b-read2.svg)
+
 $(c\mu/k)^{1/3} = (0.53\times1.089/0.075)^{1/3} = 1.974$
 $$h_o = 69\times\frac{0.075}{0.0792}\times1.974 = 129\ \mathrm{Btu/h\,ft^2\,°F}$$
 
@@ -731,11 +833,17 @@ Table 9, 2-P: **270 tubes in a 21¼ in shell**; $B = 9$ in ($0.42D_s$).
 ### 2. Tube side
 $a_t = 270(0.302)/288 = 0.2831$ ft²; $G_t = 780{,}000$ lb/h·ft²; $V = 4.0$ ft/s (1.23 m/s).
 $$Re_t = \frac{0.0517(780{,}000)}{1.21} = 33{,}300\quad\Rightarrow\quad j_H \approx 103\ \text{(fit 112)}$$
+
+![How to read Kern Fig. 24: Re = 33,300 → j_H ≈ 103](fig/practice-shell-tube-P8c-read.svg)
+
 $$h_i = 103\times\frac{0.085}{0.0517}\times1.815 = 308,\qquad h_{io} = 308(0.827) = 255\ \mathrm{Btu/h\,ft^2\,°F}$$
 
 ### 3. Shell side
 $a_s = 21.25(0.25)(9)/144 = 0.332$ ft²; $G_s = 301{,}200$;
 $$Re_s = \frac{0.0792(301{,}200)}{1.089} = 21{,}900\quad\Rightarrow\quad j_H \approx 88$$
+
+![How to read Kern Fig. 28: Re_s = 21,900 → j_H ≈ 88](fig/practice-shell-tube-P8c-read2.svg)
+
 $$h_o = 88\times\frac{0.075}{0.0792}\times1.974 = 164\ \mathrm{Btu/h\,ft^2\,°F}$$
 
 ### 4. Coefficients
@@ -749,9 +857,18 @@ $$\text{Overdesign} = \frac{848 - 833}{833} = 1.8\%\ ✓$$
 
 ### 6. Pressure drops
 Tube: $f \approx 0.00019$ ft²/in² at $Re = 33{,}300$;
+
+![How to read Kern Fig. 26: Re_t = 33,300 → f ≈ 0.00019 ft²/in²](fig/practice-shell-tube-P8c-read3.svg)
+
 $$\Delta P_t = \frac{0.00019(780{,}000)^2(16)(2)}{5.22\times10^{10}(0.0517)(0.86)} = 1.6\ \mathrm{psi}$$
 $V^2/2g' = 0.081$ psi at $G_t = 780{,}000$; $\Delta P_r = (4\times2/0.86)(0.081) = 0.75$ psi; $\Delta P_T = 2.3$ psi ✓.
+
+![How to read Kern Fig. 27: G_t = 780,000 lb/h·ft² → V²/2g′ = 0.081 psi](fig/practice-shell-tube-P8c-read4.svg)
+
 Shell: $f \approx 0.00185$ ft²/in²; $N + 1 = 12(16)/9 = 21.3$; $D_s = 1.771$ ft;
+
+![How to read Kern Fig. 29: Re_s = 21,900 → f ≈ 0.00185 ft²/in²](fig/practice-shell-tube-P8c-read5.svg)
+
 $$\Delta P_s = \frac{0.00185(301{,}200)^2(1.771)(21.3)}{5.22\times10^{10}(0.0792)(0.72)} = 2.1\ \mathrm{psi}\ ✓$$
 
 **Final design:** 1-2 fixed-tubesheet exchanger, 21¼ in shell, 270 tubes ¾ in 16 BWG × 16 ft on 1 in square pitch, toluene in the tubes, 25% cut baffles at 9 in; $A = 848$ ft², $U_{o,cal} = 80$, overdesign 1.8%, $\Delta P_T = 2.3$ psi, $\Delta P_s = 2.1$ psi. (There is room on $\Delta P$ for 4 passes, but then $U$ rises again and the area would be oversized.)`,

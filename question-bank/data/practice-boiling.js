@@ -62,6 +62,8 @@ $$\Delta T_x = T_w - T_{sat} = 242 - 212 = 30^\circ\mathrm{F}\;(16.7^\circ\mathr
 
 $$(q/A)_{Pt} = 3\times10^5\,\mathrm{Btu/h\,ft^2}\;[946\,\mathrm{kW/m^2}]$$
 
+![How to read Holman Fig. 9-8: ΔT_x = 30°F → 14.7 psia curve → (q/A)_Pt = 3×10⁵ Btu/h·ft²](fig/practice-boiling-P2-read.svg)
+
 3. **Rohsenow correlation**
 
 $$\frac{C_l\Delta T_x}{h_{fg}\mathrm{Pr}_l^s} = C_{sf}\left[\frac{q/A}{\mu_lh_{fg}}\sqrt{\frac{g_c\sigma}{g(\rho_l - \rho_v)}}\right]^{0.33}$$

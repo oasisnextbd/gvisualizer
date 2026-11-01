@@ -165,6 +165,8 @@ $$A_{cf} = \frac{q}{U\,\Delta T_m} = \frac{1.895\times10^5}{320(37.44)} = 15.8\ 
 $$P = \frac{t_2 - t_1}{T_1 - t_1} = \frac{75 - 110}{35 - 110} = 0.467,\qquad R = \frac{T_1 - T_2}{t_2 - t_1} = \frac{35 - 75}{75 - 110} = 1.143$$
 The chart gives $F \approx 0.81$. (The analytical 1-2 formula gives 0.802. Swapping the roles, $P = 40/75 = 0.533$, $R = 35/40 = 0.875$, gives the same $F$.)
 
+![How to read Holman Fig. 10-8: P = 0.467 on the axis → up to the R = 1.143 curve → across → F ≈ 0.81](fig/practice-heat-exchangers-P3-read.svg)
+
 5. Corrected area:
 $$A = \frac{q}{U F\,\Delta T_m} = \frac{1.895\times10^5}{320(0.81)(37.44)} = 19.5\ \mathrm{m^2}\ (210\ \mathrm{ft^2})$$
 
@@ -329,6 +331,9 @@ $$D_e = \frac{D_2^2 - D_1^2}{D_1} = \frac{0.1725^2 - 0.138^2}{0.138} = 0.0762\ \
 $$G_a = \frac{W}{a_a} = \frac{6330}{0.00826} = 767{,}000\ \mathrm{lb/h\,ft^2},\qquad \mu = 0.41(2.42) = 0.99\ \mathrm{lb/ft\,h}$$
 $$Re_a = \frac{D_eG_a}{\mu} = \frac{0.0762(767{,}000)}{0.99} = 59{,}000$$
 Kern Fig. 24: $j_H = 167$. $(c\mu/k)^{1/3} = (0.44\times0.99/0.085)^{1/3} = 1.725$.
+
+![How to read Kern Fig. 24: Re = 59,000 (annulus) and 89,500 (pipe) → turbulent line → j_H = 167 and 236](fig/practice-heat-exchangers-P6a-read.svg)
+
 $$h_o = j_H\frac{k}{D_e}\left(\frac{c\mu}{k}\right)^{1/3}\phi = 167\times\frac{0.085}{0.0762}\times1.725\times1 = 323\ \mathrm{Btu/h\,ft^2\,°F}$$
 
 ### 5. Inner pipe: cold benzene
@@ -423,6 +428,9 @@ $a_p = \pi(2.067/12)^2/4 = 0.0233$ ft² and $a_a = \pi[(3.068/12)^2 - (2.38/12)^
 $$D_e = \frac{D_2^2 - D_1^2}{D_1} = \frac{0.2557^2 - 0.1983^2}{0.1983} = 0.1312\ \mathrm{ft}$$
 $$G_a = \frac{9000}{0.0204} = 4.40\times10^5\ \mathrm{lb/h\,ft^2},\qquad \mu = 1.20(2.42) = 2.90\ \mathrm{lb/ft\,h}$$
 $$Re_a = \frac{0.1312(4.40\times10^5)}{2.90} = 19{,}900\quad\Rightarrow\quad j_H \approx 74$$
+
+![How to read Kern Fig. 24: Re = 19,900 → j_H ≈ 74 (annulus); Re = 50,900 → j_H ≈ 157 (pipe)](fig/practice-heat-exchangers-P7a-read.svg)
+
 $(c\mu/k)^{1/3} = (0.50\times2.90/0.078)^{1/3} = 2.65$
 $$h_o = 74\times\frac{0.078}{0.1312}\times2.65 = 117\ \mathrm{Btu/h\,ft^2\,°F}$$
 

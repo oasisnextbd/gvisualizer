@@ -30,6 +30,9 @@ $$W_s = \frac{Q}{\lambda_s} = \frac{9.61\times10^6}{910} = 10{,}560\ \mathrm{lb/
 $$\Delta t = T_s - t_{sat} = 300 - 226 = 74^\circ\mathrm{F}$$
 
 5. Overall coefficient from Fig. 14.7, untreated water, vapor 226°F, $\Delta t = 74^\circ$F: Kern reads **86.5% of base**. (Reading the curves on the slide: untreated 200° curve ≈ 82.5%, 300° curve ≈ 91% at 74°F, so linear interpolation to 226°F gives ≈ 85%; anything from 85 to 86.5% is within chart accuracy.)
+
+![How to read Kern Fig. 14.7: Δt = 74°F → untreated 200° and 300° curves (82.5% and 91%) → interpolate to 226°F → Kern reads 86.5%](fig/practice-evap-P1a-read.svg)
+
 $$U_D = 700 \times 0.865 = 605\ \mathrm{Btu/h\,ft^2\,^\circ F}$$
 
 6. Surface:
@@ -81,6 +84,9 @@ $$W_s = \frac{Q}{\lambda_s} = \frac{2.347\times10^7}{902.7} = 26{,}000\ \mathrm{
 4. Temperature head: $\Delta t = 310 - 260 = 50^\circ$F.
 
 5. Fig. 14.7, **treated-water (dashed) curves** at $\Delta t = 50^\circ$F: 200° curve ≈ 82%, 300° curve ≈ 90%. Interpolating to 260°F:
+
+![How to read Kern Fig. 14.7: Δt = 50°F → treated 200° and 300° curves (81.8% and 89.8%) → interpolate to 260°F → 86.6%](fig/practice-evap-P2a-read.svg)
+
 $$\% = 81.8 + \frac{260-200}{100}(89.8-81.8) = 86.6\%$$
 $$U_D = 700\times0.866 = 606\ \mathrm{Btu/h\,ft^2\,^\circ F}$$
 
@@ -447,6 +453,9 @@ $$W_s = \frac{1.173\times10^7}{938.6} = 12{,}500\ \mathrm{lb/h}$$
 4. $\Delta t = 260 - 200 = 60^\circ$F.
 
 5. Fig. 14.7, untreated (solid) 200°F curve at $\Delta t = 60^\circ$F: ≈ **80.5%** of base.
+
+![How to read Kern Fig. 14.7: Δt = 60°F → untreated 200°F curve → 80.5% of base](fig/practice-evap-P8a-read.svg)
+
 $$U_D = 700\times0.805 = 564\ \mathrm{Btu/h\,ft^2\,^\circ F}$$
 
 6. Surface:
@@ -457,6 +466,9 @@ $$A = \frac{Q}{U_D\Delta t} = \frac{1.173\times10^7}{564\times60} = 346\ \mathrm
           syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Slides 10 p. 6, 8 (Fig. 14.7, maximum flux)`,
           text: String.raw`If the feed were softened (treated water), how much surface would be needed? Check the flux in both cases against $(Q/A)_{max} \approx 400{,}000$ Btu/(h)(ft²).`,
           solution: String.raw`1. Fig. 14.7, treated (dashed) 200°F curve at 60°F: ≈ 83%.
+
+![How to read Kern Fig. 14.7: Δt = 60°F → treated (dashed) 200°F curve → 83% of base](fig/practice-evap-P8b-read.svg)
+
 $$U_D = 700\times0.83 = 581,\qquad A = \frac{1.173\times10^7}{581\times60} = 336\ \mathrm{ft^2}$$
 (about 3% less surface than with untreated water).
 
@@ -736,10 +748,16 @@ $$a_s = \frac{ID\,C'B}{144P_T} = \frac{13.25\times0.25\times6}{144\times1.25} = 
 
 3. Preheat zone: $\mu = 0.115\times2.42 = 0.278$ lb/ft·h; $D_e = 0.0825$ ft.
 $$Re_s = \frac{0.0825\times169{,}800}{0.278} = 50{,}300,\quad j_H = 0.36(50{,}300)^{0.55} = 139$$
+
+![How to read Kern Fig. 28: Re_s = 50,300 (preheat zone) → j_H = 139](fig/practice-evap-P13b-read.svg)
+
 $$h_o = \frac{139\times0.12}{0.0825} = 202,\qquad U_p = \frac{1500\times202}{1500 + 202} = 178$$
 $$A_p = \frac{9083}{178} = 51.0\ \mathrm{ft^2}$$
 
 4. Vaporising zone: $\mu = 0.242$ lb/ft·h; $Re_s = 57{,}900$; $j_H = 150$;
+
+![How to read Kern Fig. 28: Re_s = 57,900 (vaporising zone) → j_H = 150](fig/practice-evap-P13b-read2.svg)
+
 $$h_o = \frac{150\times0.115}{0.0825} = 209,\qquad U_v = \frac{1500\times209}{1709} = 183,\qquad A_v = \frac{14{,}432}{183} = 78.7\ \mathrm{ft^2}$$
 
 5. Clean totals:
@@ -761,13 +779,22 @@ about the same as in the slide example (≈ 11,000, judged satisfactory) and bel
           syllabus: "in", repeats: [], origin: "potential", ref: String.raw`Style of Kern Ex. 15.2 (Slides 10 p. 29–31)`,
           text: String.raw`Calculate the tube-side and shell-side pressure drops.`,
           solution: String.raw`1. Tube side: $f = 4(0.0035 + 0.264\times62{,}600^{-0.42})/144 = 0.000168$ ft²/in²; steam $s = 1/(3.59\times62.5) = 0.00446$.
+
+![How to read Kern Fig. 26: Re_t = 62,600 (condensing steam) → f = 0.000168 ft²/in²](fig/practice-evap-P13c-read2.svg)
+
 $$\Delta P_t = \frac12\,\frac{fG_t^2Ln}{5.22\times10^{10}Ds\phi_t} = \frac12\,\frac{0.000168\times31{,}330^2\times16\times2}{5.22\times10^{10}\times0.0725\times0.00446} = 0.16\ \mathrm{psi}$$
 (½ because the steam condenses and its velocity falls along the tubes.)
 
 2. Shell, preheat zone: $L_p = 16\times51.0/129.7 = 6.3$ ft; $N + 1 = 12L_p/B = 12\times6.3/6 = 12.6 \approx 13$; $f = 0.00158$ ft²/in² at $Re = 50{,}300$; $s = 0.50$; $D_s = 13.25/12 = 1.104$ ft.
+
+![How to read Kern Fig. 29: Re_s = 50,300 (preheat zone) → f = 0.00158 ft²/in²](fig/practice-evap-P13c-read.svg)
+
 $$\Delta P_p = \frac{0.00158\times169{,}800^2\times1.104\times13}{5.22\times10^{10}\times0.0825\times0.50\times1.0} = 0.30\ \mathrm{psi}$$
 
 3. Shell, vaporising zone: $L_v = 16 - 6.3 = 9.7$ ft; $N + 1 = 12\times9.7/6 = 19.4 \approx 19$; $f = 0.00154$ at $Re = 57{,}900$.
+
+![How to read Kern Fig. 29: Re_s = 57,900 (vaporising zone) → f = 0.00154 ft²/in²](fig/practice-evap-P13c-read3.svg)
+
 Vapor density (ideal gas, 230°F = 690°R, 268 psia):
 $$\rho_v = \frac{58.1}{359\times\frac{690}{492}\times\frac{14.7}{268}} = 2.10\ \mathrm{lb/ft^3};\qquad \rho_l = 0.44\times62.5 = 27.5\ \mathrm{lb/ft^3}$$
 $$s_{out} = \frac{18{,}750/62.5}{15{,}000/2.10 + 3750/27.5} = \frac{300}{7130 + 136} = 0.041,\qquad s_{mean} = \frac{0.50 + 0.041}{2} = 0.271$$

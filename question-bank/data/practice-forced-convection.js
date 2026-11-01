@@ -98,6 +98,9 @@ $$\mathrm{Re\,Pr}\frac{d}{L} = \frac{1147(2.78)(0.0254)}{3} = 27.0$$
 $$\mathrm{Re}_d = \frac{u_md}{\nu} = \frac{40(0.02)}{15.69\times10^{-6}} = 50\,988 \quad(\text{turbulent})$$
 2. **Entrance effect:** L/d = 5 is short, so thermal entrance effects matter. The Nusselt entrance correlation needs 10 < L/d < 400, so it cannot be used. From the turbulent thermal-entry chart (Fig. 6-6, constant $q_w$) at Re = $5\times10^4$, Pr = 0.7, x/d = 5:
 $$\frac{\mathrm{Nu}_x}{\mathrm{Nu}_\infty} \approx 1.15$$
+
+![How to read Holman Fig. 6-6: x/D = 5 → Pr = 0.7 curve → Nu_x/Nu∞ ≈ 1.15](fig/practice-forced-convection-P3-read.svg)
+
 i.e. h is about 15% above its fully developed value.
 3. **Fully developed value** (Dittus–Boelter, heating):
 $$\mathrm{Nu}_d = 0.023(50\,988)^{0.8}(0.7)^{0.4} = 116.3,\qquad h_\infty = \frac{0.02624(116.3)}{0.02} = 152.6\,\mathrm{W/m^2\cdot^\circ C}$$
