@@ -25,6 +25,8 @@ Readings from the attached figure (gridlines every 2°C and 0.02 in mole fractio
 | dew (saturated vapor) | y ≈ 0.43 | dew T at y = 0.40 ≈ 86.6°C; at y = 0.60 ≈ 80.8°C |
 | azeotrope | x = y ≈ 0.68 at ≈ 80.1°C | minimum-boiling |
 
+![How to read the T–x–y diagram: 85 °C across to the bubble curve (x ≈ 0.07) and the dew curve (y ≈ 0.43), then down to the axis](fig/2015-16-Q1a-read.svg)
+
 ![T–x–y diagram of 2-propanol–water redrawn from the paper, with the 85°C tie line from x = 0.07 to y = 0.43](fig/2015-16-Q1a-sol.svg)
 
 ### (i) z = 0.40 IPA
@@ -70,6 +72,8 @@ Given: $\rho_L$ = 0.87 g/cc, $\rho_V$ = 0.00314 g/cc, $K_{drum}$ = 0.25.`,
 | y (vapor) | **0.769 benzene** |
 
 4. Check: $0.6(0.571) + 0.4(0.769) = 0.343 + 0.307 = 0.650$ ✓, and on the figure the 363 K tie line runs from x ≈ 0.57 to y ≈ 0.77.
+
+![How to read the T–x–y diagram: at 363.3 K the tie line through z = 0.65 gives x = 0.571 and y = 0.769](fig/2015-16-Q1b-read.svg)
 
 ![T–x–y diagram of benzene–toluene at 1 atm with the 363.3 K tie line through z = 0.65](fig/2015-16-Q1b-sol.svg)
 
@@ -237,6 +241,8 @@ $$\boxed{y=0.75x+0.17}$$
 | $h_F$ | 93°C tie line from x ≈ 0.06 (h ≈ 92) to y ≈ 0.51 (H ≈ 452), read at z = 0.20 | ≈ 202 kcal/kg |
 
 The feed point lies on the 93°C tie line, so its vapor fraction is (0.20 − 0.0625)/(0.51 − 0.0625) = 0.31, and $h_F = 0.69(92) + 0.31(452) \approx 202$ kcal/kg.
+
+![How to read the H–x chart: x on the axis → up to the dew line, boiling line or 20 °C isotherm → across to the H axis: H1 ≈ 288, hD ≈ 10.8, hB ≈ 98, hF ≈ 202 kcal/kg](fig/2015-16-Q3b-read.svg)
 
 ![Schematic H–x chart with the dew and boiling lines, the 20°C liquid isotherm, the 93°C tie line and the four chart readings](fig/2015-16-Q3b-sol.svg)
 

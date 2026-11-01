@@ -380,6 +380,8 @@ On the DePriester chart (low-temperature chart, Wankat Fig. 2-11) a straight lin
 $$p_{drum} \approx 150\ \mathrm{kPa}, \qquad T_{drum} \approx 8\ ^\circ\mathrm{C}$$
 Check with the McWilliams fit of the chart (Wankat Eq. 2-30, Table 2-3): at 150 kPa, $K_{C3} = 3.70$ needs $T = 8.1$ °C, where $K_{C5} = 0.255$. ✓ (Along the $K_{C3} = 3.70$ line: 101.3 kPa → $K_{C5}$ 0.18; 150 kPa → 0.255; 200 kPa → 0.32, so only 150 kPa fits.)
 
+![How to use the DePriester chart backwards: the line through K = 3.70 (propane) and K = 0.255 (n-pentane) meets the outer scales at p ≈ 150 kPa and T ≈ 8 °C](fig/2018-19-Q5b-read.svg)
+
 **Result:** $V = 40.0$ kmol/h, $L = 60.0$ kmol/h; $T_{drum} \approx 8$ °C, $p_{drum} \approx 150$ kPa (1.5 bar).
 
 **Exam tip:** for a binary with both compositions known, the two K values define one straight line on the nomograph, so no trial and error is needed.`,
@@ -479,6 +481,8 @@ With $D$ and $B$ known, $Q_C$ follows from the reflux ratio and $Q_R$ from the o
 | distillate/reflux 60 wt % sat. liquid | boiling line | $h_D \approx 65$ |
 | bottoms 5 wt % sat. liquid | boiling line | $h_B \approx 91$ |
 | top vapour 60 wt % sat. vapour | dew line | $H_1 \approx 405$ |
+
+![How to read the H–x chart: H1 ≈ 405, hD ≈ 65, hF ≈ 9 (20 °C isotherm), hB ≈ 91, HS ≈ 639 kcal/kg](fig/2018-19-Q6c-read.svg)
 
 1. Mass balances including the steam:
 $$D + B = F + S = 200, \qquad 0.30(100) = 0.60D + 0.05B$$

@@ -27,6 +27,8 @@ $$x_A=\frac{1-K_B}{K_A-K_B},\qquad y_A=K_Ax_A$$
 5. Plot $(x_A, T)$ on the bubble curve and $(y_A, T)$ on the dew curve.
 6. Repeat for several temperatures. The end points are the pure-component boiling points (x = y = 0 and 1). Join the points to get the T–x–y diagram; the same pairs give the y–x curve.
 
+![How to read the DePriester chart: p on the left scale, T on the right scale, a straight line between them, K where it crosses each component scale](fig/howto-depriester.svg)
+
 > **Exam tip:** say that y–x has no T and no H information, T–x–y has no H, and H–x–y has everything but is the hardest to read. For DePriester, give the two-line formula for $x_A$.`,
           answer: String.raw`All three hold the same (x, y) equilibrium at one p: tie lines of T–x–y (horizontal) and H–x–y (sloping isotherms) each give one y–x point; H–x adds enthalpies. DePriester: at fixed p pick T, read $K_A$, $K_B$, compute $x_A$ = (1 − $K_B$)/($K_A$ − $K_B$), $y_A$ = $K_Ax_A$, repeat for several T and plot.`},
         { id: "2016-17-Q1b", label: "(b)", marks: "8",
@@ -178,6 +180,8 @@ $$L=F\frac{y-z}{y-x}=100\frac{0.507-0.40}{0.507-0.30}=\mathbf{51.7\ kmol/day},\q
 | $h_D$ = $h_{L0}$ | liquid at 40°C, x = 0.91 | ≈ 25 kcal/kg (24.8) |
 | $h_F$ | liquid at 20°C, x = 0.40 | ≈ 8.4 kcal/kg (heat of mixing makes it below 20) |
 | $h_B$ | saturated liquid, x = 0.002 (≈ 99°C) | ≈ 99 kcal/kg |
+
+![How to read the H–x chart: H1 ≈ 284 (dew line, 0.91), hD ≈ 24.8 (40 °C isotherm), hF ≈ 8.4 (20 °C isotherm, 0.40), hB ≈ 99 kcal/kg](fig/2016-17-Q2b-read.svg)
 
 ![Schematic H–x chart with the dew line, boiling line, 20°C and 40°C liquid isotherms and the four readings](fig/2016-17-Q2b-sol.svg)
 

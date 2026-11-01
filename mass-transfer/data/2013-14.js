@@ -442,6 +442,8 @@ The final design had 14 plates. What was the efficiency of the column? Use the F
 (Fig. for Q. 7(a): x–y diagram for the CS$_2$–CCl$_4$ system, mole fraction CS$_2$ in vapor against mole fraction CS$_2$ in liquor, at 1 atm.)`,
           solution: String.raw`Two misprints: the molar mass of CCl$_4$ is 153.8 g/mol (Çengel Table A-1: 153.82), not 72.6; and the latent heat is 25,900 kJ/kmol, not kJ/mol. Equilibrium points were read from the supplied Fig. for Q. 7(a) (e.g. x = 0.2 → y = 0.42, 0.4 → 0.64, 0.6 → 0.79, 0.8 → 0.90).
 
+![How to read the CS2–CCl4 x–y diagram: x → up to the curve → across to y (0.2 → 0.42, 0.4 → 0.64, 0.6 → 0.79, 0.8 → 0.90)](fig/2013-14-Q7a-read.svg)
+
 **Given:** feed 15.67 wt% CS$_2$, distillate 91 wt% CS$_2$, bottoms 2.7 wt% CS$_2$; R = L/D = 3.16; feed at 290 K, boiling point 336 K, $c_p$ = 1.7 kJ/kg·K, λ = 25,900 kJ/kmol; 1 atm.
 
 **Find:** mean feed molar mass, q, number of theoretical plates, overall efficiency with 14 real plates.

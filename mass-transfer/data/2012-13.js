@@ -262,6 +262,8 @@ $$
 - **Trends:** higher viscosity lowers mass-transfer rates, so $E_o$ falls; higher α means more material must be transferred to reach equilibrium, so $E_o$ falls. Typical values 40–90%.
 - **Use:** (1) find average T and P; (2) get α and μ of the feed; (3) read $E_o$; (4) $N_{act} = (N_{equil} - 1_{\text{reboiler}})/E_o$, rounded up. The data were probably for bubble-cap columns, so the estimate is conservative for sieve and valve trays. The slides also apply O'Connell's (absorber) version to bubble-cap absorbers.
 
+![How to read the O’Connell correlation: αμ on the log axis → up to the curve → across to E_o](fig/howto-oconnell.svg)
+
 > **Exam tip:** write $N_{act} = N_{equil}/E_o$ and name both variables of the correlation (α and μ).`,
           answer: String.raw`O'Connell gives overall efficiency E_o from αμ (feed viscosity × relative volatility at average conditions) to convert equilibrium stages to real trays; conservative for sieve and valve trays.` },
         { id: "2012-13-Q4d", label: "(d)", marks: "5",
@@ -344,6 +346,8 @@ x_{C5} = \frac{1 - 0.4534 - 0.3675}{1.1305 - 0.4225} = 0.253, \qquad x_{C6} = 0.
 $$
 4. Vapor: $y_{C4} = 3.488(0.13) = 0.453$; $y_{C5} = 1.1305(0.253) = 0.286$; $y_{C6} = 0.4225(0.617) = 0.261$; sum = 1.000 ✓.
 
+![How to read the DePriester chart: p = 137.9 kPa and T = 48.9 °C joined by a straight line, K = 3.49 (n-C4), 1.13 (n-C5), 0.422 (n-C6)](fig/2012-13-Q5b-read.svg)
+
 | | n-butane | n-pentane | n-hexane |
 |---|---|---|---|
 | liquid x | 0.130 | 0.253 | 0.617 |
@@ -370,6 +374,8 @@ $$
 $$
 \frac{V}{F} = \frac{z - x}{y - x} = \frac{0.32}{0.46} = 0.70, \qquad \frac{L}{F} = 0.30
 $$
+
+![How to read the H–x chart: the 87 °C tie line ends at x ≈ 0.18 on the boiling line and y ≈ 0.64 on the dew line; z = 0.50 on it gives V/F = 0.70](fig/2012-13-Q5c-read.svg)
 
 ![H-x diagram for ethanol–water at 1 kg/cm²: the 87 °C tie line through the 50 wt% feed point](fig/2012-13-Q5c-sol.svg)
 
@@ -429,6 +435,8 @@ $$
 V = F\frac{z - x}{y - x} = 1200\,\frac{0.35 - 0.198}{0.650 - 0.198} = 404\ \mathrm{kg/h}, \qquad L = 1200 - 404 = 796\ \mathrm{kg/h}
 $$
 5. Checks: ethanol 404(0.650) + 796(0.198) = 262.6 + 157.6 = 420 = 1200(0.35) ✓; energy $[404(388) + 796(86)]/1200 = 187.6$ kcal/kg = $h_F$ ✓.
+
+![How to find the tie line through the feed point with the auxiliary line: F (0.35, 187.6) → x ≈ 0.20, y ≈ 0.65, T ≈ 86.5 °C](fig/2012-13-Q6b-read.svg)
 
 ![H-x chart construction: feed point at 187.6 kcal/kg, tie line to x = 0.20 and y = 0.65](fig/2012-13-Q6b-sol.svg)
 

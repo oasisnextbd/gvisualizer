@@ -475,6 +475,8 @@ Fraction of stage 7: $(0.1688-0.10)/(0.1688-0.0962) = 0.95$.
 | bottoms, 5 wt % | saturated liquid | $h_B \approx 91$ |
 | top vapour $V_1$, $y_1 = 0.60$ | saturated vapour (dew line) | $H_1 \approx 405$ |
 
+![How to read the H–x chart: H1 ≈ 405, hD ≈ 65, hF ≈ 9 (20 °C isotherm), hB ≈ 91, HS ≈ 639 kcal/kg](fig/2017-18-Q7a-read.svg)
+
 1. Overall mass balances (steam is an extra input):
 $$F + S = D + B \Rightarrow D + B = 200$$
 $$Fz + Sy_S = Dx_D + Bx_B \Rightarrow 30 = 0.60D + 0.05(200 - D)$$
@@ -515,6 +517,8 @@ Trial on $p$: on the DePriester chart put a straightedge through $T = 40$ °C an
 | **405** | **8.57** | **0.333** | **0.047** | **1.000** |
 
 Interpolating ($\sum Kx$ against $p$) gives $p \approx 405$ kPa.
+
+![How to read the DePriester chart: a straight line from p ≈ 405 kPa to T = 40 °C gives K = 8.57 (ethane), 0.333 (n-C5), 0.047 (n-C7)](fig/2017-18-Q7b-read.svg)
 
 First-bubble vapour: $y_{C2} = 8.57(0.10) = 0.857$, $y_{C5} = 0.333(0.35) = 0.117$, $y_{C7} = 0.047(0.55) = 0.026$ (sum 1.00).
 
