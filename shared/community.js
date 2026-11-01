@@ -11,7 +11,7 @@ const KIND_TAG = { error: 'error', method: 'easier method', doubt: 'doubt', requ
 const NOTE_LABEL = { correction: 'Correction', method: 'Alternative method', review: 'Under review' };
 const STATUS = { new: 'received', reviewing: 'being reviewed', approved: 'approved', fixed: 'fixed', declined: 'declined' };
 
-let state = null, part = null;
+let state = null, part = null, nudgeClosed = false;
 const $ = (s, el = document) => el.querySelector(s);
 
 if (enabled) start();
@@ -28,7 +28,8 @@ function start() {
   later(() => onUser(s => { state = s; paintHeader(); if (part) show(part, true); gate(); }));
   // any element with data-signin opens the sign-in box (e.g. the home-page strip)
   document.addEventListener('click', e => { const t = e.target.closest('[data-signin]'); if (t) { e.preventDefault(); openModal(t.dataset.signin === 'up' ? 'signup' : 'signin'); } });
-  if (COURSE_PAGE && !SOLUTIONS) countView();   // solution pages count each opened solution in show()
+  gate();   // guests are limited at once; a remembered signed-in user waits for confirmation
+  window.addEventListener('hashchange', () => setTimeout(gate, 0));
   // the page may have routed before this module loaded
   const h = decodeURIComponent(location.hash.slice(1));
   if (h && window.QB && QB.byId && QB.byId[h]) show(h);
@@ -45,56 +46,77 @@ function addHeader() {
   $('.cm-signin', b).addEventListener('click', () => openModal('signin'));
   $('.cm-out', b).addEventListener('click', () => signOut());
 }
-// ------------------------------------------------------------ sign-in reminder and free-page limit
-// Course pages (questions, practice, checklist, each opened solution) are counted in this browser.
-// From the 4th page a reminder shows on every page ("Not now" closes it for that page only).
-// After FREE_PAGES pages a sign-in screen covers the content until the visitor signs in with an allowed,
-// verified account. The home page and the preview solutions below stay free and are not counted.
-// (A soft limit: the count lives in the browser. The real lock comes when the content moves to Firebase.)
+// ------------------------------------------------------------ guest limits
+// Not signed in (or not an allowed, verified account) = guest. Per course a guest may:
+//   - see the questions of one paper (QB.freeYear) in the question bank,
+//   - open any QB.freeSolutions (2) solutions of that paper (remembered in this browser),
+// and nothing else: other papers' solutions, practice sets and the checklist show a sign-in screen.
+// The home page, labs and team dashboard are unaffected. (A soft lock: the content files are still
+// public; the real lock comes when the content moves to Firebase.)
 // Function declarations, not consts: start() runs before this part of the module is evaluated.
-function FREE_PAGES() { return 10; }
-function isPreview(id) { return ['che301:2022-23-Q3a', 'che301:2022-23-Q8a', 'che301:practice-heat-exchangers-P6a', 'che301:practice-heat-exchangers-P6b', 'che303:2023-24-Q2b', 'che303:2015-16-Q5a', 'che303:2022-23-Q2c'].includes(COURSE + ':' + id); }
-function previewLinks() { return COURSE === 'che303'
-  ? [['2023-24-Q2b', 'Methanol–water McCabe–Thiele'], ['2015-16-Q5a', 'Extraction on the triangle'], ['2022-23-Q2c', 'Ammonia stripper (Kremser)']]
-  : [['2022-23-Q3a', 'Reynolds–Colburn analogy'], ['2022-23-Q8a', 'Pool boiling curve'], ['practice-heat-exchangers-P6a', 'Double-pipe hairpins (Kern 6.1)']]; }
+function PAGE() { return location.pathname.split('/').pop() || 'index.html'; }
 function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
 function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
-function views() { return +lsGet('gv-views') || 0; }
-function countView() { lsSet('gv-views', String(views() + 1)); }
+function FREE() { return (window.QB && QB.freeYear) || '2023-24'; }
+function MAXFREE() { return (window.QB && QB.freeSolutions) || 2; }
+function seenFree() { try { return JSON.parse(lsGet('gv-free-' + COURSE) || '[]'); } catch (e) { return []; } }
+function freeLeft() { return Math.max(0, MAXFREE() - seenFree().length); }
+function guestMayOpen(id) {
+  const p = window.QB && QB.byId[id];
+  if (!p || p.practice || p.key !== FREE()) return false;
+  const s = seenFree();
+  if (s.includes(id)) return true;
+  if (s.length >= MAXFREE()) return false;
+  s.push(id); lsSet('gv-free-' + COURSE, JSON.stringify(s)); return true;
+}
 function hasAccess() { return !!(state && state.user && state.verified && ((state.member && !state.blocked) || state.isMod)); }
-let nudgeClosed = false;
+// true / false, or null while a remembered signed-in user is still being confirmed
+function access() { if (state) return hasAccess(); return lsGet('gv-access') === '1' ? null : false; }
 function gate() {
-  if (!state) return;                                   // wait until the sign-in state is known
-  const wallEl = $('.cm-wall'), nudgeEl = $('.cm-nudge');
-  if (hasAccess()) { if (wallEl) wallEl.remove(); if (nudgeEl) nudgeEl.remove(); document.documentElement.classList.remove('cm-locked'); return; }
-  const free = isPreview(part);
-  if (COURSE_PAGE && views() > FREE_PAGES() && !free) { if (nudgeEl) nudgeEl.remove(); return wall(); }
-  if (wallEl) { wallEl.remove(); document.documentElement.classList.remove('cm-locked'); }
-  if (state.user || nudgeClosed || views() < 4) { if (nudgeEl && state.user) nudgeEl.remove(); return; }
-  const left = Math.max(0, FREE_PAGES() - views());
-  const n = nudgeEl || document.body.appendChild(Object.assign(document.createElement('div'), { className: 'cm-nudge' }));
+  const a = access(); if (a === null) return;
+  if (state) lsSet('gv-access', a ? '1' : '0');
+  if (window.QB && QB.guest !== !a) { QB.guest = !a; window.dispatchEvent(new Event('qb:access')); }
+  const wallEl = $('.cm-wall');
+  const unlock = () => { if (wallEl) wallEl.remove(); document.documentElement.classList.remove('cm-locked'); };
+  if (a) { unlock(); const n = $('.cm-nudge'); if (n) n.remove(); return; }
+  if (!COURSE_PAGE) return;
+  const page = PAGE();
+  if (page === 'practice.html' || page === 'checklist.html') return wall(page === 'practice.html' ? 'practice' : 'checklist');
+  if (page !== 'solutions.html') { unlock(); return; }
+  const h = decodeURIComponent(location.hash.slice(1));
+  if (part) return guestMayOpen(part) ? (unlock(), nudge()) : wall(QB.byId[part].practice || QB.byId[part].key !== FREE() ? 'paper' : 'used');
+  if (h.startsWith('year-') && h.slice(5) !== FREE()) return wall('paper');
+  unlock();
+}
+function nudge() {
+  if (nudgeClosed) return;
+  const left = freeLeft();
+  const n = $('.cm-nudge') || document.body.appendChild(Object.assign(document.createElement('div'), { className: 'cm-nudge' }));
   n.setAttribute('role', 'dialog'); n.setAttribute('aria-label', 'Sign in suggestion');
-  n.innerHTML = `<p><b>Studying here often?</b> Sign in with your BUET student ID to keep studying, report errors, share easier methods and ask doubts.${COURSE_PAGE ? ` <b>${left} free page${left === 1 ? '' : 's'} left</b> before sign-in is needed.` : ''}</p>
+  n.innerHTML = `<p><b>${left ? `${left} free solution${left === 1 ? '' : 's'} left.` : 'This was your last free solution.'}</b> Sign in with your BUET ChE student ID to see every paper, every solution, the practice sets and the checklist.</p>
     <div class="cm-row"><button type="button" class="btn" data-signin>Sign in</button><button type="button" class="btn ghost" data-signin="up">Create account</button><button type="button" class="cm-link cm-later">Not now</button></div>`;
   $('.cm-later', n).onclick = () => { nudgeClosed = true; n.remove(); };
   n.onclick = e => { if (e.target.closest('[data-signin]')) n.remove(); };
 }
-function wall() {
+function wall(kind) {
+  const nEl = $('.cm-nudge'); if (nEl) nEl.remove();
   let w = $('.cm-wall');
   if (!w) { w = document.body.appendChild(Object.assign(document.createElement('div'), { className: 'cm-wall' })); w.setAttribute('role', 'dialog'); w.setAttribute('aria-modal', 'true'); }
   document.documentElement.classList.add('cm-locked');
-  const u = state.user;
-  const why = !u ? `You have used your ${FREE_PAGES()} free pages. Sign in with your BUET ChE student ID to keep studying: every past paper, solution, practice set and checklist.`
+  const u = state && state.user;
+  const what = { used: `You have opened your ${MAXFREE()} free solutions.`, paper: `Guests can open solutions from the ${FREE()} paper only.`, practice: 'Practice sets are for signed-in students.', checklist: 'The prep checklist is for signed-in students.' }[kind];
+  const why = !u ? `${what} Sign in with your BUET ChE student ID to unlock every paper, every solution, the practice sets and the checklist.`
     : !state.verified ? 'You are signed in, but your BUET email is not verified yet. Open the link in your BUET mailbox (check Junk), or ask the team to verify you.'
     : state.blocked ? 'This account has been blocked by the team. Contact the gvisualizer team if this is a mistake.'
     : `This account (${esc(state.email)}) is not on the allowed list. Access is for BUET ChE students 2202001–2202120 and 2302001–2302120; contact the team if you should be included.`;
   const home = location.pathname.replace(/[^/]*\/[^/]*$/, '');
+  const left = freeLeft();
   w.innerHTML = `<div class="cm-wall-box"><h3>Sign in to keep studying</h3><p>${why}</p>
     <div class="cm-row">${!u ? '<button type="button" class="btn" data-signin>Sign in</button><button type="button" class="btn ghost" data-signin="up">Create account</button>'
       : !state.verified ? '<button type="button" class="btn cm-w-verify">Verify my account</button><button type="button" class="btn ghost cm-w-out">Sign out</button>'
       : '<button type="button" class="btn ghost cm-w-out">Sign out</button>'}</div>
     ${!u ? '<p class="cm-dim" style="margin-top:12px">Team member? <button type="button" class="cm-link cm-w-google">Continue with Google</button></p>' : ''}
-    <p class="cm-dim" style="margin-top:14px">Free preview, no sign-in needed: ${previewLinks().map(([id, t]) => `<a href="solutions.html#${id}">${esc(t)}</a>`).join(' · ')} · <a href="${home}">home page</a></p></div>`;
+    <p class="cm-dim" style="margin-top:14px">Without signing in: <a href="./#year-${FREE()}">the ${FREE()} questions</a>${left ? ` (${left} free solution${left === 1 ? '' : 's'} left)` : ''} · <a href="${home}">home page</a></p></div>`;
   const g = $('.cm-w-google', w); if (g) g.onclick = () => googleSignIn().catch(e => alert(niceError(e)));
   const v = $('.cm-w-verify', w); if (v) v.onclick = () => openModal('verify');
   const o = $('.cm-w-out', w); if (o) o.onclick = () => signOut();
@@ -191,7 +213,6 @@ function afterAuth(s) {
 async function show(id, again) {
   if (!id || !window.QB || !QB.byId[id]) { part = null; gate(); return; }
   const changed = part !== id; part = id;
-  if (changed && !again && !isPreview(id)) countView();
   gate();
   const sol = $('#view .sol'); if (!sol) return;
   if (changed || !$('#view .cm-notes')) renderNotes(id, sol);

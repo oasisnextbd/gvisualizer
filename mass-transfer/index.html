@@ -46,7 +46,7 @@
 const $=s=>document.querySelector(s);
 const st={by:'topic',sel:null,q:'',type:'',hideOut:false};
 function readHash(){ const h=decodeURIComponent(location.hash.slice(1)); if(h.startsWith('year-')){ st.by='year'; st.sel=h.slice(5); } else if(h){ st.by='topic'; st.sel=h; } }
-function filtered(){ const q=st.q.toLowerCase(); return QB.parts.filter(p=>!p.practice&&(!st.type||p.type===st.type)&&(!st.hideOut||p.syllabus!=='out')&&(!q||(p.text+' '+p.sub+' '+p.stem+' '+p.year).toLowerCase().includes(q))); }
+function filtered(){ const q=st.q.toLowerCase(); return QB.parts.filter(p=>!p.practice&&(!QB.guest||p.key===QB.freeYear)&&(!st.type||p.type===st.type)&&(!st.hideOut||p.syllabus!=='out')&&(!q||(p.text+' '+p.sub+' '+p.stem+' '+p.year).toLowerCase().includes(q))); }
 function rail(list){
   const keys=st.by==='topic'?QB.TOPICS.map(t=>({k:t.id,name:t.name,ch:t.ch})):QB.YEARS.filter(y=>QB.papers[y]).map(y=>({k:y,name:y,ch:''}));
   const cnt=k=>list.filter(p=>(st.by==='topic'?p.topic:p.key)===k).length;
@@ -79,7 +79,9 @@ function render(){
       [...new Set(ps.map(p=>p.section))].forEach(sec=>{ const sp=ps.filter(p=>p.section===sec); if(sp.length) html+=(P.practice?'':`<div class="yearhead">Section ${sec}</div>`)+sp.map(card).join(''); });
       html+='</section>'; });
   }
-  $('#list').innerHTML=html||'<p class="empty">No questions match these filters.</p>';
+  const n=QB.YEARS.filter(y=>QB.papers[y]).length;
+  const guestBar=QB.guest?`<div class="cm-strip" style="margin:0 0 14px"><p><b>Guest view:</b> the ${QB.freeYear} paper only, with ${QB.freeSolutions} free solutions. Sign in with your BUET ChE student ID to unlock all ${n} papers, every solution, practice sets and the checklist.</p><span class="cm-row" style="margin:0"><button type="button" class="btn" data-signin>Sign in</button><button type="button" class="btn ghost" data-signin="up">Create account</button></span></div>`:'';
+  $('#list').innerHTML=guestBar+(html||'<p class="empty">No questions match these filters.</p>');
   QB.typesetLazy($('#list'));
 }
 $('#byTopic').addEventListener('click',()=>{ st.by='topic'; st.sel=null; history.replaceState(null,'',location.pathname); render(); });
@@ -88,6 +90,7 @@ let tq; $('#q').addEventListener('input',e=>{ clearTimeout(tq); tq=setTimeout(()
 $('#type').addEventListener('change',e=>{ st.type=e.target.value; render(); });
 $('#hideOut').addEventListener('change',e=>{ st.hideOut=e.target.checked; render(); });
 window.addEventListener('hashchange',()=>{ readHash(); render(); });
+window.addEventListener('qb:access',()=>{ if(QB.parts.length) render(); });
 QB.load(()=>{ readHash();
   const P=QB.parts;
   const ex=P.filter(p=>!p.practice), pr=P.length-ex.length; const num=ex.filter(p=>p.type==='numerical').length;

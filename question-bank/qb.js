@@ -22,7 +22,10 @@ const YEARS=COURSE.years||['2023-24','2022-23','2021-22','2020-21','2018-19','20
 const SETS=(COURSE.sets||['intro','conduction','insulation','generation','convection-basics','boundary-layer','forced-convection','natural-convection','condensation','boiling','heat-exchangers','shell-tube','evaporator']).map(t=>'practice-'+t);   /* book-style practice sets, files data/<name>.js */
 const keyOf=p=>p.practice?'practice-'+String(p.set||'set').toLowerCase().replace(/[^a-z0-9]+/g,'-'):p.year;
 const papers={}, parts=[], byId={};
-const QB={TOPICS,YEARS,SETS,papers,parts,byId,keyOf,
+// Guests (not signed in with an allowed account) see one paper's questions and 2 of its solutions per course.
+// shared/community.js flips QB.guest to false once a signed-in, allowed account is confirmed ('qb:access' event).
+const guestHint=(()=>{ try{ return localStorage.getItem('gv-access')!=='1'; }catch(e){ return true; } })();
+const QB={TOPICS,YEARS,SETS,papers,parts,byId,keyOf,guest:guestHint,freeYear:'2023-24',freeSolutions:2,
   keys:()=>YEARS.filter(y=>papers[y]).concat(Object.keys(papers).filter(k=>k.startsWith('practice-'))),
   topic:id=>TOPICS.find(t=>t.id===id)||TOPICS[TOPICS.length-1],
   paper(p){ const key=keyOf(p); p.key=key; papers[key]=p; p.questions.forEach(q=>q.parts.forEach((pt,i)=>{ const o=Object.assign({},pt,{year:p.year,key,practice:!!p.practice,set:p.set||'',q:q.q,section:q.section,compulsory:q.compulsory,stem:q.stem||'',qid:q.id,idx:i,siblings:q.parts.map(x=>x.id)}); parts.push(o); byId[o.id]=o; })); },
