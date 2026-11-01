@@ -1,7 +1,21 @@
 /* gvisualizer: sign-in chip, modal, team notes and the suggestions box (uses the qb.css tokens) */
 .cm-user{display:flex;align-items:center;gap:6px}
-.cm-me{display:flex;align-items:center;gap:6px}
-.cm-id{white-space:nowrap;font-family:var(--f-display);font-weight:600;font-size:14px;color:var(--flow)}
+.cm-me{display:flex;align-items:center;position:relative}
+.cm-acct{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 12px 0 4px;border:1px solid var(--edge);border-radius:999px;background:transparent;color:var(--ink);cursor:pointer;font:inherit}
+.cm-acct:hover,.cm-acct[aria-expanded="true"]{background:var(--panel-2)}
+.cm-av{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--panel-2);color:var(--flow)}
+.cm-acct:hover .cm-av,.cm-acct[aria-expanded="true"] .cm-av{background:var(--panel)}
+.cm-acct .cm-id{max-width:170px;overflow:hidden;text-overflow:ellipsis}
+.cm-caret{color:var(--dim);flex:none}
+.cm-menu{position:absolute;right:0;top:calc(100% + 8px);min-width:230px;background:var(--panel);border:1px solid var(--edge);border-radius:12px;box-shadow:0 12px 32px rgba(5,12,22,.18);padding:6px;z-index:60}
+.cm-menu-h{padding:10px 12px 12px;font-size:13px;color:var(--dim);border-bottom:1px solid var(--edge);margin-bottom:6px}
+.cm-menu-h b{display:block;color:var(--ink);font-size:14.5px;margin-top:2px;word-break:break-all}
+.cm-menu-st{display:block;color:var(--heat);margin-top:4px}
+.cm-menu-st:empty{display:none}
+.cm-menu .cm-out{display:block;width:100%;text-align:left;background:none;border:0;padding:9px 12px;border-radius:8px;cursor:pointer;font:inherit;font-weight:600;font-size:14px;color:var(--ink)}
+.cm-menu .cm-out:hover{background:var(--panel-2)}
+@media (max-width:760px){ .cm-acct .cm-id,.cm-caret{display:none} .cm-acct{padding:0 3px;width:38px;justify-content:center} }
+.cm-id{white-space:nowrap;font-family:var(--f-display);font-weight:600;font-size:14px;color:var(--ink)}
 .cm-modal{position:fixed;inset:0;background:rgba(5,12,22,.55);display:grid;place-items:center;z-index:50;padding:16px}
 .cm-modal[hidden]{display:none!important}
 .cm-dialog{position:relative;background:var(--panel);border:1px solid var(--edge);border-radius:16px;padding:24px 24px 18px;width:min(440px,100%);max-height:90vh;overflow:auto;box-shadow:0 10px 30px var(--shadow)}

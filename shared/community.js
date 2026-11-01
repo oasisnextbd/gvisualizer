@@ -18,7 +18,7 @@ if (enabled) start();
 
 function start() {
   const css = document.createElement('link');
-  css.rel = 'stylesheet'; css.href = new URL('community.css', import.meta.url).href;
+  css.rel = 'stylesheet'; css.href = new URL('community.css?v=20261103', import.meta.url).href;
   document.head.appendChild(css);
   addHeader();
   addModal();
@@ -40,11 +40,20 @@ function addHeader() {
   const top = $('.top'); if (!top) return;
   const b = document.createElement('div');
   b.className = 'cm-user';
-  b.innerHTML = '<button type="button" class="navlink cm-signin">Sign in</button><span class="cm-me" hidden><span class="cm-id"></span><button type="button" class="navlink cm-out">Sign out</button></span>';
+  b.innerHTML = '<button type="button" class="navlink cm-signin">Sign in</button>' +
+    '<span class="cm-me" hidden><button type="button" class="cm-acct" aria-haspopup="menu" aria-expanded="false" title="Account">' +
+    '<span class="cm-av" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20.5c1.2-3.8 4.2-5.6 7.5-5.6s6.3 1.8 7.5 5.6"/></svg></span>' +
+    '<span class="cm-id"></span><svg class="cm-caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>' +
+    '<div class="cm-menu" role="menu" hidden><div class="cm-menu-h">Signed in as<b class="cm-menu-id"></b><span class="cm-menu-st"></span></div><button type="button" class="cm-out" role="menuitem">Sign out</button></div></span>';
+  const acct = $('.cm-acct', b), menu = $('.cm-menu', b);
+  const setMenu = open => { menu.hidden = !open; acct.setAttribute('aria-expanded', String(open)); };
+  acct.addEventListener('click', e => { e.stopPropagation(); setMenu(menu.hidden); });
+  document.addEventListener('click', e => { if (!menu.hidden && !menu.contains(e.target)) setMenu(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !menu.hidden) { setMenu(false); acct.focus(); } });
   const theme = $('.themebtn', top);
   top.insertBefore(b, theme || null);
   $('.cm-signin', b).addEventListener('click', () => openModal('signin'));
-  $('.cm-out', b).addEventListener('click', () => signOut());
+  $('.cm-out', b).addEventListener('click', () => { $('.cm-menu', b).hidden = true; signOut(); });
 }
 // ------------------------------------------------------------ guest limits
 // Not signed in (or not an allowed, verified account) = guest. Per course a guest may:
@@ -128,7 +137,12 @@ function paintHeader() {
   const on = state && state.user;
   $('.cm-signin', b).hidden = !!on;
   $('.cm-me', b).hidden = !on;
-  if (on) $('.cm-id', b).textContent = shortName(state.email) + (state.verified ? '' : state.request ? ' (waiting for team)' : ' (verify email)');
+  if (on) {
+    const st = state.verified ? '' : state.request ? 'waiting for team' : 'verify email';
+    $('.cm-id', b).textContent = shortName(state.email) + (st ? ' (' + st + ')' : '');
+    $('.cm-menu-id', b).textContent = state.email;
+    $('.cm-menu-st', b).textContent = st ? 'Not verified yet: ' + st : '';
+  } else { const m = $('.cm-menu', b); if (m) m.hidden = true; }
 }
 
 // ------------------------------------------------------------ sign-in modal

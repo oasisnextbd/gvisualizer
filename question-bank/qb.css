@@ -26,7 +26,9 @@ button,input,select{font:inherit;color:inherit}
 .wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 56px}
 
 /* header: full-width sticky bar */
-.top{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:6px 10px;min-height:var(--head-h);padding:8px 0;background:var(--panel);box-shadow:0 0 0 100vmax var(--panel),0 1px 0 100vmax var(--edge);clip-path:inset(0 -100vmax -1px)}
+.top{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:6px 10px;min-height:var(--head-h);padding:8px 0;background:var(--panel)}
+.top::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);background:var(--panel);border-bottom:1px solid var(--edge);z-index:-1}
+body{overflow-x:clip}
 .logo{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-weight:800;font-size:19px;letter-spacing:-.02em;flex:none}
 .logo .mark{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--gold);color:var(--on-accent);font-size:15px;font-weight:800;letter-spacing:-.04em}
 .coursechip{flex:none;font-weight:700;font-size:14px;text-decoration:none;color:var(--ink);background:var(--panel-2);border:1px solid var(--edge);border-radius:999px;padding:4px 11px}
@@ -40,6 +42,7 @@ button,input,select{font:inherit;color:inherit}
 .brand span{color:var(--flow)}
 .themebtn,.backbtn,.iconbtn{display:inline-grid;place-items:center;width:38px;height:38px;padding:0;border-radius:999px;background:transparent;border:1px solid var(--edge);color:var(--ink);cursor:pointer;text-decoration:none;font-size:17px;line-height:1;flex:none}
 .themebtn:hover,.backbtn:hover,.iconbtn:hover{background:var(--panel-2)}
+.themebtn svg{display:block}
 .iconbtn svg{width:18px;height:18px}
 @media (max-width:760px){
   .top{gap:4px 8px;flex-wrap:wrap;padding:8px 0 0}
