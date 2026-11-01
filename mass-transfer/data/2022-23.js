@@ -392,6 +392,8 @@ This gives a wider operating range for liquid flow at little extra cost. By cont
 | 77.65 (azeotrope) | 0.956 | 0.956 |
 | 77.8 (pure ethanol) | 1.00 | 1.00 |
 
+![From the H–x chart to the T–x–y diagram: the 85 °C tie line ends at x = 0.25 and y = 0.68; drop both to 85 °C on the T–x–y diagram](fig/2022-23-Q5a-read.svg)
+
 ![T-x-y diagram for ethanol–water at 1 kg/cm² from the H-x chart tie lines](fig/2022-23-Q5a-sol.svg)
 
 **Exam tip:** the tie lines on the H-x chart are the horizontal lines of the T-x-y diagram; keep weight fractions on the axis (or convert both x and y to mole fractions).`,
@@ -496,6 +498,8 @@ $$\bar{V} = \frac{DH_D + Bh_B - Fh_F - Ch_C}{H_{\bar{V}}(x_B) - h_L(x_B)}$$
 | $H_D$ | saturated vapor (dew line) at 0.80 wt | ≈ 328 |
 | $h_B = h_{L,N}$ | saturated liquid (boiling line) at 0.05 wt | ≈ 94 |
 | $H_{\bar{V}}$ | saturated vapor (dew line) at 0.05 wt | ≈ 620 |
+
+![How to read the H–x chart: HD ≈ 328, hF ≈ −28 (−20 °C isotherm), hC ≈ 48, hB ≈ 94, HV̄ ≈ 620 kcal/kg](fig/2022-23-Q6a-read.svg)
 
 3. Reboiler duty:
 

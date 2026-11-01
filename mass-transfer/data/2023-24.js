@@ -32,6 +32,8 @@ Both are plotted at the **same fixed pressure** and contain the **same equilibri
 - On the T-x-y diagram, a horizontal line at temperature T cuts the bubble (T-x) curve at x and the dew (T-y) curve at y.
 - On the H-x-y diagram, the same equilibrium pair is joined by the **isothermal tie line** between the saturated-liquid line (at x) and the saturated-vapor line (at y), labelled with T.
 
+![How to read the ethanol–water H–x chart: composition → up to the dew line, boiling line or liquid isotherm → across to the enthalpy axis; tie lines via the auxiliary line](fig/howto-hx-chart.svg)
+
 Reading (x, y) at each tie line therefore gives the same y-x points; the H-x-y diagram only adds the enthalpies. Points to watch: H-x charts (e.g. ethanol–water, Wankat Fig. 2-4) are usually in **weight** fractions and at a specified pressure (1 kg/cm² there), so convert to mole fractions and check the pressure before comparing.`,
           answer: String.raw`(i) Identical if α(x) = y(1−x)/[x(1−y)] is used at each point; with one constant α only for near-ideal systems. (ii) Same P, same tie lines: horizontal lines on T-x-y = isothermal tie lines on H-x-y, so the same y-x data (convert wt to mol fractions).` },
         { id: "2023-24-Q1b", label: "(b)", marks: "3+3",

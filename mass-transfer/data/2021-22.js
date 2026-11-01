@@ -18,6 +18,8 @@ QB.paper({
 - Since $u_{flood} = C_{SB}(\sigma/20)^{0.2}[(\rho_L-\rho_V)/\rho_V]^{0.5}$ and $D = \sqrt{4Q_V/(\pi f u_{flood})}$, we have $D \propto C_{SB}^{-1/2}$. Doubling 12 → 24 in cuts D by about 25%.
 - Downcomer backup also has more room, so higher liquid loads are possible.
 
+![How to read the flooding chart: F_lv = 0.1 → 12 in and 24 in tray-spacing curves → C_SB ≈ 0.19 and 0.33 ft/s](fig/2021-22-Q1a-read.svg)
+
 **Trade-off:** a larger spacing gives a smaller, cheaper-per-tray diameter, but a taller shell, $H = (N-1)S + H_{top} + H_{bottom}$. Spacing is also set by access for maintenance: 0.45 m for D < 1.2 m and at least 0.6 m for D = 1.2–3 m. The optimum minimizes total cost.`,
           answer: String.raw`Efficiency: almost unchanged (slightly higher through less entrainment). Diameter: smaller, because $C_{SB}$ and $u_{flood}$ rise with spacing ($D \propto C_{SB}^{-1/2}$), at the price of a taller column.` },
         { id: "2021-22-Q1b", label: "(b)", marks: "7",
@@ -323,7 +325,9 @@ $$\frac{x_N}{x_0} = \frac{1 - 1.121}{1 - 1.121^{12}} = \frac{-0.121}{1 - 3.938} 
 - **Without data:** use the **O'Connell correlation**, $E_o$ against $\alpha\mu_L$ (relative volatility × liquid viscosity in cP at the average column T and P):
 $$E_o = 0.52782 - 0.27511\log_{10}(\alpha\mu) + 0.044923[\log_{10}(\alpha\mu)]^2$$
   - It is conservative for sieve and valve trays, being based on bubble-cap data. For absorbers, use the absorber version with $Hp/\mu$, as in the slides.
-- Or estimate Murphree or point efficiencies from mass-transfer models (e.g. the AIChE method), convert them to $E_o$, and check against data.`,
+- Or estimate Murphree or point efficiencies from mass-transfer models (e.g. the AIChE method), convert them to $E_o$, and check against data.
+
+![How to read the O’Connell correlation: αμ on the log axis → up to the curve → across to E_o](fig/howto-oconnell.svg)`,
           answer: String.raw`(i) Size D from the vapor load, then read (D, liquid gpm) on the flow-pattern chart: reverse, cross-flow, double-pass or 4-pass (never 3-pass). (ii) Best: plant or pilot data for the same system; otherwise the O'Connell correlation $E_o(\alpha\mu)$.` } ] },
     { id: "2021-22-Q5", q: 5, section: "B", compulsory: true,
       stem: String.raw``,
@@ -432,6 +436,8 @@ $$u_{perm} = K_{drum}\sqrt{(\rho_L - \rho_V)/\rho_V}$$
 4. If an unlabelled temperature is needed, use the **auxiliary line**: from x on the boiling line go vertically up to the auxiliary line, then horizontally to the dew line to get y.
 5. Repeat for at least 5 tie lines spread over the range. Add the end points: pure water at the left axis (99.1°C on the chart at 1 kg/cm²) and the azeotrope (x = y ≈ 0.956, about 77.7–78.2°C).
 6. On one graph (T against weight fraction) plot the x points and join them as the **T–x (bubble-point) curve**, then plot the y points as the **T–y (dew-point) curve**. Join each pair with a horizontal tie line. Label the vapor, L + V and liquid regions and the azeotrope where the curves touch.
+
+![From the H–x chart to the T–x–y diagram: the 89 °C tie line ends at x = 0.166 (boiling line) and y = 0.620 (dew line); drop both to 89 °C on the T–x–y diagram](fig/2021-22-Q6a-read.svg)
 
 **Points used** (tie-line ends read on the chart; they agree, to about ±0.01 wt frac, with the Perry 1 atm data of the slides / Wankat Table 2-1 converted to wt fraction, which are the values listed; the chart is at 1 kg/cm² = 0.968 atm, so its temperatures are about 0.5–1°C lower):
 
@@ -657,6 +663,8 @@ $$x_{D,avg} = \frac{48.03(0.10) - 35.2(0.004)}{12.8} = \frac{4.803 - 0.141}{12.8
 $$q = \frac{400 - 10}{400 - 65} = \frac{390}{335} = 1.16$$
    - Check with sensible heat: $q = 1 + C_p\Delta T/\lambda \approx 1 + 0.92(80.7 - 20)/335 = 1.17$.
 4. **Slope:** $q/(q-1) = 1.16/0.16 \approx 7.0$ (about 6.9–7.3 for ±5 kcal/kg reading error).
+
+![How to read the H–x chart at w = 0.63: H ≈ 400 (dew line), h ≈ 65 (boiling line), hF ≈ 10 kcal/kg (20 °C isotherm)](fig/2021-22-Q8b-read.svg)
 
 If "40%" is read as 40 wt% instead: $h_F$ ≈ 9, $h$ ≈ 75, $H$ ≈ 480, so q ≈ 1.16 and slope ≈ 7.1. The answer is practically the same.
 

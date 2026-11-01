@@ -48,6 +48,8 @@ $$u_{flood} = C_{SB}\left(\frac{\sigma}{20}\right)^{0.2}\left(\frac{\rho_L-\rho_
 
 $C_{SB}$ is read at the flow parameter $F_{lv} = (L/G)(\rho_V/\rho_L)^{0.5}$ and the tray spacing.
 
+![How to read the Fair flooding chart: F_lv on the log axis → up to the tray-spacing curve → across to C_sb,flood](fig/howto-flooding.svg)
+
 1. $u_{op} = f\,u_{flood}$ with $f \approx 0.75$.
 2. $Q_V = \dfrac{V M_V}{3600\,\rho_V}$ (m³/s), from the largest vapor load (check both top and bottom).
 3. $A_{net} = Q_V/u_{op}$, then $A_T = A_{net}/(1 - A_d/A_T)$ (downcomer area, e.g. $A_d/A_T = 0.12$).
@@ -81,6 +83,8 @@ $$F_{lv,2} = 1.11(0.090) = 0.0999$$
    - Chart check: at $F_{lv} \approx 0.09$–$0.10$ the 12 in curve reads about 0.19 and the 24 in curve about 0.33 ft/s, which agrees.
 4. **New flooding velocity**:
 $$u_{flood,2} = 1.83 \times \frac{0.3269}{0.1872} = 1.83 \times 1.746 = 3.20\ \mathrm{m/s}$$
+
+![How to read the flooding chart: F_lv = 0.090 → 12 in curve → C_SB ≈ 0.19 ft/s; F_lv = 0.0999 → 24 in curve → C_SB ≈ 0.33 ft/s](fig/2020-21-Q1c-read.svg)
 
 ![C_SB against F_lv from the given fit for 12 in and 24 in spacing, with the old and new design points](fig/2020-21-Q1c-sol.svg)
 
