@@ -1,10 +1,10 @@
 /* gvisualizer: sign-in chip, modal, team notes and the suggestions box (uses the qb.css tokens) */
 .cm-user{display:flex;align-items:center;gap:6px}
 .cm-me{display:flex;align-items:center;gap:6px}
-.cm-id{font-family:var(--f-display);font-weight:600;font-size:14px;color:var(--flow)}
+.cm-id{white-space:nowrap;font-family:var(--f-display);font-weight:600;font-size:14px;color:var(--flow)}
 .cm-modal{position:fixed;inset:0;background:rgba(5,12,22,.55);display:grid;place-items:center;z-index:50;padding:16px}
 .cm-modal[hidden]{display:none!important}
-.cm-dialog{position:relative;background:var(--panel);border:2px solid var(--edge);border-radius:18px;padding:22px 22px 16px;width:min(440px,100%);max-height:90vh;overflow:auto;box-shadow:0 10px 30px var(--shadow)}
+.cm-dialog{position:relative;background:var(--panel);border:1px solid var(--edge);border-radius:16px;padding:24px 24px 18px;width:min(440px,100%);max-height:90vh;overflow:auto;box-shadow:0 10px 30px var(--shadow)}
 .cm-dialog h3{font-family:var(--f-display);margin:0 0 6px;font-size:22px}
 .cm-dialog label{display:block;margin:10px 0 0;font-size:14px;color:var(--dim)}
 .cm-dialog input{display:block;width:100%;margin-top:4px;box-sizing:border-box}
@@ -14,12 +14,12 @@
 .cm-msg{min-height:1.2em;font-size:14px;color:var(--heat);margin:10px 0 0}
 .cm-dim{color:var(--dim);font-size:14px}
 .cm-notes{margin:14px 0 0}
-.cm-note{border:2px solid var(--edge);border-left:6px solid var(--gold);border-radius:12px;padding:10px 14px;margin:10px 0;background:var(--panel)}
+.cm-note{border:1px solid var(--edge);border-left:5px solid var(--gold);border-radius:12px;padding:10px 14px;margin:10px 0;background:var(--panel)}
 .cm-note.k-correction{border-left-color:var(--bad)}
 .cm-note.k-method{border-left-color:var(--good)}
 .cm-note.k-review{border-left-color:var(--gold)}
 .cm-note-h{font-family:var(--f-display);font-weight:600;margin-bottom:4px}
-.cm-box{margin:22px 0;padding:16px 18px;border:2px dashed var(--edge);border-radius:16px}
+.cm-box{margin:22px 0;padding:16px 18px;border:2px dashed var(--edge);border-radius:12px}
 .cm-box h3{font-family:var(--f-display);margin:0 0 8px}
 .cm-c{border-top:1px solid var(--edge);padding:10px 0}
 .cm-c:first-child{border-top:0}
@@ -35,16 +35,18 @@
 .cm-team-v{border-top:1px solid var(--edge);margin-top:14px;padding-top:10px}
 .cm-team-v label{display:block;margin:6px 0}
 
-.cm-nudge{position:fixed;left:16px;right:16px;bottom:16px;margin:0 auto;max-width:560px;z-index:40;background:var(--panel);border:2px solid var(--gold);border-radius:16px;padding:14px 16px 12px;box-shadow:0 10px 30px rgba(5,12,22,.25)}
+.cm-nudge{position:fixed;left:16px;right:16px;bottom:16px;margin:0 auto;max-width:560px;z-index:40;background:var(--panel);border:1px solid var(--edge);border-top:4px solid var(--gold);border-radius:14px;padding:14px 16px 12px;box-shadow:0 10px 30px rgba(5,12,22,.25)}
 .cm-nudge p{margin:0;font-size:15px}
 .cm-nudge .cm-row{margin-top:10px}
-.cm-strip{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;background:var(--panel);border:2px solid var(--edge);border-left:6px solid var(--flow);border-radius:16px;padding:14px 16px;margin:18px 0 0}
+.cm-strip{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;background:var(--panel);border:1px solid var(--edge);border-left:6px solid var(--flow);border-radius:12px;padding:12px 16px;margin:18px 0 0}
 .cm-strip p{margin:0;flex:1 1 280px;font-size:15px}
 .cm-strip[hidden]{display:none!important}
 
 .cm-wall{position:fixed;inset:0;z-index:45;display:grid;place-items:center;padding:16px;background:color-mix(in srgb,var(--night) 70%,transparent);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
-.cm-wall-box{background:var(--panel);border:2px solid var(--gold);border-radius:18px;padding:22px;width:min(520px,100%);box-shadow:0 10px 30px rgba(5,12,22,.3)}
+.cm-wall-box{background:var(--panel);border:1px solid var(--edge);border-top:5px solid var(--gold);border-radius:16px;padding:22px;width:min(520px,100%);box-shadow:0 10px 30px rgba(5,12,22,.3)}
 .cm-wall-box h3{font-family:var(--f-display);font-size:24px;margin:0 0 8px}
 .cm-wall-box p{margin:0}
 html.cm-locked,html.cm-locked body{overflow:hidden}
-.cm-user .cm-signin{background:var(--gold);color:var(--on-accent);border-color:var(--gold-deep)}
+.cm-user .cm-signin{background:var(--gold);color:var(--on-accent);border-color:var(--gold);font-weight:700;padding:8px 16px;white-space:nowrap}
+.cm-user .cm-signin:hover{background:var(--gold-deep)}
+

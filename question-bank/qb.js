@@ -25,7 +25,7 @@ const papers={}, parts=[], byId={};
 // Guests (not signed in with an allowed account) see one paper's questions and 2 of its solutions per course.
 // shared/community.js flips QB.guest to false once a signed-in, allowed account is confirmed ('qb:access' event).
 const guestHint=(()=>{ try{ return localStorage.getItem('gv-access')!=='1'; }catch(e){ return true; } })();
-const QB={TOPICS,YEARS,SETS,papers,parts,byId,keyOf,guest:guestHint,freeYear:'2023-24',freeSolutions:2,
+const QB={TOPICS,YEARS,SETS,papers,parts,byId,keyOf,stepify,related,guest:guestHint,freeYear:'2023-24',freeSolutions:2,
   // A student ID or email in the search box is the browser's password manager, never a real search: drop it.
   cleanQ:v=>{ v=String(v||'').trim(); return /^(\d{6,9}|[^\s@]+@[^\s@]*)$/.test(v)?'':v; },
   guardSearch(inp,onClear){ if(!inp) return; const chk=()=>{ if(inp.value&&!QB.cleanQ(inp.value)){ inp.value=''; onClear(); } };
@@ -71,6 +71,42 @@ function md(src){
   flush(); return out;
 }
 // Long lists: typeset each card only when it comes near the screen (typesetting hundreds of formulas at once is slow on phones).
+// Chegg-style solution: split a rendered solution into "Given" + "Step N" cards. Numbered bold-led items ("1. **Balances:** …")
+// and ###-headings start steps; everything after a step start belongs to it. Theory answers stay one card.
+function stepify(html,type){
+  const d=document.createElement('div'); d.innerHTML=html;
+  const kids=[...d.childNodes].filter(n=>n.nodeType===1||(n.textContent||'').trim());
+  const lead=el=>{ const f=[...el.childNodes].find(n=>n.nodeType===1||(n.textContent||'').trim()); return f&&f.nodeType===1&&f.tagName==='STRONG'?f:null; };
+  const isStepList=el=>el.tagName==='OL'&&el.children.length&&[...el.children].every(li=>lead(li));
+  const steps=[], pre=[]; let cur=null;
+  const add=(title,nodes)=>{ cur={title,nodes:nodes||[]}; steps.push(cur); };
+  const hasHeads=kids.some(el=>el.nodeType===1&&/^H[234]$/.test(el.tagName));
+  const numeric=type!=='theory'&&type!=='sketch'&&!hasHeads;
+  for(const el of kids){
+    if(el.nodeType===1&&/^H[234]$/.test(el.tagName)){ add(el.textContent.replace(/^\s*(\d+[.)]|Step\s*\d+[:.]?)\s*/i,'').trim()); continue; }
+    if(numeric&&el.nodeType===1&&isStepList(el)){
+      for(const li of [...el.children]){ const st=lead(li); let t=st.textContent.trim();
+        if(/[:.]$/.test(t)){ st.remove(); t=t.replace(/[:.]$/,''); if(li.firstChild&&li.firstChild.nodeType===3) li.firstChild.textContent=li.firstChild.textContent.replace(/^\s+/,''); }
+        add(t,[...li.childNodes]); }
+      continue; }
+    (cur?cur.nodes:pre).push(el);
+  }
+  const box=(cls,label,title,nodes)=>{ const b=document.createElement('div'); nodes.forEach(n=>b.appendChild(n)); return `<section class="step${cls}"><div class="step-h"><span class="step-n">${label}</span>${title?`<span class="step-t">${title.replace(/&/g,'&amp;').replace(/</g,'&lt;')}</span>`:''}</div><div class="step-b">${b.innerHTML}</div></section>`; };
+  if(!steps.length) return {n:1,html:box('','Explanation','',pre)};
+  const givenLike=pre.length&&pre.every(el=>el.nodeType===1&&el.tagName==='P'&&lead(el)&&/^(given|data|find|known|assum|basis|properties|note)/i.test(lead(el).textContent.trim()));
+  let h=pre.length?box(givenLike?' given':'',givenLike?'Given':'Approach','',pre):'';
+  steps.forEach((s,i)=>{ h+=box('','Step '+(i+1),s.title,s.nodes); });
+  return {n:steps.length,html:h};
+}
+// Related questions for the side panel: same problem asked in other years first, then the same topic.
+function related(p,n){
+  const out=[], seen=new Set([p.id].concat(p.siblings||[]));
+  (p.repeats||[]).forEach(id=>{ const r=byId[id]; if(r&&!seen.has(id)){ seen.add(id); out.push(r); } });
+  const pool=parts.filter(x=>x.topic===p.topic&&!seen.has(x.id)&&!!x.practice===!!p.practice);
+  const i=pool.findIndex(x=>cmp(x,p)>0); const ordered=i<0?pool.slice().reverse():pool.slice(i).concat(pool.slice(0,i).reverse());
+  for(const x of ordered){ if(out.length>=n) break; if(!x.sub) continue; seen.add(x.id); out.push(x); }
+  return out.slice(0,n);
+}
 function typesetLazy(root,sel){ if(root.__io) root.__io.disconnect(); const items=root.querySelectorAll(sel||'.card'); if(!('IntersectionObserver' in window)||!items.length) return typeset(root);
   const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ io.unobserve(e.target); typeset(e.target); } }),{rootMargin:'800px 0px'}); root.__io=io; items.forEach(c=>io.observe(c)); }
 function typeset(el){ if(window.MathJax&&MathJax.typesetPromise){ MathJax.typesetClear&&MathJax.typesetClear([el]); MathJax.typesetPromise([el]).catch(()=>{}); } else { (window.__mjq=window.__mjq||[]).push(el); } }

@@ -8,24 +8,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="../question-bank/qb.css">
+<link rel="stylesheet" href="../question-bank/qb.css?v=20261102">
 <script src="../theme.js"></script>
 <script src="course.js"></script>
-<script src="../question-bank/qb.js?v=20261101"></script>
+<script src="../question-bank/qb.js?v=20261102"></script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
 </head>
 <body>
 <main class="wrap">
-  <div class="top">
-    <a class="backbtn" href="../" aria-label="Back">← Back</a>
-    <a class="navlink" href="../" aria-label="Home: all courses" title="All courses">⌂ Home</a>
-    <a class="brand" href="./">ChE 303 <span>Question Bank</span></a>
-    <a class="navlink on" href="./">Questions</a>
-    <a class="navlink" href="practice.html">Practice</a>
-    <a class="navlink" href="solutions.html">Solutions</a>
-    <a class="navlink" href="checklist.html">Checklist</a>
-    <button type="button" class="themebtn">☀ Day</button>
-  </div>
+  <header class="top">
+    <a class="backbtn" href="../" aria-label="Back" title="Back">←</a>
+    <a class="logo" href="../" aria-label="Home: all courses" title="Home"><span class="mark">gv</span><span class="lname">gvisualizer</span></a>
+    <a class="coursechip" href="./">ChE 303</a>
+    <nav class="tabs" aria-label="ChE 303">
+      <a class="navlink on" href="./">Questions</a>
+      <a class="navlink" href="practice.html">Practice</a>
+      <a class="navlink" href="solutions.html">Solutions</a>
+      <a class="navlink" href="checklist.html">Checklist</a>
+    </nav>
+    <a class="iconbtn hsearch" href="../#search" aria-label="Search all questions" title="Search all questions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></a>
+    <button type="button" class="themebtn">☀</button>
+  </header>
   <h1>Past finals</h1>
   <div class="stats" id="stats"></div>
   <div class="controls">

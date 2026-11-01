@@ -9,24 +9,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="../question-bank/qb.css">
+<link rel="stylesheet" href="../question-bank/qb.css?v=20261102">
 <script src="../theme.js"></script>
 <script src="course.js"></script>
-<script src="../question-bank/qb.js?v=20261101"></script>
+<script src="../question-bank/qb.js?v=20261102"></script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
 </head>
 <body>
 <main class="wrap">
-  <div class="top">
-    <a class="backbtn" href="./" aria-label="Back">← Back</a>
-    <a class="navlink" href="../" aria-label="Home: all courses" title="All courses">⌂ Home</a>
-    <a class="brand" href="./">ChE 303 <span>Solutions</span></a>
-    <a class="navlink" href="./">Questions</a>
-    <a class="navlink" href="practice.html">Practice</a>
-    <a class="navlink on" href="solutions.html">Solutions</a>
-    <a class="navlink" href="checklist.html">Checklist</a>
-    <button type="button" class="themebtn">☀ Day</button>
-  </div>
+  <header class="top">
+    <a class="backbtn" href="./" aria-label="Back" title="Back">←</a>
+    <a class="logo" href="../" aria-label="Home: all courses" title="Home"><span class="mark">gv</span><span class="lname">gvisualizer</span></a>
+    <a class="coursechip" href="./">ChE 303</a>
+    <nav class="tabs" aria-label="ChE 303">
+      <a class="navlink" href="./">Questions</a>
+      <a class="navlink" href="practice.html">Practice</a>
+      <a class="navlink on" href="solutions.html">Solutions</a>
+      <a class="navlink" href="checklist.html">Checklist</a>
+    </nav>
+    <a class="iconbtn hsearch" href="../#search" aria-label="Search all questions" title="Search all questions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></a>
+    <button type="button" class="themebtn">☀</button>
+  </header>
   <div class="solwrap" id="view"><p class="empty">Loading solutions…</p></div>
 </main>
 <script>
@@ -48,13 +51,18 @@ function one(p){
   const prev=same[i-1], next=same[i+1];
   const sib=p.siblings.length>1?`<div class="siblings">${p.siblings.map(id=>{ const s=QB.byId[id]; return `<a href="#${id}" class="${id===p.id?'on':''}">${s.practice?'P':'Q'}${s.q}${s.label}</a>`; }).join('')}</div>`:'';
   const rep=(p.repeats||[]).map(r=>QB.byId[r]?`<a href="#${r}">${QB.label(QB.byId[r])}</a>`:r).join(', ');
-  return `<div class="crumbs"><a href="solutions.html">Solutions</a> › <a href="#year-${p.key}">${QB.title(p.key)}</a> › ${p.practice?'P':'Q'}${p.q}${p.label} · <a href="${home}#${p.topic}">${t.name}</a></div>${p.practice&&p.ref?`<p class="lede" style="margin-top:4px">${p.origin==='slides'?'From the slides':p.origin==='wankat'?'Wankat ★ exercise':'Potential final'} · ${QB.md(p.ref).replace(/<\/?p>/g,'')}</p>`:''}
-  <h1 style="font-size:clamp(26px,4vw,36px)">${QB.md(p.sub||QB.label(p)).replace(/<\/?p>/g,'')}</h1>
+  const S=QB.stepify(QB.md(p.solution),p.type), rel=QB.related(p,6), plain=x=>QB.md(x||'').replace(/<\/?p>/g,'');
+  return `<div class="solgrid"><article class="solmain"><div class="crumbs"><a href="solutions.html">Solutions</a> › <a href="#year-${p.key}">${QB.title(p.key)}</a> › ${p.practice?'P':'Q'}${p.q}${p.label} · <a href="${home}#${p.topic}">${t.name}</a></div>${p.practice&&p.ref?`<p class="lede" style="margin-top:4px">${p.origin==='slides'?'From the slides':p.origin==='wankat'?'Wankat ★ exercise':'Potential final'} · ${QB.md(p.ref).replace(/<\/?p>/g,'')}</p>`:''}
+  <h1>${QB.md(p.sub||QB.label(p)).replace(/<\/?p>/g,'')}</h1>
   <div class="meta" style="display:flex;flex-wrap:wrap;gap:6px"><span class="tag id">${QB.label(p)}</span>${p.marks?`<span class="tag marks">${p.marks} marks</span>`:''}<span class="tag t-${p.type}">${p.type}</span>${p.syllabus==='out'?'<span class="tag out">not in current slides</span>':p.syllabus==='partial'?'<span class="tag partial">partly in slides</span>':''}${rep?`<span class="tag rep">also asked: ${rep}</span>`:''}</div>
   ${sib}
+  <div class="qlabel">Question</div>
   <div class="qbox qtext">${p.stem?`<div class="stem">${QB.md(p.stem)}</div>`:''}${QB.md(p.text)}</div>
-  <div class="sol">${QB.md(p.solution)}${p.answer?`<div class="answer"><div class="k">Answer</div>${QB.md(p.answer)}</div>`:''}</div>
-  <div class="pager">${prev?`<a class="btn ghost" href="#${prev.id}">← ${QB.label(prev)}</a>`:'<span></span>'}<a class="btn ghost" href="${home}#${p.topic}">All ${p.practice?'practice: ':''}${t.name}</a>${next?`<a class="btn" href="#${next.id}">${QB.label(next)} →</a>`:'<span></span>'}</div>`;
+  <div class="sol-h">Step-by-step solution${S.n>1?` <span class="n">${S.n} steps</span>`:''}</div>
+  <div class="sol">${S.html}${p.answer?`<div class="answer"><div class="k">Final answer</div>${QB.md(p.answer)}</div>`:''}</div>
+  <div class="pager">${prev?`<a class="btn ghost" href="#${prev.id}">← ${QB.label(prev)}</a>`:'<span></span>'}<a class="btn ghost" href="${home}#${p.topic}">All ${p.practice?'practice: ':''}${t.name}</a>${next?`<a class="btn" href="#${next.id}">${QB.label(next)} →</a>`:'<span></span>'}</div>
+  </article>
+  <aside class="side" aria-label="Similar questions"><h3>Similar questions</h3>${rel.map(r=>`<a href="#${r.id}"><b>${plain(r.sub||QB.label(r))}</b><small>${QB.label(r)}${(p.repeats||[]).includes(r.id)?' · same problem':''}</small></a>`).join('')}<a class="more" href="${home}#${p.topic}">All ${t.name} →</a></aside></div>`;
 }
 function route(){
   const h=decodeURIComponent(location.hash.slice(1)), v=$('#view');

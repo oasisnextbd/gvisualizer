@@ -8,9 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="qb.css">
+<link rel="stylesheet" href="qb.css?v=20261102">
 <script src="../theme.js"></script>
-<script src="qb.js?v=20261101"></script>
+<script src="qb.js?v=20261102"></script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
 <style>
 .kind{font-family:var(--f-display);font-weight:600;font-size:15px;margin:20px 0 4px;display:flex;align-items:center;gap:8px}
@@ -23,16 +23,20 @@
 </head>
 <body>
 <main class="wrap">
-  <div class="top">
-    <a class="backbtn" href="./" aria-label="Back">← Back</a>
-    <a class="navlink" href="../" aria-label="Home: all courses" title="All courses">⌂ Home</a>
-    <a class="brand" href="practice.html">CHE 301 <span>Practice</span></a>
-    <a class="navlink" href="./">Past papers</a>
-    <a class="navlink on" href="practice.html">Practice</a>
-    <a class="navlink" href="solutions.html">Solutions</a>
-    <a class="navlink" href="checklist.html">Checklist</a>
-    <button type="button" class="themebtn">☀ Day</button>
-  </div>
+  <header class="top">
+    <a class="backbtn" href="./" aria-label="Back" title="Back">←</a>
+    <a class="logo" href="../" aria-label="Home: all courses" title="Home"><span class="mark">gv</span><span class="lname">gvisualizer</span></a>
+    <a class="coursechip" href="./">CHE 301</a>
+    <nav class="tabs" aria-label="CHE 301">
+      <a class="navlink" href="./">Questions</a>
+      <a class="navlink on" href="practice.html">Practice</a>
+      <a class="navlink" href="solutions.html">Solutions</a>
+      <a class="navlink" href="checklist.html">Checklist</a>
+      <a class="navlink" href="../boundary-layer/">Lab</a>
+    </nav>
+    <a class="iconbtn hsearch" href="../#search" aria-label="Search all questions" title="Search all questions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></a>
+    <button type="button" class="themebtn">☀</button>
+  </header>
   <h1>Practice problems</h1>
   <div class="controls">
     <div class="seg" role="group" aria-label="Kind"><button type="button" data-k="" class="on">All</button><button type="button" data-k="slides">From the slides</button><button type="button" data-k="potential">Potential finals</button></div>

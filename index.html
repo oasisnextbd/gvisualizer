@@ -7,41 +7,71 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="question-bank/qb.css">
+<link rel="stylesheet" href="question-bank/qb.css?v=20261102">
 <script src="theme.js"></script>
 <style>
-.hero{padding-block:28px 6px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:22px}
-.go{display:block;background:var(--panel);border:2px solid var(--edge);border-radius:18px;padding:18px;text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s}
-.course{font-family:var(--f-display);font-size:22px;margin:30px 0 0}
-.go:hover{border-color:var(--gold);transform:translateY(-2px)}
-.go b{display:block;font-family:var(--f-display);font-size:20px;margin-bottom:4px}
-.go span{color:var(--dim);font-size:15px}
-.go i{font-style:normal;font-family:var(--f-display);font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--flow)}
+.hero{padding-block:44px 8px;text-align:center}
+.hero h1{font-size:clamp(28px,4.6vw,44px);margin:0 0 6px}
+.hero .lede{margin:0 auto}
+.bigsearch{display:flex;align-items:center;gap:8px;max-width:720px;margin:22px auto 0;background:var(--panel);border:2px solid var(--edge);border-radius:999px;padding:6px 6px 6px 18px;box-shadow:0 6px 24px color-mix(in srgb,var(--shadow) 60%,transparent)}
+.bigsearch:focus-within{border-color:var(--gold)}
+.bigsearch svg{width:20px;height:20px;flex:none;color:var(--dim)}
+.bigsearch input{flex:1;min-width:0;border:0;background:transparent;font-size:17px;padding:8px 4px;outline:none}
+.bigsearch .btn{flex:none}
+.try{margin:12px auto 0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center;font-size:14px;color:var(--dim)}
+.try button{background:var(--panel);border:1px solid var(--edge);border-radius:999px;padding:4px 12px;cursor:pointer;font-size:13.5px;color:var(--ink)}
+.try button:hover{border-color:var(--gold)}
+#results{max-width:820px;margin:26px auto 0}
+.rhead{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:0 0 10px;color:var(--dim);font-size:14px}
+.rhead b{color:var(--ink);font-size:16px}
+.res{display:block;background:var(--panel);border:1px solid var(--edge);border-radius:12px;padding:14px 16px;margin-bottom:10px;text-decoration:none;color:var(--ink)}
+.res:hover{border-color:var(--flow)}
+.res b{display:block;font-size:16px;margin-bottom:3px}
+.res p{margin:0;color:var(--dim);font-size:14.5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.res .rm{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;font-size:12.5px;color:var(--dim)}
+.res .rm span{background:var(--panel-2);border-radius:999px;padding:1px 9px}
+.res .lock{color:var(--gold-ink);font-weight:600}
+.res mark{background:var(--gold-soft);color:inherit;border-radius:3px}
+.course{font-family:var(--f-display);font-size:20px;margin:34px 0 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin-top:14px}
+.go{display:flex;align-items:center;gap:14px;background:var(--panel);border:1px solid var(--edge);border-radius:12px;padding:16px;text-decoration:none;color:var(--ink);transition:border-color .15s}
+.go:hover{border-color:var(--gold)}
+.go .ic{display:grid;place-items:center;width:44px;height:44px;border-radius:10px;background:var(--panel-2);color:var(--flow);flex:none}
+.go .ic svg{width:22px;height:22px}
+.go b{display:block;font-family:var(--f-display);font-size:17px;margin-bottom:1px}
+.go span.t{color:var(--dim);font-size:14px}
+@media (max-width:760px){ .logo .lname{display:inline} }
 </style>
 </head>
 <body>
 <main class="wrap">
-  <div class="top"><span class="brand">gvisualizer</span><button type="button" class="themebtn">☀ Day</button></div>
-  <div class="hero">
-    <h1>L-3/T-1 Chemical Engineering</h1>
-  </div>
+  <header class="top"><a class="logo" href="./" aria-label="Home" title="Home"><span class="mark">gv</span><span class="lname">gvisualizer</span></a><span style="margin-right:auto"></span><button type="button" class="themebtn">☀</button></header>
+  <section class="hero" id="search">
+    <h1>Past finals, solved step by step</h1>
+    <p class="lede">BUET L-3/T-1 Chemical Engineering</p>
+    <form class="bigsearch" role="search" action="./" autocomplete="off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="gs" name="q" type="search" autocomplete="off" autocorrect="off" spellcheck="false" data-lpignore="true" data-1p-ignore="true" data-bwignore="true" data-form-type="other" placeholder="Search: McCabe, LMTD, Kremser…" aria-label="Search all questions"><button class="btn" type="submit">Search</button></form>
+    <div class="try"><span>Try:</span><button type="button">McCabe–Thiele</button><button type="button">LMTD</button><button type="button">Kremser</button><button type="button">flash</button><button type="button">fin</button><button type="button">condenser</button></div>
+  </section>
+  <section id="results" aria-live="polite" hidden></section>
   <div class="cm-strip" data-signed-out hidden><p><b>BUET ChE student?</b> Sign in to unlock every paper and solution.</p><span class="cm-row" style="margin:0"><button type="button" class="btn" data-signin>Sign in</button><button type="button" class="btn ghost" data-signin="up">Create account</button></span></div>
+  <div id="browse">
   <h2 class="course">ChE 303 · Mass Transfer I</h2>
   <div class="cards">
-    <a class="go" href="mass-transfer/"><b>Question Bank</b><span>11 past finals, solved</span></a>
-    <a class="go" href="mass-transfer/practice.html"><b>Practice Problems</b><span>279 problems, solved</span></a>
-    <a class="go" href="mass-transfer/checklist.html"><b>Prep Checklist</b><span>Track what's left</span></a>
+    <a class="go" href="mass-transfer/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h7"/></svg></span><span><b>Question Bank</b><span class="t">11 past finals, solved</span></span></a>
+    <a class="go" href="mass-transfer/practice.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="m13 7 4 4"/></svg></span><span><b>Practice Problems</b><span class="t">279 problems, solved</span></span></a>
+    <a class="go" href="mass-transfer/checklist.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h3M4 12h3M4 18h3"/><path d="m10 6 2 2 4-4M10 12h10M10 18h10"/></svg></span><span><b>Prep Checklist</b><span class="t">Track what's left</span></span></a>
   </div>
   <h2 class="course">CHE 301 · Heat Transfer</h2>
   <div class="cards">
-    <a class="go" href="question-bank/"><b>Question Bank</b><span>12 past finals, solved</span></a>
-    <a class="go" href="question-bank/practice.html"><b>Practice Problems</b><span>244 problems, solved</span></a>
-    <a class="go" href="question-bank/checklist.html"><b>Prep Checklist</b><span>Track what's left</span></a>
-    <a class="go" href="boundary-layer/"><b>Boundary Layer Lab</b><span>Derive it hands-on</span></a>
-    <a class="go" href="boundary-layer/sandbox/"><b>Fluid Sandbox</b><span>Live flow simulation</span></a>
+    <a class="go" href="question-bank/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h7"/></svg></span><span><b>Question Bank</b><span class="t">12 past finals, solved</span></span></a>
+    <a class="go" href="question-bank/practice.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="m13 7 4 4"/></svg></span><span><b>Practice Problems</b><span class="t">244 problems, solved</span></span></a>
+    <a class="go" href="question-bank/checklist.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h3M4 12h3M4 18h3"/><path d="m10 6 2 2 4-4M10 12h10M10 18h10"/></svg></span><span><b>Prep Checklist</b><span class="t">Track what's left</span></span></a>
+    <a class="go" href="boundary-layer/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M7.5 15h9"/></svg></span><span><b>Boundary Layer Lab</b><span class="t">Derive it hands-on</span></span></a>
+    <a class="go" href="boundary-layer/sandbox/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8c3-3 6 3 9 0s6 3 9 0M3 14c3-3 6 3 9 0s6 3 9 0M3 20c3-3 6 3 9 0s6 3 9 0"/></svg></span><span><b>Fluid Sandbox</b><span class="t">Live flow simulation</span></span></a>
+  </div>
   </div>
 </main>
+<script src="home-search.js?v=20261102"></script>
 <script type="module" src="shared/community.js?v=20261101"></script>
 </body>
 </html>
