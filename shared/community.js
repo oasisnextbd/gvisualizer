@@ -140,7 +140,7 @@ function addModal() {
     <form class="cm-pane" data-pane="signin" autocomplete="on" novalidate>
       <h3>Sign in</h3>
       <p class="cm-dim">BUET ChE students: use your student ID or <b>ID@${esc(DOMAIN)}</b> email.</p>
-      <label>Student ID or email<input class="search cm-in-id" name="username" autocomplete="username" placeholder="e.g. 2202001"></label>
+      <label>Student ID or email<input class="search cm-in-id" name="username" autocomplete="username" placeholder="2202025"></label>
       <label>Password<input class="search cm-in-pw" name="password" type="password" autocomplete="current-password"></label>
       <div class="cm-row"><button type="button" class="btn cm-do-in">Sign in</button><button type="button" class="btn ghost cm-go-up">Create account</button></div>
       <button type="button" class="cm-link cm-do-reset">Forgot password?</button>
@@ -148,7 +148,7 @@ function addModal() {
     <form class="cm-pane" data-pane="signup" autocomplete="on" novalidate hidden>
       <h3>Create your account</h3>
       <p class="cm-dim">We send a link to your BUET mailbox to prove it is yours. Only students on the allowed list can post.</p>
-      <label>Student ID or BUET email<input class="search cm-up-id" name="username" autocomplete="username" placeholder="e.g. 2202001"></label>
+      <label>Student ID or BUET email<input class="search cm-up-id" name="username" autocomplete="username" placeholder="2202025"></label>
       <label>New password (6+ characters)<input class="search cm-up-pw" name="new-password" type="password" autocomplete="new-password"></label>
       <div class="cm-row"><button type="button" class="btn cm-do-up">Create account</button><button type="button" class="btn ghost cm-go-in">I have an account</button></div>
     </form>
