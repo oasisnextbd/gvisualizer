@@ -103,3 +103,5 @@ mjx-container[display="true"]{margin:6px 0!important}
 .fig{margin:12px 0;background:#FFFFFF;border:2px solid var(--edge);border-radius:14px;padding:10px 12px 8px;max-width:680px}
 .fig img{display:block;width:100%;height:auto;max-width:100%}
 .fig figcaption{font-size:13px;color:#4A5A70;margin-top:6px;text-align:center}
+/* Long formulas (inline or display) scroll inside their box instead of making the whole page wider than a phone screen */
+.qbox,.sol,.card,.note,.answer,.cm-c{max-width:100%;overflow-x:auto;overflow-y:hidden}

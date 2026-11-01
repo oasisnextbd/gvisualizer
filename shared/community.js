@@ -1,9 +1,11 @@
 // gvisualizer: sign-in, team notes and the "Suggest / report" box on solution pages.
 // Loaded as a module by every page (header Sign in, sign-in reminder); the suggestions box only appears on solution pages.
 // Stays completely silent until Firebase is configured (shared/config.js).
-import { enabled, fb, onUser, signIn, signUp, signOut, resetPassword, resendVerification, recheck, requestTeamVerify, niceError, esc, when, shortName, DOMAIN } from './fb.js';
+import { enabled, fb, onUser, signIn, signUp, signOut, googleSignIn, resetPassword, resendVerification, recheck, requestTeamVerify, niceError, esc, when, shortName, DOMAIN } from './fb.js';
 
 const COURSE = location.pathname.includes('/mass-transfer/') ? 'che303' : 'che301';
+const COURSE_PAGE = /\/(question-bank|mass-transfer)\//.test(location.pathname);
+const SOLUTIONS = /solutions\.html$/.test(location.pathname);
 const KINDS = { error: 'Error in the question or solution', method: 'Easier or alternative method', doubt: 'Doubt: I do not understand a step', request: 'Missing: add a question or topic' };
 const KIND_TAG = { error: 'error', method: 'easier method', doubt: 'doubt', request: 'request' };
 const NOTE_LABEL = { correction: 'Correction', method: 'Alternative method', review: 'Under review' };
@@ -23,10 +25,10 @@ function start() {
   window.addEventListener('qb:part', e => show(e.detail && e.detail.id));
   // Load Firebase after the page has drawn (it is ~190 KB); a click on Sign in loads it at once anyway.
   const later = window.requestIdleCallback ? f => requestIdleCallback(f, { timeout: 2500 }) : f => setTimeout(f, 1200);
-  later(() => onUser(s => { state = s; paintHeader(); if (part) show(part, true); nudge(); }));
+  later(() => onUser(s => { state = s; paintHeader(); if (part) show(part, true); gate(); }));
   // any element with data-signin opens the sign-in box (e.g. the home-page strip)
   document.addEventListener('click', e => { const t = e.target.closest('[data-signin]'); if (t) { e.preventDefault(); openModal(t.dataset.signin === 'up' ? 'signup' : 'signin'); } });
-  countView();
+  if (COURSE_PAGE && !SOLUTIONS) countView();   // solution pages count each opened solution in show()
   // the page may have routed before this module loaded
   const h = decodeURIComponent(location.hash.slice(1));
   if (h && window.QB && QB.byId && QB.byId[h]) show(h);
@@ -43,23 +45,59 @@ function addHeader() {
   $('.cm-signin', b).addEventListener('click', () => openModal('signin'));
   $('.cm-out', b).addEventListener('click', () => signOut());
 }
-// ------------------------------------------------------------ sign-in reminder
-// After a few pages without signing in, a small dismissible banner suggests it ("Not now" hides it for 7 days).
-// (function declarations, not consts: start() runs before this part of the module is evaluated)
+// ------------------------------------------------------------ sign-in reminder and free-page limit
+// Course pages (questions, practice, checklist, each opened solution) are counted in this browser.
+// From the 4th page a reminder shows on every page ("Not now" closes it for that page only).
+// After FREE_PAGES pages a sign-in screen covers the content until the visitor signs in with an allowed,
+// verified account. The home page and the preview solutions below stay free and are not counted.
+// (A soft limit: the count lives in the browser. The real lock comes when the content moves to Firebase.)
+// Function declarations, not consts: start() runs before this part of the module is evaluated.
+function FREE_PAGES() { return 10; }
+function isPreview(id) { return ['che301:2022-23-Q3a', 'che301:2022-23-Q8a', 'che301:practice-heat-exchangers-P6a', 'che301:practice-heat-exchangers-P6b', 'che303:2023-24-Q2b', 'che303:2015-16-Q5a', 'che303:2022-23-Q2c'].includes(COURSE + ':' + id); }
+function previewLinks() { return COURSE === 'che303'
+  ? [['2023-24-Q2b', 'Methanol–water McCabe–Thiele'], ['2015-16-Q5a', 'Extraction on the triangle'], ['2022-23-Q2c', 'Ammonia stripper (Kremser)']]
+  : [['2022-23-Q3a', 'Reynolds–Colburn analogy'], ['2022-23-Q8a', 'Pool boiling curve'], ['practice-heat-exchangers-P6a', 'Double-pipe hairpins (Kern 6.1)']]; }
 function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
 function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
-function countView() { lsSet('gv-views', String((+lsGet('gv-views') || 0) + 1)); }
-function nudge() {
-  const old = $('.cm-nudge');
-  if (state && state.user) { if (old) old.remove(); return; }
-  if (old || (+lsGet('gv-views') || 0) < 4 || Date.now() < (+lsGet('gv-nudge-snooze') || 0)) return;
-  const n = document.createElement('div');
-  n.className = 'cm-nudge'; n.setAttribute('role', 'dialog'); n.setAttribute('aria-label', 'Sign in suggestion');
-  n.innerHTML = `<p><b>Studying here often?</b> Sign in with your BUET student ID to report errors, share easier methods, ask doubts and see the team's corrections.</p>
+function views() { return +lsGet('gv-views') || 0; }
+function countView() { lsSet('gv-views', String(views() + 1)); }
+function hasAccess() { return !!(state && state.user && state.verified && ((state.member && !state.blocked) || state.isMod)); }
+let nudgeClosed = false;
+function gate() {
+  if (!state) return;                                   // wait until the sign-in state is known
+  const wallEl = $('.cm-wall'), nudgeEl = $('.cm-nudge');
+  if (hasAccess()) { if (wallEl) wallEl.remove(); if (nudgeEl) nudgeEl.remove(); document.documentElement.classList.remove('cm-locked'); return; }
+  const free = isPreview(part);
+  if (COURSE_PAGE && views() > FREE_PAGES() && !free) { if (nudgeEl) nudgeEl.remove(); return wall(); }
+  if (wallEl) { wallEl.remove(); document.documentElement.classList.remove('cm-locked'); }
+  if (state.user || nudgeClosed || views() < 4) { if (nudgeEl && state.user) nudgeEl.remove(); return; }
+  const left = Math.max(0, FREE_PAGES() - views());
+  const n = nudgeEl || document.body.appendChild(Object.assign(document.createElement('div'), { className: 'cm-nudge' }));
+  n.setAttribute('role', 'dialog'); n.setAttribute('aria-label', 'Sign in suggestion');
+  n.innerHTML = `<p><b>Studying here often?</b> Sign in with your BUET student ID to keep studying, report errors, share easier methods and ask doubts.${COURSE_PAGE ? ` <b>${left} free page${left === 1 ? '' : 's'} left</b> before sign-in is needed.` : ''}</p>
     <div class="cm-row"><button type="button" class="btn" data-signin>Sign in</button><button type="button" class="btn ghost" data-signin="up">Create account</button><button type="button" class="cm-link cm-later">Not now</button></div>`;
-  document.body.appendChild(n);
-  $('.cm-later', n).onclick = () => { lsSet('gv-nudge-snooze', String(Date.now() + 7 * 864e5)); n.remove(); };
-  n.addEventListener('click', e => { if (e.target.closest('[data-signin]')) n.remove(); });
+  $('.cm-later', n).onclick = () => { nudgeClosed = true; n.remove(); };
+  n.onclick = e => { if (e.target.closest('[data-signin]')) n.remove(); };
+}
+function wall() {
+  let w = $('.cm-wall');
+  if (!w) { w = document.body.appendChild(Object.assign(document.createElement('div'), { className: 'cm-wall' })); w.setAttribute('role', 'dialog'); w.setAttribute('aria-modal', 'true'); }
+  document.documentElement.classList.add('cm-locked');
+  const u = state.user;
+  const why = !u ? `You have used your ${FREE_PAGES()} free pages. Sign in with your BUET ChE student ID to keep studying: every past paper, solution, practice set and checklist.`
+    : !state.verified ? 'You are signed in, but your BUET email is not verified yet. Open the link in your BUET mailbox (check Junk), or ask the team to verify you.'
+    : state.blocked ? 'This account has been blocked by the team. Contact the gvisualizer team if this is a mistake.'
+    : `This account (${esc(state.email)}) is not on the allowed list. Access is for BUET ChE students 2202001–2202120 and 2302001–2302120; contact the team if you should be included.`;
+  const home = location.pathname.replace(/[^/]*\/[^/]*$/, '');
+  w.innerHTML = `<div class="cm-wall-box"><h3>Sign in to keep studying</h3><p>${why}</p>
+    <div class="cm-row">${!u ? '<button type="button" class="btn" data-signin>Sign in</button><button type="button" class="btn ghost" data-signin="up">Create account</button>'
+      : !state.verified ? '<button type="button" class="btn cm-w-verify">Verify my account</button><button type="button" class="btn ghost cm-w-out">Sign out</button>'
+      : '<button type="button" class="btn ghost cm-w-out">Sign out</button>'}</div>
+    ${!u ? '<p class="cm-dim" style="margin-top:12px">Team member? <button type="button" class="cm-link cm-w-google">Continue with Google</button></p>' : ''}
+    <p class="cm-dim" style="margin-top:14px">Free preview, no sign-in needed: ${previewLinks().map(([id, t]) => `<a href="solutions.html#${id}">${esc(t)}</a>`).join(' · ')} · <a href="${home}">home page</a></p></div>`;
+  const g = $('.cm-w-google', w); if (g) g.onclick = () => googleSignIn().catch(e => alert(niceError(e)));
+  const v = $('.cm-w-verify', w); if (v) v.onclick = () => openModal('verify');
+  const o = $('.cm-w-out', w); if (o) o.onclick = () => signOut();
 }
 
 function paintHeader() {
@@ -151,8 +189,10 @@ function afterAuth(s) {
 
 // ------------------------------------------------------------ solution page blocks
 async function show(id, again) {
-  if (!id || !window.QB || !QB.byId[id]) { part = null; return; }
+  if (!id || !window.QB || !QB.byId[id]) { part = null; gate(); return; }
   const changed = part !== id; part = id;
+  if (changed && !again && !isPreview(id)) countView();
+  gate();
   const sol = $('#view .sol'); if (!sol) return;
   if (changed || !$('#view .cm-notes')) renderNotes(id, sol);
   renderBox(id, sol);
