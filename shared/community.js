@@ -1,5 +1,5 @@
 // gvisualizer: sign-in, team notes and the "Suggest / report" box on solution pages.
-// Loaded as a module by question-bank/solutions.html and mass-transfer/solutions.html.
+// Loaded as a module by every page (header Sign in, sign-in reminder); the suggestions box only appears on solution pages.
 // Stays completely silent until Firebase is configured (shared/config.js).
 import { enabled, fb, onUser, signIn, signUp, signOut, resetPassword, resendVerification, recheck, requestTeamVerify, niceError, esc, when, shortName, DOMAIN } from './fb.js';
 
@@ -23,7 +23,10 @@ function start() {
   window.addEventListener('qb:part', e => show(e.detail && e.detail.id));
   // Load Firebase after the page has drawn (it is ~190 KB); a click on Sign in loads it at once anyway.
   const later = window.requestIdleCallback ? f => requestIdleCallback(f, { timeout: 2500 }) : f => setTimeout(f, 1200);
-  later(() => onUser(s => { state = s; paintHeader(); if (part) show(part, true); }));
+  later(() => onUser(s => { state = s; paintHeader(); if (part) show(part, true); nudge(); }));
+  // any element with data-signin opens the sign-in box (e.g. the home-page strip)
+  document.addEventListener('click', e => { const t = e.target.closest('[data-signin]'); if (t) { e.preventDefault(); openModal(t.dataset.signin === 'up' ? 'signup' : 'signin'); } });
+  countView();
   // the page may have routed before this module loaded
   const h = decodeURIComponent(location.hash.slice(1));
   if (h && window.QB && QB.byId && QB.byId[h]) show(h);
@@ -40,7 +43,27 @@ function addHeader() {
   $('.cm-signin', b).addEventListener('click', () => openModal('signin'));
   $('.cm-out', b).addEventListener('click', () => signOut());
 }
+// ------------------------------------------------------------ sign-in reminder
+// After a few pages without signing in, a small dismissible banner suggests it ("Not now" hides it for 7 days).
+// (function declarations, not consts: start() runs before this part of the module is evaluated)
+function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+function countView() { lsSet('gv-views', String((+lsGet('gv-views') || 0) + 1)); }
+function nudge() {
+  const old = $('.cm-nudge');
+  if (state && state.user) { if (old) old.remove(); return; }
+  if (old || (+lsGet('gv-views') || 0) < 4 || Date.now() < (+lsGet('gv-nudge-snooze') || 0)) return;
+  const n = document.createElement('div');
+  n.className = 'cm-nudge'; n.setAttribute('role', 'dialog'); n.setAttribute('aria-label', 'Sign in suggestion');
+  n.innerHTML = `<p><b>Studying here often?</b> Sign in with your BUET student ID to report errors, share easier methods, ask doubts and see the team's corrections.</p>
+    <div class="cm-row"><button type="button" class="btn" data-signin>Sign in</button><button type="button" class="btn ghost" data-signin="up">Create account</button><button type="button" class="cm-link cm-later">Not now</button></div>`;
+  document.body.appendChild(n);
+  $('.cm-later', n).onclick = () => { lsSet('gv-nudge-snooze', String(Date.now() + 7 * 864e5)); n.remove(); };
+  n.addEventListener('click', e => { if (e.target.closest('[data-signin]')) n.remove(); });
+}
+
 function paintHeader() {
+  document.querySelectorAll('[data-signed-out]').forEach(el => { el.hidden = !!(state && state.user); });
   const b = $('.cm-user'); if (!b) return;
   const on = state && state.user;
   $('.cm-signin', b).hidden = !!on;
