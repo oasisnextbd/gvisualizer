@@ -33,7 +33,7 @@
 (function(){
 const $=s=>document.querySelector(s);
 function index(){
-  return `<h1>Worked solutions</h1><p class="lede">Pick a paper, or open any question from the question bank. Every solution states the data it uses and shows the stage-by-stage diagram, so you can follow the same steps in the exam.</p>
+  return `<h1>Worked solutions</h1>
   <div class="paperlist" style="margin-top:18px">${QB.keys().map(y=>{ const ps=QB.parts.filter(p=>p.key===y); return `<a href="#year-${y}"><b>${QB.title(y)}</b><span>${ps.length} parts · ${ps.filter(p=>p.type==='numerical').length} numericals</span></a>`; }).join('')}</div>`;
 }
 function paper(y){
