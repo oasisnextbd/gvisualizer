@@ -26,6 +26,10 @@ const papers={}, parts=[], byId={};
 // shared/community.js flips QB.guest to false once a signed-in, allowed account is confirmed ('qb:access' event).
 const guestHint=(()=>{ try{ return localStorage.getItem('gv-access')!=='1'; }catch(e){ return true; } })();
 const QB={TOPICS,YEARS,SETS,papers,parts,byId,keyOf,guest:guestHint,freeYear:'2023-24',freeSolutions:2,
+  // A student ID or email in the search box is the browser's password manager, never a real search: drop it.
+  cleanQ:v=>{ v=String(v||'').trim(); return /^(\d{6,9}|[^\s@]+@[^\s@]*)$/.test(v)?'':v; },
+  guardSearch(inp,onClear){ if(!inp) return; const chk=()=>{ if(inp.value&&!QB.cleanQ(inp.value)){ inp.value=''; onClear(); } };
+    ['input','change','focus','blur'].forEach(ev=>inp.addEventListener(ev,chk)); [300,1000,2500,5000].forEach(t=>setTimeout(chk,t)); },
   keys:()=>YEARS.filter(y=>papers[y]).concat(Object.keys(papers).filter(k=>k.startsWith('practice-'))),
   topic:id=>TOPICS.find(t=>t.id===id)||TOPICS[TOPICS.length-1],
   paper(p){ const key=keyOf(p); p.key=key; papers[key]=p; p.questions.forEach(q=>q.parts.forEach((pt,i)=>{ const o=Object.assign({},pt,{year:p.year,key,practice:!!p.practice,set:p.set||'',q:q.q,section:q.section,compulsory:q.compulsory,stem:q.stem||'',qid:q.id,idx:i,siblings:q.parts.map(x=>x.id)}); parts.push(o); byId[o.id]=o; })); },

@@ -137,21 +137,21 @@ function addModal() {
   m.className = 'cm-modal'; m.hidden = true;
   m.innerHTML = `<div class="cm-dialog" role="dialog" aria-modal="true" aria-label="Sign in">
     <button type="button" class="cm-x" aria-label="Close">×</button>
-    <div class="cm-pane" data-pane="signin">
+    <form class="cm-pane" data-pane="signin" autocomplete="on" novalidate>
       <h3>Sign in</h3>
       <p class="cm-dim">BUET ChE students: use your student ID or <b>ID@${esc(DOMAIN)}</b> email.</p>
-      <label>Student ID or email<input class="search cm-in-id" autocomplete="username" placeholder="2202025"></label>
-      <label>Password<input class="search cm-in-pw" type="password" autocomplete="current-password"></label>
+      <label>Student ID or email<input class="search cm-in-id" name="username" autocomplete="username" placeholder="e.g. 2202001"></label>
+      <label>Password<input class="search cm-in-pw" name="password" type="password" autocomplete="current-password"></label>
       <div class="cm-row"><button type="button" class="btn cm-do-in">Sign in</button><button type="button" class="btn ghost cm-go-up">Create account</button></div>
       <button type="button" class="cm-link cm-do-reset">Forgot password?</button>
-    </div>
-    <div class="cm-pane" data-pane="signup" hidden>
+    </form>
+    <form class="cm-pane" data-pane="signup" autocomplete="on" novalidate hidden>
       <h3>Create your account</h3>
       <p class="cm-dim">We send a link to your BUET mailbox to prove it is yours. Only students on the allowed list can post.</p>
-      <label>Student ID or BUET email<input class="search cm-up-id" autocomplete="username" placeholder="2202025"></label>
-      <label>New password (6+ characters)<input class="search cm-up-pw" type="password" autocomplete="new-password"></label>
+      <label>Student ID or BUET email<input class="search cm-up-id" name="username" autocomplete="username" placeholder="e.g. 2202001"></label>
+      <label>New password (6+ characters)<input class="search cm-up-pw" name="new-password" type="password" autocomplete="new-password"></label>
       <div class="cm-row"><button type="button" class="btn cm-do-up">Create account</button><button type="button" class="btn ghost cm-go-in">I have an account</button></div>
-    </div>
+    </form>
     <div class="cm-pane" data-pane="verify" hidden>
       <h3>Check your BUET email</h3>
       <p>We sent a verification link to <b class="cm-v-email"></b>. Open it, then come back and press <b>I have verified</b>.</p>
@@ -173,6 +173,7 @@ function addModal() {
   document.body.appendChild(m);
   const msg = t => { $('.cm-msg', m).textContent = t || ''; };
   const busy = async (fn) => { msg('…'); try { await fn(); } catch (e) { msg(niceError(e)); } };
+  m.querySelectorAll('form').forEach(f => f.addEventListener('submit', e => e.preventDefault()));
   $('.cm-x', m).addEventListener('click', closeModal);
   m.addEventListener('click', e => { if (e.target === m) closeModal(); });
   $('.cm-go-up', m).addEventListener('click', () => openModal('signup'));

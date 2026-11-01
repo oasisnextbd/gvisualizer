@@ -121,7 +121,7 @@ function detail(c, el) {
     <h3 style="margin-top:18px">Publish on the solution page</h3>
     <label>As<select id="nk">${Object.entries(NOTE_KINDS).map(([k, n]) => `<option value="${k}" ${(c.kind === 'method' ? 'method' : 'correction') === k ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
     <label>Text shown to everyone (edit it into a clean correction or method)<textarea id="nt" rows="6">${esc(c.text || '')}</textarea></label>
-    <label>Credit<input type="text" id="cr" value="${esc(c.authorId || '')}"></label>
+    <label>Credit<input type="text" id="cr" autocomplete="off" data-lpignore="true" data-1p-ignore="true" value="${esc(c.authorId || '')}"></label>
     <div class="cm-row"><button class="btn ghost" id="pn">Publish note</button><span class="cm-dim" id="m2"></span></div>`;
   QB.typeset(el);
   const lp = el.querySelector('#lp');
@@ -178,10 +178,10 @@ async function notes() {
     const m = main(`<h1>Notes on solutions</h1><p class="lede">Corrections, alternative methods and "under review" flags shown at the top of a solution, for everyone.</p>
       <div class="tm-detail"><h3>Add a note</h3>
         <label>Course<select id="ac">${Object.entries(COURSES).map(([k, c]) => `<option value="${k}">${c.name}</option>`).join('')}</select></label>
-        <label>Question part id (as in the solution link, e.g. 2023-24-Q2b or practice-flash-P4)<input type="text" id="ap"></label>
+        <label>Question part id (as in the solution link, e.g. 2023-24-Q2b or practice-flash-P4)<input type="text" id="ap" autocomplete="off" data-lpignore="true" data-1p-ignore="true"></label>
         <label>Kind<select id="ak">${Object.entries(NOTE_KINDS).map(([k, n]) => `<option value="${k}">${n}</option>`).join('')}</select></label>
         <label>Text (markdown, math as $...$)<textarea id="at" rows="4"></textarea></label>
-        <label>Credit (optional)<input type="text" id="acr"></label>
+        <label>Credit (optional)<input type="text" id="acr" autocomplete="off" data-lpignore="true" data-1p-ignore="true"></label>
         <div class="cm-row"><button class="btn" id="add">Add note</button><span class="cm-dim" id="am"></span></div></div>
       ${docs.length ? docs.map(n => `<div class="tm-detail" data-id="${esc(n.id)}"><p><b>${esc(n.part)}</b> · ${partLink(n)}</p>
         ${(n.items || []).map((it, i) => `<div class="cm-note k-${esc(it.kind)}"><div class="cm-note-h">${esc(NOTE_KINDS[it.kind] || it.kind)}${it.credit ? ' · ' + esc(it.credit) : ''} <span class="cm-dim">· ${esc(it.by || '')}</span></div>
@@ -227,12 +227,12 @@ async function students() {
         </tbody></table>` : '<p class="empty">No requests waiting.</p>'}<p class="cm-msg" id="vm"></p></div>
       ${me.isAdmin ? `<div class="tm-detail"><h3>Allow a range of student IDs</h3>
         <p class="cm-dim">Only people on this list can read approved comments and post. Students sign in with <b>ID@${esc(DOMAIN)}</b> and verify their mailbox (or ask the team, above).</p>
-        <div class="tm-bar"><input class="search" id="r1" placeholder="from, e.g. 2202001"><input class="search" id="r2" placeholder="to, e.g. 2202120"><button class="btn" id="ar">Allow range</button></div>
+        <div class="tm-bar"><input class="search" id="r1" autocomplete="off" data-lpignore="true" data-1p-ignore="true" placeholder="from, e.g. 2202001"><input class="search" id="r2" autocomplete="off" data-lpignore="true" data-1p-ignore="true" placeholder="to, e.g. 2202120"><button class="btn" id="ar">Allow range</button></div>
         <div class="tm-bar"><button class="btn ghost" id="ad">Allow ${DEFAULT_RANGES.map(r => r.join('–')).join(' and ')}</button><span class="cm-dim" id="rm"></span></div>
         <h3>Add one person</h3><p class="cm-dim">For a teacher, a senior or anyone outside the ranges (any email, including Gmail).</p>
-        <div class="tm-bar"><input class="search" id="oe" placeholder="email"><input class="search" id="on" placeholder="name (optional)"><select class="search" id="ok"><option value="guest">guest</option><option value="student">student</option></select><button class="btn" id="ao">Add</button></div></div>` : '<p class="cm-dim">Admins manage the allowed list; moderators approve verification requests.</p>'}
+        <div class="tm-bar"><input class="search" id="oe" autocomplete="off" data-lpignore="true" data-1p-ignore="true" placeholder="email"><input class="search" id="on" autocomplete="off" data-lpignore="true" data-1p-ignore="true" placeholder="name (optional)"><select class="search" id="ok"><option value="guest">guest</option><option value="student">student</option></select><button class="btn" id="ao">Add</button></div></div>` : '<p class="cm-dim">Admins manage the allowed list; moderators approve verification requests.</p>'}
       <h3>Allowed people</h3>
-      <div class="tm-bar"><input class="search" id="sq" placeholder="Search email or name" value="${esc(view.q)}"><span class="cm-dim">${rows.length} of ${all.length}</span></div>
+      <div class="tm-bar"><input class="search" id="sq" autocomplete="off" data-lpignore="true" data-1p-ignore="true" placeholder="Search email or name" value="${esc(view.q)}"><span class="cm-dim">${rows.length} of ${all.length}</span></div>
       <table class="tm-t"><thead><tr><th>Email</th><th>Kind</th><th>Status</th>${me.isAdmin ? '<th></th>' : ''}</tr></thead><tbody>
       ${rows.slice(0, 400).map(r => `<tr><td>${esc(r.email)}${r.name ? ' · ' + esc(r.name) : ''}</td><td>${esc(r.kind)}</td><td>${r.blocked ? '<span class="st-new">blocked</span>' : 'allowed'}${r.verifiedUid ? ' · <span class="cm-dim">verified by ' + esc(shortName(r.verifiedBy || 'team')) + '</span>' : ''}</td>
         ${me.isAdmin ? `<td><button class="cm-link" data-b="${esc(r.email)}">${r.blocked ? 'Unblock' : 'Block'}</button> · <button class="cm-link" data-x="${esc(r.email)}">Remove</button></td>` : ''}</tr>`).join('')}
@@ -311,7 +311,7 @@ async function team() {
         <td>${canEdit(p) && p.email !== me.email ? `<button class="cm-link" data-x="${esc(p.email)}">Remove</button>` : p.fixed ? '<span class="cm-dim">built in</span>' : ''}</td></tr>`).join('')}
       </tbody></table></div>
       <div class="tm-detail"><h3>Add person</h3>
-        <div class="tm-bar"><input class="search" id="tn" placeholder="name"><input class="search" id="te" placeholder="email (their Google account)">
+        <div class="tm-bar"><input class="search" id="tn" autocomplete="off" data-lpignore="true" data-1p-ignore="true" placeholder="name"><input class="search" id="te" autocomplete="off" data-lpignore="true" data-1p-ignore="true" placeholder="email (their Google account)">
         <select class="search" id="tr">${roles.map(x => `<option>${x}</option>`).join('')}</select><button class="btn" id="ta">Add person</button></div><p class="cm-msg" id="tm"></p></div>
       <div class="tiles">${Object.entries(ROLE_INFO).map(([k, [n, d]]) => `<div class="tile"><div class="k">${n}</div><p style="margin:6px 0 0">${esc(d)}</p></div>`).join('')}</div>`);
     const msg = t => { m.querySelector('#tm').textContent = t; };

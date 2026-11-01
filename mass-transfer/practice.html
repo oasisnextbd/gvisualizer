@@ -39,7 +39,7 @@
   <div class="stats" id="stats"></div>
   <div class="controls">
     <div class="seg" role="group" aria-label="Kind"><button type="button" data-k="" class="on">All</button><button type="button" data-k="slides">From the slides</button><button type="button" data-k="wankat">Wankat ★ exercises</button><button type="button" data-k="potential">Potential finals</button></div>
-    <input class="search" id="q" type="search" placeholder="Search: q-line, Murphree, difference point…" aria-label="Search practice problems">
+    <input class="search" id="q" type="search" autocomplete="off" autocorrect="off" spellcheck="false" name="qb-search" data-lpignore="true" data-1p-ignore="true" data-bwignore="true" data-form-type="other" placeholder="Search: q-line, Murphree, difference point…" aria-label="Search practice problems">
     <select id="type" class="search" style="flex:0 1 170px" aria-label="Problem type">
       <option value="">All types</option><option value="numerical">Numericals</option><option value="derivation">Derivations</option><option value="theory">Theory</option><option value="sketch">Sketches</option>
     </select>
@@ -56,7 +56,8 @@ const st={sel:null,kind:'',q:'',type:''};
 // Remember filters and scroll for this tab, so coming back from a solution keeps e.g. "theory only".
 const SK='qb-filters:'+location.pathname; let saved={}; try{ saved=JSON.parse(sessionStorage.getItem(SK)||'{}')||{}; }catch(e){}
 for(const k of ['by','q','type','hideOut','kind']) if(k in saved && k in st) st[k]=saved[k];
-const saveSt=()=>{ try{ const o={scroll:Math.round(scrollY)}; for(const k of ['by','q','type','hideOut','kind']) if(k in st) o[k]=st[k]; sessionStorage.setItem(SK,JSON.stringify(o)); }catch(e){} };
+st.q=QB.cleanQ(st.q);
+const saveSt=()=>{ try{ const o={scroll:Math.round(scrollY)}; for(const k of ['by','q','type','hideOut','kind']) if(k in st) o[k]=st[k]; o.q=QB.cleanQ(o.q); sessionStorage.setItem(SK,JSON.stringify(o)); }catch(e){} };
 let ts; addEventListener('scroll',()=>{ clearTimeout(ts); ts=setTimeout(saveSt,200); },{passive:true}); addEventListener('pagehide',saveSt);
 const pr=()=>QB.parts.filter(p=>p.practice);
 function filtered(){ const q=st.q.toLowerCase(); return pr().filter(p=>(!st.kind||p.origin===st.kind)&&(!st.type||p.type===st.type)&&(!q||(p.text+' '+p.sub+' '+p.stem+' '+(p.ref||'')).toLowerCase().includes(q))); }
@@ -90,7 +91,8 @@ function render(){
   saveSt();
 }
 document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{ st.kind=b.dataset.k; render(); }));
-let tq; $('#q').addEventListener('input',e=>{ clearTimeout(tq); tq=setTimeout(()=>{ st.q=e.target.value.trim(); render(); },200); });
+let tq; $('#q').addEventListener('input',e=>{ clearTimeout(tq); tq=setTimeout(()=>{ st.q=QB.cleanQ(e.target.value); render(); },200); });
+QB.guardSearch($('#q'),()=>{ clearTimeout(tq); if(st.q){ st.q=''; render(); } });
 $('#type').addEventListener('change',e=>{ st.type=e.target.value; render(); });
 window.addEventListener('hashchange',()=>{ st.sel=decodeURIComponent(location.hash.slice(1))||null; render(); });
 QB.load(()=>{ st.sel=decodeURIComponent(location.hash.slice(1))||null;
