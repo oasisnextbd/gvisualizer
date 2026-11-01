@@ -224,10 +224,15 @@ async function renderNotes(id, sol) {
   if (!box) { box = document.createElement('div'); box.className = 'cm-notes'; sol.parentNode.insertBefore(box, sol); }
   box.innerHTML = '';
   try {
-    const { F, db } = await fb();
-    const d = await F.getDoc(F.doc(db, 'notes', COURSE + '_' + id));
-    if (part !== id || !d.exists() || !box.isConnected) return;
-    const items = d.data().items || [];
+    const nk = 'gv-note:' + COURSE + '_' + id; let items = null;
+    try { const c = JSON.parse(sessionStorage.getItem(nk) || 'null'); if (c && Date.now() - c.at < 600e3) items = c.items; } catch (e) {}
+    if (!items) {
+      const { F, db } = await fb();
+      const d = await F.getDoc(F.doc(db, 'notes', COURSE + '_' + id));
+      items = d.exists() ? (d.data().items || []) : [];
+      try { sessionStorage.setItem(nk, JSON.stringify({ at: Date.now(), items })); } catch (e) {}
+    }
+    if (part !== id || !items.length || !box.isConnected) return;
     box.innerHTML = items.map(it => `<div class="cm-note k-${esc(it.kind)}"><div class="cm-note-h">${esc(NOTE_LABEL[it.kind] || 'Note')}${it.kind === 'method' && it.credit ? ' by ' + esc(it.credit) : it.credit ? ' · thanks to ' + esc(it.credit) : ''}${it.at ? ' <span class="cm-dim">· ' + esc(when(new Date(it.at))) + '</span>' : ''}</div>${QB.md(it.text || '')}</div>`).join('');
     QB.typeset(box);
   } catch (e) { /* notes are optional */ }
@@ -253,7 +258,7 @@ async function renderBox(id, sol) {
     h += s.blocked ? '<p class="cm-dim">Posting is turned off for this account. Contact the team.</p>'
       : `<p class="cm-dim">You are signed in as <b>${esc(s.email)}</b>, but this account is not on the allowed list yet. BUET ChE students should use their <b>ID@${esc(DOMAIN)}</b> email; if that does not work, ask the team to add you.</p>`;
   } else {
-    h += `<div class="cm-list"><p class="cm-dim">Loading…</p></div>
+    h += `<div class="cm-list"><button type="button" class="btn ghost cm-show">Show discussion and my suggestions</button></div>
       <details class="cm-form"><summary class="btn">Suggest / report</summary>
         <label>What is it?<select class="search cm-kind">${Object.entries(KINDS).map(([k, v]) => `<option value="${k}">${esc(v)}</option>`).join('')}</select></label>
         <label>Details <span class="cm-dim">(step number, the correct value, your method; you can write math as $...$)</span><textarea class="search cm-text" rows="5" maxlength="4000"></textarea></label>
@@ -265,7 +270,7 @@ async function renderBox(id, sol) {
   box.innerHTML = h;
   const o = $('.cm-open', box); if (o) o.addEventListener('click', () => openModal('signin'));
   const v = $('.cm-verify', box); if (v) v.addEventListener('click', async () => { const r = await recheck(); if (!r.verified) openModal('verify'); });
-  if (s && s.canPost) { loadList(id, box); $('.cm-send', box).addEventListener('click', () => send(id, box)); }
+  if (s && s.canPost) { $('.cm-show', box).addEventListener('click', () => { $('.cm-list', box).innerHTML = '<p class="cm-dim">Loading…</p>'; loadList(id, box); }); $('.cm-send', box).addEventListener('click', () => send(id, box)); }
 }
 
 async function loadList(id, box) {

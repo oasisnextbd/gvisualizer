@@ -1,6 +1,6 @@
 // gvisualizer: Firebase start-up and the sign-in state shared by the site and the team dashboard.
 // Nothing is loaded while shared/config.js has no firebaseConfig (unless ?emu=1 for local testing).
-import { firebaseConfig, OWNER, FOUNDER, DOMAIN, SDK } from './config.js';
+import { firebaseConfig, OWNER, FOUNDER, DOMAIN, DEFAULT_RANGES, SDK } from './config.js';
 
 export { OWNER, FOUNDER, DOMAIN };
 export const emulator = /[?&]emu=1(&|$)/.test(location.search);
@@ -44,13 +44,32 @@ export function shortName(email) {
 // state = { user, email, verified, emailVerified, teamVerified, request, member, blocked, role, isOwner, isAdmin, isMod, canPost }
 // verified: the email link was opened (emailVerified), or the team verified this exact account
 // (members/{email}.verifiedUid == uid) after checking the student's ID card. Team roles need emailVerified.
-async function describe(c, user) {
+// The member/team records are cached per account for a few hours, so a student does not cost database
+// reads on every page (Firestore free plan: 50,000 reads/day). If the database is unreachable or over quota,
+// the cache (any age) or, failing that, the default ID ranges for a verified BUET email keep students in.
+const CACHE_MS = 6 * 3600e3;
+function accGet(uid) { try { return JSON.parse(localStorage.getItem('gv-acc:' + uid) || 'null'); } catch (e) { return null; } }
+function accSet(uid, v) { try { localStorage.setItem('gv-acc:' + uid, JSON.stringify({ ...v, at: Date.now() })); } catch (e) {} }
+function inDefaultRange(email) { const m = /^(\d{7})@(.+)$/.exec(email); return !!m && m[2] === DOMAIN && DEFAULT_RANGES.some(([a, b]) => +m[1] >= a && +m[1] <= b); }
+const softError = e => e && e.code && e.code !== 'permission-denied';
+// A database that cannot be reached can leave reads pending for a long time; give up after a few seconds.
+const timed = (p, ms = 6000) => Promise.race([p, new Promise((_, rej) => setTimeout(() => rej(Object.assign(new Error('timeout'), { code: 'unavailable' })), ms))]);
+async function describe(c, user, force) {
   const s = { user, email: '', verified: false, emailVerified: false, teamVerified: false, request: null, member: null, blocked: false, role: '', isOwner: false, isAdmin: false, isMod: false, canPost: false, dbError: '' };
   if (!user) return s;
   s.email = (user.email || '').toLowerCase();
   s.emailVerified = !!user.emailVerified;
   const { F, db } = c;
-  try { const m = await F.getDoc(F.doc(db, 'members', s.email)); if (m.exists()) { s.member = m.data(); s.blocked = !!s.member.blocked; } } catch (e) { s.dbError = e.code || 'error'; }
+  const cached = accGet(user.uid), fresh = !force && cached && cached.email === s.email && Date.now() - cached.at < CACHE_MS;
+  if (fresh) { s.member = cached.member; s.blocked = !!(cached.member && cached.member.blocked); }
+  else {
+    try { const m = await timed(F.getDoc(F.doc(db, 'members', s.email))); if (m.exists()) { s.member = m.data(); s.blocked = !!s.member.blocked; } }
+    catch (e) {
+      if (softError(e) && cached && cached.email === s.email) { s.member = cached.member; s.blocked = !!(cached.member && cached.member.blocked); }
+      else if (softError(e) && s.emailVerified && inDefaultRange(s.email)) s.member = { kind: 'student', fallback: true };
+      else s.dbError = e.code || 'error';
+    }
+  }
   s.teamVerified = !s.emailVerified && !!s.member && s.member.verifiedUid === user.uid;
   s.verified = s.emailVerified || s.teamVerified;
   if (!s.verified) {
@@ -58,9 +77,14 @@ async function describe(c, user) {
     if (s.dbError === 'permission-denied') s.dbError = '';
     return s;
   }
-  if (!s.emailVerified) { s.canPost = !s.dbError && !!s.member && !s.blocked; return s; }
+  if (!s.emailVerified) { s.canPost = !s.dbError && !!s.member && !s.blocked; if (!s.dbError) accSet(user.uid, { email: s.email, member: s.member, role: '' }); return s; }
   s.isOwner = s.email === OWNER;
-  try { const t = await F.getDoc(F.doc(db, 'team', s.email)); if (t.exists()) s.role = t.data().role; } catch (e) { s.dbError = e.code || 'error'; }
+  if (fresh && 'role' in cached) s.role = cached.role || '';
+  else {
+    try { const t = await timed(F.getDoc(F.doc(db, 'team', s.email))); if (t.exists()) s.role = t.data().role; }
+    catch (e) { if (softError(e) && cached && 'role' in cached) s.role = cached.role || ''; else if (!softError(e)) s.dbError = e.code || 'error'; }
+  }
+  if (!s.dbError && !(s.member && s.member.fallback)) accSet(user.uid, { email: s.email, member: s.member, role: s.role });
   if (s.email === FOUNDER) s.role = 'admin';
   if (s.isOwner) s.role = 'owner';
   s.isAdmin = s.isOwner || s.role === 'admin';
@@ -87,7 +111,7 @@ async function refresh() {
   const c = await fb();
   const u = c.auth.currentUser;
   if (u) { await u.reload(); await u.getIdToken(true); }
-  current = await describe(c, c.auth.currentUser);
+  current = await describe(c, c.auth.currentUser, true);
   listeners.forEach(f => f(current));
   return current;
 }
