@@ -1,5 +1,5 @@
 QB.paper({ year: "Practice", set: "Flash distillation", date: "", marks: 0, practice: true,
-  rules: String.raw`Binary and multicomponent flash distillation: the slide problems (ethanol–water, methanol–water, cascades, constant α), every starred Wankat chapter 2 flash problem, and exam-style questions on the flash system, its degrees of freedom, the operating line, Rachford–Rice and drum sizing.`,
+  rules: String.raw`Binary and multicomponent flash distillation: the slide problems (ethanol–water, methanol–water, cascades, constant α), every starred Wankat chapter 2 flash problem, and exam-style questions on the flash system, its degrees of freedom, the operating line, Rachford–Rice and drum sizing; plus the Jan 2026 slide problems (isothermal and adiabatic multicomponent flash, drum sizing, flash concepts).`,
   questions: [
     { id: "practice-flash-P1", q: 1, section: "S", compulsory: false, stem: String.raw``,
       parts: [ { id: "practice-flash-P1", label: "", marks: "", topic: "flash",
@@ -813,5 +813,402 @@ Use $D = 1.4$ m (about 4.5 ft).
 ![Vertical flash drum: diameter from the permissible vapor velocity, height from the hV, hf and hL rules](fig/practice-flash-P16-sol.svg)
 
 **Exam tip:** the diameter is set by the vapor, not the liquid. Keep $u_{perm}$, $\rho_V$ and $A_c$ in one unit system; $K_{drum}$ from the correlation is in ft/s.`,
-          answer: String.raw`(i) $x = 0.387$, $y = 0.613$, V = L = 400 kmol/h. (ii) $F_{lv} = 0.061$, $K_{drum} = 0.446$ ft/s, $u_{perm} = 2.31$ m/s, $A_c = 1.45$ m², D ≈ 1.4 m, $h_{total} \approx 5.6$ m.` } ] }
+          answer: String.raw`(i) $x = 0.387$, $y = 0.613$, V = L = 400 kmol/h. (ii) $F_{lv} = 0.061$, $K_{drum} = 0.446$ ft/s, $u_{perm} = 2.31$ m/s, $A_c = 1.45$ m², D ≈ 1.4 m, $h_{total} \approx 5.6$ m.` } ] },
+
+    { id: "practice-flash-P17", q: 17, section: "S", compulsory: false, stem: String.raw``,
+      parts: [
+        { id: "practice-flash-P17a", label: "(a)", marks: "10", topic: "flash",
+          sub: "Rachford–Rice: f′(ψ) ≤ 0, bracketing with f(0) and f(1), Newton–Raphson algorithm", type: "derivation", syllabus: "in", repeats: [],
+          origin: "slides", ref: String.raw`Slides 03, Flash Distillation (Jan 2026), "Rachford-Rice Equation", "Solving Rachford-Rice Equation" and "Algorithm: Isothermal Flash via Rachford-Rice"`,
+          text: String.raw`For an isothermal multicomponent flash, the Rachford–Rice function is
+$$f(\psi) = \sum_{i=1}^{n}\frac{z_i(K_i - 1)}{1 + (K_i - 1)\psi}$$
+$$\psi = \frac{V}{F}$$
+(i) Differentiate $f(\psi)$ and show that $f'(\psi) \le 0$. What does this tell you about the number of roots?
+
+(ii) Show that $f(0) = \sum z_iK_i - 1$ and $f(1) = 1 - \sum z_i/K_i$. Why must $f(0) > 0$ and $f(1) < 0$ for a two-phase flash, and what does it mean if either condition fails?
+
+(iii) List the steps of the isothermal flash algorithm using the Newton–Raphson method.`,
+          solution: String.raw`> The derivation of $f(\psi)$ itself (from $Fz_i = Lx_i + Vy_i$, $y_i = K_ix_i$ and $\sum y_i - \sum x_i = 0$) is in P15a; this part covers the properties the slides use to solve it.
+
+1. **Derivative:** only the denominator depends on $\psi$, and $\dfrac{d}{d\psi}[1 + (K_i - 1)\psi]^{-1} = -(K_i - 1)[1 + (K_i - 1)\psi]^{-2}$, so
+$$f'(\psi) = -\sum_{i=1}^{n}\frac{z_i(K_i - 1)^2}{[1 + (K_i - 1)\psi]^2}$$
+Every term has $z_i \ge 0$ times a square divided by a square, so the sum is $\ge 0$ and
+$$f'(\psi) \le 0 \quad \text{for all } \psi$$
+(equal to zero only if every $K_i = 1$, when no separation is possible).
+
+2. **One root at most:** for $0 \le \psi \le 1$ every denominator $1 + (K_i - 1)\psi = (1 - \psi) + K_i\psi$ is positive, so $f$ is continuous there. A continuous function that only decreases can cross zero at most once, so there is **at most one** physical root. The poles of $f$, at $\psi = 1/(1 - K_i)$, are negative for $K_i > 1$ and greater than 1 for $K_i < 1$: they always lie outside $[0, 1]$.
+
+3. **Bracketing values:** put $\psi = 0$ and $\psi = 1$ in $f$:
+$$f(0) = \sum z_i(K_i - 1) = \sum z_iK_i - \sum z_i = \sum z_iK_i - 1$$
+$$f(1) = \sum \frac{z_i(K_i - 1)}{K_i} = \sum z_i - \sum\frac{z_i}{K_i} = 1 - \sum\frac{z_i}{K_i}$$
+If $f(0) > 0$ and $f(1) < 0$, the decreasing function must cross zero once between them: exactly one root $0 < \psi < 1$.
+
+4. **Physical meaning of the two conditions:**
+
+| condition | equivalent | meaning at $T_{drum}$, $p_{drum}$ |
+|---|---|---|
+| $f(0) > 0$ | $\sum z_iK_i > 1$ | above the feed's bubble point (at the bubble point $\sum z_iK_i = 1$) |
+| $f(1) < 0$ | $\sum z_i/K_i > 1$ | below the feed's dew point (at the dew point $\sum z_i/K_i = 1$) |
+
+So the drum feed (after the valve) must lie **between its bubble point and its dew point**.
+
+5. **When a condition fails:**
+- $f(0) \le 0$ ($\sum z_iK_i \le 1$): the feed is at or below its bubble point, a subcooled (or saturated) liquid. No vapor forms: $\psi = 0$, $L = F$, $x_i = z_i$.
+- $f(1) \ge 0$ ($\sum z_i/K_i \le 1$): the feed is at or above its dew point, a superheated (or saturated) vapor: $\psi = 1$, $V = F$, $y_i = z_i$.
+- Both cannot fail together, because $f$ decreases, so $f(0) > f(1)$ always. A root found outside $[0, 1]$ (a "negative flash") has no physical meaning; change $T_{drum}$ or $p_{drum}$ instead.
+
+6. **Algorithm (isothermal flash, given $F$, $z_i$, $T_{drum}$, $p_{drum}$):**
+- Step 1: get $K_i(T_{drum}, p_{drum})$ (DePriester chart, Eq. 2-30, or $K_i = p_i^{sat}/p$ for ideal systems).
+- Step 2: feasibility check, $f(0) > 0$ and $f(1) < 0$; otherwise the feed is all liquid or all vapor.
+- Step 3: Newton–Raphson. Write $f$ and $f'$; pick $\psi^{(0)}$ (0.5 is a safe start); iterate
+$$\psi^{(n+1)} = \psi^{(n)} - \frac{f(\psi^{(n)})}{f'(\psi^{(n)})}$$
+until $\lvert f(\psi^{(n+1)})\rvert < \varepsilon$ or $\lvert \psi^{(n+1)} - \psi^{(n)}\rvert < \varepsilon$. Keep the root bracketed: if a step lands outside $[0, 1]$, bisect instead. (Bisection or regula falsi also work; a calculator SOLVE is the exam shortcut.)
+- Step 4: back-calculate $x_i = z_i/[1 + (K_i - 1)\psi]$ and $y_i = K_ix_i$.
+- Step 5: verify $\sum x_i \approx 1$ and $\sum y_i \approx 1$.
+- Step 6: flows $V = \psi F$, $L = (1 - \psi)F$.
+
+**Exam tip:** state both feasibility numbers before iterating; it costs one line and shows the examiner that a two-phase answer exists.`,
+          answer: String.raw`$f'(\psi) = -\sum z_i(K_i-1)^2/[1+(K_i-1)\psi]^2 \le 0$, so f decreases and has at most one root; $f(0) = \sum z_iK_i - 1 > 0$ (above bubble point) and $f(1) = 1 - \sum z_i/K_i < 0$ (below dew point) bracket it. If $f(0) \le 0$ the feed stays liquid (ψ = 0); if $f(1) \ge 0$ it is all vapor (ψ = 1).` },
+        { id: "practice-flash-P17b", label: "(b)", marks: "20", topic: "flash",
+          sub: "Isothermal flash of propane, n-butane, n-pentane, n-hexane at 50 °C and 200 kPa (Newton–Raphson)", type: "numerical", syllabus: "in", repeats: [],
+          origin: "slides", ref: String.raw`Slides 03, Flash Distillation (Jan 2026), "Problem: Multicomponent Flash Distillation" and its solution slide; same as Wankat 3e, Example 2-2`,
+          text: String.raw`A flash chamber operating at 50 °C and 200 kPa is separating 1000 kmol/h of a feed that is 30 mol% propane, 10 mol% n-butane, 15 mol% n-pentane and 45 mol% n-hexane. Find the product compositions and flow rates. From the DePriester chart: $K_{C3} = 7.00$, $K_{C4} = 2.40$, $K_{C5} = 0.80$, $K_{C6} = 0.30$.`,
+          solution: String.raw`**Given:** $F = 1000$ kmol/h; $z$ = 0.30 / 0.10 / 0.15 / 0.45; $K$ = 7.00 / 2.40 / 0.80 / 0.30 (propane / n-butane / n-pentane / n-hexane) at 50 °C, 200 kPa.
+
+**Find:** $\psi = V/F$, $x_i$, $y_i$, $V$, $L$.
+
+**Assumptions:** the drum is one equilibrium stage; K values depend only on $T$ and $p$ (DePriester). $T_{drum}$ and $p_{drum}$ are both given, so this is a sequential (isothermal) flash: no energy balance is needed.
+
+1. **Feasibility check:**
+$$f(0) = \sum z_iK_i - 1 = (2.100 + 0.240 + 0.120 + 0.135) - 1 = 1.595 > 0$$
+$$f(1) = 1 - \sum\frac{z_i}{K_i} = 1 - (0.0429 + 0.0417 + 0.1875 + 1.5000) = -0.772 < 0$$
+The feed is between its bubble and dew points, so it splits into two phases ✓
+
+2. **Function and derivative** with the numbers in:
+$$f(\psi) = \frac{0.30(6.00)}{1 + 6.00\psi} + \frac{0.10(1.40)}{1 + 1.40\psi} + \frac{0.15(-0.20)}{1 - 0.20\psi} + \frac{0.45(-0.70)}{1 - 0.70\psi}$$
+$$-f'(\psi) = \frac{0.30(6.00)^2}{(1 + 6.00\psi)^2} + \frac{0.10(1.40)^2}{(1 + 1.40\psi)^2}$$
+$$+ \frac{0.15(0.20)^2}{(1 - 0.20\psi)^2} + \frac{0.45(0.70)^2}{(1 - 0.70\psi)^2}$$
+
+3. **Newton–Raphson iterations,** $\psi_{n+1} = \psi_n - f/f'$, starting from a deliberately poor guess $\psi_0 = 0.1$ (as in the book):
+
+| $n$ | $\psi_n$ | $f(\psi_n)$ | $f'(\psi_n)$ | $\psi_{n+1}$ |
+|---|---|---|---|---|
+| 0 | 0.1000 | 0.8785 | −4.631 | 0.2897 |
+| 1 | 0.2897 | 0.3300 | −1.893 | 0.4640 |
+| 2 | 0.4640 | 0.0610 | −1.317 | 0.5103 |
+| 3 | 0.5103 | 0.0014 | −1.262 | 0.5114 |
+| 4 | 0.5114 | 0.0000 | −1.261 | 0.5114 |
+
+Converged: $\psi = V/F = 0.5114$. (Starting from $\psi_0 = 0.5$ takes only two steps: 0.5113, 0.5114.) The convergence is monotonic because $f$ is decreasing and nearly linear.
+
+![Rachford–Rice function for the slide problem: f(0) = 1.595, f(1) = −0.772, Newton tangents from ψ = 0.1 reaching the root ψ = 0.5114](fig/practice-flash-P17-sol.svg)
+
+4. **Phase compositions,** $x_i = z_i/[1 + (K_i - 1)\psi]$, $y_i = K_ix_i$:
+
+| component | $z_i$ | $K_i$ | $1 + (K_i - 1)\psi$ | $x_i$ | $y_i$ |
+|---|---|---|---|---|---|
+| propane | 0.30 | 7.00 | 4.068 | 0.0737 | 0.5162 |
+| n-butane | 0.10 | 2.40 | 1.716 | 0.0583 | 0.1399 |
+| n-pentane | 0.15 | 0.80 | 0.898 | 0.1671 | 0.1337 |
+| n-hexane | 0.45 | 0.30 | 0.642 | 0.7009 | 0.2103 |
+| sum | 1.00 | | | 1.0000 | 1.0000 |
+
+5. **Verify:** $\sum x_i = 1.0000$ and $\sum y_i = 1.0000$ ✓
+
+6. **Flow rates:**
+$$V = \psi F = 0.5114(1000) = 511.4\ \mathrm{kmol/h}$$
+$$L = (1 - \psi)F = 488.6\ \mathrm{kmol/h}$$
+**Check (propane):** $511.4(0.5162) + 488.6(0.0737) = 264.0 + 36.0 = 300.0 = Fz_{C3}$ ✓
+
+> Book answer (Wankat Example 2-2): $V/F = 0.51$, $x_{C3} = 0.0739$, $y_{C3} = 0.5172$, $V = 510$, $L = 490$ kmol/h ✓. The book stops at $f(0.51) = 0.0017$, "within the accuracy of the DePriester charts"; one more step gives 0.5114.
+
+**Exam tip:** the light components (K > 1) concentrate in the vapor and the heavy ones (K < 1) in the liquid; a quick look at $y_i/x_i = K_i$ in your table catches arithmetic slips.`,
+          answer: String.raw`$V/F = 0.511$ (book 0.51); V = 511.4, L = 488.6 kmol/h; $x$ = 0.074 / 0.058 / 0.167 / 0.701, $y$ = 0.516 / 0.140 / 0.134 / 0.210 (C₃ / nC₄ / nC₅ / nC₆).` } ] },
+
+    { id: "practice-flash-P18", q: 18, section: "S", compulsory: false,
+      stem: String.raw`We have a liquid feed that is 20 mol% methane, 45 mol% n-pentane and 35 mol% n-hexane. Feed rate is 1500 kmol/h, feed temperature is 42 °C, and pressure is 100.0 psia. The flash drum operates at 30 psia and is adiabatic. Find: $T_{drum}$, V/F, $x_i$, $y_i$, L, V.
+
+Data (Wankat Table 2-5, shown on the slide; source Himmelblau):
+
+| component | $\lambda$, kcal/mol | normal boiling point, °C | $C_{P,L}$, cal/(mol·°C) |
+|---|---|---|---|
+| methane | 1.955 | −161.48 | 11.0 (est.) |
+| n-pentane | 6.160 | 36.08 | 39.66 |
+| n-hexane | 6.896 | 68.75 | 45.58 |
+
+Vapor heat capacities in cal/(mol·°C), $T$ in °C:
+$C_{PV,1} = 8.20 + 0.01307T + 8.75\times10^{-7}T^2 - 2.63\times10^{-9}T^3$;
+$C_{PV,2} = 27.45 + 0.08148T - 4.538\times10^{-5}T^2 + 10.1\times10^{-9}T^3$;
+$C_{PV,3} = 32.85 + 0.09763T - 5.716\times10^{-5}T^2 + 13.78\times10^{-9}T^3$.`,
+      parts: [
+        { id: "practice-flash-P18a", label: "(a)", marks: "15", topic: "flash",
+          sub: "Adiabatic multicomponent flash: algorithm and first trial at 40 °C (methane, n-pentane, n-hexane)", type: "numerical", syllabus: "in", repeats: [],
+          origin: "slides", ref: String.raw`Slides 03, Flash Distillation (Jan 2026), "System Where Tdrum is Unknown" and "Problem: Simultaneous Solution for Multicomponent Flash Distillation" (Steps 1–7); Wankat 3e, Example 2-3`,
+          text: String.raw`Explain why $T_{drum}$ is unknown and outline the algorithm for this adiabatic flash. Then carry out the first trial with $T_{drum} = 40$ °C, using the DePriester values read on the slide ($K_{methane} = 80.00$, $K_{pentane} = 0.67$, $K_{hexane} = 0.20$ at 40 °C and 30 psia): find $\psi$, $x_i$, $y_i$, V and L, evaluate the energy balance and decide whether the next guess for $T_{drum}$ should be higher or lower.`,
+          solution: String.raw`**Given:** $F = 1500$ kmol/h; $z$ = 0.20 / 0.45 / 0.35 (methane / n-pentane / n-hexane); $T_F = 42$ °C at 100 psia (liquid); $p_{drum} = 30$ psia; $Q_{flash} = 0$.
+
+**Find:** the algorithm, and the first trial at $T_{drum} = 40$ °C.
+
+**Assumptions:** one equilibrium stage; ideal solutions (no heats of mixing); K values from the DePriester chart; the valve is isenthalpic, so the drum energy balance uses $h_F$ at 42 °C.
+
+1. **Why $T_{drum}$ is unknown:** the specified variables are $F$, $z_i$, $T_F$, $p_F$, $p_{drum}$ and $Q_{flash} = 0$. The feed temperature, not the drum temperature, is fixed, so the energy balance $Fh_F = Lh_L + VH_V$ must be solved together with the mass balances and equilibrium. The K values need $T_{drum}$, and $T_{drum}$ needs V/F from the energy balance: a double trial and error (simultaneous solution).
+
+2. **Algorithm (adiabatic flash via Rachford–Rice):**
+- guess $T_{drum}$;
+- read $K_i(T_{drum}, p_{drum})$;
+- solve the Rachford–Rice equation for $\psi$ (inner loop, Newton);
+- find $x_i$ and $y_i$;
+- compute $h_L(T_{drum})$ and $H_V(T_{drum})$;
+- check the energy residual $g(T) = Fh_F(T_F) - Lh_L(T) - VH_V(T)$; if it is not close to zero, update $T$ by Newton, $T^{(n+1)} = T^{(n)} - g/g'$, and return to the K values.
+For a wide-boiling feed like this one (methane boils at −161 °C, hexane at 69 °C) a change in $T$ hardly changes V/F, so V/F is converged first for each $T$ and the energy balance is used last (Wankat Fig. 2-13).
+
+3. **Step 1–2, K values at 40 °C, 30 psia:** $K$ = 80.00 / 0.67 / 0.20 (slide's chart reading). The McWilliams fit of the chart (Wankat Eq. 2-30, Table 2-3) gives 77.1 / 0.606 / 0.221, the same within chart-reading accuracy.
+
+4. **Step 3, Rachford–Rice:**
+$$\frac{0.20(80 - 1)}{1 + 79\psi} + \frac{0.45(0.67 - 1)}{1 - 0.33\psi} + \frac{0.35(0.20 - 1)}{1 - 0.80\psi} = 0$$
+Feasibility: $\sum z_iK_i - 1 = 15.37 > 0$, $1 - \sum z_i/K_i = -1.42 < 0$ ✓. Newton from $\psi = 0.25$: 0.3255, 0.3464, 0.3474, so
+$$\psi = 0.347 \approx 0.35$$
+
+5. **Step 4, compositions:**
+
+| | $z_i$ | $K_i$ | $x_i$ | $y_i$ |
+|---|---|---|---|---|
+| methane | 0.20 | 80.00 | 0.0070 | 0.5625 |
+| n-pentane | 0.45 | 0.67 | 0.5083 | 0.3405 |
+| n-hexane | 0.35 | 0.20 | 0.4847 | 0.0969 |
+
+(The slide rounds these to 0.007 / 0.509 / 0.484 and 0.560 / 0.340 / 0.100 ✓)
+
+6. **Step 5, flows:** $V = 0.347(1500) = 521$ kmol/h, $L = 979$ kmol/h (the slide's 525 and 975 use $\psi = 0.35$).
+
+7. **Step 6, energy balance (slide's quick version):** take saturated liquid at 40 °C as the reference, so $h_L(40) = 0$ and $H_V(40) \approx \sum y_i\lambda_i$:
+$$H_V \approx 0.5625(8180) + 0.3405(25{,}773) + 0.0969(28{,}853) = 16{,}200\ \mathrm{kJ/kmol}$$
+($\lambda$ = 1.955, 6.160, 6.896 kcal/mol × 4184 = 8180, 25,773, 28,853 kJ/kmol; the slide quotes ≈ 16,420 with its rounded $y_i$.) The feed is only 2 °C above the reference:
+$$C_{P,mix} = \sum z_iC_{P,L,i} = 0.20(11.0) + 0.45(39.66) + 0.35(45.58) = 36.0\ \mathrm{cal/(mol\,^\circ C)} = 150.6\ \mathrm{kJ/(kmol\,^\circ C)}$$
+$$h_F = C_{P,mix}(T_F - 40) = 150.6(42 - 40) = 301\ \mathrm{kJ/kmol}$$
+$$g = Fh_F - Lh_L - VH_V = 1500(301) - 979(0) - 521(16{,}200) = 0.45\times10^6 - 8.44\times10^6 \approx -8.0\times10^6\ \mathrm{kJ/h}$$
+
+> The slide prints $h_F \approx 807{,}500$ kJ/kmol and a residual of $+1.20\times10^9$ kJ/h. These appear to be typos: per kmol, 2 °C of sensible heat is only about 300 kJ, and even the whole latent heat of the mixture is only about 16,000 kJ/kmol. The residual is of order $10^6$–$10^7$ kJ/h and it is **negative**.
+
+8. **Same trial with a consistent enthalpy basis** (pure liquid at 0 °C as reference, used for the full solution in (b)): $h_F = 6326$, $h_L(40) = 7084$, $H_V(40) = 18{,}548$ kJ/kmol, so
+$$g(40) = 1500(6326) - 979(7084) - 521(18{,}548) = -7.1\times10^6\ \mathrm{kJ/h}$$
+Both ways $g < 0$: the products would need more energy than the feed brings in.
+
+9. **Step 7, next guess:** $g < 0$ means too much vapor has been formed, so the drum must be **colder**. Newton with $g' = -\left[V\sum y_iC_{PV,i} + L\sum x_iC_{P,L,i}\right] = -2.15\times10^5$ kJ/(h·°C):
+$$T^{(2)} = 40 - \frac{-7.11\times10^6}{-2.15\times10^5} = 40 - 33.1 = 6.9\ ^\circ\mathrm{C}$$
+This overshoots (the answer is near 24 °C, see (b)); a damped step $T^{(2)} = 40 - 0.5(33.1) = 23.4$ °C (Wankat Eq. 2-57, $d = 0.5$) lands almost on the answer.
+
+**Exam tip:** the sign of $g$ is the decision: $g < 0$ (products hold more enthalpy than the feed) means lower $T_{drum}$; $g > 0$ means raise it.`,
+          answer: String.raw`Trial at 40 °C: ψ ≈ 0.35 (0.347), $x$ = 0.007 / 0.508 / 0.485, $y$ = 0.563 / 0.341 / 0.097, V ≈ 521, L ≈ 979 kmol/h; $h_F \approx 301$ kJ/kmol relative to 40 °C liquid (not 807,500), residual ≈ −8×10⁶ kJ/h (not +1.2×10⁹) → $T_{drum}$ must be lower.` },
+        { id: "practice-flash-P18b", label: "(b)", marks: "20", topic: "flash",
+          sub: "Adiabatic flash converged: drum at ≈ 23.9 °C, V/F ≈ 0.255 (energy-balance Newton loop)", type: "numerical", syllabus: "in", repeats: [],
+          origin: "slides", ref: String.raw`Slides 03, Flash Distillation (Jan 2026), "Problem: Simultaneous Solution for Multicomponent Flash Distillation" (iteration table); Wankat 3e, Example 2-3 and Table 2-6`,
+          text: String.raw`Continue the calculation to convergence. Report $T_{drum}$, V/F, $x_i$, $y_i$, L and V, and compare with the slide's iteration table, which starts at $T_{drum} = 15$ °C and ends at $T_{drum} = 23.892$ °C, V/F = 0.2549.`,
+          solution: String.raw`**Given:** as in (a). **Find:** converged $T_{drum}$, $\psi$, $x_i$, $y_i$, $L$, $V$.
+
+**Assumptions:** ideal solutions; K values from the McWilliams fit of the DePriester chart (Wankat Eq. 2-30), so the iteration can be done by computer exactly as in the book:
+$$\ln K = \frac{a_{T1}}{T^2} + \frac{a_{T2}}{T} + a_{T6} + a_{p1}\ln p + \frac{a_{p2}}{p^2} + \frac{a_{p3}}{p}$$
+with $T$ in °R and $p$ in psia.
+
+| | $a_{T1}$ | $a_{T2}$ | $a_{T6}$ | $a_{p1}$ | $a_{p2}$ | $a_{p3}$ |
+|---|---|---|---|---|---|---|
+| methane | −292,860 | 0 | 8.2445 | −0.8951 | 59.8465 | 0 |
+| n-pentane | −1,524,891 | 0 | 7.33129 | −0.89143 | 0 | 0 |
+| n-hexane | −1,778,901 | 0 | 6.96783 | −0.84634 | 0 | 0 |
+
+1. **Enthalpy basis:** pure liquid at 0 °C ($T$ in °C), data of the stem:
+$$h_{L,i}(T) = C_{P,L,i}\,T$$
+$$H_{V,i}(T) = C_{P,L,i}T_{b,i} + \lambda_i + \int_{T_{b,i}}^{T} C_{PV,i}\,dT$$
+(heat the liquid to its normal boiling point, vaporize, heat the vapor). Mixtures: $h_L = \sum x_ih_{L,i}$, $H_V = \sum y_iH_{V,i}$. Feed: $h_F = \sum z_iC_{P,L,i}(42) = 36.0(42) = 1512$ cal/mol = 6326 kJ/kmol.
+
+2. **Energy residual and Newton step** (slide Step 7, Wankat Eqs. 2-51 to 2-56):
+$$g(T) = Fh_F - Lh_L(T) - VH_V(T)$$
+$$g'(T) \approx -\left[V\sum y_iC_{PV,i} + L\sum x_iC_{P,L,i}\right]$$
+$$T^{(n+1)} = T^{(n)} - \frac{g(T^{(n)})}{g'(T^{(n)})}$$
+For every trial $T$, the Rachford–Rice equation is first converged for $\psi$ (inner loop), then $g$ is evaluated.
+
+3. **Iterations from $T = 15$ °C** (same start as the slide), compared with the slide's table:
+
+| trial | $T$ guess, °C | $\psi$ | $g$, $10^6$ kJ/h | calc. $T$, °C | slide $\psi$ | slide calc. $T$ |
+|---|---|---|---|---|---|---|
+| 1 | 15.000 | 0.2303 | +2.904 | 28.195 | 0.2361 | 27.903 |
+| 2 | 28.195 | 0.2696 | −1.524 | 21.209 | 0.2677 | 21.385 |
+| 3 | 21.209 | 0.2458 | +0.935 | 25.474 | 0.2496 | 25.149 |
+| 4 | 25.474 | 0.2594 | −0.529 | 23.056 | 0.2567 | 23.277 |
+| 5 | 23.056 | 0.2514 | +0.314 | 24.491 | 0.2551 | 24.128 |
+| 6 | 24.491 | 0.2560 | −0.182 | 23.661 | 0.2551 | 23.786 |
+| 7 | 23.661 | 0.2533 | +0.107 | 24.148 | 0.2550 | 23.930 |
+| 8 | 24.148 | 0.2549 | −0.062 | 23.865 | 0.2550 | 23.875 |
+| 9 | 23.865 | 0.2540 | +0.036 | 24.031 | 0.2549 | 23.900 |
+| 10 | 24.031 | 0.2545 | −0.021 | 23.934 | 0.2549 | 23.892 |
+
+Solving $g(T) = 0$ directly: $T_{drum} = 23.97$ °C, $\psi = 0.2543$.
+
+4. **Why the temperature oscillates:** the Newton slope holds V and L fixed, but in reality a warmer drum also vaporizes more liquid, which absorbs latent heat. At the answer the true slope is $dE/dT = 55.3$ cal/(mol·°C) per mol of feed, the frozen-flow slope only 34.9, so each step is about 1.6 times too long and the error changes sign (factor ≈ −0.6) every trial. Damping, $T^{(n+1)} = T^{(n)} - d\,g/g'$ with $d = 0.5$ (Wankat Eq. 2-57), converges smoothly: 15 → 21.60 → 23.44 → 23.86 → 23.95 → 23.97 °C.
+
+![Energy residual g versus trial drum temperature: g = 0 at 23.97 °C; the Newton steps from 15 °C overshoot alternately because the slope is taken with V and L frozen](fig/practice-flash-P18-sol.svg)
+
+5. **Converged products** at $T_{drum} = 23.97$ °C, $p = 30$ psia ($K$ = 69.60 / 0.3563 / 0.1188):
+
+| | $z_i$ | $K_i$ | $x_i$ | $y_i$ |
+|---|---|---|---|---|
+| methane | 0.20 | 69.60 | 0.0108 | 0.7547 |
+| n-pentane | 0.45 | 0.3563 | 0.5381 | 0.1917 |
+| n-hexane | 0.35 | 0.1188 | 0.4511 | 0.0536 |
+| sum | 1.00 | | 1.0000 | 1.0000 |
+
+6. **Flows:** $V = 0.2543(1500) = 381.5$ kmol/h, $L = 1118.5$ kmol/h.
+
+7. **Energy check:** $h_L = 4214$ kJ/kmol, $H_V = 12{,}520$ kJ/kmol:
+$$\psi H_V + (1 - \psi)h_L = 0.2543(12{,}520) + 0.7457(4214)$$
+$$= 3184 + 3142 = 6326\ \mathrm{kJ/kmol} = h_F\ ✓$$
+The feed cools from 42 °C to about 24 °C, and that sensible heat vaporizes a quarter of it, mostly the methane.
+
+> Comparison with the slide (and Wankat Table 2-6): this calculation gives $T_{drum} = 23.97$ °C and V/F = 0.2543, the slide 23.89 °C and 0.2549; Wankat's compositions are $x$ = 0.0108 / 0.5381 / 0.4513, $y$ = 0.7531 / 0.1925 / 0.0539, V = 382.3, L = 1117.7 kmol/h ✓. The tiny differences come from the K-value fit and rounding. The slide's 42 °C feed is the value its table was computed with: Wankat's printed text says 45 °C, but 45 °C gives $T_{drum} = 25.9$ °C and V/F = 0.261, which does not match the table. (Wankat also reports an Aspen Plus/Peng–Robinson check: $T_{drum} = 28.0$ °C, V = 392.2 kmol/h, close except for the temperature.)
+
+**Exam tip:** in an exam, two or three hand trials are enough: get $g$ at two temperatures with opposite signs and interpolate for $g = 0$, then do one final Rachford–Rice at that temperature.`,
+          answer: String.raw`$T_{drum} \approx 23.9$ °C (23.97 here; slide 23.89), $V/F \approx 0.255$ (0.2543; slide 0.2549); $x$ = 0.011 / 0.538 / 0.451, $y$ = 0.755 / 0.192 / 0.054 (C₁ / nC₅ / nC₆); V ≈ 382, L ≈ 1118 kmol/h.` } ] },
+
+    { id: "practice-flash-P19", q: 19, section: "S", compulsory: false, stem: String.raw``,
+      parts: [
+        { id: "practice-flash-P19a", label: "(a)", marks: "15", topic: "flash",
+          sub: "Flash drum sizing: vertical (Watkins K-drum correlation, permissible velocity, D and height rules) and horizontal drums", type: "theory", syllabus: "in", repeats: [],
+          origin: "slides", ref: String.raw`Slides 03, Flash Distillation (Jan 2026), "Flash Drum Sizing" (vertical, Steps 1–3; horizontal, Steps 1–3); Wankat 3e, Section 2.9`,
+          text: String.raw`The flash has been solved, so $F$, $z_i$, $L$, $x_i$, $V$, $y_i$, $T_{drum}$ and $p_{drum}$ are known. Describe, with a labelled sketch, how a vertical flash drum is sized (permissible vapor velocity, diameter and height, including $h_V$, $h_f$ and $h_L$). What do you do if $h_{total}/D$ falls outside 3–5? How is the procedure changed for a horizontal drum, and why is its allowable vapor velocity higher?`,
+          solution: String.raw`**Vertical drum** (Wankat Section 2.9; the vapor velocity sets the diameter, the liquid and nozzle rules set the height).
+
+1. **Permissible vapor velocity:** the vapor must rise slowly enough for liquid drops to fall back against it:
+$$u_{perm} = K_{drum}\sqrt{\frac{\rho_L - \rho_V}{\rho_V}} \quad (\mathrm{ft/s})$$
+$K_{drum}$ is Watkins' (1967) chart, fitted by Blackwell (1984):
+$$K_{drum} = \exp\left[A + B\ln F_{lv} + C(\ln F_{lv})^2 + D(\ln F_{lv})^3 + E(\ln F_{lv})^4\right]\ \mathrm{ft/s}$$
+$$F_{lv} = \frac{W_L}{W_V}\sqrt{\frac{\rho_V}{\rho_L}}$$
+with $W_L$, $W_V$ the mass flow rates (lb/h) and $A = -1.877478097$, $B = -0.8145804597$, $C = -0.1870744085$, $D = -0.0145228667$, $E = -0.0010148518$. The correlation is for 85% of flooding without a demister (about 5% entrainment); a demister cuts entrainment below 1%.
+
+> The slide writes $\sqrt{\rho_L/(\rho_L - \rho_V)}$; that appears to be a typo, since that ratio is ≈ 1 and would make $u_{perm} \approx K_{drum}$. The correct group is $\sqrt{(\rho_L - \rho_V)/\rho_V}$ (Wankat Eq. 2-64), which is large because the vapor is much lighter than the liquid. (The slide's "C = 1 ft/s" is just the unit constant in front of the exponential, not the constant C inside it.)
+
+2. **Cross-section and diameter:** the vapor mass flow divided by $\rho_Vu_{perm}$:
+$$A_c = \frac{V\,MW_V}{u_{perm}(3600)\rho_V}$$
+$$D = \sqrt{\frac{4A_c}{\pi}}$$
+($V$ in lbmol/h, $MW_V$ in lb/lbmol, $\rho_V$ in lb/ft³, $u_{perm}$ in ft/s gives $A_c$ in ft².) Round D up to the next 6-in increment.
+
+3. **Height:**
+$$\frac{h_{total}}{D} = \frac{h_V + h_f + h_L}{D} \approx 3\ \text{to}\ 5$$
+- $h_V$, top of the drum above the feed-nozzle centerline: 36 in + ½ (feed-line diameter), at least 48 in. This is the disengagement space where drops settle.
+- $h_f$, feed-line centerline above the maximum liquid level: 12 in + ½ (feed-line diameter), at least 18 in, so the incoming jet does not splash the pool into the vapor.
+- $h_L$, depth of the liquid pool, from the surge volume the plant needs (liquid flow × holdup time):
+$$h_L = \frac{V_{surge}}{\pi D^2/4}$$
+The best ratio within 3–5 minimizes vessel weight (cost).
+
+4. **If the ratio is outside the range:** $h_{total}/D < 3$: allow a larger liquid surge volume (deeper pool). $h_{total}/D > 5$: use a horizontal drum.
+
+![Vertical flash drum: D across the shell; h_V from the top to the feed-nozzle centerline, h_f from the centerline to the maximum liquid level, h_L the pool depth; demister pad near the top, inlet deflector at the feed nozzle](fig/practice-flash-P19-vert.svg)
+
+**Horizontal drum** (used for large flows or large surge volumes; also cheaper to support):
+
+5. **Velocity:** same $u_{perm}$ formula, but with
+$$K_{horizontal} = 1.25\,K_{vertical}$$
+The vapor flows along the drum, so a drop only has to fall part of a diameter while it travels the length h: the disengagement area is larger and the settling path is long. A 25% higher velocity is therefore allowed.
+
+6. **Area and diameter:** the liquid occupies part of the circle, so instead of the circular-segment geometry the vapor area is taken as $A_c \approx Dh$ with $h/D = C$ (3 to 5, Seader):
+$$A_c = Dh = CD^2 = \frac{V\,MW_V}{u_{perm}(3600)\rho_V} \Rightarrow D = \sqrt{\frac{V\,MW_V}{3600\,\rho_V\,C\,u_{perm}}}$$
+For an ideal gas, $\rho_V = p\,MW_V/(RT)$ and
+$$D = \sqrt{\frac{VRT}{3600\,C\,p\,u_{perm}}}$$
+The vessel volume is $\pi D^2h/4 = \pi CD^3/4$; check that it holds the required liquid surge.
+
+![Horizontal flash drum: length h, diameter D, feed at one end, vapor leaving at the other end above the liquid pool](fig/practice-flash-P19-horiz.svg)
+
+**Exam tip:** keep the units consistent: $K_{drum}$ is in ft/s, so work in ft, lb and lbmol (or convert $u_{perm}$ to m/s before using SI flows).`,
+          answer: String.raw`Vertical: $F_{lv}$ → $K_{drum}$ (Blackwell fit) → $u_{perm} = K_{drum}\sqrt{(\rho_L-\rho_V)/\rho_V}$ → $A_c = V\,MW_V/(3600\,u_{perm}\rho_V)$ → $D = \sqrt{4A_c/\pi}$; height from $h_V$ (36 in + ½d, ≥ 48 in), $h_f$ (12 in + ½d, ≥ 18 in), $h_L = V_{surge}/(\pi D^2/4)$, with $h/D$ = 3–5 (< 3: more surge; > 5: go horizontal). Horizontal: $K = 1.25K_{vert}$, $D = \sqrt{V\,MW_V/(3600\rho_V C u_{perm})}$.` },
+        { id: "practice-flash-P19b", label: "(b)", marks: "20", topic: "flash",
+          sub: "Vertical drum size for 1500 lbmol/h n-hexane–n-octane (Wankat Example 2-4)", type: "numerical", syllabus: "in", repeats: [],
+          origin: "slides", ref: String.raw`Slides 03, Flash Distillation (Jan 2026), "Problem: Calculation of Drum Size"; same as Wankat 3e, Example 2-4`,
+          text: String.raw`A vertical flash drum is to flash a liquid feed of 1500 lbmol/h that is 40 mol% n-hexane and 60 mol% n-octane at 101.3 kPa (1 atm). We wish to produce a vapor that is 60 mol% n-hexane. Solution of the flash equations with equilibrium data gives $x_H = 0.19$, $T_{drum} = 378$ K and V/F = 0.51. What size flash drum is required?`,
+          solution: String.raw`**Given:** $F = 1500$ lbmol/h, $z_H = 0.40$; $y_H = 0.60$, $x_H = 0.19$, $V/F = 0.51$, $T = 378$ K, $p = 1$ atm.
+
+**Find:** drum diameter D and height $h_{total}$.
+
+**Assumptions:**
+- ideal gas for the vapor; ideal liquid mixture (additive volumes);
+- $MW_H = 86.17$, $MW_O = 114.22$;
+- pure-liquid densities at 378 K: n-hexane 0.573 g/mL, n-octane 0.630 g/mL (saturated-liquid values from the Rackett equation, scaled to the 20 °C handbook densities 0.659 and 0.703 g/mL that Wankat uses; independent data give about 0.57–0.58 and 0.63 g/mL);
+- $h_{total}/D = 4$; feed line no larger than 12 in, so the minimum $h_V = 48$ in and $h_f = 18$ in apply.
+
+1. **Flows:** $V = 0.51(1500) = 765$ lbmol/h, $L = 735$ lbmol/h. (Check: $x_H = (0.40 - 0.51 \times 0.60)/0.49 = 0.192$ ✓)
+
+2. **Molecular weights:**
+$$MW_L = 0.19(86.17) + 0.81(114.22) = 108.89$$
+$$MW_V = 0.60(86.17) + 0.40(114.22) = 97.39$$
+
+3. **Liquid density** (additive volumes):
+$$\bar V_L = 0.19\frac{86.17}{0.573} + 0.81\frac{114.22}{0.630} = 175.4\ \mathrm{mL/mol}$$
+$$\rho_L = \frac{108.89}{175.4} = 0.621\ \mathrm{g/mL} = 38.75\ \mathrm{lb/ft^3}$$
+
+4. **Vapor density** (ideal gas):
+$$\rho_V = \frac{p\,MW_V}{RT} = \frac{(1)(97.39)}{82.0575(378)} = 3.14\times10^{-3}\ \mathrm{g/mL} = 0.1960\ \mathrm{lb/ft^3}$$
+
+5. **Flow parameter:** $W_V = 765(97.39) = 74{,}503$ lb/h, $W_L = 735(108.89) = 80{,}035$ lb/h:
+$$F_{lv} = \frac{W_L}{W_V}\sqrt{\frac{\rho_V}{\rho_L}} = 1.0742\sqrt{\frac{0.00314}{0.621}} = 0.0764$$
+$$\ln F_{lv} = -2.572$$
+
+6. **Drum constant** (Blackwell fit): $$K_{drum} = \exp[-1.8775 - 0.8146(-2.572) - 0.1871(-2.572)^2$$
+$$- 0.01452(-2.572)^3 - 0.001015(-2.572)^4] = 0.4416\ \mathrm{ft/s}$$
+
+7. **Permissible velocity:**
+$$u_{perm} = K_{drum}\sqrt{\frac{\rho_L - \rho_V}{\rho_V}} = 0.4416\sqrt{\frac{0.621 - 0.00314}{0.00314}} = 6.19\ \mathrm{ft/s}$$
+(1.89 m/s).
+
+8. **Area and diameter:**
+$$A_c = \frac{V\,MW_V}{u_{perm}(3600)\rho_V} = \frac{765(97.39)}{6.19(3600)(0.1960)}$$
+$$A_c = 17.05\ \mathrm{ft^2}$$
+$$D = \sqrt{\frac{4(17.05)}{\pi}} = 4.66\ \mathrm{ft}$$
+Next 6-in increment: **D = 5.0 ft** (1.52 m). The vapor then moves at 87% of $u_{perm}$.
+
+9. **Height:** $h_{total} = 4D = $ **20 ft** (6.1 m). With $h_V = 4.0$ ft and $h_f = 1.5$ ft, the pool can be $h_L = 20 - 5.5 = 14.5$ ft deep: $V_{surge} = 14.5(\pi \cdot 5^2/4) = 285$ ft³. The liquid flow is $80{,}035/38.75 = 2065$ ft³/h = 34.4 ft³/min, so this is about 8 min of holdup, a generous surge capacity.
+
+10. **Surge check the other way:** if the plant wanted only 5 min of holdup, $h_L = 5(34.4)/19.63 = 8.8$ ft and $h_{total} = 14.3$ ft, $h/D = 2.85 < 3$. The rule then says to allow a larger surge volume, raising $h_{total}$ to at least $3D = 15$ ft.
+
+11. **Horizontal alternative (for comparison):** $K_h = 1.25(0.4416) = 0.552$ ft/s, $u_{perm} = 7.74$ ft/s; with $h/D = C = 4$
+$$D = \sqrt{\frac{V\,MW_V}{3600\,\rho_V\,C\,u_{perm}}} = \sqrt{\frac{74{,}503}{3600(0.1960)(4)(7.74)}} = 1.85\ \mathrm{ft}$$
+so about 2 ft × 8 ft by the vapor rule. Half full, such a vessel holds only about 0.4 min of liquid, so for this duty the surge volume, not the vapor, would set the size of a horizontal drum.
+
+> Book answer (Wankat Example 2-4, densities at 20 °C: $\rho_L = 0.696$ g/mL): $K_{drum} = 0.4433$, $u_{perm} = 6.585$ ft/s, $A_c = 16.05$ ft², "D = 4.01 ft, use 4.0 or 4.5 ft", $h_{total} = 4(4.5) = 18$ ft. The same 20 °C densities reproduce $K_{drum}$, $u_{perm}$ and $A_c$ here, but $D = \sqrt{4A_c/\pi} = \sqrt{4(16.05)/\pi} = 4.52$ ft; the printed 4.01 ft equals $\sqrt{A_c}$, so it appears to be a slip, and 4.5 ft is the safe choice the book ends with. Using the less dense liquid at 378 K raises D only to 4.66 ft (D varies roughly as $\rho_L^{-1/4}$).
+>
+> Slide formula check: with the slide's $u_{perm} = K_{drum}\sqrt{\rho_L/(\rho_L - \rho_V)}$ one would get $u_{perm} = 0.44$ ft/s and $D \approx 17$ ft, an absurd drum. Use $\sqrt{(\rho_L - \rho_V)/\rho_V}$.
+
+**Exam tip:** most of the work is physical properties; write $\rho_L$, $\rho_V$, $MW_L$ and $MW_V$ in a small table first, all in one unit system.`,
+          answer: String.raw`$\rho_L = 0.621$ g/mL, $\rho_V = 3.14\times10^{-3}$ g/mL; $F_{lv} = 0.076$, $K_{drum} = 0.442$ ft/s, $u_{perm} = 6.19$ ft/s, $A_c = 17.0$ ft², D = 4.66 ft → use 5.0 ft; $h_{total} = 4D = 20$ ft (≈ 8 min liquid holdup). Book (20 °C densities): $A_c = 16.05$ ft², D = 4.52 ft (printed 4.01), uses 4.5 ft × 18 ft.` } ] },
+
+    { id: "practice-flash-P20", q: 20, section: "S", compulsory: false, stem: String.raw``,
+      parts: [ { id: "practice-flash-P20", label: "", marks: "10", topic: "flash",
+        sub: "Flash concepts: why \"flash\", why only partial vaporization (μ equality), phase rule F = 2, isenthalpic valve, drum internals", type: "theory", syllabus: "in", repeats: [],
+        origin: "slides", ref: String.raw`Slides 03, Flash Distillation (Jan 2026), "What is Flash Distillation?", "Flash System" and "Degrees of Freedom"`,
+        text: String.raw`(i) What is flash distillation, and why is it called a "flash"? (ii) Why does the feed only partly vaporize instead of boiling completely? (iii) Apply the Gibbs phase rule to a binary two-phase flash drum and state what fixing $T$ and $P$ does. (iv) Why is the throttle valve treated as isenthalpic? (v) Name the parts of a flash drum and give the job of each.`,
+        solution: String.raw`1. **(i) Flash distillation:** a single-equilibrium-stage separation in which a feed partly vaporizes (or partly condenses) because of a change in pressure and/or temperature. It gives two products: a vapor rich in the more volatile components and a liquid rich in the less volatile ones. It is called a *flash* because the vaporization is very rapid: when the hot, pressurized liquid passes the valve, its pressure suddenly drops below its bubble-point pressure, and vapor forms almost instantly throughout the liquid.
+
+2. **(ii) Why only partial vaporization:**
+- The energy for vaporization is the feed's own sensible heat (the drum is adiabatic): as vapor forms, the mixture cools. The amount of vapor is fixed by $Fh_F = Lh_L + VH_V$.
+- As the light components leave, the remaining liquid becomes heavier and its bubble point rises.
+- The system moves only until the phases are in equilibrium, i.e. for every component
+$$\mu_i^L = \mu_i^V \quad (\text{with } T^L = T^V,\ p^L = p^V)$$
+Then there is no driving force for further net transfer. Complete vaporization would need a feed enthalpy at least that of saturated vapor at drum conditions (a feed above its dew point).
+
+3. **(iii) Gibbs phase rule** for $C = 2$ components and $P = 2$ phases:
+$$F = C - P + 2 = 2 - 2 + 2 = 2$$
+Two intensive variables can be fixed. Specifying **T and P fixes everything else intensive**: the equilibrium $x$ and $y$ (the tie line on the T–x–y diagram). The amounts V and L then follow from the feed composition by the lever rule, $V/F = (z - x)/(y - x)$. For a multicomponent feed ($C > 2$), $T$ and $P$ fix the $K_i$, and Rachford–Rice gives the split.
+
+4. **(iv) Isenthalpic valve:** across a throttle valve there is no shaft work, the heat loss is negligible (fast flow, small surface), and kinetic and potential energy changes are small. The steady-flow energy balance then reduces to
+$$h_{in} = h_{out}$$
+The valve does not add or remove energy; it only drops the pressure, so part of the sensible heat of the liquid is turned into latent heat of vapor and the temperature falls ($T_{drum} < T_F$). This is why $h_F$ at the heater outlet is the enthalpy used in the drum energy balance.
+
+5. **(v) Flash drum components:**
+
+| part | job |
+|---|---|
+| inlet distributor (deflector or diverter at the feed nozzle) | slows and spreads the two-phase jet, starts the vapor–liquid split, and stops the jet from hitting the far wall or splashing the pool |
+| vapor disengagement zone (space above the feed nozzle, $h_V$) | gives liquid drops time to fall out of the rising vapor; its cross-section is set by $u_{perm}$ |
+| demister pad (wire mesh near the vapor outlet) | catches fine droplets, which coalesce and drip back, so the vapor leaves dry (entrainment from about 5% to under 1%) |
+| liquid holdup zone (pool, $h_L$) | collects the liquid and gives surge volume, so the liquid level and the flow to downstream equipment stay steady |
+
+**Exam tip:** "single equilibrium stage", "isenthalpic valve" and "$\mu_i^L = \mu_i^V$" are the three phrases examiners look for in this answer.`,
+        answer: String.raw`Flash = one equilibrium stage, vaporization almost instantaneous after the pressure drop; it stops at equilibrium ($\mu_i^L = \mu_i^V$) because the feed's sensible heat is used up and the liquid gets heavier. Binary two-phase: F = 2 − 2 + 2 = 2, so T and P fix x and y. Valve: no work, no heat → $h_{in} = h_{out}$. Drum: inlet distributor, disengagement zone, demister, liquid holdup (pool).` } ] }
   ] });
