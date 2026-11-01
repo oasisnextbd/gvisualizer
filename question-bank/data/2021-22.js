@@ -42,6 +42,8 @@ $$\dot m_w = \frac{Q}{c_p(t_2 - t_1)} = \frac{2.445\times10^6}{4183(30)} = 19.48
 $$\Delta T_{lm} = \frac{(100-40) - (100-70)}{\ln(60/30)} = 43.28\ \mathrm{°C}$$
 Shell fluid isothermal → $R = (T_1-T_2)/(t_2-t_1) = 0$ → **$F_T = 1$** (Holman Fig. 10-8). Caloric temperature of water: arithmetic mean 55°C (no Kc chart for water).
 
+![How to read F_T from the 1-2 chart: R = 0 → top line → F_T = 1 for any S](fig/2021-22-Q1-read.svg)
+
 ### III. Iteration #1
 Kern Table 8, condensers, steam–water: $U_D = 350$–750 Btu/h·ft²·°F. Assume 500 Btu/h·ft²·°F = **2840 W/m²K**:
 $$A = \frac{Q}{U_D F_T\Delta T_{lm}} = \frac{2.445\times10^6}{2840(1)(43.28)} = 19.9\ \mathrm{m^2}$$
@@ -72,6 +74,8 @@ $$A = \frac{2.445\times10^6}{1600(43.28)} = 35.3\ \mathrm{m^2}$$
 | $j_H$ (Kern Fig. 24; fit $0.027Re^{0.8}$) | 156 | 134 |
 | $h_i = j_H(k/d_i)Pr^{1/3}$ (W/m²K) | 9530 | 6060 |
 | $h_{io} = h_i(d_i/d_o)$ | 7875 | 5058 |
+
+![How to read j_H from Kern Fig. 24: Re = 5.04×10⁴ and 4.15×10⁴ → turbulent line → j_H ≈ 156 and 134](fig/2021-22-Q1-read2.svg)
 
 (Dittus–Boelter, $n = 0.4$: $h_i$ = 8780 and 5590, within about 8%.)
 
@@ -118,6 +122,8 @@ Both alternatives meet the duty with the required fouling allowance.
 | $Re_s = D_eG_s/\mu_v$ | $5.7\times10^4$ | $5.8\times10^4$ |
 | $N+1 = L/B$ | 12.6 | 11.1 |
 | $\Delta P_s$ (kPa) | **15.7** (2.3 psi) | **14.3** (2.1 psi) |
+
+![How to read f from Kern Fig. 26: Re = 5.04×10⁴ and 4.15×10⁴ → 1.2 × turbulent curve → f ≈ 0.0302/144 and 0.0314/144 ft²/in²](fig/2021-22-Q1-read3.svg)
 
 Both are within the 69 kPa (10 psi) tube-side limit, and the shell-side drop is small compared with 1 atm.
 

@@ -739,6 +739,8 @@ From Holman Fig. 10-8 (1 shell pass, 2 tube passes), or the analytic 1-2 formula
 
 $$\Delta t=F_T\,\mathrm{LMTD}=0.947(11.43)=10.82\ ^\circ\mathrm F$$
 
+![How to read F_T from the 1-2 chart: S = 0.278 → R = 1.6 curve → F_T ≈ 0.947](fig/2014-15-Q8-read.svg)
+
 Caloric temperatures: for water with such small ranges, use the arithmetic means $T_c=89$°F, $t_c=77.5$°F (the viscosities are given at these temperatures).
 
 ### 3. Tube side (raw water)
@@ -749,6 +751,8 @@ $$G_t=\frac{w}{a_t}=\frac{280\,000}{0.1856}=1.509\times10^6\ \mathrm{lb/h\,ft^2}
 $$D=\frac{0.652}{12}=0.0543\ \mathrm{ft},\qquad Re_t=\frac{DG_t}{\mu}=\frac{0.0543(1.509\times10^6)}{2.23}=3.68\times10^4$$
 
 $L/D=16/0.0543=295$. Kern Fig. 24, turbulent region; curve fit $j_H\approx0.027Re^{0.8}$: $j_H=121$.
+
+![How to read j_H from Kern Fig. 24: Re = 3.68×10⁴ → L/D = 295 curve (turbulent line) → j_H ≈ 121](fig/2014-15-Q8-read2.svg)
 
 $$Pr=\frac{c\mu}{k}=\frac{1(2.23)}{0.36}=6.19$$
 
@@ -771,6 +775,8 @@ $$Re_s=\frac{D_eG_s}{\mu}=\frac{0.0444(6.885\times10^5)}{1.96}=1.56\times10^4$$
 
 Kern Fig. 28 (25 % cut); curve fit $j_H\approx0.36Re^{0.55}$: $j_H=72.9$.
 
+![How to read j_H from Kern Fig. 28: Re_s = 1.56×10⁴ → shell-side curve → j_H ≈ 72.9](fig/2014-15-Q8-read3.svg)
+
 $$Pr=\frac{1(1.96)}{0.36}=5.44$$
 
 $$h_o=j_H\frac{k}{D_e}Pr^{1/3}\phi_s=72.9\left(\frac{0.36}{0.0444}\right)(5.44)^{1/3}=1039\ \mathrm{Btu/h\,ft^2\,^\circ F}$$
@@ -789,15 +795,21 @@ $$R_{d,calc}=\frac{U_C-U_D}{U_CU_D}=\frac{574-257}{574(257)}=0.00214\ \mathrm{h\
 ### 6. Pressure drops
 **Tube side.** Kern Fig. 26 at $Re_t=3.68\times10^4$: $f\approx0.000186\ \mathrm{ft^2/in^2}$. (Fit used: Kern's $f$ = 4 × Fanning, with Fanning $=0.0035+0.264Re^{-0.42}=0.00669$, so $f=4(0.00669)/144$.)
 
+![How to read f from Kern Fig. 26: Re = 3.68×10⁴ → turbulent curve → f ≈ 0.000186 ft²/in²](fig/2014-15-Q8-read4.svg)
+
 $$\Delta P_t=\frac{fG_t^2Ln}{5.22\times10^{10}Ds\phi_t}=\frac{0.000186(1.509\times10^6)^2(16)(2)}{5.22\times10^{10}(0.0543)(1)(1)}=4.78\ \mathrm{psi}$$
 
 Return loss: $\dfrac{V^2}{2g'}\cdot\dfrac{62.5}{144}=\dfrac{6.71^2}{2(32.2)}(0.434)=0.303$ psi per velocity head (Kern Fig. 27):
 
 $$\Delta P_r=\frac{4n}{s}\frac{V^2}{2g'}=\frac{4(2)}{1}(0.303)=2.43\ \mathrm{psi}$$
 
+![How to read the return loss from Kern Fig. 27: G_t = 1.51×10⁶ → line → V²/2g′ ≈ 0.303 psi](fig/2014-15-Q8-read5.svg)
+
 $$\Delta P_T=4.78+2.43=7.2\ \mathrm{psi}<10\ \mathrm{psi}\;✓$$
 
 **Shell side.** Kern Fig. 29 at $Re_s=1.56\times10^4$: $f\approx0.00197\ \mathrm{ft^2/in^2}$ (fit $e^{0.576-0.19\ln Re}/144$). $N+1=12L/B=12(16)/12=16$; $D_s=15.25/12=1.271$ ft.
+
+![How to read f from Kern Fig. 29: Re_s = 1.56×10⁴ → shell curve → f ≈ 0.00197 ft²/in²](fig/2014-15-Q8-read6.svg)
 
 $$\Delta P_s=\frac{fG_s^2D_s(N+1)}{5.22\times10^{10}D_es\phi_s}=\frac{0.00197(6.885\times10^5)^2(1.271)(16)}{5.22\times10^{10}(0.0444)(1)(1)}=8.2\ \mathrm{psi}<10\ \mathrm{psi}\;✓$$
 

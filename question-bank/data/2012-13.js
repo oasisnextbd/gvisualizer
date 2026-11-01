@@ -306,6 +306,8 @@ $$\mathrm{LMTD} = \frac{60-22}{\ln(60/22)} = 37.9^\circ\mathrm{F}$$
 $$\Delta t = F_T\,\mathrm{LMTD} = 0.808(37.9) = 30.6^\circ\mathrm{F}$$
 $F_T > 0.75$, so a single 1-2 shell is acceptable.
 
+![How to read F_T from the 1-2 chart: S = 0.268 → R = 2.73 curve → F_T ≈ 0.81](fig/2012-13-Q5a-read.svg)
+
 ### (iii) Film coefficients
 **Shell side (phosphate):**
 1. $a_s = \dfrac{ID\,C'\,B}{144\,P_T} = \dfrac{10.02(0.25)(2)}{144(1)} = 0.0347\ \mathrm{ft^2}$ ($C' = P_T - d_o = 0.25$ in)
@@ -313,6 +315,9 @@ $F_T > 0.75$, so a single 1-2 shell is acceptable.
 3. $D_e = \dfrac{4(P_T^2 - \pi d_o^2/4)}{\pi d_o} = \dfrac{4(1 - \pi(0.75)^2/4)}{\pi(0.75)} = 0.95\ \mathrm{in} = 0.0792\ \mathrm{ft}$
 4. $\mathrm{Re}_s = D_eG_s/\mu = 0.0792(576\,400)/2.90 = 15\,730$
 5. $j_H \approx 73$ from Kern Fig. 28 (25% cut) at Re = $1.57\times10^4$ (curve fit $0.36\,\mathrm{Re}^{0.55} = 73.2$; the chart reads ≈ 70–75)
+
+![How to read j_H from Kern Fig. 28: Re_s = 1.57×10⁴ → shell-side curve → j_H ≈ 73](fig/2012-13-Q5a-read2.svg)
+
 6. $(c\mu/k)^{1/3} = (0.757 \times 2.90/0.33)^{1/3} = 1.881$
 7. $h_o = j_H\dfrac{k}{D_e}\left(\dfrac{c\mu}{k}\right)^{1/3}\phi_s = 73.2\left(\dfrac{0.33}{0.0792}\right)(1.881) = 574\ \mathrm{Btu/h\,ft^2\,^\circ F}$
 
@@ -321,6 +326,9 @@ $F_T > 0.75$, so a single 1-2 shell is acceptable.
 2. $G_t = w/a_t = 41\,290/0.0545 = 757\,200\ \mathrm{lb/h\,ft^2}$; $V = G_t/(3600\rho) = 757\,200/(3600 \times 62.5) = 3.37$ ft/s (good water velocity)
 3. $D = 0.62/12 = 0.0517$ ft; $\mathrm{Re}_t = DG_t/\mu = 0.0517(757\,200)/2.20 = 17\,780$; $L/D = 310$
 4. $j_H \approx 68$ from Kern Fig. 24 (turbulent, Sieder–Tate line; fit $0.027\,\mathrm{Re}^{0.8} = 67.8$)
+
+![How to read j_H from Kern Fig. 24: Re = 1.78×10⁴ → L/D = 310 curve → j_H ≈ 68](fig/2012-13-Q5a-read3.svg)
+
 5. $(c\mu/k)^{1/3} = (1.0 \times 2.20/0.386)^{1/3} = 1.786$
 6. $h_i = j_H\dfrac{k}{D}\left(\dfrac{c\mu}{k}\right)^{1/3} = 67.8\left(\dfrac{0.386}{0.0517}\right)(1.786) = 905\ \mathrm{Btu/h\,ft^2\,^\circ F}$
 7. Referred to the outside: $h_{io} = h_i\dfrac{ID}{OD} = 905\left(\dfrac{0.62}{0.75}\right) = 748$
@@ -334,13 +342,22 @@ $F_T > 0.75$, so a single 1-2 shell is acceptable.
 ### (v) Suitability – pressure drops
 **Shell side:**
 1. $f_s \approx 0.00197\ \mathrm{ft^2/in^2}$ at Re = 15 730 (Kern Fig. 29; fit $\exp(0.576 - 0.19\ln\mathrm{Re})/144$; chart ≈ 0.0019)
+
+![How to read f from Kern Fig. 29: Re_s = 1.57×10⁴ → shell curve → f ≈ 0.00197 ft²/in²](fig/2012-13-Q5a-read4.svg)
+
 2. Number of crosses $N+1 = 12L/B = 12(16)/2 = 96$; $D_s = 10.02/12 = 0.835$ ft
 3. $$\Delta P_s = \frac{f G_s^2 D_s (N+1)}{5.22\times10^{10} D_e\, s\,\phi_s} = \frac{0.00197(576\,400)^2(0.835)(96)}{5.22\times10^{10}(0.0792)(1.30)(1)} = 9.8\ \mathrm{psi}$$
 
 **Tube side:**
 1. $f_t \approx 0.00023\ \mathrm{ft^2/in^2}$ at Re = 17 780, read from Kern Fig. 26 (the fit $4(0.0035 + 0.264\mathrm{Re}^{-0.42})/144 = 0.000218$ runs slightly low; at the slides' Re = 11 571 it gives 0.00024 vs the chart's 0.00028)
+
+![How to read f from Kern Fig. 26: Re = 1.78×10⁴ → turbulent curve → f ≈ 0.00023 ft²/in²](fig/2012-13-Q5a-read5.svg)
+
 2. $$\Delta P_t = \frac{f G_t^2 L n}{5.22\times10^{10} D\, s\,\phi_t} = \frac{0.00023(757\,200)^2(16)(2)}{5.22\times10^{10}(0.0517)(1.0)} = 1.56\ \mathrm{psi}$$
 3. Return loss: $\dfrac{V^2}{2g'} = \dfrac{3.37^2}{2(32.2)}\times\dfrac{62.5}{144} = 0.076$ psi (Kern Fig. 27 ≈ 0.075); $\Delta P_r = \dfrac{4n}{s}\dfrac{V^2}{2g'} = \dfrac{4(2)}{1}(0.076) = 0.61$ psi
+
+![How to read the return loss from Kern Fig. 27: G_t = 7.57×10⁵ → line → V²/2g′ ≈ 0.076 psi](fig/2012-13-Q5a-read6.svg)
+
 4. $\Delta P_T = 1.56 + 0.61 = 2.2$ psi
 
 **Verdict:**
@@ -373,7 +390,9 @@ $R_d$(calc) ≥ $R_d$(required) and both pressure drops are within the allowance
 | Tubes | 52, ¾ in OD, 16 BWG, 16 ft, 1 in square pitch | |
 | Baffles | segmental (25% cut), 2 in spacing | |
 
-**Exam tip:** Kern's own book solves this problem with the water-only chart (Fig. 25), $h_i \approx 800$, which gives $U_C \approx 283$ and $R_d \approx 0.0019$: still essentially the required 0.002, so you reach the same verdict (acceptable).`,
+**Exam tip:** Kern's own book solves this problem with the water-only chart (Fig. 25), $h_i \approx 800$, which gives $U_C \approx 283$ and $R_d \approx 0.0019$: still essentially the required 0.002, so you reach the same verdict (acceptable).
+
+![How to read Kern Fig. 25: V = 3.37 ft/s → 79 °F curve → h_i ≈ 800](fig/2012-13-Q5a-read7.svg)`,
           answer: String.raw`Q = 908 400 Btu/h (41 290 lb/h water); Δt = 0.81 × 37.9 = 30.6 °F; $h_o \approx 574$, $h_i \approx 905$ ($h_{io} = 748$); $U_C = 325$, $U_D = 182$, $R_d = 0.0024 > 0.002$; ΔP_s ≈ 9.8 psi, ΔP_t ≈ 2.2 psi → suitable.` },
         { id: "2012-13-Q5b", label: "(b)", marks: "4+6",
           topic: "heat-exchangers", sub: "Double-pipe pros/cons; 1-2 Δt assumptions",

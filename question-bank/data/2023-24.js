@@ -175,6 +175,8 @@ $$\mathrm{LMTD} = \frac{150 - 10}{\ln(150/10)} = 51.7^\circ\mathrm{F}$$
 $$R = \frac{T_1 - T_2}{t_2 - t_1} = \frac{150}{10} = 15,\qquad S = \frac{t_2 - t_1}{T_1 - t_1} = \frac{10}{160} = 0.0625$$
 $$F_T = \frac{\sqrt{R^2+1}\,\ln\dfrac{1-S}{1-RS}}{(R-1)\ln\dfrac{2 - S(R+1-\sqrt{R^2+1})}{2 - S(R+1+\sqrt{R^2+1})}} = 0.838$$
 
+![How to read F_T from the 1-2 chart: S = 0.0625 → R = 15 curve → F_T ≈ 0.838](fig/2023-24-Q2a-read.svg)
+
 5. Corrected temperature difference:
 $$\Delta t = F_T \times \mathrm{LMTD} = 0.838 \times 51.7 = 43.3^\circ\mathrm{F}$$
 $F_T > 0.75$, so the 1-8 arrangement is acceptable.
@@ -203,6 +205,8 @@ $$\mathrm{Re}_s = \frac{D_eG_s}{\mu} = \frac{0.0458 \times 25{,}480}{0.0290} = 4
 
 5. $j_H$: Kern Fig. 28 curve fit $j_H = 0.36\,\mathrm{Re}^{0.55} = 0.36\,(40{,}200)^{0.55} = 123$. The chart reads ≈ 115–120.
 
+![How to read Kern Fig. 28: D_e = 0.55 in from the table; Re_s = 4.02×10⁴ → shell-side curve → j_H ≈ 123](fig/2023-24-Q2b-read.svg)
+
 6. Prandtl term:
 $$\left(\frac{c\mu}{k}\right)^{1/3} = \left(\frac{0.53 \times 0.0290}{0.017}\right)^{1/3} = (0.905)^{1/3} = 0.967$$
 
@@ -221,6 +225,8 @@ $$V = \frac{G_t}{3600 \times 62.5} = 3.66\ \mathrm{ft/s}\ \ \text{(good water ve
 $$\mathrm{Re}_t = \frac{DG_t}{\mu} = \frac{0.0517 \times 822{,}500}{1.984} = 21{,}400\quad(L/D = 155)$$
 
 11. $j_H$: Kern Fig. 24 gives $j_H \approx 70$. This is consistent with the slides' reading of 42 at Re = 11,570 scaled by $\mathrm{Re}^{0.8}$. The fit $0.027\,\mathrm{Re}^{0.8}$ would give 79.
+
+![How to read j_H from Kern Fig. 24: Re = 2.14×10⁴ → L/D = 155 curve → j_H ≈ 70](fig/2023-24-Q2b-read2.svg)
 
 12. Prandtl term:
 $$\left(\frac{c\mu}{k}\right)^{1/3} = \left(\frac{1.0 \times 1.984}{0.36}\right)^{1/3} = (5.51)^{1/3} = 1.766$$
@@ -263,8 +269,14 @@ $$R_d = \frac{U_C - U_D}{U_C U_D} = \frac{41.4 - 31.7}{41.4 \times 31.7} = 0.007
 
 *Tube side (water):* Kern Fig. 26 at Re = 21,400 gives $f \approx 0.00023$ ft²/in², with $s = 1.0$. As a check, the Kern-scaled fit $f = 4(0.0035 + 0.264\,\mathrm{Re}^{-0.42}) = 0.030$ ft²/ft² $= 0.00021$ ft²/in² gives $\Delta P_t \approx 3.4$ psi.
 $$\Delta P_t = \frac{fG_t^2Ln}{5.22\times10^{10}Ds\phi_t} = \frac{0.00023 \times (822{,}500)^2 \times 8 \times 8}{5.22\times10^{10} \times 0.0517 \times 1} = 3.7\ \mathrm{psi}$$
+
+![How to read f from Kern Fig. 26: Re = 2.14×10⁴ → turbulent curve → f ≈ 0.00023 ft²/in²](fig/2023-24-Q2d-read.svg)
+
 Return loss: $V^2/2g' = 0.090$ psi at $G_t = 8.2\times10^5$ (Kern Fig. 27).
 $$\Delta P_r = \frac{4n}{s}\frac{V^2}{2g'} = \frac{4 \times 8}{1} \times 0.090 = 2.9\ \mathrm{psi}$$
+
+![How to read the return loss from Kern Fig. 27: G_t = 8.2×10⁵ → line → V²/2g′ ≈ 0.090 psi](fig/2023-24-Q2d-read2.svg)
+
 $\Delta P_T = 6.6$ psi < 10 psi ✓
 
 *Shell side (ammonia):* gas density at 83 psia and 170°F:
@@ -272,6 +284,8 @@ $$\rho = \frac{pM}{RT} = \frac{83 \times 17}{10.73 \times 630} = 0.209\ \mathrm{
 Friction factor from the fit $\exp(0.576 - 0.19\ln\mathrm{Re})/144$: $f = 0.00165$ ft²/in² (Fig. 29 reads ≈ 0.0015–0.0017). Number of crosses $N + 1 = 12L/B = 12 \times 8/12 = 8$; $D_s = 1.9375$ ft.
 $$\Delta P_s = \frac{fG_s^2D_s(N+1)}{5.22\times10^{10}D_es\phi_s} = \frac{0.00165 \times 25{,}480^2 \times 1.9375 \times 8}{5.22\times10^{10} \times 0.0458 \times 0.00335} \approx 2.0\ \mathrm{psi}$$
 This is right at the 2.0 psi allowable: acceptable but with no margin.
+
+![How to read f from Kern Fig. 29: Re_s = 4.02×10⁴ → shell curve → f ≈ 0.00165 ft²/in²](fig/2023-24-Q2d-read3.svg)
 
 **TEMA specification sheet (filled values)**
 
@@ -561,6 +575,8 @@ $$\mathrm{Re} = \frac{4\dot m}{\pi D\mu} = \frac{4 \times 0.01033}{\pi \times 0.
 4. Entrance check with the data-sheet chart (Fig. 6-5):
 $$\mathrm{Gz}^{-1} = \frac{x/D}{\mathrm{Re}\,\mathrm{Pr}} = \frac{7.23/0.06}{696 \times 1.96} = 0.088$$
 This is above ≈ 0.05, so the flow is **thermally fully developed** at the exit. The $q_w$ = const curve gives $\mathrm{Nu}_d = 4.364$.
+
+![How to read Holman Fig. 6-5: Gz⁻¹ = 0.088 → q_w = const curve → Nu_d ≈ 4.364 (fully developed)](fig/2023-24-Q5c-read.svg)
 
 5. Heat transfer coefficient:
 $$h = \frac{\mathrm{Nu}\,k}{D} = \frac{4.364 \times 0.675}{0.06} = 49.1\ \mathrm{W/m^2\,^\circ C}$$

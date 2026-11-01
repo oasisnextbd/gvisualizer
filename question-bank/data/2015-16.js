@@ -43,6 +43,8 @@ $$\mathrm{LMTD} = \frac{60 - 22}{\ln(60/22)} = 37.9^\circ\mathrm{F}$$
 **Correction for 1-2:** $R = \dfrac{150-90}{90-68} = 2.73$, $S = \dfrac{90-68}{150-68} = 0.268$ → $F_T = 0.81$ (Holman Fig. 10-8 / exact 1-2 formula gives 0.808)
 $$\Delta t = F_T\,\mathrm{LMTD} = 0.808(37.9) = 30.6^\circ\mathrm{F}$$
 
+![How to read F_T from the 1-2 chart: S = 0.268 → R = 2.73 curve → F_T ≈ 0.81](fig/2015-16-Q1a-read.svg)
+
 **Caloric temperatures:** arithmetic means (aqueous streams, $K_c$ chart not needed): $T_c = 120^\circ$F, $t_c = 79^\circ$F – the temperatures at which the given properties apply.`,
           answer: String.raw`LMTD = 37.9 °F; with R = 2.73, S = 0.268, $F_T$ = 0.81 → Δt = 30.6 °F.` },
         { id: "2015-16-Q1b", label: "(b)", marks: "3",
@@ -71,6 +73,9 @@ $$w = \frac{Q}{c(t_2 - t_1)} = \frac{915\,700}{1.0(22)} = 41\,620\ \mathrm{lb/h}
 3. Square pitch: $D_e = \dfrac{4(P_T^2 - \pi d_o^2/4)}{\pi d_o} = \dfrac{4(1^2 - \pi(0.75)^2/4)}{\pi(0.75)} = 0.95\ \mathrm{in} = 0.0792\ \mathrm{ft}$
 4. $\mathrm{Re}_s = \dfrac{D_eG_s}{\mu} = \dfrac{0.0792(581\,000)}{2.90} = 15\,860$
 5. $j_H \approx 73.5$ (Kern Fig. 28 at Re = $1.59\times10^4$ reads ≈ 70–75; curve fit $0.36\,\mathrm{Re}^{0.55} = 73.5$ used)
+
+![How to read j_H from Kern Fig. 28: Re_s = 1.59×10⁴ → shell-side curve → j_H ≈ 73.5](fig/2015-16-Q1c-read.svg)
+
 6. $\left(\dfrac{c\mu}{k}\right)^{1/3} = \left(\dfrac{0.757(2.90)}{0.33}\right)^{1/3} = 1.881$
 7. $$h_o = j_H\frac{k}{D_e}\left(\frac{c\mu}{k}\right)^{1/3}\phi_s = 73.5\left(\frac{0.33}{0.0792}\right)(1.881)(1) = 576\ \mathrm{Btu/h\,ft^2\,^\circ F}$$
 
@@ -79,11 +84,16 @@ $$w = \frac{Q}{c(t_2 - t_1)} = \frac{915\,700}{1.0(22)} = 41\,620\ \mathrm{lb/h}
 2. $G_t = w/a_t = 41\,620/0.0545 = 763\,300\ \mathrm{lb/h\,ft^2}$; velocity $V = G_t/(3600\rho) = 763\,300/(3600\times62.5) = 3.39$ ft/s
 3. $D = 0.62/12 = 0.0517$ ft; $\mathrm{Re}_t = DG_t/\mu = 0.0517(763\,300)/2.20 = 17\,930$ (turbulent); $L/D = 16/0.0517 = 310$
 4. $j_H \approx 68$ (Kern Fig. 24, turbulent line; fit $0.027\,\mathrm{Re}^{0.8} = 68.3$)
+
+![How to read j_H from Kern Fig. 24: Re = 1.79×10⁴ → L/D = 310 curve → j_H ≈ 68](fig/2015-16-Q1c-read2.svg)
+
 5. $\left(\dfrac{c\mu}{k}\right)^{1/3} = \left(\dfrac{1.0(2.20)}{0.386}\right)^{1/3} = 1.786$
 6. $$h_i = j_H\frac{k}{D}\left(\frac{c\mu}{k}\right)^{1/3}\phi_t = 68.3\left(\frac{0.386}{0.0517}\right)(1.786) = 911\ \mathrm{Btu/h\,ft^2\,^\circ F}$$
 7. Referred to the tube OD: $h_{io} = h_i\dfrac{ID}{OD} = 911\left(\dfrac{0.62}{0.75}\right) = 753\ \mathrm{Btu/h\,ft^2\,^\circ F}$
 
-**Exam tip:** Kern's water chart (Fig. 25) at 3.39 ft/s and 79 °F gives $h_i \approx 800$ ($h_{io} \approx 660$); either reading is acceptable if you name the chart.`,
+**Exam tip:** Kern's water chart (Fig. 25) at 3.39 ft/s and 79 °F gives $h_i \approx 800$ ($h_{io} \approx 660$); either reading is acceptable if you name the chart.
+
+![How to read Kern Fig. 25: V = 3.39 ft/s → 79 °F curve → h_i ≈ 800](fig/2015-16-Q1c-read3.svg)`,
           answer: String.raw`Q = 915 700 Btu/h, w = 41 620 lb/h; shell Re = 15 860, $h_o \approx 576$; tube Re = 17 930, $h_i \approx 911$ ($h_{io} \approx 753$) Btu/h·ft²·°F.` },
         { id: "2015-16-Q1d", label: "(d)", marks: "4",
           topic: "shell-tube", sub: "Clean overall coefficient U_C",
@@ -106,14 +116,23 @@ $$U_C = \frac{h_{io}h_o}{h_{io} + h_o} = \frac{753(576)}{753 + 576} = 326.5\ \ma
 
 ### Shell-side pressure drop
 1. $\mathrm{Re}_s = 15\,860$ → $f \approx 0.00197\ \mathrm{ft^2/in^2}$ (Kern Fig. 29 ≈ 0.0019; fit $\exp(0.576 - 0.19\ln\mathrm{Re})/144$)
+
+![How to read f from Kern Fig. 29: Re_s = 1.59×10⁴ → shell curve → f ≈ 0.00197 ft²/in²](fig/2015-16-Q1e-read.svg)
+
 2. Crossings $N + 1 = 12L/B = 12(16)/2 = 96$; $D_s = 10.02/12 = 0.835$ ft; s = 1.30
 3. $$\Delta P_s = \frac{fG_s^2D_s(N+1)}{5.22\times10^{10}D_e s\phi_s} = \frac{0.00197(581\,000)^2(0.835)(96)}{5.22\times10^{10}(0.0792)(1.30)(1)} = 9.9\ \mathrm{psi}$$
 
 ### Tube-side pressure drop
 1. $\mathrm{Re}_t = 17\,930$ → $f \approx 0.00023\ \mathrm{ft^2/in^2}$, read from Kern Fig. 26 (the fit $4(0.0035 + 0.264\,\mathrm{Re}^{-0.42})/144 = 0.000217$ runs slightly low)
+
+![How to read f from Kern Fig. 26: Re = 1.79×10⁴ → turbulent curve → f ≈ 0.00023 ft²/in²](fig/2015-16-Q1e-read2.svg)
+
 2. $$\Delta P_t = \frac{fG_t^2Ln}{5.22\times10^{10}Ds\phi_t} = \frac{0.00023(763\,300)^2(16)(2)}{5.22\times10^{10}(0.0517)(1)(1)} = 1.59\ \mathrm{psi}$$
 (same as the slides' form $f' G_t^2 L n/(7.5\times10^{12} D s)$ with $f' = 144f$.)
 3. Return loss: $\dfrac{V^2}{2g'} = \dfrac{(3.39)^2}{2(32.2)}\cdot\dfrac{62.5}{144} = 0.078$ psi (Kern Fig. 27 ≈ 0.075); $\Delta P_r = \dfrac{4n}{s}\dfrac{V^2}{2g'} = \dfrac{4(2)}{1}(0.078) = 0.62$ psi
+
+![How to read the return loss from Kern Fig. 27: G_t = 7.63×10⁵ → line → V²/2g′ ≈ 0.078 psi](fig/2015-16-Q1e-read3.svg)
+
 4. $\Delta P_T = 1.59 + 0.62 = 2.2$ psi
 
 ### Verdict

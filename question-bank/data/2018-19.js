@@ -52,6 +52,8 @@ $$F_T=\frac{\sqrt{R^2+1}}{R-1}\,\frac{\ln\left[(1-S)/(1-RS)\right]}{\ln\dfrac{2-
 
 $$\Delta t=F_T\,\mathrm{LMTD}=0.947(11.43)=10.82\ ^\circ\mathrm F$$
 
+![How to read F_T from the 1-2 chart: S = 0.278 → R = 1.6 curve → F_T ≈ 0.947](fig/2018-19-Q1b-read.svg)
+
 $F_T>0.75$, so a single 1-2 shell is acceptable. Caloric temperatures: arithmetic means, $T_c=89$°F and $t_c=77.5$°F (water, small ranges; the Kc–Fc chart is for petroleum fractions).`,
           answer: String.raw`$Q=1.40\times10^6$ Btu/h; LMTD = 11.43°F; $R=1.6$, $S=0.278$, $F_T\approx0.947$, $\Delta t\approx10.8$°F.` },
         { id: "2018-19-Q1c", label: "(c)", marks: "11",
@@ -70,6 +72,8 @@ $$V=\frac{G_t}{3600\rho}=\frac{1.509\times10^6}{3600(62.5)}=6.71\ \mathrm{fps}\;
 $$D=\frac{0.652}{12}=0.0543\ \mathrm{ft},\qquad Re_t=\frac{DG_t}{\mu}=\frac{0.0543(1.509\times10^6)}{2.23}=3.68\times10^4$$
 
 $L/D=16/0.0543=295$. Kern Fig. 24 (turbulent; curve fit $j_H=0.027Re^{0.8}$): $j_H\approx121$.
+
+![How to read j_H from Kern Fig. 24: Re = 3.68×10⁴ → L/D = 295 curve (turbulent line) → j_H ≈ 121](fig/2018-19-Q1c-read.svg)
 
 $$Pr=\frac{c\mu}{k}=\frac{2.23}{0.36}=6.19$$
 
@@ -93,6 +97,8 @@ $$D_e=\frac{4\left(\tfrac12P_T\times0.86P_T-\tfrac12\cdot\tfrac{\pi d_o^2}{4}\ri
 $$Re_s=\frac{D_eG_s}{\mu}=\frac{0.0444(6.885\times10^5)}{1.96}=1.56\times10^4$$
 
 Kern Fig. 28 (25 % cut segmental baffles; curve fit $j_H=0.36Re^{0.55}$): $j_H\approx72.9$.
+
+![How to read j_H from Kern Fig. 28: Re_s = 1.56×10⁴ → shell-side curve → j_H ≈ 72.9](fig/2018-19-Q1c-read2.svg)
 
 $$Pr=\frac{1.96}{0.36}=5.44$$
 
@@ -126,11 +132,15 @@ $R_{d,calc}=0.00214>R_{d,req}=0.0020$ ✓. Equivalently, $U_{D,req}=1/(1/574+0.0
 ### 4. Tube-side pressure drop
 $Re_t=3.68\times10^4$: Kern Fig. 26, $f\approx0.000186\ \mathrm{ft^2/in^2}$ (Kern's $f$ is 4 × the Fanning factor; fit Fanning $=0.0035+0.264Re^{-0.42}=0.00669$, so $f=4(0.00669)/144$).
 
+![How to read f from Kern Fig. 26: Re = 3.68×10⁴ → turbulent curve → f ≈ 0.000186 ft²/in²](fig/2018-19-Q1d-read.svg)
+
 $$\Delta P_t=\frac{fG_t^2Ln}{5.22\times10^{10}Ds\phi_t}=\frac{0.000186(1.509\times10^6)^2(16)(2)}{5.22\times10^{10}(0.0543)(1)(1)}=4.78\ \mathrm{psi}$$
 
 Return loss (Kern Fig. 27, $G_t=1.51\times10^6$): $\dfrac{V^2}{2g'}\cdot\dfrac{62.5}{144}=\dfrac{(6.71)^2}{2(32.2)}(0.434)=0.303$ psi:
 
 $$\Delta P_r=\frac{4n}{s}\frac{V^2}{2g'}=\frac{4(2)}{1}(0.303)=2.43\ \mathrm{psi}$$
+
+![How to read the return loss from Kern Fig. 27: G_t = 1.51×10⁶ → line → V²/2g′ ≈ 0.303 psi](fig/2018-19-Q1d-read2.svg)
 
 $$\Delta P_T=\Delta P_t+\Delta P_r=4.78+2.43=7.2\ \mathrm{psi}<10\ \mathrm{psi}\;✓$$
 
@@ -139,6 +149,8 @@ $$\Delta P_T=\Delta P_t+\Delta P_r=4.78+2.43=7.2\ \mathrm{psi}<10\ \mathrm{psi}\
 ### 5. Shell-side pressure drop
 $Re_s=1.56\times10^4$: Kern Fig. 29, $f\approx0.00197\ \mathrm{ft^2/in^2}$ (fit $e^{0.576-0.19\ln Re}/144$).
 Number of crossings $N+1=12L/B=12(16)/12=16$; $D_s=15.25/12=1.271$ ft; $D_e=0.0444$ ft.
+
+![How to read f from Kern Fig. 29: Re_s = 1.56×10⁴ → shell curve → f ≈ 0.00197 ft²/in²](fig/2018-19-Q1d-read3.svg)
 
 $$\Delta P_s=\frac{fG_s^2D_s(N+1)}{5.22\times10^{10}D_es\phi_s}=\frac{0.00197(6.885\times10^5)^2(1.271)(16)}{5.22\times10^{10}(0.0444)(1)(1)}=8.2\ \mathrm{psi}<10\ \mathrm{psi}\;✓$$
 
@@ -239,12 +251,16 @@ $$G_a=\frac{W}{a_a}=\frac{6330}{0.00827}=7.65\times10^5\ \mathrm{lb/h\,ft^2},\qq
 
 Kern Fig. 24: $j_H\approx167$ (slides; the turbulent fit $0.027Re^{0.8}$ gives 177). $Pr=c\mu/k=0.44(0.99)/0.085=5.14$, $Pr^{1/3}=1.725$.
 
+![How to read j_H from Kern Fig. 24: Re = 5.87×10⁴ (annulus) → turbulent line → j_H ≈ 167](fig/2018-19-Q2-read.svg)
+
 $$h_o=j_H\frac{k}{D_e}Pr^{1/3}\phi_a=167\left(\frac{0.085}{0.0761}\right)(1.725)(1)=321\ \mathrm{Btu/h\,ft^2\,^\circ F}$$
 
 ### 5. Inner pipe (cold benzene)
 $$G_p=\frac{w}{a_p}=\frac{9820}{0.01039}=9.45\times10^5\ \mathrm{lb/h\,ft^2},\qquad Re_p=\frac{DG_p}{\mu}=\frac{0.115(9.45\times10^5)}{1.21}=8.99\times10^4$$
 
 Kern Fig. 24: $j_H\approx236$ (slides; fit gives 248). $Pr=0.425(1.21)/0.091=5.65$, $Pr^{1/3}=1.78$.
+
+![How to read j_H from Kern Fig. 24: Re = 8.99×10⁴ (inner pipe) → turbulent line → j_H ≈ 236](fig/2018-19-Q2-read2.svg)
 
 $$h_i=j_H\frac{k}{D}Pr^{1/3}\phi_p=236\left(\frac{0.091}{0.115}\right)(1.78)(1)=333\ \mathrm{Btu/h\,ft^2\,^\circ F}$$
 

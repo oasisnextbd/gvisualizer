@@ -57,6 +57,8 @@ $$\mathrm{Re}_t = \frac{D G_t}{\mu} = \frac{(0.62/12)(9.245\times10^{5})}{1.57} 
 
 Kern Fig. 24 at $\mathrm{Re} = 3.0\times10^4$, $L/D = 16\times12/0.62 = 310$ reads $j_H \approx 104$ (fit $j_H = 0.027\,\mathrm{Re}^{0.8} = 104.2$).
 
+![How to read j_H from Kern Fig. 24: Re = 3.04×10⁴ → L/D = 310 curve (turbulent line) → j_H ≈ 104](fig/2011-12-Q1a-read.svg)
+
 $$\mathrm{Pr} = \frac{c\mu}{k} = \frac{0.435\times1.57}{0.0785} = 8.70, \qquad \mathrm{Pr}^{1/3} = 2.057$$
 
 $$h_i = j_H \frac{k}{D}\,\mathrm{Pr}^{1/3}\phi_t = 104.2 \times \frac{0.0785}{0.62/12} \times 2.057 = 325.7\,\mathrm{Btu/h\,ft^2\,^\circ F}$$
@@ -78,6 +80,8 @@ $$D_e = \frac{4\left(P_T^2 - \pi d_o^2/4\right)}{\pi d_o} = \frac{4(1 - 0.4418)}
 $$\mathrm{Re}_s = \frac{D_e G_s}{\mu} = \frac{0.0790\times3.191\times10^{5}}{1.65} = 1.53\times10^{4}$$
 
 Kern Fig. 28 (25% cut) at $\mathrm{Re}_s = 1.5\times10^4$ reads $j_H \approx 72$ (fit $0.36\,\mathrm{Re}^{0.55} = 72.0$, valid for $2\times10^3$ to $10^6$).
+
+![How to read j_H from Kern Fig. 28: Re_s = 1.53×10⁴ → shell-side curve → j_H ≈ 72](fig/2011-12-Q1a-read2.svg)
 
 $$\mathrm{Pr} = \frac{0.56\times1.65}{0.085} = 10.87, \qquad \mathrm{Pr}^{1/3} = 2.215$$
 
@@ -105,6 +109,8 @@ $$R = \frac{T_1 - T_2}{t_2 - t_1} = \frac{215}{130} = 1.654, \qquad S = \frac{t_
 
 From the 2-shell-pass chart (Kern Fig. 19, Holman Fig. 10-9), $F_T = 0.81$, so $\Delta t = F_T\,\Delta t_{LM} = 0.81\times85.6 = 69.3^\circ\mathrm{F}$.
 
+![How to read F_T from the 2-4 chart: S = 0.491 → R = 1.654 curve → F_T ≈ 0.81](fig/2011-12-Q1c-read.svg)
+
 ### 2. Design (dirty) coefficient from the available surface
 
 $$A = N_t\,\pi d_o L = 365\times\pi\times\frac{0.75}{12}\times16 = 1147\,\mathrm{ft^2}$$
@@ -125,17 +131,23 @@ That would need $A = 6.670\times10^6/(76.7\times69.3) = 1255\,\mathrm{ft^2}$, wh
 
 **Tube side.** Kern Fig. 26 at $\mathrm{Re}_t = 3.04\times10^4$ reads $f \approx 0.00019\,\mathrm{ft^2/in^2}$, from the fit $f = 4(0.0035 + 0.264\,\mathrm{Re}^{-0.42})/144 = 1.93\times10^{-4}$. The factor 4 converts the Fanning-type fit to Kern's chart basis; it reproduces the slide value $0.00028$ at Re = 11,571 to within about 15%.
 
+![How to read f from Kern Fig. 26: Re = 3.04×10⁴ → turbulent curve → f ≈ 0.00019 ft²/in²](fig/2011-12-Q1c-read2.svg)
+
 $$\Delta P_t = \frac{f G_t^2 L n}{5.22\times10^{10} D s \phi_t} = \frac{1.93\times10^{-4}\times(9.245\times10^5)^2\times16\times6}{5.22\times10^{10}\times(0.62/12)\times0.83\times1} = 7.1\,\mathrm{psi}$$
 
 Return loss (four velocity heads per pass). Kern Fig. 27 gives $\frac{V^2}{2g'}$, already in psi (×62.5/144), against $G_t$. The chart is drawn for water, so $V$ is taken as $G_t/(3600\times62.5)$ and the real density enters only through the $1/s$ in the formula (using the actual 4.95 ft/s and then dividing by $s$ would count $s$ twice):
 
 $$V_w = \frac{9.245\times10^5}{3600\times62.5} = 4.11\,\mathrm{ft/s},\qquad \frac{V^2}{2g'} = \frac{4.11^2}{2\times32.2}\times\frac{62.5}{144} = 0.114\,\mathrm{psi}$$
 
+![How to read the return loss from Kern Fig. 27: G_t = 9.245×10⁵ → line → V²/2g′ ≈ 0.114 psi](fig/2011-12-Q1c-read3.svg)
+
 $$\Delta P_r = \frac{4n}{s}\frac{V^2}{2g'} = \frac{4\times6}{0.83}\times0.114 = 3.3\,\mathrm{psi}$$
 
 $$\Delta P_T = 7.1 + 3.3 = 10.4\,\mathrm{psi} > 7\,\mathrm{psi\ allowed}$$
 
 **Shell side.** Kern Fig. 29 at $\mathrm{Re}_s = 1.53\times10^4$ reads $f \approx 0.0020\,\mathrm{ft^2/in^2}$, from the fit $e^{0.576 - 0.19\ln \mathrm{Re}}/144 = 1.98\times10^{-3}$. Crossings per shell pass: $N + 1 = 12L/B = 12\times16/8 = 24$, so 48 for the two shell passes.
+
+![How to read f from Kern Fig. 29: Re_s = 1.53×10⁴ → shell curve → f ≈ 0.0020 ft²/in²](fig/2011-12-Q1c-read4.svg)
 
 $$\Delta P_s = \frac{f G_s^2 D_s (N+1)}{5.22\times10^{10} D_e s \phi_s} = \frac{1.98\times10^{-3}\times(3.191\times10^5)^2\times(25/12)\times48}{5.22\times10^{10}\times0.0790\times1.10} = 4.5\,\mathrm{psi} < 10\,\mathrm{psi}$$
 

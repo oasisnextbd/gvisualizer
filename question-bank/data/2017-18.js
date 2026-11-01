@@ -44,7 +44,11 @@ $$R = \frac{T_1-T_2}{t_2-t_1} = \frac{190}{70} = 2.71,\qquad S = \frac{t_2-t_1}{
 From Holman Fig. 10-8 / Kern Fig. 18 (1 shell pass, 2 or more tube passes): $F_T \approx 0.89$ (the analytical 1-2 formula gives 0.892).
 $$\Delta t = F_T\,\mathrm{LMTD} = 0.892 \times 152.2 = 135.7\,°\mathrm{F}$$
 
+![How to read F_T from the 1-2 chart: S = 0.241 → R = 2.71 curve → F_T ≈ 0.89](fig/2017-18-Q1a-read.svg)
+
 **Caloric temperatures** are not needed: the properties are already given at caloric conditions ($\Delta t_c/\Delta t_h = 0.45$, $F_c \approx 0.42$, so $T_c \approx 280$°F, $t_c \approx 129$°F).
+
+![How to read F_c from Kern Fig. 17: Δt_c/Δt_h = 0.45 → K_c = 0.20 curve → F_c ≈ 0.42](fig/2017-18-Q1a-read2.svg)
 
 **Exam tip:** $F_T > 0.75$ here, so one shell pass is acceptable.`,
           answer: String.raw`LMTD = 152.2°F; $R = 2.71$, $S = 0.241$, $F_T \approx 0.89$ → $\Delta t \approx 136$°F; $Q = 5.11\times10^6$ Btu/h (taking $T_1 = 390$°F).` },
@@ -66,6 +70,9 @@ $$a_s = \frac{D_s C' B}{144 P_T} = \frac{21.25(0.25)(5)}{144(1.25)} = 0.1476\ \m
 $$D_e = \frac{4\left(P_T^2 - \pi d_o^2/4\right)}{\pi d_o} = \frac{4(1.5625-0.7854)}{\pi(1.0)} = 0.99\ \mathrm{in} = 0.0825\ \mathrm{ft}$$
 4. $$\mathrm{Re}_s = \frac{D_e G_s}{\mu} = \frac{0.0825(2.97\times10^5)}{0.9} = 2.72\times10^4$$
 5. Kern Fig. 28: $j_H \approx 99$ (curve fit $j_H = 0.36\,\mathrm{Re}^{0.55}$, valid $2\times10^3$–$10^6$).
+
+![How to read j_H from Kern Fig. 28: Re_s = 2.72×10⁴ → shell-side curve → j_H ≈ 99](fig/2017-18-Q1b-read.svg)
+
 6. $$\left(\frac{c\mu}{k}\right)^{1/3} = \left(\frac{0.60(0.9)}{0.0765}\right)^{1/3} = 1.918$$
 $$\frac{h_o}{\phi_s} = j_H \frac{k}{D_e}\left(\frac{c\mu}{k}\right)^{1/3} = 99\times\frac{0.0765}{0.0825}\times1.918 = 176\ \mathrm{Btu/h\,ft^2\,°F}$$
 7. $\phi_s = (0.9/1.36)^{0.14} = 0.944$ (kerosene is being cooled, wall colder, wall viscosity higher).
@@ -78,6 +85,9 @@ Velocity: $V = G_t/(3600\rho) = 1.055\times10^6/(3600\times62.5\times0.83) = 5.6
 3. $D = 0.810/12 = 0.0675$ ft;
 $$\mathrm{Re}_t = \frac{D G_t}{\mu} = \frac{0.0675(1.055\times10^6)}{8.7} = 8.18\times10^3,\qquad L/D = 16/0.0675 = 237$$
 4. Kern Fig. 24 (transition region, $L/D = 237$): $j_H \approx 31$. (The turbulent fit $0.027\,\mathrm{Re}^{0.8}$ gives 36, but it over-predicts below $\mathrm{Re} = 10^4$, so the chart value is used.)
+
+![How to read j_H from Kern Fig. 24: Re = 8.18×10³ → L/D = 237 curve (transition) → j_H ≈ 31](fig/2017-18-Q1b-read2.svg)
+
 5. $$\left(\frac{c\mu}{k}\right)^{1/3} = \left(\frac{0.49(8.7)}{0.077}\right)^{1/3} = 3.81$$
 $$\frac{h_i}{\phi_t} = j_H\frac{k}{D}\left(\frac{c\mu}{k}\right)^{1/3} = 31\times\frac{0.077}{0.0675}\times3.81 = 134.8$$
 6. $\phi_t = (8.7/3.63)^{0.14} = 1.130$ (crude is heated, wall hotter, wall viscosity lower).
@@ -117,13 +127,22 @@ $$R_d = \frac{U_C-U_D}{U_C U_D} = \frac{70.8-56.9}{70.8(56.9)} = 0.0034\ \mathrm
 
 ### Tube side (crude, $s = 0.83$, $n = 4$)
 1. Friction factor at $\mathrm{Re}_t = 8.18\times10^3$, Kern Fig. 26: $f \approx 0.00028\ \mathrm{ft^2/in^2}$. (Check: Kern's fit $0.0035 + 0.264\,\mathrm{Re}^{-0.42} = 0.0095$ is the Fanning-type factor; $4\times0.0095/144 = 0.00026$, consistent.)
+
+![How to read f from Kern Fig. 26: Re = 8.18×10³ → turbulent curve → f ≈ 0.00028 ft²/in²](fig/2017-18-Q1d-read.svg)
+
 2. $$\Delta P_t = \frac{f G_t^2 L n}{5.22\times10^{10} D\, s\, \phi_t} = \frac{0.00028(1.055\times10^6)^2(16)(4)}{5.22\times10^{10}(0.0675)(0.83)(1.130)} = 6.0\ \mathrm{psi}$$
 3. Return loss: $V^2/2g' \cdot (62.5/144)$ at $G_t = 1.055\times10^6$: $V = G_t/(3600\times62.5) = 4.69$ ft/s, so $V^2/2g' = 0.148$ psi (Kern Fig. 27 reads ≈ 0.15).
 $$\Delta P_r = \frac{4n}{s}\frac{V^2}{2g'} = \frac{4(4)}{0.83}(0.148) = 2.9\ \mathrm{psi}$$
+
+![How to read the return loss from Kern Fig. 27: G_t = 1.055×10⁶ → line → V²/2g′ ≈ 0.148 psi](fig/2017-18-Q1d-read2.svg)
+
 4. $\Delta P_T = 6.0 + 2.9 = 8.9$ psi < 10 psi ✓
 
 ### Shell side (kerosene, $s = 0.73$)
 1. $\mathrm{Re}_s = 2.72\times10^4$; Kern Fig. 29: $f \approx 0.00178\ \mathrm{ft^2/in^2}$ (fit $f = e^{0.576-0.19\ln\mathrm{Re}} = 0.256\ \mathrm{ft^2/ft^2}$, ÷144).
+
+![How to read f from Kern Fig. 29: Re_s = 2.72×10⁴ → shell curve → f ≈ 0.00178 ft²/in²](fig/2017-18-Q1d-read3.svg)
+
 2. Number of crosses: $N+1 = 12L/B = 12(16)/5 = 38.4$.
 3. $$\Delta P_s = \frac{f G_s^2 D_s (N+1)}{5.22\times10^{10} D_e\, s\, \phi_s} = \frac{0.00178(2.97\times10^5)^2(1.771)(38.4)}{5.22\times10^{10}(0.0825)(0.73)(0.944)} = 3.6\ \mathrm{psi}$$
 < 10 psi ✓

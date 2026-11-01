@@ -35,6 +35,8 @@ $$R = \frac{T_1-T_2}{t_2-t_1} = \frac{150}{72} = 2.08,\qquad S = \frac{t_2-t_1}{
 From the chart (or the 1-2 formula $F = \frac{\sqrt{R^2+1}}{R-1}\ln\frac{1-S}{1-RS}\Big/\ln\frac{2-S(R+1-\sqrt{R^2+1})}{2-S(R+1+\sqrt{R^2+1})}$): $F_T = 0.938$.
 $$\Delta t = F_T\,\Delta T_{lm} = 0.938(176.1) = 165.3\ \mathrm{°F}$$
 
+![How to read F_T from the 1-2 chart: S = 0.248 → R = 2.08 curve → F_T ≈ 0.938](fig/2020-21-Q1a-read.svg)
+
 **Sketch (temperature vs. length):** vertical axis $T$ (°F), horizontal axis tube length. Kerosene (tube side) falls from 400°F to 250°F; gas oil (shell side) rises from 110°F to 182°F. In a 1-6 unit the tube-side curve zig-zags (parallel/counter passes alternate) while the shell curve is a smooth rise; the two curves never cross since $t_2 = 182 < T_2 = 250$°F (no temperature cross), which is why $F_T$ stays high (0.94).
 
 ![1-6 exchanger: kerosene zig-zags through six tube passes, gas oil rises smoothly in the shell](fig/2020-21-Q1a-sol.svg)
@@ -55,6 +57,9 @@ $$\Delta t = F_T\,\Delta T_{lm} = 0.938(176.1) = 165.3\ \mathrm{°F}$$
 3. Reynolds number ($D = 0.834/12 = 0.0695$ ft):
 $$Re_t = \frac{D G_t}{\mu} = \frac{0.0695(3.04\times10^5)}{1.089} = 1.94\times10^4\ \ (\text{turbulent})$$
 4. Kern Fig. 24 ($L/D = 230$): $j_H \approx 73$ (fit $j_H = 0.027Re^{0.8}$ gives 72.8).
+
+![How to read j_H from Kern Fig. 24: Re = 1.94×10⁴ → L/D = 230 curve → j_H ≈ 73](fig/2020-21-Q1b-read.svg)
+
 5. $Pr = c\mu/k = 0.6(1.089)/0.077 = 8.49$, $Pr^{1/3} = 2.04$
 $$h_i = j_H\frac{k}{D}Pr^{1/3}\phi_t = 72.8\left(\frac{0.077}{0.0695}\right)(2.04)(1) = 164\ \mathrm{Btu/h\,ft^2\,°F}$$
 6. Referred to the OD: $h_{io} = h_i\dfrac{ID}{OD} = 164.5(0.834) = 137$ Btu/h·ft²·°F
@@ -67,6 +72,9 @@ $$a_s = \frac{D_s C' B}{144 P_T} = \frac{21.25(0.25)(5)}{144(1.25)} = 0.1476\ \m
 $$D_e = \frac{4\left(P_T^2 - \pi d_o^2/4\right)}{\pi d_o} = \frac{4(1.25^2 - 0.785)}{\pi(1)} = 0.99\ \mathrm{in} = 0.0825\ \mathrm{ft}$$
 4. $Re_s = \dfrac{D_e G_s}{\mu} = \dfrac{0.0825(5.08\times10^5)}{8.47} = 4.95\times10^3$
 5. Kern Fig. 28: $j_H \approx 39$ (fit $0.36Re^{0.55}$ gives 38.7; Fig. 28 is drawn for 25% cut, used here for the 20% cut baffles).
+
+![How to read j_H from Kern Fig. 28: Re_s = 4.95×10³ → shell-side curve → j_H ≈ 39](fig/2020-21-Q1b-read2.svg)
+
 6. $Pr = 0.5(8.47)/0.08 = 52.9$, $Pr^{1/3} = 3.75$
 $$h_o = j_H\frac{k}{D_e}Pr^{1/3}\phi_s = 38.7\left(\frac{0.08}{0.0825}\right)(3.75)(1) = 141\ \mathrm{Btu/h\,ft^2\,°F}$$
 
@@ -103,12 +111,20 @@ $$R_d = \frac{U_C - U_D}{U_C U_D} = \frac{69.6-25.0}{69.6(25.0)} = 0.0256\ \math
 ### Pressure drops
 **Tube side.** $Re_t = 1.94\times10^4$ → Kern Fig. 26: $f \approx 0.00026$ ft²/in² (fit $f = 1.2\times4(0.0035+0.264Re^{-0.42}) = 0.0368$ ft²/ft²).
 $$\Delta P_t = \frac{f G_t^2 L n}{5.22\times10^{10} D s \phi_t} = \frac{0.000256(3.04\times10^5)^2(16)(6)}{5.22\times10^{10}(0.0695)(0.73)} = 0.86\ \mathrm{psi}$$
+
+![How to read f from Kern Fig. 26: Re = 1.94×10⁴ → 1.2 × turbulent curve → f ≈ 0.00026 ft²/in²](fig/2020-21-Q1d-read.svg)
+
 Actual velocity $V = G_t/(3600\rho) = 3.04\times10^5/(3600\times62.5\times0.73) = 1.85$ ft/s. For the return loss, Kern Fig. 27 gives $V^2/2g'$ (psi) against $G_t$ on a water basis, so it is evaluated with $V_w = G_t/(3600\times62.5) = 1.35$ ft/s; the density correction is the $1/s$ in the formula:
 $$\frac{V^2}{2g'} = \frac{1.35^2}{2(32.2)}\left(\frac{62.5}{144}\right) = 0.0123\ \mathrm{psi},\qquad \Delta P_r = \frac{4n}{s}\frac{V^2}{2g'} = \frac{4(6)}{0.73}(0.0123) = 0.40\ \mathrm{psi}$$
+
+![How to read the return loss from Kern Fig. 27: G_t = 3.04×10⁵ → line → V²/2g′ ≈ 0.0123 psi](fig/2020-21-Q1d-read2.svg)
+
 $\Delta P_T = 0.86 + 0.40 = 1.3$ psi.
 
 **Shell side.** $Re_s = 4.95\times10^3$ → Kern Fig. 29: $f \approx 0.0025$ ft²/in² (fit $e^{0.576-0.19\ln Re}/144$). $N+1 = 12L/B = 12(16)/5 = 38.4$.
 $$\Delta P_s = \frac{f G_s^2 D_s (N+1)}{5.22\times10^{10} D_e s \phi_s} = \frac{0.00245(5.08\times10^5)^2(1.771)(38.4)}{5.22\times10^{10}(0.0825)(0.85)} = 11.8\ \mathrm{psi}$$
+
+![How to read f from Kern Fig. 29: Re_s = 4.95×10³ → shell curve → f ≈ 0.0025 ft²/in²](fig/2020-21-Q1d-read3.svg)
 
 ### TEMA sheet (filled)
 | Item | Shell side | Tube side |
