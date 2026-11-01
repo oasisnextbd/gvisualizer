@@ -77,6 +77,8 @@ Even 35 °F of subcooling gives a nearly vertical feed line.`,
 2. From the H–x chart at 0.63: $H$ (saturated vapor) ≈ 395, $h$ (saturated liquid) ≈ 65, $h_F$ (40 °C isotherm) ≈ 27.5 kcal/kg.
 3. $$q = \frac{395 - 27.5}{395 - 65} = 1.11,\qquad \text{slope} = \frac{1.11}{0.11} \approx 9.8$$
 
+![How to read the H–x chart: at w = 0.63, H ≈ 395 (dew line), h ≈ 65 (boiling line), hF ≈ 27.5 kcal/kg (40 °C isotherm)](fig/practice-mccabe-thiele-P2d-read.svg)
+
 Wankat reads $h_F = 20$ kcal/kg, giving $q = 1.14$ and slope 8.3; either way the line is steep (a subcooled liquid, $q > 1$). The 40 °C isotherm is hard to read at this composition, which is the whole difference.`,
         answer: String.raw`q ≈ 1.11–1.14, slope ≈ 8–10 (subcooled liquid).` } ] },
 
@@ -311,6 +313,8 @@ $$h_F = h + C_P(200 - 80.7) = 65 + 0.90(119.3) = 172\ \mathrm{kcal/kg}$$
 3. $$q = \frac{395 - 172}{395 - 65} = 0.675,\qquad \text{slope} = \frac{q}{q - 1} = \frac{0.675}{-0.325} = -2.07$$
 $q < 1$: about one third of the feed flashes to vapor.
 
+![How to read the H–x chart: at w = 0.63, H ≈ 395 (dew line) and h ≈ 65 kcal/kg (boiling line)](fig/practice-mccabe-thiele-P9a-read.svg)
+
 **Book answer: slope = −2.54 ✗.** The book's value means $q = 0.718$, i.e. $h_F = 158$ kcal/kg, an average liquid $C_P$ of about 0.78 kcal/(kg °C) above the boiling point. The answer depends entirely on the $C_P$ used beyond the chart; the method is the same.`,
         answer: String.raw`q ≈ 0.68, feed-line slope ≈ −2.1 (book −2.54, which corresponds to C_P ≈ 0.78 kcal/kg °C instead of 0.90).` },
         { id: "practice-mccabe-thiele-P9b", label: "(b)", marks: "", topic: "mccabe-thiele",
@@ -538,6 +542,8 @@ $$V = \frac{|Q_C|}{\lambda_D} = \frac{2\,065\,113}{9281} = 222.5\ \mathrm{kmol/h
 $$q = 1 + \frac{20.13(81.6 - 30)}{9782} = 1.106,\qquad \text{slope} = 10.4$$
 4. **Lines:** top $y = 0.834x + 0.133$; intersection with the feed line (0.328, 0.406); bottom line through (0.04, 0.04), slope $\bar{L}/\bar{V} = 296.3/233.1 = 1.271$.
 5. **Stepping from the top:**
+
+![How to read the H–x chart: H1 ≈ 284 and hD ≈ 54.5 at 0.911 wt; H ≈ 430 and h ≈ 67.6 kcal/kg at 0.546 wt](fig/practice-mccabe-thiele-P16-read.svg)
 
 | Stage | $x$ | $y$ |
 |---|---|---|

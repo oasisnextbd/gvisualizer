@@ -155,6 +155,10 @@ $$E_O = 0.52782 - 0.27511\log_{10}(\alpha\mu) + 0.044923[\log_{10}(\alpha\mu)]^2
 4. $\alpha\mu = 1.767 \times 0.1210 = 0.2138$, so $\log_{10}(\alpha\mu) = -0.670$ and
    $E_O = 0.52782 + 0.27511(0.670) + 0.044923(0.449) = 0.732$.
 
+![How to read the DePriester chart: p = 700 kPa and T = 172.1 °C give K = 1.33 (n-hexane) and 0.755 (n-heptane), α = 1.767](fig/practice-column-design-P4-read.svg)
+
+![How to read the O’Connell correlation: αμ = 0.214 → up to the curve → across to E_o ≈ 0.73](fig/practice-column-design-P4-read2.svg)
+
 **Check:** with the same steps at 1 atm I get $T_{avg} = 86$ °C, $\alpha = 2.37$, $\mu = 0.199$ cP, $\alpha\mu = 0.47$ and $E_O = 0.62$, matching Example 10-1 ($E_O = 0.62$ from Eq. 10-6).
 
 **Book answer: $E_O = 0.73$ ✓.**
@@ -182,6 +186,8 @@ $$E_O = 0.52782 - 0.27511\log_{10}(\alpha\mu) + 0.044923[\log_{10}(\alpha\mu)]^2
 6. **Diameter**, Eq. (10-16):
 $$D_c = \sqrt{\frac{4\bar V M_V}{\pi\,\eta\,\rho_V\,(0.75\,u_{flood})\,3600}} = \sqrt{\frac{4(2500)(100.2)}{\pi(0.90)(0.2052)(0.75)(4.32)(3600)}} = 12.2 \text{ ft}$$
    With the equation value $C_{sb} = 0.354$, $D_c = 11.7$ ft.
+
+![How to read the Fair flooding chart: F_lv = 0.0832 → 24 in curve → C_sb,f = 0.354 ft/s from the fit (printed figure ≈ 0.33)](fig/practice-column-design-P5-read.svg)
 
 **Book answer: D = 12.35 ft.** My 12.2 ft is within the chart-reading uncertainty (the book's value corresponds to $C_{sb} \approx 0.32$ ft/s). ✓ Either way the bottom (≈ 12–12.4 ft) needs a larger diameter than the top (11.0 ft, Example 10-2), so the column is designed at the bottom: about **12.5 ft** (next ½ ft).
 
@@ -307,6 +313,8 @@ HETP $= 3.5/10.17 = 0.34$ m (0.38 m excluding the reboiler).
 6. **Area:** $Q_V = VM_V/(3600\rho_V) = 1491(32.03)/(3600 \times 1.156) = 11.48$ m³/s. $A_{net} = 11.48/1.765 = 6.51$ m² and $A_T = A_{net}/\eta = 7.23$ m².
 7. **Diameter:** $D_c = \sqrt{4(7.23)/\pi} = 3.03$ m $= 9.95$ ft.
 
+![How to read the Fair flooding chart: F_lv = 0.0230 → 18 in curve → C_sb,f = 0.298 ft/s](fig/practice-column-design-P9-read.svg)
+
 **Book answer: D = 10.27 ft.** My 9.95 ft is 3% lower because I took $C_{sb}$ from the curve fit. The book's value corresponds to $C_{sb} \approx 0.28$ ft/s, read from Figure 10-16. ✓ within chart accuracy. Design: **10.5 ft** (next ½-ft size).
 
 **Note:** with a saturated-vapor feed $V > \bar V$, so the top is the right place to size this column.`,
@@ -338,6 +346,8 @@ HETP $= 3.5/10.17 = 0.34$ m (0.38 m excluding the reboiler).
           solution: String.raw`> Not covered in the current ChE 303 slides.
 
 Same abscissa, $F_{lv} = 0.0276$. On the 0.25 in H₂O/ft curve of Wankat Figure 10-27, the ordinate there reads about **0.034** (my reading).
+
+![How to read the packed-column (Eckert) chart: F_lv = 0.0276 → 0.25 in H2O/ft curve → ordinate ≈ 0.034](fig/practice-column-design-P10b-read.svg)
 
 $G' = \sqrt{\dfrac{0.034(0.0875)(51.17)(32.2)}{97(1.185)(0.52)^{0.2}}} = 0.221$ lb/(s ft²), so $A = (6.962/3600)(40.4)/0.221 = 0.353$ ft² and $D_c = 0.670$ ft $= 8.04$ in.
 
@@ -409,6 +419,8 @@ $D_c = 5.97\sqrt{22\,500/2250} = 5.97\sqrt{10} = 18.9$ in.
 
 **Same point on Figure 10-27:** the abscissa $F_{lv} = 0.8\sqrt{0.1917/41.12} = 0.055$ and the 0.5 in/ft curve are unchanged, so the ordinate is again 0.055 (as read in Example 10-4).
 
+![How to read the packed-column (Eckert) chart: F_lv = 0.055 → 0.5 in H2O/ft curve → ordinate ≈ 0.055](fig/practice-column-design-P12-read.svg)
+
 **Packing factor:** 3-inch ceramic Intalox saddles, $F = 22$ ft⁻¹ (Wankat Table 10-3).
 
 $$G' = \sqrt{\frac{0.055\,\rho_G\rho_L g_c}{F\psi\mu^{0.2}}} = \sqrt{\frac{0.055(0.1917)(0.659 \times 62.4)(32.2)}{22(0.9783/0.659)(0.22)^{0.2}}} = 0.761 \text{ lb/(s ft}^2)$$
@@ -435,6 +447,8 @@ $A = \dfrac{VM}{G'} = \dfrac{(2500/3600)(86.17)}{0.761} = 78.7$ ft², so $D_c = 
 3. **Abscissa:** $F_{lv} = 1.2\sqrt{0.2052/42.68} = 0.083$. On the 0.5 in/ft curve of Figure 10-27 the ordinate reads about 0.050–0.051 (lower than the 0.055 at the top).
 4. $G' = \sqrt{\dfrac{0.0505(0.2052)(42.68)(32.2)}{98(1.402)(0.205)^{0.2}}} = 0.378$ lb/(s ft²).
 5. $A = \dfrac{(2500/3600)(100.2)}{0.378} = 184$ ft², so $D_c = 15.3$ ft.
+
+![How to read the packed-column (Eckert) chart: F_lv = 0.083 → 0.5 in H2O/ft curve → ordinate ≈ 0.050](fig/practice-column-design-P13-read.svg)
 
 **Alternative** (Eq. 10-42 with α = 0.52, β = 0.16): $0.5 = 0.52 \times 10^{0.16(1.2)G'}G'^2/0.2052$, so $G' = 0.406$ and $D_c = 14.8$ ft.
 
@@ -485,6 +499,8 @@ $N = 11.5$ equilibrium stages including the partial reboiler; optimum feed is st
 - Feed viscosity with Eq. (10-7a): $\mu_E \approx 0.40$ cP and $\mu_W \approx 0.31$ cP at 89 °C (handbook estimates), so $\ln\mu = 0.3\ln 0.40 + 0.7\ln 0.31$ and $\mu = 0.335$ cP.
 - $\alpha\mu = 1.18$, so $E_O = 0.52782 - 0.27511(0.071) + 0.044923(0.005) = 0.51$.
 - Real trays: $N_{act} = (11.5 - 1)/0.51 = 20.6$ → **21 real trays + partial reboiler**. The feed goes on about tray $8/0.51 \approx 16$.
+
+![How to read the O’Connell correlation: αμ = 1.18 → up to the curve → across to E_o ≈ 0.51](fig/practice-column-design-P14-read.svg)
 
 ### 4. Diameter at four locations (Fair, 18-in spacing, η = 0.90, 75% of flood)
 Assumed properties:

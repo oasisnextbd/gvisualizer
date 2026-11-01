@@ -76,6 +76,8 @@ $$\frac{L}{V} = \frac{y - z}{z - x}, \qquad \frac{V}{F} = \frac{z - x}{y - x}, \
 
 On the T–x–y diagram the horizontal tie line at the given $T$ joins $x$ (bubble curve) and $y$ (dew curve). The feed point $z$ sits on it; the amount of each phase is proportional to the length of the *opposite* arm, like a lever balanced at $z$.
 
+![How to read a T–x–y diagram: T across to the bubble and dew curves, then down to x and y](fig/howto-txy.svg)
+
 **Example** (benzene–toluene, 1 atm, Raoult's law): at 98 °C the tie line runs from $x = 0.313$ to $y = 0.527$. For $z = 0.40$:
 $$\frac{L}{V} = \frac{0.527 - 0.40}{0.40 - 0.313} = 1.46, \qquad \frac{V}{F} = \frac{0.40 - 0.313}{0.527 - 0.313} = 0.41$$
 
@@ -309,6 +311,8 @@ $$V = 0.412(5) = 2.06\ \mathrm{kmol}\ (y = 0.572), \qquad L = 2.94\ \mathrm{kmol
 | $K_{nC4}$ | 0.765 | 0.879 | 1.003 | 1.967 | 2.165 | 2.373 |
 | $K_{nC6}$ | 0.087 | 0.105 | 0.126 | 0.323 | 0.368 | 0.418 |`,
           solution: String.raw`**Assumptions:** K values independent of composition (light hydrocarbons, DePriester).
+
+![How to read the DePriester chart: p on the left scale, T on the right scale, a straight line between them, K where it crosses each component scale](fig/howto-depriester.svg)
 
 **(i) Bubble point:** find $T$ with $\sum K_iz_i = 1$.
 

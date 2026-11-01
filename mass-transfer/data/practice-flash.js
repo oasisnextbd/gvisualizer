@@ -317,6 +317,8 @@ $$\left(\frac{V}{F}\right)_1 = \frac{z - x_1}{y_1 - x_1} = \frac{0.55 - 0.513}{0
 
 1. K values at 25 °C, 202.6 kPa: $K_{C1} = 71.6$, $K_{C3} = 4.11$, $K_{C6} = 0.126$.
 
+![How to read the DePriester chart: p = 202.6 kPa and T = 25 °C joined by a straight line give K = 71.6 (methane), 4.11 (propane), 0.126 (n-hexane)](fig/practice-flash-P6-read.svg)
+
 2. Rachford–Rice equation (from $x_i = z_i/[1 + (K_i - 1)V/F]$, $y_i = K_i x_i$ and $\sum y_i - \sum x_i = 0$):
 $$f\left(\frac{V}{F}\right) = \sum_i \frac{z_i(K_i - 1)}{1 + (K_i - 1)V/F} = 0$$
 Two phases exist because $f(0) = \sum z_iK_i - 1 = 3.10 > 0$ and $f(1) = 1 - \sum z_i/K_i < 0$.
@@ -367,6 +369,8 @@ so the feed point $(z, h_F)$ lies on the straight tie line joining $(x, h_L)$ an
 
 3. Chart readings used (kcal/kg vs weight fraction ethanol): saturated vapor $H_V$ = 640, 602, 566, 529, 491, 455, 411, 367 at $w$ = 0, 0.1, …, 0.7; saturated liquid $h_L$ = 100, 84, 77, 73, 70, 68, 65, 62 at the same $w$.
 
+![How to find the tie line through the feed point on the H–x chart: F (0.30, 189.3) → auxiliary line → x = 0.152, y = 0.601](fig/practice-flash-P7-read.svg)
+
 4. Trial tie lines (each $T$ gives $x$, $y$ from the VLE data; $h$ is the tie line's enthalpy at $w = 0.30$):
 
 | $T$, °C | $x$ (wt) | $y$ (wt) | $h_L$ | $H_V$ | $h$ at $z$ |
@@ -408,6 +412,8 @@ $$\frac{z_E}{d_E} + z_{nC4}\left(\frac{0.8}{d_{iC4}} + \frac{1}{d_{nC4}}\right) 
 $$0.5807z_E + 2.523z_{nC4} = 1, \qquad 1.629z_E + 0.7154z_{nC4} = 1$$
 $$z_E = 0.489, \qquad z_{nC4} = 0.284, \qquad z_{iC4} = 0.8(0.284) = 0.227 \quad (\textstyle\sum z = 1.000)$$
 
+![How to read the DePriester chart: p = 1000 kPa and T = 20 °C give K = 2.805 (ethane), 0.349 (isobutane), 0.235 (n-butane); at the printed 100 kPa all K > 1](fig/practice-flash-P8-read.svg)
+
 3. Products at this feed: $x$ = 0.284 / 0.307 / 0.409 and $y$ = 0.797 / 0.107 / 0.096 (ethane / iC₄ / nC₄), each summing to 1.000. Flows: $V = 20$, $L = 30$ kmol/h.
 
 > Book answer (2.D15): $z_{ethane} = 0.4677$, $z_{nC4} = 0.2957$ ✓ at 1000 kPa (DePriester chart readings versus the fitted K values explain the 0.02 difference). At the printed 100 kPa the problem has no two-phase solution.
@@ -432,6 +438,8 @@ Then the Rachford–Rice sum $f = \sum z_i(K_i - 1)/[1 + (K_i - 1)V/F]$ is the c
 | 60 | 8.14 | 3.13 | 0.436 | 0.522 | −0.025 |
 | 65 | 8.81 | 3.47 | 0.505 | 0.594 | +0.018 |
 | 62.8 | 8.51 | 3.32 | 0.473 | 0.559 | 0.000 |
+
+![How to read the DePriester chart: p = 200 kPa and the converged T = 62.8 °C give K = 8.51 (propane), 3.32 (n-butane), 0.473 (n-hexane)](fig/practice-flash-P9-read.svg)
 
 1. Interpolating between 60 and 65 °C and refining gives $T_{drum} = 62.8$ °C and $V/F = 0.559$.
 
@@ -458,6 +466,8 @@ $$\frac{1 - \psi}{1 + (K_6 - 1)\psi} = 0.90 \Rightarrow \psi = \frac{0.10}{1 + 0
 | 55 | 2.47 | 0.669 | 0.266 | 0.295 | −0.010 |
 | 57 | 2.57 | 0.705 | 0.283 | 0.282 | +0.040 |
 | 55.4 | 2.49 | 0.676 | 0.269 | 0.292 | 0.000 |
+
+![How to read the DePriester chart: p = 300 kPa and the converged T = 55.4 °C give K = 2.49 (isobutane), 0.676 (n-pentane), 0.269 (n-hexane)](fig/practice-flash-P10-read.svg)
 
 3. Result: $T_{drum} = 55.4$ °C, $V/F = 0.292$, $V = 292$ kmol/h, $L = 708$ kmol/h.
 
@@ -490,6 +500,8 @@ $$\frac{1 - \psi}{1 + (K_6 - 1)\psi} = 0.90 \Rightarrow \psi = \frac{0.10}{1 + 0
 Sources: propane and octane $\lambda$ and liquid $C_P$ from Çengel Table A-2 (427.8 and 306.3 kJ/kg; propane $C_{P,L}$ = 3.1 kJ/(kg·K), the mean of its 0 °C and 50 °C values extrapolated to 95 °C; octane 2.23 kJ/(kg·K)); pentane from Wankat Table 2-5; vapor $C_P$ from Himmelblau-type ideal-gas polynomials. Enthalpies:
 $$h_{L,i} = C_{P,L,i}\,T, \qquad H_{V,i} = C_{P,L,i}T_{b,i} + \lambda_i + \int_{T_{b,i}}^{T} C_{P,V,i}\,dT$$
 K values from Wankat Eq. 2-30 at 250 kPa.
+
+![How to read the DePriester chart: p = 250 kPa and the converged T = 56.3 °C give K = 6.15 (propane), 0.813 (n-pentane), 0.048 (n-octane)](fig/practice-flash-P11-read.svg)
 
 1. Feed enthalpy: $h_F = \sum z_iC_{P,L,i}(95) = 17{,}635$ J/mol. The feed's bubble and dew points at 250 kPa are 2.9 °C and 122.9 °C, so the drum is two-phase.
 

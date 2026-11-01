@@ -28,6 +28,8 @@ $$D = F\frac{z - x_B}{x_D - x_B} = 10\,000\,\frac{0.30 - 0.05}{0.80 - 0.05} = 33
 | $H_1$ | saturated vapor, $y_1 = 0.80$ | 330 |
 | $h_B$ | saturated liquid, 0.05 | 90 |
 
+![How to read the H–x chart: H1 ≈ 330, hD ≈ 60 (0.80), hF ≈ 30 (40 °C isotherm, 0.30), hB ≈ 90 kcal/kg (0.05)](fig/practice-column-balances-P1-read.svg)
+
 3. **Condenser.** Mass: $V_1 = L_0 + D = (1 + L_0/D)D = 4(3333) = 13\,333$ kg/h. Energy: $V_1H_1 + Q_C = (L_0 + D)h_D$, so
 $$Q_C = -\left(1 + \frac{L_0}{D}\right)D\,(H_1 - h_D) = -(13\,333)(330 - 60) = -3.60\times10^6\ \mathrm{kcal/h}$$
 
@@ -65,6 +67,8 @@ $$D = \frac{Fz - Fx_B}{x_D - x_B} = \frac{650 - 1500(0.0001)}{0.85 - 0.0001} = 7
 | $h_D$ | saturated liquid, 0.85 | 57 |
 | $H_1$ | saturated vapor, 0.85 | 309 |
 | $h_B$ | saturated liquid, ≈ pure water (99.1 °C) | 100 |
+
+![How to read the H–x chart: H1 ≈ 309, hD ≈ 57, hF2 ≈ 16 (20 °C isotherm), hB ≈ 100; feed 1 on the 81 °C tie line, hF1 ≈ 80 kcal/kg](fig/practice-column-balances-P2-read.svg)
 
 The 81 °C tie line meets the boiling line just below 0.60 wt, so feed 1 is almost a saturated liquid; a lever-arm reading gives $h_{F1} \approx 66 + 0.05(330 - 66) \approx 80$ kcal/kg.
 
@@ -109,6 +113,8 @@ $$30 = 0.60D + 0.05(200 - D)\ \Rightarrow\ D = \frac{30 - 10}{0.55} = 36.36\ \ma
 
 2. **Enthalpies** (H–x chart, kcal/kg): $h_F(0.30, 20\ ^\circ\mathrm{C}) = 10$; $H_S$ (saturated steam, $x = 0$) $= 640$; $h_D(0.60,\ \mathrm{sat.\ liq.}) = 66$; $H_1(0.60,\ \mathrm{sat.\ vap.}) = 409$; $h_B(0.05,\ \mathrm{sat.\ liq.}) = 90$.
 
+![How to read the H–x chart: H1 ≈ 409, hD ≈ 66, hF ≈ 10 (20 °C isotherm), hB ≈ 90, HS ≈ 640 kcal/kg](fig/practice-column-balances-P3-read.svg)
+
 3. **Overall energy balance** (no $Q_R$): $Fh_F + SH_S + Q_C = Dh_D + Bh_B$:
 $$Q_C = 36.36(66) + 163.64(90) - 100(10) - 100(640) = -4.79\times10^4\ \mathrm{kcal/min}$$
 
@@ -146,6 +152,8 @@ $$Q_R = DH_D + Bh_B - Fh_F - Ch_C$$
 $$\bar{V} = \frac{Q_R}{H_{\bar{V}}(x_B) - h_B(x_B)} = \frac{DH_D + Bh_B - Fh_F - Ch_C}{H_{\bar{V}}(0.05) - h_B(0.05)}$$
 
 4. **Enthalpies** (kcal/kg): $h_F$ (0.40 on the −20 °C liquid isotherm) ≈ −28; $h_C$ (saturated liquid ethanol) ≈ 48; $H_D$ (saturated vapor 0.80) = 330; $h_B$ (saturated liquid 0.05) = 90; $H_{\bar{V}}$ (saturated vapor 0.05) = 622.
+
+![How to read the H–x chart: HD ≈ 330, hF ≈ −28 (−20 °C isotherm), hC ≈ 48, hB ≈ 90, HV̄ ≈ 622 kcal/kg](fig/practice-column-balances-P4-read.svg)
 
 5. **Numbers:**
 $$Q_R = 2200(330) + 800(90) - 2000(-28) - 1000(48) = 8.06\times10^5\ \mathrm{kcal/h}$$
@@ -443,6 +451,8 @@ $$D = 5000\,\frac{0.25 - 0.02}{0.85 - 0.02} = 1385.5\ \mathrm{kg/h},\qquad B = 3
 | $h_D$ | 0.85, 30 °C | 17 |
 | $H_1$ | saturated vapor, 0.85 | 309 |
 | $h_B$ | saturated liquid, 0.02 | 97 |
+
+![How to read the H–x chart: H1 ≈ 309, hD ≈ 17 and hF ≈ 21 (30 °C line between the 20 °C and 40 °C isotherms), hB ≈ 97 kcal/kg](fig/practice-column-balances-P13-read.svg)
 
 $$Q_C = -\left(1 + \frac{L_0}{D}\right)D(H_1 - h_D) = -3.5(1385.5)(309 - 17) = -1.42\times10^6\ \mathrm{kcal/h}$$
 $$Q_R = Dh_D + Bh_B - Fh_F - Q_C = 1385.5(17) + 3614.5(97) - 5000(21) + 1.416\times10^6 = 1.68\times10^6\ \mathrm{kcal/h}$$

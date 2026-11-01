@@ -432,6 +432,8 @@ $$N = \frac{\ln[(1 - 1/A)(1/0.012) + 1/A]}{\ln A} = \frac{\ln[(0.8345)(83.33) + 
    - $x_{N,C3} = 150(0.0017)(0.855)/300 = 7.27\times10^{-4}$
    - the remainder is oil
 
+![How to read the DePriester chart: p = 700 kPa and T = 20 °C give K = 1.19 (propane) and 0.331 (n-butane)](fig/practice-absorption-P13-read.svg)
+
 **Book answer: N = 2.39, $y_{1,C4} = 7.2\times10^{-6}$, $y_{1,C3} = 2.98\times10^{-4}$.** N ✓ (2.36 vs 2.39) and the butane result ✓. The propane value is sensitive to $K_{C3}$: the book's chart reading (≈ 1.25–1.27, against 1.19 from the fit) gives 17.5% unabsorbed instead of 14.5%. Both are within DePriester reading accuracy.`,
           answer: String.raw`K_C3 ≈ 1.19, K_C4 ≈ 0.331; A_C4 = 6.04 → N = 2.36 (book 2.39 ✓); y₁,C4 = 7.2×10⁻⁶ ✓, y₁,C3 ≈ 2.5×10⁻⁴ (book 2.98×10⁻⁴, chart K); x_N,C4 = 2.96×10⁻⁴, x_N,C3 ≈ 7.3×10⁻⁴.` } ] },
     { id: "practice-absorption-P14", q: 14, section: "W", compulsory: false,
@@ -466,6 +468,8 @@ Note how close the outlet gas is to $y_1^* = 0.000283$: a small inlet-liquid con
 - Enthalpies (Btu/lbmol), referenced to liquid at 0 °F and estimated from Maxwell-type data: $h = \sum x_i C_{pL,i}T$ and $H = \sum y_i(\lambda_i + C_{pV,i}T)$.
   - $C_{pL}$ = 26, 39, 60 and $C_{pV}$ = 12.6, 28, 44 Btu/(lbmol °F) for ethane, pentane, octane.
   - $\lambda$(0 °F) = 5600, 12 000, 18 900 Btu/lbmol.
+
+![How to read the DePriester chart: p = 101.3 kPa and T = 21.1 °C give K = 27.2 (ethane), 0.607 (n-pentane), 0.0199 (n-octane)](fig/practice-absorption-P15-read.svg)
 
 ### 1. Component balances at the first-guess flows (tridiagonal, stage 1 = top)
 For each component, with $l_{ij} = L_jx_{ij}$ and $v_{ij} = S_{ij}l_{ij}$, $S_{ij} = K_{ij}V_j/L_j$:

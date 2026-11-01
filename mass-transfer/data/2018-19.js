@@ -306,6 +306,8 @@ The liquid enters through:
 - the **downcomer area**: the net area is $A_{net} = A_T - A_d$, and $A_d$ is sized from the liquid rate (residence time, downcomer backup), so the total area is $A_T = A_{net}/\eta$.
 Design: $u_{op}$ = 0.65–0.90 (typically 0.75) $u_{flood}$, then $D$ from $V$.
 
+![How to read the Fair flooding chart: F_lv on the log axis → up to the tray-spacing curve → across to C_sb,flood](fig/howto-flooding.svg)
+
 ### (ii) Notched weirs and turndown
 On a straight weir the liquid crest is $h_{ow} \propto (Q_L/L_w)^{2/3}$. At low liquid rates the crest over the long weir is only a few millimetres; small out-of-levelness then makes liquid flow over part of the weir only, giving maldistribution, dry areas and weeping, so the tray cannot be turned down far. A notched (picket-fence/V-notch) weir confines the flow to the notches: the crest height in each notch is larger and changes more strongly with flow (V-notch $Q \propto h^{2.5}$), so the liquid level and distribution stay controlled over a wide range of liquid rates. Notched weirs cost little more than straight ones and are especially good at low or variable liquid rates (adjustable weirs only look like a fix and cause weeping or dry trays if maladjusted).
 
