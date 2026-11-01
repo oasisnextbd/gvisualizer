@@ -25,6 +25,7 @@
 <main class="wrap">
   <div class="top">
     <a class="backbtn" href="./" aria-label="Back">← Back</a>
+    <a class="navlink" href="../" aria-label="Home: all courses" title="All courses">⌂ Home</a>
     <a class="brand" href="practice.html">CHE 301 <span>Practice</span></a>
     <a class="navlink" href="./">Past papers</a>
     <a class="navlink on" href="practice.html">Practice</a>
@@ -51,6 +52,11 @@
 (function(){
 const $=s=>document.querySelector(s);
 const st={sel:null,kind:'',q:'',type:''};
+// Remember filters and scroll for this tab, so coming back from a solution keeps e.g. "theory only".
+const SK='qb-filters:'+location.pathname; let saved={}; try{ saved=JSON.parse(sessionStorage.getItem(SK)||'{}')||{}; }catch(e){}
+for(const k of ['by','q','type','hideOut','kind']) if(k in saved && k in st) st[k]=saved[k];
+const saveSt=()=>{ try{ const o={scroll:Math.round(scrollY)}; for(const k of ['by','q','type','hideOut','kind']) if(k in st) o[k]=st[k]; sessionStorage.setItem(SK,JSON.stringify(o)); }catch(e){} };
+let ts; addEventListener('scroll',()=>{ clearTimeout(ts); ts=setTimeout(saveSt,200); },{passive:true}); addEventListener('pagehide',saveSt);
 const pr=()=>QB.parts.filter(p=>p.practice);
 function filtered(){ const q=st.q.toLowerCase(); return pr().filter(p=>(!st.kind||p.origin===st.kind)&&(!st.type||p.type===st.type)&&(!q||(p.text+' '+p.sub+' '+p.stem+' '+(p.ref||'')).toLowerCase().includes(q))); }
 function rail(list){
@@ -79,6 +85,7 @@ function render(){
     h+='</section>'; });
   $('#list').innerHTML=h||(pr().length?'<p class="empty">No practice problems match these filters.</p>':'<p class="empty">Practice sets are being added.</p>');
   QB.typesetLazy($('#list'));
+  saveSt();
 }
 document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{ st.kind=b.dataset.k; render(); }));
 let tq; $('#q').addEventListener('input',e=>{ clearTimeout(tq); tq=setTimeout(()=>{ st.q=e.target.value.trim(); render(); },200); });
@@ -86,7 +93,8 @@ $('#type').addEventListener('change',e=>{ st.type=e.target.value; render(); });
 window.addEventListener('hashchange',()=>{ st.sel=decodeURIComponent(location.hash.slice(1))||null; render(); });
 QB.load(()=>{ st.sel=decodeURIComponent(location.hash.slice(1))||null;
   const P=pr(); $('#stats').innerHTML=`<span class="pill"><b>${P.length}</b> practice problems</span><span class="pill"><b>${P.filter(p=>p.origin==='slides').length}</b> from the slides</span><span class="pill"><b>${P.filter(p=>p.origin!=='slides').length}</b> potential finals</span><span class="pill"><b>${new Set(P.map(p=>p.topic)).size}</b> topics</span>`;
-  render(); });
+  if($('#q')) $('#q').value=st.q||''; if($('#type')) $('#type').value=st.type||''; if($('#hideOut')) $('#hideOut').checked=!!st.hideOut;
+  render(); if(saved.scroll) requestAnimationFrame(()=>scrollTo(0,saved.scroll)); });
 })();
 </script>
 <script type="module" src="../shared/community.js"></script>

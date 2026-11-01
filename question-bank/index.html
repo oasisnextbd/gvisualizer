@@ -17,6 +17,7 @@
 <main class="wrap">
   <div class="top">
     <a class="backbtn" href="../" aria-label="Back">← Back</a>
+    <a class="navlink" href="../" aria-label="Home: all courses" title="All courses">⌂ Home</a>
     <a class="brand" href="./">CHE 301 <span>Question Bank</span></a>
     <a class="navlink on" href="./">Questions</a>
     <a class="navlink" href="practice.html">Practice</a>
@@ -46,6 +47,11 @@
 (function(){
 const $=s=>document.querySelector(s);
 const st={by:'topic',sel:null,q:'',type:'',hideOut:false};
+// Remember filters and scroll for this tab, so coming back from a solution keeps e.g. "theory only".
+const SK='qb-filters:'+location.pathname; let saved={}; try{ saved=JSON.parse(sessionStorage.getItem(SK)||'{}')||{}; }catch(e){}
+for(const k of ['by','q','type','hideOut','kind']) if(k in saved && k in st) st[k]=saved[k];
+const saveSt=()=>{ try{ const o={scroll:Math.round(scrollY)}; for(const k of ['by','q','type','hideOut','kind']) if(k in st) o[k]=st[k]; sessionStorage.setItem(SK,JSON.stringify(o)); }catch(e){} };
+let ts; addEventListener('scroll',()=>{ clearTimeout(ts); ts=setTimeout(saveSt,200); },{passive:true}); addEventListener('pagehide',saveSt);
 function readHash(){ const h=decodeURIComponent(location.hash.slice(1)); if(h.startsWith('year-')){ st.by='year'; st.sel=h.slice(5); } else if(h){ st.by='topic'; st.sel=h; } }
 function filtered(){ const q=st.q.toLowerCase(); return QB.parts.filter(p=>!p.practice&&(!QB.guest||p.key===QB.freeYear)&&(!st.type||p.type===st.type)&&(!st.hideOut||p.syllabus!=='out')&&(!q||(p.text+' '+p.sub+' '+p.stem+' '+p.year).toLowerCase().includes(q))); }
 function rail(list){
@@ -84,6 +90,7 @@ function render(){
   const guestBar=QB.guest?`<div class="cm-strip" style="margin:0 0 14px"><p><b>Guest view:</b> the ${QB.freeYear} paper only, with ${QB.freeSolutions} free solutions. Sign in with your BUET ChE student ID to unlock all ${n} papers, every solution, practice sets and the checklist.</p><span class="cm-row" style="margin:0"><button type="button" class="btn" data-signin>Sign in</button><button type="button" class="btn ghost" data-signin="up">Create account</button></span></div>`:'';
   $('#list').innerHTML=guestBar+(html||'<p class="empty">No questions match these filters.</p>');
   QB.typesetLazy($('#list'));
+  saveSt();
 }
 $('#byTopic').addEventListener('click',()=>{ st.by='topic'; st.sel=null; history.replaceState(null,'',location.pathname); render(); });
 $('#byYear').addEventListener('click',()=>{ st.by='year'; st.sel=null; history.replaceState(null,'',location.pathname); render(); });
@@ -96,7 +103,8 @@ QB.load(()=>{ readHash();
   const P=QB.parts;
   const ex=P.filter(p=>!p.practice), pr=P.length-ex.length; const num=ex.filter(p=>p.type==='numerical').length;
   $('#stats').innerHTML=`<span class="pill"><b>${QB.YEARS.filter(y=>QB.papers[y]).length}</b> papers</span><span class="pill"><b>${ex.length}</b> exam question parts</span>${pr?`<span class="pill"><b>${pr}</b> practice problems</span>`:''}<span class="pill"><b>${num}</b> numericals</span><span class="pill"><b>${ex.filter(p=>(p.repeats||[]).length).length}</b> repeated problems</span>`;
-  render(); });
+  if($('#q')) $('#q').value=st.q||''; if($('#type')) $('#type').value=st.type||''; if($('#hideOut')) $('#hideOut').checked=!!st.hideOut;
+  render(); if(saved.scroll) requestAnimationFrame(()=>scrollTo(0,saved.scroll)); });
 })();
 </script>
 <script type="module" src="../shared/community.js"></script>
