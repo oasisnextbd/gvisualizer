@@ -3,8 +3,8 @@
   const $ = s => document.querySelector(s);
   const input = $('#gs'), form = input && input.form, out = $('#results'), browse = $('#browse');
   if (!input) return;
-  const CODE = { 'mass-transfer': 'ChE 303', 'question-bank': 'CHE 301' };
-  const FREE = '2023-24';
+  const CODE = { 'mass-transfer': 'ChE 303', 'question-bank': 'CHE 301', 'unit-ops': 'CHE 311' };
+  const FREE = { 'mass-transfer': '2023-24', 'question-bank': '2023-24', 'unit-ops': '2023-24' };
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const norm = s => String(s || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/[–—‐-]/g, ' ');
   // A student ID or email is the browser's password manager, never a search.
@@ -14,7 +14,7 @@
   function load() {
     if (idx) return Promise.resolve(idx);
     if (!loading) loading = new Promise(res => {
-      const s = document.createElement('script'); s.src = 'search-index.js?v=20261102';
+      const s = document.createElement('script'); s.src = 'search-index.js?v=20261104';
       s.onload = () => { idx = (window.GV_INDEX || []).map(r => { const topic = (window.GV_TOPICS || [])[r[5]] || ''; return { dir: r[0], id: r[1], label: r[2], title: r[3], text: r[4], topic, type: r[6], practice: !!r[7], paper: r[8], hTitle: norm(r[3]), hAll: norm([r[3], r[4], topic, r[2], CODE[r[0]]].join(' ')) }; }); res(idx); };
       s.onerror = () => res([]);
       document.head.appendChild(s);
@@ -43,7 +43,7 @@
     hits.sort((a, b) => b[0] - a[0]);
     const g = guest();
     const list = hits.slice(0, shown).map(([, r]) => {
-      const locked = g && (r.practice || r.paper !== FREE);
+      const locked = g && (r.practice || r.paper !== FREE[r.dir]);
       return `<a class="res" href="${r.dir}/solutions.html#${encodeURIComponent(r.id)}"><b>${mark(r.title || r.label, toks)}</b>${locked ? '<p class="lock">Sign in to see this question and its solution</p>' : `<p>${mark(r.text, toks)}</p>`}<span class="rm"><span>${CODE[r.dir]}</span><span>${esc(r.label)}</span><span>${esc(r.topic.replace(/^.*? · /, ''))}</span>${r.type ? `<span>${esc(r.type)}</span>` : ''}</span></a>`;
     }).join('');
     out.innerHTML = `<div class="rhead"><span><b>${hits.length}</b> ${hits.length === 1 ? 'question' : 'questions'} for “${esc(q)}”</span><button type="button" class="btn ghost" id="clr">Clear</button></div>` +

@@ -3,8 +3,8 @@
 // Stays completely silent until Firebase is configured (shared/config.js).
 import { enabled, fb, onUser, signIn, signUp, signOut, googleSignIn, resetPassword, resendVerification, recheck, requestTeamVerify, niceError, esc, when, shortName, DOMAIN } from './fb.js';
 
-const COURSE = location.pathname.includes('/mass-transfer/') ? 'che303' : 'che301';
-const COURSE_PAGE = /\/(question-bank|mass-transfer)\//.test(location.pathname);
+const COURSE = location.pathname.includes('/mass-transfer/') ? 'che303' : location.pathname.includes('/unit-ops/') ? 'che311' : 'che301';
+const COURSE_PAGE = /\/(question-bank|mass-transfer|unit-ops)\//.test(location.pathname);
 const SOLUTIONS = /solutions\.html$/.test(location.pathname);
 const KINDS = { error: 'Error in the question or solution', method: 'Easier or alternative method', doubt: 'Doubt: I do not understand a step', request: 'Missing: add a question or topic' };
 const KIND_TAG = { error: 'error', method: 'easier method', doubt: 'doubt', request: 'request' };

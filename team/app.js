@@ -3,7 +3,7 @@ import { enabled, fb, onUser, signIn, signOut, googleSignIn, niceError, esc, whe
 import { DEFAULT_RANGES } from '../shared/config.js';
 
 const app = document.getElementById('app');
-const COURSES = { che301: { name: 'CHE 301 Heat Transfer', dir: '../question-bank/' }, che303: { name: 'ChE 303 Mass Transfer I', dir: '../mass-transfer/' } };
+const COURSES = { che301: { name: 'CHE 301 Heat Transfer', dir: '../question-bank/' }, che303: { name: 'ChE 303 Mass Transfer I', dir: '../mass-transfer/' }, che311: { name: 'CHE 311 Special Topics in Unit Operations', dir: '../unit-ops/' } };
 const KINDS = { error: 'Error', method: 'Easier method', doubt: 'Doubt', request: 'Request' };
 const STATUSES = ['new', 'reviewing', 'approved', 'fixed', 'declined'];
 const NOTE_KINDS = { correction: 'Correction', method: 'Alternative method', review: 'Under review' };

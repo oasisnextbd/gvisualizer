@@ -25,7 +25,7 @@ const papers={}, parts=[], byId={};
 // Guests (not signed in with an allowed account) see one paper's questions and 2 of its solutions per course.
 // shared/community.js flips QB.guest to false once a signed-in, allowed account is confirmed ('qb:access' event).
 const guestHint=(()=>{ try{ return localStorage.getItem('gv-access')!=='1'; }catch(e){ return true; } })();
-const QB={TOPICS,YEARS,SETS,papers,parts,byId,keyOf,stepify,related,guest:guestHint,freeYear:'2023-24',freeSolutions:2,
+const QB={TOPICS,YEARS,SETS,papers,parts,byId,keyOf,stepify,related,guest:guestHint,freeYear:COURSE.freeYear||YEARS[0],freeSolutions:2,
   // A student ID or email in the search box is the browser's password manager, never a real search: drop it.
   cleanQ:v=>{ v=String(v||'').trim(); return /^(\d{6,9}|[^\s@]+@[^\s@]*)$/.test(v)?'':v; },
   guardSearch(inp,onClear){ if(!inp) return; const chk=()=>{ if(inp.value&&!QB.cleanQ(inp.value)){ inp.value=''; onClear(); } };
