@@ -117,7 +117,7 @@ $$\frac{V}{V_a} = \frac{2.37}{3.65} = 65\%$$
       parts: [
         { id: "2012-13-Q2a", label: "(a)", marks: "15",
           topic: "other", sub: "Impulse turbine staging: velocity, pressure and pressure–velocity compounding",
-          type: "sketch", syllabus: "out", repeats: [],
+          type: "sketch", syllabus: "out", repeats: ["2018-19-Q6b", "2013-14-Q2b"],
           text: String.raw`What are the types of impulse turbine staging? Briefly state their configuration. Also draw the schematic of impulse turbine staging showing their pressure and velocity profile along the steam flow path inside the turbine.`,
           solution: String.raw`In an impulse stage the whole pressure drop of the stage takes place in the **stationary nozzles**; the steam leaves them at high velocity and gives up its kinetic energy to the moving blades at constant pressure. A single-stage (De Laval) turbine expanding the whole pressure range in one nozzle gives very high steam and blade speeds (≈ 1000–1200 m/s), so the energy is divided by **compounding (staging)**:
 
@@ -137,7 +137,7 @@ $$\frac{V}{V_a} = \frac{2.37}{3.65} = 65\%$$
           answer: String.raw`(1) Velocity-compounded (Curtis): one nozzle, then moving–fixed–moving rows, P drops once, V absorbed in steps. (2) Pressure-compounded (Rateau): nozzle + moving row repeated, P drops stepwise, V saw-tooth. (3) Pressure–velocity compounded: few nozzle stages each followed by a two-row Curtis wheel.` },
         { id: "2012-13-Q2b", label: "(b)", marks: "12⅔",
           topic: "other", sub: "Reheat cycle: isentropic efficiencies of HP and LP turbines",
-          type: "numerical", syllabus: "out", repeats: [],
+          type: "numerical", syllabus: "out", repeats: ["2019-20-Q2c"],
           text: String.raw`In the figure (see attachment) you are required to evaluate the efficiency of HP and LP steam turbines of the system both of which are assumed to be adiabatic. Following data are given:
 
 | State | Enthalpy |
@@ -233,7 +233,7 @@ Economic factors (power, wear of liners and media, maintenance, capital cost) an
           answer: String.raw`Feed and product size (reduction ratio), capacity, hardness and abrasiveness, structure (granular/fibrous), moisture (5–50% causes caking), crushing strength, friability, stickiness, soapiness, explosiveness, toxic dust, heat sensitivity, plus power, wear, cost and contamination.` },
         { id: "2012-13-Q3b", label: "(b)", marks: "15⅔",
           topic: "size-reduction", sub: "Derive Rittinger, Kick and Bond laws; range of applicability",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2020-21-Q8c2", "2015-16-Q5b"],
           text: String.raw`Starting from the basic differential equation derive the different laws for estimating energy for size reduction. Discuss the range of applicability of these laws.`,
           solution: String.raw`**Basic differential equation.** The energy dE needed to produce a small change dL in the size of unit mass of material is a simple power function of the size:
 
@@ -266,7 +266,7 @@ In MSH form: $P/\dot m = 0.3162\,W_i\,(1/\sqrt{D_{pb}} - 1/\sqrt{D_{pa}})$, P in
           answer: String.raw`dE/dL = −CL^p. p = −2: Rittinger E = K_R f_c(1/L₂ − 1/L₁) (∝ new surface, fine grinding 10–1000 µm); p = −1: Kick E = K_K f_c ln(L₁/L₂) (∝ reduction ratio, coarse > 1 mm); p = −3/2: Bond E = E_i(√(100/L₂) − √(100/L₁)) (intermediate; work index).` },
         { id: "2012-13-Q3c", label: "(c)", marks: "7",
           topic: "size-reduction", sub: "Critical speed of a ball mill: derivation",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2023-24-Q8c", "2022-23-Q8a", "2019-20-Q3b", "2018-19-Q4a", "2016-17-Q6c"],
           text: String.raw`Derive the formula for the critical speed of a ball mill.`,
           solution: String.raw`![Forces on a ball riding on the shell of a mill of radius R](fig/2022-23-Q8a-sol.svg)
 
@@ -380,7 +380,7 @@ The relief valve then opens and recloses normally; the disc must be replaced aft
           answer: String.raw`A non-fragmenting reverse-buckling disc: dome convex to the process (metal in compression) snaps through at the burst pressure and is cut by knife blades or opens along scores, petals fold back without fragments; high operating ratio (90%), fatigue-resistant; use a pressure gauge/tell-tale between disc and valve.` },
         { id: "2012-13-Q4d", label: "(d)", marks: "13⅔",
           topic: "relief", sub: "Relief device types; backpressure on conventional vs balanced valves",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2011-12-Q4b"],
           text: String.raw`What are the basic differences among the pressure relief devices? Why does conventional safety valve suffer more from back pressure than balanced safety valve? - Explain with diagram.`,
           solution: String.raw`**Differences among the pressure-relief devices**
 
@@ -482,7 +482,7 @@ $$\theta_{opt} = \theta_c + \frac{2}{U_0}\sqrt{\frac{\theta_c}{\beta}}$$
           answer: String.raw`Long-tube vertical (rising- or falling-film) evaporator in stainless steel: high U and once-through operation suit a small concentration range; no salting so forced circulation is unnecessary; no foam problem; simple tubular element keeps the amount of costly corrosion-resistant alloy small.` },
         { id: "2012-13-Q5e", label: "(e)", marks: "11",
           topic: "evaporation", sub: "Triple-effect: boiling point in the second effect",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2016-17-Q2c"],
           text: String.raw`A triple effect evaporator is concentrating liquid that has no appreciable elevation in boiling point. The temperature of heating steam in the 1st effect is 230°F, the boiling point of solution in the last effect is 125°F. The overall heat transfer coefficients are:
 
 1st effect: $U_1$ = 500 Btu/h/ft²°F. 2nd effect: $U_2$ = 300 Btu/h/ft²°F and 3rd effect: $U_1$ = 500 Btu/h/ft²°F.
@@ -528,7 +528,7 @@ $$T_1 = 230 - 28.6 = 201.4^\circ\mathrm{F},\qquad T_2 = 201.4 - 47.7 = 153.6^\ci
           answer: String.raw`Head/pressure ratio vs inlet flow at several speeds (H ∝ N², Q ∝ N): rising head as flow falls to a peak; surge line through the peaks (unstable to the left, operate ≥ 10% away), stonewall/choke at high flow (sonic), efficiency islands with BEP mid-range; operating point where it meets the system curve.` },
         { id: "2012-13-Q6b", label: "(b)", marks: "10⅔",
           topic: "compressors", sub: "Surge in centrifugal compressors: causes, detection, control",
-          type: "theory", syllabus: "partial", repeats: [],
+          type: "theory", syllabus: "partial", repeats: ["2018-19-Q3f", "2016-17-Q1c", "2014-15-Q6b"],
           text: String.raw`What do you mean by "Surge" for a centrifugal compressor? State its causes and how it can be identified and controlled?`,
           solution: String.raw`**Surge** is the unstable operation of a centrifugal (or axial) compressor at low flow, to the left of the peak of its head–flow curve. The compressor can no longer develop the pressure existing in the discharge system; the flow momentarily **reverses** through the impeller, the discharge pressure falls, forward flow resumes, pressure builds up again, and the cycle repeats at a frequency of about 0.5–10 Hz (large pressure and flow oscillations). It can damage the thrust bearing, seals, impeller and blades and overheat the gas.
 
@@ -557,7 +557,7 @@ $$T_1 = 230 - 28.6 = 201.4^\circ\mathrm{F},\qquad T_2 = 201.4 - 47.7 = 153.6^\ci
           answer: String.raw`Surge = flow reversal and oscillation at low flow left of the head-curve peak, when the machine cannot overcome the discharge pressure. Causes: low throughput, high system resistance, low MW/high suction T, speed drop, fouling. Signs: noise, swinging pressure/flow/amps, vibration, thrust movement, suction temperature rise. Control: anti-surge recycle/blow-off valve with a 10% margin control line, variable speed, IGVs, suction throttling.` },
         { id: "2012-13-Q6c", label: "(c)", marks: "6",
           topic: "ejectors", sub: "Uses of ejectors other than creating vacuum",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2014-15-Q6d"],
           text: String.raw`Other than creating vacuum, ejectors are used for many purposes. Explain it.`,
           solution: String.raw`An ejector uses the momentum of a high-velocity motive jet (steam, air, gas or liquid) to entrain and pump a second fluid. Besides producing vacuum it is used as:
 
@@ -600,7 +600,7 @@ So the actual machine needs more power and delivers less gas than the ideal; the
           answer: String.raw`Ideal: compression 1→2 (PVⁿ), discharge at P₂, clearance re-expansion 3→4, suction at P₁ with sharp corners. Actual: suction below and discharge above line pressure (valve and passage losses, flutter), rounded corners, heat transfer and leakage → larger area (more work) and smaller delivered volume (lower volumetric efficiency).` },
         { id: "2012-13-Q6e", label: "(e)", marks: "10",
           topic: "ejectors", sub: "Features that make ejectors attractive industrially",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2011-12-Q8a"],
           text: String.raw`Write the features of ejectors that make it attractive for industrial application.`,
           solution: String.raw`**Attractive features (Ludwig ch. 6)**
 
@@ -621,7 +621,7 @@ So the actual machine needs more power and delivers less gas than the ideal; the
       parts: [
         { id: "2012-13-Q7a", label: "(a)", marks: "20",
           topic: "pumps", sub: "Contents of a centrifugal pump specification (data) sheet",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2013-14-Q7a"],
           text: String.raw`Discuss the Specification sheet of Pump.`,
           solution: String.raw`A pump specification (data) sheet is the document the process engineer fills in to define the duty so that vendors can quote and select a pump; vendors complete the performance and construction sections (Ludwig ch. 3, API 610 data sheet).
 
@@ -654,7 +654,7 @@ So the actual machine needs more power and delivers less gas than the ideal; the
           answer: String.raw`Identification/service; liquid properties (temperature, SG, vapor pressure, viscosity, corrosive/solids); capacity (normal, rated, min), suction/discharge pressure, differential head, NPSH available; vendor performance (type/size, speed, impeller, efficiency, BHP, NPSHr, shut-off head, min flow); construction (casing, impeller, bearings, seals/flush plan); materials; driver; tests and standards.` },
         { id: "2012-13-Q7c", label: "(c)", marks: "20",
           topic: "mixing", sub: "Dimensional analysis: power number as function of Reynolds number",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q4b", "2017-18-Q2d", "2016-17-Q3b", "2013-14-Q7b"],
           text: String.raw`Prove that Power Number is a function of Reynolds Number.`,
           solution: String.raw`**Variables.** For a given impeller type and geometrically similar tanks (all lengths expressed through shape factors $S_1 = D_a/D_t$, $S_2 = E/D_t$, ... fixed), the power P drawn by the impeller depends on
 
@@ -701,7 +701,7 @@ This is the power-number curve used for design (MSH Fig. 9.13/9.14).
           answer: String.raw`P = f(n, D_a, ρ, μ, g) → by dimensional analysis P/(ρn³D_a⁵) = ψ(D_a²nρ/μ, n²D_a/g, shape factors). In baffled tanks there is no vortex, so the Froude number drops out: N_P = ψ(N_Re) (laminar N_P = K_L/N_Re, turbulent N_P = K_T).` },
         { id: "2012-13-Q7d", label: "(d)", marks: "6⅔",
           topic: "pumps", sub: "Pump type for 2500 gal/min at 50 ft head via specific speed",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2017-18-Q3b", "2014-15-Q7b", "2011-12-Q8d"],
           text: String.raw`It is necessary to pump 2500 gal/min against a head of 50 ft. What type of pump might be used?
 
 Figure for Q7(d) (attached to the paper): characteristic curves and specific speeds for various impellers (Worthington Pumps): radial-flow impellers (standard centrifugal pump) operate at the lowest specific speeds (up to 4200); mixed-flow impellers, which produce both axial and radial flow, at higher specific speeds (4200 to 9000); axial-flow impellers at the highest specific speeds (above 9000). Scale of specific speed 500–20,000.`,
@@ -767,7 +767,7 @@ $$\text{crystals} = 71.8\left(\frac{39.2 - 35.9}{100}\right) = 2.4\ \mathrm{kg} 
           answer: String.raw`Parts: feed into the circulation line, circulating pump, external steam heater (no boiling), vaporizer/flash chamber with vapor outlet to condenser (supersaturation generated), central downcomer, fluidised suspension (growth) chamber with classified crystal bed, mother-liquor outlet near the top back to the pump, product crystal outlet at the bottom.` },
         { id: "2012-13-Q8c", label: "(c)", marks: "15",
           topic: "drying", sub: "Principle of drying: moisture terms and drying-rate curve",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2017-18-Q4c"],
           text: String.raw`Describe the "Principle of Drying"`,
           solution: String.raw`**Drying** is the removal of relatively small amounts of water (or other liquid) from a solid by **simultaneous heat and mass transfer**: heat is supplied to the wet solid (by convection from hot gas, conduction from hot surfaces, or radiation) to vaporise the liquid, and the vapor is carried away by the gas or a vacuum.
 
@@ -795,7 +795,7 @@ $$R_c = \frac{h(T - T_w)}{\lambda_w} = k_y M_B(\mathcal{H}_w - \mathcal{H})$$
           answer: String.raw`Drying = simultaneous heat and mass transfer removing liquid from a solid. Equilibrium, free, bound/unbound and critical moisture; drying-rate curve: warm-up, constant-rate period at T_wb (R_c = h(T−T_w)/λ_w, external control), critical moisture, falling-rate periods controlled by internal diffusion/capillary flow down to X*; drying times t_c = m_s(X₁−X_c)/(AR_c) and t_f by integration.` },
         { id: "2012-13-Q8d", label: "(d)", marks: "12",
           topic: "drying", sub: "Calculation steps for designing an adiabatic direct-contact dryer",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2014-15-Q8c", "2011-12-Q6c"],
           text: String.raw`Write down the calculation steps in designing an adiabatic direct contact dryer.`,
           solution: String.raw`Method of MSH ch. 24 (used in the rotary-dryer example of the slides; see 2022-23 Q3a for a worked case).
 

@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2016-17-Q1a", label: "(a)", marks: "22",
           topic: "compressors", sub: "Performance characteristics of reciprocating compressors",
-          type: "theory", syllabus: "partial", repeats: [],
+          type: "theory", syllabus: "partial", repeats: ["2015-16-Q4b"],
           text: String.raw`Discuss briefly the different performance characteristics of reciprocating compressor.`,
           solution: String.raw`*Compressors are in the course outline but have no slides; answer from MSH ch. 8 and compressor texts.*
 
@@ -39,7 +39,7 @@ $$W = \frac{n}{n-1}P_1V_1\left[r^{(n-1)/n} - 1\right]$$
           answer: String.raw`Characteristics: P–V cycle with clearance re-expansion; η_v = 1 − L − C(r^(1/n) − 1) falls with ratio and clearance; T₂ = T₁ r^((n−1)/n) limits stage ratio (≈3–5) → multistaging with intercooling; W = n/(n−1)P₁V₁[r^((n−1)/n) − 1]; constant-volume delivery regardless of pressure (needs relief), pulsating, no surge; control by unloaders, clearance pockets, speed.` },
         { id: "2016-17-Q1b", label: "(b)", marks: "16",
           topic: "compressors", sub: "Three-stage compression with 3 psi interstage drops",
-          type: "numerical", syllabus: "partial", repeats: [],
+          type: "numerical", syllabus: "partial", repeats: ["2019-20-Q7b", "2017-18-Q3a"],
           text: String.raw`For three stage compression, what should be pressure across the cylinder if the intercooler and piping pressure is 3 psi? Discharge from last stage is at 165 psia and suction to the first stage is at 0 psig.`,
           solution: String.raw`**Given:** suction 0 psig = 14.7 psia; final discharge 165 psia; drop through each intercooler and its piping = 3 psi (two interstages).
 **Find:** suction and discharge pressure of each cylinder.
@@ -63,7 +63,7 @@ $$R\left[R(14.7R - 3) - 3\right] = 165$$
           answer: String.raw`Equal ratio R from R[R(14.7R − 3) − 3] = 165 → R = 2.34: stage 1 14.7 → 34.4 psia, stage 2 31.4 → 73.5 psia, stage 3 70.5 → 165 psia.` },
         { id: "2016-17-Q1c", label: "(c)", marks: "8⅔",
           topic: "compressors", sub: "How surge is controlled in centrifugal compressors",
-          type: "theory", syllabus: "partial", repeats: [],
+          type: "theory", syllabus: "partial", repeats: ["2018-19-Q3f", "2014-15-Q6b", "2012-13-Q6b"],
           text: String.raw`How surge is controlled in centrifugal compressors?`,
           solution: String.raw`**Surge:** at low flow the compressor can no longer develop the head the system demands; flow reverses momentarily, pressure drops, flow resumes, and the cycle repeats violently (noise, vibration, thrust-bearing and seal damage, overheating).
 
@@ -136,7 +136,7 @@ Capacity ∝ q = UAΔT, and the useful ΔT is (steam temperature − **solution*
           answer: String.raw`Steam to effect I; each effect's vapor heats the next (lower-pressure) one; dilute cold feed enters the last effect and is pumped back toward effect I, from which the thick product leaves; good for cold feeds and viscous products (high T where liquor is thickest), but needs interstage pumps.` },
         { id: "2016-17-Q2c", label: "(c)", marks: "12",
           topic: "evaporation", sub: "Triple effect without BPR: boiling temperatures in effects I and II",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2012-13-Q5e"],
           text: String.raw`A triple effect evaporator is concentrating a liquid that has no appreciable elevation in boiling point. The temperature of the first effect is 108° C and boiling point of solution in the last effect is 52° C. The overall heat transfer coefficients in W/m²°C are 2500 in the first, 2000 in the second and 1500 in the third effect. At what temperatures will the liquid boil in the first and second effect?`,
           solution: String.raw`**Given:** no BPR; temperature of the steam to the first effect $T_s$ = 108 °C (the "temperature of the first effect" is taken as the steam/heating-side temperature, because the boiling points of effects I and II are asked); last-effect boiling point $T_3$ = 52 °C; $U_1$ = 2500, $U_2$ = 2000, $U_3$ = 1500 W/m² °C.
 **Find:** boiling temperatures $T_1$ and $T_2$.
@@ -174,7 +174,7 @@ Good crystallizers keep the solution in the metastable zone (controlled growth, 
           answer: String.raw`Supersaturation (cool from unsaturated A past saturation B into the metastable zone) → nucleation (at the supersolubility curve C / labile zone, or secondary) → growth (liquor falls back toward saturation D) → separation of magma.` },
         { id: "2016-17-Q3b", label: "(b)", marks: "12",
           topic: "mixing", sub: "Power number as function of Re in a baffled agitated vessel",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q4b", "2017-18-Q2d", "2013-14-Q7b", "2012-13-Q7c"],
           text: String.raw`Prove that Power number is a function of Reynold's Number for mechanically agitated adequately baffled vessel.`,
           solution: String.raw`1. **Variables:** $P = f(n, D_a, \rho, \mu, g, S_1, \ldots, S_6)$ with shape factors $S_1 = D_a/D_t$, $S_2 = E/D_a$, $S_3 = L/D_a$, $S_4 = W/D_a$, $S_5 = J/D_t$, $S_6 = H/D_t$.
 2. **Dimensions:** P $ML^2T^{-3}$, n $T^{-1}$, $D_a$ L, ρ $ML^{-3}$, μ $ML^{-1}T^{-1}$, g $LT^{-2}$ → 6 − 3 = 3 dimensionless groups; repeating variables n, $D_a$, ρ.
@@ -190,7 +190,7 @@ $$N_P = \psi(N_{Re})$$
           answer: String.raw`Dimensional analysis: N_P = P/(ρn³D_a⁵) = ψ(Re, Fr, S₁…S₆); geometric similarity removes S_i, baffles prevent the vortex so Fr drops out → N_P = ψ(Re).` },
         { id: "2016-17-Q3c", label: "(c)", marks: "6",
           topic: "mixing", sub: "Shape factors of a turbine agitator",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2017-18-Q2d", "2015-16-Q1c", "2014-15-Q7d"],
           text: String.raw`Write different shape factors for turbine.`,
           solution: String.raw`Shape factors are the dimensionless ratios that fix the geometry of an agitated vessel (MSH ch. 9; $D_t$ tank diameter, $D_a$ impeller diameter, E impeller height above the bottom, L blade length, W blade width, J baffle width, H liquid depth):
 
@@ -207,7 +207,7 @@ Plus the number of blades (6) and baffles (4) and the blade type. Geometrically 
           answer: String.raw`S₁ = D_a/D_t = 1/3, S₂ = E/D_a = 1, S₃ = L/D_a = 1/4, S₄ = W/D_a = 1/5, S₅ = J/D_t = 1/12, S₆ = H/D_t = 1 (six blades, four baffles).` },
         { id: "2016-17-Q3d", label: "(d)", marks: "12",
           topic: "mixing", sub: "Power for a six-blade turbine in 50 % caustic soda",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2023-24-Q7c", "2022-23-Q7b", "2020-21-Q8a"],
           text: String.raw`A flat blade turbine with six blades is installed centrally in a vertical tank. The tank is 6 ft in diameter, the turbine is 2 ft in diameter and is positioned at 2 ft from the bottom of the tank. The turbine blades are 5 in wide. The tank is filled to a depth of 6 ft with a solution of 50 percent caustic soda at 150° F, which has a viscosity of 12 cP and density of 93.5 lb/ft³. The turbine is operated at 90 r/min. The tank is baffled. What power will be required to operate the mixer?
 
 Figure for Q3(d) (attached to the paper): power number $N_P = Pg_c/\rho n^3D_a^5$ versus $N_{Re} = D_a^2n\rho/\mu$ for six-blade turbines (after Chudacek; Oldshue), curves:
@@ -234,7 +234,7 @@ $$P = \frac{1820}{550} = 3.31\ \mathrm{hp}\ (2.47\ \mathrm{kW})$$
           answer: String.raw`Re = 6.96 × 10⁴ (turbulent), curve A gives N_P ≈ 5.8 → P = 5.8 × 93.5 × 1.5³ × 2⁵/32.174 = 1820 ft lbf/s ≈ 3.3 hp (2.5 kW).` },
         { id: "2016-17-Q3e", label: "(e)", marks: "10",
           topic: "crystallization", sub: "Draft-tube-baffle vacuum crystallizer: working principle",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2019-20-Q4a", "2018-19-Q6c"],
           text: String.raw`Discuss the working principle of draft tube baffled vacuum crystallizer with the help of schematic diagram.`,
           solution: String.raw`![DTB vacuum crystallizer: draft tube and propeller, skirt baffle and settling zone, fines dissolving loop](fig/2018-19-Q6c-sol.svg)
 
@@ -251,7 +251,7 @@ $$P = \frac{1820}{550} = 3.31\ \mathrm{hp}\ (2.47\ \mathrm{kW})$$
       parts: [
         { id: "2016-17-Q4a", label: "(a)", marks: "18",
           topic: "drying", sub: "General guidelines for selecting an industrial dryer",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2020-21-Q2a", "2018-19-Q2b", "2013-14-Q6a"],
           text: String.raw`In a chemical industry you have been assigned to select an industrial dryer. Discuss the general guidelines for selecting such dryers.`,
           solution: String.raw`**Steps of selection** (slides)
 1. **Initial selection:** the dryer must first be **operable** — produce a product of the desired physical properties at the desired rate. Dryer types are largely complementary, not competitive; the nature of the material usually limits the choice to two or three types.
@@ -278,7 +278,7 @@ $$P = \frac{1820}{550} = 3.31\ \mathrm{hp}\ (2.47\ \mathrm{kW})$$
           answer: String.raw`Initial selection → drying tests → final economic choice; guidelines: batch (< 150–200 kg/h) vs continuous, feed/product handling, heat sensitivity (vacuum, flash/spray), adiabatic vs non-adiabatic, operability, dust, energy efficiency, fuel, maintenance, labour, pollution.` },
         { id: "2016-17-Q4b", label: "(b)", marks: "12",
           topic: "pumps", sub: "Pump type and size for 300 gal/min at 70 ft",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2018-19-Q2d", "2017-18-Q3b"],
           text: String.raw`It is necessary to pump a liquid with properties similar to water at a rate of 300 gal/min against a head of 70 ft. Recommend a pump type and size. Make necessary assumptions.
 
 Figure for Q4(b) (attached to the paper): Foust Table 21.1 (pump characteristics: standard radial-flow centrifugal — high head, single stage up to 600 ft, capacity 100–200,000 gal/min, clean or dirty liquids, no metering; turbine mixed-flow — up to 200 ft, 16,000 gal/min; propeller axial-flow — up to 60 ft, 100,000 gal/min; rotary — up to 600 psi, 1–500 gal/min, viscous non-abrasive, metering; reciprocating — up to 100,000 psi, up to 500 gal/min, clean, metering) and Foust Fig. 21.23 (operating ranges of Goulds centrifugal pumps at 1750 rpm).`,
@@ -295,7 +295,7 @@ Figure for Q4(b) (attached to the paper): Foust Table 21.1 (pump characteristics
           answer: String.raw`Standard radial-flow centrifugal (N_s ≈ 1250); duty on the 3×4−8/3×4−10 boundary → 3×4−10 at 1750 rpm, impeller ≈ 9 in. (3×4−8 only at full 8 in.); ≈ 5.3 water hp, ≈ 7.6 bhp, 10 hp motor.` },
         { id: "2016-17-Q4c", label: "(c)", marks: "10",
           topic: "drying", sub: "Advantages of spray drying",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2013-14-Q6c"],
           text: String.raw`Write the advantages of spray drying.`,
           solution: String.raw`A spray dryer atomizes a solution, slurry or paste (nozzle or spinning disc) into hot gas in a tall chamber; the droplets dry in seconds and the powder is separated in cyclones or bag filters.
 
@@ -312,7 +312,7 @@ Figure for Q4(b) (attached to the paper): Foust Table 21.1 (pump characteristics
           answer: String.raw`One-step liquid-to-powder, seconds of contact at near wet-bulb temperature (heat-sensitive products), spherical porous free-flowing soluble particles, controllable size/density, continuous high capacity, hygienic, handles many feeds.` },
         { id: "2016-17-Q4d", label: "(d)", marks: "6⅔",
           topic: "ejectors", sub: "Why higher motive pressure does not raise fixed-ejector capacity",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q2a", "2018-19-Q2c", "2013-14-Q5c"],
           text: String.raw`"An increase in steam pressure over design will not increase vapor handling capacity for a fixed capacity ejector – why? Explain.`,
           solution: String.raw`- A fixed-capacity ejector has its steam nozzle and diffuser **proportioned for one design point** (motive pressure, suction load, discharge pressure); that matching gives the best steam economy.
 - The nozzle is choked, so the steam flow rises **in direct proportion to the absolute motive pressure**. Above design pressure more steam enters the same, fixed **diffuser throat**.
@@ -326,7 +326,7 @@ Figure for Q4(b) (attached to the paper): Foust Table 21.1 (pump characteristics
       parts: [
         { id: "2016-17-Q5ai", label: "(a)(i)", marks: "9⅔",
           topic: "separator-selection", sub: "Sylvan chart: low-resistance cyclone then high-efficiency cyclone",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q6a", "2019-20-Q1a1"],
           text: String.raw`Material leaving a chemical process varies between 20 and 40 grains/cu. ft. with 60 to 80 micron range of mass mean diameter of particles. A low resistance cyclone followed by a high efficiency cyclone would be used. What will be the final concentration and mean particle size of the gaseous stream?
 
 Figure for Q5(a) (attached to the paper): the Sylvan chart (range of particle sizes, concentration and collector performance: dust concentration in grains/ft³ vs mean particle size in microns, collector efficiency bands for electrostatic precipitators, cloth arresters, wet collectors, high-efficiency cyclones and low-resistance cyclones, and size-deviation lines for "ordinary industrial dust").`,
@@ -349,7 +349,7 @@ $$d_2 = 33\left(\frac{0.050}{3.3}\right)^{1/2.97} = 33(0.244) = 8\ \mu\mathrm{m}
           answer: String.raw`Low-resistance cyclone ≈ 89 % at 70 μm → 3.3 gr/ft³, ≈ 33 μm; high-efficiency cyclone ≈ 98.5 % at 33 μm → ≈ 0.05 gr/ft³ (0.02–0.08 over the range), mean size ≈ 8 μm.` },
         { id: "2016-17-Q5aii", label: "(a)(ii)", marks: "5½+5½",
           topic: "separator-selection", sub: "Sylvan chart: cheapest collector for 70 % and for 98 % (kiln gas)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q6a", "2019-20-Q1a2"],
           text: String.raw`Flue gas leaving a kiln chimney has a particle concentration of 50 grains/cu. ft and a mean size of 8 microns. What is the cheapest equipment that can be used to achieve 70% collection efficiency? What equipment can be used to achieve 98% collection efficiency?`,
           solution: String.raw`**Given:** 50 gr/ft³, mean size 8 μm. **Find:** cheapest collector for 70 %; collector for 98 %.
 
@@ -370,7 +370,7 @@ $$d_2 = 33\left(\frac{0.050}{3.3}\right)^{1/2.97} = 33(0.244) = 8\ \mu\mathrm{m}
           answer: String.raw`At 8 μm: low-resistance cyclone < 50 %, high-efficiency cyclone ≈ 52–71 % → cheapest for 70 % is the high-efficiency cyclone (15 gr/ft³ out). For 98 %: wet collector (≈ 98 %), or HE cyclone pre-cleaner + fabric filter/ESP (≥ 99 %).` },
         { id: "2016-17-Q5bi", label: "(b)(i)", marks: "7",
           topic: "dust-collection", sub: "How an electrostatic precipitator works",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2018-19-Q5a", "2011-12-Q4c"],
           text: String.raw`How does electrostatic precipitator work? – Explain with a neat sketch.`,
           solution: String.raw`![Wire-and-plate ESP: corona charging, migration to earthed plates, rapping into hoppers](fig/2018-19-Q5a-sol.svg)
 
@@ -383,7 +383,7 @@ Efficiency $\eta = 1 - \exp(-wA/Q)$. High efficiency for fine particles, low pre
           answer: String.raw`Corona at negative HV wires charges the particles, which migrate to earthed plates and are rapped into hoppers; η = 1 − exp(−wA/Q).` },
         { id: "2016-17-Q5bii", label: "(b)(ii)", marks: "6",
           topic: "dust-collection", sub: "Dust-collection trains for cement plants and coal-fired power plants",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q5a", "2014-15-Q1bii"],
           text: String.raw`Propose mechanical separator configurations suitable for particle separation from gaseous emission in cement manufacturing industry and coal fired power plant. Why do you propose such configurations for these industries? – Explain.`,
           solution: String.raw`![Cement kiln train and pulverised-coal boiler train](fig/2016-17-Q5b-sol.svg)
 
@@ -397,7 +397,7 @@ Efficiency $\eta = 1 - \exp(-wA/Q)$. High efficiency for fine particles, low pre
           answer: String.raw`Cement: (conditioning) → HE cyclones → fabric filter or ESP, because loadings are very high, dust is product to recover dry, cyclones relieve the fine collector, which gives ≥ 99.5 %. Coal power: air heater → (cyclone) → ESP or fabric filter → FGD scrubber, because huge gas volumes need low ΔP and ≥ 99.5 % for fine fly ash, plus SO₂ removal.` },
         { id: "2016-17-Q5c", label: "(c)", marks: "13",
           topic: "other", sub: "Impulse and reaction turbines with pressure–velocity diagrams",
-          type: "sketch", syllabus: "out", repeats: [],
+          type: "sketch", syllabus: "out", repeats: ["2011-12-Q2a"],
           text: String.raw`With P-V diagram explain the basic working principles of two types of turbines used in industry.`,
           solution: String.raw`*Not in the current slides. "P-V" here is the pressure–velocity diagram along the steam path.*
 
@@ -426,7 +426,7 @@ Efficiency $\eta = 1 - \exp(-wA/Q)$. High efficiency for fine particles, low pre
       parts: [
         { id: "2016-17-Q6a", label: "(a)", marks: "6",
           topic: "size-reduction", sub: "How applied energy is used in size reduction",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2011-12-Q3c"],
           text: String.raw`How is the applied energy utilized in size reduction operation? State briefly.`,
           solution: String.raw`Size reduction is very inefficient: only about **0.1–2 %** of the energy supplied to the machine appears as new surface energy. The applied energy is used (slides, C&R Vol. 2):
 
@@ -460,7 +460,7 @@ $$P = 9.23\ \mathrm{kW}$$
           answer: String.raw`Rittinger: K_R = (7/3)/(1/5 − 1/19) = 15.83; P = 2.5 × 15.83 × (1/3.5 − 1/19) = 9.23 kW (Kick would give 7.4 kW, Bond 8.2 kW).` },
         { id: "2016-17-Q6c", label: "(c)", marks: "12",
           topic: "size-reduction", sub: "Ball-mill critical speed: derivation and its parameters",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2022-23-Q8a", "2019-20-Q3b", "2018-19-Q4a", "2012-13-Q3c"],
           text: String.raw`What is the speed beyond which grinding action in a ball mill is negligible? Establish the mathematical relationship of that speed and hence comment on the variable parameters of the relationship.`,
           solution: String.raw`The **critical speed** $n_c$: at and above it the balls are held against the shell by centrifugal force all the way round, there is no relative motion and no grinding.
 
@@ -491,7 +491,7 @@ $$\omega_c^2(R - r) = g \;\Rightarrow\; n_c = \frac{1}{2\pi}\sqrt{\frac{g}{R - r
           answer: String.raw`Gas passes between zig-zag plates; droplets cannot follow the sharp turns, impinge on the plates, coalesce and drain; V_max = k√((ρ_L − ρ_V)/ρ_V), k ≈ 0.40 (up-flow)/0.65 ft/s (horizontal); good for ≥ 12–15 μm, high liquid loads, low ΔP.` },
         { id: "2016-17-Q6dii", label: "(d)(ii)", marks: "6",
           topic: "solids-handling", sub: "Limitations of a normal belt conveyor and remedies",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2015-16-Q5d"],
           text: String.raw`What are the major limitations of a normal belt conveyor? How can you overcome these limitations in case of a normal belt conveyor?`,
           solution: String.raw`**Limitations** (slides, Shamlou)
 1. **Temperature:** ordinary rubber-covered belts cannot handle solids above about **120 °C** (and long single belts > 300 m only for solids below about 80 °C).
@@ -526,7 +526,7 @@ $$\omega_c^2(R - r) = g \;\Rightarrow\; n_c = \frac{1}{2\pi}\sqrt{\frac{g}{R - r
           answer: String.raw`Accept only if tag/stamp (type, size, material, lot, burst pressure at coincident temperature, tolerance, K_R, ASME UD) matches the spec and burst ≤ MAWP; lot burst-test certificate; no visible damage/corrosion; correct holder, flow-direction arrow, torque; vacuum support, burst indicator and tell-tale gauge if ahead of a valve; acceptable operating ratio; documented.` },
         { id: "2016-17-Q7b", label: "(b)", marks: "14",
           topic: "relief", sub: "Balanced safety valve offsets back-pressure: force-balance proof",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2022-23-Q4b", "2018-19-Q1b"],
           text: String.raw`"Balance safety valve is advantages to offset back-pressure effect." – Justify the statement with some mathematical proof.`,
           solution: String.raw`![Force balance on a conventional and a balanced-bellows disc](fig/2018-19-Q1b-sol.svg)
 
@@ -561,7 +561,7 @@ $$P_1A_N = F_s + P_b(A_N - A_B)$$
           answer: String.raw`Every vessel protected; set ≤ MAWP (additional ≤ 105 %, fire ≤ 110 %); accumulation ≤ 10 % single, 16 % multiple, 21 % fire; certified UV/UD devices with set tolerance; close to vapor space, inlet loss ≤ 3 %; no stop valves except car-sealed/Appendix M; safe, drained, supported discharge with acceptable back-pressure; accessible, vertical, sealed.` },
         { id: "2016-17-Q7d", label: "(d)", marks: "9⅔",
           topic: "dust-collection", sub: "How a fabric filter separates particulates from gas",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2019-20-Q2a"],
           text: String.raw`How does a fabric filter separate particulate for gaseous emission? – Explain.`,
           solution: String.raw`![Pulse-jet baghouse: dust caught on bags, cleaned by air pulses into the hopper](fig/2018-19-Q6d-sol.svg)
 
@@ -609,7 +609,7 @@ The tighter limits for fired vessels reflect the hazard of overheating and steam
           answer: String.raw`Steam/power balance (need for exhaust or extraction steam), inlet and exhaust conditions and steam rate, power and its variation, driven-machine speed and variable-speed need, efficiency vs capital (single- vs multistage), reliability for critical services, control, steam quality, space, maintenance, cost, area classification.` },
         { id: "2016-17-Q8b", label: "(b)", marks: "7",
           topic: "solids-handling", sub: "Converting a belt conveyor into a vertical elevator",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2019-20-Q3c"],
           text: String.raw`How can you convert a belt conveyor into a vertical elevator? – Explain with a schematic diagram.`,
           solution: String.raw`A normal belt cannot lift vertically (material slides back above about 22°, 45° with cleats). Two ways to make a belt lift vertically:
 

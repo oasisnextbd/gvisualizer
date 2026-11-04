@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2017-18-Q1a", label: "(a)", marks: "30",
           topic: "evaporation", sub: "Double-effect backward-feed NaOH evaporator: maximum production",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2020-21-Q1c"],
           text: String.raw`A basket type of double effect evaporator connected for backward feed is to be used to concentrate a NaOH solution. Each evaporator body has a 2000 ft² heating area. The caustic solution enters at 80°F and is 5 weight percent NaOH. It is to be concentrated to 50 weight percent. Previous operation indicates that overall coefficients of 400 Btu/hr ft² °F and 550 Btu/hr ft² °F may be obtained in the first and second effects, respectively. Saturated steam at 150 psia is available, and a vacuum of 2 in. Hg absolute may be obtained with existing ejectors. What is the maximum production rate obtainable?
 
 Figures for Q1(a) (attached to the paper): saturated steam and water table (Keenan & Keyes; e.g. 350 °F: 134.53 psia, λ = 871.3 Btu/lb; 360 °F: 152.92 psia, λ = 862.9; 100 °F: 0.9503 psia, H_v = 1105.0; 110 °F: 1.2763 psia), Foust Fig. 19.11 Dühring lines for NaOH–H₂O, and Foust Fig. 19.13 enthalpy–concentration diagram for aqueous NaOH (reference: liquid water at 32 °F, infinitely dilute NaOH at 68 °F).`,
@@ -69,7 +69,7 @@ $$83.45\times10^6 = 83.45\times10^6\ \mathrm{Btu/h}\ \checkmark$$
           answer: String.raw`Both reduce the effective ΔT and so q = UAΔT: BPR is lost in every effect (ΣΔT = T_s − T_cond − ΣBPR), liquid head raises the boiling point at depth (large under vacuum, e.g. ~45 °F at the bottom of 5 ft liquor at 2 in Hg); reduce with low levels, falling-film/forced circulation and fewer effects.` },
         { id: "2017-18-Q1c", label: "(c)", marks: "8",
           topic: "evaporation", sub: "Working principle of entrainment separators",
-          type: "theory", syllabus: "partial", repeats: [],
+          type: "theory", syllabus: "partial", repeats: ["2020-21-Q1b", "2018-19-Q3d"],
           text: String.raw`Discuss the working principle of Entrainment separator.`,
           solution: String.raw`Boiling liquor throws droplets into the vapor; the **entrainment separator** in the vapor head removes them so that product is not lost and condensate or the next effect's steam chest is not contaminated.
 
@@ -142,7 +142,7 @@ $$\frac{Q}{m_c} \times 2000 = \frac{4540}{28.8}\times 2000 = 3.16\times10^5\ \ma
           answer: String.raw`Vacuum body with propeller-driven draft tube (up the tube, flash at surface, down the annulus), skirt baffle forming a settling zone, external fines-dissolving loop with feed return; gives large uniform crystals, controlled nucleation, little scaling.` },
         { id: "2017-18-Q2d", label: "(d)", marks: "16",
           topic: "mixing", sub: "Standard turbine shape factors; power number as function of Re",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q4b", "2016-17-Q3c", "2016-17-Q3b", "2014-15-Q7d", "2013-14-Q7b", "2012-13-Q7c"],
           text: String.raw`Write the values of shape factor standard turbine. Prove that Power Number is proportional to the Reynolds Number for an adequately baffled, geometrically similar systems.`,
           solution: String.raw`**Standard turbine design (MSH):** six-blade flat-blade disc (Rushton) turbine, four baffles, flat-bottomed tank filled to a depth equal to its diameter.
 
@@ -172,7 +172,7 @@ $$N_P = \psi(N_{Re})$$
       parts: [
         { id: "2017-18-Q3a", label: "(a)", marks: "12",
           topic: "compressors", sub: "Two-stage compression with 3 psi interstage drop: stage pressures",
-          type: "numerical", syllabus: "partial", repeats: [],
+          type: "numerical", syllabus: "partial", repeats: ["2019-20-Q7b", "2016-17-Q1b"],
           text: String.raw`For two stages of compression, what should be the pressure across the cylinders if the intercooler and piping pressure drop is 3 psi? Given Suction to the first stage is 0 psig and discharge from the second stage is 150 psig.`,
           solution: String.raw`**Given:** $P_1$ = 0 psig = 14.7 psia; final discharge 150 psig = 164.7 psia; intercooler + piping drop Δp = 3 psi.
 **Find:** suction and discharge pressure of each cylinder.
@@ -193,7 +193,7 @@ $$14.7R^2 - 3R - 164.7 = 0 \;\Rightarrow\; R = \frac{3 + \sqrt{9 + 4(14.7)(164.7
           answer: String.raw`Equal ratios: 14.7R² − 3R − 164.7 = 0 → R = 3.45; stage 1: 14.7 → 50.7 psia (0 → 36 psig); stage 2: 47.7 → 164.7 psia (33 → 150 psig).` },
         { id: "2017-18-Q3b", label: "(b)", marks: "20⅔",
           topic: "pumps", sub: "Pump type and impeller size for 300 gal/min at 70 ft",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2020-21-Q3a", "2019-20-Q7a", "2018-19-Q2d", "2016-17-Q4b", "2014-15-Q7b", "2012-13-Q7d", "2011-12-Q8d"],
           text: String.raw`It is necessary to pump a liquid with properties similar to the water at a rate of 300 gal/min against a head of 70 ft. Recommend the type of pump and select the appropriate size of the impeller.
 
 Figures for Q3(b) (attached to the paper): Foust Fig. 21.19 (characteristic curves and specific speeds for radial-, mixed- and axial-flow impellers: radial up to $N_s$ ≈ 4200, mixed 4200–9000, axial above 9000) and Foust Fig. 21.23 (operating ranges of a series of Goulds centrifugal pumps at 1750 rpm, labelled discharge × suction − maximum impeller diameter in inches).`,
@@ -214,7 +214,7 @@ $$N_s = \frac{n\sqrt{Q}}{H^{3/4}} = \frac{1750\sqrt{300}}{70^{3/4}} = \frac{1750
           answer: String.raw`N_s ≈ 1250 → radial-flow centrifugal; on Fig. 21.23 the point is on the 3×4−8/3×4−10 boundary → 3×4−10, 1750 rpm, impeller ≈ 9 in. (3×4−8 would need its full 8 in.); ≈ 7.6 bhp, 10 hp motor.` },
         { id: "2017-18-Q3c", label: "(c)", marks: "7+7",
           topic: "pumps", sub: "Multistage centrifugal pump; centrifugal pump characteristic curves",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2014-15-Q7c", "2011-12-Q8c"],
           text: String.raw`Write a short note on
 i. Multistage Centrifugal pump
 ii. Characteristics Curves of Centrifugal pump.`,
@@ -239,7 +239,7 @@ ii. Characteristics Curves of Centrifugal pump.`,
       parts: [
         { id: "2017-18-Q4a", label: "(a)", marks: "16",
           topic: "ejectors", sub: "Fixed-capacity ejector and steam pressure; eight advantages of ejectors",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2020-21-Q3b", "2018-19-Q2c"],
           text: String.raw`"In a fixed capacity ejector, increase in steam pressure do not increase vapor handling capacity" – explain the statement. Why Ejector is attractive for industrial application? State 8 reasons.`,
           solution: String.raw`**Explanation.** The steam nozzle and diffuser of a fixed-capacity ejector are proportioned for one design duty (motive pressure, load, discharge pressure). The nozzle is choked, so steam flow rises in direct proportion to the absolute steam pressure. Extra steam must pass the same fixed diffuser throat and be compressed to the discharge pressure; it takes up diffuser capacity that the suction load would otherwise use. The entrained vapor flow therefore does not rise and usually falls a little (Ludwig Fig. 6-12), while steam consumption rises. Higher pressure only improves stability against back-pressure. That is why design steam pressure is taken as the minimum expected at the nozzle (line pressure − 10 psi); throttling-type ejectors, with lower compression ratio, are the only kind with a family of curves vs motive pressure.
 
@@ -257,7 +257,7 @@ ii. Characteristics Curves of Centrifugal pump.`,
           answer: String.raw`Choked nozzle: more pressure → more steam (∝ P_s) through a diffuser sized for the design duty, so no gain (often a loss) in entrained vapor. Attractive: no moving parts, low cost, small, corrosion-resistant materials, handle condensables/slugs, large volumes at deep vacuum by staging, use plant steam, no lubrication, simple and reliable.` },
         { id: "2017-18-Q4b", label: "(b)", marks: "12⅔",
           topic: "drying", sub: "Merits of spray-dried products",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q3c", "2019-20-Q6b"],
           text: String.raw`Discuss the merits of Spray dried product.`,
           solution: String.raw`In a spray dryer the feed (solution, slurry or paste) is atomized by a nozzle or spinning disc into hot gas; drops dry in seconds and the powder is collected in cyclones/bag filters. The product has these merits:
 
@@ -273,7 +273,7 @@ ii. Characteristics Curves of Centrifugal pump.`,
           answer: String.raw`Spherical porous free-flowing uniform particles, high solubility/instant properties, minimal heat damage (seconds of contact at near wet-bulb temperature), liquid to finished powder in one step, controllable size and density, hygienic uniform low-moisture product.` },
         { id: "2017-18-Q4c", label: "(c)", marks: "9+9",
           topic: "drying", sub: "Tunnel kiln dryer; principle of drying and drying-rate curve",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2019-20-Q6b", "2015-16-Q4a", "2012-13-Q8c"],
           text: String.raw`Write a short note on
 i. Tunnel Kiln Dryer
 ii. Principle of Drying.`,
@@ -326,7 +326,7 @@ Drying is simultaneous **heat transfer** (to supply latent heat) and **mass tran
           answer: String.raw`Merits: smooth rotary, compact, high speed, variable-speed control, high efficiency in large/multistage units, cogeneration, reliable, oil-free exhaust, spark-free. Demerits: needs boiler/condenser/water treatment, poor efficiency when small or at part load, gears for low speed, slow start, blade erosion, noise.` },
         { id: "2017-18-Q5b", label: "(b)", marks: "11",
           topic: "other", sub: "Comparison of impulse and reaction turbines",
-          type: "theory", syllabus: "out", repeats: [],
+          type: "theory", syllabus: "out", repeats: ["2015-16-Q5e", "2011-12-Q2a"],
           text: String.raw`Make comparison between Impulse turbine and Reaction Turbine.`,
           solution: String.raw`| Point | Impulse turbine | Reaction turbine |
 |---|---|---|
@@ -474,7 +474,7 @@ $$E \propto (S_2 - S_1)$$
           answer: String.raw`True — Rittinger's law, E = K_R f_c(1/L₂ − 1/L₁) ∝ (S₂ − S₁) since specific surface ∝ 1/L; valid for fine grinding where much new surface is made (Kick for coarse, Bond intermediate).` },
         { id: "2017-18-Q7c", label: "(c)", marks: "10",
           topic: "dust-collection", sub: "Avoiding particle re-entrainment in an ESP",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q8c"],
           text: String.raw`How could you avoid particles re-entrainment problem in electrostatic precipitation?`,
           solution: String.raw`Re-entrainment returns collected dust to the gas and lowers efficiency. Its causes and remedies (slides):
 
@@ -494,7 +494,7 @@ $$E \propto (S_2 - S_1)$$
           answer: String.raw`Low resistivity: HE cyclones before the ESP (fly ash) or cyclones after it (carbon black agglomerates), gas conditioning or wet ESP. Erosion: uniform low gas velocity (distribution plates), shielding baffles, catch pockets. Also proper sectional rapping and hopper baffles/emptying.` },
         { id: "2017-18-Q7d", label: "(d)", marks: "16⅔",
           topic: "dust-collection", sub: "Classification of gas-cleaning fabric filters",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2015-16-Q7b"],
           text: String.raw`Discuss the classification of gas cleaning fabric filters.`,
           solution: String.raw`Gas-cleaning fabric filters are classified in five ways (slides):
 
@@ -569,7 +569,7 @@ $$A = \frac{m_0\,q}{G_T\left[\left(\dfrac{V}{m_0}\dfrac{\Delta H_v}{v_{fg}}\righ
           answer: String.raw`Runaway reliefs are usually two-phase (foaming), so DIERS methods with calorimeter data are used (tempered/gassy/hybrid; Leung: A = m₀q/{G_T[(V/m₀ · ΔH_v/v_fg)^½ + (C_VΔT)^½]²}); rupture disc + safety-relief valve to a containment system; prevention by alarms/interlocks.` },
         { id: "2017-18-Q8d", label: "(d)", marks: "9",
           topic: "dust-collection", sub: "Wet scrubbers: types and working",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2019-20-Q4d", "2011-12-Q1c"],
           text: String.raw`Wet Scrubbers.`,
           solution: String.raw`Wet scrubbers use a liquid (usually water) to capture particles (and absorb soluble gases). They overcome a weakness of cyclones and inertial collectors, in which collected dust is often swept back into the gas: wetted particles cannot be re-entrained.
 
@@ -586,7 +586,7 @@ $$A = \frac{m_0\,q}{G_T\left[\left(\dfrac{V}{m_0}\dfrac{\Delta H_v}{v_{fg}}\righ
           answer: String.raw`Liquid captures particles by impaction/interception/diffusion: spray towers (low ΔP, coarse), wet cyclones, venturi scrubbers (60–120 m/s throat, submicron, high ΔP), packed/impingement units; no re-entrainment, also absorb gases, but create sludge and corrosion.` },
         { id: "2017-18-Q8e", label: "(e)", marks: "9",
           topic: "solids-handling", sub: "Screw conveyor",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2020-21-Q8c1", "2019-20-Q4e", "2018-19-Q6e"],
           text: String.raw`Screw conveyor.`,
           solution: String.raw`![Screw conveyor: helical flight on a shaft rotating in a U-trough](fig/2018-19-Q6e-sol.svg)
 

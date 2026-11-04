@@ -98,7 +98,7 @@ The prepared slip is then cast in plaster (or pressure-cast in resin) moulds, th
           answer: String.raw`Types: impulse/reaction; condensing, back-pressure, extraction, induction, reheat; single- or multistage; axial/radial; single/tandem/cross-compound; API 611 general-purpose vs API 612 special-purpose. Select by power and speed, plant steam balance, steam conditions and cooling water, efficiency vs cost, reliability/sparing and control.` },
         { id: "2013-14-Q2b", label: "(b)", marks: "20",
           topic: "other", sub: "Pressure, velocity and pressure–velocity compounding of impulse turbines",
-          type: "sketch", syllabus: "out", repeats: [],
+          type: "sketch", syllabus: "out", repeats: ["2018-19-Q6b", "2012-13-Q2a"],
           text: String.raw`What are the different types of staging of impulse turbine? Schematically show the steam flow through different types of impulse staging and also show the pressure and steam velocity profiles for the impulse staging.`,
           solution: String.raw`A single impulse stage (De Laval) that expands steam from boiler to condenser pressure gives a very high jet velocity (≈ 1000–1500 m/s), so the optimum blade speed ($U \approx V_1\cos\alpha/2$) would be excessive and the leaving loss large. **Compounding** splits the energy over several rows.
 
@@ -142,7 +142,7 @@ The prepared slip is then cast in plaster (or pressure-cast in resin) moulds, th
       parts: [
         { id: "2013-14-Q3a", label: "(a)", marks: "30",
           topic: "dust-collection", sub: "Size ranges and separation mechanisms of cyclone, ESP, fabric filter",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2014-15-Q1bi"],
           text: String.raw`What are solid particle size ranges that can be effectively separated from gaseous medium by cyclone separator, ESP and fabric filter? Also describe their particle separation mechanism with neat sketches.`,
           solution: String.raw`| Collector | Effective size range | Typical efficiency | Pressure drop |
 |---|---|---|---|
@@ -191,7 +191,7 @@ $$\eta = 1 - \exp\!\left(-\frac{wA}{Q}\right)$$
       parts: [
         { id: "2013-14-Q4a", label: "(a)", marks: "10",
           topic: "solids-handling", sub: "Types and selection criteria of mechanical conveyors",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2014-15-Q1bvi"],
           text: String.raw`What are the major types and general selection criteria of mechanical conveyers?`,
           solution: String.raw`**Uses:** transporting bulk solids, feeding, discharging, metering and proportioning (Shamlou, *Handling of Bulk Solids*).
 
@@ -217,7 +217,7 @@ $$\eta = 1 - \exp\!\left(-\frac{wA}{Q}\right)$$
           answer: String.raw`Types: belt, screw, bucket elevator, chain (drag/flight/apron) conveyors (plus vibratory). Selection by capacity, distance, path configuration (horizontal/inclined/vertical) and solid properties (bulk density, size, abrasiveness, flowability, toxicity, corrosiveness, explosibility, temperature), plus enclosure, cost and power.` },
         { id: "2013-14-Q4b", label: "(b)", marks: "10",
           topic: "relief", sub: "Force balance showing why balanced-bellows valves resist back pressure",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2014-15-Q4a"],
           text: String.raw`Show mathematically (with neat sketch) the advantages of balanced safety valve over traditional safety valve.`,
           solution: String.raw`![Forces on the disc of a conventional and of a balanced-bellows valve](fig/2014-15-Q4a-sketch.svg)
 
@@ -240,7 +240,7 @@ The set pressure is **independent of the back pressure**.
           answer: String.raw`Conventional: P_set = F_s/A_N + P_b (set pressure rises with back pressure). Balanced bellows (A_B = A_N, bonnet vented): P_set = F_s/A_N, independent of P_b; also less capacity loss and spring protection.` },
         { id: "2013-14-Q4c", label: "(c)", marks: "10",
           topic: "relief", sub: "Guidelines for installing relief devices on pressure vessels",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2011-12-Q4d"],
           text: String.raw`Write the guidelines for installing safety devices on a pressure vessel.`,
           solution: String.raw`(Ludwig Ch. 7, ASME VIII UG-125 to UG-136, API RP 520 Part II; Crowl & Louvar Ch. 8.)
 
@@ -366,7 +366,7 @@ Figures for Question 5(b) (attached to the paper): Fig. 6-18, molecular-weight e
           answer: String.raw`Fig. 6-17 at 600 °F: air ratio ≈ 0.875, steam ≈ 0.825 → 225 × 0.875 = 197 lb/h air + 300 × 0.825 = 248 lb/h vapour ≈ 445 lb/h total.` },
         { id: "2013-14-Q5c", label: "(c)", marks: "10",
           topic: "ejectors", sub: "Why higher motive steam pressure does not raise fixed ejector capacity",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2023-24-Q3a", "2022-23-Q2a", "2018-19-Q2c", "2016-17-Q4d"],
           text: String.raw`Explain the following facts below: "An increase in steam pressure over design will not increase vapor handling capacity for the usual fixed capacity ejector".`,
           solution: String.raw`(Ludwig Ch. 6, "Performance factors: steam pressure".)
 
@@ -386,7 +386,7 @@ Figures for Question 5(b) (attached to the paper): Fig. 6-18, molecular-weight e
       parts: [
         { id: "2013-14-Q6a", label: "(a)", marks: "18",
           topic: "drying", sub: "General guidelines for selecting industrial drying equipment",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2020-21-Q2a", "2016-17-Q4a"],
           text: String.raw`Describe briefly general guidelines for selection of industrial drying equipment.`,
           solution: String.raw`**Steps of selection** (course slides): (1) **initial selection** from the feed and product characteristics, (2) **drying tests** in laboratory or pilot dryers of the candidate types (drying-rate curves, product quality), (3) **final selection** with an economic comparison and vendor quotations.
 
@@ -428,7 +428,7 @@ Figures for Question 5(b) (attached to the paper): Fig. 6-18, molecular-weight e
           answer: String.raw`Batch jacketed horizontal vacuum dryer with agitator: the charge passes from free-moving slurry → viscous paste → heavy adhesive mass (maximum torque) → lumps → free-flowing granules; vapour condensed under vacuum; suits heat-sensitive, solvent-wet or toxic materials.` },
         { id: "2013-14-Q6c", label: "(c)", marks: "16",
           topic: "drying", sub: "Spray dryer components and advantages of spray drying",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2016-17-Q4c"],
           text: String.raw`What are the major parts of spray drying system? What are the advantages of spray drying?`,
           solution: String.raw`![Spray-drying system](fig/2013-14-Q6c-sketch.svg)
 
@@ -455,7 +455,7 @@ Disadvantages: high capital cost and large chamber; low thermal efficiency (larg
       parts: [
         { id: "2013-14-Q7a", label: "(a)", marks: "15",
           topic: "pumps", sub: "Contents of a centrifugal pump specification sheet",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2012-13-Q7a"],
           text: String.raw`Discuss the specification sheet of pump.`,
           solution: String.raw`A pump specification (data) sheet (Ludwig Ch. 3, API 610 data sheet) tells the vendor everything needed to select and guarantee the pump.
 
@@ -481,7 +481,7 @@ Disadvantages: high capital cost and large chamber; low thermal efficiency (larg
           answer: String.raw`Service and number of pumps; liquid properties (SG, viscosity, vapour pressure, solids, corrosiveness) at pumping T; capacities (normal/rated/min), suction and discharge pressures, head, NPSH available; site and utilities; construction (type, seals, materials, ratings); driver; codes/tests; vendor data (curves, efficiency, NPSH required).` },
         { id: "2013-14-Q7b", label: "(b)", marks: "12",
           topic: "mixing", sub: "Dimensional analysis: power number a function of Reynolds number",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q4b", "2017-18-Q2d", "2016-17-Q3b", "2012-13-Q7c"],
           text: String.raw`Prove that Power Number is a function of Reynold's Number for mechanically agitated adequately baffled vessel.`,
           solution: String.raw`**Variables that affect the power P drawn by an impeller** (MSH Sec. 9): impeller diameter $D_a$, speed n, liquid density ρ and viscosity μ, gravity g, and the geometry: $D_t$, H, E, W, L, J, number of blades and baffles.
 
@@ -517,7 +517,7 @@ $$N_P = \frac{P}{\rho n^3 D_a^5} = \phi(N_{Re})\qquad\blacksquare$$
           answer: String.raw`Blending liquids and neutralization, dissolving solids, suspending solids (slurries, crystallizers), gas dispersion (aeration, hydrogenation), liquid–liquid dispersion (extraction, emulsions), heat transfer in agitated vessels, kneading pastes and polymers, blending dry powders.` },
         { id: "2013-14-Q7d", label: "(d)", marks: "13",
           topic: "compressors", sub: "Intercooling in multistage compression shown on a P–V diagram",
-          type: "sketch", syllabus: "partial", repeats: [],
+          type: "sketch", syllabus: "partial", repeats: ["2011-12-Q4a"],
           text: String.raw`Why is intercooling of multistage compression system used? — Discuss with a 'P-V' diagram.`,
           solution: String.raw`**Illustration:** air compressed from 1 to 9 bar, polytropic n = 1.3, suction 1 m³ at 300 K (clearance neglected).
 
@@ -573,7 +573,7 @@ On the P–V diagram the work is the area between the compression curve and the 
           answer: String.raw`Advantages: high purity in one step, attractive uniform solid product, low energy (heat of crystallization ≪ latent heat), low temperature, separates close-boiling/isomer mixtures. Design criteria: solubility data and yield, supersaturation method and level, kinetics and CSD (residence time, magma density), heat balance and scaling, agitation, purity, batch/continuous, materials, downstream handling, cost.` },
         { id: "2013-14-Q8b", label: "(b)", marks: "18⅔",
           topic: "evaporation", sub: "Optimum number of effects and optimum boiling time between cleanings",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2022-23-Q1c", "2018-19-Q3e", "2014-15-Q5a"],
           text: String.raw`In a chemical industry you have been assigned to determine the optimum number of multiple effect evaporation system and optimum time of operation. How do you find the optimum number of effect and optimum time of operation of multiple effect evaporator? Explain it.`,
           solution: String.raw`### 1. Optimum number of effects (economic balance)
 

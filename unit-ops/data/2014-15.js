@@ -47,7 +47,7 @@ QB.paper({
           answer: String.raw`(i) F; (ii) F (density difference); (iii) inertia; (iv) T; (v) set, reseating, set; (vi) 10%, MAWP; (vii) non-fragmenting; (viii) 3%; (ix) 121% of MAWP; (x) 0.1–2%; (xi) T.` },
         { id: "2014-15-Q1bi", label: "(b)(i)", marks: "4",
           topic: "dust-collection", sub: "Particle size ranges for cyclones and wet scrubbers",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2013-14-Q3a"],
           text: String.raw`What are the solid particle size ranges that can be effectively separated from gaseous medium by cyclone separator and wet scrubber?`,
           solution: String.raw`| Collector | Effective particle size range | Notes (Ludwig Tables 4-6, 4-7) |
 |---|---|---|
@@ -60,7 +60,7 @@ So a cyclone is effective for roughly **5–200 μm** (coarse to medium dust), w
           answer: String.raw`Cyclones: about 5–200 μm (high efficiency only above ≈ 10 μm; low-resistance types > 20–40 μm). Wet scrubbers: about 1–100 μm, down to ≈ 0.5 μm with venturi scrubbers.` },
         { id: "2014-15-Q1bii", label: "(b)(ii)", marks: "8",
           topic: "dust-collection", sub: "Dust collector choice for cement grinding and coal-fired power plants",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2016-17-Q5bii"],
           text: String.raw`Which type of dust collector is used frequently for the following industrial operations? Why?
 
 - Cement grinding
@@ -97,7 +97,7 @@ So a cyclone is effective for roughly **5–200 μm** (coarse to medium dust), w
           answer: String.raw`Fabric filter: flat, ≈ 99–99.9% at all sizes with a shallow minimum near 0.1–0.5 μm. ESP: > 99% for coarse particles but a deeper minimum (≈ 90%) around 0.2–0.5 μm, and efficiency depends on resistivity and A/Q.` },
         { id: "2014-15-Q1biv", label: "(b)(iv)", marks: "5",
           topic: "size-reduction", sub: "Size-reduction equipment classified by feed and product size",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2011-12-Q3b"],
           text: String.raw`Classify size reduction equipment based on feed and product size.`,
           solution: String.raw`| Class | Feed size | Product size | Equipment |
 |---|---|---|---|
@@ -124,7 +124,7 @@ Other descriptions of casings: **single-flow** vs **double-flow** (steam enters 
           answer: String.raw`Single casing (all stages, one shaft, one load); tandem compound (several casings in line on one shaft, one generator); cross compound (casings on separate shafts each with its own generator, steam in series).` },
         { id: "2014-15-Q1bvi", label: "(b)(vi)", marks: "10",
           topic: "solids-handling", sub: "Types and selection criteria of mechanical conveyors",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2013-14-Q4a"],
           text: String.raw`What are the types and general selection criteria of mechanical conveyers?`,
           solution: String.raw`**Uses:** transporting bulk solids, feeding, discharging, metering and proportioning (Shamlou, *Handling of Bulk Solids*).
 
@@ -173,7 +173,7 @@ $$F = \dot m\,\Delta V_w,\qquad P = \dot m\,U\,\Delta V_w$$
           answer: String.raw`Steam expands in nozzles (enthalpy → kinetic energy, V₁ ≈ 44.72√Δh); the jet's momentum change on moving blades gives a force ṁΔV_w and power ṁUΔV_w. Impulse: all expansion in nozzles; reaction: expansion also in moving blades; many stages; exhaust to condenser or process.` },
         { id: "2014-15-Q2b", label: "(b)", marks: "30",
           topic: "other", sub: "Steam path arrangements of turbines and their process selection",
-          type: "sketch", syllabus: "out", repeats: [],
+          type: "sketch", syllabus: "out", repeats: ["2019-20-Q2b", "2018-19-Q5c"],
           text: String.raw`Classify turbines based on steam path arrangements and draw their schematics showing steam flow path. Also describe their selection criteria for process.`,
           solution: String.raw`![Steam path arrangements](fig/2014-15-Q2b-sketch.svg)
 
@@ -217,7 +217,7 @@ $$F = \dot m\,\Delta V_w,\qquad P = \dot m\,U\,\Delta V_w$$
           answer: String.raw`On progressive grinding the coarse (transitory) mode of the size distribution shrinks and a fine (persistent) mode, characteristic of the material's structure, grows until the coarse mode vanishes; a grind limit is finally reached.` },
         { id: "2014-15-Q3b", label: "(b)", marks: "30",
           topic: "size-reduction", sub: "Schematics of crushers and grinders with the forces they use",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2019-20-Q1b", "2018-19-Q4c"],
           text: String.raw`Draw the schematic diagram of basic types of crushing and grinding equipment mentioning the type of forces involved in size reduction.`,
           solution: String.raw`**Forces used in size reduction:** compression (two rigid surfaces), impact (single rigid force, collision at high speed), attrition (rubbing of particles against each other or a surface), shear (particle–particle interaction, cutting).
 
@@ -240,7 +240,7 @@ $$F = \dot m\,\Delta V_w,\qquad P = \dot m\,U\,\Delta V_w$$
       parts: [
         { id: "2014-15-Q4a", label: "(a)", marks: "10",
           topic: "relief", sub: "Force balance showing why balanced-bellows valves resist back pressure",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2013-14-Q4b"],
           text: String.raw`Show mathematically (with neat sketch) the advantages of balanced safety valve over traditional safety valve.`,
           solution: String.raw`![Forces on the disc of a conventional and of a balanced-bellows valve](fig/2014-15-Q4a-sketch.svg)
 
@@ -263,7 +263,7 @@ The set pressure is **independent of the back pressure**.
           answer: String.raw`Conventional: P_set = F_s/A_N + P_b (set pressure rises with back pressure). Balanced bellows (A_B = A_N, bonnet vented): P_set = F_s/A_N, independent of P_b; also less capacity loss and spring protection.` },
         { id: "2014-15-Q4b", label: "(b)", marks: "30",
           topic: "relief", sub: "Rupture disk purpose, types and selection criteria",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2022-23-Q4a"],
           text: String.raw`What are rupture disks? Why and when are they used in pressure vessels? What are the basic types of rupture disks? Explain them with neat diagram? Also write down the selection criteria of basic types of rupture disks for process vessels.`,
           solution: String.raw`**What:** a rupture (bursting) disk is a non-reclosing pressure-relief device: a thin diaphragm of metal (stainless steel, nickel, Monel, Inconel, aluminium), metal with plastic seals, or graphite, held between special holder flanges, that **bursts at a predetermined pressure** (at a stated temperature) and opens the full vent area.
 
@@ -300,7 +300,7 @@ The set pressure is **independent of the back pressure**.
       parts: [
         { id: "2014-15-Q5a", label: "(a)", marks: "18",
           topic: "evaporation", sub: "Multiple-effect design: results desired and optimum number of effects",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q1c", "2013-14-Q8b"],
           text: String.raw`In a chemical industry you have been assigned the task of designing a multiple effect evaporator system.
 
 (i) What are the principle result desired?
@@ -330,7 +330,7 @@ Calculate the design (areas, steam) for n = 1, 2, 3, …, evaluate the annual co
           answer: String.raw`(i) Heating surface per effect, steam consumption/economy, temperatures/pressures and evaporation in each effect (and vapour to condenser). (ii) Economic balance: steam cost ∝ 1/economy falls with n, surface cost ∝ n rises; calculate both for n = 1, 2, 3… and choose the minimum total annual cost (typically 3–6 effects).` },
         { id: "2014-15-Q5b", label: "(b)", marks: "10⅔",
           topic: "evaporation", sub: "Heat flux per effect is 1/n of single-effect flux",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2022-23-Q1b", "2020-21-Q1a"],
           text: String.raw`Prove that
 
 $$(\text{Heat flux in each of a multiple effect evaporator}) = \frac{1}{n}\,\frac{1}{\text{Heat flux in a single effect evaporator}}$$`,
@@ -394,7 +394,7 @@ Operation (double acting): while one side of the piston draws in gas, the other 
           answer: String.raw`Cylinder (water-jacketed, clearance pockets), piston and rings, automatic suction and discharge valves, piston rod and packing, distance piece, crosshead and guides, connecting rod, crankshaft, frame and bearings, plus coolers, dampers, unloaders, relief valves and driver.` },
         { id: "2014-15-Q6b", label: "(b)", marks: "10⅔",
           topic: "compressors", sub: "Surge in centrifugal compressors: causes, detection, control",
-          type: "theory", syllabus: "partial", repeats: [],
+          type: "theory", syllabus: "partial", repeats: ["2018-19-Q3f", "2016-17-Q1c", "2012-13-Q6b"],
           text: String.raw`What do you mean by "Surge" for a centrifugal compressor? State its causes and how it can be identified and control?`,
           solution: String.raw`**Surge** is the unstable operation of a centrifugal (or axial) compressor at low flow. On the head–capacity curve, below the flow at the peak of the curve (the **surge point**), the compressor can no longer produce the pressure the downstream system holds; flow momentarily **reverses** from discharge to suction, the discharge pressure drops, forward flow resumes, pressure builds again, and the cycle repeats (typically 0.5–2 s per cycle). The surge points at different speeds form the **surge line** of the compressor map (see 2015-16 Q4(b)).
 
@@ -452,7 +452,7 @@ Operation (double acting): while one side of the piston draws in gas, the other 
           answer: String.raw`Gas composition, MW, k, Z, corrosives; mass and inlet volume flow (all cases), inlet P/T/humidity, discharge P; turndown and side streams; driver, speed and utilities; seals, materials, cooling, codes; site conditions; control/anti-surge; requested curves and guarantees.` },
         { id: "2014-15-Q6d", label: "(d)", marks: "6",
           topic: "ejectors", sub: "Uses of ejectors other than producing vacuum",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2012-13-Q6c"],
           text: String.raw`Other than creating vacuum, ejectors are used for many purposes, write the purposes.`,
           solution: String.raw`Ejectors (jet pumps: a high-pressure motive fluid entrains a low-pressure fluid; Ludwig Fig. 6-2) are also used as:
 
@@ -470,7 +470,7 @@ Operation (double acting): while one side of the piston draws in gas, the other 
       parts: [
         { id: "2014-15-Q7a", label: "(a)", marks: "16",
           topic: "pumps", sub: "Common centrifugal pump problems and their prevention",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2015-16-Q2b"],
           text: String.raw`What are the common problems of a centrifugal pump and how are they prevented?`,
           solution: String.raw`| Problem | Cause / symptom | Prevention |
 |---|---|---|
@@ -490,7 +490,7 @@ The two most common are **cavitation** (check NPSH) and **loss of prime/air bind
           answer: String.raw`Main problems: cavitation (keep NPSH_A > NPSH_R), air binding/loss of prime (prime, foot valve, venting), low-flow overheating (min-flow bypass), overload at run-out, water hammer, seal leakage, vibration/bearing failure, wear and corrosion (materials, maintenance).` },
         { id: "2014-15-Q7b", label: "(b)", marks: "16",
           topic: "pumps", sub: "Specific speed: pump type and impeller for 600 gpm at 50 ft",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2020-21-Q3a", "2019-20-Q7a", "2017-18-Q3b", "2012-13-Q7d", "2011-12-Q8d"],
           text: String.raw`Define the specific speed of a centrifugal pump. It is necessary to pump 600 gal/min against a head of 50 ft. What type of pump might be used? If the pump is in proper region select the impeller size.
 
 Figures attached to the paper: Foust Fig. 21.17, characteristics of a Goulds centrifugal pump (4 in inlet, 3 in outlet, 10 in casing taking 6, 7, 8, 9 or 10 in impellers): total head (ft), efficiency (%), brake horsepower and NPSH vs capacity (gal/min), (a) at 1750 rpm (0–450 gpm, head to 110 ft), (b) at 3550 rpm (0–900 gpm, head to 500 ft). Foust Fig. 21.19, characteristic curves and specific speeds of radial-flow (up to 4200), mixed-flow (4200–9000) and axial-flow (above 9000) impellers.`,
@@ -520,7 +520,7 @@ $$N_s = \frac{1750\sqrt{330}}{72^{0.75}} \approx 1300$$
           answer: String.raw`N_s = N√Q/H^0.75 = 2280 at 1750 rpm (4620 at 3550) → standard radial-flow centrifugal at 1750 rpm. The Fig. 21.17 pump (N_s ≈ 1300) cannot give 600 gpm at 1750 rpm and gives ~80 ft at 3550 rpm, so it is not in the proper region; two in parallel (300 gpm each) would use the 8 in impeller (≈ 55 ft, 65%).` },
         { id: "2014-15-Q7c", label: "(c)", marks: "6⅔",
           topic: "pumps", sub: "Multistage centrifugal pump sketch and comparison with single stage",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2017-18-Q3c"],
           text: String.raw`Draw a typical multistage centrifugal pump. How they differ from single stage pump?`,
           solution: String.raw`![Multistage centrifugal pump with four impellers in series](fig/2014-15-Q7c-sketch.svg)
 
@@ -538,7 +538,7 @@ In a multistage pump two or more impellers are mounted on one shaft in a common 
           answer: String.raw`Impellers in series on one shaft in a common casing; heads add (same flow), giving high pressure at good efficiency; needs diffusers/crossovers, thrust balancing (balance drum, opposed impellers) and costs more than a single-stage pump.` },
         { id: "2014-15-Q7d", label: "(d)", marks: "8",
           topic: "mixing", sub: "Shape factors of the standard turbine agitator",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2017-18-Q2d", "2016-17-Q3c", "2015-16-Q1c"],
           text: String.raw`Write the different shape factors for turbine design.`,
           solution: String.raw`**Standard turbine design** (MSH Sec. 9; Rushton): a flat-bottomed cylindrical tank with four wall baffles and a six-blade disk (Rushton) turbine on a centre shaft.
 
@@ -565,7 +565,7 @@ For geometrically similar vessels (same S values) $N_P$ depends only on $N_{Re}$
       parts: [
         { id: "2014-15-Q8a", label: "(a)", marks: "20",
           topic: "crystallization", sub: "Swenson–Walker copperas crystallizer: cooling water and number of sections",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2015-16-Q1a"],
           text: String.raw`A Swenson Walker crystallizer is to be used to produce 1 ton/hr of copperas (FeSO₄·7H₂O) crystals by the cooling of a saturated solution which enters the crystallizer at 120 °F. The slurry leaving the crystallizer will be at 80 °F. Solubility data are given in Figure for Q. 8(a). Cooling water enters the crystallizer jacket at 50 °F and leaves at 75 °F. It may be assumed that the over-all coefficient of heat transfer for crystallizer is 35 Btu/(hr)(sq ft)(°F). There are 3.5 sq ft of cooling surface per foot of crystallizer length. Average specific heat of initial solution is 0.70 Btu/(lb)(°F) and heat of solution of FeSO₄·7H₂O at 18 °C = −4400 cal/g formula weight.
 
 (i) Estimate the cooling water required in gpm.
@@ -632,7 +632,7 @@ $$A = \frac{Q}{U\Delta T_{lm}} = \frac{260{,}600}{35\times37.0} = 201\ \mathrm{f
           answer: String.raw`Granular/non-porous: long constant-rate period, low X_c, short linear falling rate (external control). Porous: constant rate then two falling-rate zones (capillary flow). Colloidal/fibrous: little or no constant rate, high X_c and equilibrium moisture, long diffusion-controlled falling rate, shrinkage and case hardening.` },
         { id: "2014-15-Q8c", label: "(c)", marks: "16",
           topic: "drying", sub: "Calculation steps for designing an adiabatic rotary (direct-contact) dryer",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2012-13-Q8d", "2011-12-Q6c"],
           text: String.raw`Write down the calculation steps in designing an adiabatic direct contact dryer.`,
           solution: String.raw`For a continuous adiabatic (direct-heat, air-heated) dryer such as a rotary dryer (MSH Sec. 24, the course rotary-dryer example), the steps are:
 

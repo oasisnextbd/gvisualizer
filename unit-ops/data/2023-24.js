@@ -216,7 +216,7 @@ $$A = \frac{q}{U\,\Delta T} = \frac{1.444\times10^7}{250 \times 61.7} = 936\ \ma
           answer: String.raw`(1) Varying feed solids and atomizer speed change droplet size and particle structure (hollow/fine particles → low, variable bulk density, poor flow): fix feed concentration and atomizer speed (VFD), recycle fines to agglomerate. (2) Varying inlet temperature changes moisture and morphology (ballooning or sticky under-dried powder): tight inlet control, outlet-temperature control by feed rate, dehumidified air, fluid-bed after-dryer/cooler.` },
         { id: "2023-24-Q2d", label: "(d)", marks: "10",
           topic: "drying", sub: "Length of an adiabatic cocurrent rotary dryer (MSH Ex. 24.4 data)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q3a", "2019-20-Q6a"],
           text: String.raw`Calculate the length of an adiabatic rotary dryer. In a rotary dryer, the air velocity is limited to 700 lb/ft²-h. The cross-sectional area of the dryer is 8 ft². Heating air is available at 260°F and a humidity of 0.01 lb of water per pound of dry air. The solids enter at 80°F and must not be heated to a temperature above 125°F. The outlet air humidity is 0.346 lb of water per pound of dry air.
 
 Figure for Question 2(c) (attached to the paper): psychrometric (humidity) chart for air–water at 1 atm; saturated steam tables; specific heats of gases and liquids.`,
@@ -291,7 +291,7 @@ $$L = \frac{q_T}{0.125\pi D G^{0.67}\overline{\Delta T}} = \frac{1.681\times10^5
       parts: [
         { id: "2023-24-Q3a", label: "(a)", marks: "3×5=15",
           topic: "ejectors", sub: "Ejector steam pressure, intercondensers and back pressure",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q2a", "2018-19-Q2c", "2013-14-Q5c"],
           text: String.raw`**Explain** the following cases
 
 (i) In a fixed capacity ejector, increase in steam pressure does not increase vapor handling capacity
@@ -322,7 +322,7 @@ $$L = \frac{q_T}{0.125\pi D G^{0.67}\overline{\Delta T}} = \frac{1.681\times10^5
           answer: String.raw`(i) Nozzle and diffuser are sized for one steam pressure; extra steam crowds the fixed diffuser throat, so capacity stays the same or falls (and below design it breaks). (ii) Intercondensers condense the previous stage's motive steam and condensables so the next stage handles only gas: large steam saving; barometric or surface type, P must exceed water vapour pressure at CW temperature. (iii) Back pressure = discharge pressure; above the maximum discharge pressure the ejector breaks and vacuum becomes unstable.` },
         { id: "2023-24-Q3b", label: "(b)", marks: "10",
           topic: "ejectors", sub: "Air leakage plus process vapour: 70°F air-equivalent ejector load",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2019-20-Q7c"],
           text: String.raw`A distillation system is to operate with a horizontal over-head condenser, Figure 3(b), and pressures are as marked. The estimated air leakage into the system is 7 lbs/hr. The molecular weight of the product vapor going out the condenser into the ejector (at 800°F) is 53. The vapor pressure of the condensing vapours is 3 mm Hg. abs at 80°F (See attachment).
 
 Figure Question 3(b), Vacuum System for Distillation (attached to the paper): column → horizontal overhead condenser → receiver; first-stage ejector (with air-bleed valve) → barometric intercondenser (34 ft seal leg) → second-stage ejector → sump or after-condenser. Triangles mark absolute pressures (mm Hg abs) and the hexagon the temperature (80°F) at the condenser vapour outlet, which is at 5 mm Hg abs. Also attached: Ludwig Fig. 6-18 (molecular weight entrainment ratio curve) and Fig. 6-17 (temperature entrainment ratio curve).`,
@@ -396,7 +396,7 @@ Combine (1) and (5) with (2)+(3): redesign or parallel the first-stage booster f
           answer: String.raw`(i) Find realistic single-failure overpressure causes by PHA/HAZOP (blocked outlet, dead-headed pump, regulator failure, cooling loss/runaway, tube rupture, fire, thermal expansion); size each and use the worst (largest vent area). (ii) Relief goes via closed header to a knockout/blowdown drum (liquid removal), then condenser, scrubber, flare or incinerator, with header back pressure and two-phase flow considered.` },
         { id: "2023-24-Q4b", label: "(b)", marks: "10",
           topic: "relief", sub: "Relief device locations on a polymerization reactor system (C&L Ex. 8-1)",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2022-23-Q4c", "2019-20-Q8b", "2015-16-Q8b"],
           text: String.raw`**Identify** relief valve location (attached figure Q. 4(b)) and attach it with answer scripts. **Justify** for your answer.
 
 Figure for Q. 4(b) (attached to the paper): polymerization reactor R-1 with agitator and internal coil; monomer in (5 gpm) through V-2; steam (125 psig) through V-4 and cooling water out through V-5 on the coil inlet side; cooling water in (200 gpm) through V-6 and a steam trap through V-7 on the coil outlet side; base fed by positive-displacement pump P-1 through V-1; product out through V-8, V-9; nitrogen (100 psig) through pressure controller PC, check valve and V-3; overhead condenser E-1 (cooling water V-10 in, V-11 out, 10 gpm) → V-12 → drum D-1 with level control (LC), vacuum through V-15, and pump P-2 (V-13, V-14).`,
@@ -735,7 +735,7 @@ For MAP this gives the coarse, free-flowing crystals required for fertilizer han
           answer: String.raw`Best: pure water with slow evaporative crystallization (NaCl solubility hardly changes with T) at low supersaturation, longer seeded residence time, in an Oslo/DTB classified vessel with fines destruction and gentle circulation. Benzene is immiscible (no effect, contamination); acetone is an anti-solvent giving rapid nucleation, fine crystals and occlusions.` },
         { id: "2023-24-Q7c", label: "(c)", marks: "15",
           topic: "mixing", sub: "Six-blade turbine in 70% NaOH: power needed vs 0.11 kW motor",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q7b", "2020-21-Q8a", "2016-17-Q3d"],
           text: String.raw`A flat-blade turbine with six blades is installed centrally in a vertical tank. The tank is 1.08 m in diameter and 1.08 m in height; the turbine is 0.36 m in diameter and is positioned 0.36 m from the bottom of the tank. The turbine blades are 0.045 m wide. The tank is filled with a solution of 70% caustic soda, at 80 °C, which has a viscosity of 19 cP and a density of 1700 kg/m³. The turbine is operated at 100 r/min. The tank is baffled. The motor available develops 0.11 kW. Analyze if the motor is adequate to drive the agitator at a speed of 100 r/min.
 
 Figure for Q. 7(c) (attached to the paper): power number $N_P = Pg_c/\rho n^3D_a^5$ versus $N_{Re} = D_a^2n\rho/\mu$ for six-blade turbines (MSH Fig. 9.12), with shape factors $S_1 = D_a/D_t$, $S_2 = E/D_t$, $S_3 = L/D_a$, $S_4 = W/D_a$, $S_5 = J/D_t$, $S_6 = H/D_t$:
@@ -832,7 +832,7 @@ $$E_2 = 13.0 \times 0.6826 = 8.87\ \mathrm{kW/(kg/s)}$$
           answer: String.raw`K_R f_c = 162.5 kW·mm/(kg/s): Rittinger E = 4.33 kW/(kg/s); Kick E = 13.0 log3/log5 = 8.87 kW/(kg/s). Kick's law is more reliable: a jaw crusher does coarse crushing, where energy depends on reduction ratio, not on new surface.` },
         { id: "2023-24-Q8c", label: "(c)", marks: "9",
           topic: "size-reduction", sub: "Ball mill critical speed N_c = (1/2π)√(g/(R − r)) derivation",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q4a", "2012-13-Q3c"],
           text: String.raw`The following expression is commonly associated with the operation of ball mills:
 $$N_c = \frac{1}{2\pi}\times\sqrt{\frac{g}{R - r}}$$
 What does $N_c$ represent in the context of ball mill operation? Derive this expression step by step, clearly explaining the meaning of each symbol involved.`,

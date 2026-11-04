@@ -44,7 +44,7 @@ $$A = \frac{m_0\,q}{G_T\left[\left(\dfrac{V}{m_0}\dfrac{\Delta H_v}{v_{fg}}\righ
           answer: String.raw`(i) Relief header → knockout/blowdown drum (liquid to catch tank) → vapor to condenser, scrubber, flare or incinerator. (ii) Runaway: exponential heat generation beats linear heat removal; T and P accelerate; vented as two-phase flow (DIERS/Leung sizing); prevented by alarms, interlocks and feed control.` },
         { id: "2018-19-Q1b", label: "(b)", marks: "15",
           topic: "relief", sub: "Why a balanced-bellows safety valve offsets back-pressure",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2022-23-Q4b", "2020-21-Q4a", "2016-17-Q7b"],
           text: String.raw`Justify the statement – "Balanced safety valve is advantageous to offset back-pressure effect."`,
           solution: String.raw`![Conventional valve: back-pressure acts on top of the disc; balanced-bellows valve: the bellows isolates the disc top from back-pressure](fig/2018-19-Q1b-sol.svg)
 
@@ -66,7 +66,7 @@ $$P_1A_N = F_s + P_b(A_N - A_B) = F_s \;\;(A_B = A_N)\;\Rightarrow\; P_{1,open} 
           answer: String.raw`Conventional: P_open = F_s/A_N + P_b (set pressure shifts with back-pressure). Bellows with A_B = A_N: P_open = F_s/A_N, independent of P_b; also protects spring from process fluid; capacity corrected by K_b.` },
         { id: "2018-19-Q1c", label: "(c)", marks: "7×3",
           topic: "relief", sub: "What is wrong with three relief-valve and rupture-disc layouts",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2020-21-Q4c"],
           text: String.raw`The following configurations provide us with the information on what not to do while placing relief valves or rupture disk on process vessels. What are the wrongs with the given configurations?
 
 ![Figure for Q1(c) (attached to the paper): (i) two vessels, one relief valve on the corrosive-liquid vessel, block valve in the connecting line; (ii) vessel fed by two 100 gpm pumps, emptied by one 100 gpm pump, relief sized for 100 gpm; (iii) rupture disc set at 110 psig and relief valve set at 100 psig, valve discharge tied into the disc outlet](fig/2018-19-Q1c.svg)`,
@@ -113,7 +113,7 @@ So "dry" means **reduced from an initial value to some acceptable final value** 
           answer: String.raw`A solid can only be dried to its equilibrium moisture X* (which depends on the solid and the air RH); "dry" products still hold water (salt 0.5 %, coal 4 %, paper 6–10 %), so drying means reduction to an acceptable final value.` },
         { id: "2018-19-Q2b", label: "(b)", marks: "25",
           topic: "drying", sub: "Dryer selection for a dairy (milk powder) plant",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2020-21-Q2a", "2016-17-Q4a"],
           text: String.raw`In a chemical industry you have been assigned to select an industrial dryer for dairy industry. Based on the General Guidelines of Dryer Selection, discuss the selection criteria of dryer for dairy industry.`,
           solution: String.raw`**Selection procedure** (slides): (1) initial selection of two or three dryer types that can handle the material at the required rate and quality; (2) drying tests on those types to fix operating conditions and product properties, which also form the basis of vendor quotations; (3) final selection on product quality, capital and operating cost.
 
@@ -141,7 +141,7 @@ So "dry" means **reduced from an initial value to some acceptable final value** 
           answer: String.raw`Liquid, heat-sensitive, large-tonnage, hygienic food feed → continuous co-current spray dryer with fluid-bed after-dryer, indirect air heating, cyclone + bag filter, SS316 CIP design; drum dryer only for feed grade, freeze dryer only for specialty products.` },
         { id: "2018-19-Q2c", label: "(c)", marks: "10",
           topic: "ejectors", sub: "Fixed-capacity ejector: higher steam pressure does not raise capacity",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2023-24-Q3a", "2022-23-Q2a", "2020-21-Q3b", "2017-18-Q4a", "2016-17-Q4d", "2013-14-Q5c"],
           text: String.raw`"In a fixed capacity ejector, increase in steam pressure does not increase vapor handling capacity" – explain the statement.`,
           solution: String.raw`**How the ejector is built.** In a fixed-capacity (non-throttling) ejector the steam nozzle throat and the diffuser throat are proportioned for one design point: a set motive-steam pressure, suction load and discharge pressure. The best steam economy is obtained only when nozzle and diffuser are matched to that duty (Ludwig ch. 6).
 
@@ -157,7 +157,7 @@ So "dry" means **reduced from an initial value to some acceptable final value** 
           answer: String.raw`Nozzle and diffuser are sized for one duty; more steam pressure only sends more steam (∝ P_s) through the choked nozzle, which loads the fixed diffuser throat, so entrained vapor does not rise (often falls); only stability against back-pressure improves.` },
         { id: "2018-19-Q2d", label: "(d)", marks: "15",
           topic: "pumps", sub: "Select pump type and size for 300 gal/min at 70 ft",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2019-20-Q7a", "2017-18-Q3b", "2016-17-Q4b"],
           text: String.raw`It is necessary to pump water at a rate of 300 gal/min against a head of 70 ft. Recommend a pump type and size. *See attachment.*
 
 Attachment (Foust Table 21.1, pump characteristics):
@@ -205,7 +205,7 @@ $$\text{brake hp} \approx \frac{5.30}{0.70} = 7.6\ \mathrm{hp} \;\Rightarrow\; \
           answer: String.raw`Pick-up pressure = minimum motive steam pressure at which an ejector regains stable vacuum when steam pressure is raised from the unstable region; it is higher than the break pressure (hysteresis), so design steam pressure is set above it (line pressure − 10 psi).` },
         { id: "2018-19-Q3b", label: "(b)", marks: "10",
           topic: "ejectors", sub: "Effect of superheated (and wet) motive steam in an ejector",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q2a"],
           text: String.raw`Effect of superheated steam in Ejector.`,
           solution: String.raw`- **Recommended condition:** dry steam with a **few degrees of superheat (5–15 °F)** at the nozzle. This prevents condensation in the nozzle, where the steam expands and cools sharply, so no droplets form.
 - **High superheat is of no advantage.** Superheat raises the available (isentropic) enthalpy drop per kg, so jet velocity rises; but it lowers the steam **density**. The nozzle throat is sized for a mass flow, and the choked mass flow $\dot m \propto P_sA_t/\sqrt{T_s}$ falls as $T_s$ rises. The gain in energy per kg is offset by the smaller mass of motive steam, so entrainment capacity does not improve (Ludwig: "the increase in available energy is offset by the decrease in steam density"). If superheated steam must be used, the nozzle has to be designed for it.
@@ -234,7 +234,7 @@ $$\text{brake hp} \approx \frac{5.30}{0.70} = 7.6\ \mathrm{hp} \;\Rightarrow\; \
           answer: String.raw`Freeze, then reduce pressure below the triple point (611 Pa) and heat gently so ice sublimes (primary), then desorb bound water (secondary); vapor caught on a cold condenser; preserves heat-sensitive products (drugs, plasma, foods) but slow and costly.` },
         { id: "2018-19-Q3d", label: "(d)", marks: "10",
           topic: "evaporation", sub: "Entrainment separators in evaporators",
-          type: "theory", syllabus: "partial", repeats: [],
+          type: "theory", syllabus: "partial", repeats: ["2022-23-Q1a", "2020-21-Q1b", "2017-18-Q1c"],
           text: String.raw`Entrainment Separator.`,
           solution: String.raw`**Why needed.** Vigorous boiling throws droplets of liquor into the vapor. Entrainment (i) loses product, (ii) contaminates the condensate or the next effect's steam chest (fouling, corrosion), and (iii) foaming organic liquors (milk, fatty acids) make it much worse. The vapor head therefore carries an **entrainment separator**: a disengaging space plus a device that removes droplets by impingement, change of direction or centrifugal force.
 
@@ -251,7 +251,7 @@ $$\text{brake hp} \approx \frac{5.30}{0.70} = 7.6\ \mathrm{hp} \;\Rightarrow\; \
           answer: String.raw`Removes liquor droplets from evaporator vapor to prevent product loss and contaminated condensate; works by gravity disengagement, impingement on wire mesh, direction change on chevron baffles, or centrifugal action; sized on Souders–Brown velocity.` },
         { id: "2018-19-Q3e", label: "(e)", marks: "10",
           topic: "evaporation", sub: "Optimum boiling time between evaporator cleanings",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2013-14-Q8b"],
           text: String.raw`Optimum maintenance schedule of Evaporator.`,
           solution: String.raw`Scale builds up on the heating surface, so the overall coefficient falls with boiling time θ. The slides give the scale law
 
@@ -276,7 +276,7 @@ $$\boxed{\theta_{opt} = \theta_c + \frac{2}{U_0}\sqrt{\frac{\theta_c}{\beta}}}$$
           answer: String.raw`With 1/U² = 1/U₀² + βθ, Q = (2AΔT/β)[√(1/U₀² + βθ) − 1/U₀]; maximising Q/(θ + θc) gives θ_opt = θc + (2/U₀)√(θc/β) (tangent from (−θc, 0)).` },
         { id: "2018-19-Q3f", label: "(f)", marks: "10",
           topic: "compressors", sub: "Surge and its control in centrifugal compressors",
-          type: "theory", syllabus: "partial", repeats: [],
+          type: "theory", syllabus: "partial", repeats: ["2016-17-Q1c", "2014-15-Q6b", "2012-13-Q6b"],
           text: String.raw`Surge control in centrifugal compressors.`,
           solution: String.raw`**Surge.** On each speed line the head (pressure ratio) of a centrifugal compressor rises as flow falls, up to a maximum. At lower flow the impeller can no longer produce the head the system demands: flow separates, momentarily reverses from the discharge, the pressure drops, flow re-establishes, and the cycle repeats every second or so. Surge causes violent vibration and noise, thrust-bearing and seal damage, high temperature and loss of throughput. The locus of the maximum-head points on the map is the **surge line**.
 
@@ -296,7 +296,7 @@ $$\boxed{\theta_{opt} = \theta_c + \frac{2}{U_0}\sqrt{\frac{\theta_c}{\beta}}}$$
       parts: [
         { id: "2018-19-Q4a", label: "(a)", marks: "15",
           topic: "size-reduction", sub: "Critical speed of a ball mill: derivation",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2023-24-Q8c", "2022-23-Q8a", "2019-20-Q3b", "2016-17-Q6c", "2012-13-Q3c", "2011-12-Q3d"],
           text: String.raw`What is the speed beyond which grinding action in a ball mill is negligible? Establish the mathematical relationship of that speed.`,
           solution: String.raw`The speed is the **critical speed** $n_c$: above it the balls are carried round pinned to the shell by centrifugal force, they never fall, there is no relative motion, and grinding stops. Below it the balls are lifted and cascade or cataract onto the charge.
 
@@ -315,7 +315,7 @@ $$n_c = \frac{60}{2\pi}\sqrt{\frac{2g}{D - d}} = \frac{42.3}{\sqrt{D - d}}\ \mat
           answer: String.raw`Critical speed: ω_c²(R − r) = g, n_c = (1/2π)√[g/(R − r)] = 42.3/√(D − d) rpm (m) = 76.6/√(D − d) rpm (ft); operate at 50–75 % of n_c.` },
         { id: "2018-19-Q4b", label: "(b)", marks: "15",
           topic: "mixing", sub: "Dimensional analysis: power number a function of Reynolds number",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2017-18-Q2d", "2016-17-Q3b", "2013-14-Q7b", "2012-13-Q7c"],
           text: String.raw`Prove that Power number is a function of Reynold's Number for mechanically agitated adequately baffled vessel.`,
           solution: String.raw`**Variables.** For a given impeller type the power P depends on impeller diameter $D_a$, speed n, liquid density ρ and viscosity μ, gravity g (through the vortex) and the tank geometry, expressed by the shape factors $S_1 = D_a/D_t$, $S_2 = E/D_a$, $S_3 = L/D_a$, $S_4 = W/D_a$, $S_5 = J/D_t$, $S_6 = H/D_t$:
 $$P = f(n, D_a, \rho, \mu, g, S_1, \ldots, S_6)$$
@@ -335,7 +335,7 @@ $$\boxed{N_P = \psi(N_{Re})}$$
           answer: String.raw`P = f(n, D_a, ρ, μ, g, S_i) → N_P = P/(ρn³D_a⁵) = ψ(Re, Fr, S₁…S₆); geometric similarity removes S_i, baffles remove the vortex so Fr drops out → N_P = ψ(Re) (= K_L/Re laminar, K_T turbulent).` },
         { id: "2018-19-Q4c", label: "(c)", marks: "30",
           topic: "size-reduction", sub: "Schematics of crushers and grinders with the forces they use",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2019-20-Q1b", "2014-15-Q3b"],
           text: String.raw`Draw a schematic diagram of basic types of crushing and grinding equipment mentioning the type of forces involved in size reduction.`,
           solution: String.raw`**Forces used in size reduction** (slides): **compression** (particle squeezed between two rigid surfaces), **impact** (particle struck by a single rigid force at high speed), **attrition** (rubbing between particles or against a surface) and **shear/cutting** (particle–particle or edge action, tearing fibrous material).
 
@@ -361,7 +361,7 @@ $$\boxed{N_P = \psi(N_{Re})}$$
       parts: [
         { id: "2018-19-Q5a", label: "(a)", marks: "15",
           topic: "dust-collection", sub: "Working of an electrostatic precipitator with sketch",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2016-17-Q5bi", "2011-12-Q4c"],
           text: String.raw`How does electrostatic precipitator work? Explain with a neat sketch.`,
           solution: String.raw`An **electrostatic precipitator (ESP)** removes charged solid particles or liquid droplets from a gas by electrostatic force.
 
@@ -383,7 +383,7 @@ with A the collecting area and Q the gas flow; efficiency rises with plate area 
           answer: String.raw`Corona at high-voltage negative wires ionises the gas, ions charge the particles, the charged particles migrate to earthed plates, and rapping/flushing drops the dust into hoppers; η = 1 − exp(−wA/Q).` },
         { id: "2018-19-Q5b", label: "(b)", marks: "15",
           topic: "crystallization", sub: "Crystallization mechanism on solubility–supersolubility diagram; importance",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2019-20-Q3a"],
           text: String.raw`Explain the mechanism of crystallization with the help of a solubility curve. Why is crystallization important for chemical industries?`,
           solution: String.raw`**Mechanism.** Crystallization proceeds in two steps: **nucleation** (birth of new crystals) and **growth** of the nuclei. Both are driven by **supersaturation**, the excess of concentration over the solubility at the same temperature, $\Delta c = c - c^*$ (or $s = c/c^*$).
 
@@ -404,7 +404,7 @@ Supersaturation is produced by **cooling** (agitated tank, Swenson–Walker), **
           answer: String.raw`Supersaturation (cooling past the solubility curve into the metastable zone, then the labile zone beyond the supersolubility curve) causes nucleation, then growth returns the liquor toward saturation; crystallization gives pure, uniform, easily handled solids at low energy.` },
         { id: "2018-19-Q5c", label: "(c)", marks: "30",
           topic: "other", sub: "Steam turbines by steam path: schematics and selection",
-          type: "sketch", syllabus: "out", repeats: [],
+          type: "sketch", syllabus: "out", repeats: ["2019-20-Q2b", "2014-15-Q2b"],
           text: String.raw`Classify turbines based on steam path arrangements and draw their schematics showing steam flow path. Also describe their selection criteria for process.`,
           solution: String.raw`*Steam turbines have no slides in the current course; answer from Perry/Lieberman (process drivers).*
 
@@ -437,7 +437,7 @@ Other classifications: by blading principle (impulse, reaction); by flow directi
       parts: [
         { id: "2018-19-Q6a", label: "(a)", marks: "12",
           topic: "size-reduction", sub: "Factors (feed properties) affecting size reduction",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2019-20-Q4b"],
           text: String.raw`Factors affecting size reduction.`,
           solution: String.raw`The choice of machine and the energy used depend on the product wanted, the quantity and size of feed, and the **properties of the feed** (slides, C&R Vol. 2 ch. 2):
 
@@ -461,7 +461,7 @@ Other classifications: by blading principle (impulse, reaction); by flow directi
           answer: String.raw`Hardness, structure, moisture (5–50 % cakes), crushing strength, friability, stickiness, soapiness, explosiveness, dustiness, bulk density, reduction ratio, softening temperature, abrasiveness/toughness, plus feeding method, open/closed circuit and wet/dry operation.` },
         { id: "2018-19-Q6b", label: "(b)", marks: "12",
           topic: "other", sub: "Velocity, pressure and pressure–velocity compounding of turbines",
-          type: "sketch", syllabus: "out", repeats: [],
+          type: "sketch", syllabus: "out", repeats: ["2020-21-Q5e", "2019-20-Q4c", "2013-14-Q2b", "2012-13-Q2a"],
           text: String.raw`Compounding of steam turbines.`,
           solution: String.raw`*Not in the current slides; answer from turbine textbooks.*
 
@@ -477,7 +477,7 @@ If the whole enthalpy drop of steam (say 40 bar → 0.1 bar) is converted in a s
           answer: String.raw`Splits the steam energy over several rows to limit blade speed: velocity compounding (one nozzle row, 2–3 moving rows with guide blades — Curtis), pressure compounding (nozzle + moving row repeated — Rateau), pressure–velocity compounding (Curtis stages in series).` },
         { id: "2018-19-Q6c", label: "(c)", marks: "12",
           topic: "crystallization", sub: "Draft-tube-baffle (DTB) crystallizer",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2019-20-Q4a", "2016-17-Q3e"],
           text: String.raw`Draft tube baffle crystallizer.`,
           solution: String.raw`![DTB crystallizer: draft tube with propeller, skirt baffle forming a settling zone, fines removal and dissolving loop, vapor to vacuum](fig/2018-19-Q6c-sol.svg)
 
@@ -512,7 +512,7 @@ If the whole enthalpy drop of steam (say 40 bar → 0.1 bar) is converted in a s
           answer: String.raw`Dusty gas passes through fabric bags; impaction, interception and diffusion, then the dust cake, give > 99 % collection; bags cleaned by shaking, reverse air or pulse jet; designed on air-to-cloth ratio, fabric, cleaning method, ΔP 5–20 in. water, kept above dew point.` },
         { id: "2018-19-Q6e", label: "(e)", marks: "12",
           topic: "solids-handling", sub: "Screw conveyor: construction, capacity, limits",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2020-21-Q8c1", "2019-20-Q4e", "2017-18-Q8e"],
           text: String.raw`Screw conveyor.`,
           solution: String.raw`![Screw conveyor: helical flight on a shaft rotating in a U-trough](fig/2018-19-Q6e-sol.svg)
 

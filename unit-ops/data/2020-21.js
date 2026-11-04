@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2020-21-Q1a", label: "(a)", marks: "10⅔",
           topic: "evaporation", sub: "Heat flux per effect is 1/n of single-effect flux",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2022-23-Q1b", "2014-15-Q5b"],
           text: String.raw`Validate: "Heat flux in each effect of evaporator of a multiple effect evaporator $\propto \frac{1}{n}$ Heat flux of a single effect evaporator".`,
           solution: String.raw`**Assumptions:** same steam temperature $T_s$ and same condenser temperature $T_c$ for both plants; each effect has the same area A and the same overall coefficient U; negligible boiling-point elevation (BPE) at first; feed near its boiling point.
 
@@ -41,7 +41,7 @@ $$\sum \Delta T_i = T_s - T_c - \sum_i \mathrm{BPE}_i$$
           answer: String.raw`Valid: ΣΔT_i = T_s − T_c and equal duties/areas give ΔT_i = ΔT_tot/n, so (q/A)_i = UΔT_tot/n = (1/n)(q/A)_single; capacity ≈ that of one effect, economy ≈ n. With BPE the flux is even below 1/n.` },
         { id: "2020-21-Q1b", label: "(b)", marks: "16",
           topic: "evaporation", sub: "Entrainment separator in evaporators: working principle with sketch",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2018-19-Q3d", "2017-18-Q1c"],
           text: String.raw`Illustrate the working principle of Entrainment separator with the help of a neat sketch.`,
           solution: String.raw`**Why it is needed.** Vigorous boiling in an evaporator throws up a spray of liquor drops; fine drops are carried with the vapour (**entrainment**). This causes loss of product, contaminates the condensate (or the steam chest of the next effect) and fouls downstream equipment. An entrainment separator (de-entrainer, catchall) is placed in the vapour head or in the vapour line to strip the drops and return them to the liquor.
 
@@ -59,7 +59,7 @@ $$\sum \Delta T_i = T_s - T_c - \sum_i \mathrm{BPE}_i$$
           answer: String.raw`Drops in the vapour are removed by gravity (low velocity in a tall vapour head), impingement/sudden change of direction (baffles, wire-mesh pad) and centrifugal force (tangential cyclone); the collected liquid drains back to the body and dry vapour goes to the condenser or next effect.` },
         { id: "2020-21-Q1c", label: "(c)", marks: "20",
           topic: "evaporation", sub: "Double-effect backward-feed NaOH evaporator: maximum production",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2017-18-Q1a"],
           text: String.raw`A basket type double effect evaporator connected for backward feed will concentrate a NaOH solution. Each evaporator body has a 2000 ft² heating area. The caustic solution enters at 80°F and is 5 weight percent NaOH. It is to be concentrated to 50 weight percent. Previous operation indicates that overall coefficients of 400 Btu/hr ft²°F [and 550 Btu/hr ft²°F] may be obtained in the first and second effects, respectively. Saturated steam at 150 psia is available, and a vacuum of 2 in. Hg absolute may obtained with existing ejectors. Estimate the maximum production obtainable.
 
 Steam table (Keenan et al.), NaOH enthalpy–concentration chart (Foust Fig. 19.13) and Dühring lines for NaOH–H₂O (Foust Fig. 19.11) are attached to the paper. Extract of the steam table:
@@ -136,7 +136,7 @@ $$\frac{A_1}{F} = \frac{531.2}{400\times107.3} = 0.01237,\qquad \frac{A_2}{F} = 
       parts: [
         { id: "2020-21-Q2a", label: "(a)", marks: "26⅔",
           topic: "drying", sub: "Dryer selection for the cement industry by the general guidelines",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2018-19-Q2b", "2016-17-Q4a", "2013-14-Q6a"],
           text: String.raw`Based on the General Guidelines of Dryer Selection, recommend the dryer type for the cement industry.`,
           solution: String.raw`**What has to be dried in a cement plant.** Raw materials (limestone, clay/shale, laterite, iron ore), additives (blast-furnace slag, fly ash, natural pozzolana, gypsum) and fuel (coal/pet coke). Feed moisture is typically 5–20 % (clay and slag up to 25 %), required product moisture ≤ 1 %, at tens to hundreds of tonnes per hour. Hot kiln exit gas and clinker-cooler air (250–400 °C) are available free.
 
@@ -168,7 +168,7 @@ $$\frac{A_1}{F} = \frac{531.2}{400\times107.3} = 0.01237,\qquad \frac{A_2}{F} = 
           answer: String.raw`Large continuous throughput of non-heat-sensitive, abrasive, granular solids with free waste heat → direct-fired (kiln-gas) co-current rotary dryer for raw materials/slag/clay; flash drying in air-swept grinding mills for raw meal and coal; cyclone + bag filter for dust.` },
         { id: "2020-21-Q2b", label: "(b)", marks: "10×2=20",
           topic: "drying", sub: "Short notes: fluidized bed dryer; merits of freeze-dried product",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q3c"],
           text: String.raw`Write short notes on following:
 
 (i) Fluidized bed dryer (ii) The merits of freeze dried product`,
@@ -204,7 +204,7 @@ Freeze drying (lyophilization): the material is frozen and the ice is **sublimed
       parts: [
         { id: "2020-21-Q3a", label: "(a)", marks: "10",
           topic: "pumps", sub: "Impeller size and power from Goulds pump curves (350 gpm, 300 ft)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2017-18-Q3b", "2014-15-Q7b"],
           text: String.raw`A centrifugal pump with the characteristics shown in Figure for Question No. 3(a) delivers 350 gal/min at a head of 300 ft. Find the size of the impeller and required power and justify your answer.
 
 Figure for Q3(a) (attached to the paper): Foust Fig. 21.17(b), Goulds centrifugal pump characteristics at 3550 rpm; inlet 4 in, outlet 3 in, 10-in casing that can take 6, 7, 8, 9 or 10 in impellers; curves of head against capacity for each impeller with efficiency contours (40–68 %), brake-horsepower lines (15–100 hp) and NPSH lines (7–35 ft).`,
@@ -236,7 +236,7 @@ $$P_B = \frac{350 \times 335}{3960 \times 0.62} = 47.8\ \mathrm{hp}\ (35.6\ \mat
           answer: String.raw`Point (350 gpm, 300 ft) lies between the 8-in (≈255 ft) and 9-in (≈335 ft) curves → use the 9-in impeller (throttle, or trim to ≈8.5 in); η ≈ 62 %, brake power ≈ 48 hp (≈ 43 hp if trimmed); 50 hp motor.` },
         { id: "2020-21-Q3b", label: "(b)", marks: "10+8=18",
           topic: "ejectors", sub: "Steam pressure and fixed-capacity ejectors; eight reasons ejectors are attractive",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2018-19-Q2c", "2017-18-Q4a"],
           text: String.raw`"In a fixed capacity ejector, an increase in steam pressure does not increase vapor handling capacity" - Evaluate the statement. Why is Ejector attractive for industrial application? Write eight reasons.`,
           solution: String.raw`### Evaluation of the statement (true)
 
@@ -308,7 +308,7 @@ $$P_B = \frac{350 \times 335}{3960 \times 0.62} = 47.8\ \mathrm{hp}\ (35.6\ \mat
       parts: [
         { id: "2020-21-Q4a", label: "(a)", marks: "14⅔",
           topic: "relief", sub: "Balanced-bellows safety valve and backpressure",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q4b", "2018-19-Q1b", "2011-12-Q4b"],
           text: String.raw`Evaluate the statement - "Balanced safety valve is advantageous to offset backpressure effect."`,
           solution: String.raw`**Backpressure** is the pressure at the valve outlet: *superimposed* (present before the valve opens, from a common header, scrubber or flare) and *built-up* (created by flow in the discharge piping once the valve opens).
 
@@ -336,7 +336,7 @@ $$p_{set} A_s = F_{spring}\quad(\text{independent of }p_b)$$
           answer: String.raw`Valid: in a conventional valve p_b adds to the spring force so set pressure and capacity vary (chatter above ~10 % built-up p_b); a bellows with area = seat area cancels the p_b forces (bonnet vented to atmosphere), giving a constant set point and tolerating p_b to ~30–50 %; costs more and capacity still needs K_b.` },
         { id: "2020-21-Q4b", label: "(b)", marks: "20",
           topic: "relief", sub: "Styrene runaway (Huff/Leung): all-vapour rupture-disc vent diameter",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2019-20-Q8a"],
           text: String.raw`Leung reported on the data of Huff involving a 3500-gal reactor with styrene monomer undergoing adiabatic polymerization after being heated inadvertently to 70°C. The vessel's maximum allowable working pressure (MAWP) is 5 bar. Given the following data, determine the relief vent diameter required for the rupture disc. Suppose that all vapor relief was assumed. Assume a set pressure of 4.5 bar and a maximum pressure of 5.4 bar absolute:
 
 **Data:** Volume (V): 3500 gal = 13.16 m³; reaction mass ($m_o$): 9500 kg; set temperature ($T_s$): 209.4 °C = 482.5 K. Data from VSP: maximum temperature ($T_m$): 219.5 °C = 492.7 K; $(dT/dt)_s$ = 29.6 °C/min = 0.493 K/s; $(dT/dt)_m$ = 39.7 °C/min = 0.662 K/s; γ = 1.32 and $C_o$ = 1.0.
@@ -391,7 +391,7 @@ $$d = \sqrt{\frac{4A}{\pi}} = \sqrt{\frac{4 \times 0.0202}{\pi}} = 0.160\ \mathr
           answer: String.raw`q = 1.218 kJ/kg s, Q_m = 37.2 kg/s, A = 0.0202 m², d = 0.16 m (6.3 in) for all-vapour relief (vs 0.33 m/13 in for two-phase).` },
         { id: "2020-21-Q4c", label: "(c)", marks: "6×2=12",
           topic: "relief", sub: "What is wrong with two relief layouts (pumps, supply tanks)",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2018-19-Q1c"],
           text: String.raw`The following configurations provide us with the information on what not to do while placing relief valves or rupture disk on process vessels. What are the wrongs with the given configurations and justify with appropriate reasons?
 
 Figure a: a vessel fed by three 100 gpm pumps, with a relief "sized for 100 gpm". Figure b: three supply tanks, each connected through a block valve (one closed, two open) to a common line with one relief "sized for two tanks" (Figure for Question no. 4(c), Crowl & Louvar, redrawn).
@@ -505,7 +505,7 @@ $$d_{pc} = \left[\frac{9\,\mu\,B}{2\pi\,N_t\,V_i\,(\rho_p-\rho_g)}\right]^{1/2}$
           answer: String.raw`Cyclones are cheap, rugged, take high loads but are efficient only for coarse (> 20–30 μm) dust, so they come first as pre-cleaners before a fine collector. Critical diameter = size collected with 50 % efficiency: d_pc = [9μB/(2πN_tV_i(ρ_p − ρ_g))]^½.` },
         { id: "2020-21-Q5d", label: "(d)", marks: "6⅔",
           topic: "dust-collection", sub: "Choosing dry or wet scrubbing, with an example",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q6c"],
           text: String.raw`What are the deciding criteria of choosing dry and wet scrubbing technique? Illustrate with an example.`,
           solution: String.raw`**Wet scrubbing** contacts the gas with a liquid (usually water or an alkaline slurry); **dry (and semi-dry) scrubbing** uses a dry powder or a slurry that dries in the gas (spray-dryer absorber), followed by a fabric filter or ESP.
 
@@ -529,7 +529,7 @@ $$d_{pc} = \left[\frac{9\,\mu\,B}{2\pi\,N_t\,V_i\,(\rho_p-\rho_g)}\right]^{1/2}$
           answer: String.raw`Choose by pollutant and required efficiency, gas temperature/dew point, particle stickiness/explosibility, water and wastewater availability, corrosion/plume, cost and by-product. Example: high-S coal boiler → wet limestone FGD (> 95 %, gypsum); low-S/small unit with no wastewater → spray-dryer/dry lime + bag filter.` },
         { id: "2020-21-Q5e", label: "(e)", marks: "6⅔",
           topic: "other", sub: "Velocity compounding in steam turbines; why reaction turbines lack it",
-          type: "theory", syllabus: "out", repeats: [],
+          type: "theory", syllabus: "out", repeats: ["2019-20-Q4c", "2018-19-Q6b"],
           text: String.raw`Explain velocity compounding in steam turbine and give proper reasoning of its absence in reaction turbine.`,
           solution: String.raw`**The problem compounding solves.** In a simple impulse (de Laval) turbine the whole pressure drop occurs in one set of nozzles, so the steam leaves at a very high velocity (≈ 1000–1200 m/s). For maximum blade efficiency the blade speed should be $u \approx \frac{V_1\cos\alpha}{2}$ (several hundred m/s), which needs impractically high rotor speeds (≈ 30,000 rpm) and large carry-over (exit) losses. Compounding splits the energy among several rows.
 
@@ -774,7 +774,7 @@ $$t_{L} = \frac{12\,H_L}{V_{s,H}} = \frac{12}{4.31} = 2.8\ \mathrm{min},\qquad t
       parts: [
         { id: "2020-21-Q8a", label: "(a)", marks: "16⅔",
           topic: "mixing", sub: "Power for a six-blade disk turbine mixing 50 % NaOH",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2023-24-Q7c", "2022-23-Q7b", "2016-17-Q3d"],
           text: String.raw`Calculate the power requirement to mix an aqueous solution of 50% NaOH in a baffled tank, 2 m in diameter. The mixing will be performed in the vertical tank filled to a height of 2 m by a disk turbine with six flat blades. The turbine is 0.67 m in diameter and positioned 0.67 m above the bottom of the tank. The turbine blades are 0.134 m wide, 0.167 m long and turn at 90 r/min. The solution has a viscosity of 0.012 Pa-s and density of 1500 kg/m³.
 
 Figure for question no 8(a) (attached to the paper): standard turbine geometry ($S_1 = D_a/D_t$, $S_2 = E/D_t$, $S_3 = L/D_a$, $S_4 = W/D_a$, $S_5 = J/D_t$, $S_6 = H/D_t$) and the $N_P$–$N_{Re}$ chart (MSH Fig. 9.13) with curves A (0.33, 0.33, 0.25, 0.2, 0.1, 1.0; 4 baffles), B (S₄ = 0.125, 4 baffles), C (4 baffles) and D (unbaffled).`,
@@ -841,7 +841,7 @@ $$= 5.8 \times 1500 \times 3.375 \times 0.1350 = 3964\ \mathrm{W}$$
           answer: String.raw`Draft-tube-baffle (DTB) crystallizer: vacuum body with draft tube and slow propeller; an annular baffle makes a settling zone from which fines are withdrawn, redissolved in a heater and recycled, so supersaturation is relieved by growth. Advantages: large uniform crystals, fewer fines, low scaling, continuous; disadvantages: large vessel, 4–6 h residence, extra heater/vacuum cost, complex control.` },
         { id: "2020-21-Q8c1", label: "(c)(1)", marks: "7",
           topic: "solids-handling", sub: "Short note: screw conveyor",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2019-20-Q4e", "2018-19-Q6e", "2017-18-Q8e"],
           text: String.raw`Write short notes on: 1. Screw conveyor`,
           solution: String.raw`![Screw conveyor in a U-trough: helical flight, inlet, discharge and drive](fig/2020-21-Q8c-sketch.svg)
 
@@ -856,7 +856,7 @@ $$= 5.8 \times 1500 \times 3.375 \times 0.1350 = 3964\ \mathrm{W}$$
           answer: String.raw`Rotating helical flight in a U-trough pushes solids along; P/D ≈ 1 (1.5 easy-flowing, 0.5–0.67 vertical); particle size < flight–casing gap, ≤ 120 °C, ≤ 100 m; capacity/power depend on length, diameter, pitch, rpm, fill and solid properties; enclosed, simple, can mix/heat, but high power and wear.` },
         { id: "2020-21-Q8c2", label: "(c)(2)", marks: "7",
           topic: "size-reduction", sub: "Short note: laws of size reduction and their applicability",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q6b", "2012-13-Q3b"],
           text: String.raw`Write short notes on: 2. Laws of size reduction and applicability of these laws.`,
           solution: String.raw`**General law.** The energy dE needed to make a small change dL in the size of a unit mass of material is a power function of the size:
 

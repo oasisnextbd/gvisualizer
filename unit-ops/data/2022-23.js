@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2022-23-Q1a", label: "(a)", marks: "12",
           topic: "evaporation", sub: "Entrainment separators and scale removal in evaporators",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2018-19-Q3d"],
           text: String.raw`Briefly discuss the Entrainment Separator and Methods of Scale Removal related to the operation and maintenance of evaporator.`,
           solution: String.raw`### Entrainment separators
 
@@ -50,7 +50,7 @@ $$\frac{1}{U^2} = \frac{1}{U_0^2} + \beta\theta$$
           answer: String.raw`Entrainment separators (vapor-head disengaging space, baffles, wire-mesh demisters, cyclones) remove liquor droplets from the vapor to stop product loss and fouling of the next effect/condenser. Scale (1/U² = 1/U₀² + βθ) is removed by boiling out with water or dilute acid/alkali, drilling/reaming the tubes, jetting, and prevented by high circulation velocity, seeding and antiscalants.` },
         { id: "2022-23-Q1b", label: "(b)", marks: "05",
           topic: "evaporation", sub: "Heat flux per effect is 1/n of single-effect flux",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2020-21-Q1a", "2014-15-Q5b"],
           text: String.raw`Derive that: "Heat Flux in each effect of evaporator of a multiple effect evaporator ∝ $\frac{1}{n}$ Heat Flux of a single effect evaporator".`,
           solution: String.raw`**Assumptions:** n effects of equal area A (usual practice, $A_1 = A_2 = \dots = A_n = A$) and roughly equal overall coefficients U; the same steam temperature $T_s$ and the same last-effect (condenser) temperature $T_c$ as the single effect; boiling-point elevation neglected; each effect transfers about the same heat ($q_1 \approx q_2 \approx \dots \approx q_n = q$, since the vapor from one effect condenses in the next).
 
@@ -72,7 +72,7 @@ So the heat flux in each effect is 1/n of the single-effect flux.
           answer: String.raw`With equal A and U and the same overall ΔT = T_s − T_c shared by n effects, ΔT_i = ΔT/n, so (q/A)_i = UΔT/n = (1/n)(q/A)_single; capacity stays about that of one effect, economy rises ≈ n times.` },
         { id: "2022-23-Q1c", label: "(c)", marks: "07",
           topic: "evaporation", sub: "Strategy to find the optimum number of effects",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2014-15-Q5a", "2013-14-Q8b"],
           text: String.raw`In the chemical industry you have been assigned to determine the optimum number of effects. Explain your strategy. What are the principle results desired?`,
           solution: String.raw`**Strategy (economic balance).** Adding effects saves steam but adds heating surface. For a fixed duty (feed rate, feed and product concentrations, steam pressure and condenser vacuum):
 
@@ -97,7 +97,7 @@ So the heat flux in each effect is 1/n of the single-effect flux.
           answer: String.raw`Solve the balances (Badger–McCabe trial method, equal areas) for n = 1, 2, 3…; total annual cost = steam cost (∝ 1/n) + fixed charges (∝ n) + water/labour; choose n at the minimum, subject to ΔT − ΣBPE constraints. Results wanted: steam consumption and economy, area per effect and total area, T, P, evaporation in each effect, condenser load, total cost.` },
         { id: "2022-23-Q1d", label: "(d)", marks: "11",
           topic: "evaporation", sub: "Single-effect NaOH evaporator 10% to 50%: heating area",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2011-12-Q5c"],
           text: String.raw`Determine the heating area required for the production of 10,000 lb/h of 50% NaOH solution from a 10% NaOH feed entering at 100°F. Evaporation is to be carried out in a single body standard evaporator for which an overall heat transfer coefficient of 500 Btu/h.ft².°F is expected. Steam is available saturated at 50 psig, and the evaporator can be operated at 10 psi vacuum relative to barometric pressure of 14.7 psia.
 
 Figures for Q1 (attached to the paper): Dühring lines for the NaOH–H₂O system (Foust Fig. 19.11), enthalpy–concentration chart for NaOH–H₂O, and the saturated-steam table. Rows of the steam table used:
@@ -150,7 +150,7 @@ $$A = \frac{q}{U\,\Delta T} = \frac{45.85\times10^6}{500(64)} = 1433\ \mathrm{ft
       parts: [
         { id: "2022-23-Q2a", label: "(a)", marks: "6×2=12",
           topic: "ejectors", sub: "Ejector: excess steam pressure and superheated motive steam",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2023-24-Q3a", "2018-19-Q3b", "2018-19-Q2c", "2016-17-Q4d", "2013-14-Q5c"],
           text: String.raw`Explain the following cases:
 
 (i) In a fixed capacity ejector, increase in steam pressure does not increase vapor handling capacity
@@ -215,7 +215,7 @@ $$\frac{0.441(29.7)}{20} = \frac{13.1}{20} = 0.654$$
           answer: String.raw`Per 100 lb feed: V = 13.6 lb, crystals 29.7 lb, liquor 56.7 lb (12.2%). Magma 86.4 lb: 34.4% Na₂SO₄·10H₂O, 65.6% mother liquor (23.2% Na₂SO₄ overall); recovery ≈ 65%.` },
         { id: "2022-23-Q2c", label: "(c)", marks: "11",
           topic: "crystallization", sub: "Factors to consider in crystallizer design",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2015-16-Q1b", "2011-12-Q7a"],
           text: String.raw`List the factors that needs to be considered to design a Crystallizer.`,
           solution: String.raw`**1. Phase equilibrium (solubility data)**
 - Shape of the solubility curve: steep (KNO₃, copperas) → cooling crystallizer; flat (NaCl) → evaporative crystallizer; intermediate → vacuum (adiabatic flash) crystallizer.
@@ -247,7 +247,7 @@ $$\frac{0.441(29.7)}{20} = \frac{13.1}{20} = 0.654$$
       parts: [
         { id: "2022-23-Q3a", label: "(a)", marks: "12",
           topic: "drying", sub: "Adiabatic rotary dryer for heat-sensitive solid: thermal efficiency",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2023-24-Q2d", "2019-20-Q6a"],
           text: String.raw`Calculate the thermal efficiency of an adiabatic rotary dryer to dry 2800 lb/h of a heat-sensitive solid from an initial moisture content of 15% to a final moisture content of 0.5%, both dry basis. The solids have a specific heat of 0.52 Btu/lb °F; they enter at 80°F and must not be heated to a temperature above 125°F. Heating air is available at 260°F and a humidity of 0.01 lb of water per pound of dry air. The maximum allowable mass velocity of the air is 700 lb/ft²-h.
 
 Figures for Q3(a) (attached to the paper): humidity chart (air–water, 1 atm) and specific heats of gases (Chilton chart).`,
@@ -307,7 +307,7 @@ Drying times are short (5–120 min) because of the large exposed area; typical 
           answer: String.raw`Screen-conveyor dryer: hot air forced through the permeable bed (convection to the whole particle surface, h from packed-bed correlation; ln[(T₁−T_s)/(T₂−T_s)] = has/(Gc_s)); constant-rate surface at T_wb, R = h(T−T_wb)/λ; then falling-rate diffusion; minor conduction/radiation. Screw-conveyor dryers heat by conduction from the jacket.` },
         { id: "2022-23-Q3c", label: "(c)", marks: "12",
           topic: "drying", sub: "Freeze-dried products and merits of spray-dried products",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2020-21-Q2b", "2019-20-Q6b", "2017-18-Q4b"],
           text: String.raw`Write a short note on (i) Freeze Dried Product and (ii) The merits of Spray Dried Product.`,
           solution: String.raw`**(i) Freeze-dried products**
 
@@ -332,7 +332,7 @@ A solution, slurry or paste is atomised (disk, pressure nozzle or two-fluid nozz
       parts: [
         { id: "2022-23-Q4a", label: "(a)", marks: "6×2=12",
           topic: "relief", sub: "Rupture disks and maximum allowable working pressure",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2014-15-Q4b"],
           text: String.raw`Write a short note on (i) Rupture Disk and (ii) Maximum Allowable Pressure.`,
           solution: String.raw`**(i) Rupture disk**
 
@@ -351,7 +351,7 @@ A solution, slurry or paste is atomised (disk, pressure nozzle or two-fluid nozz
           answer: String.raw`(i) Rupture disk: non-reclosing diaphragm bursting at set pressure; cheap, leak-tight, large vent area, fast; but cannot reclose, fatigue/corrosion premature bursts; often upstream of a relief valve with a gauge between. (ii) MAWP: maximum gauge pressure at the vessel top at design temperature (ASME); set pressure ≤ MAWP, accumulation 10/16/21% above it.` },
         { id: "2022-23-Q4b", label: "(b)", marks: "07",
           topic: "relief", sub: "Balanced-bellows safety valve offsets backpressure effect",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2020-21-Q4a", "2018-19-Q1b", "2016-17-Q7b", "2011-12-Q4b"],
           text: String.raw`Justify the statement below- "Balanced safety valve is advantageous to offset back-pressure effect."`,
           solution: String.raw`**Backpressure in a conventional spring valve.** In a conventional valve the bonnet (spring chamber) is open to the discharge side. Backpressure $P_b$ (superimposed from a common flare/scrubber header, or built up by flow in the discharge piping) acts on the **top** of the disc over the nozzle area $A_N$, while the process pressure P acts on the bottom. The valve opens when
 
@@ -375,7 +375,7 @@ Disadvantages: more expensive, the bellows can fail (bonnet vent must be piped s
           answer: String.raw`In a conventional valve P_open = P_set + P_b because backpressure acts on top of the disc; a bellows of area equal to the seat area with a vented bonnet cancels the backpressure force, so P_open = P_set independent of P_b, capacity is less affected and the spring is protected — hence preferred for variable, high backpressure headers.` },
         { id: "2022-23-Q4c", label: "(c)", marks: "16",
           topic: "relief", sub: "Locate relief devices on polymerization reactor flowsheet",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2023-24-Q4b", "2019-20-Q8b", "2015-16-Q8b"],
           text: String.raw`See Figure for Q. No. 4(c) and locate relief valve location and attach it with answer scripts. State the reason for your answer.
 
 Figure for Q4(c) (attached to the paper): polymerization reactor R-1 with internal cooling/heating coil (monomer in 5 gpm through V-2; steam 125 psig through V-4; cooling water out through V-5; cooling water in 200 gpm through V-6; steam trap via V-7); positive-displacement pump P-1 feeding base through V-1 and V-8; product out through V-9; overhead condenser E-1 (cooling water in V-10, out V-11, 10 gpm); knock-out drum D-1 (V-12 in, vacuum through V-15, level control LC on pump P-2 with V-13, V-14); nitrogen at 100 psig through a pressure controller PC and check valve to the reactor through V-3.`,
@@ -399,7 +399,7 @@ Other checks: the N₂ line is protected by PSV-1/PSV-4 (its regulator failure i
       parts: [
         { id: "2022-23-Q5a", label: "(a)", marks: "10",
           topic: "dust-collection", sub: "Dust-collector trains for cement plant and coal power plant",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2016-17-Q5bii"],
           text: String.raw`Propose mechanical separator configurations suitable for particle separation from gaseous emission in cement manufacturing industry and coal fired power plant. Why do you propose such configurations for these industries? - Explain.`,
           solution: String.raw`![Proposed collector trains: cement kiln/raw mill and clinker cooler; pulverised-coal boiler](fig/2022-23-Q5a-sol.svg)
 
@@ -510,7 +510,7 @@ $$D = \left(\frac{4(81.69)}{0.5\pi(3)}\right)^{1/3} = 4.108\ \mathrm{ft},\qquad 
       parts: [
         { id: "2022-23-Q6a", label: "(a)", marks: "6+6=12",
           topic: "separator-selection", sub: "Sylvan chart: cyclone train outlet and kiln flue-gas collectors",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2019-20-Q1a2", "2019-20-Q1a1", "2016-17-Q5aii", "2016-17-Q5ai"],
           text: String.raw`Use the sylvan chart supplied to select mechanical separation equipment for the following cases:
 
 i. Material leaving a chemical process varies between 20 and 40 grains/cu. ft with 60 to 80 micron range of mean diameter of particle. A low resistance cyclone followed by a high efficiency cyclone would be used. What will be the final concentration and mean particle size of the gaseous stream?
@@ -542,7 +542,7 @@ $$c_2 = 3(1-0.99) = 0.03\ \mathrm{gr/ft^3}\ (0.02\text{–}0.04)$$
           answer: String.raw`(i) 30 gr/ft³, 70 µm → LR cyclone ≈90% → 3 gr/ft³, ~35 µm → HE cyclone ≈99% → ≈0.03 gr/ft³ (0.02–0.04), mean ≈6 µm. (ii) 70%: high-efficiency cyclone (cheapest); 98%: wet collector/scrubber, fabric filter or ESP (after a cyclone pre-cleaner).` },
         { id: "2022-23-Q6b", label: "(b)", marks: "5+5=10",
           topic: "size-reduction", sub: "Laws of size reduction and their applicability",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2020-21-Q8c2"],
           text: String.raw`Solids may be broken in many different ways, but only four of them are commonly used in size-reduction machines: (1) compression, (2) impact, (3) attrition or rubbing, and (4) cutting. Write short notes on laws of size reduction and applicability of these laws.`,
           solution: String.raw`**General law.** The energy dE needed for a small change dL in the size of unit mass of material is a power function of size (Coulson & Richardson Vol. 2, ch. 2):
 
@@ -572,7 +572,7 @@ Hukki showed that the actual energy–size curve is a composite: Kick's law at c
           answer: String.raw`dE/dL = −CL^p: Rittinger (p = −2) E = K_R f_c(1/L₂ − 1/L₁), energy ∝ new surface, fine grinding 10–1000 µm; Kick (p = −1) E = K_K f_c ln(L₁/L₂), energy ∝ reduction ratio, coarse crushing > 1 mm; Bond (p = −3/2) E = E_i(√(100/L₂) − √(100/L₁)), work index, intermediate range.` },
         { id: "2022-23-Q6c", label: "(c)", marks: "8",
           topic: "dust-collection", sub: "Criteria for choosing dry vs wet scrubbing",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2020-21-Q5d"],
           text: String.raw`What are the deciding criteria for choosing dry and wet scrubbing technique? Illustrate with an example`,
           solution: String.raw`**Wet scrubbing:** the gas is contacted with water or a liquid reagent (spray tower, packed tower, venturi, wet cyclone). **Dry (and semi-dry) scrubbing:** a dry powder (lime, sodium bicarbonate, activated carbon) is injected, or a slurry is sprayed so that it dries completely (spray-dryer absorber); the solids are caught in a bag filter or ESP.
 
@@ -625,7 +625,7 @@ A second example: a sticky, hygroscopic fertiliser dust (or a combustible dust w
           answer: String.raw`Cyclone (product fines, coarse ash) → combustion control + catalytic oxidizer (CO→CO₂) → SCR (NOx; control N₂O) → lime/sorbent injection + pulse-jet bag filter (PM2.5, SO₂, HCl, Hg) → wet scrubber → amine CO₂ absorber → stack; diesel exhaust: DOC (CO, CH₄, HC) + DPF (soot) + SCR (NOx).` },
         { id: "2022-23-Q7b", label: "(b)", marks: "12",
           topic: "mixing", sub: "Disk turbine power in baffled tank for 50% NaOH",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2023-24-Q7c", "2020-21-Q8a", "2016-17-Q3d"],
           text: String.raw`Calculate the power requirement to mix an aqueous solution of 50% NaOH in a baffled tank, 2 m in diameter. The mixing will be performed in the vertical tank filled to a height of 2 m by a disk turbine with six flat blades. The turbine is 0.67 m in diameter and positioned 0.67 m above the bottom of the tank. The turbine blades are 0.134 m wide, 0.167 m long and turn at 90 r/min. The solution has a viscosity of 0.012 Pa-s and density of 1500 kg/m³.
 
 Figure for Question 7(b) (attached to the paper): standard turbine geometry ($S_1 = D_a/D_t$, $S_2 = E/D_t$, $S_3 = L/D_a$, $S_4 = W/D_a$, $S_5 = J/D_t$, $S_6 = H/D_t$) and the power-number curves $N_P = Pg_c/\rho n^3 D_a^5$ vs $N_{Re} = D_a^2 n\rho/\mu$:
@@ -664,7 +664,7 @@ $$P = N_P\,\rho\,n^3 D_a^5 = 5.8(1500)(1.5)^3(0.67)^5 = 5.8(1500)(3.375)(0.1350)
       parts: [
         { id: "2022-23-Q8a", label: "(a)", marks: "2+8=10",
           topic: "size-reduction", sub: "Ball-mill critical speed: definition and derivation",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2019-20-Q3b", "2018-19-Q4a", "2016-17-Q6c", "2012-13-Q3c"],
           text: String.raw`What is the speed beyond which grinding action in a ball mill is negligible? Establish and prove the mathematical relationship of the speed.`,
           solution: String.raw`**The speed:** the **critical speed** $n_c$, the lowest speed at which the balls are carried right round in contact with the shell (centrifuging). At and above it there is no relative motion between balls and shell, no cascading or cataracting, so the grinding action is negligible (and the lining wears). Mills are run at about 50–75% (typically 65–80% in practice) of $n_c$.
 
@@ -710,7 +710,7 @@ $$\boxed{n_c = \frac{1}{2\pi}\sqrt{\frac{g}{R-r}}}$$
           answer: String.raw`Jaw (Blake): intermittent, large gape for its capacity, lower cost/headroom, needs feeder, good for sticky or tough feed, up to ~1000 t/h; gyratory: continuous, high capacity (to 4500 t/h), choke-fed from trucks, lower power/maintenance per t, tall and costly. Rule: t/h < 162 (gape, m)² → jaw, otherwise gyratory.` },
         { id: "2022-23-Q8c", label: "(c)", marks: "5",
           topic: "dust-collection", sub: "Avoiding particle re-entrainment in electrostatic precipitators",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2017-18-Q7c"],
           text: String.raw`How could you avoid particles re-entrainment problem in electrostatic precipitation?`,
           solution: String.raw`Re-entrainment has two causes (course slides, Mech. sep. 2-3):
 

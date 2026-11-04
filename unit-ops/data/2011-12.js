@@ -61,7 +61,7 @@ Inlet area $A_i = BH = D_c^2/8$, so the gas flow is $Q = V_i D_c^2/8$ (the slide
           answer: String.raw`CPD = cut size removed with 50% efficiency; used for cyclones: D_pc = [9μB/(2πN_tV_i(ρ_s−ρ))]^½ (N_t ≈ 5). Lapple proportions: inlet B = D/4, H = D/2; outlet D_e = D/2, vortex finder S = 5D/8; barrel L = 2D, cone 2D, dust outlet D/4.` },
         { id: "2011-12-Q1c", label: "(c)", marks: "17⅔",
           topic: "dust-collection", sub: "Wet scrubber separation mechanisms and scrubber types",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2019-20-Q4d", "2017-18-Q8d"],
           text: String.raw`Describe briefly the mechanism of separation action of wet scrubbers. Draw simple sketches to show different types of wet scrubbers.`,
           solution: String.raw`**Mechanisms.** A wet scrubber brings the dust-laden gas into intimate contact with a liquid (usually water) as drops, films or bubbles; particles are transferred to the liquid, and the liquid is then separated from the gas (an entrainment separator is always the last element). The particle-capture mechanisms are:
 
@@ -91,7 +91,7 @@ The dust–liquid mixture leaves as a slurry (to a settling pond or clarifier); 
       parts: [
         { id: "2011-12-Q2a", label: "(a)", marks: "10",
           topic: "other", sub: "Working principles of impulse and reaction turbines",
-          type: "sketch", syllabus: "out", repeats: [],
+          type: "sketch", syllabus: "out", repeats: ["2017-18-Q5b", "2016-17-Q5c", "2015-16-Q5e"],
           text: String.raw`Write down the working principles of reaction and impulse turbines with simple schematics.`,
           solution: String.raw`![Impulse stage (all expansion in the fixed nozzles, constant pressure across the moving blades) vs reaction stage (expansion in both fixed and moving blades), with pressure and velocity along the stage](fig/2011-12-Q2a-sketch.svg)
 
@@ -194,7 +194,7 @@ Size reduction is also one of the largest energy users in industry (a few percen
           answer: String.raw`Liberates minerals from gangue (ore before flotation), increases surface for reaction/combustion/leaching/extraction (pulverised coal, cement raw meal, phosphate rock), meets product size specs (cement, pigments, pharmaceuticals, flour), eases handling, mixing and transport; a major energy consumer, so equipment choice matters.` },
         { id: "2011-12-Q3b", label: "(b)", marks: "10",
           topic: "size-reduction", sub: "Classifying size-reduction equipment; energy vs product size",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2014-15-Q1biv"],
           text: String.raw`Classify the size reduction equipment based on feed and product size. Show graphically the energy requirement of different size reduction equipment.`,
           solution: String.raw`**Classification (MSH ch. 29; course slides)**
 
@@ -222,7 +222,7 @@ So a crusher uses well under 1 kWh/t, while ball-mill grinding and ultrafine gri
           answer: String.raw`Coarse crushers (jaw, gyratory: 2 m → 50–250 mm), intermediate crushers (rolls, cone: → 5–50 mm), grinders (hammer, roller, rod/ball mills: → 0.1 mm–75 µm), ultrafine grinders (fluid-energy, stirred mills: 1–50 µm), cutters. Energy (Bond, W_i = 12): ≈ 0.2–0.5 kWh/t crushing, ≈ 3 kWh/t intermediate, ≈ 10 kWh/t ball mill, > 24 kWh/t ultrafine.` },
         { id: "2011-12-Q3c", label: "(c)", marks: "10",
           topic: "size-reduction", sub: "Forces in size reduction and how applied energy is used",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2016-17-Q6a"],
           text: String.raw`How do different forces arise during size reduction operation? In how many ways, is the applied energy utilized in size reduction operation?`,
           solution: String.raw`**How the forces arise** (four kinds used in machines, MSH ch. 29):
 
@@ -247,7 +247,7 @@ The crushing efficiency $\eta_c = e_s(A_{wb} - A_{wa})/W_n$ (surface energy crea
           answer: String.raw`Forces: compression (between jaws/rolls), impact (hammers, falling balls), attrition/shear (rubbing surfaces), cutting (knives) — they set up internal stress that propagates flaws. Energy goes to elastic and plastic deformation, new surface (only ≈ 0.1–2%), deformation of machine parts, friction, heat, noise/vibration and drive losses.` },
         { id: "2011-12-Q3d", label: "(d)", marks: "16⅔",
           topic: "size-reduction", sub: "Ball mill: construction and how grinding action is obtained",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2018-19-Q4a"],
           text: String.raw`Describe with neat sketch. How the grinding actions are obtained in a ball mill.`,
           solution: String.raw`**Construction.** A horizontal steel cylinder (shell) lined with wear-resistant liners (manganese steel, rubber, ceramic), rotating slowly on trunnions, about half filled (30–50% by volume) with grinding media: steel or cast-iron balls (25–125 mm), flint pebbles (pebble mill) or rods (rod mill). Feed enters through the hollow trunnion at one end; product leaves through the other trunnion (overflow) or through a grate (grate-discharge). Long tube mills and compartment mills have several chambers with progressively smaller balls. Lifters on the liner raise the charge.
 
@@ -271,7 +271,7 @@ The crushing efficiency $\eta_c = e_s(A_{wb} - A_{wa})/W_n$ (surface energy crea
       parts: [
         { id: "2011-12-Q4a", label: "(a)", marks: "16⅔",
           topic: "compressors", sub: "Intercooling in multistage reciprocating compressors",
-          type: "sketch", syllabus: "partial", repeats: [],
+          type: "sketch", syllabus: "partial", repeats: ["2013-14-Q7d"],
           text: String.raw`Why are intercoolers used with multistage reciprocating compressor? How does intercoolers contribute to the efficiency of multistage compressor? — Explain with the help of necessary diagram.`,
           solution: String.raw`**Why multistage with intercooling.** For a high overall pressure ratio a single-stage compression would give (i) a very high discharge temperature (lubricant breakdown, valve damage, risk of explosion with oil vapor, material limits), (ii) a large work input, and (iii) a low volumetric efficiency because the clearance gas re-expands over a large pressure ratio ($\eta_V = 1 - c[(P_2/P_1)^{1/n} - 1]$ falls to zero at high ratios). The compression is therefore split into stages, with the gas cooled in an **intercooler** (water-cooled exchanger, with a moisture separator) between stages, ideally back to the suction temperature.
 
@@ -289,7 +289,7 @@ So intercooling increases the isothermal efficiency (isothermal work ÷ actual w
           answer: String.raw`Single-stage high ratios give very high discharge T, high work and low volumetric efficiency; intercoolers cool the gas back to suction T between stages, so the next stage starts on the isothermal line and the path approaches isothermal compression (shaded area saved). Minimum work at equal stage ratios r = (P_final/P_1)^(1/N). Example 1→9 bar, n = 1.3: 2.86 vs 2.50 P₁V₁ (13% saved), discharge 498 K → 387 K.` },
         { id: "2011-12-Q4b", label: "(b)", marks: "10",
           topic: "relief", sub: "Set pressure, backpressure and balanced safety valve principle",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2022-23-Q4b", "2020-21-Q4a", "2012-13-Q4d"],
           text: String.raw`What is set pressure and back pressure of a relief valve? Explain the working principle of a balanced safety valve with neat schematic diagram.`,
           solution: String.raw`**Set pressure:** the inlet (gauge) pressure at which a relief device is adjusted to start opening (pop for a safety valve, begin to lift for a relief valve, burst for a rupture disc) under service conditions. It is set at or below the MAWP of the protected vessel, normally ≈ 10% above the operating pressure; with accumulation the vessel pressure may reach 110% of MAWP (116% with multiple valves, 121% for fire).
 
@@ -312,7 +312,7 @@ $$P A_N = F_{spring}\ \Rightarrow\ P_{open} = P_{set}$$
           answer: String.raw`Set pressure: inlet pressure at which the valve starts to open (≤ MAWP). Backpressure: outlet pressure, superimposed (before opening) or built-up (flow in discharge line). Balanced valve: bellows of seat area with vented bonnet cancels backpressure forces → P_open = P_set regardless of P_b; spring protected; used for variable/high backpressure headers.` },
         { id: "2011-12-Q4c", label: "(c)", marks: "10",
           topic: "dust-collection", sub: "Working principle of an electrostatic precipitator",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2018-19-Q5a", "2016-17-Q5bi"],
           text: String.raw`Describe the working principle of an ESP with simple diagram.`,
           solution: String.raw`![Plate-type ESP: negative discharge wires between grounded collecting plates; corona charges the particles, which migrate to the plates and are rapped into hoppers](fig/2011-12-Q4c-sketch.svg)
 
@@ -331,7 +331,7 @@ $$\eta = 1 - \exp\left(-\frac{wA}{Q}\right)$$
           answer: String.raw`High negative DC voltage on discharge wires creates corona; gas ions charge the particles (field charging > 0.5 µm, diffusion < 0.1 µm); charged particles drift to grounded plates (η = 1 − exp(−wA/Q)); deposit is rapped/washed into hoppers. High efficiency on fines, low ΔP, large flows; costly, resistivity-sensitive.` },
         { id: "2011-12-Q4d", label: "(d)", marks: "10",
           topic: "relief", sub: "Guidelines for installing relief devices on pressure vessels",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2013-14-Q4c"],
           text: String.raw`Write the guidelines for installing safety devices on a pressure vessel.`,
           solution: String.raw`Guidelines (Crowl & Louvar ch. 8 installation practice; ASME VIII / API 520 Part II):
 
@@ -360,7 +360,7 @@ $$\eta = 1 - \exp\left(-\frac{wA}{Q}\right)$$
       parts: [
         { id: "2011-12-Q5a", label: "(a)", marks: "16⅔",
           topic: "evaporation", sub: "Why multiple effects; merits of forward, backward, mixed, parallel feed",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2015-16-Q3a"],
           text: String.raw`Why multiple effect evaporators are used? Discuss the merits and demerits of different feeding schemes/arrangements of multiple effect evaporator.`,
           solution: String.raw`**Why multiple effects.** In a single effect about 1 kg of steam evaporates about 1 kg of water (economy ≈ 0.8–1), and the latent heat of the vapor is wasted in the condenser. In a multiple-effect unit the vapor from one effect is the heating steam of the next, which operates at a lower pressure and temperature; the latent heat is reused n times, so the **steam economy is roughly n** (e.g. 2.5–2.8 for three effects). The price is n times the heating surface for about the same capacity (since the total ΔT is shared). Multiple effects are therefore used when evaporation duties are large and steam is costly (sugar, caustic soda, black liquor, salt, desalination, milk).
 
@@ -375,7 +375,7 @@ $$\eta = 1 - \exp\left(-\frac{wA}{Q}\right)$$
           answer: String.raw`Reusing the vapor as heating steam in lower-pressure effects gives economy ≈ n (at the cost of ≈ n× area). Forward feed: no pumps, product at low T (heat-sensitive), but cold feed lowers economy and viscous liquor at low U. Backward: best economy with cold feed and high U for viscous liquor, but pumps and product at high T. Mixed: compromise. Parallel: for saturated feeds/crystallising (salt).` },
         { id: "2011-12-Q5b", label: "(b)", marks: "10",
           topic: "evaporation", sub: "Evaporator for heat-sensitive fruit juice 10% to 50%",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2019-20-Q5a"],
           text: String.raw`A client wants to concentrate a heat sensitive fruit juice from 10% to 50%. What type of evaporator should you be suggesting him to use and why?`,
           solution: String.raw`**Recommendation:** a **falling-film evaporator** operated under **vacuum** (multiple effect or with mechanical/thermal vapor recompression), with a **plate or agitated-film (wiped-film) finisher** for the last, viscous part of the concentration toward 50% solids; aroma recovery from the first-effect vapor.
 
@@ -390,7 +390,7 @@ $$\eta = 1 - \exp\left(-\frac{wA}{Q}\right)$$
           answer: String.raw`A vacuum falling-film evaporator (multiple-effect/vapor-recompression), with an agitated thin-film (or plate) finisher for the viscous 50% end: seconds of residence, low boiling temperature, no hydrostatic head, high U at small ΔT, handles viscosity, hygienic — so flavour, colour and vitamins are preserved.` },
         { id: "2011-12-Q5c", label: "(c)", marks: "20",
           topic: "evaporation", sub: "Single-effect NaOH evaporator 10% to 50%: heating area",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q1d"],
           text: String.raw`Determine the heating area required for the production of 10,000 lb/hr of 50% NaOH solution from a 10% NaOH feed entering at 100°F. Evaporation is to be carried out in a single effect evaporator for which an overall coefficient of 500 Btu/hr.ft² °F is expected. Steam is available saturated at 50 psig, the evaporator can be operated at 10 psi vacuum relative to barometric pressure of 14.7 psia.
 
 Attached (for Q5): Table 1, properties of saturated steam and water; Fig. 1(a) Dühring lines for the NaOH–H₂O system; Fig. 1(b) enthalpy–concentration diagram for aqueous NaOH (reference states: liquid water at 32°F, NaOH infinitely dilute at 68°F). Rows of Table 1 used:
@@ -475,7 +475,7 @@ or by graphical integration $t = \frac{m_s}{A}\int_{X_2}^{X_1}\frac{dX}{R}$ of t
           answer: String.raw`Simultaneous heat and mass transfer. Rate curve under constant conditions: warm-up to T_wb; constant-rate period (surface wet, R_c = h(T−T_w)/λ_w, external control); critical moisture X_c; first falling rate (unsaturated surface); second falling rate (internal diffusion/capillary flow) down to X*. Times t_c = m_s(X₁−X_c)/(AR_c), t_f from integration.` },
         { id: "2011-12-Q6c", label: "(c)", marks: "16⅔",
           topic: "drying", sub: "Calculation steps for designing an adiabatic direct-contact dryer",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2014-15-Q8c", "2012-13-Q8d"],
           text: String.raw`Write down the calculation steps in designing an adiabatic direct contact dryer.`,
           solution: String.raw`(Same as 2012-13 Q8d; a worked case is 2022-23 Q3a.) Method of MSH ch. 24:
 
@@ -500,7 +500,7 @@ $$\frac{q_T}{m_s} = c_{ps}(T_{sb} - T_{sa}) + X_a c_{pL}(T_w - T_{sa}) + (X_a - 
       parts: [
         { id: "2011-12-Q7a", label: "(a)", marks: "12",
           topic: "crystallization", sub: "Factors to consider in designing a crystallization process",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q2c", "2015-16-Q1b"],
           text: String.raw`What are the factors to be considered in designing crystallization process?`,
           solution: String.raw`(Compare 2022-23 Q2c.)
 
@@ -586,7 +586,7 @@ $$B^0 = C\exp\left[-\frac{16\pi\sigma^3 v_M^2}{3k^3T^3(\ln s)^2}\right]$$
       parts: [
         { id: "2011-12-Q8a", label: "(a)", marks: "16⅔",
           topic: "ejectors", sub: "Attractive features of ejectors; motive-steam pickup pressure",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2012-13-Q6e"],
           text: String.raw`What are the features that make ejectors attractive for industrial vacuum applications? What is pickup pressure in a ejector system?`,
           solution: String.raw`**Features (Ludwig ch. 6; also 2012-13 Q6e)**
 
@@ -617,7 +617,7 @@ So a "1½ × 3 − 13" pump has a 1½-in discharge, a 3-in suction and a casing 
           answer: String.raw`Discharge nozzle 1½ in × suction nozzle 3 in − maximum (nominal) impeller diameter 13 in.` },
         { id: "2011-12-Q8c", label: "(c)", marks: "9×2=18",
           topic: "pumps", sub: "Short notes: NPSH and pump characteristic curves",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2017-18-Q3c"],
           text: String.raw`Write a short notes on followings: (i) NPSH (ii) Characteristics Curves.`,
           solution: String.raw`**(i) Net positive suction head (NPSH)**
 
@@ -647,7 +647,7 @@ Plots, at constant speed (for a given impeller diameter), of **head H, brake hor
           answer: String.raw`(i) NPSH_A = (P_a − P_v)/ρg ± Z_s − h_fs must exceed the pump's NPSH_R (rises with Q) by a margin, else cavitation (noise, head loss, impeller pitting); raise NPSH_A by elevating/pressurising/cooling the suction source and reducing suction losses. (ii) H, η, BHP and NPSH_R vs Q at constant speed: head falls from shut-off, η peaks at BEP, power rises (radial); operating point at the system curve; affinity laws.` },
         { id: "2011-12-Q8d", label: "(d)", marks: "9",
           topic: "pumps", sub: "Pump type for 2500 gal/min at 50 ft head via specific speed",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2017-18-Q3b", "2014-15-Q7b", "2012-13-Q7d"],
           text: String.raw`It is necessary to pump 2500 gal/min against a head of 50 ft. What type of pump might be used?
 
 Figure for Q8 (attached to the paper, Foust Fig. 21.19): characteristic curves and specific speeds for various impellers (Worthington Pumps): radial-flow impellers (standard centrifugal pump) operate at the lowest specific speeds (up to 4200), mixed-flow impellers at higher specific speeds (4200 to 9000), axial-flow impellers at the highest specific speeds (above 9000).`,

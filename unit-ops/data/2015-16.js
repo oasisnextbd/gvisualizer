@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2015-16-Q1a", label: "(a)", marks: "25",
           topic: "crystallization", sub: "Swenson–Walker copperas crystallizer: cooling water and number of sections",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2014-15-Q8a"],
           text: String.raw`A Swenson Walker crystallizer is to be used to produce 1 ton/hr of copperas (FeSO₄·7H₂O) crystals by the cooling of a saturated solution which enters the crystallizer at 120 °F. The slurry leaving the crystallizer will be at 80 °F. Solubility data are given in Figure for Q. 1(a). Cooling water enters the crystallizer jacket at 50 °F and leaves at 75 °F. It may be assumed that the overall coefficient of heat transfer for the crystallizer is 35 Btu/(hr)(sq.ft)(°F). There are 3.5 sq.ft of cooling surface per foot of crystallizer length. Average specific heat of initial solution is 0.70 Btu/(lb)(°F) and heat of solution of FeSO₄·7H₂O at 18 °C = −4400 cal/g formula weight.
 
 (i) Estimate the amount of cooling water required in gpm.
@@ -54,7 +54,7 @@ $$A = \frac{Q}{U\Delta T_{lm}} = \frac{260{,}600}{35\times37.0} = 201\ \mathrm{f
           answer: String.raw`(i) Q = 2.61 × 10⁵ Btu/h → ≈ 20.8 gpm of cooling water. (ii) ΔT_lm = 37.0 °F, A ≈ 201 ft², L ≈ 57.5 ft → 6 sections of 10 ft.` },
         { id: "2015-16-Q1b", label: "(b)", marks: "10",
           topic: "crystallization", sub: "Factors to consider in designing crystallization processes",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q2c", "2011-12-Q7a"],
           text: String.raw`Discuss the factors to be considered in designing crystallizer processes.`,
           solution: String.raw`A crystallizer must deliver the required **yield**, **purity**, **crystal size distribution (CSD)** and **habit** at minimum cost. The design factors are:
 
@@ -74,7 +74,7 @@ $$A = \frac{Q}{U\Delta T_{lm}} = \frac{260{,}600}{35\times37.0} = 201\ \mathrm{f
           answer: String.raw`Solubility and yield; method and level of supersaturation; nucleation/growth kinetics and residence time (CSD); heat balance and cooling-surface scaling; agitation; purity and habit; batch vs continuous; materials; downstream handling; energy cost.` },
         { id: "2015-16-Q1c", label: "(c)", marks: "11⅔",
           topic: "mixing", sub: "Standard turbine mixing tank sketch and shape factors",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2016-17-Q3c", "2014-15-Q7d"],
           text: String.raw`With the help of neat sketch of a mixing tank write the different shape factors for turbine design.`,
           solution: String.raw`**Standard turbine design** (MSH Sec. 9; Rushton): a flat-bottomed cylindrical tank with four wall baffles and a six-blade disk (Rushton) turbine on a centre shaft.
 
@@ -147,7 +147,7 @@ $$P_{shaft} = \frac{31.96}{0.60} = 53.3\ \mathrm{kW}\ (\approx 71\ \mathrm{hp})$
           answer: String.raw`Re = 3.48 × 10⁵, f(Darcy) = 0.0162, ΣL_e = 78.8 m, Σh_f = 5.2 m, H = 55.2 m; fluid power 32.0 kW → pump power ≈ 53.3 kW (≈ 71 hp) at 60%.` },
         { id: "2015-16-Q2b", label: "(b)", marks: "14⅔",
           topic: "pumps", sub: "Common centrifugal pump problems and their prevention",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2014-15-Q7a"],
           text: String.raw`What are the common problems of a centrifugal pump and how are they prevented?`,
           solution: String.raw`| Problem | Cause / symptom | Prevention |
 |---|---|---|
@@ -171,7 +171,7 @@ The two most common are **cavitation** (check NPSH) and **loss of prime/air bind
       parts: [
         { id: "2015-16-Q3a", label: "(a)", marks: "20",
           topic: "evaporation", sub: "Forward, backward, mixed and parallel feed in multiple effects",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2011-12-Q5a"],
           text: String.raw`Discuss the applications, relative advantages and disadvantages of different types of feed arrangements to multiple effect evaporator systems. Show the feed arrangements with the help of neat sketch of each type.`,
           solution: String.raw`In every arrangement steam enters effect I and the vapour of each effect heats the next; pressure and boiling point fall from I to the last effect, which goes to the condenser. The arrangements differ in the **path of the liquor**.
 
@@ -237,7 +237,7 @@ $$t_T = \frac{36}{n} = \frac{36}{1.333} = 27\ \mathrm{s}$$
       parts: [
         { id: "2015-16-Q4a", label: "(a)", marks: "24",
           topic: "drying", sub: "Conveyor dryer, tunnel kiln, rotary dryer and fluidized-bed dryer",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2017-18-Q4c"],
           text: String.raw`With the help of simple schematic diagrams discuss the working principle, relative advantages and disadvantages of (i) Conveyor dryer, (ii) Tunnel kiln, (iii) Rotary dryer, and (iv) Fluidized bed dryer.`,
           solution: String.raw`![Schematics of the four dryers](fig/2015-16-Q4a-sketch.svg)
 
@@ -267,7 +267,7 @@ $$t_T = \frac{36}{n} = \frac{36}{1.333} = 27\ \mathrm{s}$$
           answer: String.raw`Conveyor dryer: through-circulation on a perforated belt (gentle, controlled, but costly belt; pastes must be preformed). Tunnel kiln: cars pushed through a countercurrent fired tunnel (large/irregular ware, high capital). Rotary dryer: inclined rotating shell with flights (high capacity, cheap, dusty, attrition). Fluid bed: gas fluidizes particles (fast, uniform, only fluidizable solids, fan power).` },
         { id: "2015-16-Q4b", label: "(b)", marks: "22⅔",
           topic: "compressors", sub: "Compressor performance characteristics: head, power, surge and stonewall",
-          type: "sketch", syllabus: "partial", repeats: [],
+          type: "sketch", syllabus: "partial", repeats: ["2016-17-Q1a"],
           text: String.raw`Discuss different compressor performance characteristics with the help of the relevant diagrams.`,
           solution: String.raw`Compressor performance is described by the delivered **pressure ratio (or head), power and efficiency as functions of the inlet volumetric flow** at a given speed.
 
@@ -344,7 +344,7 @@ $$\eta_v = 1 - c\left[\left(\frac{p_2}{p_1}\right)^{1/k}-1\right]$$
           answer: String.raw`(i) F; (ii) T; (iii) set pressure, flow rate; (iv) (d); (v) F; (vi) pressure, relative velocity; (vii) F; (viii) T; (ix) (d).` },
         { id: "2015-16-Q5b", label: "(b)", marks: "10",
           topic: "size-reduction", sub: "Energy for comminution: Rittinger, Kick and Bond laws",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2012-13-Q3b"],
           text: String.raw`How will you estimate energy consumed in a comminution process? Use applicability of laws of size reduction.`,
           solution: String.raw`The energy needed to reduce a particle from size $L_1$ to $L_2$ is obtained by integrating the general differential law (Walker, Lewis and McAdams)
 
@@ -392,7 +392,7 @@ Example: Bond with $W_i$ = 13 kWh/t, 80% passing 50 mm → 3 mm: $P/\dot m = 0.3
           answer: String.raw`Advantages: 20–30% less power, higher capacity, easy product removal and classification, fewer fines, no dust, easier handling. Disadvantages: ≈ 20% more wear of media, product must be dewatered/dried, not for water-sensitive materials, slurry handling.` },
         { id: "2015-16-Q5d", label: "(d)", marks: "10",
           topic: "solids-handling", sub: "Advantages of mechanical conveyors and belt conveyor limitations",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2016-17-Q6dii"],
           text: String.raw`What are the advantages of mechanical conveyors? Discuss the limitations of belt conveyors.`,
           solution: String.raw`**Mechanical conveyors** (belt, screw, bucket elevator, chain/apron conveyors) are the workhorses of bulk-solids plants, used for transporting, feeding, discharging, metering and proportioning.
 
@@ -417,7 +417,7 @@ Example: Bond with $W_i$ = 13 kWh/t, 80% passing 50 mm → 3 mm: $P/\dot m = 0.3
           answer: String.raw`Mechanical conveyors: wide capacity and material range, low power per tonne, low attrition, no gas–solid separation, can meter and feed, any route. Belt limits: T < ≈ 120 °C, no vertical lift (≤ 22°, 45° with cleats), lump size, spillage/dust, straight runs only, idler and belt maintenance.` },
         { id: "2015-16-Q5e", label: "(e)", marks: "10",
           topic: "other", sub: "Differences between impulse and reaction steam turbines",
-          type: "theory", syllabus: "out", repeats: [],
+          type: "theory", syllabus: "out", repeats: ["2017-18-Q5b", "2011-12-Q2a"],
           text: String.raw`How will you differentiate Impulse and reaction turbine?`,
           solution: String.raw`| Point | Impulse turbine | Reaction turbine |
 |---|---|---|
@@ -522,7 +522,7 @@ Cheap mechanical collectors (settling chambers, cyclones) are often used as pre-
           answer: String.raw`Needed for pollution control, product recovery, equipment protection, safety. Equipment: settling chambers, inertial separators, cyclones, wet scrubbers, fabric filters, electrostatic precipitators (in order of rising efficiency for fine dust).` },
         { id: "2015-16-Q7b", label: "(b)", marks: "30",
           topic: "dust-collection", sub: "Classification of fabric filters and factors affecting efficiency",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2017-18-Q7d"],
           text: String.raw`Classify the gas cleaning fabric filters. What are the factors that affect the efficiency of fabric filters?`,
           solution: String.raw`Fabric filtration: the dusty gas passes through a porous fabric that retains the solids; the dust cake that forms becomes the real filter medium. The cake is removed periodically.
 
@@ -575,7 +575,7 @@ Collection mechanisms: inertial impaction (> 1 μm), interception, diffusion (su
           answer: String.raw`Spring valve: spring force on a disc sets the opening; set pressure and flow depend on back pressure (relief, safety, safety-relief types). Balanced bellows: bellows cancels back pressure on set point. Rupture disc: membrane bursts and stays open. Pilot valve: pilot vents a dome to open a piston-operated main valve.` },
         { id: "2015-16-Q8b", label: "(b)", marks: "20",
           topic: "relief", sub: "Relief locations and scenarios on a polymerization reactor",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2023-24-Q4b", "2022-23-Q4c", "2019-20-Q8b"],
           text: String.raw`Specify the location of reliefs in the simple polymerization reactor system shown in fig 8(b) and attach it with the answer script. What are the relief scenarios can be developed in each location?
 
 Figure 8(b) (attached to the paper): polymerization reactor R-1 (1000 gal, max 50 psig) with monomer feed (5 gpm, V-2), internal coil served by steam (125 psig, V-4) and cooling water (in 200 gpm via V-6; out via V-5; steam trap via V-7); nitrogen (100 psig) through a pressure controller PC, check valve and V-3; overhead vapour to condenser E-1 (cooling water 10 gpm, V-10 in, V-11 out), then V-12 to drum D-1 (100 gal, max 50 psig) with vacuum line V-15 and level control LC; centrifugal pump P-2 (max 50 psig, 20 gpm at 50 psig; V-13, V-14) from D-1; gear pump P-1 (max 100 psig, 100 gpm at 50 psig) feeds base to the reactor bottom line through V-1; reactor bottom outlet V-8, product via V-9. Piping: steam and water lines 2 in, nitrogen 1 in, vapour lines 0.5 in.`,

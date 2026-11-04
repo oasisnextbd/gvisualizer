@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2019-20-Q1a1", label: "(a)(i)", marks: "9⅔",
           topic: "separator-selection", sub: "Sylvan chart: low-resistance then high-efficiency cyclone, 60–80 μm dust",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q6a", "2016-17-Q5ai"],
           text: String.raw`(i) Material leaving a chemical process varies between 20 and 40 grains/cu. ft. with 60 to 80 micron range of mean diameter of particles. A low resistance cyclone followed by a high efficiency cyclone would be used. What will be the final concentration and mean particle size of the gaseous stream?`,
           solution: String.raw`**Given:** inlet 20–40 gr/ft³, mean size 60–80 μm; low-resistance (LR) cyclone followed by a high-efficiency (HE) cyclone.
 
@@ -45,7 +45,7 @@ $$d_2 = 32.5\left(\frac{0.06}{3.0}\right)^{1/3} = 32.5 \times 0.271 = 8.8\ \mu\m
           answer: String.raw`LR cyclone ≈ 90 % at 70 μm: 30 → 3.0 gr/ft³, mean size ≈ 32 μm; HE cyclone ≈ 98 %: → 0.06 gr/ft³ (0.04–0.08 for 20–40 inlet), final mean size ≈ 9 μm.` },
         { id: "2019-20-Q1a2", label: "(a)(ii)", marks: "5½+5½=11",
           topic: "separator-selection", sub: "Kiln flue gas 50 gr/ft³, 8 μm: cheapest for 70 %, choice for 98 %",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q6a", "2016-17-Q5aii"],
           text: String.raw`(ii) Flue gas leaving a kiln chimney has a particle concentration of 50 grains/ cu. ft. and a mean size of 8 microns. What is the cheapest equipment that can be used to achieve 70% collection efficiency? What equipment can be used to achieve 98% collection efficiency?`,
           solution: String.raw`**Given:** $c_0$ = 50 gr/ft³, mean size 8 μm (kiln flue gas, hot, dry).
 
@@ -75,7 +75,7 @@ $$c_2 = 15(1-0.97) = 0.45\ \mathrm{gr/ft^3}\quad(\text{overall } 99.1\ \%)$$
           answer: String.raw`70 %: high-efficiency cyclone (LR cyclone < 50 % at 8 μm); outlet 15 gr/ft³. 98 %: wet collector, fabric arrester or ESP (≈98–99 % at 8 μm), outlet 1.0 gr/ft³; cyclone pre-cleaner + ESP/bag filter gives ≈ 99 %.` },
         { id: "2019-20-Q1b", label: "(b)", marks: "26",
           topic: "size-reduction", sub: "Schematics of crushers and grinders with the forces they use",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2018-19-Q4c", "2014-15-Q3b"],
           text: String.raw`Draw the schematic diagram of basic types of crushing and grinding equipment mentioning the type of forces involved in size reduction.`,
           solution: String.raw`**Forces used in size reduction:** (1) **compression** (slow squeezing between two surfaces: coarse crushing of hard solids), (2) **impact** (a fast blow by a hammer or a falling ball, or particle hitting a wall), (3) **attrition / rubbing** (particles rubbed between surfaces or against each other: fine grinding), (4) **cutting / shear** (knives, for tough fibrous materials).
 
@@ -100,7 +100,7 @@ $$c_2 = 15(1-0.97) = 0.45\ \mathrm{gr/ft^3}\quad(\text{overall } 99.1\ \%)$$
       parts: [
         { id: "2019-20-Q2a", label: "(a)", marks: "9⅔",
           topic: "dust-collection", sub: "How a fabric filter captures particulates (with sketches)",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2016-17-Q7d"],
           text: String.raw`How does a fabric filter separate particulates from gaseous emission? Explain with neat sketches.`,
           solution: String.raw`**Principle.** Dusty gas is drawn (or pushed) through a porous fabric (woven or felted bags, envelopes or cartridges). Particles are retained on and in the fabric; after a short initial period a **dust cake** builds up on the fabric, and the cake itself becomes the main, very efficient filter medium (> 99 %). The cake is removed periodically by cleaning, and the dust falls to a hopper.
 
@@ -121,7 +121,7 @@ $$c_2 = 15(1-0.97) = 0.45\ \mathrm{gr/ft^3}\quad(\text{overall } 99.1\ \%)$$
           answer: String.raw`Gas passes through fabric bags; particles are caught by impaction, interception, diffusion, sieving and electrostatic attraction, forming a dust cake that then filters at > 99 %; the cake is removed by shaking, reverse air or pulse jets into a hopper.` },
         { id: "2019-20-Q2b", label: "(b)", marks: "25",
           topic: "other", sub: "Steam turbines by steam-path arrangement and their selection",
-          type: "sketch", syllabus: "out", repeats: [],
+          type: "sketch", syllabus: "out", repeats: ["2018-19-Q5c", "2014-15-Q2b"],
           text: String.raw`Classify turbines based on steam path arrangements and draw their schematic showing steam flow path. Also describe their selection criteria for process.`,
           solution: String.raw`![Steam-path arrangements: straight condensing, back-pressure, extraction-condensing, induction, reheat and double-flow](fig/2019-20-Q2b-sketch.svg)
 
@@ -147,7 +147,7 @@ $$c_2 = 15(1-0.97) = 0.45\ \mathrm{gr/ft^3}\quad(\text{overall } 99.1\ \%)$$
           answer: String.raw`By steam path: straight condensing, back-pressure (non-condensing), extraction (controlled/uncontrolled), induction (mixed pressure), reheat, double-flow, tandem/cross compound. Choose from the plant steam balance (process steam → back-pressure/extraction), power and speed, inlet/exhaust conditions, load variation, efficiency vs cost and reliability.` },
         { id: "2019-20-Q2c", label: "(c)", marks: "12",
           topic: "other", sub: "Supercritical reheat plant: HP and LP turbine efficiencies on h–s",
-          type: "numerical", syllabus: "out", repeats: [],
+          type: "numerical", syllabus: "out", repeats: ["2012-13-Q2b"],
           text: String.raw`Consider a supercritical steam power plant with reheat as shown in Figure for Question no. 2(c). Plot the two turbine processes on the enthalpy-entropy h-s "Mollier" diagram. Plot also the equivalent isentropic turbine processes on the diagram, and indicate the actual turbine specific work as well as the isentropic turbine specific work for both turbine on the h-s diagram. Finally, determine the turbine adiabatic efficiency $\eta_T$ of both turbines.
 
 Figure data (attached to the paper): state 1 (HP inlet) $P_1 = P_7$ = 25 MPa, $T_1$ = 550 °C, ṁ = 7 kg/s; state 2 (HP exit) 4 MPa, 300 °C, to reheat; state 3 (LP inlet) $P_3 = P_2$ = 4 MPa, 550 °C; state 4 (LP exit) 10 kPa, quality x = 0.93; condenser exit 5: 10 kPa, 40 °C; deaerator 800 kPa; feed pump to 7: 25 MPa, 41 °C. An h–s diagram for water is attached.`,
@@ -192,7 +192,7 @@ $$\eta_{LP} = \frac{1143.9}{1267.8} = 0.902$$
       parts: [
         { id: "2019-20-Q3a", label: "(a)", marks: "16",
           topic: "crystallization", sub: "Importance of crystallization; mechanism on the solubility curve",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2018-19-Q5b"],
           text: String.raw`Why is crystallization important for chemical industries? Explain the mechanism of crystallization with the help of a solubility curve.`,
           solution: String.raw`### Importance
 - **Separation and purification in one step:** a nearly pure solid is obtained from an impure solution (impurities stay in the mother liquor); used for salts, sugar, fertilizers, pharmaceuticals, fine chemicals.
@@ -220,7 +220,7 @@ $$\eta_{LP} = \frac{1143.9}{1267.8} = 0.902$$
           answer: String.raw`Crystallization purifies and gives a solid product of controlled size in one low-energy step. Solubility curve = equilibrium; supersolubility curve = onset of spontaneous nucleation; between them the metastable zone where seeds grow. Supersaturation (by cooling ABC or evaporation ADE) drives nucleation then growth; operate in the metastable zone for large uniform crystals.` },
         { id: "2019-20-Q3b", label: "(b)", marks: "15⅔",
           topic: "size-reduction", sub: "Ball-mill critical speed: derivation",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2022-23-Q8a", "2018-19-Q4a", "2016-17-Q6c", "2012-13-Q3c"],
           text: String.raw`What is the speed beyond which grinding action in a ball mill is negligible? Establish the mathematical relationship of that speed.`,
           solution: String.raw`**The critical speed** $n_c$: the speed at which the balls are just carried round with the shell (centrifuged) and never fall. Above it there is no cascading or cataracting, hence no impact and little attrition: grinding becomes negligible.
 
@@ -250,7 +250,7 @@ $$4\pi^2 n_c^2 (R-r) = g\quad\Rightarrow\quad n_c = \frac{1}{2\pi}\sqrt{\frac{g}
           answer: String.raw`Critical speed, when balls centrifuge: from mω²(R − r) = mg at the top, n_c = (1/2π)√(g/(R − r)) r/s = 42.3/√(D − d) r/min (m). Operate at 65–80 % of n_c.` },
         { id: "2019-20-Q3c", label: "(c)", marks: "15",
           topic: "solids-handling", sub: "Turning a belt conveyor into a vertical (bucket) elevator",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2016-17-Q8b"],
           text: String.raw`How can you convert a belt conveyor into a vertical elevator? Explain with schematic diagram.`,
           solution: String.raw`A plain troughed belt can only climb about 15–20° (bulk solids slide back). To lift vertically the belt must carry the material in **containers fixed to it**: this is the **belt-and-bucket elevator**.
 
@@ -274,7 +274,7 @@ $$4\pi^2 n_c^2 (R-r) = g\quad\Rightarrow\quad n_c = \frac{1}{2\pi}\sqrt{\frac{g}
       parts: [
         { id: "2019-20-Q4a", label: "a)", marks: "9⅔",
           topic: "crystallization", sub: "Short note: draft-tube-baffle crystallizer",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2018-19-Q6c", "2016-17-Q3e"],
           text: String.raw`a) Draft tube baffle crystallizer`,
           solution: String.raw`![DTB crystallizer with draft tube, propeller, annular baffle, settling zone and fines-dissolution loop](fig/2020-21-Q8b-sketch.svg)
 
@@ -287,7 +287,7 @@ $$4\pi^2 n_c^2 (R-r) = g\quad\Rightarrow\quad n_c = \frac{1}{2\pi}\sqrt{\frac{g}
           answer: String.raw`Vacuum crystallizer with draft tube + slow propeller and an annular baffle creating a settling zone; fines are withdrawn, redissolved in a heater and recycled, so supersaturation goes into growth: large uniform crystals (ammonium sulphate, KCl); costlier, 4–6 h residence.` },
         { id: "2019-20-Q4b", label: "b)", marks: "9",
           topic: "size-reduction", sub: "Short note: factors affecting size reduction",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2018-19-Q6a"],
           text: String.raw`b) Factors affecting size reduction`,
           solution: String.raw`**Material properties**
 - **Hardness and abrasiveness** (Mohs scale): hard materials need compression crushers and wear the machine; soft ones suit impact/attrition mills.
@@ -308,7 +308,7 @@ $$4\pi^2 n_c^2 (R-r) = g\quad\Rightarrow\quad n_c = \frac{1}{2\pi}\sqrt{\frac{g}
           answer: String.raw`Material: hardness/abrasiveness, toughness, crushing strength and structure, moisture (sticky between ~4 and 50 %), softening point/heat sensitivity, shape, explosibility. Process: feed size and reduction ratio, product size, feed rate (free vs choke crushing), open/closed circuit, speed and media, wet vs dry.` },
         { id: "2019-20-Q4c", label: "c)", marks: "10",
           topic: "other", sub: "Short note: compounding of steam turbines",
-          type: "theory", syllabus: "out", repeats: [],
+          type: "theory", syllabus: "out", repeats: ["2020-21-Q5e", "2018-19-Q6b"],
           text: String.raw`c) Compounding of steam turbines`,
           solution: String.raw`**Why compound.** If the whole enthalpy drop is used in one row of nozzles, the steam velocity is ≈ 1000–1200 m/s and the optimum blade speed ($u \approx V_1\cos\alpha/2$) needs about 30,000 rpm, with large exit losses. Compounding uses **several rows** so that each handles only part of the energy, giving practical rotor speeds and better efficiency.
 
@@ -321,7 +321,7 @@ $$4\pi^2 n_c^2 (R-r) = g\quad\Rightarrow\quad n_c = \frac{1}{2\pi}\sqrt{\frac{g}
           answer: String.raw`Compounding splits the steam energy over several rows to cut rotor speed and losses: pressure compounding (Rateau, nozzle + moving row stages, Δp in steps), velocity compounding (Curtis, one nozzle, 2–3 moving rows with guide blades, u/V = cosα/2n), pressure–velocity compounding; reaction turbines are inherently pressure compounded.` },
         { id: "2019-20-Q4d", label: "d)", marks: "9",
           topic: "dust-collection", sub: "Short note: wet scrubbers",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2017-18-Q8d", "2011-12-Q1c"],
           text: String.raw`d) Wet scrubbers`,
           solution: String.raw`**Principle.** A liquid (usually water) is used to form drops, films or bubbles that capture particles (mainly by **inertial impaction** on drops, plus interception and diffusion) and absorb soluble gases. The particle-laden liquid is then separated from the gas. Wet scrubbers overcome the cyclone's problem of fine dust being swept back into the outlet gas.
 
@@ -339,7 +339,7 @@ $$4\pi^2 n_c^2 (R-r) = g\quad\Rightarrow\quad n_c = \frac{1}{2\pi}\sqrt{\frac{g}
           answer: String.raw`Liquid drops/films capture particles mainly by impaction (and absorb gases); types: spray tower, wet cyclone, venturi (60–120 m/s throat, > 95 % to ~1 μm, high Δp), packed/impingement. Good for hot, sticky, explosive dusts and gases; drawbacks: slurry/wastewater, corrosion, plume, energy.` },
         { id: "2019-20-Q4e", label: "e)", marks: "9",
           topic: "solids-handling", sub: "Short note: screw conveyor",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2020-21-Q8c1", "2018-19-Q6e", "2017-18-Q8e"],
           text: String.raw`e) Screw conveyor`,
           solution: String.raw`![Screw conveyor in a U-trough](fig/2020-21-Q8c-sketch.svg)
 
@@ -357,7 +357,7 @@ $$4\pi^2 n_c^2 (R-r) = g\quad\Rightarrow\quad n_c = \frac{1}{2\pi}\sqrt{\frac{g}
       parts: [
         { id: "2019-20-Q5a", label: "(a)", marks: "10⅔",
           topic: "evaporation", sub: "Evaporator for fruit juice: falling film under vacuum",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2011-12-Q5b"],
           text: String.raw`Recommend a type of evaporator for the following case? Fruit juice. State the reasons.`,
           solution: String.raw`**Recommendation: a multiple-effect falling-film (long-tube) evaporator operated under vacuum**, often with aroma (essence) recovery and/or mechanical vapour recompression; for very viscous final concentrates an agitated thin-film or plate evaporator for the last stage.
 
@@ -484,7 +484,7 @@ $$4\pi^2 n_c^2 (R-r) = g\quad\Rightarrow\quad n_c = \frac{1}{2\pi}\sqrt{\frac{g}
       parts: [
         { id: "2019-20-Q6a", label: "(a)", marks: "26",
           topic: "drying", sub: "Adiabatic countercurrent rotary dryer: diameter and length",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2023-24-Q2d", "2022-23-Q3a"],
           text: String.raw`Calculate the diameter and length of an adiabatic rotary dryer to dry 2800 lb/h of a heat-sensitive solid from an initial moisture content of 15% to a final moisture content of 0.5%, both dry basis. The solids have a specific heat of 0.52 Btu/lb °F; they enter at 80°F and must not be heated to a temperature above 125°F. Heating air is available at 260°F and a humidity of 0.01 lb of water per pound of dry air. The maximum allowable mass velocity of the air is 700 lb/ft²-h. (Figure 6(a)).
 
 Figure 6(a) (attached to the paper): humidity chart, air–water at 1 atm (Foust Fig. 19.2).`,
@@ -538,7 +538,7 @@ $$L = \frac{q_T}{Ua\,A\,\Delta\bar T} = \frac{502{,}000}{7.3 \times 23.9 \times 
           answer: String.raw`T_w ≈ 102 °F, N_t = 1.5 → air out 137 °F; q_T = 2800 × 179.3 = 5.02 × 10⁵ Btu/h; air 16,700 lb/h → A = 23.9 ft², D = 5.5 ft; Ua = 7.3 Btu/ft³h°F, ΔT = 82 °F → L ≈ 35 ft.` },
         { id: "2019-20-Q6b", label: "(b)", marks: "20⅔",
           topic: "drying", sub: "Short notes: tunnel kiln dryer; merits of spray-dried product",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q3c", "2017-18-Q4c", "2017-18-Q4b"],
           text: String.raw`Write a short note on
 
 (i) Tunnel Kiln Dryer (ii) The Merits of Spray Dried Product`,
@@ -569,7 +569,7 @@ $$L = \frac{q_T}{Ua\,A\,\Delta\bar T} = \frac{502{,}000}{7.3 \times 23.9 \times 
       parts: [
         { id: "2019-20-Q7a", label: "(a)", marks: "15",
           topic: "pumps", sub: "Select a centrifugal pump for 400 gpm, 70 ft at 1750 rpm",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2018-19-Q2d", "2017-18-Q3b", "2014-15-Q7b"],
           text: String.raw`Suggest a centrifugal pump of the type to supply water at 1750 rpm and rate of 400 gal/min against a 70 ft head. (See attachment)
 
 Attachments: Foust Fig. 21.23, operating ranges of a series of Goulds centrifugal pumps at 1750 rpm (model a × b − c: discharge diameter × suction diameter − maximum impeller diameter, inches); Foust Fig. 21.19, characteristic curves and specific speeds of radial, mixed and axial impellers (radial up to 4200, mixed 4200–9000, axial above 9000).`,
@@ -597,7 +597,7 @@ $$P_B = \frac{QH}{3960\,\eta} = \frac{400 \times 70}{3960 \times 0.65} = 10.9\ \
           answer: String.raw`N_s = 1750√400/70^0.75 ≈ 1450 → radial-flow impeller; on the Goulds range chart (400 gpm, 70 ft) → 3 × 4 − 10 pump (≈10-in impeller), ≈ 11 bhp at η ≈ 65 % → 15 hp motor.` },
         { id: "2019-20-Q7b", label: "(b)", marks: "15",
           topic: "compressors", sub: "Two-stage compression with 3 psi interstage drop: stage pressures",
-          type: "numerical", syllabus: "partial", repeats: [],
+          type: "numerical", syllabus: "partial", repeats: ["2017-18-Q3a", "2016-17-Q1b"],
           text: String.raw`For two stage of compression, what should be the pressure across the cylinders if the intercooler and piping pressure drop is 3 psi? Given Suction to the first stage is 0 psig and discharge from second stage is 150 psig.`,
           solution: String.raw`**Given:** $p_1$ = 0 psig = 14.7 psia; final discharge $p_4$ = 150 psig = 164.7 psia; interstage (intercooler + piping) drop Δp = 3 psi.
 
@@ -627,7 +627,7 @@ $$r = \frac{3 + \sqrt{9 + 4(14.7)(164.7)}}{2(14.7)} = \frac{3 + 98.46}{29.4} = 3
           answer: String.raw`Equal ratios with the 3 psi loss: 14.7r² − 3r − 164.7 = 0 → r = 3.45; stage 1: 14.7 → 50.7 psia (0 → 36.0 psig); stage 2: 47.7 → 164.7 psia (33.0 → 150 psig).` },
         { id: "2019-20-Q7c", label: "(c)", marks: "16⅔",
           topic: "ejectors", sub: "Ejector load: air leakage plus saturated process vapour (70 °F air equivalent)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2023-24-Q3b"],
           text: String.raw`A distillation system is to operate with a horizontal over-head condenser, Figure 7(c), and pressures are as marked. The estimated air leakage into the system is 7 lbs./hr. The molecular weight of the product vapor going out the condenser into the ejector (at 80 °F) is 53. The vapor pressure of the condensing vapours is 3 mm Hg. (abs). at 80 °F. (See attachment)
 
 Figure Question 7(c) (Ludwig Fig. 6-19): vacuum system for distillation: column top 8 mm Hg abs, column bottoms 19 mm Hg abs, condenser outlet 5 mm Hg abs at 80 °F, first-stage ejector suction 4 mm Hg abs, barometric intercondenser with 34 ft seal leg, second-stage ejector. Attachments: HEI molecular-weight entrainment-ratio curve (Ludwig Fig. 6-18) and temperature entrainment-ratio curves for air and steam (Ludwig Fig. 6-17).`,
@@ -671,7 +671,7 @@ $$\text{70 °F air equivalent} = \frac{22.2}{0.999} = 22.2\ \mathrm{lb/h}$$
       parts: [
         { id: "2019-20-Q8a", label: "(a)", marks: "10",
           topic: "relief", sub: "Styrene runaway: vent area by Fauske nomograph (and Leung check)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2020-21-Q4b"],
           text: String.raw`Leung reported on the data of Huff involving a 3500-gal reactor with styrene monomer undergoing adiabatic polymerization after being heated inadvertently to 70°C. The maximum allowable working pressure (MAWP) of the vessel is 5 bar. Given the following data, determine the diameter required for relief vent. Assume a set pressure of 4.5 bar and a maximum pressure of 5.4 bar absolute:
 
 **Data:** Volume (V): 3500 gal = 13.16 m³; reaction mass ($m_o$): 9500 kg; set temperature ($T_s$): 209.4 °C = 482.5 K. Data from VSP: maximum temperature ($T_m$): 219.5 °C = 492.7 K; $(dT/dt)_s$ = 0.493 K/s; $(dT/dt)_m$ = 0.662 K/s.
@@ -718,7 +718,7 @@ $$A = \frac{m_o q}{G_T\left[\left(\frac{V}{m_o}\frac{\Delta H_v}{v_{fg}}\right)^
           answer: String.raw`Nomograph (29.6 °C/min, 65 psia) → 0.013 m²/1000 kg → 0.124 m² at ψ = 0.5 → 0.062 m² at ψ = 1, d ≈ 0.28 m (11 in); Leung check: 0.084 m², d = 0.33 m.` },
         { id: "2019-20-Q8b", label: "(b)", marks: "20",
           topic: "relief", sub: "Locate relief devices on a polymerization reactor P&ID",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2023-24-Q4b", "2022-23-Q4c", "2015-16-Q8b"],
           text: String.raw`Locate relief valve location and state the reason for answer.
 
 Figure (attached to the paper; Crowl & Louvar Example 8-1): polymerization reactor R-1 with agitator and internal cooling coil; monomer in (5 gpm) through V-2; steam (125 psig) through V-4 and cooling water in (200 gpm) through V-6 to the coil, cooling water out through V-5, steam trap through V-7; base pumped by P-1 through V-1 into the bottom line, product out through V-8 and V-9; overhead condenser E-1 (cooling water out 10 gpm via V-11, in via V-10), V-12 to drum D-1 with level control, vacuum through V-15 and pump P-2 (V-13, V-14); nitrogen (100 psig) through PC and V-3 to the reactor.`,
