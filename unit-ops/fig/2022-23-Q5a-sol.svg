@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" width="720" height="330" font-family="Helvetica, Arial, sans-serif"><title>Dust collector trains for cement and coal-fired power plants</title><defs><marker id="a1E2B3A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="a55667D" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="a9AA8B8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aD2552B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="a0B7C8C" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aB7840A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="a6A4FC9" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4FC9"/></marker></defs><rect width="720" height="330" fill="#FFFFFF"/><text x="20.0" y="28.0" font-size="13.5" fill="#1E2B3A" text-anchor="start" font-weight="bold">Cement plant</text>
+<rect x="20.0" y="40.0" width="95.0" height="52.0" rx="5" fill="#FFFFFF" stroke="#1E2B3A" stroke-width="1.6"/>
+<text x="67.5" y="69.8" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">Rotary kiln</text>
+<line x1="115.0" y1="66.0" x2="135.0" y2="66.0" stroke="#55667D" stroke-width="1.6" marker-end="url(#a55667D)"/>
+<rect x="135.0" y="40.0" width="95.0" height="52.0" rx="5" fill="#FFFFFF" stroke="#0B7C8C" stroke-width="1.6"/>
+<text x="182.5" y="63.2" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">Preheater</text>
+<text x="182.5" y="76.5" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">cyclones</text>
+<line x1="230.0" y1="66.0" x2="250.0" y2="66.0" stroke="#55667D" stroke-width="1.6" marker-end="url(#a55667D)"/>
+<rect x="250.0" y="40.0" width="95.0" height="52.0" rx="5" fill="#FFFFFF" stroke="#55667D" stroke-width="1.6"/>
+<text x="297.5" y="63.2" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">Conditioning</text>
+<text x="297.5" y="76.5" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">tower (spray)</text>
+<line x1="345.0" y1="66.0" x2="365.0" y2="66.0" stroke="#55667D" stroke-width="1.6" marker-end="url(#a55667D)"/>
+<rect x="365.0" y="40.0" width="95.0" height="52.0" rx="5" fill="#FFFFFF" stroke="#0B7C8C" stroke-width="1.6"/>
+<text x="412.5" y="56.6" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">ESP or</text>
+<text x="412.5" y="69.8" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">pulse-jet</text>
+<text x="412.5" y="83.0" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">bag filter</text>
+<line x1="460.0" y1="66.0" x2="480.0" y2="66.0" stroke="#55667D" stroke-width="1.6" marker-end="url(#a55667D)"/>
+<rect x="480.0" y="40.0" width="95.0" height="52.0" rx="5" fill="#FFFFFF" stroke="#55667D" stroke-width="1.6"/>
+<text x="527.5" y="69.8" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">ID fan</text>
+<line x1="575.0" y1="66.0" x2="595.0" y2="66.0" stroke="#55667D" stroke-width="1.6" marker-end="url(#a55667D)"/>
+<rect x="595.0" y="40.0" width="95.0" height="52.0" rx="5" fill="#FFFFFF" stroke="#1E2B3A" stroke-width="1.6"/>
+<text x="642.5" y="69.8" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">Stack</text>
+<line x1="182.0" y1="92.0" x2="182.0" y2="112.0" stroke="#B7840A" stroke-width="1.6" marker-end="url(#aB7840A)"/>
+<text x="140.0" y="124.0" font-size="10.5" fill="#B7840A" text-anchor="start" font-weight="normal">raw meal returned</text>
+<line x1="412.0" y1="92.0" x2="412.0" y2="112.0" stroke="#B7840A" stroke-width="1.6" marker-end="url(#aB7840A)"/>
+<text x="360.0" y="124.0" font-size="10.5" fill="#B7840A" text-anchor="start" font-weight="normal">dust recycled (dry)</text>
+<rect x="20.0" y="140.0" width="110.0" height="44.0" rx="5" fill="#FFFFFF" stroke="#1E2B3A" stroke-width="1.6"/>
+<text x="75.0" y="159.2" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">Clinker</text>
+<text x="75.0" y="172.4" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">cooler</text>
+<line x1="130.0" y1="162.0" x2="154.0" y2="162.0" stroke="#55667D" stroke-width="1.6" marker-end="url(#a55667D)"/>
+<rect x="154.0" y="140.0" width="110.0" height="44.0" rx="5" fill="#FFFFFF" stroke="#0B7C8C" stroke-width="1.6"/>
+<text x="209.0" y="159.2" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">Multicyclone /</text>
+<text x="209.0" y="172.4" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">gravity chamber</text>
+<line x1="264.0" y1="162.0" x2="288.0" y2="162.0" stroke="#55667D" stroke-width="1.6" marker-end="url(#a55667D)"/>
+<rect x="288.0" y="140.0" width="110.0" height="44.0" rx="5" fill="#FFFFFF" stroke="#0B7C8C" stroke-width="1.6"/>
+<text x="343.0" y="159.2" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">Bag filter</text>
+<text x="343.0" y="172.4" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">or ESP</text>
+<line x1="398.0" y1="162.0" x2="422.0" y2="162.0" stroke="#55667D" stroke-width="1.6" marker-end="url(#a55667D)"/>
+<rect x="422.0" y="140.0" width="110.0" height="44.0" rx="5" fill="#FFFFFF" stroke="#1E2B3A" stroke-width="1.6"/>
+<text x="477.0" y="165.8" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">Stack</text>
+<text x="20.0" y="206.0" font-size="11" fill="#55667D" text-anchor="start" font-weight="normal">Why: very high, abrasive, dry loading → cheap cyclone pre-collector; fines (1–20 µm) need &gt;99.9% → ESP/bag filter; dust is product.</text>
+<text x="20.0" y="236.0" font-size="13.5" fill="#1E2B3A" text-anchor="start" font-weight="bold">Coal-fired power plant (pulverised coal)</text>
+<rect x="20.0" y="248.0" width="86.0" height="48.0" rx="5" fill="#FFFFFF" stroke="#1E2B3A" stroke-width="1.6"/>
+<text x="63.0" y="269.2" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">Boiler +</text>
+<text x="63.0" y="282.4" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">economiser</text>
+<line x1="106.0" y1="272.0" x2="120.0" y2="272.0" stroke="#55667D" stroke-width="1.6" marker-end="url(#a55667D)"/>
+<rect x="120.0" y="248.0" width="86.0" height="48.0" rx="5" fill="#FFFFFF" stroke="#55667D" stroke-width="1.6"/>
+<text x="163.0" y="275.9" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">SCR (NOx)</text>
+<line x1="206.0" y1="272.0" x2="220.0" y2="272.0" stroke="#55667D" stroke-width="1.6" marker-end="url(#a55667D)"/>
+<rect x="220.0" y="248.0" width="86.0" height="48.0" rx="5" fill="#FFFFFF" stroke="#55667D" stroke-width="1.6"/>
+<text x="263.0" y="269.2" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">Air</text>
+<text x="263.0" y="282.4" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">preheater</text>
+<line x1="306.0" y1="272.0" x2="320.0" y2="272.0" stroke="#55667D" stroke-width="1.6" marker-end="url(#a55667D)"/>
+<rect x="320.0" y="248.0" width="86.0" height="48.0" rx="5" fill="#FFFFFF" stroke="#0B7C8C" stroke-width="1.6"/>
+<text x="363.0" y="269.2" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">(Multicyclone)</text>
+<text x="363.0" y="282.4" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">pre-collector</text>
+<line x1="406.0" y1="272.0" x2="420.0" y2="272.0" stroke="#55667D" stroke-width="1.6" marker-end="url(#a55667D)"/>
+<rect x="420.0" y="248.0" width="86.0" height="48.0" rx="5" fill="#FFFFFF" stroke="#0B7C8C" stroke-width="1.6"/>
+<text x="463.0" y="269.2" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">Cold-side ESP</text>
+<text x="463.0" y="282.4" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">or fabric filter</text>
+<line x1="506.0" y1="272.0" x2="520.0" y2="272.0" stroke="#55667D" stroke-width="1.6" marker-end="url(#a55667D)"/>
+<rect x="520.0" y="248.0" width="86.0" height="48.0" rx="5" fill="#FFFFFF" stroke="#6A4FC9" stroke-width="1.6"/>
+<text x="563.0" y="269.2" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">Wet limestone</text>
+<text x="563.0" y="282.4" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">FGD scrubber</text>
+<line x1="606.0" y1="272.0" x2="620.0" y2="272.0" stroke="#55667D" stroke-width="1.6" marker-end="url(#a55667D)"/>
+<rect x="620.0" y="248.0" width="86.0" height="48.0" rx="5" fill="#FFFFFF" stroke="#1E2B3A" stroke-width="1.6"/>
+<text x="663.0" y="275.9" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">Stack</text>
+<text x="20.0" y="318.0" font-size="11" fill="#55667D" text-anchor="start" font-weight="normal">Why: huge gas volume, fine fly ash (1–50 µm) → ESP (low ΔP, 99–99.9%) or bags for high-resistivity ash; FGD last for SO₂.</text></svg>

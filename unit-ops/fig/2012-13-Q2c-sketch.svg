@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440" font-family="Helvetica, Arial, sans-serif"><title>Steam turbine health monitoring system</title><defs><marker id="a1E2B3A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="a55667D" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="a9AA8B8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aD2552B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="a0B7C8C" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aB7840A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="a6A4FC9" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4FC9"/></marker></defs><rect width="720" height="440" fill="#FFFFFF"/><polygon points="200.0,90.0 420.0,60.0 420.0,200.0 200.0,170.0" fill="#F4F6F9" stroke="#1E2B3A" stroke-width="2"/>
+<text x="310.0" y="105.0" font-size="12.5" fill="#1E2B3A" text-anchor="middle" font-weight="bold">steam turbine</text>
+<line x1="110.0" y1="130.0" x2="520.0" y2="130.0" stroke="#1E2B3A" stroke-width="4"/>
+<rect x="144.0" y="112.0" width="32.0" height="36.0" rx="0" fill="#FFFFFF" stroke="#1E2B3A" stroke-width="1.6"/>
+<rect x="444.0" y="112.0" width="32.0" height="36.0" rx="0" fill="#FFFFFF" stroke="#1E2B3A" stroke-width="1.6"/>
+<rect x="490.0" y="108.0" width="14.0" height="44.0" rx="0" fill="#FFFFFF" stroke="#1E2B3A" stroke-width="1.6"/>
+<text x="497.0" y="170.0" font-size="10" fill="#55667D" text-anchor="middle" font-weight="normal">thrust</text>
+<text x="160.0" y="182.0" font-size="10" fill="#55667D" text-anchor="middle" font-weight="normal">journal brg</text>
+<text x="460.0" y="190.0" font-size="10" fill="#55667D" text-anchor="middle" font-weight="normal">journal brg</text>
+<rect x="530.0" y="110.0" width="60.0" height="40.0" rx="0" fill="none" stroke="#1E2B3A" stroke-width="1.6"/>
+<text x="560.0" y="134.0" font-size="10.5" fill="#1E2B3A" text-anchor="middle" font-weight="normal">generator</text>
+<line x1="520.0" y1="130.0" x2="530.0" y2="130.0" stroke="#1E2B3A" stroke-width="4"/>
+<line x1="230.0" y1="40.0" x2="230.0" y2="86.0" stroke="#D2552B" stroke-width="2" marker-end="url(#aD2552B)"/>
+<text x="160.0" y="34.0" font-size="10.5" fill="#D2552B" text-anchor="start" font-weight="normal">steam in: P, T, valve position</text>
+<line x1="390.0" y1="205.0" x2="390.0" y2="240.0" stroke="#0B7C8C" stroke-width="2" marker-end="url(#a0B7C8C)"/>
+<text x="398.0" y="236.0" font-size="10.5" fill="#0B7C8C" text-anchor="start" font-weight="normal">exhaust: P, T, vacuum</text>
+<circle cx="160.0" cy="100.0" r="10.0" fill="#FFFFFF" stroke="#6A4FC9" stroke-width="1.4"/>
+<text x="160.0" y="104.0" font-size="8.5" fill="#6A4FC9" text-anchor="middle" font-weight="normal">XY</text>
+<circle cx="460.0" cy="100.0" r="10.0" fill="#FFFFFF" stroke="#6A4FC9" stroke-width="1.4"/>
+<text x="460.0" y="104.0" font-size="8.5" fill="#6A4FC9" text-anchor="middle" font-weight="normal">XY</text>
+<circle cx="497.0" cy="100.0" r="10.0" fill="#FFFFFF" stroke="#6A4FC9" stroke-width="1.4"/>
+<text x="497.0" y="104.0" font-size="8.5" fill="#6A4FC9" text-anchor="middle" font-weight="normal">Z</text>
+<circle cx="120.0" cy="118.0" r="10.0" fill="#FFFFFF" stroke="#6A4FC9" stroke-width="1.4"/>
+<text x="120.0" y="122.0" font-size="8.5" fill="#6A4FC9" text-anchor="middle" font-weight="normal">KΦ</text>
+<circle cx="184.0" cy="156.0" r="10.0" fill="#FFFFFF" stroke="#6A4FC9" stroke-width="1.4"/>
+<text x="184.0" y="160.0" font-size="8.5" fill="#6A4FC9" text-anchor="middle" font-weight="normal">T</text>
+<circle cx="436.0" cy="156.0" r="10.0" fill="#FFFFFF" stroke="#6A4FC9" stroke-width="1.4"/>
+<text x="436.0" y="160.0" font-size="8.5" fill="#6A4FC9" text-anchor="middle" font-weight="normal">T</text>
+<circle cx="300.0" cy="58.0" r="10.0" fill="#FFFFFF" stroke="#6A4FC9" stroke-width="1.4"/>
+<text x="300.0" y="62.0" font-size="8.5" fill="#6A4FC9" text-anchor="middle" font-weight="normal">LVDT</text>
+<circle cx="560.0" cy="100.0" r="10.0" fill="#FFFFFF" stroke="#6A4FC9" stroke-width="1.4"/>
+<text x="560.0" y="104.0" font-size="8.5" fill="#6A4FC9" text-anchor="middle" font-weight="normal">N</text>
+<circle cx="124.0" cy="150.0" r="10.0" fill="#FFFFFF" stroke="#6A4FC9" stroke-width="1.4"/>
+<text x="124.0" y="154.0" font-size="8.5" fill="#6A4FC9" text-anchor="middle" font-weight="normal">S</text>
+<text x="20.0" y="272.0" font-size="10.5" fill="#6A4FC9" text-anchor="start" font-weight="normal">XY proximity probes: radial vibration, orbit</text>
+<text x="20.0" y="288.0" font-size="10.5" fill="#6A4FC9" text-anchor="start" font-weight="normal">Z axial position (thrust), differential expansion</text>
+<text x="20.0" y="304.0" font-size="10.5" fill="#6A4FC9" text-anchor="start" font-weight="normal">KΦ keyphasor (phase, speed), N speed (overspeed trip)</text>
+<text x="20.0" y="320.0" font-size="10.5" fill="#6A4FC9" text-anchor="start" font-weight="normal">T bearing-metal RTDs;  S seismic casing vibration</text>
+<text x="20.0" y="336.0" font-size="10.5" fill="#6A4FC9" text-anchor="start" font-weight="normal">LVDT casing expansion; eccentricity at turning gear</text>
+<text x="20.0" y="352.0" font-size="10.5" fill="#6A4FC9" text-anchor="start" font-weight="normal">lube-oil P, T, level; water-induction detection</text>
+<rect x="400.0" y="262.0" width="140.0" height="40.0" rx="5" fill="#FFFFFF" stroke="#6A4FC9" stroke-width="1.6"/>
+<text x="470.0" y="279.4" font-size="10.5" fill="#1E2B3A" text-anchor="middle" font-weight="normal">TSI monitoring rack</text>
+<text x="470.0" y="292.0" font-size="10.5" fill="#1E2B3A" text-anchor="middle" font-weight="normal">(alert / danger set points)</text>
+<line x1="330.0" y1="215.0" x2="400.0" y2="275.0" stroke="#6A4FC9" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#a6A4FC9)"/>
+<rect x="580.0" y="232.0" width="120.0" height="34.0" rx="5" fill="#FFFFFF" stroke="#55667D" stroke-width="1.6"/>
+<text x="640.0" y="246.4" font-size="10.5" fill="#1E2B3A" text-anchor="middle" font-weight="normal">DCS alarms /</text>
+<text x="640.0" y="259.0" font-size="10.5" fill="#1E2B3A" text-anchor="middle" font-weight="normal">operator display</text>
+<rect x="580.0" y="282.0" width="120.0" height="34.0" rx="5" fill="#FFFFFF" stroke="#D2552B" stroke-width="1.6"/>
+<text x="640.0" y="296.4" font-size="10.5" fill="#1E2B3A" text-anchor="middle" font-weight="normal">trip system (ETS) →</text>
+<text x="640.0" y="309.0" font-size="10.5" fill="#1E2B3A" text-anchor="middle" font-weight="normal">stop &amp; control valves</text>
+<rect x="580.0" y="332.0" width="120.0" height="34.0" rx="5" fill="#FFFFFF" stroke="#0B7C8C" stroke-width="1.6"/>
+<text x="640.0" y="346.4" font-size="10.5" fill="#1E2B3A" text-anchor="middle" font-weight="normal">condition-monitoring</text>
+<text x="640.0" y="359.0" font-size="10.5" fill="#1E2B3A" text-anchor="middle" font-weight="normal">computer (FFT, trends)</text>
+<line x1="540.0" y1="282.0" x2="580.0" y2="249.0" stroke="#55667D" stroke-width="1.2" marker-end="url(#a55667D)"/>
+<line x1="540.0" y1="282.0" x2="580.0" y2="299.0" stroke="#55667D" stroke-width="1.2" marker-end="url(#a55667D)"/>
+<line x1="540.0" y1="282.0" x2="580.0" y2="349.0" stroke="#55667D" stroke-width="1.2" marker-end="url(#a55667D)"/>
+<text x="400.0" y="330.0" font-size="10.5" fill="#55667D" text-anchor="start" font-weight="normal">predictive maintenance:</text>
+<text x="400.0" y="346.0" font-size="10.5" fill="#55667D" text-anchor="start" font-weight="normal">spectra, orbits, Bode plots,</text>
+<text x="400.0" y="362.0" font-size="10.5" fill="#55667D" text-anchor="start" font-weight="normal">oil analysis, efficiency</text></svg>

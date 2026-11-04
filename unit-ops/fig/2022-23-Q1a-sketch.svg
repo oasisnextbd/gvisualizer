@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 330" width="700" height="330" font-family="Helvetica, Arial, sans-serif"><title>Entrainment separators in evaporator vapor heads</title><defs><marker id="a1E2B3A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="a55667D" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="a9AA8B8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aD2552B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="a0B7C8C" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aB7840A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="a6A4FC9" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4FC9"/></marker></defs><rect width="700" height="330" fill="#FFFFFF"/><polyline points="30.0,280.0 30.0,70.0 85.0,70.0" fill="none" stroke="#1E2B3A" stroke-width="1.6"/>
+<polyline points="125.0,70.0 180.0,70.0 180.0,280.0" fill="none" stroke="#1E2B3A" stroke-width="1.6"/>
+<line x1="85.0" y1="70.0" x2="85.0" y2="40.0" stroke="#1E2B3A" stroke-width="1.6"/>
+<line x1="125.0" y1="70.0" x2="125.0" y2="40.0" stroke="#1E2B3A" stroke-width="1.6"/>
+<line x1="105.0" y1="62.0" x2="105.0" y2="28.0" stroke="#0B7C8C" stroke-width="2" marker-end="url(#a0B7C8C)"/>
+<text x="135.0" y="38.0" font-size="11" fill="#0B7C8C" text-anchor="start" font-weight="normal">vapor out</text>
+<polyline points="30.0,232.0 37.5,234.9 45.0,233.5 52.5,229.9 60.0,229.3 67.5,232.6 75.0,235.0 82.5,233.0 90.0,229.5 97.5,229.7 105.0,233.3 112.5,235.0 120.0,232.3 127.5,229.2 135.0,230.2 142.5,233.8 150.0,234.8 157.5,231.7 165.0,229.0 172.5,230.7 180.0,234.3" fill="none" stroke="#0B7C8C" stroke-width="1.4"/>
+<rect x="31.0" y="234.0" width="148.0" height="45.0" rx="0" fill="#DCEFF1" stroke="none" stroke-width="0"/>
+<text x="105.0" y="262.0" font-size="11" fill="#0B7C8C" text-anchor="middle" font-weight="normal">boiling liquor</text>
+<text x="105.0" y="312.0" font-size="12.5" fill="#1E2B3A" text-anchor="middle" font-weight="bold">(a) impingement baffle</text>
+<circle cx="60.0" cy="205.0" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="0"/>
+<circle cx="90.0" cy="195.0" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="0"/>
+<circle cx="140.0" cy="210.0" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="0"/>
+<circle cx="155.0" cy="190.0" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="0"/>
+<polyline points="60.0,135.0 105.0,115.0 150.0,135.0" fill="none" stroke="#1E2B3A" stroke-width="3"/>
+<line x1="50.0" y1="215.0" x2="50.0" y2="150.0" stroke="#0B7C8C" stroke-width="1.6" marker-end="url(#a0B7C8C)"/>
+<line x1="160.0" y1="215.0" x2="160.0" y2="150.0" stroke="#0B7C8C" stroke-width="1.6" marker-end="url(#a0B7C8C)"/>
+<path d="M50,150 Q55,100 90,95" fill="none" stroke="#0B7C8C" stroke-width="1.6" marker-end="url(#a0B7C8C)"/>
+<path d="M160,150 Q155,100 120,95" fill="none" stroke="#0B7C8C" stroke-width="1.6" marker-end="url(#a0B7C8C)"/>
+<text x="105.0" y="160.0" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">baffle</text>
+<line x1="105.0" y1="140.0" x2="105.0" y2="180.0" stroke="#D2552B" stroke-width="1.6" stroke-dasharray="3,3" marker-end="url(#aD2552B)"/>
+<text x="58.0" y="192.0" font-size="10" fill="#D2552B" text-anchor="start" font-weight="normal">drops fall back</text>
+<polyline points="270.0,280.0 270.0,70.0 325.0,70.0" fill="none" stroke="#1E2B3A" stroke-width="1.6"/>
+<polyline points="365.0,70.0 420.0,70.0 420.0,280.0" fill="none" stroke="#1E2B3A" stroke-width="1.6"/>
+<line x1="325.0" y1="70.0" x2="325.0" y2="40.0" stroke="#1E2B3A" stroke-width="1.6"/>
+<line x1="365.0" y1="70.0" x2="365.0" y2="40.0" stroke="#1E2B3A" stroke-width="1.6"/>
+<line x1="345.0" y1="62.0" x2="345.0" y2="28.0" stroke="#0B7C8C" stroke-width="2" marker-end="url(#a0B7C8C)"/>
+<text x="375.0" y="38.0" font-size="11" fill="#0B7C8C" text-anchor="start" font-weight="normal">vapor out</text>
+<polyline points="270.0,232.0 277.5,234.9 285.0,233.5 292.5,229.9 300.0,229.3 307.5,232.6 315.0,235.0 322.5,233.0 330.0,229.5 337.5,229.7 345.0,233.3 352.5,235.0 360.0,232.3 367.5,229.2 375.0,230.2 382.5,233.8 390.0,234.8 397.5,231.7 405.0,229.0 412.5,230.7 420.0,234.3" fill="none" stroke="#0B7C8C" stroke-width="1.4"/>
+<rect x="271.0" y="234.0" width="148.0" height="45.0" rx="0" fill="#DCEFF1" stroke="none" stroke-width="0"/>
+<text x="345.0" y="262.0" font-size="11" fill="#0B7C8C" text-anchor="middle" font-weight="normal">boiling liquor</text>
+<text x="345.0" y="312.0" font-size="12.5" fill="#1E2B3A" text-anchor="middle" font-weight="bold">(b) wire-mesh demister pad</text>
+<circle cx="300.0" cy="205.0" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="0"/>
+<circle cx="330.0" cy="195.0" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="0"/>
+<circle cx="380.0" cy="210.0" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="0"/>
+<circle cx="395.0" cy="190.0" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="0"/>
+<rect x="272.0" y="110.0" width="146.0" height="26.0" rx="0" fill="#EEF1F5" stroke="#1E2B3A" stroke-width="1.6"/>
+<line x1="272.0" y1="110.0" x2="298.0" y2="136.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="280.0" y1="110.0" x2="306.0" y2="136.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="288.0" y1="110.0" x2="314.0" y2="136.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="296.0" y1="110.0" x2="322.0" y2="136.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="304.0" y1="110.0" x2="330.0" y2="136.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="312.0" y1="110.0" x2="338.0" y2="136.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="320.0" y1="110.0" x2="346.0" y2="136.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="328.0" y1="110.0" x2="354.0" y2="136.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="336.0" y1="110.0" x2="362.0" y2="136.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="344.0" y1="110.0" x2="370.0" y2="136.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="352.0" y1="110.0" x2="378.0" y2="136.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="360.0" y1="110.0" x2="386.0" y2="136.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="368.0" y1="110.0" x2="394.0" y2="136.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="376.0" y1="110.0" x2="402.0" y2="136.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="384.0" y1="110.0" x2="410.0" y2="136.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="392.0" y1="110.0" x2="418.0" y2="136.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="400.0" y1="110.0" x2="418.0" y2="128.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="408.0" y1="110.0" x2="418.0" y2="120.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<line x1="416.0" y1="110.0" x2="418.0" y2="112.0" stroke="#9AA8B8" stroke-width="0.8"/>
+<text x="345.0" y="104.0" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">mesh pad</text>
+<line x1="305.0" y1="215.0" x2="305.0" y2="140.0" stroke="#0B7C8C" stroke-width="1.6" marker-end="url(#a0B7C8C)"/>
+<line x1="345.0" y1="215.0" x2="345.0" y2="140.0" stroke="#0B7C8C" stroke-width="1.6" marker-end="url(#a0B7C8C)"/>
+<line x1="385.0" y1="215.0" x2="385.0" y2="140.0" stroke="#0B7C8C" stroke-width="1.6" marker-end="url(#a0B7C8C)"/>
+<line x1="410.0" y1="140.0" x2="410.0" y2="225.0" stroke="#D2552B" stroke-width="1.6" stroke-dasharray="3,3" marker-end="url(#aD2552B)"/>
+<text x="415.0" y="180.0" font-size="10" fill="#D2552B" text-anchor="start" font-weight="normal">drain</text>
+<polyline points="500.0,280.0 500.0,90.0 570.0,90.0 570.0,280.0" fill="none" stroke="#1E2B3A" stroke-width="1.6"/>
+<polyline points="500.0,232.0 503.5,234.9 507.0,233.5 510.5,229.9 514.0,229.3 517.5,232.6 521.0,235.0 524.5,233.0 528.0,229.5 531.5,229.7 535.0,233.3 538.5,235.0 542.0,232.3 545.5,229.2 549.0,230.2 552.5,233.8 556.0,234.8 559.5,231.7 563.0,229.0 566.5,230.7 570.0,234.3" fill="none" stroke="#0B7C8C" stroke-width="1.4"/>
+<rect x="501.0" y="234.0" width="68.0" height="45.0" rx="0" fill="#DCEFF1" stroke="none" stroke-width="0"/>
+<text x="535.0" y="262.0" font-size="11" fill="#0B7C8C" text-anchor="middle" font-weight="normal">liquor</text>
+<polyline points="535.0,90.0 535.0,60.0 610.0,60.0" fill="none" stroke="#0B7C8C" stroke-width="2" marker-end="url(#a0B7C8C)"/>
+<polyline points="610.0,45.0 610.0,150.0 630.0,205.0 650.0,150.0 650.0,45.0 610.0,45.0" fill="none" stroke="#1E2B3A" stroke-width="1.6"/>
+<line x1="630.0" y1="45.0" x2="630.0" y2="15.0" stroke="#0B7C8C" stroke-width="2" marker-end="url(#a0B7C8C)"/>
+<text x="637.0" y="22.0" font-size="11" fill="#0B7C8C" text-anchor="start" font-weight="normal">dry vapor</text>
+<path d="M615,70 q15,8 30,0 M615,95 q15,8 30,0 M617,120 q13,8 26,0" fill="none" stroke="#0B7C8C" stroke-width="1"/>
+<polyline points="630.0,205.0 630.0,250.0 570.0,250.0" fill="none" stroke="#D2552B" stroke-width="1.6" marker-end="url(#aD2552B)"/>
+<text x="635.0" y="240.0" font-size="10" fill="#D2552B" text-anchor="start" font-weight="normal">liquid return</text>
+<text x="595.0" y="312.0" font-size="12.5" fill="#1E2B3A" text-anchor="middle" font-weight="bold">(c) external cyclone</text>
+<text x="538.0" y="52.0" font-size="10" fill="#55667D" text-anchor="start" font-weight="normal">tangential inlet</text></svg>

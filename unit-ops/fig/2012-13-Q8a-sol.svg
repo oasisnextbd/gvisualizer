@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 400" width="620" height="400" font-family="Helvetica, Arial, sans-serif"><title>Solubility curves of NaCl and KNO3 in water</title><defs><marker id="a1E2B3A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="a55667D" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="a9AA8B8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aD2552B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="a0B7C8C" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aB7840A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="a6A4FC9" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4FC9"/></marker></defs><rect width="620" height="400" fill="#FFFFFF"/><line x1="80.0" y1="330.0" x2="80.0" y2="334.0" stroke="#1E2B3A" stroke-width="1"/>
+<line x1="80.0" y1="330.0" x2="80.0" y2="50.0" stroke="#E3E8EE" stroke-width="0.8"/>
+<text x="80.0" y="347.0" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">0</text>
+<line x1="176.0" y1="330.0" x2="176.0" y2="334.0" stroke="#1E2B3A" stroke-width="1"/>
+<line x1="176.0" y1="330.0" x2="176.0" y2="50.0" stroke="#E3E8EE" stroke-width="0.8"/>
+<text x="176.0" y="347.0" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">20</text>
+<line x1="272.0" y1="330.0" x2="272.0" y2="334.0" stroke="#1E2B3A" stroke-width="1"/>
+<line x1="272.0" y1="330.0" x2="272.0" y2="50.0" stroke="#E3E8EE" stroke-width="0.8"/>
+<text x="272.0" y="347.0" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">40</text>
+<line x1="368.0" y1="330.0" x2="368.0" y2="334.0" stroke="#1E2B3A" stroke-width="1"/>
+<line x1="368.0" y1="330.0" x2="368.0" y2="50.0" stroke="#E3E8EE" stroke-width="0.8"/>
+<text x="368.0" y="347.0" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">60</text>
+<line x1="464.0" y1="330.0" x2="464.0" y2="334.0" stroke="#1E2B3A" stroke-width="1"/>
+<line x1="464.0" y1="330.0" x2="464.0" y2="50.0" stroke="#E3E8EE" stroke-width="0.8"/>
+<text x="464.0" y="347.0" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">80</text>
+<line x1="560.0" y1="330.0" x2="560.0" y2="334.0" stroke="#1E2B3A" stroke-width="1"/>
+<line x1="560.0" y1="330.0" x2="560.0" y2="50.0" stroke="#E3E8EE" stroke-width="0.8"/>
+<text x="560.0" y="347.0" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">100</text>
+<line x1="76.0" y1="330.0" x2="80.0" y2="330.0" stroke="#1E2B3A" stroke-width="1"/>
+<line x1="80.0" y1="330.0" x2="560.0" y2="330.0" stroke="#E3E8EE" stroke-width="0.8"/>
+<text x="73.0" y="334.0" font-size="11" fill="#1E2B3A" text-anchor="end" font-weight="normal">0</text>
+<line x1="76.0" y1="274.0" x2="80.0" y2="274.0" stroke="#1E2B3A" stroke-width="1"/>
+<line x1="80.0" y1="274.0" x2="560.0" y2="274.0" stroke="#E3E8EE" stroke-width="0.8"/>
+<text x="73.0" y="278.0" font-size="11" fill="#1E2B3A" text-anchor="end" font-weight="normal">50</text>
+<line x1="76.0" y1="218.0" x2="80.0" y2="218.0" stroke="#1E2B3A" stroke-width="1"/>
+<line x1="80.0" y1="218.0" x2="560.0" y2="218.0" stroke="#E3E8EE" stroke-width="0.8"/>
+<text x="73.0" y="222.0" font-size="11" fill="#1E2B3A" text-anchor="end" font-weight="normal">100</text>
+<line x1="76.0" y1="162.0" x2="80.0" y2="162.0" stroke="#1E2B3A" stroke-width="1"/>
+<line x1="80.0" y1="162.0" x2="560.0" y2="162.0" stroke="#E3E8EE" stroke-width="0.8"/>
+<text x="73.0" y="166.0" font-size="11" fill="#1E2B3A" text-anchor="end" font-weight="normal">150</text>
+<line x1="76.0" y1="106.0" x2="80.0" y2="106.0" stroke="#1E2B3A" stroke-width="1"/>
+<line x1="80.0" y1="106.0" x2="560.0" y2="106.0" stroke="#E3E8EE" stroke-width="0.8"/>
+<text x="73.0" y="110.0" font-size="11" fill="#1E2B3A" text-anchor="end" font-weight="normal">200</text>
+<line x1="76.0" y1="50.0" x2="80.0" y2="50.0" stroke="#1E2B3A" stroke-width="1"/>
+<line x1="80.0" y1="50.0" x2="560.0" y2="50.0" stroke="#E3E8EE" stroke-width="0.8"/>
+<text x="73.0" y="54.0" font-size="11" fill="#1E2B3A" text-anchor="end" font-weight="normal">250</text>
+<line x1="80.0" y1="330.0" x2="560.0" y2="330.0" stroke="#1E2B3A" stroke-width="1.4"/>
+<line x1="80.0" y1="330.0" x2="80.0" y2="50.0" stroke="#1E2B3A" stroke-width="1.4"/>
+<text x="320.0" y="366.0" font-size="12" fill="#1E2B3A" text-anchor="middle" font-weight="normal">temperature, °C</text>
+<text x="38" y="190.0" font-size="12" fill="#1E2B3A" text-anchor="middle" transform="rotate(-90 38 190.0)">solubility, g solute / 100 g water</text>
+<polyline points="80.0,290.0 82.4,290.0 84.8,290.0 87.2,290.0 89.6,290.0 92.0,290.0 94.4,290.0 96.8,290.0 99.2,290.0 101.6,290.0 104.0,290.0 106.4,290.0 108.8,289.9 111.2,289.9 113.6,289.9 116.0,289.9 118.4,289.9 120.8,289.9 123.2,289.9 125.6,289.9 128.0,289.9 130.4,289.9 132.8,289.9 135.2,289.9 137.6,289.9 140.0,289.9 142.4,289.9 144.8,289.9 147.2,289.9 149.6,289.9 152.0,289.9 154.4,289.8 156.8,289.8 159.2,289.8 161.6,289.8 164.0,289.8 166.4,289.8 168.8,289.8 171.2,289.8 173.6,289.8 176.0,289.8 178.4,289.8 180.8,289.8 183.2,289.8 185.6,289.8 188.0,289.7 190.4,289.7 192.8,289.7 195.2,289.7 197.6,289.7 200.0,289.7 202.4,289.7 204.8,289.7 207.2,289.7 209.6,289.6 212.0,289.6 214.4,289.6 216.8,289.6 219.2,289.6 221.6,289.6 224.0,289.6 226.4,289.6 228.8,289.5 231.2,289.5 233.6,289.5 236.0,289.5 238.4,289.5 240.8,289.5 243.2,289.4 245.6,289.4 248.0,289.4 250.4,289.4 252.8,289.4 255.2,289.4 257.6,289.3 260.0,289.3 262.4,289.3 264.8,289.3 267.2,289.3 269.6,289.2 272.0,289.2 274.4,289.2 276.8,289.2 279.2,289.2 281.6,289.2 284.0,289.2 286.4,289.1 288.8,289.1 291.2,289.1 293.6,289.1 296.0,289.1 298.4,289.1 300.8,289.0 303.2,289.0 305.6,289.0 308.0,289.0 310.4,289.0 312.8,289.0 315.2,288.9 317.6,288.9 320.0,288.9 322.4,288.9 324.8,288.9 327.2,288.8 329.6,288.8 332.0,288.8 334.4,288.8 336.8,288.7 339.2,288.7 341.6,288.7 344.0,288.7 346.4,288.7 348.8,288.6 351.2,288.6 353.6,288.6 356.0,288.6 358.4,288.5 360.8,288.5 363.2,288.5 365.6,288.5 368.0,288.4 370.4,288.4 372.8,288.4 375.2,288.4 377.6,288.4 380.0,288.3 382.4,288.3 384.8,288.3 387.2,288.3 389.6,288.3 392.0,288.2 394.4,288.2 396.8,288.2 399.2,288.2 401.6,288.1 404.0,288.1 406.4,288.1 408.8,288.1 411.2,288.0 413.6,288.0 416.0,288.0 418.4,288.0 420.8,287.9 423.2,287.9 425.6,287.9 428.0,287.9 430.4,287.8 432.8,287.8 435.2,287.8 437.6,287.8 440.0,287.7 442.4,287.7 444.8,287.7 447.2,287.6 449.6,287.6 452.0,287.6 454.4,287.6 456.8,287.5 459.2,287.5 461.6,287.5 464.0,287.4 466.4,287.4 468.8,287.4 471.2,287.4 473.6,287.3 476.0,287.3 478.4,287.3 480.8,287.3 483.2,287.2 485.6,287.2 488.0,287.2 490.4,287.1 492.8,287.1 495.2,287.1 497.6,287.1 500.0,287.0 502.4,287.0 504.8,287.0 507.2,286.9 509.6,286.9 512.0,286.9 514.4,286.8 516.8,286.8 519.2,286.8 521.6,286.7 524.0,286.7 526.4,286.7 528.8,286.6 531.2,286.6 533.6,286.5 536.0,286.5 538.4,286.5 540.8,286.4 543.2,286.4 545.6,286.3 548.0,286.3 550.4,286.3 552.8,286.2 555.2,286.2 557.6,286.1 560.0,286.1" fill="none" stroke="#0B7C8C" stroke-width="2.6"/>
+<polyline points="80.0,315.1 82.4,314.7 84.8,314.3 87.2,313.9 89.6,313.4 92.0,313.0 94.4,312.6 96.8,312.2 99.2,311.8 101.6,311.4 104.0,311.0 106.4,310.6 108.8,310.2 111.2,309.8 113.6,309.4 116.0,308.9 118.4,308.5 120.8,308.0 123.2,307.6 125.6,307.1 128.0,306.6 130.4,306.1 132.8,305.6 135.2,305.0 137.6,304.5 140.0,304.0 142.4,303.4 144.8,302.8 147.2,302.3 149.6,301.7 152.0,301.1 154.4,300.5 156.8,299.8 159.2,299.2 161.6,298.6 164.0,297.9 166.4,297.3 168.8,296.6 171.2,296.0 173.6,295.3 176.0,294.6 178.4,293.9 180.8,293.2 183.2,292.5 185.6,291.8 188.0,291.0 190.4,290.3 192.8,289.5 195.2,288.8 197.6,288.0 200.0,287.2 202.4,286.4 204.8,285.6 207.2,284.7 209.6,283.9 212.0,283.1 214.4,282.2 216.8,281.3 219.2,280.5 221.6,279.6 224.0,278.7 226.4,277.8 228.8,276.9 231.2,276.0 233.6,275.0 236.0,274.1 238.4,273.1 240.8,272.1 243.2,271.1 245.6,270.1 248.0,269.1 250.4,268.1 252.8,267.0 255.2,266.0 257.6,264.9 260.0,263.9 262.4,262.8 264.8,261.7 267.2,260.6 269.6,259.5 272.0,258.4 274.4,257.3 276.8,256.2 279.2,255.1 281.6,253.9 284.0,252.8 286.4,251.6 288.8,250.4 291.2,249.2 293.6,248.0 296.0,246.8 298.4,245.6 300.8,244.3 303.2,243.1 305.6,241.9 308.0,240.6 310.4,239.3 312.8,238.1 315.2,236.8 317.6,235.5 320.0,234.2 322.4,233.0 324.8,231.7 327.2,230.3 329.6,229.0 332.0,227.7 334.4,226.4 336.8,225.0 339.2,223.7 341.6,222.3 344.0,221.0 346.4,219.6 348.8,218.2 351.2,216.8 353.6,215.4 356.0,214.0 358.4,212.6 360.8,211.1 363.2,209.7 365.6,208.3 368.0,206.8 370.4,205.3 372.8,203.8 375.2,202.4 377.6,200.8 380.0,199.3 382.4,197.8 384.8,196.3 387.2,194.7 389.6,193.2 392.0,191.6 394.4,190.0 396.8,188.4 399.2,186.8 401.6,185.2 404.0,183.6 406.4,182.0 408.8,180.4 411.2,178.7 413.6,177.1 416.0,175.4 418.4,173.8 420.8,172.1 423.2,170.4 425.6,168.8 428.0,167.1 430.4,165.4 432.8,163.6 435.2,161.9 437.6,160.2 440.0,158.4 442.4,156.7 444.8,154.9 447.2,153.2 449.6,151.4 452.0,149.6 454.4,147.9 456.8,146.1 459.2,144.3 461.6,142.5 464.0,140.7 466.4,138.9 468.8,137.2 471.2,135.4 473.6,133.6 476.0,131.9 478.4,130.1 480.8,128.4 483.2,126.6 485.6,124.8 488.0,123.0 490.4,121.2 492.8,119.4 495.2,117.6 497.6,115.7 500.0,113.8 502.4,111.9 504.8,109.9 507.2,107.9 509.6,105.8 512.0,103.8 514.4,101.6 516.8,99.4 519.2,97.1 521.6,94.8 524.0,92.4 526.4,90.0 528.8,87.6 531.2,85.1 533.6,82.5 536.0,80.0 538.4,77.4 540.8,74.9 543.2,72.3 545.6,69.7 548.0,67.1 550.4,64.6 552.8,62.0 555.2,59.5 557.6,57.0 560.0,54.5" fill="none" stroke="#D2552B" stroke-width="2.6"/>
+<circle cx="80.0" cy="290.0" r="2.5" fill="#0B7C8C" stroke="#0B7C8C" stroke-width="1.6"/>
+<circle cx="128.0" cy="289.9" r="2.5" fill="#0B7C8C" stroke="#0B7C8C" stroke-width="1.6"/>
+<circle cx="176.0" cy="289.8" r="2.5" fill="#0B7C8C" stroke="#0B7C8C" stroke-width="1.6"/>
+<circle cx="224.0" cy="289.6" r="2.5" fill="#0B7C8C" stroke="#0B7C8C" stroke-width="1.6"/>
+<circle cx="272.0" cy="289.2" r="2.5" fill="#0B7C8C" stroke="#0B7C8C" stroke-width="1.6"/>
+<circle cx="320.0" cy="288.9" r="2.5" fill="#0B7C8C" stroke="#0B7C8C" stroke-width="1.6"/>
+<circle cx="368.0" cy="288.4" r="2.5" fill="#0B7C8C" stroke="#0B7C8C" stroke-width="1.6"/>
+<circle cx="416.0" cy="288.0" r="2.5" fill="#0B7C8C" stroke="#0B7C8C" stroke-width="1.6"/>
+<circle cx="464.0" cy="287.4" r="2.5" fill="#0B7C8C" stroke="#0B7C8C" stroke-width="1.6"/>
+<circle cx="512.0" cy="286.9" r="2.5" fill="#0B7C8C" stroke="#0B7C8C" stroke-width="1.6"/>
+<circle cx="560.0" cy="286.1" r="2.5" fill="#0B7C8C" stroke="#0B7C8C" stroke-width="1.6"/>
+<circle cx="80.0" cy="315.1" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="1.6"/>
+<circle cx="128.0" cy="306.6" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="1.6"/>
+<circle cx="176.0" cy="294.6" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="1.6"/>
+<circle cx="224.0" cy="278.7" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="1.6"/>
+<circle cx="272.0" cy="258.4" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="1.6"/>
+<circle cx="320.0" cy="234.2" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="1.6"/>
+<circle cx="368.0" cy="206.8" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="1.6"/>
+<circle cx="416.0" cy="175.4" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="1.6"/>
+<circle cx="464.0" cy="140.7" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="1.6"/>
+<circle cx="512.0" cy="103.8" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="1.6"/>
+<circle cx="560.0" cy="54.5" r="2.5" fill="#D2552B" stroke="#D2552B" stroke-width="1.6"/>
+<text x="329.6" y="274.0" font-size="12.5" fill="#0B7C8C" text-anchor="start" font-weight="bold">NaCl: almost flat (35.7 → 39.2)</text>
+<text x="281.6" y="162.0" font-size="12.5" fill="#D2552B" text-anchor="start" font-weight="bold">KNO₃: steep (13 → 246)</text>
+<text x="281.6" y="178.8" font-size="11.5" fill="#D2552B" text-anchor="start" font-weight="normal">→ cooling crystallizer</text>
+<text x="329.6" y="305.4" font-size="11.5" fill="#0B7C8C" text-anchor="start" font-weight="normal">→ evaporative crystallizer</text>
+<text x="320.0" y="392.0" font-size="10.5" fill="#55667D" text-anchor="middle" font-weight="normal">data: Perry’s Chemical Engineers’ Handbook (solubility tables)</text></svg>

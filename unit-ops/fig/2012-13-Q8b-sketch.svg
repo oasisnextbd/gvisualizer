@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 560" width="600" height="560" font-family="Helvetica, Arial, sans-serif"><title>Oslo evaporative crystallizer</title><defs><marker id="a1E2B3A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="a55667D" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="a9AA8B8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aD2552B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="a0B7C8C" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aB7840A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="a6A4FC9" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4FC9"/></marker></defs><rect width="600" height="560" fill="#FFFFFF"/><rect x="250.0" y="60.0" width="160.0" height="120.0" rx="20" fill="none" stroke="#1E2B3A" stroke-width="1.6"/>
+<text x="330.0" y="120.0" font-size="12" fill="#1E2B3A" text-anchor="middle" font-weight="bold">vaporizer</text>
+<text x="330.0" y="136.0" font-size="10.5" fill="#55667D" text-anchor="middle" font-weight="normal">(flash chamber)</text>
+<line x1="330.0" y1="60.0" x2="330.0" y2="25.0" stroke="#0B7C8C" stroke-width="2" marker-end="url(#a0B7C8C)"/>
+<text x="338.0" y="30.0" font-size="10.5" fill="#0B7C8C" text-anchor="start" font-weight="normal">vapor → entrainment separator, condenser, vacuum</text>
+<path d="M265,165 q15,-6 30,0 q15,6 30,0 q15,-6 30,0 q15,6 30,0 q15,-6 30,0" fill="none" stroke="#0B7C8C" stroke-width="1.2"/>
+<line x1="330.0" y1="180.0" x2="330.0" y2="470.0" stroke="#1E2B3A" stroke-width="6"/>
+<line x1="330.0" y1="180.0" x2="330.0" y2="470.0" stroke="#FFFFFF" stroke-width="3"/>
+<text x="338.0" y="240.0" font-size="10.5" fill="#55667D" text-anchor="start" font-weight="normal">central downcomer</text>
+<path d="M200,280 L460,280 L460,430 L380,500 L280,500 L200,430 Z" fill="none" stroke="#1E2B3A" stroke-width="2"/>
+<circle cx="340.6" cy="369.3" r="2.1" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="354.9" cy="391.0" r="2.4" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="225.7" cy="433.2" r="3.1" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="411.0" cy="332.2" r="1.5" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="266.2" cy="372.8" r="2.1" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="322.9" cy="494.3" r="4.0" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="246.1" cy="435.4" r="3.1" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="418.3" cy="434.8" r="3.1" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="387.9" cy="416.3" r="2.8" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="225.4" cy="440.8" r="3.2" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="351.9" cy="455.1" r="3.4" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="217.4" cy="379.7" r="2.3" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="323.5" cy="472.8" r="3.7" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="420.9" cy="448.6" r="3.3" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="431.1" cy="447.8" r="3.3" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="402.2" cy="395.2" r="2.5" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="434.5" cy="403.4" r="2.6" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="262.1" cy="352.4" r="1.8" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="314.7" cy="489.3" r="3.9" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="282.2" cy="433.4" r="3.1" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="302.6" cy="413.7" r="2.8" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="350.4" cy="387.9" r="2.4" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="427.0" cy="426.4" r="3.0" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="432.9" cy="442.5" r="3.2" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="249.1" cy="440.8" r="3.2" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="346.6" cy="479.3" r="3.8" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="260.7" cy="447.8" r="3.3" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="347.6" cy="467.2" r="3.6" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="225.2" cy="377.0" r="2.2" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="402.1" cy="344.6" r="1.7" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="246.2" cy="397.7" r="2.5" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="394.5" cy="378.5" r="2.2" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="220.8" cy="431.4" r="3.0" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="289.4" cy="448.5" r="3.3" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="449.6" cy="413.4" r="2.8" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="228.5" cy="381.1" r="2.3" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="217.5" cy="429.0" r="3.0" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="307.9" cy="362.6" r="2.0" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="247.5" cy="430.7" r="3.0" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="418.3" cy="337.0" r="1.6" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="440.1" cy="381.8" r="2.3" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="300.7" cy="477.9" r="3.7" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="353.0" cy="436.2" r="3.1" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="358.8" cy="422.3" r="2.9" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="382.9" cy="401.1" r="2.6" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="282.3" cy="369.2" r="2.1" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="212.7" cy="420.5" r="2.9" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="349.2" cy="398.5" r="2.5" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="357.8" cy="333.3" r="1.6" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="224.4" cy="434.3" r="3.1" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="321.9" cy="433.5" r="3.1" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="294.6" cy="442.1" r="3.2" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="387.1" cy="446.6" r="3.3" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="224.5" cy="333.7" r="1.6" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="441.2" cy="441.5" r="3.2" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="319.5" cy="371.4" r="2.1" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="286.8" cy="427.8" r="3.0" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="285.0" cy="390.1" r="2.4" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="352.9" cy="390.9" r="2.4" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="300.5" cy="379.6" r="2.3" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="386.4" cy="423.9" r="2.9" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="263.4" cy="381.2" r="2.3" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="267.3" cy="462.6" r="3.5" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="314.5" cy="360.9" r="2.0" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="234.4" cy="445.2" r="3.2" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="290.1" cy="383.1" r="2.3" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="315.2" cy="467.5" r="3.6" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="366.1" cy="385.6" r="2.3" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="318.3" cy="476.0" r="3.7" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="239.0" cy="367.1" r="2.1" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="255.8" cy="417.4" r="2.8" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="411.2" cy="463.1" r="3.5" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="276.9" cy="360.3" r="2.0" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="364.1" cy="463.2" r="3.5" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="292.9" cy="463.0" r="3.5" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="280.1" cy="351.4" r="1.8" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="275.1" cy="461.0" r="3.5" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="310.1" cy="387.1" r="2.4" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="308.3" cy="399.3" r="2.5" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="436.4" cy="330.8" r="1.5" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="438.0" cy="401.7" r="2.6" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="410.8" cy="453.0" r="3.4" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="291.9" cy="377.7" r="2.2" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="226.3" cy="367.5" r="2.1" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="278.9" cy="427.1" r="3.0" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="376.5" cy="479.1" r="3.8" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="348.5" cy="478.4" r="3.7" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="388.9" cy="332.2" r="1.5" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="282.0" cy="358.4" r="1.9" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="435.4" cy="398.3" r="2.5" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="291.9" cy="431.0" r="3.0" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="416.8" cy="371.7" r="2.1" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="397.8" cy="408.7" r="2.7" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="257.4" cy="388.1" r="2.4" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="406.0" cy="418.2" r="2.8" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="400.0" cy="358.3" r="1.9" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="417.0" cy="433.7" r="3.1" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="275.1" cy="338.2" r="1.6" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="336.5" cy="374.3" r="2.2" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="323.5" cy="399.8" r="2.6" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="240.4" cy="339.0" r="1.6" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="226.4" cy="350.6" r="1.8" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="285.5" cy="382.1" r="2.3" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="365.3" cy="388.0" r="2.4" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="296.6" cy="426.8" r="3.0" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="288.9" cy="361.5" r="2.0" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="343.3" cy="350.4" r="1.8" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="301.3" cy="448.1" r="3.3" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="252.9" cy="343.2" r="1.7" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="355.1" cy="391.6" r="2.4" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="301.3" cy="459.1" r="3.5" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="359.5" cy="462.2" r="3.5" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="299.4" cy="401.2" r="2.6" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="378.7" cy="411.9" r="2.7" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="376.6" cy="399.4" r="2.6" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<circle cx="268.8" cy="406.0" r="2.7" fill="#F3E3C3" stroke="#B7840A" stroke-width="0.8"/>
+<text x="470.0" y="370.0" font-size="10.5" fill="#B7840A" text-anchor="start" font-weight="normal">fluidised bed of</text>
+<text x="470.0" y="384.0" font-size="10.5" fill="#B7840A" text-anchor="start" font-weight="normal">growing crystals</text>
+<text x="470.0" y="398.0" font-size="10.5" fill="#B7840A" text-anchor="start" font-weight="normal">(classified)</text>
+<text x="210.0" y="300.0" font-size="10.5" fill="#55667D" text-anchor="start" font-weight="normal">suspension chamber</text>
+<line x1="330.0" y1="500.0" x2="330.0" y2="540.0" stroke="#B7840A" stroke-width="2.4" marker-end="url(#aB7840A)"/>
+<text x="340.0" y="540.0" font-size="11" fill="#B7840A" text-anchor="start" font-weight="normal">product crystal slurry</text>
+<polyline points="200.0,300.0 110.0,300.0 110.0,420.0" fill="none" stroke="#0B7C8C" stroke-width="2"/>
+<text x="40.0" y="292.0" font-size="10.5" fill="#0B7C8C" text-anchor="start" font-weight="normal">mother liquor</text>
+<circle cx="110.0" cy="440.0" r="18.0" fill="none" stroke="#1E2B3A" stroke-width="1.6"/>
+<text x="110.0" y="444.0" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">P</text>
+<text x="70.0" y="476.0" font-size="10.5" fill="#55667D" text-anchor="start" font-weight="normal">circulating pump</text>
+<line x1="40.0" y1="440.0" x2="90.0" y2="440.0" stroke="#1E2B3A" stroke-width="2" marker-end="url(#a1E2B3A)"/>
+<text x="30.0" y="430.0" font-size="11" fill="#1E2B3A" text-anchor="start" font-weight="normal">feed</text>
+<polyline points="128.0,440.0 160.0,440.0 160.0,400.0" fill="none" stroke="#0B7C8C" stroke-width="2"/>
+<rect x="140.0" y="190.0" width="40.0" height="210.0" rx="0" fill="#FBE3D9" stroke="#D2552B" stroke-width="1.6"/>
+<text x="160.0" y="300.0" font-size="10.5" fill="#D2552B" text-anchor="middle" font-weight="bold">heater</text>
+<line x1="146.0" y1="205.0" x2="174.0" y2="205.0" stroke="#D2552B" stroke-width="0.8"/>
+<line x1="146.0" y1="219.0" x2="174.0" y2="219.0" stroke="#D2552B" stroke-width="0.8"/>
+<line x1="146.0" y1="233.0" x2="174.0" y2="233.0" stroke="#D2552B" stroke-width="0.8"/>
+<line x1="146.0" y1="247.0" x2="174.0" y2="247.0" stroke="#D2552B" stroke-width="0.8"/>
+<line x1="146.0" y1="261.0" x2="174.0" y2="261.0" stroke="#D2552B" stroke-width="0.8"/>
+<line x1="146.0" y1="275.0" x2="174.0" y2="275.0" stroke="#D2552B" stroke-width="0.8"/>
+<line x1="146.0" y1="289.0" x2="174.0" y2="289.0" stroke="#D2552B" stroke-width="0.8"/>
+<line x1="146.0" y1="303.0" x2="174.0" y2="303.0" stroke="#D2552B" stroke-width="0.8"/>
+<line x1="146.0" y1="317.0" x2="174.0" y2="317.0" stroke="#D2552B" stroke-width="0.8"/>
+<line x1="146.0" y1="331.0" x2="174.0" y2="331.0" stroke="#D2552B" stroke-width="0.8"/>
+<line x1="146.0" y1="345.0" x2="174.0" y2="345.0" stroke="#D2552B" stroke-width="0.8"/>
+<line x1="146.0" y1="359.0" x2="174.0" y2="359.0" stroke="#D2552B" stroke-width="0.8"/>
+<line x1="146.0" y1="373.0" x2="174.0" y2="373.0" stroke="#D2552B" stroke-width="0.8"/>
+<line x1="146.0" y1="387.0" x2="174.0" y2="387.0" stroke="#D2552B" stroke-width="0.8"/>
+<line x1="100.0" y1="230.0" x2="140.0" y2="230.0" stroke="#D2552B" stroke-width="1.6" marker-end="url(#aD2552B)"/>
+<text x="40.0" y="224.0" font-size="10.5" fill="#D2552B" text-anchor="start" font-weight="normal">steam</text>
+<line x1="140.0" y1="370.0" x2="100.0" y2="370.0" stroke="#D2552B" stroke-width="1.6" marker-end="url(#aD2552B)"/>
+<text x="40.0" y="382.0" font-size="10.5" fill="#D2552B" text-anchor="start" font-weight="normal">condensate</text>
+<polyline points="160.0,190.0 160.0,120.0 250.0,120.0" fill="none" stroke="#0B7C8C" stroke-width="2" marker-end="url(#a0B7C8C)"/>
+<text x="40.0" y="96.0" font-size="10.5" fill="#0B7C8C" text-anchor="start" font-weight="normal">heated liquor</text>
+<text x="40.0" y="110.0" font-size="10.5" fill="#0B7C8C" text-anchor="start" font-weight="normal">(no boiling in tubes)</text>
+<text x="20.0" y="556.0" font-size="10.5" fill="#55667D" text-anchor="start" font-weight="normal">supersaturation is made in the vaporizer; it is released by growth in the crystal bed</text></svg>
