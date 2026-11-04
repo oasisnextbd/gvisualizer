@@ -20,5 +20,5 @@ window.QB_COURSE={
     {id:'other',name:'Other (not in current slides)',ch:'–'}
   ],
   years:['2023-24','2022-23','2020-21','2019-20','2018-19','2017-18','2016-17','2015-16','2014-15','2013-14','2012-13','2011-12'],
-  sets:['evaporation','drying','ejectors','pumps','compressors','relief','separator-selection','gas-liquid-separation','dust-collection','crystallization','size-reduction','mixing','solids-handling']
+  sets:['evaporation','drying','ejectors','relief','separator-selection','gas-liquid-separation','dust-collection','crystallization','size-reduction','mixing','solids-handling']
 };
