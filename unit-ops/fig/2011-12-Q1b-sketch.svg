@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 600" width="560" height="600" font-family="Helvetica, Arial, sans-serif"><title>Standard Lapple cyclone proportions</title><defs><marker id="a1E2B3A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="a55667D" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="a9AA8B8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aD2552B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="a0B7C8C" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aB7840A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="a6A4FC9" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4FC9"/></marker></defs><rect width="560" height="600" fill="#FFFFFF"/><polyline points="180.0,90.0 180.0,290.0 217.5,490.0 242.5,490.0 242.5,490.0 280.0,290.0 280.0,90.0 180.0,90.0" fill="none" stroke="#1E2B3A" stroke-width="2.2"/>
+<rect x="205.0" y="60.0" width="50.0" height="92.5" rx="0" fill="#FFFFFF" stroke="#1E2B3A" stroke-width="2"/>
+<rect x="90.0" y="90.0" width="90.0" height="50.0" rx="0" fill="#EEF1F5" stroke="#1E2B3A" stroke-width="2"/>
+<line x1="40.0" y1="115.0" x2="85.0" y2="115.0" stroke="#D2552B" stroke-width="2" marker-end="url(#aD2552B)"/>
+<text x="40.0" y="80.0" font-size="11" fill="#D2552B" text-anchor="start" font-weight="normal">dusty gas</text>
+<line x1="230.0" y1="60.0" x2="230.0" y2="28.0" stroke="#0B7C8C" stroke-width="2" marker-end="url(#a0B7C8C)"/>
+<text x="238.0" y="40.0" font-size="11" fill="#0B7C8C" text-anchor="start" font-weight="normal">clean gas</text>
+<line x1="230.0" y1="490.0" x2="230.0" y2="520.0" stroke="#B7840A" stroke-width="2" marker-end="url(#aB7840A)"/>
+<text x="238.0" y="518.0" font-size="11" fill="#B7840A" text-anchor="start" font-weight="normal">dust</text>
+<path d="M170,180 Q230,200 290,180 M175,260 Q230,280 285,260 M185,350 Q230,370 275,350 M200,440 Q230,455 260,440" fill="none" stroke="#D2552B" stroke-width="1.2" stroke-dasharray="4,3"/>
+<line x1="180.0" y1="540.0" x2="280.0" y2="540.0" stroke="#55667D" stroke-width="1" marker-end="url(#a55667D)"/>
+<line x1="280.0" y1="540.0" x2="180.0" y2="540.0" stroke="#55667D" stroke-width="1" marker-end="url(#a55667D)"/>
+<text x="230.0" y="556.0" font-size="11.5" fill="#55667D" text-anchor="middle" font-weight="normal">D_c</text>
+<line x1="310.0" y1="90.0" x2="310.0" y2="290.0" stroke="#55667D" stroke-width="1" marker-end="url(#a55667D)"/>
+<line x1="310.0" y1="290.0" x2="310.0" y2="90.0" stroke="#55667D" stroke-width="1" marker-end="url(#a55667D)"/>
+<text x="318.0" y="190.0" font-size="11.5" fill="#55667D" text-anchor="start" font-weight="normal">L_c = 2D</text>
+<line x1="310.0" y1="290.0" x2="310.0" y2="490.0" stroke="#55667D" stroke-width="1" marker-end="url(#a55667D)"/>
+<line x1="310.0" y1="490.0" x2="310.0" y2="290.0" stroke="#55667D" stroke-width="1" marker-end="url(#a55667D)"/>
+<text x="318.0" y="390.0" font-size="11.5" fill="#55667D" text-anchor="start" font-weight="normal">Z_c = 2D</text>
+<line x1="205.0" y1="50.0" x2="255.0" y2="50.0" stroke="#55667D" stroke-width="1" marker-end="url(#a55667D)"/>
+<line x1="255.0" y1="50.0" x2="205.0" y2="50.0" stroke="#55667D" stroke-width="1" marker-end="url(#a55667D)"/>
+<text x="300.0" y="54.0" font-size="11.5" fill="#55667D" text-anchor="middle" font-weight="normal">D_e = D/2</text>
+<line x1="80.0" y1="90.0" x2="80.0" y2="140.0" stroke="#55667D" stroke-width="1" marker-end="url(#a55667D)"/>
+<line x1="80.0" y1="140.0" x2="80.0" y2="90.0" stroke="#55667D" stroke-width="1" marker-end="url(#a55667D)"/>
+<text x="72.0" y="119.0" font-size="11.5" fill="#55667D" text-anchor="end" font-weight="normal">H</text>
+<text x="135.0" y="158.0" font-size="11" fill="#55667D" text-anchor="middle" font-weight="normal">inlet: B × H = D/4 × D/2</text>
+<line x1="267.0" y1="90.0" x2="267.0" y2="152.5" stroke="#55667D" stroke-width="1" marker-end="url(#a55667D)"/>
+<line x1="267.0" y1="152.5" x2="267.0" y2="90.0" stroke="#55667D" stroke-width="1" marker-end="url(#a55667D)"/>
+<text x="273.0" y="121.2" font-size="11.5" fill="#55667D" text-anchor="start" font-weight="normal">S = 5D/8</text>
+<line x1="217.5" y1="504.0" x2="242.5" y2="504.0" stroke="#55667D" stroke-width="1" marker-end="url(#a55667D)"/>
+<line x1="242.5" y1="504.0" x2="217.5" y2="504.0" stroke="#55667D" stroke-width="1" marker-end="url(#a55667D)"/>
+<text x="230.0" y="504.0" font-size="11.5" fill="#55667D" text-anchor="middle" font-weight="normal"></text>
+<text x="211.5" y="508.0" font-size="11.5" fill="#55667D" text-anchor="end" font-weight="normal">J_c = D/4</text>
+<text x="20.0" y="590.0" font-size="12" fill="#1E2B3A" text-anchor="start" font-weight="normal">cut size D_pc = [9μB / (2π N_t V_i (ρ_s − ρ))]^½, N_t ≈ 5</text></svg>

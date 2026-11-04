@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380" font-family="Helvetica, Arial, sans-serif"><title>Droop governor</title><defs><marker id="a1E2B3A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="a55667D" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="a9AA8B8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aD2552B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="a0B7C8C" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aB7840A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="a6A4FC9" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4FC9"/></marker></defs><rect width="720" height="380" fill="#FFFFFF"/><line x1="130.0" y1="60.0" x2="130.0" y2="250.0" stroke="#1E2B3A" stroke-width="3"/>
+<text x="122.0" y="265.0" font-size="10" fill="#55667D" text-anchor="middle" font-weight="normal">driven from turbine shaft</text>
+<line x1="130.0" y1="80.0" x2="75.0" y2="150.0" stroke="#1E2B3A" stroke-width="2"/>
+<circle cx="75.0" cy="150.0" r="13.0" fill="#DDE3EA" stroke="#1E2B3A" stroke-width="1.6"/>
+<line x1="75.0" y1="150.0" x2="130.0" y2="185.0" stroke="#1E2B3A" stroke-width="2"/>
+<line x1="130.0" y1="80.0" x2="185.0" y2="150.0" stroke="#1E2B3A" stroke-width="2"/>
+<circle cx="185.0" cy="150.0" r="13.0" fill="#DDE3EA" stroke="#1E2B3A" stroke-width="1.6"/>
+<line x1="185.0" y1="150.0" x2="130.0" y2="185.0" stroke="#1E2B3A" stroke-width="2"/>
+<rect x="116.0" y="180.0" width="28.0" height="10.0" rx="0" fill="#1E2B3A" stroke="#1E2B3A" stroke-width="1.6"/>
+<text x="200.0" y="150.0" font-size="10.5" fill="#55667D" text-anchor="start" font-weight="normal">flyweights</text>
+<polyline points="121.0,192.0 139.0,197.0 121.0,202.0 139.0,207.0 121.0,212.0 139.0,217.0 121.0,222.0 139.0,227.0 121.0,232.0 139.0,237.0" fill="none" stroke="#55667D" stroke-width="1.2"/>
+<text x="146.0" y="225.0" font-size="10" fill="#55667D" text-anchor="start" font-weight="normal">speeder spring</text>
+<line x1="130.0" y1="185.0" x2="330.0" y2="185.0" stroke="#6A4FC9" stroke-width="2.6"/>
+<circle cx="130.0" cy="185.0" r="3.0" fill="#6A4FC9" stroke="#6A4FC9" stroke-width="1.6"/>
+<text x="220.0" y="176.0" font-size="10.5" fill="#6A4FC9" text-anchor="middle" font-weight="normal">floating lever</text>
+<line x1="240.0" y1="185.0" x2="240.0" y2="230.0" stroke="#6A4FC9" stroke-width="2"/>
+<rect x="225.0" y="230.0" width="30.0" height="40.0" rx="0" fill="#EEF1F5" stroke="#1E2B3A" stroke-width="1.6"/>
+<text x="240.0" y="288.0" font-size="10" fill="#55667D" text-anchor="middle" font-weight="normal">pilot valve</text>
+<line x1="255.0" y1="250.0" x2="300.0" y2="250.0" stroke="#B7840A" stroke-width="1.6" marker-end="url(#aB7840A)"/>
+<text x="258.0" y="244.0" font-size="10" fill="#B7840A" text-anchor="start" font-weight="normal">oil</text>
+<rect x="300.0" y="215.0" width="60.0" height="80.0" rx="0" fill="#FFFFFF" stroke="#1E2B3A" stroke-width="1.6"/>
+<rect x="305.0" y="240.0" width="50.0" height="12.0" rx="0" fill="#1E2B3A" stroke="#1E2B3A" stroke-width="1.6"/>
+<line x1="330.0" y1="240.0" x2="330.0" y2="140.0" stroke="#1E2B3A" stroke-width="3"/>
+<text x="330.0" y="312.0" font-size="10" fill="#55667D" text-anchor="middle" font-weight="normal">servo-motor</text>
+<line x1="330.0" y1="185.0" x2="330.0" y2="185.0" stroke="#1E2B3A" stroke-width="1.6"/>
+<circle cx="330.0" cy="185.0" r="3.0" fill="#6A4FC9" stroke="#6A4FC9" stroke-width="1.6"/>
+<text x="338.0" y="198.0" font-size="10" fill="#6A4FC9" text-anchor="start" font-weight="normal">feedback</text>
+<rect x="300.0" y="100.0" width="60.0" height="40.0" rx="0" fill="#FBE3D9" stroke="#D2552B" stroke-width="1.6"/>
+<text x="330.0" y="124.0" font-size="10" fill="#D2552B" text-anchor="middle" font-weight="normal">steam valve</text>
+<line x1="250.0" y1="120.0" x2="300.0" y2="120.0" stroke="#D2552B" stroke-width="2" marker-end="url(#aD2552B)"/>
+<line x1="360.0" y1="120.0" x2="410.0" y2="120.0" stroke="#D2552B" stroke-width="2" marker-end="url(#aD2552B)"/>
+<text x="380.0" y="112.0" font-size="10" fill="#D2552B" text-anchor="start" font-weight="normal">to turbine</text>
+<text x="30.0" y="340.0" font-size="10.5" fill="#1E2B3A" text-anchor="start" font-weight="normal">speed falls → weights move in → pilot valve admits oil → servo opens steam valve;</text>
+<text x="30.0" y="356.0" font-size="10.5" fill="#1E2B3A" text-anchor="start" font-weight="normal">feedback re-centres the pilot valve: each valve opening corresponds to one speed (droop)</text>
+<line x1="470.0" y1="260.0" x2="680.0" y2="260.0" stroke="#1E2B3A" stroke-width="1.4" marker-end="url(#a1E2B3A)"/>
+<line x1="470.0" y1="260.0" x2="470.0" y2="55.0" stroke="#1E2B3A" stroke-width="1.4" marker-end="url(#a1E2B3A)"/>
+<text x="575.0" y="280.0" font-size="11" fill="#1E2B3A" text-anchor="middle" font-weight="normal">load, % of rated</text>
+<text x="456" y="160.0" font-size="11" fill="#1E2B3A" text-anchor="middle" transform="rotate(-90 456 160.0)">speed</text>
+<line x1="470.0" y1="110.0" x2="670.0" y2="190.0" stroke="#0B7C8C" stroke-width="2.4"/>
+<text x="478.0" y="132.0" font-size="10.5" fill="#0B7C8C" text-anchor="start" font-weight="normal">N_NL</text>
+<text x="640.0" y="208.0" font-size="10.5" fill="#0B7C8C" text-anchor="start" font-weight="normal">N_FL</text>
+<line x1="470.0" y1="90.0" x2="670.0" y2="170.0" stroke="#0B7C8C" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="530.0" y="98.0" font-size="10" fill="#55667D" text-anchor="start" font-weight="normal">speed changer shifts line</text>
+<line x1="470.0" y1="150.0" x2="670.0" y2="150.0" stroke="#9AA8B8" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="672.0" y="146.0" font-size="9.5" fill="#55667D" text-anchor="end" font-weight="normal">isochronous</text>
+<text x="470.0" y="304.0" font-size="11" fill="#1E2B3A" text-anchor="start" font-weight="normal">droop = (N_NL − N_FL)/N_rated ≈ 3–5%</text></svg>
