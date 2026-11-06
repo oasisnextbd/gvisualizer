@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2018-19-Q1a", label: "(a)", marks: "5+4",
           topic: "absorption", sub: "Reversing mass transfer in a gas plant; what makes a column an absorber or stripper",
-          type: "theory", syllabus: "in", repeats: ["2016-17-Q6c", "2017-18-Q1a", "2021-22-Q2b", "2022-23-Q2a"],
+          type: "theory", syllabus: "in", repeats: ["2016-17-Q6c", "2017-18-Q1a", "2021-22-Q2b", "2022-23-Q2a", "2024-25-Q1a"],
           text: String.raw`How can the direction of mass transfer be reversed in a gas/liquid system as it is in a complete gas plant? What controls whether a column is a stripper or an absorber?`,
           solution: String.raw`![Gas treatment plant: absorber at low T and high p, heated rich solvent stripped at high T and low p, lean solvent recycled](fig/2018-19-Q1a-sol.svg)
 
@@ -205,7 +205,7 @@ Note: the book's hand-graph answer is 27.5 % acid in $R_1$, 13 % acid in $E_0$ (
           answer: String.raw`Δ = EN − F = 750 kg/h at (xD, xA) = (−0.293, 0.067). Three tie-line steps from E3 (yA 0.20): R1 ≈ 31 % acid (book graph 27.5 %); E0 on the A–S edge ≈ 14 % acid, 86 % IPE (book 13 %); R1 ≈ 336, E0 ≈ 1086 kg/h.` },
         { id: "2018-19-Q3b", label: "(b)", marks: "6",
           topic: "partial-extraction", sub: "Methods of locating the difference point Δ",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2024-25-Q1d"],
           text: String.raw`Write a short note on the methods of locating Δ, difference point for stage-by-stage calculation in triangular diagram.`,
           solution: String.raw`For a countercurrent cascade ($E_0 = S$ enters stage 1, $F = R_{N+1}$ enters stage N), the balance $E_0 + R_{N+1} = R_1 + E_N$ rearranges to
 $$\Delta = E_0 - R_1 = E_1 - R_2 = \cdots = E_j - R_{j+1} = \cdots = E_N - R_{N+1}$$

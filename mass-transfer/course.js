@@ -16,6 +16,6 @@ window.QB_COURSE={
     {id:'leaching',name:'Washing & leaching',ch:'WL'},
     {id:'other',name:'Other (not in current slides)',ch:'–'}
   ],
-  years:['2023-24','2022-23','2021-22','2020-21','2018-19','2017-18','2016-17','2015-16','2013-14','2012-13','2011-12'],
+  years:['2024-25','2023-24','2022-23','2021-22','2020-21','2018-19','2017-18','2016-17','2015-16','2013-14','2012-13','2011-12'],
   sets:['intro','vle','flash','column-balances','mccabe-thiele','advanced-distillation','batch','column-design','absorption','immiscible-extraction','partial-extraction','leaching']
 };

@@ -546,7 +546,7 @@ $$x_{D,avg} = \frac{F x_F - W x_W}{D} = \frac{20.0 - 74.0(0.03)}{26.0} = 0.684$$
           answer: String.raw`The R that minimizes total annual cost (capital falls with R while energy rises). Typically $R_{opt} \approx 1.05$–$1.25\,R_{min}$.` },
         { id: "2011-12-Q8b", label: "(b)", marks: "5",
           topic: "column-design", sub: "Sieve vs bubble-cap vs valve trays",
-          type: "theory", syllabus: "in", repeats: ["2012-13-Q4b", "2016-17-Q5e", "2020-21-Q1a"],
+          type: "theory", syllabus: "in", repeats: ["2012-13-Q4b", "2016-17-Q5e", "2020-21-Q1a", "2024-25-Q8b"],
           text: String.raw`Compare the relative advantages and disadvantages of sieve, bubble cap and valve tray.`,
           solution: String.raw`| feature | sieve | valve | bubble-cap |
 |---|---|---|---|

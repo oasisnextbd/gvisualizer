@@ -83,7 +83,7 @@ $$x_{A,\Delta} = \frac{E_0y_{A,0} - R_1x_{A,1}}{\Delta}, \qquad x_{D,\Delta} = \
           answer: String.raw`$\Delta = E_0 - R_1 = 0$, so the coordinates of Δ blow up: Δ is at infinity and all operating lines $E_jR_{j+1}$ are parallel to $E_0R_1$; step with parallel lines.` },
         { id: "2021-22-Q1e", label: "(e)", marks: "7",
           topic: "leaching", sub: "Faulty leaching assumptions and the effective equilibrium constant",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2024-25-Q1c"],
           text: String.raw`McCabe-Thiele graphical stage analysis for idealized leaching process requires a set of assumptions of which two assumptions are often faulty in real cases — state those assumptions with reasons and what corrective measures are taken for the stage analysis?`,
           solution: String.raw`**Idealized leaching assumptions (slides):** (1) isothermal; (2) isobaric; (3) no solvent dissolves into the solid; (4) **no solvent entrained with the solid**; (5) insoluble solid backbone; (6) negligible heat of mixing; (7) **the stages are equilibrium stages**; (8) no solid carried with the overflow.
 
@@ -106,7 +106,7 @@ $$\frac{x_N}{x_0} = \frac{1 - m_EF_{solv}/F_{solid}}{1 - (m_EF_{solv}/F_{solid})
       parts: [
         { id: "2021-22-Q2a", label: "(a)", marks: "7",
           topic: "absorption", sub: "Why absorbers and strippers are coupled",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2024-25-Q1a"],
           text: String.raw`Many chemical plants including gas treatment plant often have both absorption and stripping columns coupled to each other — state the reason(s).`,
           solution: String.raw`- **Solvent regeneration and recycle.** The absorber loads the solvent with solute. Buying fresh solvent and disposing of the loaded solvent would be very costly and polluting. The stripper removes the solute so the lean solvent can be **recycled** to the absorber in a closed loop, with only a small make-up.
 - **Recovering the solute.** The absorbed component (e.g. CO₂, H₂S, hydrocarbons, ammonia) leaves the stripper as a concentrated stream. It can then be sold, used (H₂S to sulfur by the Claus process, CO₂ for urea or sequestration) or disposed of safely.
@@ -305,7 +305,7 @@ $$\frac{x_N}{x_0} = \frac{1 - 1.121}{1 - 1.121^{12}} = \frac{-0.121}{1 - 3.938} 
           answer: String.raw`$m_EF_{solv}/F_{solid} = 1.121$; $x_N/x_0 = 0.041$; recovery of sugar ≈ 95.9%.` },
         { id: "2021-22-Q4c", label: "(c)", marks: "6+4",
           topic: "column-design", sub: "Choosing liquid flow pattern (graph) and best way to get overall efficiency",
-          type: "sketch", syllabus: "in", repeats: ["2012-13-Q4d", "2022-23-Q1b", "2023-24-Q4b"],
+          type: "sketch", syllabus: "in", repeats: ["2012-13-Q4d", "2022-23-Q1b", "2023-24-Q4b", "2024-25-Q8c"],
           text: String.raw`In the context of staged distillation column design, answer the followings: (i) How to find the appropriate liquid flow patterns for a given condition/problem? [Show graphically]. (ii) State briefly the best way to determine overall column efficiency.`,
           solution: String.raw`### (i) Liquid flow pattern
 - The two variables are the **liquid flow rate** (gal/min) and the **tower diameter** (ft, set by the vapor load from the flooding calculation).

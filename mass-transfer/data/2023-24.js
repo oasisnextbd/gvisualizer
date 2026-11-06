@@ -345,7 +345,7 @@ Beyond these come excessive entrainment and flooding; at the low end, weeping an
           answer: String.raw`Bubble, foam, froth and spray regimes (then entrainment/flooding); froth is best: good mixing and efficiency with reasonable vapor capacity, away from weeping and spray/flooding.` },
         { id: "2023-24-Q4b", label: "(b)", marks: "8+8",
           topic: "column-design", sub: "Flow-pattern selection; downcomer and weir designs",
-          type: "sketch", syllabus: "in", repeats: ["2012-13-Q4d", "2021-22-Q4c", "2022-23-Q1b"],
+          type: "sketch", syllabus: "in", repeats: ["2012-13-Q4d", "2021-22-Q4c", "2022-23-Q1b", "2024-25-Q8c"],
           text: String.raw`In addition to choosing the type of tray, the designer of a distillation column must select the flow pattern on the trays and design the weirs and downcomers.
 
 i. Show graphically the selection guide of appropriate flow pattern for sieve trays.

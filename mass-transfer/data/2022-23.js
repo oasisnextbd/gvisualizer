@@ -25,7 +25,7 @@ Worked check from the slides: hexane–heptane, $V = 160$ kmol/h, $M_V = 86.74$,
           answer: String.raw`(1) V (kmol/h) → mass flow via M_V; (2) ρ_V = PM_V/RT → Q_V; (3) u ≈ 75% of flooding → A = Q_V/u (+ downcomer area) → D = √(4A/π), size top and bottom, take the larger.` },
         { id: "2022-23-Q1b", label: "(b)", marks: "7",
           topic: "column-design", sub: "Flow-pattern selection guide for sieve trays",
-          type: "sketch", syllabus: "in", repeats: ["2012-13-Q4d", "2021-22-Q4c", "2023-24-Q4b"],
+          type: "sketch", syllabus: "in", repeats: ["2012-13-Q4d", "2021-22-Q4c", "2023-24-Q4b", "2024-25-Q8c"],
           text: String.raw`Flow pattern on the trays is also an important design parameter for distillation columns. With an appropriate diagram, demonstrate the selection guide of flow pattern for sieve trays.`,
           solution: String.raw`The flow pattern is chosen from the **liquid rate** and the **tower diameter** (Huang–Hodson guide in Wankat Ch. 10 and the slides):
 
@@ -515,7 +515,7 @@ $$\bar{V} = \frac{8.05\times10^5}{620 - 94} = 1530\ \mathrm{kg/h}$$
           answer: String.raw`D = 2200 kg/h, B = 800 kg/h; Q_R ≈ 8.05 × 10⁵ kcal/h; V̄ ≈ 1530 kg/h (h_F ≈ −28, h_C ≈ 48, H_D ≈ 328, h_B ≈ 94, H_V ≈ 620 kcal/kg).` },
         { id: "2022-23-Q6b", label: "(b)", marks: "10",
           topic: "advanced-distillation", sub: "Total reflux and minimum reflux on McCabe–Thiele",
-          type: "sketch", syllabus: "in", repeats: ["2012-13-Q8c", "2021-22-Q5c"],
+          type: "sketch", syllabus: "in", repeats: ["2012-13-Q8c", "2021-22-Q5c", "2024-25-Q7a"],
           text: String.raw`Explain the concepts of total reflux and minimum reflux and how they relate to McCabe Thiele diagram.`,
           solution: String.raw`**Total reflux** ($R = L/D \to \infty$)
 

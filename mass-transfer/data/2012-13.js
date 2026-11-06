@@ -226,7 +226,7 @@ $$
           answer: String.raw`Efficiency is low at weeping, rises to a maximum near the design velocity, then drops steeply with excessive entrainment and flooding.` },
         { id: "2012-13-Q4b", label: "(b)", marks: "12",
           topic: "column-design", sub: "Sieve vs bubble-cap vs valve trays",
-          type: "theory", syllabus: "in", repeats: ["2011-12-Q8b", "2016-17-Q5e", "2020-21-Q1a"],
+          type: "theory", syllabus: "in", repeats: ["2011-12-Q8b", "2016-17-Q5e", "2020-21-Q1a", "2024-25-Q8b"],
           text: String.raw`Discuss the relative advantages and disadvantages of sieve, bubble cap and valve trays used in distillation column.`,
           solution: String.raw`| feature | sieve tray | valve tray | bubble-cap tray |
 |---|---|---|---|
@@ -268,7 +268,7 @@ $$
           answer: String.raw`O'Connell gives overall efficiency E_o from αμ (feed viscosity × relative volatility at average conditions) to convert equilibrium stages to real trays; conservative for sieve and valve trays.` },
         { id: "2012-13-Q4d", label: "(d)", marks: "5",
           topic: "column-design", sub: "Flow pattern selection guide for sieve trays",
-          type: "sketch", syllabus: "partial", repeats: ["2021-22-Q4c", "2022-23-Q1b", "2023-24-Q4b"],
+          type: "sketch", syllabus: "partial", repeats: ["2021-22-Q4c", "2022-23-Q1b", "2023-24-Q4b", "2024-25-Q8c"],
           text: String.raw`Draw the diagram which can be used as a guide to select proper flow pattern for sieve trays.`,
           solution: String.raw`> The slides explain cross-flow, multipass and reverse flow; the selection chart itself is Wankat Fig. 10-4 (Huang and Hodson, 1958). The boundaries below are approximate readings of that chart.
 

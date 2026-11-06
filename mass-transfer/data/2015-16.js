@@ -466,7 +466,7 @@ Result: **N = 4.13 → 5 equilibrium stages**.
           answer: String.raw`Insoluble carrier and nonvolatile solvent (constant G and L), isothermal and isobaric columns with negligible heat of absorption, equilibrium stages, steady state with recycled solvent; work in mole ratios because the gas is concentrated.`},
         { id: "2015-16-Q6b", label: "(b)", marks: "15",
           topic: "absorption", sub: "Concentrated absorber in mole ratios: outlet liquid and number of stages",
-          type: "numerical", syllabus: "in", repeats: ["practice-absorption-P8a"],
+          type: "numerical", syllabus: "in", repeats: ["practice-absorption-P8a", "2024-25-Q2"],
           text: String.raw`Calculate the number of stages in the absorber and the liquid concentration leaving.`,
           solution: String.raw`> Wankat Problem 12.D13 (slides D13); the slide's graphical answer is 8 stages.
 
@@ -510,7 +510,7 @@ The operating line and the equilibrium curve come close together at the dilute (
           answer: String.raw`G = 1190, L = 796 mol/day; $X_{out}$ = 0.2613 (x = 0.207); stepping in mole ratios gives 8.8 → 9 equilibrium stages.`},
         { id: "2015-16-Q6c", label: "(c)", marks: "15",
           topic: "absorption", sub: "Existing 4-stage stripper: trial-and-error stripping gas rate",
-          type: "numerical", syllabus: "in", repeats: ["practice-absorption-P8a"],
+          type: "numerical", syllabus: "in", repeats: ["practice-absorption-P8a", "2024-25-Q2"],
           text: String.raw`If the stripper is an already existing column with four equilibrium stages, calculate the gas flow rate of stream B (concentration is 0.5 mole% A) and the outlet gas concentration from the stripper.`,
           solution: String.raw`**Given:** liquid in at the top $X_{in}$ = 0.2613 (absorber outlet); liquid out at the bottom $X_{out}$ = 0.00503 (back to the absorber); L = 796 mol solvent/day; stream B enters the bottom with $Y_{in}$ = 0.00503; equilibrium y = 3x; N = 4.
 **Find:** G (stream B) and $Y_{out}$.
@@ -693,7 +693,7 @@ $$\frac{x_N-x_N^*}{x_0-x_N^*}=\frac{1-mO/U}{1-(mO/U)^{N+1}},\qquad m=1,\ x_N^*=y
           answer: String.raw`Equilibrium y = x (same solute concentration in underflow and overflow liquid). Assumptions: no solids in the overflow and no dissolving solids, constant densities (dilute), constant porosity, so U and O are constant; isothermal, isobaric equilibrium stages.`},
         { id: "2015-16-Q8c", label: "(c)", marks: "8",
           topic: "immiscible-extraction", sub: "Cross-flow immiscible extraction: cascade and McCabe–Thiele diagram",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2024-25-Q1e"],
           text: String.raw`Draw the cascade and McCabe–Thiele diagram for cross flow immiscible extraction.`,
           solution: String.raw`In a cross-flow cascade, the raffinate (diluent $F_D$, ratio $X$) passes through stages 1 → N, and **fresh solvent** $F_{S,j}$ (ratio $Y_{j,in}$, usually 0) is added to **every** stage. Each stage's extract $Y_j$ is withdrawn separately.
 
