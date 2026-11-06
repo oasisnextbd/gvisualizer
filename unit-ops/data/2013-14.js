@@ -354,6 +354,8 @@ Figures for Question 5(b) (attached to the paper): Fig. 6-18, molecular-weight e
 
 1. **Read Fig. 6-17 at 600 °F:** enter at 600 °F on the temperature axis, go up to the air line and across: ratio ≈ 0.875; up to the steam line: ratio ≈ 0.825. (Check: at 500 °F Ludwig reads 0.897 for air and 0.859 for steam; both lines are nearly straight, so 600 °F gives 0.873 and 0.826.)
 
+![How to read HEI Fig. 6-17: 600 °F → air line ≈ 0.875, steam line ≈ 0.825](fig/2013-14-Q5b-read.svg)
+
 2. **Air capacity:** $225\times0.875 = 197\ \mathrm{lb/h}$
 
 3. **Water-vapour capacity:** $300\times0.825 = 248\ \mathrm{lb/h}$

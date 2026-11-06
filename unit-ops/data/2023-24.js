@@ -133,10 +133,16 @@ $$T_s = 258.7^\circ\mathrm{F} \approx 259^\circ\mathrm{F}, \qquad \lambda_s = 95
 
 4. **Boiling point of the 50% liquor (Dühring chart):** go up from 124°F on the water axis to the x = 0.50 line and across: **T = 197°F**. BPR = 197 − 124 = 73°F.
 
+![How to read the Dühring chart: water boiling point 124 °F → x = 0.50 line → T = 197 °F](fig/2023-24-Q1d-read.svg)
+
 5. **Liquor enthalpies (enthalpy–concentration chart):** feed, x = 0.20 at 100°F: $H_F = 55$ Btu/lb; thick liquor, x = 0.50 at 197°F: $H_L = 221$ Btu/lb.
+
+![How to read the NaOH enthalpy–concentration chart: x = 0.20 at 100 °F → H_F = 55; x = 0.50 at 197 °F → H_L = 221 Btu/lb](fig/2023-24-Q1d-read2.svg)
 
 6. **Vapour enthalpy:** saturated vapour at 124.4°F, $H_g = 1113.5 + 0.444(1117.8 - 1113.5) = 1115.4$ Btu/lb; superheat to 197°F with $c_p \approx 0.45$ Btu/lb·°F (specific-heat chart, water vapour):
 $$H_V = 1115.4 + 0.45(197 - 124.4) = 1148\ \mathrm{Btu/lb}$$
+
+![How to read the specific-heat nomograph: ≈ 160 °F → point 17 (water) → c_p ≈ 0.45 Btu/lb·°F](fig/2023-24-Q1d-read3.svg)
 
 7. **Enthalpy balance (MSH Eq. 16.4):**
 $$q = V H_V + L H_L - F H_F = 12{,}000(1148) + 8000(221) - 20{,}000(55)$$
@@ -235,9 +241,13 @@ $$D = \sqrt{\frac{4S}{\pi}} = \sqrt{\frac{4 \times 8}{\pi}} = 3.19\ \mathrm{ft}$
 
 2. **Inlet wet bulb and humid heat (psychrometric chart):** follow the adiabatic-cooling line through (260°F, 0.01) up to the saturation curve: $T_{wb} = 102$°F. Humid heat $c_s = 0.24 + 0.45(0.01) = 0.2445 \approx 0.245$ Btu/lb dry air·°F.
 
+![How to read the psychrometric chart: 260 °F, 𝓗 = 0.01 → adiabatic-cooling line → T_wb = 102 °F; humid heat c_s ≈ 0.245](fig/2023-24-Q2d-read.svg)
+
 3. **Outlet gas temperature** (MSH Eq. 24.8):
 $$N_t = \ln\frac{T_{hb} - T_{wb}}{T_{ha} - T_{wb}} = 1.5 \;\Rightarrow\; T_{ha} = 102 + \frac{260 - 102}{e^{1.5}} = 102 + 35.3 = 137.3^\circ\mathrm{F}$$
    Check on the chart: the point (137°F, 0.0346) lies on the same wet-bulb line, $T_{wa} \approx 101$–102°F, as it must for adiabatic drying. The solids leave at $T_{sa} = 125$°F, below the gas, so cocurrent operation is feasible.
+
+![Checking the outlet air on the psychrometric chart: 137 °F, 𝓗 = 0.0346 → same adiabatic line → T_w ≈ 101 °F](fig/2023-24-Q2d-read2.svg)
 
 4. **Air rate and heat transferred:** $\dot m_g(1 + \mathcal{H}_b) = GS = 700 \times 8 = 5600$ lb/h, so dry air = 5600/1.01 = 5545 lb/h.
 $$q_T = \dot m_g(1 + \mathcal{H}_b)\,c_s\,(T_{hb} - T_{ha}) = 5600 \times 0.2445 \times (260 - 137.3) = 1.681\times10^{5}\ \mathrm{Btu/h}$$
@@ -341,9 +351,15 @@ $$W_v = W_a\,\frac{p_v}{p_{air}}\,\frac{M_v}{M_{air}} = 7 \times \frac{3}{2} \ti
 $$\bar M = \frac{26.2}{0.603} = 43.4$$
 
 4. **Molecular-weight entrainment ratio (Fig. 6-18):** go up from M = 43.4 to the curve and across: ratio = 1.18.
+
+![How to read HEI Fig. 6-18: M = 43.4 → ratio = 1.18](fig/2023-24-Q3b-read.svg)
+
 $$\text{air equivalent at }80^\circ\mathrm{F} = \frac{26.2}{1.18} = 22.2\ \mathrm{lb/h}$$
 
 5. **Temperature correction (Fig. 6-17, air curve):** at 80°F the ratio is 0.999.
+
+![How to read HEI Fig. 6-17: 80 °F → air line → ratio ≈ 0.999](fig/2023-24-Q3b-read2.svg)
+
 $$\text{70°F air equivalent} = \frac{22.2}{0.999} = 22.2\ \mathrm{lb/h}$$
 
 **Result:** the ejector must handle 26.2 lb/h of mixture (7 lb/h air + 19.2 lb/h product vapour, M = 43.4) at about 5 mm Hg abs, equivalent to **22.2 lb/h of 70°F dry air**. This is the figure compared with the manufacturer's test or performance curve. The air-bleed valve on the first stage keeps the suction condition constant at loads below design.`,
@@ -477,6 +493,8 @@ Using the Sylvan Chart, identify which option offers the most technically feasib
 | Cloth arrester (fabric filter) | ≈ 98–99% | > 99.9% |
 | Electrostatic precipitator | ≈ 98–99% | > 99% |
 
+![How to read the Sylvan chart: 10 gr/ft³ at 2 µm and at 20 µm → drop to the collector bands](fig/2023-24-Q5a-read.svg)
+
 ### 2. Efficiency of units in series
 For collectors in series, $\eta = 1 - \prod(1 - \eta_i)$, applied to each size fraction separately. The regulation (97% for each set) must be met for both the 2 µm and the 20 µm fraction. Take a fabric filter at 99% as the second unit.
 
@@ -563,6 +581,8 @@ $$C_D\mathrm{Re}^2 = \frac{1.31\times10^7 \times 42.15 \times (200\times10^{-6})
 
 3. **Drag coefficient (attached chart):** go up from $C_D\mathrm{Re}^2 = 9.0\times10^3$ to the curve and across: $C_D \approx 1.2$.
 
+![How to read the drag chart: C_D·Re² = 8970 → curve → C_D ≈ 1.2](fig/2023-24-Q5c-read.svg)
+
 4. **Terminal velocity:**
 $$V_t = \sqrt{\frac{4 \times 9.81 \times 200\times10^{-6} \times 657.9}{3 \times 42.15 \times 1.2}} = 0.184\ \mathrm{m/s}$$
    Check: Re = $\rho_g V_t D_p/\mu = 42.15 \times 0.184 \times 2\times10^{-4}/1.8\times10^{-5} = 86$, the intermediate regime, which is why the chart is used (Stokes' law would give 0.80 m/s, far too high).
@@ -648,6 +668,8 @@ Figure for Q. 6(b) (attached to the paper): percent removal of particles in a cy
 **Assumptions:** the printed particle density 1500 lb/ft³ is used. (If it were meant as 1500 kg/m³ = 93.6 lb/ft³, step 4 would require V ≈ 310 ft/s, which no cyclone can use, so the printed value is kept.)
 
 1. **Chart reading:** on the attached curve, 90% removal corresponds to $D_p/(D_p)_{crit} \approx 4.5$ (go up from 90% on the percent-removed axis to the curve and across).
+
+![How to read the cyclone removal curve: 90% → D_p/(D_p)crit ≈ 4.5](fig/2023-24-Q6b-read.svg)
 
 2. **Required critical diameter:**
 $$(D_p)_{crit} \le \frac{10}{4.5} = 2.22\ \mu\mathrm{m} = 2.22\times10^{-6}/0.3048 = 7.29\times10^{-6}\ \mathrm{ft}$$
@@ -761,6 +783,8 @@ $$N_{Re} = \frac{D_a^2 n\rho}{\mu} = \frac{0.36^2 \times 1.667 \times 1700}{0.01
    Turbulent: the baffled curve is flat here, and the Froude number has no effect.
 
 3. **Power number (curve B):** at $N_{Re} = 1.9\times10^4$, $N_P \approx 2.8$ (on the same chart curve A reads about 5.7–5.8, consistent with MSH Example 9.1).
+
+![How to read the power-number chart: Re = 1.93×10⁴ → curve B → N_P ≈ 2.8](fig/2023-24-Q7c-read.svg)
 
 4. **Power:**
 $$P = N_P\,\rho\,n^3D_a^5 = 2.8 \times 1700 \times 1.667^3 \times 0.36^5 = 2.8 \times 1700 \times 4.630 \times 6.047\times10^{-3} = 133\ \mathrm{W}$$

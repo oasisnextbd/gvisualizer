@@ -29,6 +29,8 @@ QB.paper({
 4. Draw a line through the inlet point **parallel to the deviation line** of the dust ("ordinary industrial dust" if unknown) down to the outlet concentration; read the new mean size (6 µm).
 5. Repeat for the next collector in series at the new size (wet collector 98% → 0.045 gr/ft³, 1.6 µm), until the required outlet concentration is met.
 
+![How to read the Sylvan chart (Ludwig Ex. 4-1): 7.5 gr/ft³, 9 µm → HE cyclone 70% → 2.25 gr/ft³, 6.0 µm → wet collector 98% → 0.045 gr/ft³, 1.6 µm](fig/2011-12-Q1a-read.svg)
+
 It is a screening tool only: final selection needs the actual size distribution, gas properties, cost and vendor data.`,
           answer: String.raw`Log–log chart of concentration (gr/ft³, and gr/1000 ft³ for air filters) vs mean particle size (0.1–1000 µm) with typical dust-source bands, deviation lines, and efficiency bands for LR cyclones, HE cyclones, wet collectors, fabric arresters and ESPs. Use: plot inlet point, drop to read collector efficiencies, c_out = c_in(1−η), move parallel to the deviation line to get the new mean size, repeat for the next collector.` },
         { id: "2011-12-Q1b", label: "(b)", marks: "15",
@@ -415,9 +417,13 @@ Attached (for Q5): Table 1, properties of saturated steam and water; Fig. 1(a) D
 
 3. **Liquor boiling point (Fig. 1a, Dühring):** from 160°F on the water axis up to the 50% line: $T_L$ ≈ 233°F; BPR = 73°F.
 
+![How to read the Dühring chart: water boiling point 160 °F → 50 % NaOH line → T ≈ 233 °F](fig/2022-23-Q1d-read.svg)
+
 4. **Material balance:** $F = 10{,}000(0.5)/0.1 = 50{,}000$ lb/h; $V = 40{,}000$ lb/h.
 
 5. **Enthalpies:** Fig. 1(b): $h_F$ (10%, 100°F) ≈ 60 Btu/lb; $h_L$ (50%, 233°F) ≈ 245 Btu/lb. Vapor superheated at 4.7 psia, 233°F: $H_V \approx 1130 + 0.46(73) \approx 1160$ Btu/lb.
+
+![How to read the NaOH enthalpy–concentration chart: 10 % at 100 °F → h_F ≈ 60; 50 % at 233 °F → h_L ≈ 245 Btu/lb](fig/2022-23-Q1d-read2.svg)
 
 6. **Heat load:**
 $$q = 40{,}000(1160) + 10{,}000(245) - 50{,}000(60) = 45.85\times10^6\ \mathrm{Btu/h}$$
@@ -666,6 +672,8 @@ Figure for Q8 (attached to the paper, Foust Fig. 21.19): characteristic curves a
 | 3500 | 9310 | axial flow (> 9000) |
 
 2. At the common 1750 r/min the specific speed (≈ 4650) lies in the **mixed-flow** range, where the efficiency is high for this large-flow, low-head duty.
+
+![How to read the specific-speed chart: Ns ≈ 4650 at 1750 rpm → mixed-flow field (4200–9000)](fig/2012-13-Q7d-read.svg)
 
 **Result:** a single-stage **mixed-flow centrifugal pump** at ≈ 1750 r/min (or a slower 1150 r/min radial double-suction pump); check NPSH.`,
           answer: String.raw`N_s = n√Q/H^0.75 = n(50)/18.8 ≈ 4650 at 1750 rpm (3060 at 1150, 9310 at 3500) → mixed-flow (4200–9000) centrifugal pump.` }

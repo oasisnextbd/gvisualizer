@@ -123,6 +123,8 @@ $$T_s = 290 + 10\,\frac{64.7-57.53}{66.98-57.53} = 297.6^\circ\mathrm{F},\qquad 
 
 3. **Boiling point of the 50% liquor (Dühring chart):** enter the abscissa at a water boiling point of 160°F, go up to the 50% NaOH line and read the ordinate: $T_L \approx 233^\circ$F. BPR = 233 − 160 = 73°F.
 
+![How to read the Dühring chart: water boiling point 160 °F → 50 % NaOH line → T ≈ 233 °F](fig/2022-23-Q1d-read.svg)
+
 4. **Material balances:**
 $$F = \frac{L x_L}{x_F} = \frac{10{,}000(0.50)}{0.10} = 50{,}000\ \mathrm{lb/h},\qquad V = F - L = 40{,}000\ \mathrm{lb/h}$$
 
@@ -130,6 +132,8 @@ $$F = \frac{L x_L}{x_F} = \frac{10{,}000(0.50)}{0.10} = 50{,}000\ \mathrm{lb/h},
    - feed, 10% NaOH at 100°F (enthalpy–concentration chart): $h_F \approx 60$ Btu/lb;
    - thick liquor, 50% at 233°F (chart): $h_L \approx 245$ Btu/lb;
    - vapor: superheated steam at 4.7 psia and 233°F (73°F of superheat): $H_V \approx 1130 + 0.46(73) \approx 1160$ Btu/lb.
+
+![How to read the NaOH enthalpy–concentration chart: 10 % at 100 °F → h_F ≈ 60; 50 % at 233 °F → h_L ≈ 245 Btu/lb](fig/2022-23-Q1d-read2.svg)
 
 6. **Enthalpy balance on the evaporator:**
 $$q = V H_V + L h_L - F h_F = 40{,}000(1160) + 10{,}000(245) - 50{,}000(60)$$
@@ -191,6 +195,10 @@ $$C = \frac{\left[F(1-x_F') - V\right]X' - F x_F'}{\left(\frac{M_h-M_a}{M_h}\rig
    - Solubility at 60°F (decahydrate curve): $x' = 0.122$ (12.2 wt%), i.e. $X' = 0.122/0.878 = 0.139$ lb Na₂SO₄/lb water.
    - Enthalpy–concentration chart: feed, 20% at 200°F: $h_F \approx 136$ Btu/lb; saturated solution at 60°F: $h_{ML} \approx 21$ Btu/lb; Na₂SO₄·10H₂O at 60°F: $h_C \approx -82$ Btu/lb (end of the 60°F isotherm at 44.1%).
    - Saturated water vapor at 60°F (steam table): $H_V$ = 1087.7 Btu/lb.
+
+![How to read the Na₂SO₄ solubility chart: 60 °F → decahydrate curve → x′ ≈ 12.2 wt %](fig/2022-23-Q2b-read.svg)
+
+![How to read the Na₂SO₄–H₂O enthalpy–concentration chart: 20 % at 200 °F → 136; 12.2 % at 60 °F → 21; Na₂SO₄·10H₂O at 60 °F → −82 Btu/lb](fig/2022-23-Q2b-read2.svg)
 
 2. **Balances** (V = vapor, C = crystals, M = mother liquor, lb per 100 lb feed):
 $$\text{Total: } V + C + M = 100$$
@@ -260,6 +268,8 @@ Figures for Q3(a) (attached to the paper): humidity chart (air–water, 1 atm) a
 **Assumptions:** **cocurrent** flow (the hot gas meets the wet solid, so the solid stays near the wet-bulb temperature, which protects the heat-sensitive solid); adiabatic; number of heat-transfer units $N_t$ = 1.5 (typical 1.5–2.5); solids leave at the maximum 125°F; fresh air (and ambient) at 80°F, the same as the solids feed.
 
 1. **Wet-bulb temperature of the inlet air** (humidity chart: from 260°F, $\mathcal{H}$ = 0.01, follow the adiabatic-cooling line to the saturation curve): $T_{wb}$ = 102°F, λ at 102°F = 1036 Btu/lb.
+
+![How to read the humidity chart: 260 °F, 𝓗 = 0.01 → adiabatic-cooling line → T_wb ≈ 102 °F; humid heat c_s ≈ 0.245](fig/2022-23-Q3a-read.svg)
 
 2. **Outlet gas temperature** from the transfer-unit definition for an adiabatic dryer:
 $$N_t = \ln\frac{T_{hb}-T_{wb}}{T_{ha}-T_{wb}} = 1.5 \Rightarrow T_{ha} = 102 + \frac{260-102}{e^{1.5}} = 102 + 35.3 = 137^\circ\mathrm{F}$$
@@ -527,6 +537,9 @@ Figure for Question 6(a) (attached to the paper): Sylvan chart (dust-collecting 
 $$c_1 = 30(1-0.90) = 3\ \mathrm{gr/ft^3}\ (2\text{–}4\ \text{for the range})$$
    Moving parallel to the deviation line from (70 µm, 30 gr/ft³) to 3 gr/ft³ gives a mean size of ≈ 35 µm.
 3. **High-efficiency cyclone:** at 35 µm the high-efficiency cyclone band reads ≈ 99%:
+
+![How to read the Sylvan chart: 30 gr/ft³, 70 µm → LR cyclone 90% → 3 gr/ft³, ≈ 35 µm → HE cyclone 99% → 0.03 gr/ft³, ≈ 6 µm](fig/2022-23-Q6a-read.svg)
+
 $$c_2 = 3(1-0.99) = 0.03\ \mathrm{gr/ft^3}\ (0.02\text{–}0.04)$$
    Continuing parallel to the deviation line to 0.03 gr/ft³ gives a mean size of ≈ 6 µm (check: 70 µm/10^(0.34×3) ≈ 6.7 µm).
 
@@ -535,6 +548,9 @@ $$c_2 = 3(1-0.99) = 0.03\ \mathrm{gr/ft^3}\ (0.02\text{–}0.04)$$
 **(ii) Kiln flue gas, 50 gr/ft³, 8 µm**
 
 1. Drop from 8 µm to the efficiency curves (as in Ludwig's 9-µm kiln example): low-resistance cyclones < 50% (useless); **high-efficiency cyclones ≈ 60–80% (average ≈ 70%)**; wet collectors, cloth (fabric) arresters and electrostatic precipitators ≈ 97–99+%.
+
+![How to read the Sylvan chart: 50 gr/ft³, 8 µm → HE cyclone ≈ 70%, wet/cloth/ESP ≈ 97–99%](fig/2022-23-Q6a-read2.svg)
+
 2. **70% collection:** the cheapest device reaching it is a **high-efficiency cyclone** (multicyclone): outlet 50(0.30) = 15 gr/ft³.
 3. **98% collection:** outlet 50(0.02) = 1 gr/ft³. The collectors whose curves reach 98% at 8 µm are a **wet collector (scrubber)**, a **fabric (cloth) arrester (bag filter)** or an **ESP**; the cheapest of these is usually the wet collector, while bag filters/ESPs give 99+%. Because 50 gr/ft³ is a very heavy loading (beyond the normal range of filters and ESPs), the practical arrangement is a high-efficiency cyclone pre-collector (70%, to 15 gr/ft³) followed by a bag filter or ESP (≈ 93% more needed on the finer remaining dust) to reach 98% overall.
 
@@ -652,6 +668,8 @@ $$S_1 = \frac{0.67}{2} = 0.33,\ S_2 = \frac{0.67}{2} = 0.33,\ S_3 = \frac{0.167}
 $$N_{Re} = \frac{D_a^2 n\rho}{\mu} = \frac{(0.67)^2(1.5)(1500)}{0.012} = 8.42\times10^4$$
 
 3. **Power number:** on curve A at $N_{Re} = 8.4\times10^4$ (turbulent, flat part of the curve): $N_P$ = 5.8.
+
+![How to read the power-number chart: Re = 8.42×10⁴ → curve A → N_P ≈ 5.8](fig/2022-23-Q7b-read.svg)
 
 4. **Power** (SI, $g_c$ = 1):
 $$P = N_P\,\rho\,n^3 D_a^5 = 5.8(1500)(1.5)^3(0.67)^5 = 5.8(1500)(3.375)(0.1350) = 3964\ \mathrm{W}$$

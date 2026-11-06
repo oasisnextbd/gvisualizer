@@ -226,6 +226,9 @@ Figure for Q3(d) (attached to the paper): power number $N_P = Pg_c/\rho n^3D_a^5
 2. **Reynolds number** (μ = 12 × 6.72 × 10⁻⁴ = 8.064 × 10⁻³ lb/ft s):
 $$N_{Re} = \frac{D_a^2n\rho}{\mu} = \frac{2^2(1.5)(93.5)}{8.064\times10^{-3}} = 6.96\times10^4$$
 3. **Power number:** at $N_{Re}$ = 7 × 10⁴ the flow is fully turbulent; reading up from 7 × 10⁴ to curve A and across to the $N_P$ axis gives **$N_P$ ≈ 5.8** (flat part of curve A).
+
+![How to read the power-number chart: Re = 6.96×10⁴ → curve A → N_P ≈ 5.8](fig/2016-17-Q3d-read.svg)
+
 4. **Power:**
 $$P = \frac{N_P\,\rho\,n^3D_a^5}{g_c} = \frac{5.8(93.5)(1.5)^3(2)^5}{32.174} = 1820\ \mathrm{ft\,lb_f/s}$$
 $$P = \frac{1820}{550} = 3.31\ \mathrm{hp}\ (2.47\ \mathrm{kW})$$
@@ -288,6 +291,9 @@ Figure for Q4(b) (attached to the paper): Foust Table 21.1 (pump characteristics
 
 1. **Type (Table 21.1):** 300 gal/min at 70 ft lies within the **standard radial-flow centrifugal** range (≥ 100 gal/min, ≤ 600 ft single stage); no metering is required. Specific speed $N_s = 1750\sqrt{300}/70^{3/4} = 1253$ (< 4200, radial flow) confirms it. Propeller pumps are limited to 60 ft; positive-displacement pumps offer nothing for water at this duty.
 2. **Size (Fig. 21.23):** entering at 300 gal/min and 70 ft, the point falls on the line (≈ 71 ft at 300 gal/min) that separates the **3×4−8** and **3×4−10** areas.
+
+![How to read Fig. 21.23: 300 gpm, 70 ft → lower edge of the 3×4-10 field](fig/2016-17-Q4b-read.svg)
+
 3. **Recommendation:** Goulds **3×4−10** (3 in. discharge, 4 in. suction, 10 in. maximum impeller) at 1750 rpm with an impeller trimmed to about **9 in.** (affinity laws $Q \propto D$, $H \propto D^2$ applied to its full-diameter curve of ≈ 88 ft at 300 gal/min give D ≈ 9.1 in.); the 3×4−8 is acceptable only at its full 8 in. impeller, with no head margin.
 4. **Power:** water hp = 300 × 70/3960 = 5.3 hp; brake hp ≈ 5.3/0.70 = 7.6 hp → 10 hp motor.
 
@@ -340,6 +346,9 @@ $$c_1 = 30(1 - 0.89) = 3.3\ \mathrm{gr/ft^3}$$
 2. **Mean size leaving it** (deviation line):
 $$d_1 = 70\left(\frac{3.3}{30}\right)^{1/2.97} = 70(0.476) = 33\ \mu\mathrm{m}$$
 3. **High-efficiency cyclone at 33 μm:** projecting down from 33 μm, the high-efficiency-cyclone band is at about 98–99 %; take **98.5 %**.
+
+![How to read the Sylvan chart: 30 gr/ft³, 70 µm → LR cyclone 89% → 3.3 gr/ft³, 33 µm → HE cyclone 98.5% → 0.050 gr/ft³, 8 µm](fig/2016-17-Q5ai-read.svg)
+
 $$c_2 = 3.3(1 - 0.985) = 0.050\ \mathrm{gr/ft^3}$$
 4. **Final mean size:**
 $$d_2 = 33\left(\frac{0.050}{3.3}\right)^{1/2.97} = 33(0.244) = 8\ \mu\mathrm{m}$$
@@ -362,6 +371,8 @@ $$d_2 = 33\left(\frac{0.050}{3.3}\right)^{1/2.97} = 33(0.244) = 8\ \mu\mathrm{m}
 | wet collector | ≈ 95–98 % | medium |
 | cloth arrester (fabric filter) | ≈ 99 %+ | high |
 | electrostatic precipitator | ≈ 99 %+ | highest first cost |
+
+![How to read the Sylvan chart: 50 gr/ft³, 8 µm → drop to the bands: HE cyclone ≈ 52–71%, wet ≈ 95–98%](fig/2016-17-Q5aii-read.svg)
 
 2. **70 %:** the **high-efficiency cyclone** is the cheapest unit whose band reaches 70 % at 8 μm (upper part of its band, choose a small-diameter or multi-cyclone unit). Outlet: 50 × 0.30 = 15 gr/ft³, mean size ≈ 8 × 0.3^(1/3) ≈ 5.3 μm.
 3. **98 %:** a single cyclone cannot do it. A **good wet collector (venturi-type scrubber)** reaches ≈ 98 % at 8 μm and is the cheapest choice that does (outlet 50 × 0.02 = 1.0 gr/ft³, mean ≈ 2 μm). With 50 gr/ft³ loading it is normal practice (Ludwig) to put the **high-efficiency cyclone ahead as a pre-cleaner**: 70 % in the cyclone, then a wet collector or **fabric filter/ESP** at ≈ 5 μm (≥ 95 %) gives an overall 1 − 0.30 × 0.05 ≈ 98.5 % or better. For a hot, dry kiln gas a fabric filter (glass-fibre bags) or ESP after the cyclone is preferred if a wet effluent is not wanted.

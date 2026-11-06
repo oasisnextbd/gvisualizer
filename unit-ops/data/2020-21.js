@@ -94,7 +94,11 @@ $$\frac{A_1}{F} = \frac{533}{400\times102.2} = 0.01308,\qquad \frac{A_2}{F} = \f
 
 5. **Trial 2 (converged).** Vapour space of effect I at 175.7 °F (p = 6.86 psia): Dühring 50 % → $T_1$ = 251.1 °F, BPE₁ = 75.4 °F, ΔT₁ = 358.4 − 251.1 = **107.3 °F**. Effect II: $x_2$ = 8.9 %, $T_2$ = 101.0 + 4.7 = 105.7 °F, ΔT₂ = 175.7 − 105.7 = **70.0 °F**. Check: 107.3 + 70.0 = 177.3 = 358.4 − 101.0 − 75.4 − 4.7.
 
+![How to read the Dühring chart: 175.7 °F → 50 % line → T₁ ≈ 251.1 °F; 101.0 °F → 8.9 % → T₂ ≈ 105.7 °F](fig/2020-21-Q1c-read.svg)
+
 6. **Enthalpies (chart readings).** Feed 5 %, 80 °F: $h_F$ ≈ 45 Btu/lb. Effect-II liquor 8.9 %, 105.7 °F: $h_2$ ≈ 68 Btu/lb. Product 50 %, 251 °F: $h_1$ ≈ 264 Btu/lb. Vapours: $H_{V1}$ = $H_g$(175.7 °F) + 0.46 × 75.4 = 1136.5 + 34.7 = 1171.2 Btu/lb; it condenses in effect II giving $H_{V1} - h_f$ = 1171.2 − 143.7 = 1027.4 Btu/lb. $H_{V2}$ = 1105.4 + 0.46 × 4.7 = 1107.6 Btu/lb.
+
+![How to read the NaOH enthalpy–concentration chart: 5 % at 80 °F → 45; 8.9 % at 105.7 °F → 68; 50 % at 251 °F → 264 Btu/lb](fig/2020-21-Q1c-read2.svg)
 
 7. **Effect II balance** (heated by V₁; feed in, $L_2$ out):
 
@@ -215,6 +219,8 @@ Figure for Q3(a) (attached to the paper): Foust Fig. 21.17(b), Goulds centrifuga
 **Assumptions:** liquid is water (sp. gr. 1.0, 8.34 lb/gal); the chart is at 3550 rpm.
 
 1. **Locate the duty point.** On the chart go up the 350 gal/min line to 300 ft. At 350 gal/min the 8-in impeller curve gives only ≈ 255 ft and the 9-in curve ≈ 335 ft, so the point lies between them, a little more than half-way to the 9-in curve.
+
+![How to read Fig. 21.17b: 350 gpm → 8-in ≈ 255 ft, 9-in ≈ 335 ft → 9-in impeller](fig/2020-21-Q3a-read.svg)
 
 2. **Choose the impeller.** An 8-in impeller cannot develop 300 ft at 350 gal/min, so the **9-in impeller** is the smallest standard size that meets the duty. It runs at ≈ 335 ft; the extra ≈ 35 ft is taken by throttling the discharge valve (or the impeller is trimmed: at constant speed H ∝ D², so $D \approx 9\sqrt{300/335}$ ≈ 8.5 in). The 9-in curve is also reasonably flat and stable in this region.
 
@@ -458,6 +464,8 @@ Figure for question no 5b (attached to the paper): Sylvan chart of dust-collecto
 | electrostatic precipitator | ≈ 97 % |
 | cloth (fabric) arrester | ≈ 99 % |
 
+![How to read the Sylvan chart: 10 gr/ft³, 4 µm → drop to the collector bands](fig/2020-21-Q5b-read.svg)
+
    Cyclones alone are unsuitable for 4 μm dust; fabric filters, ESPs and wet collectors are the candidates.
 
 3. **Proposal 1: high-efficiency cyclone (pre-cleaner) + fabric filter.** The cyclone removes the coarse fraction and cuts the load on the bags (as in the slide kiln example: cyclone first, then a high-efficiency collector):
@@ -636,6 +644,8 @@ $$x_{3s} = \frac{6.4675 - 0.6492}{7.4996} = 0.776,\qquad h_{3s} = 191.8 + 0.776(
 
 $$h_3 = h_2 - \eta_{LP}(h_2 - h_{3s}) = 2788.9 - 0.80(741.3) = 2195.8\ \mathrm{kJ/kg}\ (x_3 = 0.838)$$
 
+![How to read the Mollier chart: 14 bar on the saturation line → h₂ ≈ 2789; vertically down to 0.1 bar → h₃ₛ ≈ 2048 kJ/kg](fig/2020-21-Q6b-read.svg)
+
 3. **LP flow from its power:**
 
 $$\dot m_{LP} = \frac{1500}{h_2 - h_3} = \frac{1500}{593.0} = 2.53\ \mathrm{kg/s}$$
@@ -655,6 +665,8 @@ $$x_{2s} = \frac{2738.3 - 830.1}{1958.9} = 0.974,\qquad s_{2s} = 2.2835 + 0.974(
 7. **State 1 on the Mollier chart:** since $s_1 = s_{2s}$, go vertically up from point 2s (s = 6.36) to h = 3075 kJ/kg. The point lies between the 60 and 70 bar lines and close to the 350–400 °C isotherms. Superheated tables: at 6 MPa, 350 °C h = 3043.9, s = 6.3357; at 7 MPa, 400 °C h = 3159.2, s = 6.4502; interpolating in P and T for h = 3075.4, s = 6.3595:
 
 $$P_1 \approx 6.4\ \mathrm{MPa},\qquad T_1 \approx 365\ ^\circ\mathrm{C}$$
+
+![How to read the Mollier chart: from 2s (s = 6.36) up to h = 3075 kJ/kg → between 60 and 70 bar, ≈ 365 °C](fig/2020-21-Q6b-read2.svg)
 
 | state | P | T, °C | h, kJ/kg | s, kJ/kg K |
 |---|---|---|---|---|
@@ -797,6 +809,8 @@ Figure for question no 8(a) (attached to the paper): standard turbine geometry (
 $$N_{Re} = \frac{D_a^2 n \rho}{\mu} = \frac{0.67^2 \times 1.5 \times 1500}{0.012} = 8.42\times10^4$$
 
 3. **Power number (chart):** curve A at $N_{Re}$ = 8.4 × 10⁴ is in the flat, fully turbulent region: $N_P$ ≈ 5.8 (MSH Table 9.3: $K_T$ = 5.75 for a six-blade disk turbine). In a baffled tank the Froude number has no effect.
+
+![How to read the power-number chart: Re = 8.42×10⁴ → curve A → N_P ≈ 5.8](fig/2020-21-Q8a-read.svg)
 
 4. **Power:**
 

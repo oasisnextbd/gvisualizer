@@ -157,6 +157,8 @@ Figure for Qs. 2(b) (attached to the paper): reheat Rankine cycle. Steam generat
 
 1. **HP turbine, isentropic end point (Mollier):** locate state 1 at 25 MPa, 550°C ($s_1$ ≈ 6.18 kJ/kg·K); drop vertically (constant s) to the 4 MPa isobar: $h_{2s}$ ≈ 2860 kJ/kg (just superheated, ≈ 267°C; the saturation temperature at 4 MPa is 250°C).
 
+![How to read the Mollier chart: 25 MPa, 550 °C (s ≈ 6.18) → vertically down to 4 MPa → h₂ₛ ≈ 2860 kJ/kg](fig/2012-13-Q2b-read.svg)
+
 2. **HP efficiency:**
 $$\eta_{HP} = \frac{h_1 - h_2}{h_1 - h_{2s}} = \frac{3330 - 2962}{3330 - 2860} = \frac{368}{470} = 0.78$$
 
@@ -164,6 +166,8 @@ $$\eta_{HP} = \frac{h_1 - h_2}{h_1 - h_{2s}} = \frac{3330 - 2962}{3330 - 2860} =
 $$h_4 = 191.8 + 0.93(2392.8) = 2417\ \mathrm{kJ/kg}$$
 
 4. **LP turbine, isentropic end point:** state 3 at 4 MPa, 550°C ($s_3$ ≈ 7.23 kJ/kg·K); vertically down to 10 kPa: $x_{4s} = (7.23 - 0.649)/7.501 = 0.878$, $h_{4s}$ ≈ 2290 kJ/kg.
+
+![How to read the Mollier chart: 4 MPa, 550 °C (s ≈ 7.23) → down to 10 kPa → h₄ₛ ≈ 2290; actual 10 kPa, x = 0.93 → h₄ ≈ 2417 kJ/kg](fig/2012-13-Q2b-read2.svg)
 
 5. **LP efficiency:**
 $$\eta_{LP} = \frac{h_3 - h_4}{h_3 - h_{4s}} = \frac{3561 - 2417}{3561 - 2290} = \frac{1144}{1271} = 0.90$$
@@ -720,6 +724,8 @@ Figure for Q7(d) (attached to the paper): characteristic curves and specific spe
 | 3500 | 9310 | axial flow (> 9000) |
 
 2. **Choice.** A large flow at a low head gives a high specific speed. At the usual 1750 r/min, $N_s$ ≈ 4650 falls in the **mixed-flow** field of the chart, where the impeller produces both axial and radial flow and the efficiency is high (≈ 85–90% for this size). A slower 1150 r/min radial (Francis-vane) centrifugal pump would need a large impeller near the top of its range; a 3500 r/min unit would be an axial (propeller) pump with poor suction performance (high NPSH required) at this head.
+
+![How to read the specific-speed chart: Ns ≈ 4650 at 1750 rpm → mixed-flow field (4200–9000)](fig/2012-13-Q7d-read.svg)
 
 **Result:** a single-stage **mixed-flow centrifugal pump** at about 1750 r/min ($N_s$ ≈ 4650) — e.g. a vertical mixed-flow (or a large double-suction volute) pump; check NPSH available.`,
           answer: String.raw`N_s = n√Q/H^0.75 = n(50)/18.8: 3060 at 1150 rpm, 4650 at 1750 rpm, 9310 at 3500 rpm → at 1750 rpm N_s ≈ 4650 lies in the 4200–9000 mixed-flow field → use a mixed-flow centrifugal pump.` }

@@ -23,6 +23,8 @@ Figure for Q. 1(a) (attached to the paper): solubility of ferrous sulfate vs tem
 
 1. **Solubility (curve D, parts hydrate per 100 parts excess water):** at 120 °F, 140; at 80 °F, 74. Curve D is used because "excess water" (water beyond the 7 H₂O of the hydrate) is not removed by the crystals, so it is a conserved basis. Crystals formed = 140 − 74 = 66 lb FeSO₄·7H₂O per 100 lb excess water.
 
+![How to read the ferrous sulfate solubility chart: curve D at 120 °F → 140 and at 80 °F → 74 parts hydrate per 100 parts excess water](fig/2015-16-Q1a-read.svg)
+
 2. **Feed rate:**
 $$W_{excess} = 2000\times\frac{100}{66} = 3030\ \mathrm{lb/h},\qquad \text{hydrate in feed} = 3030\times1.40 = 4242\ \mathrm{lb/h}$$
 $$F = 3030 + 4242 = 7273\ \mathrm{lb/h}$$
@@ -225,6 +227,8 @@ Figure for Q. 3(c) (attached to the paper): mixing time factor $nt_T$ vs Reynold
 $$N_{Re} = \frac{nD_a^2\rho}{\mu} = \frac{1.333\times2^2\times62.3}{6.60\times10^{-4}} = 5.04\times10^5$$
 
 2. **Mixing-time factor from the attached chart:** enter at $N_{Re} = 5.0\times10^5$ (beyond the right edge, where the baffled-turbine line is already flat for $N_{Re}$ > ~2 × 10³), read $nt_T \approx 36$.
+
+![How to read MSH Fig. 9.15: Re = 5.04×10⁵ → baffled-turbine line (flat) → n·t_T ≈ 36](fig/2015-16-Q3c-read.svg)
 
 3. **Blending time:**
 $$t_T = \frac{36}{n} = \frac{36}{1.333} = 27\ \mathrm{s}$$

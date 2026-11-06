@@ -27,6 +27,8 @@ $$d_1 = d_0\left(\frac{c_1}{c_0}\right)^{1/3} = 70(0.10)^{1/3} = 32.5\ \mu\mathr
 
 4. **HE cyclone at ≈ 32 μm:** the HE band reads ≈ 98 %.
 
+![How to read the Sylvan chart: 30 gr/ft³, 70 µm → LR cyclone 90% → 3.0 gr/ft³, 32 µm → HE cyclone 98% → 0.06 gr/ft³, 9 µm](fig/2019-20-Q1a1-read.svg)
+
 $$c_2 = 3.0(1-0.98) = 0.06\ \mathrm{gr/ft^3}$$
 
 5. **Final mean size:**
@@ -58,6 +60,8 @@ $$d_2 = 32.5\left(\frac{0.06}{3.0}\right)^{1/3} = 32.5 \times 0.271 = 8.8\ \mu\m
 | wet collector (scrubber) | ≈ 98 % | medium |
 | electrostatic precipitator | ≈ 98–99 % | high capital |
 | cloth (fabric) arrester | ≈ 99 %+ | medium–high |
+
+![How to read the Sylvan chart: 50 gr/ft³, 8 µm → HE cyclone ≈ 70%, wet collector ≈ 98%](fig/2019-20-Q1a2-read.svg)
 
 2. **70 % efficiency: high-efficiency cyclone.** The LR cyclone cannot reach 70 % at 8 μm; the HE cyclone is the cheapest device that does (no moving parts, low pressure drop, tolerates hot gas):
 
@@ -169,6 +173,8 @@ Figure data (attached to the paper): state 1 (HP inlet) $P_1 = P_7$ = 25 MPa, $T
 | 4s | 10 kPa | s = s₃ → x = (7.2355 − 0.6492)/7.4996 = 0.878 | 2292.5 | 7.2355 |
 
 2. **Plot on the Mollier chart.** Point 1 at 250 bar/550 °C; drop **vertically** (constant s = 6.18) to the 40 bar line → 2s; the actual end 2 lies on the same 40 bar line to the right (300 °C, higher s). Reheat moves along the 40 bar line up to 550 °C → 3. From 3 drop vertically (s = 7.24) to the 0.1 bar line → 4s (x ≈ 0.88); the actual end 4 is on the 0.1 bar line at x = 0.93. On each turbine the vertical drop $h_{in} - h_{s}$ is the isentropic work and $h_{in} - h_{out}$ the actual work (the actual line is drawn sloping to the right because entropy increases).
+
+![Both turbine expansions on the Mollier chart: 1 → 2s, 2 and 3 → 4s, 4 with actual and isentropic works](fig/2019-20-Q2c-read.svg)
 
 3. **HP turbine:**
 
@@ -498,6 +504,8 @@ Figure 6(a) (attached to the paper): humidity chart, air–water at 1 atm (Foust
 
 1. **Wet-bulb temperature** of the inlet air (humidity chart, 260 °F and 𝓗 = 0.01, along the adiabatic-saturation line): $T_w$ ≈ 102 °F.
 
+![How to read the humidity chart: 260 °F, 𝓗 = 0.01 → adiabatic-saturation line → T_w ≈ 102 °F](fig/2019-20-Q6a-read.svg)
+
 2. **Air outlet temperature** from the definition of $N_t$ (gas cools toward the wet bulb):
 
 $$N_t = \ln\frac{T_{hb}-T_w}{T_{ha}-T_w}\quad\Rightarrow\quad T_{ha} = 102 + \frac{260-102}{e^{1.5}} = 102 + \frac{158}{4.48} = 137\ ^\circ\mathrm{F}$$
@@ -583,7 +591,11 @@ $$N_s = \frac{N\sqrt{Q}}{H^{3/4}} = \frac{1750\sqrt{400}}{70^{0.75}} = \frac{175
 
    $N_s$ = 1450 < 4200, so the duty calls for a **radial-flow (standard centrifugal) impeller**, in the middle of the radial range (500–4200), where efficiency is good and the head curve is stable and rising to shut-off.
 
+![How to read the specific-speed chart: Ns ≈ 1450 → radial-flow field](fig/2019-20-Q7a-read2.svg)
+
 2. **Pump size from the operating-range chart.** Locate 400 gal/min and 70 ft on Fig. 21.23: the point falls in (at the right-hand, high-capacity tip of) the field marked **3 × 4 − 10**, just above the 3 × 4 × 8 field and to the left of the 3 × 4 − 13 field.
+
+![How to read Fig. 21.23: 400 gpm, 70 ft → right-hand tip of the 3×4-10 field](fig/2019-20-Q7a-read.svg)
 
    So use a **Goulds 3 × 4 − 10** pump: 3-in discharge, 4-in suction, casing for impellers up to 10 in. This is the same pump whose full characteristics are in Fig. 21.17 (used in 2020-21 Q3a).
 
@@ -657,9 +669,13 @@ $$\bar M = \frac{26.2}{0.603} = 43.4$$
 
 4. **Molecular-weight entrainment ratio** (HEI curve, Fig. 6-18) at M = 43.4: ≈ 1.18 (the ratio of the mass of this gas to the mass of air the same ejector would handle).
 
+![How to read HEI Fig. 6-18: M = 43.4 → ratio ≈ 1.18](fig/2019-20-Q7c-read.svg)
+
 $$\text{air equivalent at }80\ ^\circ\mathrm{F} = \frac{26.2}{1.18} = 22.2\ \mathrm{lb/h}$$
 
 5. **Temperature correction** (Fig. 6-17, air curve) at 80 °F: entrainment ratio ≈ 0.999:
+
+![How to read HEI Fig. 6-17: 80 °F → air line → ratio ≈ 0.999](fig/2019-20-Q7c-read2.svg)
 
 $$\text{70 °F air equivalent} = \frac{22.2}{0.999} = 22.2\ \mathrm{lb/h}$$
 
@@ -693,6 +709,8 @@ Figure for Question 8(a) (attached): Crowl & Louvar Fig. 9-9, Fauske nomograph f
 **Assumptions:** the nomograph is built for discharge piping L/D = 400 (ψ = 0.5) and 20 % overpressure; the real vent is a short nozzle/rupture disc, L/D = 0 (ψ = 1), so the area is scaled by ψ (A ∝ 1/ψ).
 
 1. **Read the nomograph:** self-heat rate 29.6 °C/min on the x-axis, up to the 65 psia set-pressure line, across to the area scale: ≈ **0.013 m² per 1000 kg** of reactants.
+
+![How to read the Fauske nomograph: 29.6 °C/min → 65 psia line → ≈ 0.013 m² per 1000 kg](fig/2019-20-Q8a-read.svg)
 
 2. **Area for 9500 kg at the nomograph conditions** (ψ = 0.5, 20 % OP):
 

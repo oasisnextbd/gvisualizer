@@ -22,6 +22,9 @@ Figures for Q1(a) (attached to the paper): saturated steam and water table (Keen
 3. **Boiling points (Dühring chart):**
    - Effect II, dilute liquor (≈ 9 %): BPR ≈ 4–5 °F at 101 °F, so $T_2 = 101.1 + 4.4 = 105.6$ °F.
    - Effect I, 50 % NaOH: the 50 % Dühring line (through about 197 °F at a water temperature of 124 °F and 219 °F at 144 °F, slope 1.07) gives $T_1 = 218.6 + 1.072(T_{w1} - 143.8)$, i.e. BPR ≈ 77 °F.
+
+![How to read the Dühring chart: 174.9 °F → 50 % line → T₁ ≈ 252 °F; 101.1 °F → 8.9 % → T₂ ≈ 105.6 °F](fig/2017-18-Q1a-read.svg)
+
 4. **Trial (Badger–McCabe method).** Total available ΔT = 358.5 − 101.1 − 77 − 4.4 ≈ 176 °F. First trial with equal heat loads, ΔT ∝ 1/U: ΔT₁ = 176 × (1/400)/(1/400 + 1/550) = 102 °F, ΔT₂ = 74 °F. The enthalpy balances below then give $q_1 > q_2$ by about 10 % (effect I also has to heat the liquor from 106 °F to 252 °F and supply the heat of concentration), so ΔT₁ is raised and ΔT₂ lowered and the balances are repeated until the two rate equations and the two enthalpy balances are satisfied together. Converged values:
 
 | Quantity | Effect I | Effect II |
@@ -33,6 +36,9 @@ Figures for Q1(a) (attached to the paper): saturated steam and water table (Keen
 | vapor enthalpy | $H_{V1}$ = 1136.2 + 0.46(77.0) = 1171.6 Btu/lb | $H_{V2}$ = 1105.5 + 0.46(4.4) = 1107.5 Btu/lb |
 
    Chart readings used: feed 5 % at 80 °F, $H_F$ = 44.5 Btu/lb; 8.9 % at 105.6 °F, 65.7 Btu/lb; 50 % at 252 °F, 262 Btu/lb. Steam table: $H_g$(174.9 °F) = 1136.2, $h_f$(174.9 °F) = 142.9 Btu/lb.
+
+![How to read the NaOH enthalpy–concentration chart: 5 % at 80 °F → 44.5; 8.9 % at 105.6 °F → 65.7; 50 % at 252 °F → 262 Btu/lb](fig/2017-18-Q1a-read2.svg)
+
 5. **Rate equations:**
 $$q_1 = U_1A\,\Delta T_1 = 400(2000)(106.5) = 85.2\times10^6\ \mathrm{Btu/h} = S\lambda_s \Rightarrow S = \frac{85.2\times10^6}{864.2} = 98{,}600\ \mathrm{lb/h}$$
 $$q_2 = U_2A\,\Delta T_2 = 550(2000)(69.4) = 76.3\times10^6\ \mathrm{Btu/h} = V_1(H_{V1} - h_{f1}) = V_1(1171.6 - 142.9)$$
@@ -98,6 +104,9 @@ Figures for Q2(a) (attached to the paper): MSH Fig. 27.3 phase diagram of MgSO�
 
 1. **Initial enthalpy** (Fig. 27.4): the point x = 0.325 on the 120 °F isotherm lies in the undersaturated-solution field: $H_1$ = −33.0 Btu/lb.
 2. **Final enthalpy:** the final magma lies on the 70 °F isotherm in the area *cihb* (MgSO₄·7H₂O + mother liquor) at the same overall concentration 0.325: $H_2$ = −78.4 Btu/lb.
+
+![How to read the MgSO₄–H₂O enthalpy–concentration chart: x = 0.325 at 120 °F → H₁ = −33.0; on the 70 °F tie line → H₂ = −78.4 Btu/lb](fig/2017-18-Q2a-read.svg)
+
 3. **Heat removed** per 100 lb solution:
 $$Q = 100(H_1 - H_2) = 100(-33.0 + 78.4) = 4540\ \mathrm{Btu}$$
 4. **Crystal yield** by the lever (centre-of-gravity) rule on the 70 °F isotherm: mother liquor x = 0.259 (Fig. 27.3); crystals MgSO₄·7H₂O, x = 120.4/246.5 = 0.488:
@@ -204,7 +213,13 @@ Figures for Q3(b) (attached to the paper): Foust Fig. 21.19 (characteristic curv
 1. **Specific speed** (US units, Fig. 21.19):
 $$N_s = \frac{n\sqrt{Q}}{H^{3/4}} = \frac{1750\sqrt{300}}{70^{3/4}} = \frac{1750 \times 17.32}{24.2} = 1253$$
    $N_s$ < 4200 → **radial-flow (standard) centrifugal** impeller. Table 21.1 agrees: standard centrifugal pumps cover 100–200,000 gal/min and up to 600 ft single stage, and water needs no metering.
+
+![How to read the specific-speed chart: Ns ≈ 1253 → radial-flow field](fig/2017-18-Q3b-read2.svg)
+
 2. **Pump size (Fig. 21.23):** at 300 gal/min the boundary between the **3×4−8** and **3×4−10** areas is at about 71 ft; the duty point (70 ft) is on that boundary, at the top of the 3×4−8 range.
+
+![How to read Fig. 21.23: 300 gpm, 70 ft → edge of the 3×4-10 field](fig/2017-18-Q3b-read.svg)
+
 3. **Impeller size by the affinity laws for trimming** ($Q \propto D$, $H \propto D^2$ at the same speed):
    - 3×4−10: full 10 in. impeller gives about 88 ft at 300 gal/min; the trimmed diameter through (300, 70) satisfies $(D/10)^2H_{10}(300\cdot10/D) = 70$ → **D ≈ 9.1 in.**, i.e. a **9 in. impeller**.
    - 3×4−8: needs D ≈ 7.9 in., essentially its maximum 8 in. impeller (no margin).

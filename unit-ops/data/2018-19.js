@@ -176,6 +176,9 @@ Figure for Q2(d) (attached to the paper): Foust Fig. 21.23, operating ranges (to
 
 1. **Pump type (Table 21.1).** 300 gal/min and 70 ft are well inside the standard radial-flow centrifugal range (100–200,000 gal/min, up to 600 ft single stage). No metering is needed and the liquid is clean water, so a positive-displacement pump has no advantage (and a reciprocating pump tops out at 500 gal/min). A propeller pump is limited to 60 ft. → **single-stage standard (radial-flow) centrifugal pump**.
 2. **Size (Fig. 21.23).** Enter at 300 gal/min, go up to 70 ft. At 300 gal/min the line separating the **3×4−8** area (below) from the **3×4−10** area (above) lies at about 71 ft, so the duty point sits on the top edge of the 3×4−8 range, i.e. it needs that pump's maximum (8 in.) impeller, with no margin for wear or future head.
+
+![How to read Fig. 21.23: 300 gpm, 70 ft → lower edge of the 3×4-10 field](fig/2018-19-Q2d-read.svg)
+
 3. **Choice.** Select the **Goulds 3×4−10** at 1750 rpm (3 in. discharge, 4 in. suction, 10 in. casing) with a **trimmed impeller**. Its full-diameter curve gives about 88 ft at 300 gal/min; with the affinity laws for impeller trimming ($Q\propto D$, $H\propto D^2$) the diameter that passes through (300 gal/min, 70 ft) is
 $$\left(\frac{D}{10}\right)^2 H_{10}\!\left(\frac{300}{D/10}\right) = 70 \;\Rightarrow\; D \approx 9.1\ \mathrm{in.}$$
    so an impeller of about **9 in.** leaves room to fit a larger one later. (The 3×4−8 with its full 8 in. impeller, ≈ 7.9 in. by the same calculation, is the acceptable minimum-cost alternative.)

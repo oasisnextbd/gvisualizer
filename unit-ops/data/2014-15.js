@@ -508,13 +508,19 @@ $$N_s(3550) = \frac{3550\times24.49}{18.80} = 4620$$
 
 2. **Type (Fig. 21.19):** $N_s$ = 2280 lies in the **radial-flow (standard volute centrifugal) field**, which extends up to ≈ 4200, near the middle of the range where efficiency is high. At 3550 rpm, 4620 would call for a mixed-flow impeller. So a **standard single-stage radial-flow centrifugal pump at 1750 rpm** should be used.
 
+![How to read the specific-speed chart: Ns ≈ 2280 → radial-flow field; 4620 → mixed-flow field](fig/2014-15-Q7b-read3.svg)
+
 3. **Is the pump of Fig. 21.17 in the proper region?** Its best-efficiency point (67% island) is at about 330 gpm and 72 ft at 1750 rpm (≈ 640 gpm, 290 ft at 3550 rpm):
 $$N_s = \frac{1750\sqrt{330}}{72^{0.75}} \approx 1300$$
    - At 1750 rpm the curves end at about 460 gpm (10 in impeller at ≈ 58 ft): it **cannot deliver 600 gpm**.
    - At 3550 rpm even the smallest (6 in) impeller develops about 80 ft at 600 gpm, so ≈ 30 ft would have to be throttled away, well below the 68% peak efficiency, far from the BEP.
    So this Goulds pump (a lower-specific-speed, higher-head design) is **not in the proper region** for the duty; a pump with $N_s$ ≈ 2300 at 1750 rpm (larger eye and impeller width, BEP near 600 gpm and 50 ft) should be bought.
 
+![How to read Fig. 21.17b (3550 rpm): 600 gpm → 6-in curve ≈ 80 ft; BEP ≈ 640 gpm, 290 ft](fig/2014-15-Q7b-read2.svg)
+
 4. **If this pump must be used:** two units in **parallel** at 1750 rpm, each 300 gpm at 50 ft. On Fig. 21.17(a) at 300 gpm the 8 in impeller gives about 55 ft (7 in only ≈ 38 ft), at about 65% efficiency and ≈ 6 bhp per pump (check: $300\times55/(3960\times0.65) = 6.4$ hp). Select the **8 in impeller** (trimmed slightly, ≈ 7¾ in, to hit 50 ft), NPSH required ≈ 4–5 ft.
+
+![How to read Fig. 21.17a (1750 rpm): 300 gpm → 8-in ≈ 55 ft, 7-in ≈ 38 ft; BEP ≈ 330 gpm, 72 ft; 10-in curve ends ≈ 460 gpm](fig/2014-15-Q7b-read.svg)
 
 **Result:** $N_s$ ≈ 2280 at 1750 rpm → radial-flow centrifugal pump at 1750 rpm. The Fig. 21.17 pump is outside its proper range for 600 gpm; with two of them in parallel the 8 in impeller (≈ 55 ft at 300 gpm each) would be chosen.`,
           answer: String.raw`N_s = N√Q/H^0.75 = 2280 at 1750 rpm (4620 at 3550) → standard radial-flow centrifugal at 1750 rpm. The Fig. 21.17 pump (N_s ≈ 1300) cannot give 600 gpm at 1750 rpm and gives ~80 ft at 3550 rpm, so it is not in the proper region; two in parallel (300 gpm each) would use the 8 in impeller (≈ 55 ft, 65%).` },
@@ -580,6 +586,8 @@ Figure for Q. 8(a) (attached to the paper): Badger & Banchero Fig. 11-9, solubil
 **Assumptions:** mother liquor leaves saturated at 80 °F (no supersaturation left); countercurrent flow of water and magma (the normal arrangement in a Swenson–Walker trough); standard sections 10 ft long; heat of crystallization = −(heat of solution); no evaporation, heat losses neglected.
 
 1. **Solubility (curve D, parts hydrate per 100 parts excess water):** at 120 °F, 140; at 80 °F, 74. Curve D is used because "excess water" (water beyond the 7 H₂O of the hydrate) is not removed by the crystals, so it is a conserved basis. Crystals formed = 140 − 74 = 66 lb FeSO₄·7H₂O per 100 lb excess water.
+
+![How to read the ferrous sulfate solubility chart: curve D at 120 °F → 140 and at 80 °F → 74 parts hydrate per 100 parts excess water](fig/2014-15-Q8a-read.svg)
 
 2. **Feed rate:**
 $$W_{excess} = 2000\times\frac{100}{66} = 3030\ \mathrm{lb/h},\qquad \text{hydrate in feed} = 3030\times1.40 = 4242\ \mathrm{lb/h}$$
