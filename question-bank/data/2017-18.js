@@ -415,7 +415,7 @@ $$\frac{\partial^2 T}{\partial x^2} + \frac{\partial^2 T}{\partial y^2} + \frac{
           answer: String.raw`$\nabla\cdot(k\nabla T) + \dot q = \rho c\,\partial T/\partial t$; for constant $k$: $\nabla^2T + \dot q/k = (1/\alpha)\partial T/\partial t$.` },
         { id: "2017-18-Q5b", label: "(b)", marks: "10",
           topic: "insulation", sub: "Critical radius of insulation, cylinder",
-          type: "derivation", syllabus: "in", repeats: ["practice-insulation-P1"],
+          type: "derivation", syllabus: "in", repeats: ["practice-insulation-P1","2024-25-Q3a"],
           text: String.raw`What is the significance of "critical thickness of insulation"? Derive the equation for critical thickness of insulation for a cylindrical pipe.`,
           solution: String.raw`**Significance:** adding insulation to a small pipe or wire increases the conduction resistance but also increases the outer surface area, which decreases the convection resistance. Up to a certain outer radius (the critical radius) the second effect wins, so the heat loss *increases* as insulation is added. Hence:
 - for steam/hot pipes the outer radius must exceed $r_c$ for insulation to reduce heat loss;
@@ -618,7 +618,7 @@ All three enclose the same flow rate.
       parts: [
         { id: "2017-18-Q8a", label: "(a)", marks: "11",
           topic: "boundary-layer", sub: "Reynolds–Colburn analogy",
-          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2015-16-Q8a", "2016-17-Q8a", "2020-21-Q7a", "2022-23-Q3a", "practice-boundary-layer-P6"],
+          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2015-16-Q8a", "2016-17-Q8a", "2020-21-Q7a", "2022-23-Q3a", "practice-boundary-layer-P6", "2024-25-Q4a"],
           text: String.raw`Derive the relation known as Reynold's–Colburn analogy.`,
           solution: String.raw`**Assumptions:** steady, incompressible, laminar flow over a flat plate; zero pressure gradient; constant properties; plate heated from the leading edge; cubic velocity and temperature profiles (integral method); $\mathrm{Pr} \gtrsim 0.7$ so that $\delta_t < \delta$.
 

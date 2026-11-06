@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2016-17-Q1a", label: "(a)", marks: "9",
           topic: "shell-tube", sub: "TEMA component naming",
-          type: "theory", syllabus: "in", repeats: ["practice-shell-tube-P5a"],
+          type: "theory", syllabus: "in", repeats: ["practice-shell-tube-P5a","2024-25-Q5a"],
           text: String.raw`Identify the following labeled sections of a shell and tube heat exchanger from Figure 1(a).
 
 ![Figure 1(a): TEMA type AES shell-and-tube exchanger with numbered parts](fig/2016-17-Q1a.svg)`,
@@ -500,7 +500,7 @@ The outer surface is at $T_2 = T_1 - \dot Q R_{glass} = -4.5^\circ$C.
       parts: [
         { id: "2016-17-Q6a", label: "(a)", marks: "5+10",
           topic: "insulation", sub: "Critical radius of insulation (cylinder)",
-          type: "derivation", syllabus: "in", repeats: ["practice-insulation-P1"],
+          type: "derivation", syllabus: "in", repeats: ["practice-insulation-P1","2024-25-Q3a"],
           text: String.raw`What is the significance of "critical thickness of insulation"? Derive the equation for critical thickness of insulation for a cylindrical pipe.`,
           solution: String.raw`### Significance
 Adding insulation to a small pipe or wire does two opposite things:
@@ -680,7 +680,7 @@ $$\delta_{0.4} = \frac{4.64 \times 0.4}{\sqrt{50{,}890}} = 8.23\times10^{-3}\ \m
       parts: [
         { id: "2016-17-Q8a", label: "(a)", marks: "18",
           topic: "boundary-layer", sub: "Reynolds–Colburn analogy derivation",
-          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2015-16-Q8a", "2017-18-Q8a", "2020-21-Q7a", "2022-23-Q3a", "practice-boundary-layer-P6"],
+          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2015-16-Q8a", "2017-18-Q8a", "2020-21-Q7a", "2022-23-Q3a", "practice-boundary-layer-P6", "2024-25-Q4a"],
           text: String.raw`Consider a fluid flowing past a rough flat plate where the friction coefficient is $C_f$. The velocity distribution and the laminar boundary layer thickness for the fluid can be expressed by the following equations respectively
 
 $$\frac{u}{u_\infty} = \frac{3}{2}\frac{y}{\delta} - \frac{1}{2}\left(\frac{y}{\delta}\right)^3,\qquad \delta = 4.64\sqrt{\frac{\nu x}{u_\infty}}$$

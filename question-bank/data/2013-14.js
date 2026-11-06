@@ -337,7 +337,7 @@ $$U_o \approx 7.5\times10^3\ \mathrm{W/m^2K}\qquad (U_i = U_o d_o/d_i \approx 8.
       parts: [
         { id: "2013-14-Q5a", label: "(a)", marks: "15",
           topic: "conduction", sub: "Conduction through a hollow sphere",
-          type: "derivation", syllabus: "in", repeats: ["practice-conduction-P8a"],
+          type: "derivation", syllabus: "in", repeats: ["practice-conduction-P8a","2024-25-Q2a"],
           text: String.raw`Derive an expression for the heat flow rate through a hollow sphere with inside radius $r_i$, outside radius $r_o$ and constant thermal conductivity $k$. The inside and outside surfaces of the hollow sphere are held at constant temperature $T_i$ and $T_o$, respectively. State the assumptions, if any.`,
           solution: String.raw`**Assumptions:** steady state; 1-D radial conduction ($T = T(r)$ only, uniform surface temperatures); constant $k$; no heat generation; homogeneous isotropic material.
 
@@ -358,7 +358,7 @@ Note that $q$ is constant with $r$ but the flux $q/4\pi r^2$ falls as $1/r^2$, a
           answer: String.raw`$q = 4\pi k r_i r_o(T_i-T_o)/(r_o-r_i)$; $R = (r_o-r_i)/(4\pi k r_i r_o)$.` },
         { id: "2013-14-Q5b", label: "(b)", marks: "10+10",
           topic: "conduction", sub: "Spherical reactor: heat loss and effect of thin insulation",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2024-25-Q2b"],
           text: String.raw`A spherical vessel used as a reactor for producing pharmaceuticals has a 10 mm thick stainless steel wall ($k = 17$ W/m·K) and an inner diameter of 1 m. The exterior surface of the vessel is exposed to ambient air ($T_\infty = 25$°C) for which a convection coefficient of 6 W/m²·K may be assumed.
 
 (i) During steady-state operation, an inner surface temperature of 50°C is maintained by energy generated within the reactor. What is the heat loss from the vessel? **[10]**

@@ -52,7 +52,7 @@ At $T_{sat} = 40^\circ\mathrm{C}$ (7.38 kPa): $h_{fg} = 2407\times10^3\,\mathrm{
       parts: [
         { id: "practice-condensation-P2a", label: "(a)", marks: "", topic: "condensation",
           sub: "Single horizontal tube: heat transfer", type: "numerical",
-          syllabus: "in", repeats: ["2015-16-Q3a", "2022-23-Q7d"], origin: "slides", ref: String.raw`Slides 08, pp. 39–45 (7.38 kPa condenser, Çengel Ex. 10-4 style; the finals' 3×4 version is 2015-16 Q3a / 2022-23 Q7d)`,
+          syllabus: "in", repeats: ["2015-16-Q3a", "2022-23-Q7d", "2024-25-Q8b"], origin: "slides", ref: String.raw`Slides 08, pp. 39–45 (7.38 kPa condenser, Çengel Ex. 10-4 style; the finals' 3×4 version is 2015-16 Q3a / 2022-23 Q7d)`,
           text: String.raw`Determine the rate of heat transfer to the cooling water per metre length of one pipe.`,
           solution: String.raw`**Given:** $T_{sat} = 40^\circ\mathrm{C}$, $T_s = 30^\circ\mathrm{C}$, $D = 0.03\,\mathrm{m}$, $L = 1\,\mathrm{m}$.
 

@@ -168,7 +168,7 @@ $$10{,}530 - 6{,}150 = 4{,}380\ \mathrm{lb/h}\ (\approx 42\%)$$
       parts: [
         { id: "practice-evap-P4", label: "", marks: "", topic: "evaporator",
           sub: "Triple-effect forward feed (Kern Ex. 14.2)", type: "numerical",
-          syllabus: "in", repeats: [], origin: "slides", ref: String.raw`Slides 10 p. 13, 15–19 (Kern Ex. 14.2, Eqs. 14.8–14.14)`,
+          syllabus: "in", repeats: ["2024-25-Q7a"], origin: "slides", ref: String.raw`Slides 10 p. 13, 15–19 (Kern Ex. 14.2, Eqs. 14.8–14.14)`,
           text: String.raw`Calculate (a) the steam consumption, (b) the heating surface of each body, (c) the condenser water requirement, and the economy.`,
           solution: String.raw`**Given:** $w_F = 50{,}000$ lb/h, $x_F = 0.10$, $x_P = 0.50$, $t_F = 100^\circ$F, steam 12 psig = 26.7 psia, last effect 26 in. Hg vacuum = 4 in. Hg abs = 1.95 psia; $c = 1.0$.
 

@@ -152,7 +152,7 @@ At average temperatures, the following fluid properties are available:
       parts: [
         { id: "2023-24-Q2a", label: "(a)", marks: "7",
           topic: "shell-tube", sub: "Temperature profile, LMTD and F_T (1-8)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2024-25-Q5b"],
           text: String.raw`Draw a temperature profile along the heat exchanger length, and find the corrected log mean temperature difference.`,
           solution: String.raw`**Given:** hot ammonia $T_1 = 245^\circ$F → $T_2 = 95^\circ$F (shell); water $t_1 = 85^\circ$F → $t_2 = 95^\circ$F (tube); 1 shell pass, 8 tube passes.
 
@@ -185,7 +185,7 @@ $F_T > 0.75$, so the 1-8 arrangement is acceptable.
           answer: String.raw`$Q = 7.85\times10^5$ Btu/h, water = 78,480 lb/h; LMTD = 51.7°F, R = 15, S = 0.0625, $F_T \approx 0.84$, so $\Delta t \approx 43.3^\circ$F.` },
         { id: "2023-24-Q2b", label: "(b)", marks: "16",
           topic: "shell-tube", sub: "Kern rating: h_i (water) and h_o (ammonia gas)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2024-25-Q5b"],
           text: String.raw`Formulate the thermal design calculations and generate the tube side and shell side heat transfer coefficients, $h_i$ and $h_o$, respectively.`,
           solution: String.raw`**Data:** ¾ in OD, 16 BWG tubes: ID $= 0.620$ in, flow area $a'_t = 0.302$ in²/tube, external surface 0.1963 ft²/ft (Kern Table 10). $N_t = 364$, $n = 8$, $L = 8$ ft, $P_T = 15/16 = 0.9375$ in (triangular), $C' = P_T - d_o = 0.1875$ in, $B = 12$ in, shell ID $= 23.25$ in. Viscosities: μ (lb/ft·h) = cP × 2.42.
 
@@ -241,7 +241,7 @@ $$h_{io} = h_i\frac{\mathrm{ID}}{\mathrm{OD}} = 862 \times \frac{0.620}{0.75} = 
           answer: String.raw`Shell (NH₃): $a_s = 0.388$ ft², $G_s = 25{,}480$, Re = 40,200, $j_H \approx 123$, $h_o \approx 44$ Btu/h·ft²·°F. Tube (water): $G_t = 8.2\times10^5$, V = 3.66 fps, Re = 21,400, $j_H \approx 70$, $h_i \approx 862$, $h_{io} \approx 712$ Btu/h·ft²·°F.` },
         { id: "2023-24-Q2c", label: "(c)", marks: "6",
           topic: "shell-tube", sub: "U_C, U_D and dirt factor",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2024-25-Q5b"],
           text: String.raw`Calculate the minimum required dirt factor for the exchanger.`,
           solution: String.raw`*Interpretation:* find the dirt factor $R_d$ that the existing exchanger can accommodate while still doing the duty (from $U_C$ and $U_D$), and check it against what the service needs.
 

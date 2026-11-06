@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 380" width="660" height="380" font-family="Helvetica, Arial, sans-serif">
+<title>Temperature profile in the 1-8 ammonia gas cooler</title>
+<defs><marker id="aI" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="aIs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#1E2B3A"/></marker><marker id="aH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="aHs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#D2552B"/></marker><marker id="aC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aCs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#0B7C8C"/></marker><marker id="aG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aGs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#9AA8B8"/></marker><marker id="aA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="aAs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#B7840A"/></marker><marker id="aS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="aSs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#55667D"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="mhatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.9"/></pattern></defs>
+<rect width="660" height="380" fill="#FFFFFF"/>
+<line x1="80" y1="330" x2="490" y2="330" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#aI)"/>
+<line x1="80" y1="330" x2="80" y2="30" stroke="#1E2B3A" stroke-width="1.5" marker-end="url(#aI)"/>
+<text x="490" y="348" font-size="13" text-anchor="end" fill="#1E2B3A">length →</text>
+<text x="72" y="34" font-size="13" text-anchor="end" fill="#1E2B3A">T (°F)</text>
+<line x1="76" y1="307.105" x2="80" y2="307.105" stroke="#1E2B3A" stroke-width="1"/>
+<line x1="76" y1="291.842" x2="80" y2="291.842" stroke="#1E2B3A" stroke-width="1"/>
+<line x1="76" y1="62.8947" x2="80" y2="62.8947" stroke="#1E2B3A" stroke-width="1"/>
+<text x="72" y="66.8947" font-size="11" text-anchor="end" fill="#55667D">245</text>
+<text x="72" y="289.842" font-size="11" text-anchor="end" fill="#55667D">95</text>
+<text x="72" y="316.105" font-size="11" text-anchor="end" fill="#55667D">85</text>
+<path d="M80.0,62.9 C85.4,70.1 101.7,92.9 112.5,106.0 C123.3,119.2 134.2,131.0 145.0,141.9 C155.8,152.9 166.7,162.7 177.5,171.8 C188.3,180.9 199.2,189.1 210.0,196.7 C220.8,204.3 231.7,211.1 242.5,217.4 C253.3,223.7 264.2,229.4 275.0,234.7 C285.8,239.9 296.7,244.6 307.5,249.0 C318.3,253.4 329.2,257.3 340.0,261.0 C350.8,264.6 361.7,267.9 372.5,270.9 C383.3,274.0 394.2,276.7 405.0,279.2 C415.8,281.7 426.7,284.0 437.5,286.1 C448.3,288.2 464.6,290.9 470.0,291.8" stroke="#D2552B" stroke-width="2.4" fill="none" marker-end="url(#aH)"/>
+<text x="88" y="56.8947" font-size="12" text-anchor="start" fill="#D2552B">NH₃ gas (shell) 245°F in</text>
+<text x="464" y="265.842" font-size="12" text-anchor="end" fill="#D2552B">95°F out</text>
+<line x1="470" y1="307.105" x2="80" y2="305.197" stroke="#0B7C8C" stroke-width="1.4"/>
+<line x1="80" y1="305.197" x2="470" y2="303.289" stroke="#0B7C8C" stroke-width="1.4"/>
+<line x1="470" y1="303.289" x2="80" y2="301.382" stroke="#0B7C8C" stroke-width="1.4"/>
+<line x1="80" y1="301.382" x2="470" y2="299.474" stroke="#0B7C8C" stroke-width="1.4"/>
+<line x1="470" y1="299.474" x2="80" y2="297.566" stroke="#0B7C8C" stroke-width="1.4"/>
+<line x1="80" y1="297.566" x2="470" y2="295.658" stroke="#0B7C8C" stroke-width="1.4"/>
+<line x1="470" y1="295.658" x2="80" y2="293.75" stroke="#0B7C8C" stroke-width="1.4"/>
+<line x1="80" y1="293.75" x2="470" y2="291.842" stroke="#0B7C8C" stroke-width="1.4"/>
+<text x="240" y="323.105" font-size="12" text-anchor="middle" fill="#0B7C8C">water (tubes) 85 → 95°F, 8 passes</text>
+<rect x="500" y="150" width="150" height="150" fill="#FFFFFF" stroke="#55667D" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="575" y="142" font-size="11" text-anchor="middle" fill="#55667D">water side, enlarged</text>
+<line x1="640" y1="285" x2="510" y2="270" stroke="#0B7C8C" stroke-width="1.6"/>
+<line x1="510" y1="270" x2="640" y2="255" stroke="#0B7C8C" stroke-width="1.6"/>
+<line x1="640" y1="255" x2="510" y2="240" stroke="#0B7C8C" stroke-width="1.6"/>
+<line x1="510" y1="240" x2="640" y2="225" stroke="#0B7C8C" stroke-width="1.6"/>
+<line x1="640" y1="225" x2="510" y2="210" stroke="#0B7C8C" stroke-width="1.6"/>
+<line x1="510" y1="210" x2="640" y2="195" stroke="#0B7C8C" stroke-width="1.6"/>
+<line x1="640" y1="195" x2="510" y2="180" stroke="#0B7C8C" stroke-width="1.6"/>
+<line x1="510" y1="180" x2="640" y2="165" stroke="#0B7C8C" stroke-width="1.6"/>
+<circle cx="510" cy="270" r="1.8" fill="#0B7C8C" stroke="none" stroke-width="1.5"/>
+<circle cx="640" cy="255" r="1.8" fill="#0B7C8C" stroke="none" stroke-width="1.5"/>
+<circle cx="510" cy="240" r="1.8" fill="#0B7C8C" stroke="none" stroke-width="1.5"/>
+<circle cx="640" cy="225" r="1.8" fill="#0B7C8C" stroke="none" stroke-width="1.5"/>
+<circle cx="510" cy="210" r="1.8" fill="#0B7C8C" stroke="none" stroke-width="1.5"/>
+<circle cx="640" cy="195" r="1.8" fill="#0B7C8C" stroke="none" stroke-width="1.5"/>
+<circle cx="510" cy="180" r="1.8" fill="#0B7C8C" stroke="none" stroke-width="1.5"/>
+<text x="642" y="297" font-size="10" text-anchor="end" fill="#0B7C8C">t<tspan dy="3.0" font-size="7.2">1</tspan><tspan dy="-3.0">​</tspan> = 85 (in)</text>
+<text x="642" y="160" font-size="10" text-anchor="end" fill="#0B7C8C">t<tspan dy="3.0" font-size="7.2">2</tspan><tspan dy="-3.0">​</tspan> = 95 (out)</text>
+<line x1="470" y1="299.474" x2="500" y2="225" stroke="#55667D" stroke-width="0.8" stroke-dasharray="2 2"/>
+<text x="330" y="372" font-size="12" text-anchor="middle" fill="#B7840A" font-weight="bold">Close approach at the cold end (95°F gas vs 85°F water): F<tspan dy="3.6" font-size="8.6">T</tspan><tspan dy="-3.6">​</tspan> = 0.838, Δt = 43.3°F</text>
+</svg>

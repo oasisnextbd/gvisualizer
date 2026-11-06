@@ -631,7 +631,7 @@ The critical insulation *raises* the loss by about 25% (105.7 vs 84.8 W/m).
       parts: [
         { id: "2011-12-Q7a", label: "(a)", marks: "10",
           topic: "boundary-layer", sub: "Reynolds–Colburn analogy",
-          type: "derivation", syllabus: "in", repeats: ["2014-15-Q3a", "2015-16-Q8a", "2016-17-Q8a", "2017-18-Q8a", "2020-21-Q7a", "2022-23-Q3a", "practice-boundary-layer-P6"],
+          type: "derivation", syllabus: "in", repeats: ["2014-15-Q3a", "2015-16-Q8a", "2016-17-Q8a", "2017-18-Q8a", "2020-21-Q7a", "2022-23-Q3a", "practice-boundary-layer-P6", "2024-25-Q4a"],
           text: String.raw`Derive the Reynolds–Colburn analogy and state its significance in heat transfer.`,
           solution: String.raw`**Assumptions:** steady, incompressible, laminar flow over a flat plate at zero pressure gradient; constant properties; plate at uniform $T_w$.
 

@@ -105,7 +105,7 @@ $$T_{s,B}=300+198.0(0.1273)=325\ \mathrm{K}$$
       parts: [
         { id: "2014-15-Q2a", label: "(a)", marks: "9+6",
           topic: "insulation", sub: "Critical radius of a cylinder",
-          type: "derivation", syllabus: "in", repeats: ["practice-insulation-P1"],
+          type: "derivation", syllabus: "in", repeats: ["practice-insulation-P1","2024-25-Q3a"],
           text: String.raw`Derive the equation for the critical radius of insulation in a cylindrical system. What would you do to reduce heat loss if the bare pipe radius is smaller than the critical radius of insulation? Explain your answer with a schematic of heat loss vs. radius.`,
           solution: String.raw`![Heat loss vs radius: maximum at rc = k/h; cases rᵢ < rc and rᵢ > rc](fig/common-critical-radius.svg)
 
@@ -171,7 +171,7 @@ Check: aluminium/insulation interface $T_2=250-80(3.84\times10^{-4})\approx 249.
       parts: [
         { id: "2014-15-Q3a", label: "(a)", marks: "15",
           topic: "boundary-layer", sub: "Reynolds–Colburn analogy derivation",
-          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2015-16-Q8a", "2016-17-Q8a", "2017-18-Q8a", "2020-21-Q7a", "2022-23-Q3a", "practice-boundary-layer-P6"],
+          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2015-16-Q8a", "2016-17-Q8a", "2017-18-Q8a", "2020-21-Q7a", "2022-23-Q3a", "practice-boundary-layer-P6", "2024-25-Q4a"],
           text: String.raw`Consider a fluid flowing past a flat plate where the friction coefficient is $C_f$. The velocity distribution and the laminar boundary layer thickness for the fluid can be expressed by the following equations, respectively:
 
 $$\frac{u}{u_\infty}=\frac{3}{2}\frac{y}{\delta}-\frac{1}{2}\left(\frac{y}{\delta}\right)^3,\qquad \delta=4.64\sqrt{\frac{\nu x}{u_\infty}}$$

@@ -18,7 +18,7 @@ const TOPICS=COURSE.topics||[
   {id:'evaporator',name:'Evaporators',ch:'10'},
   {id:'other',name:'Other (radiation, transient)',ch:'–'}
 ];
-const YEARS=COURSE.years||['2023-24','2022-23','2021-22','2020-21','2018-19','2017-18','2016-17','2015-16','2014-15','2013-14','2012-13','2011-12'];
+const YEARS=COURSE.years||['2024-25','2023-24','2022-23','2021-22','2020-21','2018-19','2017-18','2016-17','2015-16','2014-15','2013-14','2012-13','2011-12'];
 const SETS=(COURSE.sets||['intro','conduction','insulation','generation','convection-basics','boundary-layer','forced-convection','natural-convection','condensation','boiling','heat-exchangers','shell-tube','evaporator']).map(t=>'practice-'+t);   /* book-style practice sets, files data/<name>.js */
 const keyOf=p=>p.practice?'practice-'+String(p.set||'set').toLowerCase().replace(/[^a-z0-9]+/g,'-'):p.year;
 const papers={}, parts=[], byId={};

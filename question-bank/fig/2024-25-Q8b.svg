@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 330" width="600" height="330" font-family="Helvetica, Arial, sans-serif">
+<title>Condenser tube bank: 3 tubes high and 4 wide</title>
+<defs><marker id="aI" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="aIs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#1E2B3A"/></marker><marker id="aH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="aHs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#D2552B"/></marker><marker id="aC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="aCs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#0B7C8C"/></marker><marker id="aG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9AA8B8"/></marker><marker id="aGs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#9AA8B8"/></marker><marker id="aA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="aAs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#B7840A"/></marker><marker id="aS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="aSs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#55667D"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#FFF3D6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#C98A00" stroke-width="1.2"/></pattern><pattern id="mhatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="7" height="7" fill="#DCE3EC"/><line x1="0" y1="0" x2="0" y2="7" stroke="#9AA8B8" stroke-width="0.9"/></pattern></defs>
+<rect width="600" height="330" fill="#FFFFFF"/>
+<circle cx="150" cy="80" r="25" fill="#CFEDF1" stroke="#0B7C8C" stroke-width="1"/>
+<circle cx="150" cy="80" r="22" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<path d="M150,105 Q147,120 150,131" stroke="#0B7C8C" stroke-width="1.4" fill="none" stroke-dasharray="2 4"/>
+<circle cx="150" cy="160" r="27.5" fill="#CFEDF1" stroke="#0B7C8C" stroke-width="1"/>
+<circle cx="150" cy="160" r="22" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<path d="M150,187.5 Q147,200 150,208.5" stroke="#0B7C8C" stroke-width="1.4" fill="none" stroke-dasharray="2 4"/>
+<circle cx="150" cy="240" r="30" fill="#CFEDF1" stroke="#0B7C8C" stroke-width="1"/>
+<circle cx="150" cy="240" r="22" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<path d="M150,276 l-3,8 a3,3 0 1 0 6,0 z" stroke="none" stroke-width="1.5" fill="#0B7C8C"/>
+<circle cx="230" cy="80" r="25" fill="#CFEDF1" stroke="#0B7C8C" stroke-width="1"/>
+<circle cx="230" cy="80" r="22" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<path d="M230,105 Q227,120 230,131" stroke="#0B7C8C" stroke-width="1.4" fill="none" stroke-dasharray="2 4"/>
+<circle cx="230" cy="160" r="27.5" fill="#CFEDF1" stroke="#0B7C8C" stroke-width="1"/>
+<circle cx="230" cy="160" r="22" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<path d="M230,187.5 Q227,200 230,208.5" stroke="#0B7C8C" stroke-width="1.4" fill="none" stroke-dasharray="2 4"/>
+<circle cx="230" cy="240" r="30" fill="#CFEDF1" stroke="#0B7C8C" stroke-width="1"/>
+<circle cx="230" cy="240" r="22" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<path d="M230,276 l-3,8 a3,3 0 1 0 6,0 z" stroke="none" stroke-width="1.5" fill="#0B7C8C"/>
+<circle cx="310" cy="80" r="25" fill="#CFEDF1" stroke="#0B7C8C" stroke-width="1"/>
+<circle cx="310" cy="80" r="22" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<path d="M310,105 Q307,120 310,131" stroke="#0B7C8C" stroke-width="1.4" fill="none" stroke-dasharray="2 4"/>
+<circle cx="310" cy="160" r="27.5" fill="#CFEDF1" stroke="#0B7C8C" stroke-width="1"/>
+<circle cx="310" cy="160" r="22" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<path d="M310,187.5 Q307,200 310,208.5" stroke="#0B7C8C" stroke-width="1.4" fill="none" stroke-dasharray="2 4"/>
+<circle cx="310" cy="240" r="30" fill="#CFEDF1" stroke="#0B7C8C" stroke-width="1"/>
+<circle cx="310" cy="240" r="22" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<path d="M310,276 l-3,8 a3,3 0 1 0 6,0 z" stroke="none" stroke-width="1.5" fill="#0B7C8C"/>
+<circle cx="390" cy="80" r="25" fill="#CFEDF1" stroke="#0B7C8C" stroke-width="1"/>
+<circle cx="390" cy="80" r="22" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<path d="M390,105 Q387,120 390,131" stroke="#0B7C8C" stroke-width="1.4" fill="none" stroke-dasharray="2 4"/>
+<circle cx="390" cy="160" r="27.5" fill="#CFEDF1" stroke="#0B7C8C" stroke-width="1"/>
+<circle cx="390" cy="160" r="22" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<path d="M390,187.5 Q387,200 390,208.5" stroke="#0B7C8C" stroke-width="1.4" fill="none" stroke-dasharray="2 4"/>
+<circle cx="390" cy="240" r="30" fill="#CFEDF1" stroke="#0B7C8C" stroke-width="1"/>
+<circle cx="390" cy="240" r="22" fill="#DCE3EC" stroke="#1E2B3A" stroke-width="1.5"/>
+<path d="M390,276 l-3,8 a3,3 0 1 0 6,0 z" stroke="none" stroke-width="1.5" fill="#0B7C8C"/>
+<line x1="100" y1="80" x2="100" y2="240" stroke="#9AA8B8" stroke-width="1.1" marker-end="url(#aG)" marker-start="url(#aGs)"/>
+<text x="94" y="156" font-size="13" text-anchor="end" fill="#1E2B3A" font-weight="bold">N = 3</text>
+<text x="94" y="172" font-size="11" text-anchor="end" fill="#55667D">per column</text>
+<text x="270" y="30" font-size="13" text-anchor="middle" fill="#55667D">Steam 7.38 kPa, T<tspan dy="3.9" font-size="9.4">sat</tspan><tspan dy="-3.9">​</tspan> = 40°C</text>
+<text x="270" y="46" font-size="11" text-anchor="middle" fill="#55667D">4 columns</text>
+<text x="440" y="100" font-size="12" text-anchor="start" fill="#1E2B3A">D = 3 cm</text>
+<text x="440" y="118" font-size="12" text-anchor="start" fill="#1E2B3A">T<tspan dy="3.6" font-size="8.6">s</tspan><tspan dy="-3.6">​</tspan> = 30°C</text>
+<text x="440" y="136" font-size="12" text-anchor="start" fill="#1E2B3A">12 tubes</text>
+<text x="440" y="160" font-size="11" text-anchor="start" fill="#0B7C8C">film thickens</text>
+<text x="440" y="174" font-size="11" text-anchor="start" fill="#0B7C8C">down each column</text>
+<text x="440" y="198" font-size="12" text-anchor="start" fill="#B7840A" font-weight="bold">h<tspan dy="3.6" font-size="8.6">N</tspan><tspan dy="-3.6">​</tspan> = h<tspan dy="3.6" font-size="8.6">1</tspan><tspan dy="-3.6">​</tspan> N<tspan dy="-4.6" font-size="8.6">−1/4</tspan><tspan dy="4.6">​</tspan></text>
+<text x="300" y="322" font-size="11" text-anchor="middle" fill="#0B7C8C">condensate drips from tube to tube</text>
+</svg>

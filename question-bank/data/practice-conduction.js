@@ -274,7 +274,7 @@ $\sum R = 0.0212 + 0.00046 + 1/(10\cdot2\pi\cdot0.057) = 0.301$ °C/W, so $q/L =
       parts: [
         { id: "practice-conduction-P8a", label: "(a)", marks: "6", topic: "conduction",
           sub: "Thermal resistance of a spherical shell", type: "derivation",
-          syllabus: "in", repeats: ["2013-14-Q5a", "2015-16-Q5b"], origin: "potential", ref: String.raw`Style of Holman Sec. 2-4 (sphere); cousin of 2013-14 Q5(a) and 2015-16 Q5(b)`,
+          syllabus: "in", repeats: ["2013-14-Q5a", "2015-16-Q5b", "2024-25-Q2a"], origin: "potential", ref: String.raw`Style of Holman Sec. 2-4 (sphere); cousin of 2013-14 Q5(a) and 2015-16 Q5(b)`,
           text: String.raw`Show that the conduction resistance of a spherical shell of radii $r_1$ and $r_2$ and constant conductivity $k$ is $R = (r_2 - r_1)/(4\pi k r_1 r_2)$.`,
           solution: String.raw`**Assumptions:** steady; radial 1-D; no generation; constant $k$.
 

@@ -6,7 +6,7 @@ QB.paper({ year: "Practice", set: "Critical insulation", date: "", marks: 0, pra
       parts: [
         { id: "practice-insulation-P1", label: "", marks: "", topic: "insulation",
           sub: "Derivation: critical radius for a cylinder, r_c = k/h", type: "derivation",
-          syllabus: "in", repeats: ["2014-15-Q2a", "2015-16-Q6a", "2016-17-Q6a", "2017-18-Q5b", "2020-21-Q8a"], origin: "slides", ref: String.raw`Slides 02 Conduction I, slides 38–40 (critical thickness of insulation, Holman Fig. 2-7)`,
+          syllabus: "in", repeats: ["2014-15-Q2a", "2015-16-Q6a", "2016-17-Q6a", "2017-18-Q5b", "2020-21-Q8a", "2024-25-Q3a"], origin: "slides", ref: String.raw`Slides 02 Conduction I, slides 38–40 (critical thickness of insulation, Holman Fig. 2-7)`,
           text: String.raw`A pipe of outer radius $r_i$ at $T_i$ is covered with insulation of conductivity $k$ to an outer radius $r_o$ and loses heat by convection ($h$) to $T_\infty$. Show that there is a critical radius $r_o = k/h$ at which the heat loss is a maximum. Sketch $q$ against $r_o$ and explain what it means for insulating a pipe.`,
           solution: String.raw`**Assumptions (slides):** (1) steady state; (2) 1-D radial heat flow; (3) negligible wall resistance (pipe surface at $T_i$); (4) constant insulation properties; (5) radiation between surface and surroundings neglected (or lumped into $h$); $h$ independent of $r_o$.
 

@@ -214,7 +214,7 @@ Check: $L/D_h = 100 > 10$, so the fully developed assumption holds.`,
       parts: [
         { id: "2022-23-Q3a", label: "(a)", marks: "16",
           topic: "boundary-layer", sub: "Reynolds–Colburn analogy",
-          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2015-16-Q8a", "2016-17-Q8a", "2017-18-Q8a", "2020-21-Q7a", "practice-boundary-layer-P6"],
+          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2015-16-Q8a", "2016-17-Q8a", "2017-18-Q8a", "2020-21-Q7a", "practice-boundary-layer-P6", "2024-25-Q4a"],
           text: String.raw`Consider a fluid flowing past a flat plate where the friction coefficient is $C_f$. The velocity distribution and laminar boundary-layer thickness can be expressed by
 
 $$\frac{u}{u_\infty} = \frac32\frac{y}{\delta} - \frac12\left(\frac{y}{\delta}\right)^3, \qquad \delta = 4.64\sqrt{\frac{\nu x}{u_\infty}}$$
@@ -823,7 +823,7 @@ The slides give no design equations for plate exchangers; the performance figure
           answer: String.raw`Gasketed corrugated plates clamped in a frame, giving alternate hot and cold channels. High $U$, compact, close approach, easy to clean and expand; limited by gasket pressure and temperature.` },
         { id: "2022-23-Q7d", label: "(d)", marks: "15",
           topic: "condensation", sub: "Horizontal tube bank condenser (3×4)",
-          type: "numerical", syllabus: "in", repeats: ["2015-16-Q3a", "practice-condensation-P2a"],
+          type: "numerical", syllabus: "in", repeats: ["2015-16-Q3a", "practice-condensation-P2a", "2024-25-Q8b"],
           text: String.raw`The condenser of a steam power plant operates at a pressure of 7.38 kPa. Steam at this pressure condenses on the outer surfaces of 12 horizontal tubes (a rectangular array 3 tubes high and 4 tubes wide) through which cooling water circulates. The tube outer diameter is 3 cm and the outer surfaces are maintained at 30°C. Determine (i) the rate of heat transfer to the cooling water circulating in the pipes and (ii) the rate of condensation of steam per unit length of a horizontal pipe.
 
 Properties of water at the saturation temperature of 40°C corresponding to 7.38 kPa: $h_{fg} = 2407\times10^3$ J/kg and $\rho_v$ = 0.05 kg/m³.`,

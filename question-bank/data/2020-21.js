@@ -554,7 +554,7 @@ Heat gained: $q = 41.75(12.0) = 500$ W.
       parts: [
         { id: "2020-21-Q7a", label: "(a)", marks: "18",
           topic: "boundary-layer", sub: "Reynolds–Colburn analogy from the cubic profile",
-          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2015-16-Q8a", "2016-17-Q8a", "2017-18-Q8a", "2022-23-Q3a", "practice-boundary-layer-P6"],
+          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2015-16-Q8a", "2016-17-Q8a", "2017-18-Q8a", "2022-23-Q3a", "practice-boundary-layer-P6", "2024-25-Q4a"],
           text: String.raw`The velocity distribution and the laminar boundary layer thickness for the fluid can be expressed by the following equations, respectively:
 $$\frac{u}{u_\infty} = \frac{3}{2}\frac{y}{\delta} - \frac{1}{2}\left(\frac{y}{\delta}\right)^3,\qquad \delta = 4.64\sqrt{\frac{\nu x}{u_\infty}}$$
 where $u_\infty$ is the fluid velocity outside the boundary layer and other symbols have their usual meanings. Derive the Reynolds–Colburn analogy using the above equations and state its significance in heat transfer.`,
@@ -628,7 +628,7 @@ $$q = 11.22(0.18)(70) = 141.3\ \mathrm{W}$$
       parts: [
         { id: "2020-21-Q8a", label: "(a)", marks: "15",
           topic: "insulation", sub: "Critical radius of insulation for a cylinder",
-          type: "derivation", syllabus: "in", repeats: ["practice-insulation-P1"],
+          type: "derivation", syllabus: "in", repeats: ["practice-insulation-P1","2024-25-Q3a"],
           text: String.raw`Derive the equation for critical radius of insulation in a cylindrical system. What would you suggest for reducing heat loss if the bare pipe radius is smaller than the critical radius of insulation? Explain your answer with a schematic of heat loss vs. radius.`,
           solution: String.raw`**Assumptions:** steady, 1-D radial conduction; insulation conductivity $k$ constant; pipe surface at $T_i$ (radius $r_i$); outer surface convects to $T_\infty$ with constant $h$; length $L$.
 

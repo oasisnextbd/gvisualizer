@@ -228,7 +228,7 @@ $\Rightarrow \Delta T_e = 19.3^\circ$C
       parts: [
         { id: "2015-16-Q3a", label: "(a)", marks: "15",
           topic: "condensation", sub: "Steam condenser, 3 × 4 horizontal tube bank",
-          type: "numerical", syllabus: "in", repeats: ["2022-23-Q7d", "practice-condensation-P2a"],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q7d", "practice-condensation-P2a", "2024-25-Q8b"],
           text: String.raw`The condenser of a steam power plant operates at a pressure of 7.38 kPa. Steam at this pressure condenses on the outer surfaces of 12 horizontal tubes (arranged in a rectangular array of 3 tubes high and 4 tubes wide) through which cooling water circulates. The outer diameter of the pipes is 3 cm, and the outer surfaces of the pipes are maintained at 30°C. Determine (a) the rate of heat transfer to the cooling water circulating in the pipes and (b) the rate of condensation of steam per unit length of a horizontal pipe.
 
 The properties of water at the saturation temperature of 40°C corresponding to 7.38 kPa are $h_{fg} = 2407\times10^3$ J/kg and $\rho_v = 0.05\,\mathrm{kg/m^3}$.`,
@@ -381,7 +381,7 @@ $$\frac{\partial^2T}{\partial x^2} + \frac{\partial^2T}{\partial y^2} + \frac{\p
           answer: String.raw`$\nabla\cdot(k\nabla T) + \dot q = \rho c\,\partial T/\partial t$; constant k: $\nabla^2T + \dot q/k = (1/\alpha)\partial T/\partial t$.` },
         { id: "2015-16-Q5b", label: "(b)", marks: "16",
           topic: "conduction", sub: "Hollow sphere – heat flow",
-          type: "derivation", syllabus: "in", repeats: ["practice-conduction-P8a"],
+          type: "derivation", syllabus: "in", repeats: ["practice-conduction-P8a","2024-25-Q2a"],
           text: String.raw`Derive an expression for the heat flow from a hollow sphere. The inside and outside surfaces of the hollow sphere are maintained at $T_i$ and $T_o$ temperatures respectively.`,
           solution: String.raw`**Assumptions:** steady state, radial (1-D) conduction only, constant k, no heat generation; inner radius $r_i$ at $T_i$, outer radius $r_o$ at $T_o$.
 
@@ -422,7 +422,7 @@ Q is independent of r (steady, no generation) though the flux $Q/(4\pi r^2)$ fal
       parts: [
         { id: "2015-16-Q6a", label: "(a)", marks: "5+8",
           topic: "insulation", sub: "Critical insulation thickness – cylinder",
-          type: "derivation", syllabus: "in", repeats: ["practice-insulation-P1"],
+          type: "derivation", syllabus: "in", repeats: ["practice-insulation-P1","2024-25-Q3a"],
           text: String.raw`Discuss the phenomenon called "critical insulation thickness". Derive the equation for the critical insulation thickness for a pipe.`,
           solution: String.raw`**Phenomenon:** adding insulation of outer radius r to a pipe of radius $r_1$ adds conduction resistance $\ln(r/r_1)/(2\pi kL)$, but at the same time enlarges the outer surface, which *reduces* the convection resistance $1/(2\pi rLh)$. For small pipes (or poor h, i.e. low-h surroundings) the second effect wins at first: heat loss **increases** with insulation up to a maximum at $r = r_c$, then decreases. Insulation reduces heat loss only if $r_1 \ge r_c$ or if enough is added to go well beyond $r_c$. Electric wires use this to dissipate more heat through thin insulation.
 
@@ -531,7 +531,7 @@ $$\delta = \frac{4.64(0.4)}{\sqrt{50\,890}} = 8.23\times10^{-3}\,\mathrm{m} = 8.
       parts: [
         { id: "2015-16-Q8a", label: "(a)", marks: "11",
           topic: "boundary-layer", sub: "Reynolds–Colburn analogy",
-          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2016-17-Q8a", "2017-18-Q8a", "2020-21-Q7a", "2022-23-Q3a", "practice-boundary-layer-P6"],
+          type: "derivation", syllabus: "in", repeats: ["2011-12-Q7a", "2014-15-Q3a", "2016-17-Q8a", "2017-18-Q8a", "2020-21-Q7a", "2022-23-Q3a", "practice-boundary-layer-P6", "2024-25-Q4a"],
           text: String.raw`Derive the relation known as the Reynolds–Colburn analogy. Write a few words on its applicability.`,
           solution: String.raw`**Assumptions:** laminar flow over a flat plate, constant properties, $dp/dx = 0$, negligible viscous dissipation.
 
