@@ -1,4 +1,4 @@
-// gvisualizer team dashboard: comments inbox, team notes, allowed students and the team list.
+// gvisualizer team dashboard: comments inbox, team notes, allowed students, lab access (bKash payments and codes) and the team list.
 import { enabled, fb, onUser, signIn, signOut, googleSignIn, niceError, esc, when, shortName, OWNER, FOUNDER, DOMAIN } from '../shared/fb.js';
 import { DEFAULT_RANGES } from '../shared/config.js';
 
@@ -26,7 +26,7 @@ function render() {
   if (me.dbError && !me.isOwner) return say(`<h2>Database not ready</h2><p class="lede">The database refused the request (${esc(me.dbError)}). If Firebase was just set up, publish <b>firebase/firestore.rules</b> in the console (Firestore → Rules) and reload.</p><button class="btn ghost" id="out">Sign out</button>`);
   if (!me.isMod) return say(`<h2>Not on the team</h2><p class="lede"><b>${esc(me.email)}</b> is signed in but is not on the team list. Ask the owner (${esc(OWNER)}) or an admin to add you.</p><button class="btn ghost" id="out">Sign out</button>`);
   if (!seenSaved) { seenSaved = true; C.F.setDoc(C.F.doc(C.db, 'seen', me.email), { at: C.F.serverTimestamp() }).catch(() => {}); }
-  const tabs = [['overview', 'Overview'], ['comments', 'Comments'], ['notes', 'Notes'], ['students', 'Students']].concat(me.isAdmin ? [['team', 'Team']] : []);
+  const tabs = [['overview', 'Overview'], ['comments', 'Comments'], ['notes', 'Notes'], ['students', 'Students'], ['labs', 'Lab access']].concat(me.isAdmin ? [['team', 'Team']] : []);
   if (!tabs.some(t => t[0] === view.tab)) view.tab = 'overview';
   app.innerHTML = `<div class="tm"><nav class="tm-nav">
       <div class="tm-me"><b>${esc(me.email)}</b><span class="tag">${esc(me.role)}</span></div>
@@ -34,7 +34,7 @@ function render() {
       <button class="btn ghost" id="out" style="margin-top:8px">Sign out</button>
     </nav><section id="main"><p class="empty">Loading…</p></section></div>`;
   $('#out').onclick = () => signOut();
-  ({ overview, comments, notes, students, team })[view.tab]();
+  ({ overview, comments, notes, students, labs, team })[view.tab]();
 }
 const $ = s => app.querySelector(s);
 function say(h) { app.innerHTML = `<div class="tm-login">${h}</div>`; const o = $('#out'); if (o) o.onclick = () => signOut(); }
@@ -72,8 +72,10 @@ async function overview() {
         <div class="tile"><div class="k">All comments</div><div class="v">${all}</div></div>
         <div class="tile"><div class="k">Solutions with notes</div><div class="v">${nt}</div></div>
         ${mem == null ? '' : `<div class="tile"><div class="k">Allowed people</div><div class="v">${mem}</div></div>`}
+        <a class="tile" href="#labs" style="text-decoration:none;color:inherit"><div class="k">Lab payments to check</div><div class="v" id="lp">…</div></a>
       </div>
       <p class="lede">Work through <b>new</b> comments first: fix the solution (publish a correction note, or note it for the next content update), approve useful ones so every student sees them, and reply so the student knows what happened.</p>`);
+    labsApi('/summary').then(j => { const el = $('#lp'); if (el) el.textContent = j.pending; }).catch(() => { const el = $('#lp'); if (el) el.textContent = '—'; });
   } catch (e) { fail(e); }
 }
 
@@ -284,13 +286,87 @@ async function students() {
   } catch (e) { fail(e); }
 }
 
+// ------------------------------------------------------------ lab access (gvisualizer-labs: bKash payments and access codes)
+const LABS = 'https://gvisualizer-labs.pages.dev';
+async function labsApi(path, body) {
+  const t = await C.auth.currentUser.getIdToken();
+  let r;
+  try { r = await fetch(LABS + '/api/team' + path, { method: body ? 'POST' : 'GET', headers: { Authorization: 'Bearer ' + t, ...(body ? { 'Content-Type': 'application/json' } : {}) }, body: body ? JSON.stringify(body) : undefined }); }
+  catch (e) { throw new Error('Could not reach the labs site.'); }
+  const j = await r.json().catch(() => ({}));
+  if (r.status === 503) throw new Error('The labs site is not set up yet (LAB_SECRET missing in Cloudflare).');
+  if (!r.ok) throw new Error(j.error || 'Labs server error ' + r.status);
+  return j;
+}
+const dhaka = s => s ? new Date(s * 1000).toLocaleString('en-GB', { timeZone: 'Asia/Dhaka', dateStyle: 'medium', timeStyle: 'short' }) : '';
+const labView = { tab: 'pending' };
+async function labs() {
+  const t = labView.tab;
+  const sub = [['pending', 'Pending'], ['approved', 'Approved'], ['rejected', 'Rejected'], ['codes', 'Codes'], ['settings', 'Settings']]
+    .map(([k, n]) => `<button class="btn ${k === t ? '' : 'ghost'}" data-lt="${k}">${n}</button>`).join('');
+  const m = main(`<h1>Lab access</h1>
+    <p class="lede">Students pay with bKash Send Money and submit the TrxID on <a href="${LABS}/pay" target="_blank" rel="noopener">the pay page</a>. Find the TrxID in the bKash app, check amount and sender, then approve. The student sees their code on “Check my request”.</p>
+    <div class="tm-bar">${sub}</div><p class="cm-msg" id="lm"></p><div id="lb"><p class="empty">Loading…</p></div>`);
+  m.querySelectorAll('[data-lt]').forEach(b => b.onclick = () => { labView.tab = b.dataset.lt; labs(); });
+  const box = m.querySelector('#lb'), msg = h => { m.querySelector('#lm').innerHTML = h; };
+  const run = async (fn, done) => { try { const j = await fn(); done && done(j); } catch (e) { msg(esc(e.message)); } };
+  try {
+    if (t === 'settings') {
+      const c = await labsApi('/settings'), ro = me.isAdmin ? '' : 'disabled';
+      const sw = (id, on, label, hint) => `<label style="display:flex;gap:10px;align-items:flex-start;margin:12px 0;color:var(--ink)"><input type="checkbox" id="${id}" ${on ? 'checked' : ''} ${ro} style="width:auto;margin-top:4px"><span><b>${label}</b><br><span class="cm-dim">${hint}</span></span></label>`;
+      box.innerHTML = `<div class="tiles"><div class="tile"><div class="k">Labs</div><div class="v" style="font-size:22px">${c.locked ? '🔒 Locked' : '🌐 Open to all'}</div></div>
+        <div class="tile"><div class="k">Payments</div><div class="v" style="font-size:22px">${c.payments ? 'Accepting' : 'Paused'}</div></div>
+        <div class="tile"><div class="k">Price</div><div class="v">${c.price ? '৳' + esc(c.price) : '—'}</div></div>
+        <div class="tile"><div class="k">Active codes</div><div class="v">${c.activeCodes}</div></div></div>
+        <div class="tm-detail"><h3>Lab website settings</h3>${me.isAdmin ? '' : '<p class="cm-dim">Only the owner or an admin can change these.</p>'}
+        <label>Price (৳)<input type="text" id="sp" value="${esc(c.price)}" inputmode="numeric" ${ro}></label>
+        <label>bKash number students send to<input type="text" id="sb" value="${esc(c.bkash)}" inputmode="tel" ${ro}></label>
+        <label>Notice on the pay page (optional, e.g. an offer)<input type="text" id="sn" value="${esc(c.notice)}" maxlength="200" ${ro}></label>
+        ${sw('sl', c.locked, 'Lock the labs', 'On: only people with a code can open the labs. Off: anyone can open them (free preview).')}
+        ${sw('sy', c.payments, 'Accept new payments', 'Off: the pay page says payments are paused.')}
+        ${me.isAdmin ? '<div class="cm-row"><button class="btn" id="ss">Save settings</button></div>' : ''}
+        ${c.by ? `<p class="cm-dim">Last changed by ${esc(c.by)}, ${esc(dhaka(c.at))}</p>` : ''}</div>
+        <div class="tm-detail"><h3>Links</h3><p><a href="${LABS}/" target="_blank" rel="noopener">Labs home</a> · <a href="${LABS}/pay" target="_blank" rel="noopener">Pay page</a> · <a href="${LABS}/pay/status" target="_blank" rel="noopener">Check request page</a></p></div>
+        ${me.isOwner ? `<div class="tm-detail"><h3>Log everyone out</h3><p class="cm-dim">Every student must enter their code again (codes keep working). Use it if you think logins were shared.</p><button class="btn ghost" id="lo">Log everyone out</button></div>` : ''}`;
+      const ss = box.querySelector('#ss');
+      if (ss) ss.onclick = () => run(() => labsApi('/settings/save', { price: box.querySelector('#sp').value, bkash: box.querySelector('#sb').value, notice: box.querySelector('#sn').value.trim(), locked: box.querySelector('#sl').checked, payments: box.querySelector('#sy').checked }), () => labs().then(() => msg('Saved. The lab website uses the new settings within a minute.')));
+      const lo = box.querySelector('#lo');
+      if (lo) lo.onclick = () => { if (confirm('Log every student out of the labs?')) run(() => labsApi('/logout-everyone', {}), () => msg('Everyone is logged out (within a minute).')); };
+    } else if (t === 'codes') {
+      const { items } = await labsApi('/codes');
+      box.innerHTML = (me.isAdmin ? `<div class="tm-detail"><h3>Free access code</h3><div class="tm-bar"><input class="search" id="cn" autocomplete="off" data-lpignore="true" data-1p-ignore="true" placeholder="name"><button class="btn" id="cc">Create code</button></div></div>` : '') +
+        `<div class="tm-detail" style="overflow-x:auto"><table class="tm-t"><thead><tr><th>Name</th><th>Paid with</th><th>Created</th><th>Devices</th><th>Status</th><th></th></tr></thead><tbody>
+        ${items.map(c => `<tr><td><b>${esc(c.name || '—')}</b>${c.free ? ' <span class="tag">free</span>' : ''}<br><span class="cm-dim">by ${esc(c.by || '')}</span></td>
+          <td>${esc(c.phone || '')}<br><span class="cm-dim">${esc(c.trx || '')}</span></td><td class="cm-dim">${esc(dhaka(c.created))}</td><td>${c.devices || 0}/2</td>
+          <td><span class="${c.revoked ? 'st-declined' : 'st-approved'}">${c.revoked ? 'revoked' : 'active'}</span></td>
+          <td>${me.isAdmin ? `<button class="cm-link" data-reset="${c.tag}">Reset devices</button> · ${c.revoked ? `<button class="cm-link" data-on="${c.tag}">Turn on</button>` : `<button class="cm-link" data-off="${c.tag}">Revoke</button>`}` : ''}</td></tr>`).join('') || '<tr><td colspan="6" class="cm-dim">No codes yet.</td></tr>'}
+        </tbody></table></div>`;
+      const cc = box.querySelector('#cc');
+      if (cc) cc.onclick = () => run(() => labsApi('/codes/create', { name: box.querySelector('#cn').value.trim() }), j => { labs().then(() => msg(`New code: <b>${esc(j.code)}</b> — copy it now and send it to the person.`)); });
+      box.querySelectorAll('[data-reset]').forEach(b => b.onclick = () => run(() => labsApi('/codes/reset', { tag: b.dataset.reset }), () => labs()));
+      box.querySelectorAll('[data-on]').forEach(b => b.onclick = () => run(() => labsApi('/codes/restore', { tag: b.dataset.on }), () => labs()));
+      box.querySelectorAll('[data-off]').forEach(b => b.onclick = () => { if (confirm('Revoke this code? The person is locked out at once.')) run(() => labsApi('/codes/revoke', { tag: b.dataset.off }), () => labs()); });
+    } else {
+      const { items } = await labsApi('/payments?status=' + t);
+      box.innerHTML = `<div class="tm-detail" style="overflow-x:auto"><table class="tm-t"><thead><tr><th>TrxID</th><th>Sender</th><th>৳</th><th>Student</th><th>Submitted</th><th></th></tr></thead><tbody>
+        ${items.map(p => `<tr><td><b>${esc(p.trx)}</b></td><td>${esc(p.phone)}</td><td>${esc(p.amount)}</td>
+          <td>${esc(p.name)}${p.sid ? `<br><span class="cm-dim">${esc(p.sid)}</span>` : ''}${p.email ? `<br><span class="cm-dim">${esc(p.email)}</span>` : ''}</td>
+          <td class="cm-dim">${esc(dhaka(p.created))}${p.by ? `<br>${t} by ${esc(p.by)}` : ''}</td>
+          <td>${t === 'pending' ? `<button class="btn" data-ok="${esc(p.trx)}">Approve</button> <button class="cm-link" data-no="${esc(p.trx)}">Reject</button>` : t === 'rejected' ? `<button class="cm-link" data-ok="${esc(p.trx)}">Approve</button>` : ''}</td></tr>`).join('') || '<tr><td colspan="6" class="cm-dim">Nothing here.</td></tr>'}
+        </tbody></table></div>`;
+      box.querySelectorAll('[data-ok]').forEach(b => b.onclick = () => { if (confirm('Approve ' + b.dataset.ok + '? Only if you found this TrxID in bKash with the right amount.')) { b.disabled = true; run(() => labsApi('/payments/approve', { trx: b.dataset.ok }), j => labs().then(() => msg(`Approved. Code <b>${esc(j.code)}</b> — the student sees it on “Check my request”.`))); } });
+      box.querySelectorAll('[data-no]').forEach(b => b.onclick = () => { const note = prompt('Reject ' + b.dataset.no + '? Optional reason shown to the student:', 'TrxID not found in bKash.'); if (note !== null) run(() => labsApi('/payments/reject', { trx: b.dataset.no, note }), () => labs()); });
+    }
+  } catch (e) { box.innerHTML = `<p class="empty">${esc(e.message)}</p>`; }
+}
+
 // ------------------------------------------------------------ team
 const ROLE_INFO = {
   owner: ['Owner', 'Everything, including admins and the company account.'],
   admin: ['Admin', 'Everything, except changing the owner or other admins: comments, notes, allowed students, moderators.'],
-  moderator: ['Moderator', 'Comments and notes: review, reply, approve, publish corrections and methods; approve student verification requests.']
+  moderator: ['Moderator', 'Comments and notes: review, reply, approve, publish corrections and methods; approve student verification requests; approve lab payments.']
 };
-const CAN_SEE = { owner: 'Everything', admin: 'Everything except changing the owner or admins', moderator: 'Comments, Notes, verification requests' };
+const CAN_SEE = { owner: 'Everything', admin: 'Everything except changing the owner or admins', moderator: 'Comments, Notes, verification requests, lab payments' };
 async function team() {
   const { F, db } = C;
   try {
