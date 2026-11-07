@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" font-family="Helvetica, Arial, sans-serif">
+<title>Fugacity of water at 300 °C versus pressure (steam-table data)</title>
+<rect width="640" height="420" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<line x1="80.0" y1="30.0" x2="80.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="80.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >0</text>
+<line x1="180.0" y1="30.0" x2="180.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="180.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >2000</text>
+<line x1="280.0" y1="30.0" x2="280.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="280.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >4000</text>
+<line x1="380.0" y1="30.0" x2="380.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="380.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >6000</text>
+<line x1="480.0" y1="30.0" x2="480.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="480.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >8000</text>
+<line x1="580.0" y1="30.0" x2="580.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="580.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >10000</text>
+<line x1="80.0" y1="350.0" x2="580.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="354.0" font-size="12" fill="#55667D" text-anchor="end" >0</text>
+<line x1="80.0" y1="286.0" x2="580.0" y2="286.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="290.0" font-size="12" fill="#55667D" text-anchor="end" >2000</text>
+<line x1="80.0" y1="222.0" x2="580.0" y2="222.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="226.0" font-size="12" fill="#55667D" text-anchor="end" >4000</text>
+<line x1="80.0" y1="158.0" x2="580.0" y2="158.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="162.0" font-size="12" fill="#55667D" text-anchor="end" >6000</text>
+<line x1="80.0" y1="94.0" x2="580.0" y2="94.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="98.0" font-size="12" fill="#55667D" text-anchor="end" >8000</text>
+<line x1="80.0" y1="30.0" x2="580.0" y2="30.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="34.0" font-size="12" fill="#55667D" text-anchor="end" >10000</text>
+<rect x="80" y="30" width="500" height="320" fill="none" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="330.0" y="386.0" font-size="13" fill="#1E2B3A" text-anchor="middle" >P / kPa</text>
+<text x="36.0" y="190.0" font-size="13" fill="#1E2B3A" text-anchor="middle" transform="rotate(-90 36 190.0)">f / kPa</text>
+<path d="M80.0,350.0 L580.0,30.0" fill="none" stroke="#9AA8B8" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="6 4"/>
+<text x="395.0" y="126.0" font-size="12" fill="#55667D" text-anchor="start" >f = P (ideal gas)</text>
+<path d="M80.0,350.0 L82.2,348.6 L84.4,347.2 L86.5,345.8 L88.7,344.5 L90.8,343.1 L93.0,341.7 L95.2,340.3 L97.3,339.0 L99.5,337.6 L101.6,336.3 L103.8,334.9 L106.0,333.6 L108.1,332.3 L110.3,330.9 L112.4,329.6 L114.6,328.3 L116.7,326.9 L118.9,325.6 L121.1,324.3 L123.2,322.9 L125.4,321.6 L127.5,320.3 L129.7,319.0 L131.9,317.7 L134.0,316.4 L136.2,315.0 L138.3,313.7 L140.5,312.4 L142.7,311.1 L144.8,309.8 L147.0,308.5 L149.1,307.2 L151.3,305.9 L153.4,304.6 L155.6,303.4 L157.8,302.1 L159.9,300.8 L162.1,299.5 L164.2,298.2 L166.4,297.0 L168.6,295.7 L170.7,294.5 L172.9,293.2 L175.0,292.0 L177.2,290.7 L179.4,289.5 L181.5,288.2 L183.7,287.0 L185.8,285.8 L188.0,284.5 L190.1,283.3 L192.3,282.1 L194.5,280.8 L196.6,279.6 L198.8,278.4 L200.9,277.2 L203.1,276.0 L205.3,274.7 L207.4,273.5 L209.6,272.3 L211.7,271.1 L213.9,269.9 L216.0,268.7 L218.2,267.5 L220.4,266.3 L222.5,265.1 L224.7,263.9 L226.8,262.7 L229.0,261.5 L231.2,260.4 L233.3,259.2 L235.5,258.0 L237.6,256.8 L239.8,255.7 L242.0,254.5 L244.1,253.3 L246.3,252.2 L248.4,251.0 L250.6,249.8 L252.7,248.7 L254.9,247.5 L257.1,246.4 L259.2,245.3 L261.4,244.1 L263.5,243.0 L265.7,241.9 L267.9,240.7 L270.0,239.6 L272.2,238.5 L274.3,237.4 L276.5,236.3 L278.7,235.1 L280.8,234.0 L283.0,232.9 L285.1,231.8 L287.3,230.7 L289.4,229.6 L291.6,228.5 L293.8,227.5 L295.9,226.4 L298.1,225.3 L300.2,224.2 L302.4,223.1 L304.6,222.0 L306.7,221.0 L308.9,219.9 L311.0,218.8 L313.2,217.8 L315.4,216.7 L317.5,215.6 L319.7,214.6 L321.8,213.5 L324.0,212.5 L326.1,211.4 L328.3,210.4 L330.5,209.3 L332.6,208.3 L334.8,207.3 L336.9,206.2 L339.1,205.2 L341.3,204.2 L343.4,203.1 L345.6,202.1 L347.7,201.1 L349.9,200.1 L352.0,199.1 L354.2,198.1 L356.4,197.1 L358.5,196.1 L360.7,195.1 L362.8,194.1 L365.0,193.1 L367.2,192.1 L369.3,191.1 L371.5,190.2 L373.6,189.2 L375.8,188.2 L378.0,187.3 L380.1,186.3 L382.3,185.3 L384.4,184.4 L386.6,183.4 L388.7,182.5 L390.9,181.5 L393.1,180.6 L395.2,179.7 L397.4,178.7 L399.5,177.8 L401.7,176.9 L403.9,175.9 L406.0,175.0 L408.2,174.1 L410.3,173.2 L412.5,172.3 L414.7,171.3 L416.8,170.4 L419.0,169.5 L421.1,168.6 L423.3,167.7 L425.4,166.8 L427.6,165.9 L429.8,165.1 L431.9,164.2 L434.1,163.3 L436.2,162.4 L438.4,161.5 L440.6,160.6 L442.7,159.8 L444.9,158.9 L447.0,158.0 L449.2,157.2 L451.3,156.3 L453.5,155.4 L455.7,154.6 L457.8,153.7 L460.0,152.9 L462.1,152.0 L464.3,151.2 L466.5,150.3 L468.6,149.5 L470.8,148.7 L472.9,147.8 L475.1,147.0 L477.3,146.2 L479.4,145.3 L481.6,144.5 L483.7,143.7 L485.9,142.9 L488.0,142.1 L490.2,141.3 L492.4,140.5 L494.5,139.7 L496.7,139.0 L498.8,138.2 L501.0,137.4 L503.2,136.6 L505.3,135.9 L507.5,135.1 L509.6,134.4" fill="none" stroke="#0B7C8C" stroke-width="2.5" stroke-linejoin="round" />
+<circle cx="80.0" cy="350.0" r="4" fill="#fff" stroke="#0B7C8C" stroke-width="1.8"/>
+<circle cx="105.0" cy="334.2" r="4" fill="#fff" stroke="#0B7C8C" stroke-width="1.8"/>
+<circle cx="180.0" cy="289.1" r="4" fill="#fff" stroke="#0B7C8C" stroke-width="1.8"/>
+<circle cx="280.0" cy="234.5" r="4" fill="#fff" stroke="#0B7C8C" stroke-width="1.8"/>
+<circle cx="380.0" cy="186.3" r="4" fill="#fff" stroke="#0B7C8C" stroke-width="1.8"/>
+<circle cx="480.0" cy="145.1" r="4" fill="#fff" stroke="#0B7C8C" stroke-width="1.8"/>
+<circle cx="509.6" cy="134.4" r="4" fill="#fff" stroke="#0B7C8C" stroke-width="1.8"/>
+<path d="M509.6,134.4 L512.1,134.3 L514.5,134.2 L516.9,134.2 L519.3,134.1 L521.8,134.1 L524.2,134.0 L526.6,134.0 L529.0,133.9 L531.5,133.9 L533.9,133.8 L536.3,133.7 L538.8,133.7 L541.2,133.6 L543.6,133.6 L546.0,133.5 L548.5,133.5 L550.9,133.4 L553.3,133.4 L555.7,133.3 L558.2,133.2 L560.6,133.2 L563.0,133.1 L565.4,133.1 L567.9,133.0 L570.3,133.0 L572.7,132.9 L575.1,132.8 L577.6,132.8 L580.0,132.7" fill="none" stroke="#D2552B" stroke-width="2.5" stroke-linejoin="round" />
+<line x1="509.6" y1="350.0" x2="509.6" y2="134.4" stroke="#55667D" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="505.6" y="342.0" font-size="11" fill="#55667D" text-anchor="end" >P sat = 8592.7</text>
+<text x="230.0" y="295.6" font-size="12" fill="#0B7C8C" text-anchor="start" >vapour: ln(f/f*) = [(H−H*)/T − (S−S*)]/R</text>
+<text x="577.5" y="74.8" font-size="12" fill="#D2552B" text-anchor="end" >liquid branch (Poynting):</text>
+<text x="495.0" y="160.4" font-size="12" fill="#1E2B3A" text-anchor="end" >f sat = 6738.9 kPa</text>
+<text x="577.5" y="89.2" font-size="12" fill="#D2552B" text-anchor="end" >f = 6789 kPa at 10 MPa</text>
+</svg>

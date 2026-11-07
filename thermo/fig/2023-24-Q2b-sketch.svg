@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" width="720" height="330" font-family="Helvetica, Arial, sans-serif">
+<title>Vapour-compression refrigeration cycle: schematic, T–S and ln P–H diagrams</title>
+<rect width="720" height="330" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<rect x="40" y="40" width="150" height="40" rx="6" fill="#FBEDE7" stroke="#D2552B" stroke-width="1.5"/>
+<text x="115.0" y="64.2" font-size="12" fill="#1E2B3A" text-anchor="middle" >Condenser  Q_H</text>
+<rect x="40" y="230" width="150" height="40" rx="6" fill="#E6F3F5" stroke="#0B7C8C" stroke-width="1.5"/>
+<text x="115.0" y="254.2" font-size="12" fill="#1E2B3A" text-anchor="middle" >Evaporator  Q_C</text>
+<path d="M190.0,60.0 L230.0,60.0 L230.0,120.0" fill="none" stroke="#1E2B3A" stroke-width="2" stroke-linejoin="round" marker-start="url(#ar)"/>
+<polygon points="215,120 245,120 238,180 222,180" fill="#fff" stroke="#1E2B3A" stroke-width="1.5"/>
+<text x="212.0" y="147.0" font-size="13" fill="#1E2B3A" text-anchor="end" >W</text>
+<text x="212.0" y="162.0" font-size="11" fill="#55667D" text-anchor="end" >compressor</text>
+<path d="M230.0,180.0 L230.0,250.0 L190.0,250.0" fill="none" stroke="#1E2B3A" stroke-width="2" stroke-linejoin="round" marker-start="url(#ar)"/>
+<path d="M40.0,60.0 L20.0,60.0 L20.0,140.0" fill="none" stroke="#1E2B3A" stroke-width="2" stroke-linejoin="round" />
+<polygon points="10,140 30,140 20,152" fill="#fff" stroke="#1E2B3A"/><polygon points="10,164 30,164 20,152" fill="#fff" stroke="#1E2B3A"/>
+<path d="M20.0,164.0 L20.0,250.0 L40.0,250.0" fill="none" stroke="#1E2B3A" stroke-width="2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="30.0" y="200.0" font-size="11" fill="#55667D" text-anchor="start" >throttle</text>
+<text x="8.0" y="55.0" font-size="13" fill="#B7840A" text-anchor="start" >4</text>
+<text x="8.0" y="262.0" font-size="13" fill="#B7840A" text-anchor="start" >1</text>
+<text x="236.0" y="262.0" font-size="13" fill="#B7840A" text-anchor="start" >2</text>
+<text x="236.0" y="55.0" font-size="13" fill="#B7840A" text-anchor="start" >3</text>
+<rect x="300" y="40" width="180" height="220" fill="none" stroke="#1E2B3A"/>
+<path d="M318.0,167.3 L320.4,160.2 L322.9,153.3 L325.3,146.7 L327.8,140.4 L330.2,134.3 L332.6,128.6 L335.1,123.1 L337.5,117.9 L340.0,113.0 L342.4,108.4 L344.8,104.1 L347.3,100.0 L349.7,96.2 L352.2,92.8 L354.6,89.6 L357.1,86.6 L359.5,84.0 L361.9,81.6 L364.4,79.6 L366.8,77.8 L369.3,76.3 L371.7,75.1 L374.1,74.1 L376.6,73.5 L379.0,73.1 L381.5,73.0 L383.9,73.2 L386.3,73.7 L388.8,74.4 L391.2,75.5 L393.7,76.8 L396.1,78.4 L398.5,80.3 L401.0,82.5 L403.4,84.9 L405.9,87.7 L408.3,90.7 L410.7,94.0 L413.2,97.6 L415.6,101.5 L418.1,105.7 L420.5,110.1 L422.9,114.8 L425.4,119.8 L427.8,125.1 L430.3,130.7 L432.7,136.6 L435.2,142.7 L437.6,149.1 L440.0,155.8 L442.5,162.8 L444.9,170.1 L447.4,177.6 L449.8,185.5 L452.2,193.6 L454.7,202.0 L457.1,210.7 L459.6,219.7 L462.0,228.9" fill="none" stroke="#55667D" stroke-width="1.5" stroke-linejoin="round" />
+<path d="M348.6,194.0 L452.3,194.0" fill="none" stroke="#0B7C8C" stroke-width="2.3" stroke-linejoin="round" />
+<path d="M452.3,194.0 L460.2,88.4" fill="none" stroke="#1E2B3A" stroke-width="2.3" stroke-linejoin="round" />
+<path d="M460.2,88.4 L427.1,123.6 L334.9,123.6" fill="none" stroke="#D2552B" stroke-width="2.3" stroke-linejoin="round" />
+<path d="M334.9,123.6 L348.6,194.0" fill="none" stroke="#1E2B3A" stroke-width="2" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<text x="343.2" y="211.6" font-size="13" fill="#B7840A" text-anchor="start" >1</text>
+<text x="452.3" y="211.6" font-size="13" fill="#B7840A" text-anchor="start" >2</text>
+<text x="462.0" y="84.0" font-size="13" fill="#B7840A" text-anchor="start" >3</text>
+<text x="321.6" y="117.0" font-size="13" fill="#B7840A" text-anchor="start" >4</text>
+<text x="390.0" y="280.0" font-size="13" fill="#1E2B3A" text-anchor="middle" >S</text>
+<text x="292.0" y="150.0" font-size="13" fill="#1E2B3A" text-anchor="end" >T</text>
+<text x="390.0" y="30.0" font-size="13" fill="#1E2B3A" text-anchor="middle" >T–S</text>
+<rect x="520" y="40" width="180" height="220" fill="none" stroke="#1E2B3A"/>
+<path d="M530.8,204.6 L533.0,195.1 L535.2,185.9 L537.4,177.0 L539.6,168.5 L541.8,160.3 L544.0,152.5 L546.2,144.9 L548.4,137.7 L550.6,130.8 L552.8,124.3 L555.0,118.1 L557.2,112.2 L559.4,106.6 L561.6,101.4 L563.7,96.4 L565.9,91.9 L568.1,87.6 L570.3,83.7 L572.5,80.1 L574.7,76.8 L576.9,73.8 L579.1,71.2 L581.3,68.9 L583.5,67.0 L585.7,65.3 L587.9,64.0 L590.1,63.0 L592.3,62.4 L594.5,62.0 L596.7,62.0 L598.9,62.4 L601.1,63.0 L603.3,64.0 L605.5,65.3 L607.7,67.0 L609.9,68.9 L612.1,71.2 L614.3,73.8 L616.5,76.8 L618.7,80.1 L620.9,83.7 L623.1,87.6 L625.3,91.9 L627.5,96.4 L629.6,101.4 L631.8,106.6 L634.0,112.2 L636.2,118.1 L638.4,124.3 L640.6,130.8 L642.8,137.7 L645.0,144.9 L647.2,152.5 L649.4,160.3 L651.6,168.5 L653.8,177.0 L656.0,185.9 L658.2,195.1 L660.4,204.6" fill="none" stroke="#55667D" stroke-width="1.5" stroke-linejoin="round" />
+<path d="M552.9,205.0 L660.4,205.0" fill="none" stroke="#0B7C8C" stroke-width="2.3" stroke-linejoin="round" />
+<path d="M660.4,205.0 L685.6,123.6" fill="none" stroke="#1E2B3A" stroke-width="2.3" stroke-linejoin="round" />
+<path d="M685.6,123.6 L552.9,123.6" fill="none" stroke="#D2552B" stroke-width="2.3" stroke-linejoin="round" />
+<path d="M552.9,123.6 L552.9,205.0" fill="none" stroke="#1E2B3A" stroke-width="2" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<text x="542.1" y="220.4" font-size="13" fill="#B7840A" text-anchor="start" >1</text>
+<text x="660.4" y="220.4" font-size="13" fill="#B7840A" text-anchor="start" >2</text>
+<text x="685.6" y="114.8" font-size="13" fill="#B7840A" text-anchor="start" >3</text>
+<text x="542.1" y="114.8" font-size="13" fill="#B7840A" text-anchor="start" >4</text>
+<text x="610.0" y="280.0" font-size="13" fill="#1E2B3A" text-anchor="middle" >H</text>
+<text x="512.0" y="150.0" font-size="13" fill="#1E2B3A" text-anchor="end" >ln P</text>
+<text x="610.0" y="30.0" font-size="13" fill="#1E2B3A" text-anchor="middle" >ln P–H</text>
+<text x="360.0" y="318.0" font-size="11.5" fill="#55667D" text-anchor="middle" >1→2 evaporation (Q_C)   2→3 compression (W)   3→4 condensation (Q_H)   4→1 throttling (H₄ = H₁)</text>
+</svg>

@@ -3,8 +3,8 @@
   const $ = s => document.querySelector(s);
   const input = $('#gs'), form = input && input.form, out = $('#results'), browse = $('#browse');
   if (!input) return;
-  const CODE = { 'mass-transfer': 'ChE 303', 'question-bank': 'CHE 301', 'unit-ops': 'CHE 311' };
-  const FREE = { 'mass-transfer': '2023-24', 'question-bank': '2023-24', 'unit-ops': '2023-24' };
+  const CODE = { 'mass-transfer': 'ChE 303', 'question-bank': 'CHE 301', 'unit-ops': 'CHE 311', 'thermo': 'ChE 313' };
+  const FREE = { 'mass-transfer': '2023-24', 'question-bank': '2023-24', 'unit-ops': '2023-24', 'thermo': '2023-24' };
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const norm = s => String(s || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/[–—‐-]/g, ' ');
   // A student ID or email is the browser's password manager, never a search.
@@ -14,7 +14,7 @@
   function load() {
     if (idx) return Promise.resolve(idx);
     if (!loading) loading = new Promise(res => {
-      const s = document.createElement('script'); s.src = 'search-index.js?v=20261104';
+      const s = document.createElement('script'); s.src = 'search-index.js?v=20261108';
       s.onload = () => { idx = (window.GV_INDEX || []).map(r => { const topic = (window.GV_TOPICS || [])[r[5]] || ''; return { dir: r[0], id: r[1], label: r[2], title: r[3], text: r[4], topic, type: r[6], practice: !!r[7], paper: r[8], hTitle: norm(r[3]), hAll: norm([r[3], r[4], topic, r[2], CODE[r[0]]].join(' ')) }; }); res(idx); };
       s.onerror = () => res([]);
       document.head.appendChild(s);

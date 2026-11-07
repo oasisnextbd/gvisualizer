@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" width="700" height="300" font-family="Helvetica, Arial, sans-serif">
+<title>Three types of liquid-liquid solubility diagrams (T versus x1)</title>
+<rect width="700" height="300" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<rect x="40" y="40" width="190" height="200" fill="none" stroke="#1E2B3A"/>
+<path d="M51.4,184.4 L53.5,179.0 L55.6,173.7 L57.7,168.6 L59.9,163.6 L62.0,158.7 L64.1,154.0 L66.2,149.4 L68.3,144.9 L70.4,140.6 L72.6,136.5 L74.7,132.4 L76.8,128.5 L78.9,124.8 L81.0,121.2 L83.1,117.7 L85.3,114.4 L87.4,111.2 L89.5,108.1 L91.6,105.2 L93.7,102.4 L95.8,99.8 L98.0,97.3 L100.1,94.9 L102.2,92.7 L104.3,90.6 L106.4,88.7 L108.5,86.9 L110.7,85.2 L112.8,83.7 L114.9,82.3 L117.0,81.0 L119.1,79.9 L121.2,78.9 L123.4,78.1 L125.5,77.4 L127.6,76.9 L129.7,76.4 L131.8,76.2 L133.9,76.0 L136.1,76.0 L138.2,76.2 L140.3,76.4 L142.4,76.9 L144.5,77.4 L146.6,78.1 L148.8,78.9 L150.9,79.9 L153.0,81.0 L155.1,82.3 L157.2,83.7 L159.3,85.2 L161.5,86.9 L163.6,88.7 L165.7,90.6 L167.8,92.7 L169.9,94.9 L172.0,97.3 L174.2,99.8 L176.3,102.4 L178.4,105.2 L180.5,108.1 L182.6,111.2 L184.7,114.4 L186.9,117.7 L189.0,121.2 L191.1,124.8 L193.2,128.5 L195.3,132.4 L197.4,136.5 L199.6,140.6 L201.7,144.9 L203.8,149.4 L205.9,154.0 L208.0,158.7 L210.1,163.6 L212.3,168.6 L214.4,173.7 L216.5,179.0 L218.6,184.4" fill="none" stroke="#D2552B" stroke-width="2.3" stroke-linejoin="round" />
+<text x="135.0" y="68.0" font-size="12" fill="#1E2B3A" text-anchor="middle" >U (UCST)</text>
+<text x="135.0" y="170.0" font-size="12" fill="#55667D" text-anchor="middle" >two liquids</text>
+<text x="135.0" y="54.0" font-size="12" fill="#55667D" text-anchor="middle" >one liquid</text>
+<text x="135.0" y="262.0" font-size="13" fill="#1E2B3A" text-anchor="middle" >x₁</text>
+<text x="34.0" y="140.0" font-size="13" fill="#1E2B3A" text-anchor="end" >T</text>
+<text x="135.0" y="30.0" font-size="13" fill="#1E2B3A" text-anchor="middle" >(a) UCST</text>
+<text x="42.0" y="256.0" font-size="11" fill="#55667D" text-anchor="start" >0</text>
+<text x="228.0" y="256.0" font-size="11" fill="#55667D" text-anchor="end" >1</text>
+<rect x="265" y="40" width="190" height="200" fill="none" stroke="#1E2B3A"/>
+<path d="M276.4,95.6 L278.5,101.0 L280.6,106.3 L282.7,111.4 L284.9,116.4 L287.0,121.3 L289.1,126.0 L291.2,130.6 L293.3,135.1 L295.4,139.4 L297.6,143.5 L299.7,147.6 L301.8,151.5 L303.9,155.2 L306.0,158.8 L308.1,162.3 L310.3,165.6 L312.4,168.8 L314.5,171.9 L316.6,174.8 L318.7,177.6 L320.8,180.2 L323.0,182.7 L325.1,185.1 L327.2,187.3 L329.3,189.4 L331.4,191.3 L333.5,193.1 L335.7,194.8 L337.8,196.3 L339.9,197.7 L342.0,199.0 L344.1,200.1 L346.2,201.1 L348.4,201.9 L350.5,202.6 L352.6,203.1 L354.7,203.6 L356.8,203.8 L358.9,204.0 L361.1,204.0 L363.2,203.8 L365.3,203.6 L367.4,203.1 L369.5,202.6 L371.6,201.9 L373.8,201.1 L375.9,200.1 L378.0,199.0 L380.1,197.7 L382.2,196.3 L384.3,194.8 L386.5,193.1 L388.6,191.3 L390.7,189.4 L392.8,187.3 L394.9,185.1 L397.0,182.7 L399.2,180.2 L401.3,177.6 L403.4,174.8 L405.5,171.9 L407.6,168.8 L409.7,165.6 L411.9,162.3 L414.0,158.8 L416.1,155.2 L418.2,151.5 L420.3,147.6 L422.4,143.5 L424.6,139.4 L426.7,135.1 L428.8,130.6 L430.9,126.0 L433.0,121.3 L435.1,116.4 L437.3,111.4 L439.4,106.3 L441.5,101.0 L443.6,95.6" fill="none" stroke="#0B7C8C" stroke-width="2.3" stroke-linejoin="round" />
+<text x="360.0" y="220.0" font-size="12" fill="#1E2B3A" text-anchor="middle" >L (LCST)</text>
+<text x="360.0" y="116.0" font-size="12" fill="#55667D" text-anchor="middle" >two liquids</text>
+<text x="360.0" y="232.0" font-size="12" fill="#55667D" text-anchor="middle" ></text>
+<text x="360.0" y="262.0" font-size="13" fill="#1E2B3A" text-anchor="middle" >x₁</text>
+<text x="259.0" y="140.0" font-size="13" fill="#1E2B3A" text-anchor="end" >T</text>
+<text x="360.0" y="30.0" font-size="13" fill="#1E2B3A" text-anchor="middle" >(b) LCST</text>
+<text x="267.0" y="256.0" font-size="11" fill="#55667D" text-anchor="start" >0</text>
+<text x="453.0" y="256.0" font-size="11" fill="#55667D" text-anchor="end" >1</text>
+<rect x="490" y="40" width="190" height="200" fill="none" stroke="#1E2B3A"/>
+<path d="M653.4,140.0 L653.3,136.6 L653.0,133.3 L652.5,129.9 L651.9,126.6 L651.0,123.3 L650.0,120.1 L648.8,116.9 L647.4,113.8 L645.8,110.7 L644.1,107.8 L642.2,104.9 L640.1,102.1 L637.9,99.4 L635.5,96.9 L633.0,94.4 L630.4,92.1 L627.6,90.0 L624.8,87.9 L621.8,86.0 L618.7,84.3 L615.5,82.7 L612.2,81.3 L608.9,80.0 L605.4,78.9 L602.0,78.0 L598.5,77.3 L594.9,76.7 L591.3,76.3 L587.7,76.1 L584.1,76.0 L580.5,76.1 L576.9,76.5 L573.3,76.9 L569.8,77.6 L566.3,78.4 L562.8,79.5 L559.5,80.6 L556.1,82.0 L552.9,83.5 L549.8,85.1 L546.7,87.0 L543.8,88.9 L541.0,91.0 L538.3,93.3 L535.7,95.7 L533.3,98.1 L531.0,100.8 L528.8,103.5 L526.8,106.3 L525.0,109.2 L523.4,112.2 L521.9,115.3 L520.6,118.5 L519.5,121.7 L518.5,124.9 L517.8,128.2 L517.2,131.6 L516.8,134.9 L516.6,138.3 L516.6,141.7 L516.8,145.1 L517.2,148.4 L517.8,151.8 L518.5,155.1 L519.5,158.3 L520.6,161.5 L521.9,164.7 L523.4,167.8 L525.0,170.8 L526.8,173.7 L528.8,176.5 L531.0,179.2 L533.3,181.9 L535.7,184.3 L538.3,186.7 L541.0,189.0 L543.8,191.1 L546.7,193.0 L549.8,194.9 L552.9,196.5 L556.1,198.0 L559.5,199.4 L562.8,200.5 L566.3,201.6 L569.8,202.4 L573.3,203.1 L576.9,203.5 L580.5,203.9 L584.1,204.0 L587.7,203.9 L591.3,203.7 L594.9,203.3 L598.5,202.7 L602.0,202.0 L605.4,201.1 L608.9,200.0 L612.2,198.7 L615.5,197.3 L618.7,195.7 L621.8,194.0 L624.8,192.1 L627.6,190.0 L630.4,187.9 L633.0,185.6 L635.5,183.1 L637.9,180.6 L640.1,177.9 L642.2,175.1 L644.1,172.2 L645.8,169.3 L647.4,166.2 L648.8,163.1 L650.0,159.9 L651.0,156.7 L651.9,153.4 L652.5,150.1 L653.0,146.7 L653.3,143.4 L653.4,140.0" fill="none" stroke="#6A4FC9" stroke-width="2.3" stroke-linejoin="round" />
+<text x="585.0" y="68.0" font-size="12" fill="#1E2B3A" text-anchor="middle" >U</text>
+<text x="585.0" y="220.0" font-size="12" fill="#1E2B3A" text-anchor="middle" >L</text>
+<text x="585.0" y="144.0" font-size="12" fill="#55667D" text-anchor="middle" >two liquids</text>
+<text x="585.0" y="262.0" font-size="13" fill="#1E2B3A" text-anchor="middle" >x₁</text>
+<text x="484.0" y="140.0" font-size="13" fill="#1E2B3A" text-anchor="end" >T</text>
+<text x="585.0" y="30.0" font-size="13" fill="#1E2B3A" text-anchor="middle" >(c) closed loop</text>
+<text x="492.0" y="256.0" font-size="11" fill="#55667D" text-anchor="start" >0</text>
+<text x="678.0" y="256.0" font-size="11" fill="#55667D" text-anchor="end" >1</text>
+<text x="350.0" y="290.0" font-size="11.5" fill="#55667D" text-anchor="middle" >Inside each curve the mixture splits into two liquid phases α and β; outside it is one stable liquid.</text>
+</svg>

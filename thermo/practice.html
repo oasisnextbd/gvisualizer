@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ChE 313 Practice</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../question-bank/qb.css?v=20261103">
+<script src="../theme.js?v=20261103"></script>
+<script src="course.js"></script>
+<script src="../question-bank/qb.js?v=20261106"></script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+<style>
+.kind{font-family:var(--f-display);font-weight:600;font-size:15px;margin:20px 0 4px;display:flex;align-items:center;gap:8px}
+.kind small{font-family:var(--f-body);font-weight:400;color:var(--dim);font-size:13px}
+.dot{width:10px;height:10px;border-radius:50%;flex:none}
+.dot.s{background:var(--flow)} .dot.f{background:var(--gold)} .dot.w{background:var(--violet)}
+.tag.slides{background:var(--rep-soft);color:var(--flow)} .tag.potential{background:var(--gold-soft);color:var(--gold-ink)} .tag.book{background:var(--panel-2);color:var(--violet)}
+.ref{font-size:13px;color:var(--dim);margin:-2px 0 6px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <a class="backbtn" href="./" aria-label="Back" title="Back">←</a>
+    <a class="logo" href="../" aria-label="Home: all courses" title="Home"><span class="mark">gv</span><span class="lname">gvisualizer</span></a>
+    <a class="coursechip" href="./">ChE 313</a>
+    <nav class="tabs" aria-label="ChE 313">
+      <a class="navlink" href="./">Past papers</a>
+      <a class="navlink on" href="practice.html">Practice</a>
+      <a class="navlink" href="solutions.html">Solutions</a>
+      <a class="navlink" href="checklist.html">Checklist</a>
+    </nav>
+    <a class="iconbtn hsearch" href="../#search" aria-label="Search all questions" title="Search all questions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></a>
+    <button type="button" class="themebtn" aria-label="Switch theme"></button>
+  </header>
+  <h1>Practice problems</h1>
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Kind"><button type="button" data-k="" class="on">All</button><button type="button" data-k="slides">From the slides</button><button type="button" data-k="book">Textbook problems</button><button type="button" data-k="potential">Potential finals</button></div>
+    <input class="search" id="q" type="search" autocomplete="off" autocorrect="off" spellcheck="false" name="qb-search" data-lpignore="true" data-1p-ignore="true" data-bwignore="true" data-form-type="other" placeholder="Search: Dühring, drying time, power number…" aria-label="Search practice problems">
+    <select id="type" class="search" style="flex:0 1 170px" aria-label="Problem type">
+      <option value="">All types</option><option value="numerical">Numericals</option><option value="derivation">Derivations</option><option value="theory">Theory</option><option value="sketch">Sketches</option>
+    </select>
+  </div>
+  <div class="layout">
+    <nav class="rail" id="rail" aria-label="Topics"></nav>
+    <section id="list" aria-live="polite"><p class="empty">Loading practice problems…</p></section>
+  </div>
+</main>
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const st={sel:null,kind:'',q:'',type:''};
+// Remember filters and scroll for this tab, so coming back from a solution keeps e.g. "theory only".
+const SK='qb-filters:'+location.pathname; let saved={}; try{ saved=JSON.parse(sessionStorage.getItem(SK)||'{}')||{}; }catch(e){}
+for(const k of ['by','q','type','hideOut','kind']) if(k in saved && k in st) st[k]=saved[k];
+st.q=QB.cleanQ(st.q);
+const saveSt=()=>{ try{ const o={scroll:Math.round(scrollY)}; for(const k of ['by','q','type','hideOut','kind']) if(k in st) o[k]=st[k]; o.q=QB.cleanQ(o.q); sessionStorage.setItem(SK,JSON.stringify(o)); }catch(e){} };
+let ts; addEventListener('scroll',()=>{ clearTimeout(ts); ts=setTimeout(saveSt,200); },{passive:true}); addEventListener('pagehide',saveSt);
+const pr=()=>QB.parts.filter(p=>p.practice);
+function filtered(){ const q=st.q.toLowerCase(); return pr().filter(p=>(!st.kind||p.origin===st.kind)&&(!st.type||p.type===st.type)&&(!q||(p.text+' '+p.sub+' '+p.stem+' '+(p.ref||'')).toLowerCase().includes(q))); }
+function rail(list){
+  const cnt=k=>list.filter(p=>p.topic===k).length;
+  $('#rail').innerHTML=`<button type="button" data-t="" class="${!st.sel?'on':''}"><span>All topics</span><span class="n">${list.length}</span></button>`+QB.TOPICS.filter(t=>cnt(t.id)).map(t=>`<button type="button" data-t="${t.id}" class="${st.sel===t.id?'on':''}"><span><span class="ch">${t.ch}</span>${t.name}</span><span class="n">${cnt(t.id)}</span></button>`).join('');
+  $('#rail').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{ st.sel=b.dataset.t||null; history.replaceState(null,'',st.sel?'#'+st.sel:location.pathname); render(); window.scrollTo({top:$('.layout').offsetTop-10}); }));
+}
+function card(p){
+  return `<article class="card" id="c-${p.id}">
+    <div class="meta"><span class="tag id">P${p.q}${p.label||''}</span>${p.marks?`<span class="tag marks">${p.marks} marks</span>`:''}<span class="tag t-${p.type}">${p.type}</span>${p.syllabus==='out'?'<span class="tag out">not in current slides</span>':p.syllabus==='partial'?'<span class="tag partial">partly in slides</span>':''}</div>
+    ${p.sub?`<p class="sub">${QB.md(p.sub).replace(/^<p>|<\/p>$/g,'')}</p>`:''}
+    ${p.ref?`<p class="ref">${QB.md(p.ref).replace(/<\/?p>/g,'')}</p>`:''}
+    <div class="qtext">${p.stem&&p.idx===0?`<div class="stem">${QB.md(p.stem)}</div>`:p.stem?`<div class="stem"><em>Common data in P${p.q}, see solution page.</em></div>`:''}${QB.md(p.text)}</div>
+    <div class="row"><a class="btn" href="solutions.html#${p.id}">Solution →</a></div>
+  </article>`;
+}
+function render(){
+  const list=filtered(); rail(list);
+  document.querySelectorAll('.seg button').forEach(b=>b.classList.toggle('on',b.dataset.k===st.kind));
+  let h='';
+  QB.TOPICS.filter(t=>!st.sel||t.id===st.sel).forEach(t=>{ const ps=list.filter(p=>p.topic===t.id); if(!ps.length) return;
+    const s=ps.filter(p=>p.origin==='slides'), w=ps.filter(p=>p.origin==='book'), f=ps.filter(p=>p.origin!=='slides'&&p.origin!=='book');
+    h+=`<section class="group"><h2>${t.name}</h2><p class="gsub">${ps.length} problem${ps.length>1?'s':''}</p>`;
+    if(s.length) h+=`<div class="kind"><span class="dot s"></span>From the slides</div>`+s.map(card).join('');
+    if(w.length) h+=`<div class="kind"><span class="dot w"></span>Textbook problems</div>`+w.map(card).join('');
+    if(f.length) h+=`<div class="kind"><span class="dot f"></span>Potential finals</div>`+f.map(card).join('');
+    h+='</section>'; });
+  $('#list').innerHTML=h||(pr().length?'<p class="empty">No practice problems match these filters.</p>':'<p class="empty">Practice sets are being added.</p>');
+  QB.typesetLazy($('#list'));
+  saveSt();
+}
+document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{ st.kind=b.dataset.k; render(); }));
+let tq; $('#q').addEventListener('input',e=>{ clearTimeout(tq); tq=setTimeout(()=>{ st.q=QB.cleanQ(e.target.value); render(); },200); });
+QB.guardSearch($('#q'),()=>{ clearTimeout(tq); if(st.q){ st.q=''; render(); } });
+$('#type').addEventListener('change',e=>{ st.type=e.target.value; render(); });
+window.addEventListener('hashchange',()=>{ st.sel=decodeURIComponent(location.hash.slice(1))||null; render(); });
+QB.load(()=>{ st.sel=decodeURIComponent(location.hash.slice(1))||null;
+  const P=pr(); document.querySelectorAll('.seg [data-k]').forEach(b=>b.insertAdjacentHTML('beforeend',` <small>${b.dataset.k?P.filter(p=>p.origin===b.dataset.k).length:P.length}</small>`));
+  if($('#q')) $('#q').value=st.q||''; if($('#type')) $('#type').value=st.type||''; if($('#hideOut')) $('#hideOut').checked=!!st.hideOut;
+  render(); if(saved.scroll) requestAnimationFrame(()=>scrollTo(0,saved.scroll)); });
+})();
+</script>
+<script type="module" src="../shared/community.js?v=20261104"></script>
+</body>
+</html>

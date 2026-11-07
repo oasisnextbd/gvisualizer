@@ -6,6 +6,7 @@ const COURSES = [
   { dir: 'mass-transfer', code: 'ChE 303', config: 'mass-transfer/course.js' },
   { dir: 'question-bank', code: 'CHE 301', config: null },
   { dir: 'unit-ops', code: 'CHE 311', config: 'unit-ops/course.js' },
+  { dir: 'thermo', code: 'ChE 313', config: 'thermo/course.js' },
 ];
 const strip = s => String(s || '')
   .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')            // images
