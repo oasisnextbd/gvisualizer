@@ -462,12 +462,7 @@ $$\boxed{f_i = P_i^{sat}\exp\frac{B_{ii}P_i^{sat} + V_i^l(P - P_i^{sat})}{RT}}$$
           answer: String.raw`f_i^l(P^sat) = φ^sat P^sat with ln φ^sat = B_iiP^sat/RT (virial Z = 1 + BP/RT); compress the incompressible liquid: RT ln(f/f^sat) = V^l(P − P^sat). Together: f_i = P_i^sat exp{[B_iiP_i^sat + V_i^l(P − P_i^sat)]/RT}.` }
       ] },
     { id: "2022-23-Q7", q: 7, section: "B",
-      stem: String.raw``,
-      parts: [
-        { id: "2022-23-Q7", label: "", marks: "35",
-          topic: "solution-applications", sub: "MTBE/dichloromethane at 308.15 K: three-parameter Margules fit, ln γ plots and P-x-y",
-          type: "numerical", syllabus: "in", repeats: [],
-          text: String.raw`(a) VLE data for methyl tert-butyl ether(1)/dichloromethane(2) at 308.15 K are as follows:
+      stem: String.raw`VLE data for methyl tert-butyl ether(1)/dichloromethane(2) at 308.15 K are as follows:
 
 | P/kPa | x₁ | y₁ | P/kPa | x₁ | y₁ |
 |---|---|---|---|---|---|
@@ -485,11 +480,12 @@ Implied by this equation are the expressions:
 
 $$\ln\gamma_1 = x_2^2[A_{12} + 2(A_{21} - A_{12} - C)x_1 + 3Cx_1^2]$$
 
-(a) Find the values of parameters A₁₂, A₂₁ and C that provide the best fit of $G^E/RT$ to the data.
-
-(b) Prepare a plot of ln γ₁, ln γ₂ and $G^E/x_1x_2RT$ vs x₁ showing both the experimental and calculated values.
-
-(c) Prepare a P-x-y diagram.`,
+*(35 marks for the whole question; the paper gives no split between (a), (b) and (c).)*`,
+      parts: [
+        { id: "2022-23-Q7a", label: "(a)", marks: "",
+          topic: "solution-applications", sub: "MTBE/dichloromethane at 308.15 K: three-parameter Margules fit to VLE data",
+          type: "numerical", syllabus: "in", repeats: [],
+          text: String.raw`(a) Find the values of parameters A₁₂, A₂₁ and C that provide the best fit of $G^E/RT$ to the data.`,
           solution: String.raw`**Given:** T = 308.15 K; $P_1^{sat}$ = 49.62 kPa (x₁ = 1), $P_2^{sat}$ = 85.2 kPa (x₁ = 0). This is SVNA Example 12.1-type data (MTBE/DCM, negative deviations).
 
 **Assumptions:** low pressure, so modified Raoult's law holds and $\gamma_i = y_iP/(x_iP_i^{sat})$. The companion expression (by symmetry) is $\ln\gamma_2 = x_1^2[A_{21} + 2(A_{12} - A_{21} - C)x_2 + 3Cx_2^2]$.
@@ -508,11 +504,19 @@ $$\ln\gamma_1 = x_2^2[A_{12} + 2(A_{21} - A_{12} - C)x_1 + 3Cx_1^2]$$
 
    For example, at $x_1$ = 0.332: $\gamma_1 = 0.197 \times 68/(0.332 \times 49.62) = 0.8132$ and $\gamma_2 = 0.803 \times 68/(0.668 \times 85.2) = 0.9594$.
 
-2. **(a) Best fit.** $G^E/x_1x_2RT = A_{21}x_1 + A_{12}x_2 - Cx_1x_2$ is **linear in the three parameters**. Least squares on the seven values of $G^E/x_1x_2RT$ (normal equations with regressors $x_2$, $x_1$, $-x_1x_2$) gives
+2. **Best fit.** $G^E/x_1x_2RT = A_{21}x_1 + A_{12}x_2 - Cx_1x_2$ is **linear in the three parameters**. Least squares on the seven values of $G^E/x_1x_2RT$ (normal equations with regressors $x_2$, $x_1$, $-x_1x_2$) gives
 $$\boxed{A_{12} = -0.351,\quad A_{21} = -0.541,\quad C = 0.154}$$
    $\ln\gamma_1^\infty = A_{12} = -0.351$ and $\ln\gamma_2^\infty = A_{21} = -0.541$. The curve $-0.351x_2 - 0.541x_1 - 0.154x_1x_2$ reproduces the points to within about 0.01. (The fit is sensitive to the dilute-end points: without $x_1$ = 0.058 and 0.953 it gives −0.324, −0.539, 0.223.)
 
-3. **(b) Calculated values:**
+**Result:** $A_{12}$ = −0.351, $A_{21}$ = −0.541, C = 0.154 (negative deviations from Raoult's law).`,
+          answer: String.raw`γᵢ = yᵢP/(xᵢPᵢˢᵃᵗ); least squares on G^E/x₁x₂RT = A₂₁x₁ + A₁₂x₂ − Cx₁x₂ gives A₁₂ = −0.351, A₂₁ = −0.541, C = 0.154.` },
+        { id: "2022-23-Q7b", label: "(b)", marks: "",
+          topic: "solution-applications", sub: "MTBE/dichloromethane: plot ln γ₁, ln γ₂ and GE/x₁x₂RT, data vs Margules",
+          type: "numerical", syllabus: "in", repeats: [],
+          text: String.raw`(b) Prepare a plot of ln γ₁, ln γ₂ and $G^E/x_1x_2RT$ vs x₁ showing both the experimental and calculated values.`,
+          solution: String.raw`**Given:** the fit from (a): $A_{12}$ = −0.351, $A_{21}$ = −0.541, C = 0.154, and the experimental values reduced in (a) step 1.
+
+1. **Calculated values from the fitted equation:**
 
 | $x_1$ | 0.058 | 0.166 | 0.332 | 0.504 | 0.674 | 0.847 | 0.953 |
 |---|---|---|---|---|---|---|---|
@@ -524,7 +528,15 @@ $$\boxed{A_{12} = -0.351,\quad A_{21} = -0.541,\quad C = 0.154}$$
 
    Both ln γ are negative (attraction between the ether oxygen and the acidic H of CH₂Cl₂). Each tends to zero with zero slope as its species becomes pure, as Gibbs–Duhem requires. The largest scatter is in $\ln\gamma_1$ at small $x_1$, where errors in $y_1$ are magnified.
 
-4. **(c) P–x–y from the correlation:**
+**Result:** the three-parameter Margules curves pass through the reduced data; both ln γ are negative and go to zero with zero slope at their pure-species ends.`,
+          answer: String.raw`Calculated ln γ₁, ln γ₂ and G^E/x₁x₂RT follow the data within about 0.01–0.03; both ln γ < 0 (negative deviation).` },
+        { id: "2022-23-Q7c", label: "(c)", marks: "",
+          topic: "solution-applications", sub: "MTBE/dichloromethane at 308.15 K: P-x-y diagram from the Margules fit",
+          type: "numerical", syllabus: "in", repeats: [],
+          text: String.raw`(c) Prepare a P-x-y diagram.`,
+          solution: String.raw`**Given:** the fit from (a) and $P_1^{sat}$ = 49.62 kPa, $P_2^{sat}$ = 85.2 kPa.
+
+1. **P–x–y from the correlation:**
 $$P = x_1\gamma_1P_1^{sat} + x_2\gamma_2P_2^{sat}, \qquad y_1 = \frac{x_1\gamma_1P_1^{sat}}{P}$$
 
 | $x_1$ | 0.058 | 0.166 | 0.332 | 0.504 | 0.674 | 0.847 | 0.953 |
@@ -541,7 +553,7 @@ $$P = x_1\gamma_1P_1^{sat} + x_2\gamma_2P_2^{sat}, \qquad y_1 = \frac{x_1\gamma_
    P falls monotonically from $P_2^{sat}$ to $P_1^{sat}$. The bubble curve sags below the Raoult straight line (negative deviation), and the diagram flattens near pure MTBE ($dP/dx_1 \to$ small as $P \to 49.62$ kPa), but there is no extremum in the range, so no azeotrope.
 
 **Result:** $A_{12}$ = −0.351, $A_{21}$ = −0.541, C = 0.154; the correlation reproduces P within 0.34 kPa and $y_1$ within 0.006.`,
-          answer: String.raw`γᵢ = yᵢP/(xᵢPᵢˢᵃᵗ); least-squares on G^E/x₁x₂RT = A₂₁x₁ + A₁₂x₂ − Cx₁x₂: A₁₂ = −0.351, A₂₁ = −0.541, C = 0.154 (negative deviations). Calculated P within 0.34 kPa (rms 0.17), y₁ within 0.006; no azeotrope.` }
+          answer: String.raw`P = ΣxᵢγᵢPᵢˢᵃᵗ: P falls from 85.2 to 49.62 kPa, below the Raoult line; correlation matches P within 0.34 kPa and y₁ within 0.006.` }
       ] },
     { id: "2022-23-Q8", q: 8, section: "B",
       stem: String.raw``,
