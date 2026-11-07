@@ -302,10 +302,10 @@ const dhaka = s => s ? new Date(s * 1000).toLocaleString('en-GB', { timeZone: 'A
 const labView = { tab: 'pending' };
 async function labs() {
   const t = labView.tab;
-  const sub = [['pending', 'Pending'], ['approved', 'Approved'], ['rejected', 'Rejected'], ['codes', 'Codes'], ['settings', 'Settings']]
+  const sub = [['pending', 'Pending'], ['approved', 'Approved'], ['rejected', 'Rejected'], ['users', 'Lab users'], ['codes', 'Codes'], ['settings', 'Settings']]
     .map(([k, n]) => `<button class="btn ${k === t ? '' : 'ghost'}" data-lt="${k}">${n}</button>`).join('');
   const m = main(`<h1>Lab access</h1>
-    <p class="lede">Students pay with bKash Send Money and submit the TrxID on <a href="${LABS}/pay" target="_blank" rel="noopener">the pay page</a>. Find the TrxID in the bKash app, check amount and sender, then approve. The student sees their code on “Check my request”.</p>
+    <p class="lede">Students sign in to the labs with their gvisualizer account, pay with bKash and submit the TrxID. Find the TrxID in the bKash app, check amount and sender, then approve: the code appears in the student's <b>My account</b>, they activate it once and it stays locked to their account. Team members open the labs without a code.</p>
     <div class="tm-bar">${sub}</div><p class="cm-msg" id="lm"></p><div id="lb"><p class="empty">Loading…</p></div>`);
   m.querySelectorAll('[data-lt]').forEach(b => b.onclick = () => { labView.tab = b.dataset.lt; labs(); });
   const box = m.querySelector('#lb'), msg = h => { m.querySelector('#lm').innerHTML = h; };
@@ -317,9 +317,10 @@ async function labs() {
       box.innerHTML = `<div class="tiles"><div class="tile"><div class="k">Labs</div><div class="v" style="font-size:22px">${c.locked ? '🔒 Locked' : '🌐 Open to all'}</div></div>
         <div class="tile"><div class="k">Payments</div><div class="v" style="font-size:22px">${c.payments ? 'Accepting' : 'Paused'}</div></div>
         <div class="tile"><div class="k">Price</div><div class="v">${c.price ? '৳' + esc(c.price) : '—'}</div></div>
-        <div class="tile"><div class="k">Active codes</div><div class="v">${c.activeCodes}</div></div></div>
+        <div class="tile"><div class="k">Students with access</div><div class="v">${c.activeUsers}</div></div></div>
         <div class="tm-detail"><h3>Lab website settings</h3>${me.isAdmin ? '' : '<p class="cm-dim">Only the owner or an admin can change these.</p>'}
         <label>Price (৳)<input type="text" id="sp" value="${esc(c.price)}" inputmode="numeric" ${ro}></label>
+        <label>Access per code (months)<input type="text" id="sm" value="${esc(c.months)}" inputmode="numeric" ${ro}></label>
         <label>bKash number students send to<input type="text" id="sb" value="${esc(c.bkash)}" inputmode="tel" ${ro}></label>
         <label>Notice on the pay page (optional, e.g. an offer)<input type="text" id="sn" value="${esc(c.notice)}" maxlength="200" ${ro}></label>
         ${sw('sl', c.locked, 'Lock the labs', 'On: only people with a code can open the labs. Off: anyone can open them (free preview).')}
@@ -327,34 +328,43 @@ async function labs() {
         ${me.isAdmin ? '<div class="cm-row"><button class="btn" id="ss">Save settings</button></div>' : ''}
         ${c.by ? `<p class="cm-dim">Last changed by ${esc(c.by)}, ${esc(dhaka(c.at))}</p>` : ''}</div>
         <div class="tm-detail"><h3>Links</h3><p><a href="${LABS}/" target="_blank" rel="noopener">Labs home</a> · <a href="${LABS}/pay" target="_blank" rel="noopener">Pay page</a> · <a href="${LABS}/pay/status" target="_blank" rel="noopener">Check request page</a></p></div>
-        ${me.isOwner ? `<div class="tm-detail"><h3>Log everyone out</h3><p class="cm-dim">Every student must enter their code again (codes keep working). Use it if you think logins were shared.</p><button class="btn ghost" id="lo">Log everyone out</button></div>` : ''}`;
+        ${me.isOwner ? `<div class="tm-detail"><h3>Log everyone out</h3><p class="cm-dim">Every student must sign in to the labs again (their access stays). Use it if you think logins were shared.</p><button class="btn ghost" id="lo">Log everyone out</button></div>` : ''}`;
       const ss = box.querySelector('#ss');
-      if (ss) ss.onclick = () => run(() => labsApi('/settings/save', { price: box.querySelector('#sp').value, bkash: box.querySelector('#sb').value, notice: box.querySelector('#sn').value.trim(), locked: box.querySelector('#sl').checked, payments: box.querySelector('#sy').checked }), () => labs().then(() => msg('Saved. The lab website uses the new settings within a minute.')));
+      if (ss) ss.onclick = () => run(() => labsApi('/settings/save', { months: box.querySelector('#sm').value, price: box.querySelector('#sp').value, bkash: box.querySelector('#sb').value, notice: box.querySelector('#sn').value.trim(), locked: box.querySelector('#sl').checked, payments: box.querySelector('#sy').checked }), () => labs().then(() => msg('Saved. The lab website uses the new settings within a minute.')));
       const lo = box.querySelector('#lo');
       if (lo) lo.onclick = () => { if (confirm('Log every student out of the labs?')) run(() => labsApi('/logout-everyone', {}), () => msg('Everyone is logged out (within a minute).')); };
+    } else if (t === 'users') {
+      const { items } = await labsApi('/users'), nowS = Date.now() / 1000;
+      box.innerHTML = `<div class="tm-detail" style="overflow-x:auto"><table class="tm-t"><thead><tr><th>Account</th><th>Access until</th><th>Devices</th></tr></thead><tbody>
+        ${items.map(u => `<tr><td><b>${esc(u.email || u.uid)}</b></td><td class="${u.until > nowS ? 'st-approved' : 'st-declined'}">${u.until ? esc(dhaka(u.until).split(',')[0]) + (u.until > nowS ? '' : ' (ended)') : 'never had access'}</td><td>${u.devices || 0}/2</td></tr>`).join('') || '<tr><td colspan="3" class="cm-dim">No one has signed in to the labs yet.</td></tr>'}
+        </tbody></table><p class="cm-dim">To stop someone, revoke their code in <b>Codes</b>, or block them in <b>Students</b>.</p></div>`;
     } else if (t === 'codes') {
-      const { items } = await labsApi('/codes');
-      box.innerHTML = (me.isAdmin ? `<div class="tm-detail"><h3>Free access code</h3><div class="tm-bar"><input class="search" id="cn" autocomplete="off" data-lpignore="true" data-1p-ignore="true" placeholder="name"><button class="btn" id="cc">Create code</button></div></div>` : '') +
-        `<div class="tm-detail" style="overflow-x:auto"><table class="tm-t"><thead><tr><th>Name</th><th>Paid with</th><th>Created</th><th>Devices</th><th>Status</th><th></th></tr></thead><tbody>
-        ${items.map(c => `<tr><td><b>${esc(c.name || '—')}</b>${c.free ? ' <span class="tag">free</span>' : ''}<br><span class="cm-dim">by ${esc(c.by || '')}</span></td>
-          <td>${esc(c.phone || '')}<br><span class="cm-dim">${esc(c.trx || '')}</span></td><td class="cm-dim">${esc(dhaka(c.created))}</td><td>${c.devices || 0}/2</td>
-          <td><span class="${c.revoked ? 'st-declined' : 'st-approved'}">${c.revoked ? 'revoked' : 'active'}</span></td>
-          <td>${me.isAdmin ? `<button class="cm-link" data-reset="${c.tag}">Reset devices</button> · ${c.revoked ? `<button class="cm-link" data-on="${c.tag}">Turn on</button>` : `<button class="cm-link" data-off="${c.tag}">Revoke</button>`}` : ''}</td></tr>`).join('') || '<tr><td colspan="6" class="cm-dim">No codes yet.</td></tr>'}
+      const { items } = await labsApi('/codes'), nowS = Date.now() / 1000;
+      box.innerHTML = (me.isAdmin ? `<div class="tm-detail"><h3>Free access code</h3><div class="tm-bar"><input class="search" id="cn" autocomplete="off" data-lpignore="true" data-1p-ignore="true" placeholder="name">
+          <select class="search" id="cmo">${[1, 3, 6, 12].map(n => `<option value="${n}" ${n === 6 ? 'selected' : ''}>${n} month${n > 1 ? 's' : ''}</option>`).join('')}</select><button class="btn" id="cc">Create code</button></div>
+          <p class="cm-dim">Send the code to the person. They activate it once in the labs and it locks to their account.</p></div>` : '') +
+        `<div class="tm-detail" style="overflow-x:auto"><table class="tm-t"><thead><tr><th>Name</th><th>Paid with</th><th>Activated by</th><th>Valid until</th><th>Status</th><th></th></tr></thead><tbody>
+        ${items.map(c => `<tr><td><b>${esc(c.name || '—')}</b>${c.free ? ' <span class="tag">free</span>' : ''}<br><span class="cm-dim">${esc(c.months || 6)} months · by ${esc(c.by || '')}</span></td>
+          <td>${esc(c.phone || '')}<br><span class="cm-dim">${esc(c.trx || '')}</span></td>
+          <td>${c.redeemedBy ? esc(c.redeemedBy) : `<span class="cm-dim">not yet${c.account ? ' (for ' + esc(c.account) + ')' : ''}</span>`}</td>
+          <td class="cm-dim">${c.until ? esc(dhaka(c.until).split(',')[0]) : ''}</td>
+          <td><span class="${c.revoked ? 'st-declined' : c.until && c.until < nowS ? 'st-declined' : 'st-approved'}">${c.revoked ? 'revoked' : c.until && c.until < nowS ? 'ended' : c.redeemedBy ? 'active' : 'unused'}</span></td>
+          <td>${me.isAdmin ? `${c.redeemedBy ? `<button class="cm-link" data-reset="${c.tag}">Reset devices</button> · ` : ''}${c.revoked ? `<button class="cm-link" data-on="${c.tag}">Turn on</button>` : `<button class="cm-link" data-off="${c.tag}">Revoke</button>`}` : ''}</td></tr>`).join('') || '<tr><td colspan="6" class="cm-dim">No codes yet.</td></tr>'}
         </tbody></table></div>`;
       const cc = box.querySelector('#cc');
-      if (cc) cc.onclick = () => run(() => labsApi('/codes/create', { name: box.querySelector('#cn').value.trim() }), j => { labs().then(() => msg(`New code: <b>${esc(j.code)}</b> — copy it now and send it to the person.`)); });
-      box.querySelectorAll('[data-reset]').forEach(b => b.onclick = () => run(() => labsApi('/codes/reset', { tag: b.dataset.reset }), () => labs()));
+      if (cc) cc.onclick = () => run(() => labsApi('/codes/create', { name: box.querySelector('#cn').value.trim(), months: box.querySelector('#cmo').value }), j => { labs().then(() => msg(`New code: <b>${esc(j.code)}</b> — copy it now and send it to the person.`)); });
+      box.querySelectorAll('[data-reset]').forEach(b => b.onclick = () => run(() => labsApi('/codes/reset', { tag: b.dataset.reset }), () => labs().then(() => msg('Devices cleared. The person can add 2 devices again.'))));
       box.querySelectorAll('[data-on]').forEach(b => b.onclick = () => run(() => labsApi('/codes/restore', { tag: b.dataset.on }), () => labs()));
-      box.querySelectorAll('[data-off]').forEach(b => b.onclick = () => { if (confirm('Revoke this code? The person is locked out at once.')) run(() => labsApi('/codes/revoke', { tag: b.dataset.off }), () => labs()); });
+      box.querySelectorAll('[data-off]').forEach(b => b.onclick = () => { if (confirm('Revoke this code? The person loses lab access within a minute.')) run(() => labsApi('/codes/revoke', { tag: b.dataset.off }), () => labs()); });
     } else {
       const { items } = await labsApi('/payments?status=' + t);
       box.innerHTML = `<div class="tm-detail" style="overflow-x:auto"><table class="tm-t"><thead><tr><th>TrxID</th><th>Sender</th><th>৳</th><th>Student</th><th>Submitted</th><th></th></tr></thead><tbody>
         ${items.map(p => `<tr><td><b>${esc(p.trx)}</b></td><td>${esc(p.phone)}</td><td>${esc(p.amount)}</td>
-          <td>${esc(p.name)}${p.sid ? `<br><span class="cm-dim">${esc(p.sid)}</span>` : ''}${p.email ? `<br><span class="cm-dim">${esc(p.email)}</span>` : ''}</td>
+          <td>${esc(p.name)}${p.account ? `<br><span class="cm-dim">${esc(p.account)}</span>` : ''}</td>
           <td class="cm-dim">${esc(dhaka(p.created))}${p.by ? `<br>${t} by ${esc(p.by)}` : ''}</td>
           <td>${t === 'pending' ? `<button class="btn" data-ok="${esc(p.trx)}">Approve</button> <button class="cm-link" data-no="${esc(p.trx)}">Reject</button>` : t === 'rejected' ? `<button class="cm-link" data-ok="${esc(p.trx)}">Approve</button>` : ''}</td></tr>`).join('') || '<tr><td colspan="6" class="cm-dim">Nothing here.</td></tr>'}
         </tbody></table></div>`;
-      box.querySelectorAll('[data-ok]').forEach(b => b.onclick = () => { if (confirm('Approve ' + b.dataset.ok + '? Only if you found this TrxID in bKash with the right amount.')) { b.disabled = true; run(() => labsApi('/payments/approve', { trx: b.dataset.ok }), j => labs().then(() => msg(`Approved. Code <b>${esc(j.code)}</b> — the student sees it on “Check my request”.`))); } });
+      box.querySelectorAll('[data-ok]').forEach(b => b.onclick = () => { if (confirm('Approve ' + b.dataset.ok + '? Only if you found this TrxID in bKash with the right amount.')) { b.disabled = true; run(() => labsApi('/payments/approve', { trx: b.dataset.ok }), j => labs().then(() => msg(`Approved. Code <b>${esc(j.code)}</b> — the student sees it in My account and activates it.`))); } });
       box.querySelectorAll('[data-no]').forEach(b => b.onclick = () => { const note = prompt('Reject ' + b.dataset.no + '? Optional reason shown to the student:', 'TrxID not found in bKash.'); if (note !== null) run(() => labsApi('/payments/reject', { trx: b.dataset.no, note }), () => labs()); });
     }
   } catch (e) { box.innerHTML = `<p class="empty">${esc(e.message)}</p>`; }
