@@ -329,9 +329,19 @@ $$V_{new} = V - \frac{F}{dF/dV}, \qquad \frac{dF}{dV} = -\sum_i\frac{z_i(K_i - 1
 (c) will not affect the equilibrium at all
 (d) None of the above
 
-Interpret your answer.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+Interpret your answer.
+
+*(Exponent transcribed as printed: $\frac{(P_0 - P)}{P_0}\sum_i\gamma_i\nu_i$. The intended SVNA relation is $\prod_i(\gamma_ix_i)^{\nu_i} = K\exp\left[\frac{(P^\circ - P)}{RT}\sum_i\nu_iV_i\right]$.)*`,
+          solution: String.raw`**Answer: (b) – the reaction shifts to the left** (for the usual case where the products occupy more volume than the reactants).
+
+1. **The relation.** For a liquid-phase reaction (SVNA §13.8), the standard state is the pure liquid at $P^\circ$. Correcting each pure-liquid fugacity from $P^\circ$ to P with the Poynting factor ($\ln(f_i/f_i^\circ) = V_i(P - P^\circ)/RT$) gives
+$$\prod_i(x_i\gamma_i)^{\nu_i} = K\exp\left[\frac{(P^\circ - P)}{RT}\sum_i\nu_iV_i\right]$$
+   The printed exponent, $\frac{P_0 - P}{P_0}\sum_i\gamma_i\nu_i$, is a misprint of this: RT in place of $P_0$ and molar volumes $V_i$ in place of $\gamma_i$.
+
+2. **Effect of P.** K depends on T only. The exponent's sign is fixed by $\Delta V = \sum_i\nu_iV_i$. When the products take up more volume ($\Delta V > 0$), raising P makes $(P^\circ - P)\Delta V < 0$. The right-hand side then falls, so $\prod(x_i\gamma_i)^{\nu_i}$ must fall: the products decrease and **the reaction shifts left**, which is Le Chatelier's principle. For an ideal-gas reaction, ν > 0 means more moles and more volume. There $\prod y_i^{\nu_i} = (P/P^\circ)^{-\nu}K$, and the shift to the left is direct.
+
+3. **Interpretation.** For liquids the $V_i$ are small, about 10⁻⁴ m³/mol. Even ΔV = 50 cm³/mol and ΔP = 100 bar give an exponent of only $-50\times10^{-6}(10^7)/(8.314 \times 298) = -0.20$. Pressure therefore has a **minor** effect on liquid-phase equilibria and is usually neglected below a few hundred bar ($\prod(x_i\gamma_i)^{\nu_i} = K$). The decisive quantity is the **volume change** of reaction, not ν itself. With a negative ΔV, raising P would shift the reaction to the right.`,
+          answer: String.raw`(b) Shifts left: Π(xᵢγᵢ)^νᵢ = K exp[(P° − P)ΣνᵢVᵢ/RT] (printed exponent garbled); with ΔV = ΣνᵢVᵢ > 0 (products bulkier, as ν > 0 implies for gases), raising P lowers the right side ⇒ fewer products (Le Chatelier). For liquids the effect is small (ΔV tiny).` },
         { id: "2021-22-Q5ii", label: "(ii)", marks: "5",
           topic: "refrigeration", sub: "Most critical factor for choosing multistage (cascade) refrigeration",
           type: "theory", syllabus: "in", repeats: [],
@@ -343,28 +353,71 @@ Interpret your answer.`,
 (d) Limits on the evaporator
 
 Describe the reasons behind your answer.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`**Answer: (a) Limits of temperature difference** (with the pressure ratio that follows from it).
+
+1. In a single-stage vapour-compression cycle, one refrigerant must evaporate at $T_C$ and condense at $T_H$. The required pressure ratio $P_{sat}(T_H)/P_{sat}(T_C)$ grows roughly exponentially with $T_H - T_C$ (Clausius–Clapeyron).
+
+2. When $T_H - T_C$ is large (deep refrigeration, below about −30 to −40 °C with rejection to ambient):
+   - **No single refrigerant suits both ends.** At $T_C$ its vapour pressure is far below 1 atm (air leaks in, vapour volume is huge), or near $T_H$ it approaches its critical point (little latent heat).
+   - The **compression ratio is very high**, so compressor efficiency and volumetric efficiency fall and the discharge temperature becomes excessive.
+   - **Throttling losses rise sharply**: a large fraction of the liquid flashes, and ω falls well below the Carnot value $T_C/(T_H - T_C)$.
+
+3. **Cascade remedy.** Split $T_H - T_C$ into two or more smaller lifts, each with its own refrigerant (e.g. NH₃ or R-134a in the upper loop, ethane or CO₂ in the lower). The evaporator of the upper loop is the condenser of the lower loop. Each loop then works at a moderate pressure ratio, and the overall ω is much closer to Carnot.
+
+4. The operating-pressure limits (b) and the condenser and evaporator conditions (c, d) all follow from the **overall temperature difference**, which is therefore the critical factor.`,
+          answer: String.raw`(a) Limits of temperature difference: a large T_H − T_C needs a huge pressure ratio, with no single refrigerant suitable at both ends, poor compressor efficiency, high discharge temperature and big throttling losses. A cascade splits the lift between loops with different refrigerants.` },
         { id: "2021-22-Q5iii", label: "(iii)", marks: "",
           topic: "phase-equilibria-topics", sub: "Do phase-stability criteria apply to non-equilibrium states?",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Phase stability criteria are applicable to both equilibrium and non-equilibrium states. True/False (Clarify)`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`**True.**
+
+1. The criteria come from the second law: $dU^t + P\,dV^t - T\,dS^t \le 0$, i.e. $(dG^t)_{T,P} \le 0$. The **inequality** applies to every *irreversible* change of a closed system (a non-equilibrium state moving towards equilibrium). The **equality** holds at equilibrium (Kirtania: "this equation defines both irreversible and equilibrium processes").
+
+2. The stability condition for a binary liquid,
+$$\frac{d^2(\Delta G/RT)}{dx_1^2} > 0 \;\Leftrightarrow\; \frac{d\ln\gamma_1}{dx_1} > -\frac{1}{x_1} \;\Leftrightarrow\; \frac{d\hat f_1}{dx_1} > 0 \qquad (T, P\ \text{const.})$$
+   is a property of the **homogeneous mixture at the given T, P, x**. It can be evaluated for any proposed single-phase state, whether or not that state is the final equilibrium one.
+
+3. **Use for non-equilibrium states:** if a freshly mixed homogeneous liquid (not yet in equilibrium) violates the criterion, $G^t$ can still fall by splitting. The mixture will then separate spontaneously into two liquid phases (LLE). If the criterion is satisfied, the single phase is stable, or at most metastable between the binodal and the spinodal.
+
+4. **Use at equilibrium:** a computed equilibrium state, e.g. from a $G^E$ model, must also meet the criterion. Otherwise it is not physically realisable (an S-shaped P–x curve, or $dy_1/dx_1 < 0$).`,
+          answer: String.raw`True: derived from dUᵗ + PdVᵗ − TdSᵗ ≤ 0 [(dGᵗ)_T,P ≤ 0], which covers irreversible (non-equilibrium) changes and equilibrium alike; d²(ΔG/RT)/dx₁² > 0 tests any homogeneous state — if violated, a (non-equilibrium) mixture splits spontaneously; equilibrium solutions must satisfy it too.` },
         { id: "2021-22-Q5iv", label: "(iv)", marks: "7",
           topic: "reaction-equilibria", sub: "Does a fuel cell gain efficiency at higher temperature?",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`A fuel cell is operating at room temperature. It will achieve higher efficiency if it can be operated at a higher temperature. True/False (Clarify)`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`**False** (thermodynamically). The ideal efficiency of an H₂–O₂ fuel cell **decreases** with temperature.
+
+1. The maximum electrical work is $-\Delta G$ (reversible, constant T and P), so the ideal efficiency is
+$$\eta = \frac{\Delta G}{\Delta H} = 1 - \frac{T\Delta S}{\Delta H}$$
+
+2. For $\mathrm{H_2 + \tfrac12O_2 \to H_2O(g)}$ at 25 °C (Kirtania slides): ΔH = −241 818 J/mol, ΔG = −228 572 J/mol, giving E = 1.184 V and η = 0.945. Here
+$$\Delta S = \frac{\Delta H - \Delta G}{T} = \frac{-241818 + 228572}{298.15} = -44.4\ \mathrm{J\,mol^{-1}\,K^{-1}}$$
+   ΔS < 0 because the moles of gas fall from 1.5 to 1.
+
+3. ΔG = ΔH − TΔS becomes **less negative** as T rises, so η and the reversible voltage $E = -\Delta G/2F$ both fall. With ΔH and ΔS taken as constant, at 60 °C: ΔG = −241 818 + 333.15(44.4) = −227 017 J/mol, η = 0.939 and E = 1.176 V. Also $dE/dT = \Delta S/2F = -0.23$ mV/K.
+
+4. **Practical note.** Real cells often deliver *more* power when hotter: faster electrode kinetics and lower ohmic and activation losses, which is why SOFC and MCFC cells run at 600–1000 °C. That is a rate effect. The thermodynamic maximum still falls with temperature. A fuel cell is not a heat engine, so the Carnot argument ("higher T, higher efficiency") does not apply.`,
+          answer: String.raw`False: η_ideal = ΔG/ΔH = 1 − TΔS/ΔH with ΔS < 0 (−44.4 J/mol K for H₂O(g)), so η falls with T (0.945 at 25 °C → 0.939 at 60 °C; E 1.184 → 1.176 V). Higher T only reduces kinetic/ohmic losses (rate effect); fuel cells are not Carnot-limited.` },
         { id: "2021-22-Q5v", label: "(v)", marks: "6",
           topic: "reaction-equilibria", sub: "Degrees of freedom for NiO(s) + H₂(g) → Ni(s) + H₂O(l)",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Consider this reaction: NiO(s) + H₂(g) → Ni(s) + H₂O(l). How many degrees of freedom available for this case (provide explanation)?
 
 a) 0 b) 1 c) 2 d) 3`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`**Answer: (b) 1.**
+
+1. **Phase rule for reacting systems:** F = 2 − π + N − r − s, with N species, π phases, r independent reactions and s special constraints.
+
+2. **Phases:** NiO(s), Ni(s) and H₂O(l) are separate pure condensed phases. H₂(g) is the gas phase, and some water vapour is present in it in equilibrium with the liquid. So π = 4: two solids, one liquid, one gas.
+
+3. **Species:** NiO, H₂, Ni, H₂O, so N = 4. There is one independent reaction (r = 1) and no special constraints (s = 0).
+$$F = 2 - 4 + 4 - 1 - 0 = 1$$
+
+4. **Meaning:** fixing one variable fixes the intensive state. Choose T: then $P_{sat,H_2O}(T)$ is fixed, the equilibrium constant $K = \hat f_{H_2O}/\hat f_{H_2} \approx y_{H_2O}/y_{H_2}$ fixes the gas composition, and with $y_{H_2O}P = P_{sat}$ the total P is fixed too. This is the same count as the decomposition $\mathrm{CaCO_3(s) \to CaO(s) + CO_2(g)}$ (F = 1).
+
+   If water vapour is not counted separately, the result is the same, because it is the same species H₂O.`,
+          answer: String.raw`(b) 1: N = 4 species, π = 4 phases (NiO(s), Ni(s), H₂O(l), gas H₂ + H₂O vapour), r = 1 ⇒ F = 2 − 4 + 4 − 1 = 1 (fix T and P, y are fixed).` },
         { id: "2021-22-Q5vi", label: "(vi)", marks: "6",
           topic: "phase-equilibria-topics", sub: "Solid–vapour equilibrium: which species is insoluble in the solid",
           type: "theory", syllabus: "in", repeats: [],
@@ -376,8 +429,16 @@ c) both of them are insoluble in the solid
 d) both of them are soluble in the solid
 
 Discuss you answer with an example.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Answer: (b) species 2 is insoluble in the solid** (with the usual SVNA numbering).
+
+1. **The SVE problem** (SVNA §14.7, Kirtania slides): a pure **solid 1** (the solute) is in equilibrium with a binary **vapour** of species 1 and a "solvent" gas 2. Species 2 does not dissolve in the solid, so the solid phase is pure 1.
+
+2. Because species 2 is absent from the solid, **only species 1** has an equilibrium equation:
+$$f_1^s = \hat f_1^v \;\Rightarrow\; y_1 = \frac{P_1^{sat}}{P}\cdot\frac{\phi_1^{sat}}{\hat\phi_1}\exp\frac{V_1^s(P - P_1^{sat})}{RT}$$
+   There is no equation for species 2; it simply fills the rest of the vapour ($y_2 = 1 - y_1$).
+
+3. **Example:** naphthalene (1) in supercritical CO₂ (2), or in ethylene, at 35 °C and up to 300 bar. CO₂ does not enter the solid naphthalene crystal, but naphthalene sublimes into the compressed gas. Its solubility $y_1$ rises by orders of magnitude at high pressure because $\hat\phi_1 \ll 1$. This is the basis of **supercritical-fluid extraction** (caffeine from coffee with CO₂).`,
+          answer: String.raw`(b) Species 2 (the gas "solvent") is insoluble in the solid; the solid is pure 1, so only f₁ˢ = f̂₁ᵛ applies (y₁ = (P₁ˢᵃᵗ/P)(φ₁ˢᵃᵗ/φ̂₁)exp[V₁ˢ(P − P₁ˢᵃᵗ)/RT]). Example: naphthalene in supercritical CO₂ (SCF extraction).` }
       ] },
     { id: "2021-22-Q6", q: 6, section: "B",
       stem: String.raw``,
@@ -386,20 +447,68 @@ Discuss you answer with an example.`,
           topic: "refrigeration", sub: "Claude liquefaction process: principle and fraction liquefied",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Describe the working principle (by deriving the expression for fraction liquefied, z) of Claude process for liquefaction with a neat sketch.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`![Linde and Claude liquefaction schematics: compressor, heat exchanger, throttle, separator, and in Claude an expansion engine](fig/2021-22-Q6a-sketch.svg)
+
+### Working principle (12)
+1. Gas is **compressed** (multistage, with intercooling) and cooled to near ambient by water.
+2. It passes through a **countercurrent heat exchanger**, where it is cooled by the cold unliquefied gas returning from the separator.
+3. **Claude's addition:** part of the high-pressure gas (fraction x of the feed) is withdrawn from the exchanger at an intermediate temperature and **expanded in an engine or turbine**. A nearly isentropic expansion with work output produces a much larger temperature drop than throttling. The cold exhaust joins the returning low-pressure stream and cools the remaining high-pressure gas further.
+4. The rest of the high-pressure gas, now very cold, is **throttled** (H = constant, Joule–Thomson) into a **separator**. A fraction z of the feed leaves as liquid; the saturated vapour returns through the exchanger, is warmed to near ambient, and is recycled to the compressor.
+
+### Derivation of z (5)
+States (SVNA §9.6 numbering):
+- 4: high-pressure gas entering the cold box (compressed, cooled)
+- 15: low-pressure unliquefied gas leaving the exchanger warm
+- 9: saturated liquid product
+- 5: gas sent to the expander
+- 12: expander exhaust
+
+Basis: 1 mol (or kg) of gas entering at 4. Control volume: the heat exchanger, throttle, separator and expander together (the cold box), adiabatic, with no kinetic or potential energy change. Streams out: z of liquid at 9 and (1 − z) of gas at 15. Work leaves through the expander: $W_{out} = x(H_5 - H_{12})$.
+$$H_4 = zH_9 + (1 - z)H_{15} + x(H_5 - H_{12})$$
+$$\boxed{z = x\frac{H_{12} - H_5}{H_9 - H_{15}} + \frac{H_4 - H_{15}}{H_9 - H_{15}}}$$
+- Since $H_{12} < H_5$ and $H_9 < H_{15}$, the expander term is **positive**: the work removed raises the yield.
+- **x = 0** gives the Linde result $z = (H_4 - H_{15})/(H_9 - H_{15})$. The Linde process is the limiting case of the Claude process.
+- To evaluate z, fix the pressures, the inlet temperature, the expander efficiency and the approach temperature at the warm end. Read $H_4$, $H_9$, $H_{15}$ and $H_5$ from tables or a chart. Find $H_{12}$ from the expander efficiency, $H_5 - H_{12} = \eta(H_5 - H_{12}')$ with $S_{12}' = S_5$. An energy balance on the exchanger sections then sets x and z.`,
+          answer: String.raw`Compress and cool → countercurrent HX → fraction x expanded in an engine/turbine (near-isentropic, work out) to give extra cooling → remainder throttled into separator, liquid z drawn off, cold vapour recycled through HX. Energy balance on the cold box: H₄ = zH₉ + (1 − z)H₁₅ + x(H₅ − H₁₂) ⇒ z = x(H₁₂ − H₅)/(H₉ − H₁₅) + (H₄ − H₁₅)/(H₉ − H₁₅); x = 0 gives Linde.` },
         { id: "2021-22-Q6b", label: "(b)", marks: "10+3=13",
           topic: "refrigeration", sub: "Absorption refrigeration: sketch, working principle, example",
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`Draw a neat sketch of the absorption refrigeration process and describe its working principle. State an example of an absorption refrigeration process.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`![Absorption refrigeration cycle: generator, condenser, expansion valve, evaporator, absorber and solution pump](fig/2021-22-Q6b-sketch.svg)
+
+### Working principle (10)
+In an absorption refrigerator the compressor is replaced by an **absorber–pump–generator** loop. Heat, rather than shaft work, lifts the refrigerant from evaporator pressure to condenser pressure.
+1. **Evaporator (low P):** liquid refrigerant (NH₃) evaporates at $T_C$, taking heat $Q_C$ from the cold space.
+2. **Absorber (low P):** the vapour is absorbed into a weak NH₃–water solution. The absorption is exothermic, and the heat is removed by cooling water at $T_S$.
+3. **Pump:** the strong solution is pumped to high pressure. Pumping a liquid takes very little work ($\int V\,dP$ is small).
+4. **Generator (high P):** heat $Q_H$ from a source at $T_H$ (steam, waste heat, flue gas, solar) boils NH₃ out of the solution. A rectifier removes the water vapour. The hot weak solution returns to the absorber through a valve, usually via a solution heat exchanger.
+5. **Condenser (high P):** NH₃ condenses, rejecting heat at $T_S$.
+6. **Expansion valve:** the liquid NH₃ is throttled back to evaporator pressure.
+
+**Thermodynamic limit** (SVNA §9.4): the best performance is a Carnot engine between $T_H$ and $T_S$ driving a Carnot refrigerator between $T_C$ and $T_S$:
+$$\frac{Q_H}{Q_C} = \frac{T_H}{T_H - T_S}\cdot\frac{T_S - T_C}{T_C}$$
+For example, with $T_H$ = 373 K, $T_S$ = 303 K and $T_C$ = 263 K, $Q_H/Q_C$ = 0.81. Real units have $Q_C/Q_H$ ≈ 0.5–0.7.
+
+### Examples (3)
+- **Ammonia–water** absorption refrigeration in cold storage and ice plants, and gas-fired domestic refrigerators (Electrolux / Platen–Munters, which use H₂ as a pressure-equalising gas and need no pump).
+- **Water–lithium bromide** absorption chillers for building air conditioning, driven by steam or waste heat (water is the refrigerant, $T_C$ > 0 °C).`,
+          answer: String.raw`Absorber + pump + generator replace the compressor: refrigerant (NH₃) evaporates at T_C, is absorbed in weak solution (heat to cooling water), pumped to high P, driven out of the strong solution by heat Q_H in the generator, condensed, throttled; (Q_H/Q_C)min = [T_H/(T_H − T_S)][(T_S − T_C)/T_C]. Examples: NH₃–H₂O cold storage/Electrolux fridge; LiBr–H₂O chillers.` },
         { id: "2021-22-Q6c", label: "(c)", marks: "5",
           topic: "reaction-equilibria", sub: "Gibbs-energy minimisation versus equilibrium-constant method",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`What are the advantages or, disadvantages of determining equilibrium composition for reactions using Gibb's free energy minimization against equilibrium constant-based calculation?`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`| | Gibbs-energy minimisation (Lagrange multipliers) | Equilibrium-constant method |
+|---|---|---|
+| Set-up | One equation per **species**, $\Delta G^\circ_{f_i} + RT\ln(y_i\hat\phi_iP/P^\circ) + \sum_k\lambda_ka_{ik} = 0$, plus one atom balance per element | Choose a set of **independent reactions**, write $K_j = \prod_i(\hat f_i/f_i^\circ)^{\nu_{ij}}$ in terms of the extents $\varepsilon_j$ |
+| Reactions | **Not needed**: no need to identify independent reactions or their stoichiometry | Must find the r independent reactions (phase rule / Denbigh method) |
+| Data | Only $\Delta G^\circ_f$ of each species at T and the element balances | $\Delta G^\circ$ (hence K) of each reaction |
+| Many species | Systematic and well suited to computers (complex gasification, combustion and refinery systems) | Becomes awkward: many coupled nonlinear equations in ε's, with sign problems for small extents |
+| Phases | Naturally handles multiple phases and solids (a species absent from a phase is simply dropped) | Each phase needs its own treatment |
+
+**Advantages of minimisation:** general and systematic; no reaction set needed; the λₖ (element potentials) are found as by-products; it is directly the criterion $(dG^t)_{T,P} = 0$.
+
+**Disadvantages:** many unknowns (N species + w elements); it needs iterative numerical solution and good initial estimates, so it is not suited to hand calculation. It gives only the composition, with no insight into which reaction dominates. Every possible species must be listed: a missing species gives a wrong answer. For one or two reactions the K method is simpler, quicker and easier to interpret, e.g. for seeing pressure and temperature effects through ν and ΔH°.`,
+          answer: String.raw`Minimisation: no need to choose independent reactions, only ΔG°f and atom balances, systematic for many species/phases, gives λₖ; but many unknowns, needs iterative numerical solution and good initial guesses and a complete species list. K-method: simple and insightful for few reactions, but requires identifying independent reactions and becomes unwieldy for complex systems.` }
       ] },
     { id: "2021-22-Q7", q: 7, section: "B",
       stem: String.raw``,
@@ -408,16 +517,50 @@ Discuss you answer with an example.`,
           topic: "reaction-equilibria", sub: "Effect of temperature on the equilibrium constant: consolidated expression",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`What is the effect of temperature on the equilibrium constant? Derive the consolidated expression and interpret different types of temperature effect on equilibrium constant.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`### Effect (summary)
+K depends on T only. Its variation is governed by the **standard heat of reaction**: K increases with T for an endothermic reaction (ΔH° > 0) and decreases for an exothermic one (ΔH° < 0).
+
+### Derivation
+1. **Definition:** $\ln K = -\Delta G^\circ/RT$, with $\Delta G^\circ = \sum_i\nu_iG_i^\circ$ at the standard pressure $P^\circ$, a function of T only.
+
+2. **Gibbs–Helmholtz relation** for each species, $d(G_i^\circ/RT)/dT = -H_i^\circ/RT^2$. Summing with the $\nu_i$:
+$$\frac{d(\Delta G^\circ/RT)}{dT} = -\frac{\Delta H^\circ}{RT^2} \;\Rightarrow\; \boxed{\frac{d\ln K}{dT} = \frac{\Delta H^\circ}{RT^2}}\qquad\text{(van 't Hoff)}$$
+
+3. **Constant ΔH° (approximate):** integrate from $T_0$ = 298.15 K:
+$$\ln\frac{K}{K_0} = -\frac{\Delta H^\circ}{R}\left(\frac1T - \frac{1}{T_0}\right)$$
+   so ln K is linear in 1/T.
+
+4. **Rigorous (consolidated) form.** With $\Delta H^\circ = \Delta H_0^\circ + R\int_{T_0}^T(\Delta C_P^\circ/R)\,dT$ and $\Delta S^\circ = \Delta S_0^\circ + R\int_{T_0}^T(\Delta C_P^\circ/R)\,dT/T$, $\Delta S_0^\circ = (\Delta H_0^\circ - \Delta G_0^\circ)/T_0$ and $\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$:
+$$\frac{\Delta G^\circ}{RT} = \frac{\Delta G_0^\circ - \Delta H_0^\circ}{RT_0} + \frac{\Delta H_0^\circ}{RT} + \frac1T\int_{T_0}^T\frac{\Delta C_P^\circ}{R}dT - \int_{T_0}^T\frac{\Delta C_P^\circ}{R}\frac{dT}{T}$$
+$$\boxed{K = K_0K_1K_2}$$
+$$K_0 = \exp\frac{-\Delta G_0^\circ}{RT_0}, \qquad K_1 = \exp\left[\frac{\Delta H_0^\circ}{RT_0}\left(1 - \frac{T_0}{T}\right)\right], \qquad K_2 = \exp\left(-\frac1T\int_{T_0}^T\frac{\Delta C_P^\circ}{R}dT + \int_{T_0}^T\frac{\Delta C_P^\circ}{R}\frac{dT}{T}\right)$$
+   With $\Delta C_P^\circ/R = \Delta A + \Delta B\,T + \Delta C\,T^2 + \Delta D\,T^{-2}$ the integrals are the SVNA functions IDCPH and IDCPS.
+
+### Interpretation of the types of T-effect
+- **$K_0$:** K at the reference $T_0$ from $\Delta G^\circ_f$ data. It sets the magnitude but no T-dependence.
+- **$K_1$:** the dominant term. Its exponent $(\Delta H_0^\circ/RT_0)(1 - T_0/T)$ is large because $|\Delta H_0^\circ| \gg RT_0$.
+  - **Exothermic** (ΔH° < 0, e.g. NH₃ and methanol synthesis, water-gas shift): K falls as T rises, so conversion falls. Kinetics needs high T, so a compromise temperature and catalyst are chosen.
+  - **Endothermic** (ΔH° > 0, e.g. steam reforming, dehydrogenation, C + CO₂ → 2CO): K rises with T, so high T is favoured.
+  - **ΔH° ≈ 0:** K nearly independent of T.
+- **$K_2$:** a small correction (near 1) from $\Delta C_P^\circ$. It matters only over wide temperature ranges and can change the curvature of ln K against 1/T.
+- On a plot of ln K against 1/T (SVNA Fig. 13.2), the lines are nearly straight with slope $-\Delta H^\circ/R$. K = 1 (ΔG° = 0) marks the temperature at which a reaction changes from unfavourable to favourable.`,
+          answer: String.raw`d ln K/dT = ΔH°/RT² (van 't Hoff); consolidated: K = K₀K₁K₂ with K₀ = exp(−ΔG°₀/RT₀), K₁ = exp[(ΔH°₀/RT₀)(1 − T₀/T)] (dominant), K₂ = ΔC°_P correction (~1). Endothermic: K rises with T; exothermic: K falls; ΔH° ≈ 0: K ~ constant; ln K vs 1/T nearly linear with slope −ΔH°/R.` },
         { id: "2021-22-Q7b", label: "(b)", marks: "6+2=8",
           topic: "phase-equilibria-topics", sub: "Solid–vapour equilibrium at high pressure and the Poynting factor",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`The general equation of Solid/Vapor eq. is: $y_1 = \dfrac{P_1^{sat}}{P}\dfrac{\phi_1^{sat}}{\hat\phi_1}\exp\left(\dfrac{V_1^s(P - P_1^{sat})}{RT}\right)$.
 
 Simplify the equation for high pressure applications and explain the effect of pointing factor for a solid -vapor equilibrium condition.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`### Simplification for high pressure (6)
+For the solid solute (1) at moderate to high pressure:
+1. $P_1^{sat}$ of a solid is very small, so its saturated vapour is ideal: $\phi_1^{sat} = 1$.
+2. The solid is incompressible and $P \gg P_1^{sat}$, so $P - P_1^{sat} \approx P$.
+$$\boxed{y_1 = \frac{P_1^{sat}}{P}\,\frac{1}{\hat\phi_1}\exp\frac{V_1^sP}{RT} = \frac{P_1^{sat}}{P}F_1, \qquad F_1 \equiv \frac{1}{\hat\phi_1}\exp\frac{V_1^sP}{RT}}$$
+   $F_1$ is the **enhancement factor** ($F_1 \to 1$ at low P, giving the ideal solubility $y_1^{id} = P_1^{sat}/P$). $\hat\phi_1$ in the compressed gas comes from an EOS (SRK, PR) with the mixing rules.
+
+### Effect of the Poynting factor (2)
+$\exp(V_1^sP/RT)$ always **increases** the solubility, but only modestly. For naphthalene ($V^s$ ≈ 125 cm³/mol) at 35 °C it is about 1.6 at 100 bar and 4 at 300 bar. The much larger effect, factors of $10^3$–$10^4$ near the solvent's critical point, comes from $1/\hat\phi_1$, because $\hat\phi_1 \ll 1$ for a heavy solute in a dense supercritical gas. So $y_1$ first falls as $P_1^{sat}/P$, then rises steeply near the critical pressure of the solvent (supercritical-fluid extraction). The Poynting factor alone cannot explain this rise.`,
+          answer: String.raw`High P: φ₁ˢᵃᵗ ≈ 1, P − P₁ˢᵃᵗ ≈ P ⇒ y₁ = (P₁ˢᵃᵗ/P)·(1/φ̂₁)exp(V₁ˢP/RT) = (P₁ˢᵃᵗ/P)F₁ (enhancement factor). Poynting factor raises solubility modestly (~1.6 at 100 bar for naphthalene); the large enhancement comes from φ̂₁ ≪ 1 in the dense gas.` },
         { id: "2021-22-Q7c", label: "(c)", marks: "12",
           topic: "reaction-equilibria", sub: "Three simultaneous reactions (H₂O, CO, CO₂ formation): K₁–K₃ in terms of extents",
           type: "derivation", syllabus: "in", repeats: [],
@@ -428,8 +571,32 @@ $$C + \tfrac12O_2 \leftrightarrow CO \qquad (2)$$
 $$C + O_2 \leftrightarrow CO_2 \qquad (3)$$
 
 Initially, there were 1 molecular H₂O, 0.5 mol O₂ and 1.68 mol N₂ present in the system. Derive the expressions for the equilibrium constants ($K_1$, $K_2$ and $K_3$) of reactions assuming $\varepsilon_1$, $\varepsilon_2$, $\varepsilon_3$ as the extent of reactions, respectively.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Given:** reactions (1) H₂ + ½O₂ ⇌ H₂O, (2) C + ½O₂ ⇌ CO, (3) C + O₂ ⇌ CO₂; initial 1 mol H₂O, 0.5 mol O₂, 1.68 mol N₂ (inert), and carbon present in excess.
+
+**Assumptions:** carbon is a pure solid (graphite), so its activity is 1 and it does not enter the gas mole fractions. The gas phase is ideal at pressure P, with $P^\circ$ = 1 bar. Extents $\varepsilon_1, \varepsilon_2, \varepsilon_3$. Reaction 1 runs backwards (H₂O decomposes), so $\varepsilon_1 < 0$.
+
+1. **Gas-phase amounts** ($n_i = n_{i0} + \sum_j\nu_{ij}\varepsilon_j$):
+
+| Species | $n_i$ |
+|---|---|
+| H₂ | $-\varepsilon_1$ |
+| O₂ | $0.5 - \tfrac12\varepsilon_1 - \tfrac12\varepsilon_2 - \varepsilon_3$ |
+| H₂O | $1 + \varepsilon_1$ |
+| CO | $\varepsilon_2$ |
+| CO₂ | $\varepsilon_3$ |
+| N₂ | 1.68 |
+| **Total** | $n = 3.18 - \tfrac12\varepsilon_1 + \tfrac12\varepsilon_2$ |
+
+   Gas-phase $\nu_j$: reaction 1: 1 − 1 − ½ = −½; reaction 2: 1 − ½ = +½ (C is solid); reaction 3: 1 − 1 = 0.
+
+2. **Equilibrium relations.** For ideal gases and a pure solid, $\prod_i(y_iP/P^\circ)^{\nu_i} = K$, with C omitted (activity 1). Writing $y_i = n_i/n$:
+$$K_1 = \frac{y_{H_2O}}{y_{H_2}\,y_{O_2}^{1/2}}\left(\frac{P}{P^\circ}\right)^{-1/2} = \frac{(1 + \varepsilon_1)\,(3.18 - \tfrac12\varepsilon_1 + \tfrac12\varepsilon_2)^{1/2}}{(-\varepsilon_1)\,(0.5 - \tfrac12\varepsilon_1 - \tfrac12\varepsilon_2 - \varepsilon_3)^{1/2}}\left(\frac{P}{P^\circ}\right)^{-1/2}$$
+$$K_2 = \frac{y_{CO}}{y_{O_2}^{1/2}}\left(\frac{P}{P^\circ}\right)^{1/2} = \frac{\varepsilon_2}{(0.5 - \tfrac12\varepsilon_1 - \tfrac12\varepsilon_2 - \varepsilon_3)^{1/2}\,(3.18 - \tfrac12\varepsilon_1 + \tfrac12\varepsilon_2)^{1/2}}\left(\frac{P}{P^\circ}\right)^{1/2}$$
+$$K_3 = \frac{y_{CO_2}}{y_{O_2}} = \frac{\varepsilon_3}{0.5 - \tfrac12\varepsilon_1 - \tfrac12\varepsilon_2 - \varepsilon_3}$$
+
+3. **Use.** $K_j = \exp(-\Delta G_j^\circ/RT)$ with $\Delta G_1^\circ = \Delta G^\circ_{f,H_2O}$, $\Delta G_2^\circ = \Delta G^\circ_{f,CO}$ and $\Delta G_3^\circ = \Delta G^\circ_{f,CO_2}$ (elements have $\Delta G_f^\circ$ = 0). The three equations are solved simultaneously for $\varepsilon_1, \varepsilon_2, \varepsilon_3$.
+   At gasifier temperatures all three K's are huge, so O₂ is almost completely consumed: $y_{O_2} \to 0$. It is then better to eliminate O₂ by combining the reactions ($\mathrm{C + H_2O \rightleftharpoons CO + H_2}$, $K_a = K_2/K_1$; $\mathrm{C + CO_2 \rightleftharpoons 2CO}$, $K_b = K_2^2/K_3$), as in SVNA Example 13.13.`,
+          answer: String.raw`n: H₂ = −ε₁, O₂ = 0.5 − ½ε₁ − ½ε₂ − ε₃, H₂O = 1 + ε₁, CO = ε₂, CO₂ = ε₃, N₂ = 1.68, n = 3.18 − ½ε₁ + ½ε₂ (C(s) activity 1). K₁ = y_H₂O/(y_H₂ y_O₂^½)(P/P°)^−½, K₂ = y_CO/y_O₂^½ (P/P°)^½, K₃ = y_CO₂/y_O₂, each written with yᵢ = nᵢ/n as above.` }
       ] },
     { id: "2021-22-Q8", q: 8, section: "B",
       stem: String.raw``,
@@ -438,20 +605,71 @@ Initially, there were 1 molecular H₂O, 0.5 mol O₂ and 1.68 mol N₂ present 
           topic: "phase-equilibria-topics", sub: "Three stability criteria for a binary liquid in VLE; ideal-gas simplification and azeotrope",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Derive the three criteria of stability for as system of binary liquid mixture in equilibrium with vapor phase. If the pressure is low enough for the system to consider as ideal gas, make necessary simplifications and interpret what happens if the mixture reaches azeotrope.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`**Assumptions:** binary liquid at constant T and P in equilibrium with its vapour.
+
+1. **Stability of the liquid.** From $(dG^t)_{T,P} \le 0$, a homogeneous liquid is stable only if its Gibbs energy of mixing is convex in composition:
+$$\frac{d^2(\Delta G/RT)}{dx_1^2} > 0, \qquad \frac{\Delta G}{RT} = x_1\ln x_1 + x_2\ln x_2 + \frac{G^E}{RT}$$
+
+2. **Criterion 1 (activity coefficient).** With $d^2(G^E/RT)/dx_1^2 = (1/x_2)\,d\ln\gamma_1/dx_1$ (Gibbs–Duhem):
+$$\frac{1}{x_1x_2} + \frac{1}{x_2}\frac{d\ln\gamma_1}{dx_1} > 0 \;\Rightarrow\; \boxed{\frac{d\ln\gamma_1}{dx_1} > -\frac{1}{x_1}}$$
+
+3. **Criterion 2 (fugacity).** $\hat f_1 = x_1\gamma_1f_1$, so $\dfrac{d\ln\hat f_1}{dx_1} = \dfrac{1}{x_1} + \dfrac{d\ln\gamma_1}{dx_1} > 0 \Rightarrow \boxed{\dfrac{d\hat f_1}{dx_1} > 0}$ (and $d\hat f_2/dx_1 < 0$).
+
+4. **Criterion 3 (chemical potential).** $\mu_1 = \Gamma_1(T) + RT\ln\hat f_1$, so $\boxed{d\mu_1/dx_1 > 0}$.
+
+5. **Ideal-gas vapour (low P).** $\hat f_i^l = \hat f_i^v = y_iP$. Then
+$$\frac{d\ln\hat f_1}{dx_1} = \frac{1}{y_1}\frac{dy_1}{dx_1} + \frac{d\ln P}{dx_1} > 0, \qquad \frac{d\ln\hat f_2}{dx_1} = -\frac{1}{y_2}\frac{dy_1}{dx_1} + \frac{d\ln P}{dx_1} < 0$$
+   Subtracting the second from the first:
+$$\frac{1}{y_1y_2}\frac{dy_1}{dx_1} > 0 \;\Rightarrow\; \boxed{\frac{dy_1}{dx_1} > 0}$$
+   Gibbs–Duhem for the liquid, $x_1\,d\ln\hat f_1 + x_2\,d\ln\hat f_2 = 0$ at constant T (pressure effect on the liquid neglected), gives
+$$\frac{1}{P}\frac{dP}{dx_1} = \frac{y_1 - x_1}{y_1y_2}\,\frac{dy_1}{dx_1}$$
+
+6. **At an azeotrope** ($y_1 = x_1$): $dP/dx_1 = 0$, so the P–x curve (and the P–y curve) has an **extremum**. It is a maximum for positive deviations and a minimum for negative ones, and the bubble and dew curves are tangent there. Since $dy_1/dx_1 > 0$ everywhere, the y–x curve crosses the diagonal there and nowhere else. P rises with $x_1$ where $y_1 > x_1$ and falls where $y_1 < x_1$. A model giving $dy_1/dx_1 < 0$ (or an S-shaped P–x curve) violates stability: the liquid would split into two phases (VLLE).`,
+          answer: String.raw`Stability: d²(ΔG/RT)/dx₁² > 0 ⇒ (1) d ln γ₁/dx₁ > −1/x₁, (2) df̂₁/dx₁ > 0, (3) dμ₁/dx₁ > 0. Ideal-gas vapour (f̂ᵢ = yᵢP): dy₁/dx₁ > 0 and (1/P)dP/dx₁ = (y₁ − x₁)/(y₁y₂)·dy₁/dx₁; at an azeotrope y₁ = x₁ ⇒ dP/dx₁ = 0 (P extremum, max for positive, min for negative deviations).` },
         { id: "2021-22-Q8b", label: "(b)", marks: "6+2=8",
           topic: "reaction-equilibria", sub: "Gas-phase reaction equilibrium under ideal conditions: Πyᵢ^νᵢ = (P/P°)^−ν K",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Derive the equation for gas phase reactions understand ideal conditions $\left(\prod_i(y_i)^{\nu_i} = \left(\dfrac{P}{P_0}\right)^{-\nu}K\right)$. State all the necessary assumptions during thee derivation.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`1. **Equilibrium criterion.** For a single reaction at constant T and P, minimising $G^t$ with $dn_i = \nu_i\,d\varepsilon$ gives $\sum_i\nu_i\mu_i = 0$.
+
+2. **Chemical potential** relative to the standard state (pure ideal gas at $P^\circ$ and T): $\mu_i = G_i^\circ + RT\ln(\hat f_i/f_i^\circ)$ with $f_i^\circ = P^\circ$. Substituting:
+$$\sum_i\nu_iG_i^\circ + RT\sum_i\nu_i\ln\frac{\hat f_i}{P^\circ} = 0 \;\Rightarrow\; \prod_i\left(\frac{\hat f_i}{P^\circ}\right)^{\nu_i} = \exp\frac{-\Delta G^\circ}{RT} \equiv K$$
+
+3. **Gas phase:** $\hat f_i = y_i\hat\phi_iP$, so
+$$\prod_i(y_i\hat\phi_i)^{\nu_i} = \left(\frac{P}{P^\circ}\right)^{-\nu}K, \qquad \nu = \sum_i\nu_i$$
+
+4. **Ideal conditions:** the mixture is an ideal gas, so $\hat\phi_i$ = 1:
+$$\boxed{\prod_i y_i^{\nu_i} = \left(\frac{P}{P^\circ}\right)^{-\nu}K}$$
+
+**Assumptions:**
+1. Closed system at uniform, constant T and P; a single reaction (or each independent reaction separately).
+2. Standard state for each species: the pure ideal gas at $P^\circ$ (1 bar) and the system T. K is therefore a function of T only.
+3. The equilibrium mixture is an **ideal gas**: low pressure or high temperature, $\hat\phi_i = 1$ (no Lewis–Randall or virial correction).
+4. All species are in the gas phase (no condensed phases).
+5. Equilibrium is reached ($dG^t = 0$): kinetics are not considered.`,
+          answer: String.raw`Σνᵢμᵢ = 0 with μᵢ = Gᵢ° + RT ln(f̂ᵢ/P°) ⇒ Π(f̂ᵢ/P°)^νᵢ = K = exp(−ΔG°/RT); f̂ᵢ = yᵢφ̂ᵢP ⇒ Π(yᵢφ̂ᵢ)^νᵢ = (P/P°)^−ν K; ideal gas φ̂ᵢ = 1 ⇒ Πyᵢ^νᵢ = (P/P°)^−ν K. Assumptions: const T, P; standard state ideal gas at P° (K = f(T)); ideal-gas mixture; all species gaseous; equilibrium attained.` },
         { id: "2021-22-Q8c", label: "(c)", marks: "13",
           topic: "refrigeration", sub: "Heat pump with 0.75 kW/K house loss and 1.5 kW motor: limiting outside temperatures",
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`A heat pump is used to heat a house in the winter and to cool it in the summer. During the winter, the outside air serves as a low-temperature heat source; during the summer, it acts as a high-temperature heat sink. The heat-transfer rate through the walls and roof of the house is 0.75 KW for each kelvin of temperature difference between the inside and outside of the house, summer and winter. The heat-pump motor is rated at 1.5 KW. Determine the minimum outside temperature for which the house can be maintained at 293.15 K (20°C) during the winter and the maximum outside temperature for which the house can be maintained at 298.15 K (25°C) during the summer.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Given:** house loss 0.75 kW per K of (inside − outside) temperature difference; motor power W = 1.5 kW; house kept at 293.15 K in winter and 298.15 K in summer.
+
+**Find:** the minimum outside temperature in winter; the maximum outside temperature in summer.
+
+**Assumptions:** the heat pump works as a **Carnot** cycle between the house and the outside air (the limiting case; heat-exchange temperature differences neglected). Steady state: the heat pumped equals the heat leak.
+
+1. **Winter (heating).** Heat delivered to the house: $|Q_H| = 0.75(T_H - T_C)$ with $T_H$ = 293.15 K and $T_C$ = outside air. Carnot: $W = |Q_H|(T_H - T_C)/T_H$, so
+$$1.5 = \frac{0.75(T_H - T_C)^2}{293.15} \;\Rightarrow\; (T_H - T_C)^2 = 586.3 \;\Rightarrow\; T_H - T_C = 24.21\ \mathrm K$$
+$$\boxed{T_{C,min} = 293.15 - 24.21 = 268.94\ \mathrm K\ (-4.2\ °\mathrm C)}$$
+   Check: $Q_H$ = 0.75(24.21) = 18.16 kW and W = 18.16(24.21/293.15) = 1.50 kW ✓.
+
+2. **Summer (cooling).** Heat removed from the house: $|Q_C| = 0.75(T_H - T_C)$ with $T_C$ = 298.15 K and $T_H$ = outside air. Carnot: $W = |Q_C|(T_H - T_C)/T_C$, so
+$$1.5 = \frac{0.75(T_H - T_C)^2}{298.15} \;\Rightarrow\; (T_H - T_C)^2 = 596.3 \;\Rightarrow\; T_H - T_C = 24.42\ \mathrm K$$
+$$\boxed{T_{H,max} = 298.15 + 24.42 = 322.57\ \mathrm K\ (49.4\ °\mathrm C)}$$
+   Check: $Q_C$ = 18.31 kW, ω = 298.15/24.42 = 12.2, W = 1.50 kW ✓.
+
+**Result:** the house can be held at 20 °C down to an outside temperature of 268.9 K (−4.2 °C) in winter, and at 25 °C up to 322.6 K (49.4 °C) in summer. A real heat pump, with finite ΔT in its exchangers and an efficiency below Carnot, would manage a narrower range.`,
+          answer: String.raw`Carnot, W = 0.75ΔT²/T_house = 1.5 kW ⇒ winter ΔT = √(2 × 293.15) = 24.21 K ⇒ T_min = 268.94 K (−4.2 °C); summer ΔT = √(2 × 298.15) = 24.42 K ⇒ T_max = 322.57 K (49.4 °C).` }
       ] }
   ]
 });

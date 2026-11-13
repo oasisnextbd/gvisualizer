@@ -107,7 +107,7 @@ $$B^0 = 0.083 - 0.422/T_r^{1.6} \qquad B^1 = 0.139 - 0.172/T_r^{4.2}$$`,
 **Assumptions:**
 - ω = 0.222 (SVNA App. B; not in the attached table).
 - $Z_c = P_cV_c/RT_c = 54.7(240.3)/[83.14(536.6)] = 0.2946$.
-- Vapour pressure at 200 °C: $P^{sat}$ = 22.27 bar (SVNA problem value). The Lee–Kesler correlation gives 22.5 bar, which agrees; the Antoine constants are valid only up to 84 °C.
+- Vapour pressure at 200 °C: $P^{sat}$ = **22.27 bar**, the value printed in SVNA Problem 11.24(a) (6th ed. SI, p. 396), which is this same exercise. As a check, the Lee–Kesler vapour-pressure correlation with these $T_c$, $P_c$, ω gives 22.5 bar. The SVNA App. B Antoine constants (valid only up to 84 °C) extrapolate to 20.9 bar and should not be used here.
 - The printed liquid-volume formula is the **Rackett equation**, $V^{sat} = V_cZ_c^{(1 - T_r)^{0.2857}}$.
 - The liquid is incompressible (Poynting correction).
 
@@ -343,26 +343,60 @@ $$\boxed{\hat\phi_{N_2} = 0.789, \qquad \hat\phi_{CH_4} = 0.298}$$
           topic: "reaction-equilibria", sub: "Does reaction equilibrium assume infinite reaction time?",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`"For a reaction to be in thermodynamic equilibrium, it is assumed that the reaction has progressed for infinite time". True/False. Give reasons to your answer.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`**False** (as a requirement for the thermodynamic treatment).
+
+1. Thermodynamic equilibrium is a **state**, defined by the criterion $(dG^t)_{T,P} = 0$, i.e. $\sum_i\nu_i\mu_i = 0$ (G at its minimum with respect to ε). Equilibrium thermodynamics says **nothing about time or rate**. It gives the composition the system *would* reach, $\prod(\hat f_i/f_i^\circ)^{\nu_i} = K$, without assuming how long the reaction has run.
+
+2. Kinetically, a reaction approaches equilibrium asymptotically (rate ∝ distance from equilibrium), so in a strict mathematical sense equilibrium is reached only as t → ∞. That is why the statement sounds plausible. In practice, with a catalyst and at high temperature, many reactions come within measurement accuracy of equilibrium in seconds (e.g. the water-gas shift over a catalyst). Others never get there in practice (e.g. diamond → graphite at room temperature, or H₂ + O₂ without ignition).
+
+3. Equilibrium is also **dynamic**: forward and reverse rates are equal, not zero. The equilibrium conversion is the *upper limit* on conversion, which is how it is used in design. Whether the reactor reaches it is a question for kinetics (residence time, catalyst), not an assumption of the equilibrium calculation.`,
+          answer: String.raw`False: equilibrium is a state defined by (dGᵗ)_T,P = 0 (Σνᵢμᵢ = 0); thermodynamics is silent on time. Kinetically equilibrium is approached asymptotically, but fast (catalysed, high-T) reactions get practically there in seconds while others never do; equilibrium conversion is just the upper limit.` },
         { id: "2020-21-Q5b", label: "(b)", marks: "6",
           topic: "phase-equilibria-topics", sub: "Why stability criteria are needed for any equilibrium",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Why do we need stability criteria for any equilibrium? Explain.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`1. **Equilibrium alone is not enough.** The condition $(dG^t)_{T,P} = 0$ (equal $\mu_i$ or $\hat f_i$ in all phases) says only that $G^t$ is **stationary**. A stationary point can be a minimum (stable), a local minimum (metastable) or a maximum or saddle (unstable). Stability criteria pick out which kind it is, using the second derivative.
+
+2. **Which phases exist.** The criterion $d^2(\Delta G/RT)/dx_1^2 > 0$, equivalently $d\ln\gamma_1/dx_1 > -1/x_1$ or $d\hat f_1/dx_1 > 0$, tells us whether a homogeneous liquid of given composition stays as one phase or **splits into two liquids** (LLE). Equal fugacities can be satisfied by an unstable solution of the equations; only the stable one is physically observed.
+
+3. **Checking models and calculations.** A $G^E$ model or EOS can predict states that satisfy the equilibrium equations but are unstable: S-shaped P–x curves, $dy_1/dx_1 < 0$, or the van der Waals loop of a cubic EOS. Stability analysis rejects these. For example, Margules with A > 2 predicts phase splitting.
+
+4. **Physical meaning.** In a stable state, a small fluctuation (in composition, T or P) raises G, so the system returns to that state. In an unstable state a fluctuation lowers G and grows: spontaneous phase separation or spinodal decomposition. Metastable states (supercooled liquids, superheated liquids) survive only until a large enough disturbance arrives.
+
+So equilibrium criteria locate the candidate states, and stability criteria decide which of them can actually exist, and with how many phases.`,
+          answer: String.raw`(dGᵗ)_T,P = 0 only makes G stationary (min, max or saddle); stability criteria (d²ΔG/dx₁² > 0, d ln γ₁/dx₁ > −1/x₁, df̂₁/dx₁ > 0) identify the true minimum — deciding single phase vs. split (LLE), rejecting unstable model solutions (S-shaped P–x, vdW loops) and distinguishing stable, metastable and unstable states.` },
         { id: "2020-21-Q5c", label: "(c)", marks: "12",
           topic: "refrigeration", sub: "Linde liquefaction process: principle, schematic, scale of application",
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`Describe the operating principles of Linde process with a schematic diagram of the process. Mention the preferable scale of application for the process.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`![Linde and Claude liquefaction schematics: compressor, heat exchanger, throttle, separator, and in Claude an expansion engine](fig/2020-21-Q5c-sketch.svg)
+
+### Operating principle (Linde process, panel a)
+1. **Compression:** gas (air, N₂, CH₄…) is compressed to high pressure (e.g. 60–200 bar) in stages with intercooling, then cooled to near ambient temperature.
+2. **Regenerative cooling:** the high-pressure gas flows through a countercurrent heat exchanger, where the cold unliquefied gas returning from the separator cools it further.
+3. **Throttling (Joule–Thomson expansion):** the cold high-pressure gas is expanded through a valve at constant enthalpy. Below its inversion temperature this lowers T, and the gas enters the two-phase region.
+4. **Separation:** in the separator a fraction z is drawn off as saturated liquid. The saturated vapour (1 − z) returns through the exchanger and is recompressed with make-up gas.
+5. **Start-up:** each pass makes the returning gas colder, so the throttle inlet cools step by step until liquid appears. In steady state, an energy balance on the exchanger, valve and separator (adiabatic, no work) gives
+$$H_4 = zH_9 + (1 - z)H_{15} \;\Rightarrow\; z = \frac{H_4 - H_{15}}{H_9 - H_{15}}$$
+   (4: high-pressure gas in; 9: saturated liquid; 15: low-pressure gas out). A higher pressure or a lower $T_4$ gives a smaller $H_4$, so z is larger.
+
+### Preferable scale
+The Linde process is simple, cheap and robust: there are **no moving parts at low temperature**, just a valve. Its fraction liquefied per pass is small (a few per cent), and energy use per kg of liquid is high because throttling recovers no work. It therefore suits **small to medium-scale** plants (laboratory liquefiers, small air-separation and nitrogen units, CO₂ and LPG liquefaction). Large tonnage plants (big air-separation units, LNG trains) use the Claude process with expansion turbines, or cascade and mixed-refrigerant cycles, for their better efficiency.`,
+          answer: String.raw`Compress (with intercooling) → cool in countercurrent HX against returning cold gas → Joule–Thomson throttle (below inversion T) into separator → liquid fraction z withdrawn, vapour recycled; z = (H₄ − H₁₅)/(H₉ − H₁₅). Simple, no cold moving parts but low yield and high energy use ⇒ small–medium scale; large plants use Claude/cascade cycles.` },
         { id: "2020-21-Q5d", label: "(d)", marks: "5",
           topic: "phase-equilibria-topics", sub: "Equality of solid and vapour fugacities at solid–vapour equilibrium",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`"At solid-vapor equilibrium, the fugacities of solid phase and vapor phase will be equal". Do you agree with this statement? Clarify your answer.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`**Agree, with a qualification:** equality holds for the species that is present in **both** phases. For SVE that is the solute only.
+
+1. The general equilibrium criterion is equal fugacity of **each species** in every phase in which it is present: $\hat f_i^\alpha = \hat f_i^\beta$.
+
+2. In solid–vapour equilibrium (SVNA §14.7) the solid is usually **pure species 1**, and the vapour contains 1 and a solvent gas 2 that is insoluble in the solid. So
+$$f_1^s = \hat f_1^v = y_1\hat\phi_1P$$
+   applies only to species 1. There is **no** such equation for species 2, which is absent from the solid. "The fugacities of the solid phase and the vapour phase" are not equal as phase properties. Phases do not have a single fugacity; species do.
+
+3. The solid's fugacity is $f_1^s = \phi_1^{sat}P_1^{sat}\exp[V_1^s(P - P_1^{sat})/RT]$. This leads to the solubility $y_1 = (P_1^{sat}/P)(\phi_1^{sat}/\hat\phi_1)\exp[V_1^s(P - P_1^{sat})/RT]$.`,
+          answer: String.raw`Agree only for the solute: equilibrium requires f₁ˢ = f̂₁ᵛ = y₁φ̂₁P for species 1 present in both phases; the solvent gas 2 is absent from the (pure) solid, so it has no fugacity equation — phases do not have a common fugacity, species do.` },
         { id: "2020-21-Q5e", label: "(e)", marks: "6",
           topic: "phase-equilibria-topics", sub: "Why dUᵗ + PdVᵗ − TdSᵗ ≤ 0 is not a practical stability criterion",
           type: "theory", syllabus: "in", repeats: [],
@@ -371,22 +405,55 @@ $$\boxed{\hat\phi_{N_2} = 0.789, \qquad \hat\phi_{CH_4} = 0.298}$$
 $$dU^t + PdV^t - TdS^t \le 0$$
 
 This criterion is not ideal for practical applications. Why is that? Interpret.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`1. **Origin.** From the first and second laws for a closed system exchanging heat with surroundings at T: $dQ \le T\,dS^t$ and $dU^t = dQ - P\,dV^t$ give
+$$dU^t + P\,dV^t - T\,dS^t \le 0$$
+   It is completely general: any number of species and phases, and all irreversible or equilibrium changes.
+
+2. **Why it is not practical.** In this form the inequality can be applied directly only when the constrained variables are held constant:
+   - at constant $U^t$ and $V^t$ it becomes $(dS^t)_{U,V} \ge 0$;
+   - at constant $S^t$ and $V^t$ it becomes $(dU^t)_{S,V} \le 0$.
+
+   Internal energy, entropy and total volume **cannot be controlled or measured directly** in the laboratory or the plant. Processes run at fixed **temperature and pressure**.
+
+3. **Practical form.** At constant T and P, $d(U^t + PV^t - TS^t)_{T,P} = d(G^t)_{T,P} \le 0$. The Gibbs energy is a minimum at equilibrium, and T and P are exactly the variables we fix. Moreover, $G^t$ is directly related to fugacities and activity coefficients. From it come the usable criteria $d^2(\Delta G/RT)/dx_1^2 > 0$, $d\ln\gamma_1/dx_1 > -1/x_1$ and $d\hat f_1/dx_1 > 0$.`,
+          answer: String.raw`It is general but usable directly only at constant (Uᵗ, Vᵗ) [(dSᵗ)_U,V ≥ 0] or (Sᵗ, Vᵗ) [(dUᵗ)_S,V ≤ 0] — variables that cannot be controlled or measured. At constant T, P (what we control) it becomes (dGᵗ)_T,P ≤ 0, which gives the practical criteria (d²ΔG/dx₁² > 0 etc.).` },
         { id: "2020-21-Q5f", label: "(f)", marks: "5",
           topic: "reaction-equilibria", sub: "Equilibrium constant for multiphase reactions, with examples",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`How do you express equilibrium constant for multiphase reactions? Describe with examples.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`1. **General relation.** For any reaction, $\prod_i(\hat f_i/f_i^\circ)^{\nu_i} = K = \exp(-\Delta G^\circ/RT)$. In a multiphase reaction each species is assigned to the phase in which it exists, with a standard state appropriate to that phase.
+
+2. **Rules** (SVNA §13.8–13.9):
+   - **Gas species:** standard state ideal gas at $P^\circ$: $\hat f_i/f_i^\circ = y_i\hat\phi_iP/P^\circ$ (≈ $y_iP/P^\circ$ for an ideal gas).
+   - **Liquid-solution species:** standard state pure liquid at T and $P^\circ$: $\hat f_i/f_i^\circ = \gamma_ix_i\exp[V_i(P - P^\circ)/RT] \approx \gamma_ix_i$.
+   - **Pure solids or pure liquids:** activity $f_i/f_i^\circ = \exp[V_i(P - P^\circ)/RT] \approx 1$, so they **drop out** of the K expression.
+   - ΔG° uses $\Delta G^\circ_f$ for the **phase specified** (e.g. H₂O(l) or H₂O(g)).
+
+3. **Examples:**
+   - $\mathrm{CaCO_3(s) \rightleftharpoons CaO(s) + CO_2(g)}$: $K = \hat f_{CO_2}/P^\circ \approx P_{CO_2}/P^\circ$. The decomposition pressure is fixed by T alone (F = 1).
+   - $\mathrm{C(s) + CO_2(g) \rightleftharpoons 2CO(g)}$: $K = \dfrac{y_{CO}^2}{y_{CO_2}}\dfrac{P}{P^\circ}$, with carbon not appearing.
+   - Gas–liquid: $\mathrm{C_2H_4(g) + H_2O(l) \rightleftharpoons C_2H_5OH(l)}$: $K = \dfrac{\gamma_{EtOH}x_{EtOH}}{(y_{C_2H_4}\hat\phi_{C_2H_4}P/P^\circ)\,\gamma_{H_2O}x_{H_2O}}$. The vapour–liquid distribution must also satisfy the phase-equilibrium relations (γ–φ), so the reaction and phase equilibria are solved together.
+
+4. **Alternative.** Treat the reaction as occurring in one phase, e.g. the gas, and add the phase-equilibrium equations ($y_iP \approx x_i\gamma_iP_i^{sat}$) for the species transferring between phases. Both routes give the same result if the standard states are consistent.`,
+          answer: String.raw`Π(f̂ᵢ/fᵢ°)^νᵢ = K with each species in its own phase/standard state: gas → yᵢφ̂ᵢP/P°, liquid solution → γᵢxᵢ, pure solid/liquid → activity ≈ 1 (drops out); ΔG° from ΔG°f of the stated phases. E.g. CaCO₃ ⇌ CaO + CO₂: K = P_CO₂/P°; C + CO₂ ⇌ 2CO: K = y²_CO P/(y_CO₂P°); add phase-equilibrium equations for species in two phases.` },
         { id: "2020-21-Q5g", label: "(g)", marks: "6",
           topic: "phase-equilibria-topics", sub: "Interpret three binary LLE solubility diagrams (UCST, LCST, closed loop)",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Describe the conditions shown in the figure below:
 
 *(Figure 5g: three T–x₁ diagrams for binary liquid–liquid equilibrium, each with tie line A–B at temperature T and phase compositions $x_1^\alpha$, $x_1^\beta$: (a) a closed "two liquid phases" loop between a lower point L at $T_L$ and an upper point U at $T_U$; (b) a dome with its maximum U at $T_U$; (c) a U-shaped region with its minimum L at $T_L$.)*`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`The figure (SVNA ch. 14, Kirtania slides) shows the three common kinds of **liquid–liquid solubility diagram** of a binary at constant P. Inside each curve a single liquid is unstable and splits into phases α and β. Their compositions $x_1^\alpha$ and $x_1^\beta$ are the ends of the horizontal tie line AB at the chosen T. The curve itself is the binodal (solubility) curve, and outside it one homogeneous liquid is stable.
+
+1. **(a) Closed loop ("island"): both an upper and a lower consolute temperature.** The two-liquid region exists only between $T_L$ and $T_U$. Below $T_L$ and above $T_U$ the liquids are completely miscible. Typical of hydrogen-bonding systems, e.g. nicotine/water and glycerol/m-toluidine. Below $T_L$, hydrogen bonding (negative $H^E$) makes mixing favourable; at high T, entropy wins again.
+
+2. **(b) Upper critical solution temperature (UCST) $T_U$.** Partial miscibility below $T_U$. The two phases approach each other as T rises and merge at U. Above $T_U$ the liquids are miscible in all proportions. This is the most common type (positive $H^E$), e.g. n-hexane/methanol, aniline/n-hexane, phenol/water.
+
+3. **(c) Lower critical solution temperature (LCST) $T_L$.** Partial miscibility above $T_L$. Mutual solubility *decreases* as T rises, and the liquids are miscible below $T_L$ (often negative $H^E$ from complexing), e.g. triethylamine/water.
+
+**At the consolute points (U, L)** the compositions of α and β become identical. The stability limit is reached there:
+$$\frac{d^2(\Delta G/RT)}{dx_1^2} = 0, \qquad \frac{d^3(\Delta G/RT)}{dx_1^3} = 0$$
+Between the binodal and the spinodal the single liquid is metastable.`,
+          answer: String.raw`Binary LLE solubility diagrams (two liquids inside the curve, tie line AB gives x₁^α, x₁^β): (a) closed loop with both LCST T_L and UCST T_U (e.g. nicotine/water); (b) UCST only — miscible above T_U (e.g. n-hexane/methanol, phenol/water); (c) LCST only — miscible below T_L (e.g. triethylamine/water). At U and L the phases become identical (d²ΔG/dx₁² = d³ΔG/dx₁³ = 0).` }
       ] },
     { id: "2020-21-Q6", q: 6, section: "B",
       stem: String.raw``,
@@ -395,20 +462,63 @@ This criterion is not ideal for practical applications. Why is that? Interpret.`
           topic: "refrigeration", sub: "Absorption refrigeration cycle: sketch and working principle",
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`Draw an absorption refrigeration cycle and describe its working principle.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`![Absorption refrigeration cycle: generator, condenser, expansion valve, evaporator, absorber and solution pump](fig/2020-21-Q6a-sketch.svg)
+
+### Idea
+A vapour-compression refrigerator spends **work** to raise the refrigerant vapour from evaporator to condenser pressure. The absorption cycle does this with **heat**. The low-pressure vapour is absorbed into a liquid, the liquid is pumped (very little work, since $\int V\,dP$ is small for a liquid), and the refrigerant is boiled out again at high pressure. Usual working pairs: NH₃ (refrigerant) + water (absorbent); water (refrigerant) + aqueous LiBr.
+
+### Working principle (NH₃–H₂O)
+1. **Evaporator (low P):** liquid NH₃ boils at $T_C$, taking $Q_C$ from the cold space.
+2. **Absorber (low P):** the vapour dissolves in weak (NH₃-lean) solution. The heat of absorption is rejected to cooling water at $T_S$, which keeps the solution able to absorb. The result is a strong (NH₃-rich) solution.
+3. **Pump:** the strong solution is pumped to condenser pressure.
+4. **Generator (still, high P):** heat $Q_H$ from a source at $T_H$ (steam, waste heat, gas flame, solar) drives NH₃ vapour out of the solution. A rectifier condenses the water carried with it. The hot weak solution flows back through a solution heat exchanger and a pressure-reducing valve to the absorber.
+5. **Condenser (high P):** NH₃ vapour condenses, rejecting heat at $T_S$.
+6. **Expansion valve:** the liquid NH₃ is throttled to evaporator pressure, and the cycle repeats.
+
+### Energy accounting
+$Q_C + Q_H + W_{pump} = Q_{absorber} + Q_{condenser}$. The useful performance ratio is $Q_C/Q_H$. Its thermodynamic limit (SVNA §9.4) is a Carnot engine between $T_H$ and $T_S$ driving a Carnot refrigerator between $T_C$ and $T_S$:
+$$\left(\frac{Q_H}{Q_C}\right)_{min} = \frac{T_H}{T_H - T_S}\cdot\frac{T_S - T_C}{T_C}$$
+For example, $T_H$ = 373.15 K, $T_S$ = 303.15 K and $T_C$ = 263.15 K give $(Q_H/Q_C)_{min}$ = 0.81. Real single-effect machines achieve $Q_C/Q_H$ of about 0.5–0.7.
+
+**Use:** where cheap or waste heat is available (cogeneration, refinery waste heat, solar). It is quiet and has few moving parts. Its drawbacks are a low COP, large size and capital cost, and working-pair problems (NH₃ toxicity; LiBr crystallisation and corrosion; water as refrigerant cannot go below 0 °C).`,
+          answer: String.raw`Absorber–pump–generator replaces the compressor: NH₃ evaporates (Q_C at T_C), is absorbed in weak solution (heat to cooling water), the strong solution is pumped to high P, heated in the generator (Q_H at T_H) to release NH₃, which condenses (heat at T_S) and is throttled back; weak solution returns via HX/valve. (Q_H/Q_C)min = [T_H/(T_H − T_S)][(T_S − T_C)/T_C] (≈ 0.81 for 100/30/−10 °C).` },
         { id: "2020-21-Q6b", label: "(b)", marks: "6+2=8",
           topic: "reaction-equilibria", sub: "Maximum thermodynamic efficiency of a hydrogen fuel cell",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`What is the maximum efficiency that could be reached by a hydrogen fuel cell thermodynamically? How much of it is practically achievable?`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`### Thermodynamic maximum (6)
+A fuel cell converts the chemical energy of $\mathrm{H_2 + \tfrac12O_2 \to H_2O}$ directly into electrical work. It is not a heat engine, so it is **not Carnot-limited**. For reversible operation at constant T and P:
+$$W_{elect,max} = -\Delta G, \qquad E = \frac{-\Delta G}{2F}, \qquad \eta_{max} = \frac{\Delta G}{\Delta H} = 1 - \frac{T\Delta S}{\Delta H}$$
+At 25 °C:
+- **Water vapour as product** (Kirtania slides; lower heating value): ΔH = −241 818 J/mol, ΔG = −228 572 J/mol, giving
+$$\eta_{max} = \frac{228572}{241818} = 0.945\ (94.5\%), \qquad E = \frac{228572}{2(96485)} = 1.184\ \mathrm V$$
+- **Liquid water as product** (higher heating value): ΔH = −285 830 J/mol, ΔG = −237 129 J/mol, giving $\eta_{max}$ = 0.83 (83%) and E = 1.229 V.
+
+Even a reversible cell must reject heat $Q = T\Delta S$: 13.2 kJ/mol for vapour product, 48.7 kJ/mol for liquid. η falls slightly with T, because ΔS < 0.
+
+### Practically achievable (2)
+Real cells operate at 0.6–0.8 V instead of 1.18–1.23 V, because of activation (electrode kinetics), ohmic and mass-transfer (concentration) overpotentials, fuel crossover and incomplete fuel utilisation. Efficiency ≈ $V_{cell}/1.48$ V (HHV basis) gives about **40–60%, typically ≈ 50%** (Kirtania slides). Combined heat and power or a bottoming cycle (SOFC/MCFC) can raise the overall fuel use.`,
+          answer: String.raw`η_max = ΔG/ΔH: 94.5% for H₂O(g) at 25 °C (ΔG = −228.6, ΔH = −241.8 kJ/mol, E = 1.184 V), 83% on HHV (liquid water, E = 1.229 V); not Carnot-limited. In practice ≈ 40–60% (≈ 50%) because of activation, ohmic and concentration losses (V_cell ≈ 0.6–0.8 V).` },
         { id: "2020-21-Q6c", label: "(c)", marks: "6",
           topic: "refrigeration", sub: "Why some refrigerants were banned and their alternatives",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Describe the reasons behind banning some of the refrigerants. What are the possible alternatives to them?`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`### Why some refrigerants were banned
+- **Ozone depletion (CFCs, HCFCs).** Chlorofluorocarbons such as R-11 (CCl₃F) and R-12 (CCl₂F₂) are chemically very stable, so they survive to the stratosphere. There UV radiation frees Cl atoms, which destroy ozone catalytically:
+$$\mathrm{Cl + O_3 \to ClO + O_2}, \qquad \mathrm{ClO + O \to Cl + O_2}$$
+   One Cl atom destroys thousands of O₃ molecules, thinning the layer that shields the earth from UV-B (ozone hole, skin cancer, crop damage). ODP ≈ 1 for R-11 and R-12; ≈ 0.05 for HCFC R-22.
+- **Global warming.** CFCs and many HFCs are powerful greenhouse gases (GWP of R-12 ≈ 10 900; R-134a ≈ 1430) with long atmospheric lifetimes.
+- **Regulation:** the Montreal Protocol (1987) phased out CFCs and is phasing out HCFCs. The Kigali Amendment (2016) phases down high-GWP HFCs.
+
+### Alternatives
+| Type | Examples | Remarks |
+|---|---|---|
+| HFCs (chlorine-free, ODP 0) | R-134a (1,1,1,2-tetrafluoroethane), R-125 (pentafluoroethane), R-32, R-410A, R-404A | Named in the slides as environment-friendly; GWP still high |
+| HFOs (very low GWP) | R-1234yf, R-1234ze | Car air conditioners, chillers |
+| Natural refrigerants | NH₃ (R-717), CO₂ (R-744), propane R-290, isobutane R-600a, water (absorption, LiBr) | ODP 0, GWP ≈ 0; NH₃ toxic, hydrocarbons flammable, CO₂ needs high pressure |
+
+Alternative cycles (absorption refrigeration, heat-driven) also avoid synthetic refrigerants.`,
+          answer: String.raw`CFCs (R-11, R-12) and HCFCs were banned (Montreal Protocol) because their stable Cl reaches the stratosphere and destroys ozone catalytically; they (and many HFCs) are also strong greenhouse gases. Alternatives: HFCs R-134a, R-125 (ODP 0), low-GWP HFOs (R-1234yf), natural refrigerants NH₃, CO₂, propane/isobutane, water (absorption).` }
       ] },
     { id: "2020-21-Q7", q: 7, section: "B",
       stem: String.raw``,
@@ -417,14 +527,54 @@ This criterion is not ideal for practical applications. Why is that? Interpret.`
           topic: "phase-equilibria-topics", sub: "Stability criteria for a binary liquid–liquid mixture: derivation",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Derive the stability criteria for a binary liquid-liquid mixture in equilibrium.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`**Assumptions:** binary liquid at constant T and P; ΔG is the Gibbs energy change of mixing per mole.
+
+1. **Starting point.** At constant T and P, $(dG^t)_{T,P} \le 0$, so equilibrium is the minimum of $G^t$. Suppose a homogeneous mixture of composition $x_1$ splits into two phases, α and β, with compositions on either side of $x_1$. The lever rule puts the total Gibbs energy of the pair on the **chord** joining $\Delta G(x_1^\alpha)$ and $\Delta G(x_1^\beta)$.
+   - If the ΔG–$x_1$ curve is convex (chord above the curve), splitting raises G, so one phase is stable.
+   - If it is concave anywhere, splitting lowers G and the single phase is unstable.
+
+   Stability therefore requires
+$$\boxed{\frac{d^2\Delta G}{dx_1^2} > 0 \quad\text{or}\quad \frac{d^2(\Delta G/RT)}{dx_1^2} > 0} \qquad (T, P\ \text{const.})\qquad (1)$$
+
+2. **Introduce $G^E$:** $\dfrac{\Delta G}{RT} = x_1\ln x_1 + x_2\ln x_2 + \dfrac{G^E}{RT}$. Differentiating twice:
+$$\frac{d^2(\Delta G/RT)}{dx_1^2} = \frac{1}{x_1x_2} + \frac{d^2(G^E/RT)}{dx_1^2} > 0 \;\Rightarrow\; \boxed{\frac{d^2(G^E/RT)}{dx_1^2} > -\frac{1}{x_1x_2}} \qquad (2)$$
+
+3. **Activity coefficients.** $G^E/RT = x_1\ln\gamma_1 + x_2\ln\gamma_2$. Gibbs–Duhem ($x_1\,d\ln\gamma_1 + x_2\,d\ln\gamma_2 = 0$) gives $\dfrac{d(G^E/RT)}{dx_1} = \ln\gamma_1 - \ln\gamma_2$ and
+$$\frac{d^2(G^E/RT)}{dx_1^2} = \frac{d\ln\gamma_1}{dx_1} - \frac{d\ln\gamma_2}{dx_1} = \frac{1}{x_2}\frac{d\ln\gamma_1}{dx_1}$$
+   Substituting into (2):
+$$\boxed{\frac{d\ln\gamma_1}{dx_1} > -\frac{1}{x_1}} \qquad (3)$$
+
+4. **Fugacity.** $\hat f_1 = x_1\gamma_1f_1$, so $\dfrac{d\ln\hat f_1}{dx_1} = \dfrac{1}{x_1} + \dfrac{d\ln\gamma_1}{dx_1} > 0$:
+$$\boxed{\frac{d\hat f_1}{dx_1} > 0, \qquad \frac{d\hat f_2}{dx_1} < 0} \qquad (4)$$
+
+5. **Chemical potential.** $\mu_1 = \Gamma_1(T) + RT\ln\hat f_1$:
+$$\boxed{\frac{d\mu_1}{dx_1} > 0} \qquad (5)$$
+
+6. **Application and limits.**
+   - Two-suffix Margules, $G^E/RT = Ax_1x_2$: $d^2(\Delta G/RT)/dx_1^2 = 1/(x_1x_2) - 2A$. This is positive for all $x_1$ only if A < 2. For A > 2 the liquid splits; A = 2 is the consolute point at $x_1$ = 0.5.
+   - Where the criteria fail, the equilibrium compositions $x_1^\alpha$ and $x_1^\beta$ are found from the **common tangent**: $\hat f_i^\alpha = \hat f_i^\beta$, i.e. $x_i^\alpha\gamma_i^\alpha = x_i^\beta\gamma_i^\beta$.
+   - The limit of stability (spinodal) is $d^2(\Delta G/RT)/dx_1^2 = 0$. At a critical (consolute) point the third derivative also vanishes.`,
+          answer: String.raw`From (dGᵗ)_T,P ≤ 0: ΔG(x₁) must be convex ⇒ d²(ΔG/RT)/dx₁² > 0 ⇔ d²(Gᴱ/RT)/dx₁² > −1/(x₁x₂) ⇔ d ln γ₁/dx₁ > −1/x₁ ⇔ df̂₁/dx₁ > 0 ⇔ dμ₁/dx₁ > 0. Failure ⇒ split into α, β (common tangent, x_i^α γ_i^α = x_i^β γ_i^β); e.g. Margules unstable for A > 2.` },
         { id: "2020-21-Q7b", label: "(b)", marks: "12",
           topic: "phase-equilibria-topics", sub: "Criteria for isothermal binary VLE and their significance",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`For an isothermal binary component vapor-liquid equilibrium, what criteria are to be met? Explain the significance of these criteria.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**System:** binary, two phases (vapour and liquid), constant T.
+
+### Criteria
+1. **Phase equilibrium** (equal T and P, plus):
+$$\hat f_i^v = \hat f_i^l \quad (i = 1, 2) \;\Leftrightarrow\; \mu_i^v = \mu_i^l$$
+   In gamma/phi form, $y_i\Phi_iP = x_i\gamma_iP_i^{sat}$; at low P, $y_iP = x_i\gamma_iP_i^{sat}$.
+2. **Phase rule:** F = 2 − π + N = 2 − 2 + 2 = 2. With T fixed, one more variable ($x_1$, $y_1$ or P) fixes the state. This is why P–x–y diagrams are single curves at constant T.
+3. **Gibbs–Duhem** must be obeyed in each phase: $x_1\,d\ln\gamma_1 + x_2\,d\ln\gamma_2 = 0$ at constant T and P (thermodynamic consistency of data and models).
+4. **Stability** of the liquid: $d\hat f_1/dx_1 > 0$ (equivalently $d\ln\gamma_1/dx_1 > -1/x_1$). For an ideal-gas vapour this gives
+$$\frac{dy_1}{dx_1} > 0, \qquad \frac{1}{P}\frac{dP}{dx_1} = \frac{y_1 - x_1}{y_1y_2}\frac{dy_1}{dx_1}$$
+
+### Significance
+- Equal fugacities give the working equations for BUBL P, DEW P and flash calculations. The phase rule tells how many variables must be specified.
+- **Stability results:** the more volatile component is always enriched in the vapour in the direction of increasing $x_1$ ($y_1$ rises with $x_1$). P increases with $x_1$ where $y_1 > x_1$ and decreases where $y_1 < x_1$. An **azeotrope** ($y_1 = x_1$) occurs exactly where $dP/dx_1 = 0$, an extremum of the P–x and P–y curves (a maximum for positive and a minimum for negative deviations).
+- A model or data set that violates these (an S-shaped P–x curve, $dy_1/dx_1 < 0$, Gibbs–Duhem inconsistency) is non-physical. Either the liquid actually splits into two phases (VLLE, with constant P across the split at fixed T) or the data are in error.`,
+          answer: String.raw`Equal T, P and f̂ᵢᵛ = f̂ᵢˡ (μᵢ equal), e.g. yᵢΦᵢP = xᵢγᵢPᵢˢᵃᵗ; F = 2 (fix T plus one variable); Gibbs–Duhem consistency; stability df̂₁/dx₁ > 0 ⇒ dy₁/dx₁ > 0 and (1/P)dP/dx₁ = (y₁ − x₁)/(y₁y₂)·dy₁/dx₁ — so P rises where y₁ > x₁ and an azeotrope (y₁ = x₁) is a P extremum; violations mean VLLE or bad data/models.` }
       ] },
     { id: "2020-21-Q8", q: 8, section: "B",
       stem: String.raw``,
@@ -435,8 +585,27 @@ This criterion is not ideal for practical applications. Why is that? Interpret.`
           text: String.raw`$$\Delta G_{f_i}^0 + RT\ln\left(\frac{y_i\hat\phi_iP}{P^0}\right) + \sum_k\lambda_ka_{ik} = 0,$$ symbols have their usual meanings.
 
 Explain the significance of the equation and its parameters.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`**The equation** is the condition for minimum total Gibbs energy of a reacting system at constant T and P, written for each species i (SVNA §13.10, Kirtania Part 2):
+$$\Delta G^\circ_{f_i} + RT\ln\left(\frac{y_i\hat\phi_iP}{P^\circ}\right) + \sum_k\lambda_ka_{ik} = 0, \qquad i = 1, 2, \dots, N$$
+
+**Origin.** $G^t$ is minimised subject to the **element (atom) balances** $\sum_in_ia_{ik} = A_k$ for each element k. The Lagrange-multiplier method gives $\mu_i + \sum_k\lambda_ka_{ik} = 0$. Using $\mu_i = G_i^\circ + RT\ln(\hat f_i/P^\circ)$ and setting the elements' $G^\circ$ to zero, so that $G_i^\circ \to \Delta G^\circ_{f_i}$, gives the equation.
+
+**Parameters:**
+| Symbol | Meaning |
+|---|---|
+| $\Delta G^\circ_{f_i}$ | standard Gibbs energy of formation of species i at the system T (from its elements; zero for elements such as H₂, O₂, C) |
+| $y_i$ | mole fraction of i in the gas at equilibrium (unknown) |
+| $\hat\phi_i$ | fugacity coefficient of i in the mixture (1 for ideal gases) |
+| $P$, $P^\circ$ | system pressure; standard pressure, 1 bar |
+| $\lambda_k$ | Lagrange multiplier for element k (J/mol): the "element potential", one per element; unknown |
+| $a_{ik}$ | number of atoms of element k in a molecule of species i |
+| $A_k$ | total gram-atoms of element k in the system (from the feed) |
+
+**Significance:**
+- There are N such equations plus w element balances and $\sum y_i = 1$, for the unknowns: N mole fractions (or $n_i$), w multipliers λ and the total moles. **No reaction set** has to be identified; only the species list and $\Delta G^\circ_f$ data are needed.
+- The equation says that, at equilibrium, every species' chemical potential equals the sum of its constituent atoms' potentials: $\mu_i = -\sum_k\lambda_ka_{ik}$. Hence $-\lambda_k$ is the chemical potential of element k in the equilibrium mixture.
+- Pure condensed phases (e.g. C(s)) enter with the log term replaced by ln(activity) ≈ 0.`,
+          answer: String.raw`Gibbs-energy minimisation (Lagrange multipliers) at const T, P: one equation per species, μᵢ + Σλₖaᵢₖ = 0 with μᵢ = ΔG°fᵢ + RT ln(yᵢφ̂ᵢP/P°). ΔG°fᵢ: formation Gibbs energy at T; yᵢ, φ̂ᵢ: mole fraction, fugacity coefficient; P/P°: pressure ratio; λₖ: element multipliers (−λₖ = element chemical potential); aᵢₖ: atoms of k in i. Solved with element balances Σnᵢaᵢₖ = Aₖ; no reaction set needed.` },
         { id: "2020-21-Q8b", label: "(b)", marks: "22",
           topic: "reaction-equilibria", sub: "CO/H₂O/CO₂/H₂ at 1000 K, 1 bar with 3 mol H₂ measured: compositions and λₖ",
           type: "numerical", syllabus: "in", repeats: [],
@@ -445,8 +614,46 @@ Explain the significance of the equation and its parameters.`,
 $$\Delta G^0_{f\,H_2O} = -192.42\ \mathrm{kJ/mol} \qquad \Delta G^0_{f\,CO} = -200.24\ \mathrm{kJ/mol} \qquad \Delta G^0_{f\,CO_2} = -395.79\ \mathrm{kJ/mol}$$
 
 At equilibrium, H₂ is measured by gas chromatography and found to have 3 moles. With this measurement, it will be possible to estimate the equilibrium concentration of the gas components and $\lambda_k$ values. Determine the values of $\lambda_k$. [Hint: See the equation in 8(a)].`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Given:** T = 1000 K, P = 1 bar; feed 2 mol CO and 4 mol H₂O; species H₂O, CO, CO₂, H₂; $\Delta G^\circ_f$ (kJ/mol): H₂O −192.42, CO −200.24, CO₂ −395.79, H₂ 0. RT = 8314 J/mol.
+
+**Find:** the equilibrium composition and the $\lambda_k$ (k = C, H, O).
+
+**Assumptions:** ideal gases ($\hat\phi_i$ = 1) at $P = P^\circ$ = 1 bar.
+
+1. **Element balances** (gram-atoms fed): $A_C$ = 2, $A_H$ = 8, $A_O$ = 2 + 4 = 6.
+$$\text{C: } n_{CO} + n_{CO_2} = 2, \qquad \text{H: } 2n_{H_2O} + 2n_{H_2} = 8, \qquad \text{O: } n_{H_2O} + n_{CO} + 2n_{CO_2} = 6$$
+   The total number of moles is constant at 6, because every species has one or two atoms in a way that conserves moles.
+
+2. **Check of the printed measurement.** With $n_{H_2}$ = 3 the H balance gives $n_{H_2O}$ = 1. The O and C balances then give $n_{CO_2}$ = 3 and $n_{CO}$ = −1, which is **impossible**. Each H₂ formed needs one CO converted to CO₂ ($\mathrm{CO + H_2O \to CO_2 + H_2}$), so $n_{H_2} \le$ 2 mol. The printed "3 moles" is a misprint. It is replaced here by the equilibrium value, which the same equations (or the K route) give.
+
+3. **Minimisation equations** ($\lambda$'s in J/mol, $y_i = n_i/6$):
+$$\text{H}_2: \; RT\ln y_{H_2} + 2\lambda_H = 0$$
+$$\text{H}_2\text{O}: \; -192420 + RT\ln y_{H_2O} + 2\lambda_H + \lambda_O = 0$$
+$$\text{CO}: \; -200240 + RT\ln y_{CO} + \lambda_C + \lambda_O = 0$$
+$$\text{CO}_2: \; -395790 + RT\ln y_{CO_2} + \lambda_C + 2\lambda_O = 0$$
+
+4. **Eliminate the λ's.** CO₂ + H₂ − CO − H₂O gives the shift-reaction equilibrium:
+$$\ln\frac{y_{CO_2}y_{H_2}}{y_{CO}y_{H_2O}} = \frac{-(-395790 + 192420 + 200240)}{8314} = \frac{3130}{8314} = 0.3765 \;\Rightarrow\; K = 1.457$$
+   With extent ε: $n_{CO} = 2 - \varepsilon$, $n_{H_2O} = 4 - \varepsilon$, $n_{CO_2} = n_{H_2} = \varepsilon$:
+$$\frac{\varepsilon^2}{(2 - \varepsilon)(4 - \varepsilon)} = 1.457 \;\Rightarrow\; 0.457\varepsilon^2 - 8.743\varepsilon + 11.657 = 0 \;\Rightarrow\; \varepsilon = 1.442$$
+
+5. **Equilibrium composition:**
+
+| | CO | H₂O | CO₂ | H₂ |
+|---|---|---|---|---|
+| n / mol | 0.558 | 2.558 | 1.442 | 1.442 |
+| y | 0.0930 | 0.4263 | 0.2403 | 0.2403 |
+
+   Hydrogen at equilibrium is **1.44 mol**, which is the value the chromatograph should show.
+
+6. **Lagrange multipliers** (from the H₂, H₂O and CO equations in turn):
+$$\lambda_H = -\tfrac12RT\ln y_{H_2} = -\tfrac12(8314)\ln 0.2403 = 5927\ \mathrm{J/mol}\quad(\lambda_H/RT = 0.713)$$
+$$\lambda_O = 192420 - RT\ln y_{H_2O} - 2\lambda_H = 192420 + 7089 - 11853 = 187\,655\ \mathrm{J/mol}\quad(\lambda_O/RT = 22.57)$$
+$$\lambda_C = 200240 - RT\ln y_{CO} - \lambda_O = 200240 + 19748 - 187655 = 32\,333\ \mathrm{J/mol}\quad(\lambda_C/RT = 3.889)$$
+   Check with CO₂: $-395790 + 8314\ln 0.2403 + 32333 + 2(187655) = -395790 - 11853 + 32333 + 375310 = 0$ ✓.
+
+**Result:** $y_{CO}$ = 0.093, $y_{H_2O}$ = 0.426, $y_{CO_2} = y_{H_2}$ = 0.240 (1.44 mol H₂, not the printed 3 mol, which violates the element balances). $\lambda_C$ = 32.3 kJ/mol, $\lambda_H$ = 5.93 kJ/mol, $\lambda_O$ = 187.7 kJ/mol ($\lambda/RT$ = 3.89, 0.713, 22.57).`,
+          answer: String.raw`Printed n_H₂ = 3 mol violates the element balances (gives n_CO = −1; max is 2 mol). Equilibrium (K_shift = e^(3130/8314) = 1.457): ε = 1.442 ⇒ y_CO = 0.093, y_H₂O = 0.426, y_CO₂ = y_H₂ = 0.240; λ_H = 5.93, λ_O = 187.7, λ_C = 32.3 kJ/mol (λ/RT = 0.713, 22.57, 3.889).` }
       ] }
   ]
 });
