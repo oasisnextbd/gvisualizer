@@ -9,8 +9,25 @@ QB.paper({
           topic: "refrigeration", sub: "Absorption refrigeration system: sketch and description",
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`With a neat sketch, describe a absorption refrigeration system.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`![Absorption refrigeration cycle: generator, condenser, expansion valve, evaporator, absorber and solution pump](fig/2015-16-Q1a-sketch.svg)
+
+### Working principle
+In an absorption refrigerator the compressor is replaced by an **absorber–pump–generator** loop. Heat, rather than shaft work, lifts the refrigerant from evaporator pressure to condenser pressure.
+1. **Evaporator (low P):** liquid refrigerant (NH₃) evaporates at $T_C$, taking heat $Q_C$ from the cold space.
+2. **Absorber (low P):** the vapour is absorbed into a weak NH₃–water solution. The absorption is exothermic, and the heat is removed by cooling water at $T_S$.
+3. **Pump:** the strong solution is pumped to high pressure. Pumping a liquid takes very little work ($\int V\,dP$ is small).
+4. **Generator (high P):** heat $Q_H$ from a source at $T_H$ (steam, waste heat, flue gas, solar) boils NH₃ out of the solution. A rectifier removes the water vapour. The hot weak solution returns to the absorber through a valve, usually via a solution heat exchanger.
+5. **Condenser (high P):** NH₃ condenses, rejecting heat at $T_S$.
+6. **Expansion valve:** the liquid NH₃ is throttled back to evaporator pressure.
+
+**Thermodynamic limit** (SVNA §9.4): the best performance is a Carnot engine between $T_H$ and $T_S$ driving a Carnot refrigerator between $T_C$ and $T_S$:
+$$\frac{Q_H}{Q_C} = \frac{T_H}{T_H - T_S}\cdot\frac{T_S - T_C}{T_C}$$
+For example, with $T_H$ = 373 K, $T_S$ = 303 K and $T_C$ = 263 K, $Q_H/Q_C$ = 0.81. Real units have $Q_C/Q_H$ ≈ 0.5–0.7.
+
+### Examples
+- **Ammonia–water** absorption refrigeration in cold storage and ice plants, and gas-fired domestic refrigerators (Electrolux / Platen–Munters, which use H₂ as a pressure-equalising gas and need no pump).
+- **Water–lithium bromide** absorption chillers for building air conditioning, driven by steam or waste heat (water is the refrigerant, $T_C$ > 0 °C).`,
+          answer: String.raw`Absorber + pump + generator replace the compressor: refrigerant (NH₃) evaporates at T_C, is absorbed in weak solution (heat to cooling water), pumped to high P, driven out of the strong solution by heat Q_H in the generator, condensed, throttled; (Q_H/Q_C)min = [T_H/(T_H − T_S)][(T_S − T_C)/T_C]. Examples: NH₃–H₂O cold storage/Electrolux fridge; LiBr–H₂O chillers.` },
         { id: "2015-16-Q1b", label: "(b)", marks: "20",
           topic: "refrigeration", sub: "Ammonia vapour-compression cycle cooling toluene from 100 °C to 20 °C: circulation rate",
           type: "numerical", syllabus: "in", repeats: [],
@@ -23,8 +40,41 @@ $$\Delta H^{lv} = 23.34\ \mathrm{kJ/mol}$$
 $$\ln P^{Sat} = 45.3 - \frac{4104.6}{T} - 5.14T + 615\frac{P^{Sat}}{T^2}$$
 
 where $P^{Sat}$ in bars and T in Kelvin.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Given:** 50 kmol/h of liquid toluene at 1.2 bar, cooled from 100 °C to 20 °C; ammonia vapour-compression cycle; condenser cooled by air at 20 °C; $\Delta H^{lv}$(NH₃) = 23.34 kJ/mol; the ammonia vapour-pressure equation.
+
+**Find:** the ammonia circulation rate.
+
+**Assumptions:**
+- **Approach temperatures of 10 K** in both exchangers. Ammonia evaporates at $T_C$ = 10 °C (283.15 K), 10 K below the coldest toluene (20 °C), and condenses at $T_H$ = 30 °C (303.15 K), 10 K above the air.
+- Saturated vapour leaves the evaporator and saturated liquid leaves the condenser. The throttle is isenthalpic.
+- $\Delta H^{lv}$ = 23.34 kJ/mol is used as given, taken as independent of T. (It is the value at the normal boiling point; the real value at 10 °C is lower, so the circulation rate below is a slight underestimate.)
+- Liquid heat capacities from SVNA Table C.3 (data booklet). Toluene: $C_P/R = 15.133 + 6.79\times10^{-3}T + 16.35\times10^{-6}T^2$. Ammonia: $C_P/R = 22.626 - 100.75\times10^{-3}T + 192.71\times10^{-6}T^2$.
+- The printed vapour-pressure term "−5.14T" is a misprint for **−5.14 ln T**. With T itself the term would be about −1455 at 283 K, which is impossible. The equation used is
+$$\ln P^{sat} = 45.3 - \frac{4104.6}{T} - 5.14\ln T + 615\frac{P^{sat}}{T^2}$$
+  At 239.8 K it gives 1.03 bar, close to ammonia's normal boiling point, which confirms the reading.
+
+1. **Refrigeration load (toluene):**
+$$\dot n_{tol} = \frac{50\,000}{3600} = 13.89\ \mathrm{mol/s}, \qquad \int_{293.15}^{373.15}\frac{C_P}{R}dT = 15.133(80) + \frac{6.79\times10^{-3}}{2}(373.15^2 - 293.15^2) + \frac{16.35\times10^{-6}}{3}(373.15^3 - 293.15^3) = 1537.5\ \mathrm K$$
+$$|\dot Q_C| = 13.89(8.314)(1537.5) = 177.5\times10^3\ \mathrm{J/s} = 177.5\ \mathrm{kW}$$
+   The mean $C_P$ is 159.8 J/(mol·K).
+
+2. **Cycle pressures** (vapour-pressure equation, solved by iteration because $P^{sat}$ appears on both sides):
+   - Evaporator at 283.15 K: $P^{sat}$ = **6.24 bar**.
+   - Condenser at 303.15 K: $P^{sat}$ = **11.80 bar**.
+   - Compression ratio 1.9.
+
+3. **Refrigeration effect per mole of ammonia.** State 1 (after the throttle) has $H_1 = H_4$ = saturated liquid at 30 °C. State 2 is saturated vapour at 10 °C. With saturated liquid at 10 °C as reference:
+$$H_2 - H_1 = \Delta H^{lv}(10\ °\mathrm C) - \int_{283.15}^{303.15}C_P^l\,dT = 23\,340 - 8.314(193.2) = 23\,340 - 1606 = 21\,734\ \mathrm{J/mol}$$
+   The 1606 J/mol is the part of the latent heat used to cool the liquid itself on throttling (flash), about 7% of the vaporised mass.
+
+4. **Circulation rate:**
+$$\dot n_{NH_3} = \frac{|\dot Q_C|}{H_2 - H_1} = \frac{177\,540}{21\,734} = 8.17\ \mathrm{mol/s}$$
+$$= 29.4\ \mathrm{kmol/h} = 0.139\ \mathrm{kg/s}\ (M = 17.03)$$
+
+5. **Remark (not asked).** The Carnot ω between 283.15 and 303.15 K is 14.2, so the minimum compressor power is about 177.5/14.2 = 12.5 kW. A real compressor needs more. With a smaller approach (say 5 K) the pressures change, but the circulation rate hardly does, because it is set mainly by $\Delta H^{lv}$.
+
+**Result:** about 8.2 mol/s (29.4 kmol/h, 0.14 kg/s) of ammonia, evaporating at 10 °C (6.24 bar) and condensing at 30 °C (11.8 bar).`,
+          answer: String.raw`Q_C = 13.89 mol/s × 8.314 × 1537.5 K = 177.5 kW (toluene, SVNA C.3 Cp). Assumed 10 K approaches: evaporate 10 °C (6.24 bar), condense 30 °C (11.8 bar) [printed "5.14T" read as 5.14 ln T]; refrigeration effect = 23 340 − 1606 = 21 734 J/mol ⇒ ṅ_NH₃ = 8.17 mol/s ≈ 29.4 kmol/h (0.139 kg/s).` }
       ] },
     { id: "2015-16-Q2", q: 2, section: "A",
       stem: String.raw``,
@@ -37,20 +87,72 @@ where $P^{Sat}$ in bars and T in Kelvin.`,
 (i) What is COP and how much heat is rejected in the condenser?
 
 (ii) If heat rejection is at 40°C, what is the lowest temperature the system can possibly maintain?`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`**Given:** W = 1.5 kW; $|Q_C|$ = 4 kJ/s; heat rejected at 40 °C (313.15 K).
+
+**Find:** (i) COP and the heat rejected; (ii) the lowest temperature the system can possibly maintain.
+
+**Assumptions:** steady cyclic operation (first law over a cycle). Part (ii) is limited by the Carnot cycle.
+
+1. **(i) Coefficient of performance:**
+$$\omega = \frac{|Q_C|}{W} = \frac{4}{1.5} = \mathbf{2.67}$$
+
+2. **(i) Heat rejected** (energy balance on the cycle):
+$$|Q_H| = |Q_C| + W = 4 + 1.5 = \mathbf{5.5\ kJ/s}$$
+
+3. **(ii) Lowest possible temperature.** No refrigerator can beat a Carnot refrigerator working between the same temperatures, $\omega \le T_C/(T_H - T_C)$. The lowest $T_C$ this machine could possibly maintain is the one at which its ω equals the Carnot value:
+$$\frac{T_C}{313.15 - T_C} = 2.667 \;\Rightarrow\; T_C = \frac{2.667(313.15)}{3.667} = \mathbf{227.7\ K\ (-45.4\ °C)}$$
+   Any lower $T_C$ would need ω > Carnot, which violates the second law. A real system with irreversibilities would reach a higher $T_C$.
+
+**Result:** (i) ω = 2.67, $|Q_H|$ = 5.5 kJ/s; (ii) $T_C$ ≥ 227.7 K (−45.4 °C).`,
+          answer: String.raw`(i) ω = 4/1.5 = 2.67; |Q_H| = 4 + 1.5 = 5.5 kJ/s. (ii) Carnot limit T_C/(313.15 − T_C) = 2.667 ⇒ T_C,min = 227.7 K (−45.4 °C).` },
         { id: "2015-16-Q2b", label: "(b)", marks: "15",
           topic: "reaction-equilibria", sub: "Relation between the standard Gibbs-energy change and the equilibrium constant",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Find the relation between standard Gibbs-Energy change and the equilibrium constant.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`1. **Criterion of equilibrium.** For a closed system at constant T and P, $(dG^t)_{T,P} \le 0$, and at equilibrium $G^t$ is a minimum. For a single reaction $\sum_i\nu_iA_i = 0$, the reaction coordinate ε gives $dn_i = \nu_i\,d\varepsilon$. The fundamental relation $d(nG) = (nV)\,dP - (nS)\,dT + \sum_i\mu_i\,dn_i$ then gives
+$$\left[\frac{\partial(nG)}{\partial\varepsilon}\right]_{T,P} = \sum_i\nu_i\mu_i = 0 \quad\text{at equilibrium}$$
+
+2. **Chemical potential in terms of fugacity.** At constant T, $d\mu_i = RT\,d\ln\hat f_i$. Integrating from the **standard state** of i (pure i at T and the standard pressure $P^\circ$; Gibbs energy $G_i^\circ$, fugacity $f_i^\circ$) gives
+$$\mu_i = G_i^\circ + RT\ln\frac{\hat f_i}{f_i^\circ}$$
+
+3. **Substitute** into $\sum\nu_i\mu_i = 0$:
+$$\sum_i\nu_iG_i^\circ + RT\sum_i\nu_i\ln\frac{\hat f_i}{f_i^\circ} = 0 \;\Rightarrow\; \ln\prod_i\left(\frac{\hat f_i}{f_i^\circ}\right)^{\nu_i} = \frac{-\sum_i\nu_iG_i^\circ}{RT}$$
+
+4. **Define** the standard Gibbs-energy change of reaction, $\Delta G^\circ \equiv \sum_i\nu_iG_i^\circ = \sum_i\nu_i\Delta G^\circ_{f_i}$, and the equilibrium constant
+$$\boxed{K \equiv \prod_i\left(\frac{\hat f_i}{f_i^\circ}\right)^{\nu_i} = \exp\left(\frac{-\Delta G^\circ}{RT}\right), \qquad \ln K = \frac{-\Delta G^\circ}{RT}}$$
+
+5. **Comments.**
+   - $G_i^\circ$ depends only on T, because $P^\circ$ is fixed. So ΔG° and **K are functions of T only**, independent of the equilibrium pressure and composition.
+   - ΔG° < 0 gives K > 1 (products favoured); ΔG° > 0 gives K < 1. For example, ΔG° = +10 kJ/mol at 298 K gives K = 0.018.
+   - The temperature dependence follows from Gibbs–Helmholtz: $d\ln K/dT = \Delta H^\circ/RT^2$ (van 't Hoff).
+   - For gases ($f_i^\circ = P^\circ$, $\hat f_i = y_i\hat\phi_iP$): $\prod(y_i\hat\phi_i)^{\nu_i} = (P/P^\circ)^{-\nu}K$. For liquids: $\prod(x_i\gamma_i)^{\nu_i} \approx K$.`,
+          answer: String.raw`Σνᵢμᵢ = 0 at equilibrium (min Gᵗ at const T, P); μᵢ = Gᵢ° + RT ln(f̂ᵢ/fᵢ°) ⇒ Π(f̂ᵢ/fᵢ°)^νᵢ = exp(−ΔG°/RT) ≡ K, i.e. ln K = −ΔG°/RT with ΔG° = ΣνᵢΔG°fᵢ; K = f(T) only; ΔG° < 0 ⇔ K > 1.` },
         { id: "2015-16-Q2c", label: "(c)", marks: "10",
           topic: "reaction-equilibria", sub: "Ideal-solution liquid-phase equilibrium: ∏xᵢ^νᵢ = K",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Derive the relationship of $\prod_i(x_i)^{\nu_i} = K$.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`1. **Equilibrium criterion** for a reaction at constant T and P: $\sum_i\nu_i\mu_i = 0$. With $\mu_i = G_i^\circ + RT\ln(\hat f_i/f_i^\circ)$:
+$$\prod_i\left(\frac{\hat f_i}{f_i^\circ}\right)^{\nu_i} = \exp\frac{-\Delta G^\circ}{RT} = K$$
+
+2. **Liquid phase:** $\hat f_i = \gamma_ix_if_i$, where $f_i$ is the fugacity of pure liquid i at T and P. The standard state is pure liquid i at T and $P^\circ$, with fugacity $f_i^\circ$. So
+$$\frac{\hat f_i}{f_i^\circ} = \gamma_ix_i\frac{f_i}{f_i^\circ}$$
+
+3. **Pressure correction** (pure liquid, $d\ln f_i = V_i\,dP/RT$, $V_i$ constant):
+$$\frac{f_i}{f_i^\circ} = \exp\frac{V_i(P - P^\circ)}{RT} \;\Rightarrow\; \prod_i(\gamma_ix_i)^{\nu_i} = K\exp\left[\frac{(P^\circ - P)}{RT}\sum_i\nu_iV_i\right]$$
+
+4. **Moderate pressure:** $V_i$ is small, so the exponential ≈ 1 unless P is very high. Then $\prod_i(\gamma_ix_i)^{\nu_i} = K$.
+
+5. **Ideal solution:** $\gamma_i = 1$, so
+$$\boxed{\prod_i x_i^{\nu_i} = K}$$
+
+**Assumptions:**
+1. Constant T and P; equilibrium reached; a single reaction (or each independent reaction).
+2. All species in a single liquid phase.
+3. Standard state: pure liquid at T and $P^\circ$ = 1 bar, so K depends on T only.
+4. Liquid molar volumes constant (incompressible) and small; P not far from $P^\circ$, so the Poynting term ≈ 1.
+5. **Ideal solution** (Lewis–Randall rule): $\gamma_i = 1$ for all species, i.e. chemically similar species and no strong interactions.
+6. ΔG° evaluated for the liquid species.`,
+          answer: String.raw`Σνᵢμᵢ = 0 ⇒ Π(f̂ᵢ/fᵢ°)^νᵢ = K; f̂ᵢ/fᵢ° = γᵢxᵢ exp[Vᵢ(P − P°)/RT] ⇒ Π(γᵢxᵢ)^νᵢ = K exp[(P° − P)ΣνᵢVᵢ/RT] → (Poynting ≈ 1, ideal solution γᵢ = 1) Πxᵢ^νᵢ = K. Assumptions: const T, P; single liquid phase; pure-liquid standard state at P°; incompressible, small Vᵢ, moderate P; ideal solution.` }
       ] },
     { id: "2015-16-Q3", q: 3, section: "A",
       stem: String.raw``,
@@ -59,8 +161,62 @@ where $P^{Sat}$ in bars and T in Kelvin.`,
           topic: "reaction-equilibria", sub: "Coal gasifier with steam and air at 20 bar: equilibrium gas composition at 1000 K and 1500 K",
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`A bed of coal (assume pure carbon) in a coal gasifier is fed with steam and air, and produces a gas stream containing H₂, CO, O₂, H₂O, CO₂ and N₂. If the feed to the gasifier consists of 1 mol of steam and 2.38 mole of air, calculate the equilibrium composition of the gas stream at P = 20 bar for temperature of 1000 and 1500 K.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Given:** carbon (excess solid) fed with 1 mol H₂O(g) and 2.38 mol air (0.50 mol O₂ + 1.88 mol N₂); P = 20 bar; T = 1000 K and 1500 K. Gas species: H₂, CO, O₂, H₂O, CO₂, N₂ (SVNA Example 13.13 problem).
+
+**Find:** the equilibrium gas composition at each T.
+
+**Assumptions:**
+- Ideal gases; C is pure graphite with activity 1, present in excess (it does not appear in the K's).
+- $\Delta G^\circ_f$ at T computed from SVNA App. C: $\Delta H^\circ_{f298}$ and $\Delta G^\circ_{f298}$ from Table C.4, $C_P$ constants from Tables C.1/C.2, with the K = K₀K₁K₂ (IDCPH/IDCPS) method.
+- At 1000 K this gives −192.57 (H₂O), −200.21 (CO) and −395.94 kJ/mol (CO₂), within 0.1% of the tabulated −192.42, −200.24 and −395.79 used in the other papers.
+
+1. **Formation reactions and K's** ($K = e^{-\Delta G^\circ/RT}$):
+
+| Reaction | ΔG° (1000 K) | K (1000 K) | ΔG° (1500 K) | K (1500 K) |
+|---|---|---|---|---|
+| (a) C + ½O₂ → CO | −200 214 | 2.874 × 10¹⁰ | −243 865 | 3.108 × 10⁸ |
+| (b) C + O₂ → CO₂ | −395 938 | 4.813 × 10²⁰ | −396 586 | 6.469 × 10¹³ |
+| (c) H₂ + ½O₂ → H₂O | −192 571 | 1.146 × 10¹⁰ | −164 278 | 5.259 × 10⁵ |
+
+   (ΔG° in J/mol.) The huge K's mean that **free O₂ is essentially absent** at equilibrium.
+
+2. **Eliminate O₂** by combining the reactions into two independent O₂-free reactions:
+   - (I) $\mathrm{C + H_2O \rightleftharpoons CO + H_2}$ = (a) − (c): $K_I = K_a/K_c$ = **2.507** (1000 K), **591** (1500 K).
+   - (II) $\mathrm{C + CO_2 \rightleftharpoons 2CO}$ = 2(a) − (b): $K_{II} = K_a^2/K_b$ = **1.716** (1000 K), **1493** (1500 K).
+
+   With O₂ ≈ 0, the 0.5 mol O₂ is first taken as burned to 0.5 mol CO₂ (C + O₂ → CO₂); reactions I and II then adjust the mixture. With extents $\varepsilon_I$, $\varepsilon_{II}$:
+
+| Species | n |
+|---|---|
+| H₂O | $1 - \varepsilon_I$ |
+| H₂ | $\varepsilon_I$ |
+| CO | $\varepsilon_I + 2\varepsilon_{II}$ |
+| CO₂ | $0.5 - \varepsilon_{II}$ |
+| N₂ | 1.88 |
+| total | $n = 3.38 + \varepsilon_I + \varepsilon_{II}$ |
+
+3. **Equilibrium equations** (ν = +1 for each, P/P° = 20):
+$$K_I = \frac{y_{CO}y_{H_2}}{y_{H_2O}}\left(\frac{P}{P^\circ}\right) = \frac{(\varepsilon_I + 2\varepsilon_{II})\varepsilon_I}{(1 - \varepsilon_I)\,n}(20)$$
+$$K_{II} = \frac{y_{CO}^2}{y_{CO_2}}\left(\frac{P}{P^\circ}\right) = \frac{(\varepsilon_I + 2\varepsilon_{II})^2}{(0.5 - \varepsilon_{II})\,n}(20)$$
+   Solved simultaneously (Newton). The O₂ left over follows from reaction (b), for which ν = 0: $y_{O_2} = y_{CO_2}/K_b$.
+
+4. **Solution at 1000 K:** $\varepsilon_I$ = 0.5309 and $\varepsilon_{II}$ = −0.0518. The Boudouard reaction runs slightly backwards at 20 bar, depositing a little carbon. n = 3.859 mol.
+
+5. **Solution at 1500 K:** $\varepsilon_I$ = 0.9865 and $\varepsilon_{II}$ = 0.4893 (both nearly complete); n = 4.856 mol.
+
+6. **Equilibrium compositions:**
+
+| | $y_{H_2}$ | $y_{CO}$ | $y_{H_2O}$ | $y_{CO_2}$ | $y_{N_2}$ | $y_{O_2}$ |
+|---|---|---|---|---|---|---|
+| 1000 K | 0.1376 | 0.1108 | 0.1215 | 0.1430 | 0.4871 | ≈ 3 × 10⁻²² |
+| 1500 K | 0.2032 | 0.4047 | 0.0028 | 0.0022 | 0.3872 | ≈ 3 × 10⁻¹⁷ |
+
+   Checks: H: $n_{H_2} + n_{H_2O}$ = 1 ✓. O: $n_{H_2O} + n_{CO} + 2n_{CO_2}$ = 2 ✓ (1000 K: 0.469 + 0.427 + 1.104 = 2.000). Carbon gasified: 0.98 mol at 1000 K, 1.98 mol at 1500 K.
+
+7. **Interpretation.** Both reactions I and II are endothermic, so raising T from 1000 to 1500 K drives them to completion. The product becomes almost pure CO + H₂ (plus N₂): a producer/synthesis gas with about 61% combustibles, against 25% at 1000 K. At 1000 K much H₂O and CO₂ remain unconverted. The high pressure (20 bar) opposes reactions I and II (ν = +1), which is why 1000 K gives such low conversion. Oxygen is fully consumed at both temperatures.
+
+**Result:** at 1000 K, y = 0.138 H₂, 0.111 CO, 0.122 H₂O, 0.143 CO₂, 0.487 N₂. At 1500 K, y = 0.203 H₂, 0.405 CO, 0.003 H₂O, 0.002 CO₂, 0.387 N₂. O₂ is negligible in both.`,
+          answer: String.raw`O₂-free reactions C + H₂O ⇌ CO + H₂ (K = 2.507 at 1000 K, 591 at 1500 K) and C + CO₂ ⇌ 2CO (K = 1.716, 1493) at P/P° = 20 (ΔG°f from SVNA App. C). 1000 K: y_H₂ 0.138, y_CO 0.111, y_H₂O 0.122, y_CO₂ 0.143, y_N₂ 0.487; 1500 K: 0.203, 0.405, 0.003, 0.002, 0.387; y_O₂ ≈ 0 (10⁻²²/10⁻¹⁷).` }
       ] },
     { id: "2015-16-Q4", q: 4, section: "A",
       stem: String.raw``,
@@ -112,8 +268,49 @@ The equilibrium conversion is negligible at 300 K, but becomes close to equilibr
 (i) fractional conversion of propane at 625 K. (10)
 
 (ii) temperature at which fractional conversion is 85%. (10)`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Given:** $\mathrm{C_3H_8(g) \rightarrow C_2H_4(g) + CH_4(g)}$, P = 1 bar, pure propane feed.
+
+**Find:** (i) the equilibrium conversion at 625 K; (ii) T for 85% conversion.
+
+**Assumptions:** ideal gases; data from SVNA App. C. Table C.4 (J/mol):
+
+| | ΔH°f298 | ΔG°f298 |
+|---|---|---|
+| C₃H₈ | −104 680 | −24 290 |
+| C₂H₄ | 52 510 | 68 460 |
+| CH₄ | −74 520 | −50 460 |
+
+Table C.1 ($C_P^{ig}/R = A + BT + CT^2$):
+
+| | A | 10³B | 10⁶C |
+|---|---|---|---|
+| CH₄ | 1.702 | 9.081 | −2.164 |
+| C₂H₄ | 1.424 | 14.394 | −4.392 |
+| C₃H₈ | 1.213 | 28.785 | −8.824 |
+
+1. **Standard changes at 298.15 K:**
+$$\Delta H_0^\circ = 52510 - 74520 + 104680 = 82\,670\ \mathrm{J/mol}, \qquad \Delta G_0^\circ = 68460 - 50460 + 24290 = 42\,290\ \mathrm{J/mol}$$
+   $K_{298} = e^{-42290/(8.314 \times 298.15)} = 3.9\times10^{-8}$: negligible conversion at room temperature, as stated. ΔA = 1.913, ΔB = −5.310 × 10⁻³, ΔC = 2.268 × 10⁻⁶.
+
+2. **ΔG° at T** (SVNA eq. 13.18):
+$$\Delta G^\circ = \Delta H_0^\circ + R\int_{T_0}^T\frac{\Delta C_P^\circ}{R}dT - T\left[\frac{\Delta H_0^\circ - \Delta G_0^\circ}{T_0} + R\int_{T_0}^T\frac{\Delta C_P^\circ}{R}\frac{dT}{T}\right]$$
+   At 625 K: $\int\Delta C_P^\circ/R\,dT$ = −11.30 K, so ΔH° = 82 576 J/mol. $\int(\Delta C_P^\circ/R)\,dT/T$ = 0.0225, so ΔS° = 135.62 J/(mol·K).
+$$\Delta G^\circ_{625} = 82576 - 625(135.62) = -2188\ \mathrm{J/mol}, \qquad K = e^{2188/(8.314 \times 625)} = 1.524$$
+
+3. **Equilibrium relation.** Basis 1 mol C₃H₈, extent ε: $y_{C_3H_8} = \dfrac{1 - \varepsilon}{1 + \varepsilon}$, $y_{C_2H_4} = y_{CH_4} = \dfrac{\varepsilon}{1 + \varepsilon}$, ν = +1:
+$$\frac{y_{C_2H_4}y_{CH_4}}{y_{C_3H_8}} = \frac{\varepsilon^2}{1 - \varepsilon^2} = K\left(\frac{P}{P^\circ}\right)^{-1} = K \;\Rightarrow\; \varepsilon = \sqrt{\frac{K}{1 + K}}$$
+
+4. **(i) At 625 K:**
+$$\varepsilon = \sqrt{\frac{1.524}{2.524}} = \mathbf{0.777}$$
+   Fractional conversion 77.7%: y(C₃H₈) = 0.125, y(C₂H₄) = y(CH₄) = 0.437.
+
+5. **(ii) 85% conversion:**
+$$K = \frac{0.85^2}{1 - 0.85^2} = 2.604 \;\Rightarrow\; \Delta G^\circ = -RT\ln K$$
+   Solve ΔG°(T) = −RT ln 2.604 by trial: T = 640 K gives K ≈ 2.17; 650 K gives K ≈ 2.82. Interpolating and checking: **T = 646.8 K**, where ΔG° = −5146 J/mol, K = 2.604.
+   Check with the approximate van 't Hoff equation from 625 K (ΔH° ≈ 82.5 kJ/mol): $\ln(2.604/1.524) = 0.5357 = (82\,500/8.314)(1/625 - 1/T)$ gives T = 646.8 K ✓.
+
+**Result:** (i) 77.7% conversion at 625 K (K = 1.52); (ii) 85% conversion at T ≈ 647 K (K = 2.60). The reaction is endothermic, so conversion rises steeply with T.`,
+          answer: String.raw`ΔH°₂₉₈ = 82 670, ΔG°₂₉₈ = 42 290 J/mol (K₂₉₈ = 3.9×10⁻⁸). ε²/(1 − ε²) = K at 1 bar. (i) 625 K: ΔG° = −2188 J/mol, K = 1.524 ⇒ ε = 0.777 (77.7%). (ii) 85%: K = 2.604 ⇒ T = 646.8 K.` }
       ] },
     { id: "2015-16-Q5", q: 5, section: "B",
       stem: String.raw``,
