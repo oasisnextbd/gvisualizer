@@ -8,7 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="tutor.css?v=20261113">
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<link rel="stylesheet" href="tutor.css?v=20261114">
+<script defer src="vendor/katex/katex.min.js"></script>
 </head>
 <body>
 
@@ -31,6 +33,7 @@
       </div>
       <nav class="tabs" aria-label="Sections">
         <button id="navTabBank" type="button" class="tab is-active" aria-selected="true">Question bank <span id="bankCountBadge" class="tab-count">0</span></button>
+        <button id="navTabBuilder" type="button" class="tab" aria-selected="false">Topic builder</button>
         <button id="navTabCreate" type="button" class="tab" aria-selected="false">Add a question</button>
         <button id="navTabGviz" type="button" class="tab" aria-selected="false">Diagram lab</button>
         <button id="navTabPaper" type="button" class="tab" aria-selected="false">Exam paper <span id="paperCountBadge" class="tab-count">0</span></button>
@@ -116,6 +119,75 @@
       </div>
 
       <div id="questionBankList" class="grid grid-cols-1 gap-4 lg:grid-cols-2"></div>
+    </section>
+
+    <!-- ==================== 1b. TOPIC BUILDER ==================== -->
+    <section id="viewBuilder" class="hidden space-y-5 no-print">
+      <div>
+        <h1 class="text-xl font-semibold">Topic builder</h1>
+        <p class="section-sub">Pick the topic you taught. Every question is written fresh: change the numbers, or change what each part asks, as often as you like.</p>
+      </div>
+
+      <div class="card card-pad">
+        <div class="grid grid-cols-1 gap-3 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-4">
+            <label for="builderChapter" class="field-label">Chapter</label>
+            <select id="builderChapter" class="field font-bangla"><option>উচ্চতর গণিত ১ম পত্র · অধ্যায় ১: ম্যাট্রিক্স ও নির্ণায়ক</option></select>
+          </div>
+          <div class="lg:col-span-5">
+            <label for="builderMicro" class="field-label">Topic</label>
+            <select id="builderMicro" class="field font-bangla"></select>
+          </div>
+          <div class="lg:col-span-3">
+            <span class="field-label">Format</span>
+            <div class="seg w-full">
+              <button id="builderFormatCQ" type="button" class="is-active flex-1">Creative (CQ)</button>
+              <button id="builderFormatMCQ" type="button" class="flex-1">MCQ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-5 lg:grid-cols-12">
+        <div class="space-y-3 lg:col-span-8">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span id="builderPoolCount" class="text-sm text-slate-500"></span>
+            <div class="flex flex-wrap gap-2">
+              <button id="btnBuilderNumbers" type="button" class="btn btn-secondary">New numbers</button>
+              <button id="btnBuilderNext" type="button" class="btn btn-secondary">Different question</button>
+            </div>
+          </div>
+          <div id="builderPreview" class="card card-pad"></div>
+          <div class="flex flex-wrap justify-end gap-2">
+            <button id="btnBuilderSave" type="button" class="btn btn-secondary">Save to my questions</button>
+            <button id="btnBuilderAdd" type="button" class="btn btn-primary">Add to exam paper</button>
+          </div>
+        </div>
+
+        <div class="space-y-5 lg:col-span-4">
+          <div class="card card-pad space-y-3">
+            <h2 class="section-title">Build a whole test</h2>
+            <p class="text-sm text-slate-500">On the topic chosen above, with different question types and fresh numbers each time.</p>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label for="builderTestCQ" class="field-label">Creative questions</label>
+                <input id="builderTestCQ" type="number" min="0" max="8" value="2" class="field">
+              </div>
+              <div>
+                <label for="builderTestMCQ" class="field-label">MCQs</label>
+                <input id="builderTestMCQ" type="number" min="0" max="25" value="5" class="field">
+              </div>
+            </div>
+            <button id="btnBuilderTest" type="button" class="btn btn-primary w-full">Build test</button>
+          </div>
+          <div class="card card-pad space-y-2 text-sm text-slate-600">
+            <h2 class="section-title">How it works</h2>
+            <p><b class="font-medium text-slate-900">New numbers</b> keeps the same question and angles with different values.</p>
+            <p><b class="font-medium text-slate-900">Angle</b> under each part changes what that part asks, on the same data.</p>
+            <p>Mark schemes are recalculated every time. Questions stay within the HSC syllabus for this chapter.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ==================== 2. ADD A QUESTION ==================== -->
@@ -476,6 +548,6 @@
   <p id="toastMessage"></p>
 </div>
 
-<script type="module" src="tutor.js?v=20261113"></script>
+<script type="module" src="tutor.js?v=20261114"></script>
 </body>
 </html>

@@ -3,6 +3,8 @@
 // this repository: it is read from Firestore (tutorBank/*) after sign-in, and firebase/firestore.rules
 // refuses it to everyone else. A tutor's own questions and the current paper stay in their browser.
 import { enabled, fb, onUser, signIn, googleSignIn, signOut, resendVerification, recheck, niceError } from '../shared/fb.js';
+import { renderMath } from './engine.js';
+import { TOPICS, findTopic, buildCQ, buildMCQ, fromGen, validGen, newSeed, anglesOf } from './topics/index.js';
 
 
 // =========================================================================
@@ -363,6 +365,8 @@ function cleanQuestion(raw) {
     solution: str(raw.solution, 16000)
   };
   if (typeof raw.clonableTemplate === "string" && CLONER_TEMPLATES[raw.clonableTemplate]) q.clonableTemplate = raw.clonableTemplate;
+  const gen = validGen(raw.gen);
+  if (gen) q.gen = gen;
   if (isSafeImage(raw.imageDataUrl)) q.imageDataUrl = raw.imageDataUrl;
   if (typeof raw.svgDiagram === "string" && raw.svgDiagram.length <= 40000) q.svgDiagram = raw.svgDiagram;
   return q;
@@ -904,7 +908,7 @@ function getFilteredQuestions() {
     if (state.filters.chapter !== "ALL" && q.chapter !== state.filters.chapter) return false;
     if (state.filters.microTopic && state.filters.microTopic !== "ALL" && q.microTopic !== state.filters.microTopic) return false;
     if (state.filters.type === "HIGH_YIELD" && !q.highYield) return false;
-    if (state.filters.type === "CLONABLE" && !q.clonableTemplate) return false;
+    if (state.filters.type === "CLONABLE" && !q.clonableTemplate && !q.gen) return false;
     if (["CQ", "MCQ", "STRUCTURED"].includes(state.filters.type) && q.type !== state.filters.type) return false;
 
     if (state.filters.search.trim() !== "") {
@@ -963,13 +967,13 @@ function renderQuestionBank() {
       body += safeSvg(q.svgDiagram);
     }
     if (q.type === "MCQ" && Array.isArray(q.options)) {
-      body += `<div class="q-options font-bangla">${q.options.map(opt => `<div>${escapeHtml(opt)}</div>`).join("")}</div>`;
+      body += `<div class="q-options font-bangla">${q.options.map(opt => `<div>${renderMath(opt)}</div>`).join("")}</div>`;
     } else if (Array.isArray(q.subparts) && q.subparts.length > 0) {
       body += `
         <div class="q-parts font-bangla">
           ${q.subparts.map(sp => `
             <div class="q-part">
-              <div><b>${escapeHtml(sp.label)}</b> ${escapeHtml(sp.text)}</div>
+              <div><b>${escapeHtml(sp.label)}</b> ${renderMath(sp.text)}</div>
               <span class="q-part-marks">[${Number(sp.marks) || 0}]</span>
             </div>
           `).join("")}
@@ -988,17 +992,17 @@ function renderQuestionBank() {
           <span class="q-marks">${Number(q.marks) || 0} ${Number(q.marks) === 1 ? "mark" : "marks"}</span>
         </div>
         <p class="q-topic font-bangla">${topic}</p>
-        <p class="q-stem font-bangla">${escapeHtml(q.stem)}</p>
+        <p class="q-stem font-bangla">${renderMath(q.stem)}</p>
         ${body}
         <details class="q-solution">
           <summary>Mark scheme</summary>
-          <div class="q-solution-body font-bangla">${escapeHtml(q.solution || "No mark scheme written yet.")}</div>
+          <div class="q-solution-body font-bangla">${renderMath(q.solution || "No mark scheme written yet.")}</div>
         </details>
         <div class="q-actions">
           <span class="q-source font-bangla" title="${escapeHtml(q.source || "")}">${escapeHtml(q.source || "")}</span>
           <div class="flex flex-wrap items-center gap-1.5">
             <button type="button" data-action="delete-question" data-id="${escapeHtml(q.id)}" class="btn btn-quiet btn-sm">${own ? "Delete" : "Hide"}</button>
-            ${q.clonableTemplate ? `<button type="button" data-action="quick-clone" data-id="${escapeHtml(q.id)}" class="btn btn-secondary btn-sm" title="Make a copy with new numbers and a recalculated mark scheme">New numbers</button>` : ""}
+            ${q.clonableTemplate || q.gen ? `<button type="button" data-action="quick-clone" data-id="${escapeHtml(q.id)}" class="btn btn-secondary btn-sm" title="Make a copy with new numbers and a recalculated mark scheme">New numbers</button>` : ""}
             <button type="button" data-action="toggle-paper" data-id="${escapeHtml(q.id)}" class="btn btn-sm ${inPaper ? "btn-selected" : "btn-primary"}">${inPaper ? "On paper ✓" : "Add to paper"}</button>
           </div>
         </div>
@@ -1037,7 +1041,7 @@ function renderExamPaperView() {
           <span class="tabular-nums text-slate-400">${Number(q.marks) || 0}m</span>
           <button type="button" data-paper-action="up" data-idx="${idx}" title="Move up" aria-label="Move up">↑</button>
           <button type="button" data-paper-action="down" data-idx="${idx}" title="Move down" aria-label="Move down">↓</button>
-          ${q.clonableTemplate ? `<button type="button" data-paper-action="clone-in-place" data-id="${escapeHtml(q.id)}" title="New numbers for this question" aria-label="New numbers">↻</button>` : ""}
+          ${q.clonableTemplate || q.gen ? `<button type="button" data-paper-action="clone-in-place" data-id="${escapeHtml(q.id)}" title="New numbers for this question" aria-label="New numbers">↻</button>` : ""}
           <button type="button" data-paper-action="remove" data-id="${escapeHtml(q.id)}" title="Remove from paper" aria-label="Remove">✕</button>
         </div>
       `).join("");
@@ -1082,7 +1086,7 @@ function renderExamPaperView() {
     if (q.type === "MCQ" && Array.isArray(q.options)) {
       subHtml += `
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-1.5 text-xs sm:text-sm font-bangla">
-          ${q.options.map(opt => `<div>${escapeHtml(opt)}</div>`).join("")}
+          ${q.options.map(opt => `<div>${renderMath(opt)}</div>`).join("")}
         </div>
       `;
     } else if (Array.isArray(q.subparts) && q.subparts.length > 0) {
@@ -1096,7 +1100,7 @@ function renderExamPaperView() {
             return `
               <div>
                 <div class="flex items-start justify-between gap-3 text-xs sm:text-sm">
-                  <div><strong class="font-bold">${escapeHtml(sp.label)}</strong> ${escapeHtml(sp.text)}</div>
+                  <div class="math-scroll min-w-0"><strong class="font-bold">${escapeHtml(sp.label)}</strong> ${renderMath(sp.text)}</div>
                   <span class="shrink-0 font-bold text-slate-800">[${Number(sp.marks) || 0}]</span>
                 </div>
                 ${dottedBlock}
@@ -1110,17 +1114,17 @@ function renderExamPaperView() {
     const markSchemeBlock = isMarkScheme ? `
       <div class="mt-2.5 rounded border border-slate-300 bg-slate-50 p-3 text-xs leading-relaxed text-slate-900 font-bangla">
         <div class="mb-1 text-[11px] font-bold uppercase tracking-wide text-slate-600">Mark scheme (Q${qNum})</div>
-        <div class="whitespace-pre-line">${escapeHtml(q.solution || "")}</div>
+        <div class="math-scroll whitespace-pre-line">${renderMath(q.solution || "")}</div>
       </div>
     ` : "";
 
     return `
       <div class="question-block-print ${isCompact ? 'py-3' : 'py-5'} border-b border-slate-200 last:border-b-0">
         <div class="flex items-start justify-between gap-3">
-          <div class="text-xs sm:text-sm font-bangla leading-relaxed flex-1">
+          <div class="math-scroll min-w-0 text-xs sm:text-sm font-bangla leading-relaxed flex-1">
             <span class="font-extrabold text-slate-950 mr-1.5">Q${qNum}.</span>
             ${showSource ? `<span class="text-[11px] font-semibold text-slate-500 mr-1.5">[${escapeHtml(q.source || q.chapter)}]</span>` : ""}
-            <span class="whitespace-pre-line">${escapeHtml(q.stem)}</span>
+            <span class="whitespace-pre-line">${renderMath(q.stem)}</span>
           </div>
           <span class="shrink-0 text-xs font-extrabold border border-slate-400 px-2 py-0.5 rounded">
             ${Number(q.marks) || 0} ${Number(q.marks) === 1 ? 'Mark' : 'Marks'}
@@ -1369,18 +1373,18 @@ function renderClonerPreview() {
   if (qPrev) {
     qPrev.innerHTML = `
       <p class="q-topic font-bangla" style="margin-top:0">${escapeHtml(tpl.chapter)} · ${escapeHtml(tpl.microTopic)}</p>
-      <p class="q-stem font-bangla">${escapeHtml(built.stem)}</p>
+      <p class="q-stem font-bangla">${renderMath(built.stem)}</p>
       <div class="q-parts font-bangla">
         ${built.subparts.map(sp => `
           <div class="q-part">
-            <div><b>${escapeHtml(sp.label)}</b> ${escapeHtml(sp.text)}</div>
+            <div><b>${escapeHtml(sp.label)}</b> ${renderMath(sp.text)}</div>
             <span class="q-part-marks">[${Number(sp.marks) || 0}]</span>
           </div>
         `).join("")}
       </div>
     `;
   }
-  if (sPrev) sPrev.textContent = built.solution;
+  if (sPrev) sPrev.innerHTML = renderMath(built.solution);
 }
 
 function randomizeTemplateParams(templateId) {
@@ -1460,14 +1464,16 @@ function switchMainTab(tabName) {
     create: document.getElementById("viewCreate"),
     paper: document.getElementById("viewPaper"),
     backup: document.getElementById("viewBackup"),
-    gviz: document.getElementById("viewGviz")
+    gviz: document.getElementById("viewGviz"),
+    builder: document.getElementById("viewBuilder")
   };
   const buttons = {
     bank: document.getElementById("navTabBank"),
     create: document.getElementById("navTabCreate"),
     paper: document.getElementById("navTabPaper"),
     backup: document.getElementById("navTabBackup"),
-    gviz: document.getElementById("navTabGviz")
+    gviz: document.getElementById("navTabGviz"),
+    builder: document.getElementById("navTabBuilder")
   };
 
   Object.keys(views).forEach(k => {
@@ -1483,6 +1489,7 @@ function switchMainTab(tabName) {
   if (tabName === "gviz") {
     renderGvizSimulation();
   }
+  if (tabName === "builder") renderBuilder();
   if (tabName === "paper") renderExamPaperView();
   if (tabName === "backup") {
     renderSyllabusDirectory();
@@ -1819,6 +1826,8 @@ function wireAllEvents() {
   document.getElementById("navTabPaper").addEventListener("click", () => switchMainTab("paper"));
   document.getElementById("navTabBackup").addEventListener("click", () => switchMainTab("backup"));
   document.getElementById("navTabGviz").addEventListener("click", () => switchMainTab("gviz"));
+  document.getElementById("navTabBuilder").addEventListener("click", () => switchMainTab("builder"));
+  wireBuilder();
 
 
   document.getElementById("gvizModeSelect").addEventListener("change", (e) => {
@@ -2172,8 +2181,8 @@ function wireAllEvents() {
       renderQuestionBank();
     } else if (action === "quick-clone") {
       const origQ = state.questions.find(q => q.id === qId);
-      if (origQ && origQ.clonableTemplate) {
-        const cloned = randomizeTemplateParams(origQ.clonableTemplate);
+      if (origQ && (origQ.clonableTemplate || origQ.gen)) {
+        const cloned = freshVariant(origQ);
         if (cloned) {
           state.questions.unshift(cloned);
           state.paperQueueIds.push(cloned.id);
@@ -2408,8 +2417,8 @@ function wireAllEvents() {
     let clonedCount = 0;
     state.paperQueueIds = state.paperQueueIds.map(id => {
       const q = state.questions.find(item => item.id === id);
-      if (q && q.clonableTemplate) {
-        const newQ = randomizeTemplateParams(q.clonableTemplate);
+      if (q && (q.clonableTemplate || q.gen)) {
+        const newQ = freshVariant(q);
         if (newQ) {
           state.questions.unshift(newQ);
           clonedCount++;
@@ -2464,8 +2473,8 @@ function wireAllEvents() {
     } else if (act === "clone-in-place") {
       const id = btn.getAttribute("data-id");
       const q = state.questions.find(item => item.id === id);
-      if (q && q.clonableTemplate) {
-        const newQ = randomizeTemplateParams(q.clonableTemplate);
+      if (q && (q.clonableTemplate || q.gen)) {
+        const newQ = freshVariant(q);
         if (newQ) {
           state.questions.unshift(newQ);
           const pos = state.paperQueueIds.indexOf(id);
@@ -2579,11 +2588,179 @@ function wireAllEvents() {
 }
 
 // =========================================================================
+// 9b. TOPIC BUILDER: original questions for one micro-topic, with new numbers and different angles on demand
+// =========================================================================
+const builder = { topicId: TOPICS[0].id, micro: "ALL", format: "CQ", itemId: "", seed: 0, pick: [], current: null };
+const PART_KEYS_UI = ["ka", "kha", "ga"];
+
+function builderPool() {
+  const topic = findTopic(builder.topicId);
+  const list = builder.format === "CQ" ? topic.families : topic.mcqs;
+  return list.filter(x => builder.micro === "ALL" || x.micro === builder.micro);
+}
+function builderItem() {
+  const topic = findTopic(builder.topicId);
+  return (builder.format === "CQ" ? topic.families : topic.mcqs).find(x => x.id === builder.itemId) || null;
+}
+function builderBuild() {
+  const topic = findTopic(builder.topicId), item = builderItem();
+  if (!item) { builder.current = null; return; }
+  try {
+    builder.current = builder.format === "CQ" ? buildCQ(topic, item, builder.seed, builder.pick) : buildMCQ(topic, item, builder.seed);
+    if (builder.format === "CQ") builder.pick = builder.current.gen.p.slice();
+  } catch (e) {
+    builder.current = null;
+  }
+}
+// A different question type from the pool (when there is more than one), with fresh numbers and angles.
+function builderNext() {
+  const pool = builderPool();
+  if (!pool.length) { builder.itemId = ""; builder.current = null; return; }
+  const others = pool.filter(x => x.id !== builder.itemId);
+  const from = others.length ? others : pool;
+  builder.itemId = from[Math.floor(Math.random() * from.length)].id;
+  builder.seed = newSeed();
+  builder.pick = [];
+  builderBuild();
+}
+// A generated question becomes one of the tutor's own questions.
+function adoptGenerated(q) {
+  return cleanQuestion({ ...q, id: newId("q_gen") });
+}
+// The same question with new numbers: works for topic-builder questions and for the older templates.
+function freshVariant(q) {
+  if (q && q.gen) { const made = fromGen(q.gen, true); return made ? adoptGenerated(made) : null; }
+  if (q && q.clonableTemplate) return randomizeTemplateParams(q.clonableTemplate);
+  return null;
+}
+
+function renderBuilder() {
+  const topic = findTopic(builder.topicId);
+  const microSel = document.getElementById("builderMicro"), box = document.getElementById("builderPreview"), count = document.getElementById("builderPoolCount");
+  if (!microSel || !box) return;
+  const formatList = builder.format === "CQ" ? topic.families : topic.mcqs;
+  microSel.innerHTML = `<option value="ALL">All topics in this chapter</option>` + topic.micro.map(mt => {
+    const n = formatList.filter(x => x.micro === mt.id).length;
+    return `<option value="${mt.id}" ${n ? "" : "disabled"}>${escapeHtml(mt.name)}${n ? "" : " (coming)"}</option>`;
+  }).join("");
+  microSel.value = builder.micro;
+  if (microSel.value !== builder.micro) { builder.micro = "ALL"; microSel.value = "ALL"; }
+  document.getElementById("builderFormatCQ").classList.toggle("is-active", builder.format === "CQ");
+  document.getElementById("builderFormatMCQ").classList.toggle("is-active", builder.format === "MCQ");
+  const pool = builderPool();
+  if (count) count.textContent = `${pool.length} question type${pool.length === 1 ? "" : "s"} here`;
+  if (!builder.current || !pool.some(x => x.id === builder.itemId)) builderNext();
+
+  const q = builder.current, item = builderItem();
+  if (!q || !item) {
+    box.innerHTML = `<div class="px-2 py-10 text-center"><p class="section-title">No question types for this choice yet</p><p class="section-sub">Pick another topic or format.</p></div>`;
+    return;
+  }
+  let body;
+  if (q.type === "MCQ") {
+    body = `<p class="q-stem font-bangla">${renderMath(q.stem)}</p>
+      <div class="q-options font-bangla">${q.options.map(o => `<div>${renderMath(o)}</div>`).join("")}</div>`;
+  } else {
+    const angles = anglesOf(item);
+    body = `<p class="q-stem font-bangla">${renderMath(q.stem)}</p>
+      <div class="mt-4 space-y-4">
+        ${q.subparts.map((sp, n) => `
+          <div class="builder-part">
+            <div class="flex items-start justify-between gap-3 font-bangla">
+              <div class="text-sm leading-relaxed text-slate-900"><b>${escapeHtml(sp.label)}</b> ${renderMath(sp.text)}</div>
+              <span class="q-part-marks">[${sp.marks}]</span>
+            </div>
+            <label class="mt-2 flex items-center gap-2 text-xs text-slate-500 no-print">
+              <span class="shrink-0">Angle</span>
+              <select class="field builder-angle font-bangla" data-builder-part="${n}" aria-label="Angle for part ${escapeHtml(sp.label)}">
+                ${angles[PART_KEYS_UI[n]].map((a, i) => `<option value="${i}" ${i === builder.pick[n] ? "selected" : ""}>${escapeHtml(a)}</option>`).join("")}
+              </select>
+            </label>
+          </div>`).join("")}
+      </div>`;
+  }
+  box.innerHTML = `
+    <div class="q-meta">
+      <span class="chip">${escapeHtml(q.curriculum)}</span>
+      <span class="chip font-bangla">${escapeHtml(q.microTopic)}</span>
+      <span class="q-marks">${q.marks} ${q.marks === 1 ? "mark" : "marks"}</span>
+    </div>
+    <p class="q-topic font-bangla">${escapeHtml(item.title)}</p>
+    ${body}
+    <div class="mt-5">
+      <span class="text-xs font-medium uppercase tracking-wide text-slate-500">Mark scheme</span>
+      <div class="q-solution-body font-bangla">${renderMath(q.solution)}</div>
+    </div>`;
+}
+
+function wireBuilder() {
+  const rerender = () => { builderBuild(); renderBuilder(); };
+  document.getElementById("builderMicro").addEventListener("change", e => { builder.micro = e.target.value; builder.current = null; renderBuilder(); });
+  document.getElementById("builderFormatCQ").addEventListener("click", () => { builder.format = "CQ"; builder.current = null; renderBuilder(); });
+  document.getElementById("builderFormatMCQ").addEventListener("click", () => { builder.format = "MCQ"; builder.current = null; renderBuilder(); });
+  document.getElementById("btnBuilderNumbers").addEventListener("click", () => { builder.seed = newSeed(); rerender(); });
+  document.getElementById("btnBuilderNext").addEventListener("click", () => { builderNext(); renderBuilder(); });
+  document.getElementById("builderPreview").addEventListener("change", e => {
+    const n = e.target.getAttribute("data-builder-part");
+    if (n === null) return;
+    builder.pick[Number(n)] = Number(e.target.value);
+    rerender();
+  });
+  const keep = toPaper => {
+    if (!builder.current) return;
+    const q = adoptGenerated(builder.current);
+    if (!q) return;
+    state.questions.unshift(q);
+    if (toPaper) state.paperQueueIds.push(q.id);
+    if (!saveStateToStorage()) return;
+    populateFilterDropdowns();
+    renderQuestionBank();
+    showToast(toPaper ? "Added to the exam paper. Here is the next one." : "Saved to your questions. Here is the next one.");
+    builder.seed = newSeed();
+    rerender();
+  };
+  document.getElementById("btnBuilderAdd").addEventListener("click", () => keep(true));
+  document.getElementById("btnBuilderSave").addEventListener("click", () => keep(false));
+
+  // A whole test on the chosen topic: every question a different type where possible, all with fresh numbers.
+  document.getElementById("btnBuilderTest").addEventListener("click", () => {
+    const topic = findTopic(builder.topicId);
+    const want = { CQ: Math.min(8, Math.max(0, Number(document.getElementById("builderTestCQ").value) || 0)), MCQ: Math.min(25, Math.max(0, Number(document.getElementById("builderTestMCQ").value) || 0)) };
+    const inMicro = x => builder.micro === "ALL" || x.micro === builder.micro;
+    const shuffled = list => list.map(x => [Math.random(), x]).sort((a, b) => a[0] - b[0]).map(p => p[1]);
+    const made = [];
+    [["CQ", topic.families.filter(inMicro)], ["MCQ", topic.mcqs.filter(inMicro)]].forEach(([kind, pool]) => {
+      if (!pool.length) return;
+      let order = [];
+      for (let i = 0; i < want[kind]; i++) {
+        if (!order.length) order = shuffled(pool);
+        const item = order.pop();
+        try { made.push(adoptGenerated(kind === "CQ" ? buildCQ(topic, item, newSeed()) : buildMCQ(topic, item, newSeed()))); } catch (e) { /* skip one that could not be drawn */ }
+      }
+    });
+    const ok = made.filter(Boolean);
+    if (!ok.length) { showToast("There are no question types for this choice yet.", "!"); return; }
+    if (state.paperQueueIds.length && !confirm(`Replace the ${state.paperQueueIds.length} question(s) on the exam paper with this new test?`)) return;
+    state.questions = ok.concat(state.questions);
+    state.paperQueueIds = ok.map(q => q.id);
+    const microLabel = builder.micro === "ALL" ? topic.name : (topic.micro.find(mt => mt.id === builder.micro) || {}).name;
+    document.getElementById("paperHeaderTitle").value = microLabel;
+    saveHeaderFields();
+    if (!saveStateToStorage()) return;
+    populateFilterDropdowns();
+    renderQuestionBank();
+    switchMainTab("paper");
+    showToast(`Built a test with ${ok.length} question(s) and ${ok.reduce((a, q) => a + q.marks, 0)} marks.`);
+  });
+}
+
+// =========================================================================
 // 10. SIGN-IN GATE AND START-UP
 // =========================================================================
 const gateEl = document.getElementById("tutorGate");
 const appEl = document.getElementById("tutorApp");
 let startedFor = null;
+let loadingFor = null;   // an account whose studio is being loaded right now (sign-in reports the same account twice)
 
 function showGate(html) {
   appEl.classList.add("hidden");
@@ -2640,6 +2817,7 @@ async function onAccount(s) {
     return signInView();
   }
   if (startedFor) { if (startedFor !== s.email) location.reload(); return; }
+  if (s.verified && loadingFor === s.email) return;
   if (!s.verified) {
     const g = showGate(`
       <h1 class="gate-title">Verify your email</h1>
@@ -2653,15 +2831,17 @@ async function onAccount(s) {
     return;
   }
   showGate(`<p class="gate-text" style="margin:0">Loading your studio…</p>`);
+  loadingFor = s.email;
   let bank;
   try {
     const c = await fb();
     if (!s.isAdmin) {
       const t = await c.F.getDoc(c.F.doc(c.db, "tutors", s.email));
-      if (!t.exists() || t.data().blocked === true) return notInvitedView(s.email);
+      if (!t.exists() || t.data().blocked === true) { loadingFor = null; return notInvitedView(s.email); }
     }
     bank = await fetchBank(c);
   } catch (e) {
+    loadingFor = null;
     if (e && e.code === "permission-denied") return notInvitedView(s.email);
     const g = showGate(`
       <h1 class="gate-title">Could not load</h1>
@@ -2671,6 +2851,7 @@ async function onAccount(s) {
     g.querySelector("[data-gate='retry']").onclick = () => location.reload();
     return;
   }
+  if (startedFor) return;
   startApp(s, bank);
 }
 
