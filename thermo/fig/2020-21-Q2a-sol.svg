@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" font-family="Helvetica, Arial, sans-serif">
+<title>Fugacity of chloroform at 200 °C versus pressure</title>
+<rect width="640" height="420" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<line x1="80.0" y1="30.0" x2="80.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="80.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >0</text>
+<line x1="142.5" y1="30.0" x2="142.5" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="142.5" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >5</text>
+<line x1="205.0" y1="30.0" x2="205.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="205.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >10</text>
+<line x1="267.5" y1="30.0" x2="267.5" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="267.5" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >15</text>
+<line x1="330.0" y1="30.0" x2="330.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="330.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >20</text>
+<line x1="392.5" y1="30.0" x2="392.5" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="392.5" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >25</text>
+<line x1="455.0" y1="30.0" x2="455.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="455.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >30</text>
+<line x1="517.5" y1="30.0" x2="517.5" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="517.5" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >35</text>
+<line x1="580.0" y1="30.0" x2="580.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="580.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >40</text>
+<line x1="80.0" y1="350.0" x2="580.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="354.0" font-size="12" fill="#55667D" text-anchor="end" >0</text>
+<line x1="80.0" y1="310.0" x2="580.0" y2="310.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="314.0" font-size="12" fill="#55667D" text-anchor="end" >5</text>
+<line x1="80.0" y1="270.0" x2="580.0" y2="270.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="274.0" font-size="12" fill="#55667D" text-anchor="end" >10</text>
+<line x1="80.0" y1="230.0" x2="580.0" y2="230.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="234.0" font-size="12" fill="#55667D" text-anchor="end" >15</text>
+<line x1="80.0" y1="190.0" x2="580.0" y2="190.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="194.0" font-size="12" fill="#55667D" text-anchor="end" >20</text>
+<line x1="80.0" y1="150.0" x2="580.0" y2="150.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="154.0" font-size="12" fill="#55667D" text-anchor="end" >25</text>
+<line x1="80.0" y1="110.0" x2="580.0" y2="110.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="114.0" font-size="12" fill="#55667D" text-anchor="end" >30</text>
+<line x1="80.0" y1="70.0" x2="580.0" y2="70.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="74.0" font-size="12" fill="#55667D" text-anchor="end" >35</text>
+<line x1="80.0" y1="30.0" x2="580.0" y2="30.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="34.0" font-size="12" fill="#55667D" text-anchor="end" >40</text>
+<rect x="80" y="30" width="500" height="320" fill="none" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="330.0" y="386.0" font-size="13" fill="#1E2B3A" text-anchor="middle" >P / bar</text>
+<text x="36.0" y="190.0" font-size="13" fill="#1E2B3A" text-anchor="middle" transform="rotate(-90 36 190.0)">f / bar</text>
+<path d="M80.0,350.0 L580.0,30.0" fill="none" stroke="#9AA8B8" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="6 4"/>
+<text x="417.5" y="102.0" font-size="12" fill="#55667D" text-anchor="start" >f = P (ideal gas)</text>
+<path d="M80.0,350.0 L82.8,348.2 L85.6,346.4 L88.4,344.6 L91.2,342.9 L94.1,341.1 L96.9,339.3 L99.7,337.6 L102.5,335.9 L105.3,334.1 L108.1,332.4 L110.9,330.7 L113.7,329.0 L116.6,327.3 L119.4,325.6 L122.2,323.9 L125.0,322.2 L127.8,320.5 L130.6,318.9 L133.4,317.2 L136.2,315.5 L139.0,313.9 L141.9,312.3 L144.7,310.6 L147.5,309.0 L150.3,307.4 L153.1,305.8 L155.9,304.2 L158.7,302.6 L161.5,301.0 L164.4,299.4 L167.2,297.9 L170.0,296.3 L172.8,294.7 L175.6,293.2 L178.4,291.6 L181.2,290.1 L184.0,288.6 L186.9,287.0 L189.7,285.5 L192.5,284.0 L195.3,282.5 L198.1,281.0 L200.9,279.5 L203.7,278.1 L206.5,276.6 L209.3,275.1 L212.2,273.6 L215.0,272.2 L217.8,270.7 L220.6,269.3 L223.4,267.9 L226.2,266.4 L229.0,265.0 L231.8,263.6 L234.7,262.2 L237.5,260.8 L240.3,259.4 L243.1,258.0 L245.9,256.6 L248.7,255.3 L251.5,253.9 L254.3,252.5 L257.1,251.2 L260.0,249.8 L262.8,248.5 L265.6,247.1 L268.4,245.8 L271.2,244.5 L274.0,243.2 L276.8,241.8 L279.6,240.5 L282.5,239.2 L285.3,237.9 L288.1,236.7 L290.9,235.4 L293.7,234.1 L296.5,232.8 L299.3,231.6 L302.1,230.3 L304.9,229.1 L307.8,227.8 L310.6,226.6 L313.4,225.3 L316.2,224.1 L319.0,222.9 L321.8,221.7 L324.6,220.5 L327.4,219.3 L330.3,218.1 L333.1,216.9 L335.9,215.7 L338.7,214.5 L341.5,213.3 L344.3,212.2 L347.1,211.0 L349.9,209.8 L352.8,208.7 L355.6,207.5 L358.4,206.4" fill="none" stroke="#0B7C8C" stroke-width="2.5" stroke-linejoin="round" />
+<path d="M358.4,206.4 L362.9,206.2 L367.4,206.1 L371.9,205.9 L376.5,205.7 L381.0,205.6 L385.5,205.4 L390.0,205.3 L394.6,205.1 L399.1,204.9 L403.6,204.8 L408.1,204.6 L412.7,204.4 L417.2,204.3 L421.7,204.1 L426.2,203.9 L430.7,203.8 L435.3,203.6 L439.8,203.4 L444.3,203.3 L448.8,203.1 L453.4,202.9 L457.9,202.8 L462.4,202.6 L466.9,202.4 L471.4,202.3 L476.0,202.1 L480.5,201.9 L485.0,201.8 L489.5,201.6 L494.1,201.4 L498.6,201.2 L503.1,201.1 L507.6,200.9 L512.2,200.7 L516.7,200.6 L521.2,200.4 L525.7,200.2 L530.2,200.1 L534.8,199.9 L539.3,199.7 L543.8,199.5 L548.3,199.4 L552.9,199.2 L557.4,199.0 L561.9,198.9 L566.4,198.7 L571.0,198.5 L575.5,198.3 L580.0,198.2" fill="none" stroke="#D2552B" stroke-width="2.5" stroke-linejoin="round" />
+<circle cx="80.0" cy="350.0" r="4" fill="#fff" stroke="#1E2B3A" stroke-width="1.8"/>
+<circle cx="142.5" cy="311.9" r="4" fill="#fff" stroke="#1E2B3A" stroke-width="1.8"/>
+<circle cx="205.0" cy="277.4" r="4" fill="#fff" stroke="#1E2B3A" stroke-width="1.8"/>
+<circle cx="267.5" cy="246.2" r="4" fill="#fff" stroke="#1E2B3A" stroke-width="1.8"/>
+<circle cx="330.0" cy="218.2" r="4" fill="#fff" stroke="#1E2B3A" stroke-width="1.8"/>
+<circle cx="358.4" cy="206.4" r="4" fill="#fff" stroke="#1E2B3A" stroke-width="1.8"/>
+<circle cx="392.5" cy="205.2" r="4" fill="#fff" stroke="#1E2B3A" stroke-width="1.8"/>
+<circle cx="455.0" cy="202.9" r="4" fill="#fff" stroke="#1E2B3A" stroke-width="1.8"/>
+<circle cx="517.5" cy="200.5" r="4" fill="#fff" stroke="#1E2B3A" stroke-width="1.8"/>
+<circle cx="580.0" cy="198.2" r="4" fill="#fff" stroke="#1E2B3A" stroke-width="1.8"/>
+<line x1="358.4" y1="350.0" x2="358.4" y2="206.4" stroke="#55667D" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="362.4" y="342.0" font-size="11" fill="#55667D" text-anchor="start" >Pˢᵃᵗ = 22.27</text>
+<text x="192.5" y="326.0" font-size="12" fill="#0B7C8C" text-anchor="start" >vapour: f = φP, generalized virial</text>
+<text x="573.8" y="234.0" font-size="12" fill="#D2552B" text-anchor="end" >liquid: f = φˢᵃᵗPˢᵃᵗ exp[Vˡ(P − Pˢᵃᵗ)/RT]</text>
+<text x="355.0" y="194.4" font-size="12" fill="#1E2B3A" text-anchor="end" >fˢᵃᵗ = 17.95</text>
+<text x="573.8" y="186.2" font-size="12" fill="#D2552B" text-anchor="end" >18.98 at 40 bar</text>
+</svg>
