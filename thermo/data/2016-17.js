@@ -265,34 +265,35 @@ Attached to the paper (Fig. for Q4(a)): SVNA Figure 12.14, heats of solution at 
 **Assumptions:** steady flow; kinetic and potential energy changes neglected, no shaft work, so $Q = \Delta H$. Heats of solution are read from Fig. 12.14 at 25 °C. The vapour is treated as pure water (superheated slightly above 100 °C because of the boiling-point elevation). Method: SVNA §12.4 (Example 12.6-type), also in the course slides.
 
 1. **Material balance:**
-   - LiCl: $0.15 \times 2 = 0.30$ kg/s $= 300/42.39 = 7.076$ mol/s.
-   - Product: $0.30/0.40 = 0.75$ kg/s, containing 0.45 kg/s water $= 24.98$ mol/s.
-   - Feed water: 1.70 kg/s $= 94.37$ mol/s.
+   - LiCl: $0.15 \times 2 = 0.30$ kg/s $= 300/42.39 = 7.077$ mol/s.
+   - Product: $0.30/0.40 = 0.75$ kg/s, containing 0.45 kg/s water $= 450/18.015 = 24.979$ mol/s.
+   - Feed water: 1.70 kg/s $= 94.366$ mol/s.
    - Water evaporated: $2.00 - 0.75 = 1.25$ kg/s.
 
-2. **Hypothetical path** (enthalpy is a state function), all from 25 °C:
+2. **Hypothetical path** (enthalpy is a state function; SVNA Fig. 12.16), all from 25 °C:
    - (a) separate the feed into pure LiCl(s) and water at 25 °C (unmixing);
-   - (b) mix 7.076 mol/s LiCl with 0.45 kg/s water to make the 40% solution at 25 °C;
+   - (b) mix 7.077 mol/s LiCl with 0.45 kg/s water to make the 40% solution at 25 °C;
    - (c) heat the 40% solution from 25 to 132 °C;
    - (d) take the remaining 1.25 kg/s water from liquid at 25 °C to vapour at 132 °C.
 
 3. **Heats of solution from Fig. 12.14 (LiCl(s) curve).**
-   - Feed: $\tilde n = 94.37/7.076 = 13.34$ mol H₂O/mol LiCl. Go up from ñ ≈ 13.3 (a little past the 10 line) to the LiCl curve and across to the axis: $\Delta\tilde H \approx -33.8$ kJ/mol LiCl.
-   - Product: $\tilde n = 24.98/7.076 = 3.53$. Go up from ñ ≈ 3.5 (halfway between the 3 and 4 lines on the log scale) to the steep start of the LiCl curve: $\Delta\tilde H \approx -23.0$ kJ/mol LiCl.
+   - Feed: $\tilde n = 94.366/7.077 = 13.33$ mol H₂O/mol LiCl. Go up from ñ = 13.3 (a little past the 10 line) to the LiCl curve and across to the axis: $\Delta\tilde H = -33.80$ kJ/mol LiCl.
+   - Product: $\tilde n = 24.979/7.077 = 3.53$. Go up from ñ = 3.53 (just past the 3 line on the log scale) to the steep start of the LiCl curve: $\Delta\tilde H = -23.26$ kJ/mol LiCl.
+   - These are the readings printed in SVNA 6th ed. (SI), Example 12.5, pp. 430–432, for exactly this evaporator. Unmixing has the same heat effect as mixing, with the opposite sign.
 
 4. **Enthalpy changes of the steps:**
-$$\Delta H_a = -(7.076)(-33.8) = +239.2\ \mathrm{kJ/s}$$
-$$\Delta H_b = (7.076)(-23.0) = -162.8\ \mathrm{kJ/s}$$
+$$\Delta H_a = -(7.077)(-33.80) = +239.2\ \mathrm{kJ/s}$$
+$$\Delta H_b = (7.077)(-23.26) = -164.6\ \mathrm{kJ/s}$$
 $$\Delta H_c = \dot m\,c_P\,\Delta T = (0.75)(2.72)(132 - 25) = 218.3\ \mathrm{kJ/s}$$
 $$\Delta H_d = (1.25)(2635) = 3293.8\ \mathrm{kJ/s}$$
 
 5. **Heat transfer rate:**
-$$Q = \Delta H = 239.2 - 162.8 + 218.3 + 3293.8 = 3588\ \mathrm{kJ/s} \approx \boxed{3.59\ \mathrm{MW}}$$
+$$Q = \Delta H = 239.2 - 164.6 + 218.3 + 3293.8 = 3586.7\ \mathrm{kJ/s} \approx \boxed{3.59\ \mathrm{MW}}$$
 
-6. **Sensitivity.** The product reading lies on the steep part of the curve; each 1 kJ/mol error in it changes Q by only 7 kW (0.2%). Evaporating the water, $\Delta H_d$, is 92% of the duty. The net heat of concentration ($\Delta H_a + \Delta H_b$ = +76 kJ/s) is the extra energy needed to pull water away from LiCl. If ΔH̃ = −25.9 kJ/mol is read for ñ = 3.53, Q = 3568 kJ/s. Either way, Q ≈ 3.6 MW.
+6. **Comment.** SVNA's Example 12.5 takes $\Delta H_d$ from the steam tables, $(1.25)(2740.3 - 104.8) = 3294.4$ kJ/s, and gets 3587.3 kW. The paper's 2635 kJ/kg gives 3586.7 kJ/s, the same to 0.02%. Evaporating the water ($\Delta H_d$) is 92% of the duty. The net heat of concentration, $\Delta H_a + \Delta H_b$ = +74.6 kJ/s, is the extra energy needed to separate water from LiCl. The product reading lies on the steep part of the curve, but each 1 kJ/mol of error in it changes Q by only 7 kW (0.2%).
 
-**Result:** Q ≈ 3590 kJ/s (about 3.6 MW) is supplied to the evaporator.`,
-          answer: String.raw`LiCl 7.076 mol/s; feed ñ = 13.34 (ΔH̃ ≈ −33.8 kJ/mol), product 0.75 kg/s with ñ = 3.53 (ΔH̃ ≈ −23.0 kJ/mol); 1.25 kg/s water evaporated. Q = 239.2 − 162.8 + 218.3 + 3293.8 ≈ 3588 kJ/s ≈ 3.6 MW.` },
+**Result:** Q ≈ 3587 kJ/s (about 3.59 MW) is supplied to the evaporator.`,
+          answer: String.raw`LiCl 7.077 mol/s; feed ñ = 13.33 (ΔH̃ = −33.80 kJ/mol), product 0.75 kg/s with ñ = 3.53 (ΔH̃ = −23.26 kJ/mol; Fig. 12.14 readings as in SVNA Ex. 12.5); 1.25 kg/s water evaporated. Q = 239.2 − 164.6 + 218.3 + 3293.8 ≈ 3587 kJ/s ≈ 3.59 MW.` },
         { id: "2016-17-Q4b", label: "(b)", marks: "17",
           topic: "solution-applications", sub: "Margules form: limit of G^E/x₁x₂RT as x₁ → 0 equals ln γ₁^∞ = A₁₂",
           type: "derivation", syllabus: "in", repeats: [],
@@ -331,8 +332,29 @@ $$\boxed{\lim_{x_1 \to 0}\frac{G^E}{x_1x_2RT} = \ln\gamma_1^\infty = A_{12}}$$
           topic: "refrigeration", sub: "Linde liquefaction process: schematic and working principle",
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`With a schematic diagram write the working principle of a Linde liquefaction process.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`### Idea
+A gas can be liquefied only if it is cooled below its critical temperature. The Linde process does this by **Joule–Thomson expansion** (throttling) of a compressed gas that has been precooled by **countercurrent heat exchange** with the cold gas returning from the separator. Throttling a real gas at constant enthalpy lowers its temperature when the gas is below its inversion temperature, i.e. when $\mu_{JT} = (\partial T/\partial P)_H > 0$.
+
+![Linde and Claude liquefaction schematics: compressor, heat exchanger, throttle, separator, and in Claude an expansion engine](fig/2022-23-Q2a-sketch.svg)
+
+### Working (Linde process, part (a) of the figure)
+1. **Compression:** make-up gas plus recycled gas is compressed to high pressure (e.g. air to 100–200 bar).
+2. **Cooling:** the hot compressed gas is cooled back to about ambient temperature in a water cooler (state 4 in SVNA Fig. 9.7).
+3. **Heat exchanger:** the high-pressure gas is cooled further by the cold unliquefied low-pressure gas returning from the separator.
+4. **Throttle valve:** the cold high-pressure gas expands at constant enthalpy to about 1 bar. Its temperature drops, and once the process is established part of the stream condenses.
+5. **Separator:** the liquid fraction z is withdrawn as product (state 9). The saturated vapour (1 − z) returns through the heat exchanger, precooling the incoming gas, and leaves warm (state 15) to be recompressed with make-up gas.
+6. **Start-up:** at first the throttle gives only a small cooling. The returning gas cools the feed a little more each pass, and the temperature falls progressively until liquid forms.
+
+### Energy balance (SVNA §9.6)
+For the control volume of heat exchanger, valve and separator (adiabatic, no work), 1 kg of gas enters at $H_4$; z kg of liquid leaves at $H_9$ and (1 − z) kg of gas at $H_{15}$:
+$$H_4 = zH_9 + (1 - z)H_{15} \;\Rightarrow\; z = \frac{H_{15} - H_4}{H_{15} - H_9} = \frac{H_4 - H_{15}}{H_9 - H_{15}}$$
+   z is positive only because $H_4 < H_{15}$: the high-pressure gas at ambient T has a lower enthalpy than the low-pressure gas at the same T (real-gas effect). For methane or air, z is typically only 0.05–0.15.
+
+### Remarks
+- The liquefied fraction is small, because isenthalpic expansion produces little cooling. **Precooling** (e.g. with an NH₃ or propane refrigeration stage) increases z.
+- Gases with low inversion temperatures (H₂, He) warm on throttling at room temperature. They must first be precooled below their inversion temperature (e.g. H₂ with liquid N₂).
+- The **Claude process** improves on Linde by sending part of the high-pressure gas through an expansion engine (turbine), which gives a much larger temperature drop and recovers work.`,
+          answer: String.raw`Compressed gas, cooled to ambient, is further cooled in a countercurrent exchanger by returning cold gas and throttled (Joule–Thomson, below the inversion T) into a separator; liquid z is withdrawn, vapour (1 − z) returns through the exchanger. Energy balance: z = (H₄ − H₁₅)/(H₉ − H₁₅); small z, improved by precooling or by an expander (Claude).` },
         { id: "2016-17-Q5b", label: "(b)", marks: "10+10=20",
           topic: "refrigeration", sub: "R-134a vapour-compression cycle at −12 °C: COP for 38 °C and 27 °C condensation, ideal and 75% compressor",
           type: "numerical", syllabus: "in", repeats: [],
@@ -341,8 +363,52 @@ $$\boxed{\lim_{x_1 \to 0}\frac{G^E}{x_1x_2RT} = \ln\gamma_1^\infty = A_{12}}$$
 (i) Assume isentropic compression of vapor. (10)
 
 (ii) Assume a compressor efficiency of 75%. (10)`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Given:** R-134a vapour-compression cycle; evaporation at −12 °C (saturated vapour to the compressor); condensation at 38 °C or 27 °C (saturated liquid from the condenser); (i) isentropic compression, (ii) compressor efficiency η = 0.75.
+
+**Find:** COP for each condensation temperature.
+
+**Data:** no table is attached, so the values are from Çengel & Boles, Table A-11 (saturated R-134a) and Table A-13 (superheated R-134a), kJ/kg and kJ/(kg K):
+- −12 °C: $P^{sat}$ = 185.37 kPa, $H_1 = h_g$ = 243.34, $S_1 = s_g$ = 0.93925.
+- 38 °C: $P^{sat}$ = 963.68 kPa, $h_f$ = 105.30.
+- 27 °C (between 26 and 28 °C): $P^{sat}$ = 706.6 kPa, $h_f$ = 89.27.
+
+**Assumptions:** steady flow; no pressure drops; throttling isenthalpic ($H_4 = H_3$); kinetic and potential energy neglected.
+
+![Vapour-compression cycle: schematic, T–S and ln P–H diagrams with states 1–4](fig/2023-24-Q2b-sketch.svg)
+
+1. **Refrigeration per kg,** $q_C = H_1 - H_4$:
+$$q_C(38\,°\mathrm C) = 243.34 - 105.30 = 138.04\ \mathrm{kJ/kg}, \qquad q_C(27\,°\mathrm C) = 243.34 - 89.27 = 154.07\ \mathrm{kJ/kg}$$
+
+2. **Isentropic compressor exit, $H_2'$ at $S = 0.93925$** (A-13, interpolating first in s along each isobar, then in P):
+   - 0.9 MPa: between 40 °C (s = 0.9328, h = 274.19) and 50 °C (0.9661, 284.79), h = 276.24.
+   - 1.0 MPa: between 40 °C (0.9180, 271.73) and 50 °C (0.9526, 282.76), h = 278.50.
+   - At 0.9637 MPa (38 °C): $H_2' = 276.24 + 0.637(278.50 - 276.24) = 277.68$ kJ/kg (about 45 °C).
+   - 0.7 MPa: between 30 °C (0.9314, 268.47) and 40 °C (0.9642, 278.59), h = 270.89.
+   - 0.8 MPa: between saturation (0.9185, 267.34) and 40 °C (0.9481, 276.46), h = 273.73.
+   - At 0.7066 MPa (27 °C): $H_2' = 270.89 + 0.066(273.73 - 270.89) = 271.08$ kJ/kg.
+
+3. **(i) Isentropic compression:** $W_s = H_2' - H_1$ and COP = $q_C/W_s$:
+$$38\,°\mathrm C:\; W_s = 277.68 - 243.34 = 34.34\ \mathrm{kJ/kg}, \qquad \mathrm{COP} = \frac{138.04}{34.34} = 4.02$$
+$$27\,°\mathrm C:\; W_s = 271.08 - 243.34 = 27.74\ \mathrm{kJ/kg}, \qquad \mathrm{COP} = \frac{154.07}{27.74} = 5.55$$
+
+4. **(ii) Compressor efficiency 75%:** $W = W_s/\eta$ (and $H_2 = H_1 + W$):
+$$38\,°\mathrm C:\; W = \frac{34.34}{0.75} = 45.79\ \mathrm{kJ/kg}, \qquad \mathrm{COP} = \frac{138.04}{45.79} = 3.01 \quad(H_2 = 289.1)$$
+$$27\,°\mathrm C:\; W = \frac{27.74}{0.75} = 36.99\ \mathrm{kJ/kg}, \qquad \mathrm{COP} = \frac{154.07}{36.99} = 4.17 \quad(H_2 = 280.3)$$
+
+5. **Summary and effect of condensation temperature:**
+
+| Condensation T | 38 °C | 27 °C |
+|---|---|---|
+| $q_C$ / kJ kg⁻¹ | 138.04 | 154.07 |
+| $W_s$ / kJ kg⁻¹ | 34.34 | 27.74 |
+| COP, isentropic | 4.02 | 5.55 |
+| COP, η = 0.75 | 3.01 | 4.17 |
+| Carnot COP, $T_C/(T_H - T_C)$ | 261.15/50 = 5.22 | 261.15/39 = 6.70 |
+
+   Lowering the condensation temperature from 38 °C to 27 °C raises the COP by about 38% in both cases. The compressor works against a smaller pressure ratio (3.8 instead of 5.2), so it needs less work, and the colder liquid gives more refrigeration per kg (less flash vapour after the valve). This is why condensers are designed for the lowest practical cooling-water or air temperature.
+
+**Result:** (i) COP = 4.02 (38 °C) and 5.55 (27 °C); (ii) COP = 3.01 (38 °C) and 4.17 (27 °C).`,
+          answer: String.raw`Çengel A-11/A-13: H₁ = 243.34, S₁ = 0.93925; q_C = 138.04 (38 °C) and 154.07 kJ/kg (27 °C); isentropic H₂′ = 277.68 and 271.08 ⇒ W_s = 34.34, 27.74 ⇒ COP = 4.02, 5.55; η = 0.75: COP = 3.01, 4.17. Lower condensation T raises the COP by ≈ 38%.` }
       ] },
     { id: "2016-17-Q6", q: 6, section: "B",
       stem: String.raw``,
@@ -351,14 +417,54 @@ $$\boxed{\lim_{x_1 \to 0}\frac{G^E}{x_1x_2RT} = \ln\gamma_1^\infty = A_{12}}$$
           topic: "refrigeration", sub: "Choice of refrigerant",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`Discuss on the choice of refrigerant.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`The COP of an ideal cycle depends mainly on the evaporator and condenser temperatures, not on the refrigerant. The choice of refrigerant is therefore governed by its properties, equipment cost, safety and environment (SVNA §9.2).
+
+### Thermodynamic and physical requirements
+1. **Vapour pressures:** at the evaporator temperature the vapour pressure should be **above atmospheric**, so air and moisture cannot leak in. At the condenser temperature it should be **moderate**, so the equipment is not heavy and the compression ratio is low.
+2. **Critical temperature** well above the condensing temperature (otherwise heat cannot be rejected by condensation, and the throttling losses become large). **Freezing point** well below the evaporator temperature.
+3. **High latent heat of vaporization:** gives more refrigeration per kg, so a smaller circulation rate.
+4. **Small specific volume of the suction vapour:** gives a smaller compressor displacement per kW of refrigeration.
+5. **Good heat-transfer properties,** low viscosity, and a low discharge temperature after compression.
+
+### Practical requirements
+6. **Safety:** non-toxic and non-flammable, or at least easy to detect when leaking (NH₃ is toxic but its smell gives warning; hydrocarbons are flammable).
+7. **Chemical stability** in the cycle, no corrosion of metals, compatibility with lubricating oil and seals.
+8. **Low cost and availability.**
+
+### Environmental requirements
+9. **Zero ozone-depletion potential (ODP):** CFCs (R-11, R-12) and later HCFCs (R-22) destroy stratospheric ozone and were phased out under the Montreal Protocol.
+10. **Low global-warming potential (GWP):** HFCs such as R-134a (GWP ≈ 1430) are being phased down (Kigali Amendment) in favour of R-1234yf, R-1234ze, CO₂ (R-744), ammonia (R-717) and hydrocarbons (propane R-290, isobutane R-600a).
+
+### Typical choices
+| Application | Refrigerant |
+|---|---|
+| Large industrial plants, cold stores | ammonia |
+| Domestic refrigerators | R-134a, now isobutane (R-600a) |
+| Car air conditioning | R-134a, now R-1234yf |
+| Air conditioning, heat pumps | R-410A, R-32, CO₂ |
+| Absorption units | NH₃–water, water–LiBr |
+| Very low temperatures | cascade systems (e.g. ethane or ethylene in the low stage) |
+
+No single fluid meets every requirement, so the selection is a compromise.`,
+          answer: String.raw`COP depends mainly on T's; choose a refrigerant with P^sat > 1 atm at the evaporator and moderate P at the condenser, T_c well above and freezing point well below the operating range, high latent heat, small suction volume, non-toxic, non-flammable, stable, non-corrosive, cheap, and zero ODP and low GWP (CFCs banned; HFCs phased down; NH₃, CO₂, hydrocarbons, HFOs).` },
         { id: "2016-17-Q6b", label: "(b)", marks: "10",
           topic: "refrigeration", sub: "Ways of cooling a gas shown on a T–S diagram",
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`Write different ways of cooling process on a T-S diagram.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`A gas can be cooled in three ways, shown from the same starting state A (high pressure, ambient temperature) on a T–S diagram (SVNA §9.6, Fig. 9.6):
+
+![Ways of cooling a gas on a T–S diagram: 1 constant-pressure cooling, 2 isentropic expansion, 3 throttling, and throttling of precooled gas A′ into the two-phase region](fig/2016-17-Q6b-sketch.svg)
+
+1. **Heat exchange at constant pressure** (path 1, along the high-P isobar). The gas gives up heat to a colder medium and can be cooled until it condenses. Its limit is the temperature of the available coolant, so it needs a colder fluid (precooling refrigerant, or the cold returning gas in a countercurrent exchanger).
+
+2. **Expansion in an engine or turbine with work output, ideally isentropic** (path 2, vertical line from the high-P to the low-P isobar). It gives the **largest** temperature drop for a given pressure ratio and always cools, because
+$$\left(\frac{\partial T}{\partial P}\right)_S = \frac{T}{C_P}\left(\frac{\partial V}{\partial T}\right)_P > 0$$
+   Starting close enough to the dome, the end point lies inside it and part of the gas condenses. Drawbacks: the expander is costly, and liquid in a turbine causes damage. Used in the Claude process.
+
+3. **Throttling through a valve at constant enthalpy** (path 3, Joule–Thomson expansion). It cools only if the gas is below its inversion temperature, $\mu_{JT} = (\partial T/\partial P)_H > 0$, and the cooling is much smaller than in an isentropic expansion over the same pressure range. It is simple, has no moving parts, and works in the two-phase region. If the gas is first precooled at high pressure (point A′, path 1 + 3), the throttle ends inside the two-phase dome and part of the gas liquefies. That is the Linde process.
+
+**In liquefaction processes:** Linde = constant-P cooling (heat exchanger) + throttling; Claude = constant-P cooling + partial isentropic expansion in an expander + throttling of the rest.`,
+          answer: String.raw`On T–S from a high-P state A: (1) constant-P heat exchange along the isobar (limited by coolant T); (2) isentropic expansion in an expander, vertical drop, largest cooling, always cools; (3) isenthalpic throttling, small cooling, only below the inversion T, ends in the dome if the gas is precooled (Linde). Claude combines 1 + 2 + 3.` },
         { id: "2016-17-Q6c", label: "(c)", marks: "15",
           topic: "reaction-equilibria", sub: "Mole fractions versus two reaction coordinates: CO₂ hydrogenation to methanol and CO",
           type: "derivation", syllabus: "in", repeats: [],
@@ -368,8 +474,38 @@ $$\mathrm{CO_2 + 3H_2 \rightarrow CH_3OH + H_2O}$$
 $$\mathrm{CO_2 + H_2 \rightarrow CO + H_2O}$$
 
 Develop expressions for the mole fractions of the reacting species as function of the reaction coordinates for the two reactions.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Given:** initial moles $n_{CO_2,0} = 2$, $n_{H_2,0} = 5$, $n_{CO,0} = 1$, $n_{CH_3OH,0} = n_{H_2O,0} = 0$; $n_0 = 8$ mol. Reaction coordinates $\varepsilon_1$ (methanol reaction, j = 1) and $\varepsilon_2$ (reverse shift, j = 2).
+
+**Method:** SVNA §13.2, multiple reactions: $n_i = n_{i0} + \sum_j\nu_{i,j}\varepsilon_j$, $n = n_0 + \sum_j\nu_j\varepsilon_j$ with $\nu_j = \sum_i\nu_{i,j}$, and $y_i = n_i/n$.
+
+1. **Stoichiometric numbers:**
+
+| Species i | $\nu_{i,1}$ | $\nu_{i,2}$ | $n_{i0}$ |
+|---|---|---|---|
+| CO₂ | −1 | −1 | 2 |
+| H₂ | −3 | −1 | 5 |
+| CH₃OH | +1 | 0 | 0 |
+| CO | 0 | +1 | 1 |
+| H₂O | +1 | +1 | 0 |
+| $\nu_j = \sum_i\nu_{i,j}$ | −2 | 0 | 8 |
+
+2. **Total moles:**
+$$n = n_0 + \nu_1\varepsilon_1 + \nu_2\varepsilon_2 = 8 - 2\varepsilon_1$$
+
+3. **Mole fractions:**
+$$y_{CO_2} = \frac{2 - \varepsilon_1 - \varepsilon_2}{8 - 2\varepsilon_1}, \qquad y_{H_2} = \frac{5 - 3\varepsilon_1 - \varepsilon_2}{8 - 2\varepsilon_1}, \qquad y_{CH_3OH} = \frac{\varepsilon_1}{8 - 2\varepsilon_1}$$
+$$y_{CO} = \frac{1 + \varepsilon_2}{8 - 2\varepsilon_1}, \qquad y_{H_2O} = \frac{\varepsilon_1 + \varepsilon_2}{8 - 2\varepsilon_1}$$
+   Check: the numerators add to $(2 + 5 + 1) + (-1 - 3 + 1 + 1)\varepsilon_1 + (-1 - 1 + 1 + 1)\varepsilon_2 = 8 - 2\varepsilon_1$, so $\sum y_i = 1$ ✓.
+
+4. **Limits on the coordinates** (every $n_i \ge 0$): $\varepsilon_1 \ge 0$; $\varepsilon_1 + \varepsilon_2 \ge 0$ (water); $\varepsilon_2 \ge -1$ (CO); $\varepsilon_1 + \varepsilon_2 \le 2$ (CO₂); $3\varepsilon_1 + \varepsilon_2 \le 5$ (H₂). $\varepsilon_2$ may be negative (the shift running backwards, CO + H₂O → CO₂ + H₂) as long as these hold.
+
+5. **Use in the equilibrium problem.** With ideal gases, each reaction gives one equation, $\prod_i y_i^{\nu_{i,j}} = (P/P^\circ)^{-\nu_j}K_j$:
+$$\frac{y_{CH_3OH}\,y_{H_2O}}{y_{CO_2}\,y_{H_2}^3} = \frac{\varepsilon_1(\varepsilon_1 + \varepsilon_2)(8 - 2\varepsilon_1)^2}{(2 - \varepsilon_1 - \varepsilon_2)(5 - 3\varepsilon_1 - \varepsilon_2)^3} = \left(\frac{P}{P^\circ}\right)^2K_1$$
+$$\frac{y_{CO}\,y_{H_2O}}{y_{CO_2}\,y_{H_2}} = \frac{(1 + \varepsilon_2)(\varepsilon_1 + \varepsilon_2)}{(2 - \varepsilon_1 - \varepsilon_2)(5 - 3\varepsilon_1 - \varepsilon_2)} = K_2$$
+   Two equations in the two unknowns $\varepsilon_1$, $\varepsilon_2$, solved simultaneously once $K_1(T)$ and $K_2(T)$ are known. Reaction 2 has $\nu_2 = 0$, so pressure does not affect it directly.
+
+**Result:** $n = 8 - 2\varepsilon_1$; $y_{CO_2} = (2 - \varepsilon_1 - \varepsilon_2)/n$, $y_{H_2} = (5 - 3\varepsilon_1 - \varepsilon_2)/n$, $y_{CH_3OH} = \varepsilon_1/n$, $y_{CO} = (1 + \varepsilon_2)/n$, $y_{H_2O} = (\varepsilon_1 + \varepsilon_2)/n$.`,
+          answer: String.raw`n = 8 − 2ε₁; y_CO₂ = (2 − ε₁ − ε₂)/(8 − 2ε₁), y_H₂ = (5 − 3ε₁ − ε₂)/(8 − 2ε₁), y_CH₃OH = ε₁/(8 − 2ε₁), y_CO = (1 + ε₂)/(8 − 2ε₁), y_H₂O = (ε₁ + ε₂)/(8 − 2ε₁); Σy = 1.` }
       ] },
     { id: "2016-17-Q7", q: 7, section: "B",
       stem: String.raw``,
@@ -383,8 +519,62 @@ $$\mathrm{2H_2 + CO \rightarrow CH_3OH}$$
 $$\mathrm{H_2 + CO_2 \rightarrow CO + H_2O}$$
 
 Assuming ideal gases, determine the composition of the equilibrium mixture.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Given:** feed (basis 100 mol) 75 H₂, 15 CO, 5 CO₂, 5 N₂ (inert); T = 550 K, P = 100 bar.
+Reaction 1: 2H₂ + CO → CH₃OH ($\nu_1$ = −2). Reaction 2: H₂ + CO₂ → CO + H₂O ($\nu_2$ = 0).
+
+**Find:** equilibrium composition.
+
+**Assumptions:** ideal gases (as stated); standard state pure ideal gas at 1 bar. Data from SVNA Appendix C: Table C.4 (pp. 637–638) and Table C.1 (p. 635):
+
+| Species | $\Delta H^\circ_{f298}$ | $\Delta G^\circ_{f298}$ | A | 10³B | 10⁶C | 10⁻⁵D |
+|---|---|---|---|---|---|---|
+| H₂ | 0 | 0 | 3.249 | 0.422 | 0 | 0.083 |
+| CO | −110 525 | −137 169 | 3.376 | 0.557 | 0 | −0.031 |
+| CO₂ | −393 509 | −394 359 | 5.457 | 1.045 | 0 | −1.157 |
+| H₂O(g) | −241 818 | −228 572 | 3.470 | 1.450 | 0 | 0.121 |
+| CH₃OH(g) | −200 660 | −161 960 | 2.211 | 12.216 | −3.450 | 0 |
+
+(J/mol; $C_P^{ig}/R = A + BT + CT^2 + DT^{-2}$.)
+
+1. **K₁ at 550 K** ($K = K_0K_1K_2$, SVNA eq. 13.21):
+   - $\Delta H_0^\circ$ = −90 135 J/mol; $\Delta G_0^\circ$ = −24 791 J/mol.
+   - ΔA = −7.663, ΔB = 10.815 × 10⁻³, ΔC = −3.450 × 10⁻⁶, ΔD = −0.135 × 10⁵.
+   - $K_0 = e^{24\,791/(8.314 \times 298.15)} = 2.205 \times 10^4$ and
+$$K_1 = \exp\left[\frac{-90\,135}{8.314 \times 298.15}\left(1 - \frac{298.15}{550}\right)\right] = 5.872 \times 10^{-8}$$
+   - $\int_{T_0}^T\frac{\Delta C_P^\circ}{R}dT = -956.43$ K and $\int_{T_0}^T\frac{\Delta C_P^\circ}{R}\frac{dT}{T} = -2.3906$, so $K_2 = \exp(956.43/550 - 2.3906) = e^{-0.6516} = 0.5212$.
+$$K_1(550\ \mathrm K) = 2.205 \times 10^4 \times 5.872 \times 10^{-8} \times 0.5212 = 6.75 \times 10^{-4}$$
+
+2. **K₂ at 550 K** (reverse water-gas shift):
+   - $\Delta H_0^\circ$ = −110 525 − 241 818 + 393 509 = +41 166 J/mol; $\Delta G_0^\circ$ = −137 169 − 228 572 + 394 359 = +28 618 J/mol.
+   - ΔA = −1.860, ΔB = +0.540 × 10⁻³, ΔC = 0, ΔD = +1.164 × 10⁵.
+   - $K_0 = 9.684 \times 10^{-6}$, $K_1$ = 2007.3.
+   - $\int\Delta C_P^\circ/R\,dT = -232.00$ K and $\int\Delta C_P^\circ/R\,dT/T = -0.5406$, so $K_2 = e^{0.4218 - 0.5406} = 0.888$.
+$$K_2(550\ \mathrm K) = 9.684 \times 10^{-6} \times 2007.3 \times 0.888 = 0.0173$$
+
+3. **Mole numbers** with extents $\varepsilon_1$, $\varepsilon_2$ (per 100 mol feed):
+
+| H₂ | CO | CO₂ | H₂O | CH₃OH | N₂ | Total |
+|---|---|---|---|---|---|---|
+| 75 − 2ε₁ − ε₂ | 15 − ε₁ + ε₂ | 5 − ε₂ | ε₂ | ε₁ | 5 | 100 − 2ε₁ |
+
+4. **Equilibrium equations** ($\prod_i y_i^{\nu_i} = (P/P^\circ)^{-\nu}K$; P/P° = 100):
+$$\frac{y_{CH_3OH}}{y_{CO}\,y_{H_2}^2} = \frac{\varepsilon_1(100 - 2\varepsilon_1)^2}{(15 - \varepsilon_1 + \varepsilon_2)(75 - 2\varepsilon_1 - \varepsilon_2)^2} = 100^2(6.75 \times 10^{-4}) = 6.75$$
+$$\frac{y_{CO}\,y_{H_2O}}{y_{CO_2}\,y_{H_2}} = \frac{(15 - \varepsilon_1 + \varepsilon_2)\,\varepsilon_2}{(5 - \varepsilon_2)(75 - 2\varepsilon_1 - \varepsilon_2)} = 0.0173$$
+
+5. **Solve simultaneously.** Iterate: guess $\varepsilon_2$ (≈ 1), solve the first equation for $\varepsilon_1$, update $\varepsilon_2$ from the second, and repeat (or use Newton's method on both). The solution is
+$$\varepsilon_1 = 11.86\ \mathrm{mol}, \qquad \varepsilon_2 = 0.888\ \mathrm{mol}, \qquad n = 100 - 2(11.86) = 76.28\ \mathrm{mol}$$
+
+6. **Equilibrium composition:**
+
+| Species | H₂ | CO | CO₂ | H₂O | CH₃OH | N₂ |
+|---|---|---|---|---|---|---|
+| mol | 50.39 | 4.03 | 4.11 | 0.89 | 11.86 | 5.00 |
+| $y_i$ | 0.6606 | 0.0528 | 0.0539 | 0.0116 | 0.1555 | 0.0655 |
+
+   Check: $0.1555/(0.0528 \times 0.6606^2) = 6.75$ ✓ and $0.0528 \times 0.0116/(0.0539 \times 0.6606) = 0.0173$ ✓.
+
+**Result:** $y_{H_2}$ = 0.661, $y_{CO}$ = 0.053, $y_{CO_2}$ = 0.054, $y_{H_2O}$ = 0.012, $y_{CH_3OH}$ = 0.156, $y_{N_2}$ = 0.066. The methanol formed equals 79% of the CO fed; the net CO conversion is 73%, because the shift reaction converts 18% of the CO₂ to CO.`,
+          answer: String.raw`K₁(550 K) = 2.205×10⁴ × 5.872×10⁻⁸ × 0.5212 = 6.75×10⁻⁴; K₂ = 9.684×10⁻⁶ × 2007 × 0.888 = 0.0173. Solving ε₁(100 − 2ε₁)²/[(15 − ε₁ + ε₂)(75 − 2ε₁ − ε₂)²] = 6.75 and (15 − ε₁ + ε₂)ε₂/[(5 − ε₂)(75 − 2ε₁ − ε₂)] = 0.0173: ε₁ = 11.86, ε₂ = 0.888 ⇒ y: H₂ 0.661, CO 0.053, CO₂ 0.054, H₂O 0.012, CH₃OH 0.156, N₂ 0.066.` }
       ] },
     { id: "2016-17-Q8", q: 8, section: "B",
       stem: String.raw``,
@@ -395,8 +585,32 @@ Assuming ideal gases, determine the composition of the equilibrium mixture.`,
           text: String.raw`For calculating the effect of temperature on the equilibrium constant, derive the following equation:
 
 $$\frac{\Delta G^\circ}{RT} = \frac{\Delta G_0^\circ - \Delta H_0^\circ}{RT_0} + \frac{\Delta H_0^\circ}{RT} + \frac1T\int_{T_0}^{T}\frac{\Delta C_P^\circ}{R}dT - \int_{T_0}^{T}\frac{\Delta C_P^\circ}{R}\frac{dT}{T}$$`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`**Starting point:** $\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$ at temperature T, with known values $\Delta H_0^\circ$, $\Delta G_0^\circ$ at a reference temperature $T_0$ (usually 298.15 K) and $\Delta C_P^\circ = \sum_i\nu_iC_{P_i}^\circ$ as a function of T.
+
+1. **ΔH° at T (Kirchhoff).** For each pure species in its standard state, $dH_i^\circ = C_{P_i}^\circ\,dT$ (the standard pressure is fixed). Multiply by $\nu_i$, sum, and integrate from $T_0$ to T:
+$$\Delta H^\circ = \Delta H_0^\circ + R\int_{T_0}^{T}\frac{\Delta C_P^\circ}{R}dT$$
+
+2. **ΔS° at T.** For each species, $dS_i^\circ = C_{P_i}^\circ\,dT/T$. Summing and integrating in the same way:
+$$\Delta S^\circ = \Delta S_0^\circ + R\int_{T_0}^{T}\frac{\Delta C_P^\circ}{R}\frac{dT}{T}$$
+   At $T_0$, $\Delta G_0^\circ = \Delta H_0^\circ - T_0\Delta S_0^\circ$, so
+$$\Delta S_0^\circ = \frac{\Delta H_0^\circ - \Delta G_0^\circ}{T_0}$$
+
+3. **Combine** in $\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$:
+$$\Delta G^\circ = \Delta H_0^\circ + R\int_{T_0}^{T}\frac{\Delta C_P^\circ}{R}dT - \frac{T}{T_0}(\Delta H_0^\circ - \Delta G_0^\circ) - RT\int_{T_0}^{T}\frac{\Delta C_P^\circ}{R}\frac{dT}{T}$$
+
+4. **Divide by RT:**
+$$\boxed{\frac{\Delta G^\circ}{RT} = \frac{\Delta G_0^\circ - \Delta H_0^\circ}{RT_0} + \frac{\Delta H_0^\circ}{RT} + \frac1T\int_{T_0}^{T}\frac{\Delta C_P^\circ}{R}dT - \int_{T_0}^{T}\frac{\Delta C_P^\circ}{R}\frac{dT}{T}}$$
+   This is SVNA eq. 13.18.
+
+5. **Alternative route (check).** The Gibbs–Helmholtz relation gives $d(\Delta G^\circ/RT)/dT = -\Delta H^\circ/RT^2$, i.e. the van 't Hoff equation $d\ln K/dT = \Delta H^\circ/RT^2$. Integrating it from $T_0$ (where $\Delta G^\circ/RT = \Delta G_0^\circ/RT_0$) with ΔH° from step 1 and integrating by parts gives the same expression.
+
+6. **Use for K.** Since $\ln K = -\Delta G^\circ/RT$, the result splits into three factors, $K = K_0K_1K_2$ (SVNA eq. 13.21):
+$$K_0 = \exp\left(\frac{-\Delta G_0^\circ}{RT_0}\right), \qquad K_1 = \exp\left[\frac{\Delta H_0^\circ}{RT_0}\left(1 - \frac{T_0}{T}\right)\right], \qquad K_2 = \exp\left(-\frac1T\int_{T_0}^{T}\frac{\Delta C_P^\circ}{R}dT + \int_{T_0}^{T}\frac{\Delta C_P^\circ}{R}\frac{dT}{T}\right)$$
+   With $\Delta C_P^\circ/R = \Delta A + \Delta B\,T + \Delta C\,T^2 + \Delta D\,T^{-2}$ the integrals are analytical:
+$$\int_{T_0}^T\frac{\Delta C_P^\circ}{R}dT = \Delta A(T - T_0) + \frac{\Delta B}{2}(T^2 - T_0^2) + \frac{\Delta C}{3}(T^3 - T_0^3) + \Delta D\frac{T - T_0}{TT_0}$$
+$$\int_{T_0}^T\frac{\Delta C_P^\circ}{R}\frac{dT}{T} = \Delta A\ln\frac{T}{T_0} + \Delta B(T - T_0) + \frac{\Delta C}{2}(T^2 - T_0^2) + \frac{\Delta D}{2}\frac{T^2 - T_0^2}{T^2T_0^2}$$
+   $K_2$ is usually close to 1. When $\Delta C_P^\circ \approx 0$, it reduces to the van 't Hoff result $\ln(K/K_0) = -(\Delta H_0^\circ/R)(1/T - 1/T_0)$.`,
+          answer: String.raw`ΔH° = ΔH°₀ + R∫(ΔC°P/R)dT; ΔS° = (ΔH°₀ − ΔG°₀)/T₀ + R∫(ΔC°P/R)dT/T; ΔG° = ΔH° − TΔS°, divided by RT ⇒ ΔG°/RT = (ΔG°₀ − ΔH°₀)/RT₀ + ΔH°₀/RT + (1/T)∫(ΔC°P/R)dT − ∫(ΔC°P/R)dT/T; hence K = K₀K₁K₂.` },
         { id: "2016-17-Q8b", label: "(b)", marks: "15",
           topic: "reaction-equilibria", sub: "2H₂S + SO₂ → 3S + 2H₂O at 450 °C and 8 bar: equilibrium conversion",
           type: "numerical", syllabus: "in", repeats: [],
@@ -405,8 +619,42 @@ $$\frac{\Delta G^\circ}{RT} = \frac{\Delta G_0^\circ - \Delta H_0^\circ}{RT_0} +
 $$\mathrm{2H_2S + SO_2 \rightarrow 3S + 2H_2O}$$
 
 For reactants in the stoichiometric proportion, estimate the percent conversion of each reactant if the reaction comes to equilibrium at 450°C and 8 bar.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Given:** 2H₂S(g) + SO₂(g) → 3S + 2H₂O(g); feed 2 mol H₂S : 1 mol SO₂ (stoichiometric); T = 450 °C = 723.15 K; P = 8 bar.
+
+**Find:** fractional conversion of each reactant.
+
+**Assumptions:**
+- Sulfur forms as a pure condensed phase, as in SVNA's statement of this problem (S(s); activity = 1, so it does not appear in the equilibrium expression). Its $C_P$ is from Table C.2, S (rhombic), used beyond its $T_{max}$ of 368 K. In reality sulfur at 450 °C is a liquid with a significant vapour pressure, so the answer is an estimate.
+- The gases are ideal at 8 bar; standard states are 1 bar.
+- Data: SVNA Table C.4 (pp. 637–638), Table C.1 (p. 635) and Table C.2 (p. 636).
+
+| Species | ν | $\Delta H^\circ_{f298}$ | $\Delta G^\circ_{f298}$ | A | 10³B | 10⁻⁵D |
+|---|---|---|---|---|---|---|
+| H₂S(g) | −2 | −20 630 | −33 560 | 3.931 | 1.490 | −0.232 |
+| SO₂(g) | −1 | −296 830 | −300 194 | 5.699 | 0.801 | −1.015 |
+| S(s) | +3 | 0 | 0 | 4.114 | −1.728 | −0.783 |
+| H₂O(g) | +2 | −241 818 | −228 572 | 3.470 | 1.450 | 0.121 |
+
+1. **Standard changes at 298.15 K:**
+$$\Delta H_0^\circ = 2(-241\,818) - 2(-20\,630) - (-296\,830) = -145\,546\ \mathrm{J/mol}$$
+$$\Delta G_0^\circ = 2(-228\,572) - 2(-33\,560) - (-300\,194) = -89\,830\ \mathrm{J/mol}$$
+$$\Delta A = 5.721, \qquad \Delta B = -6.065 \times 10^{-3}, \qquad \Delta D = -0.628 \times 10^5$$
+
+2. **K at 723.15 K** ($K = K_0K_1K_2$):
+$$K_0 = \exp\frac{89\,830}{8.314 \times 298.15} = 5.475 \times 10^{15}, \qquad K_1 = \exp\left[\frac{-145\,546}{8.314 \times 298.15}\left(1 - \frac{298.15}{723.15}\right)\right] = 1.032 \times 10^{-15}$$
+   $\int\Delta C_P^\circ/R\,dT = 991.37$ K and $\int\Delta C_P^\circ/R\,dT/T = 2.1981$, so $K_2 = \exp(-991.37/723.15 + 2.1981) = e^{0.8272} = 2.287$.
+$$K = 5.475 \times 10^{15} \times 1.032 \times 10^{-15} \times 2.287 = 12.9$$
+
+3. **Mole numbers** (extent ε = fractional conversion X, since the feed is stoichiometric): H₂S 2(1 − X), SO₂ 1 − X, H₂O 2X; gas total 3 − X (sulfur is condensed).
+
+4. **Equilibrium equation.** Gas-phase $\nu = 2 - 2 - 1 = -1$, so $\prod y_i^{\nu_i} = (P/P^\circ)^{1}K$:
+$$\frac{y_{H_2O}^2}{y_{H_2S}^2\,y_{SO_2}} = \frac{[2X/(3 - X)]^2}{[2(1 - X)/(3 - X)]^2\,[(1 - X)/(3 - X)]} = \frac{X^2(3 - X)}{(1 - X)^3} = 8 \times 12.92 = 103.3$$
+
+5. **Solve:** by trial, X = 0.7667. Check:
+$$\frac{0.7667^2(2.2333)}{(0.2333)^3} = 103.4 \approx 103.3 \quad\checkmark$$
+
+**Result:** about **77% conversion of both H₂S and SO₂** (they are fed in the stoichiometric ratio, so the fractional conversions are equal). The gas then contains $y_{H_2O}$ = 0.69, $y_{H_2S}$ = 0.21, $y_{SO_2}$ = 0.10. Higher pressure helps (at 1 bar X = 0.60), and so does lower temperature, since the reaction is strongly exothermic. This is the basis of the Claus process.`,
+          answer: String.raw`ΔH°₂₉₈ = −145 546, ΔG°₂₉₈ = −89 830 J/mol; K(723 K) = 5.475×10¹⁵ × 1.032×10⁻¹⁵ × 2.287 = 12.9 (S as condensed phase). X²(3 − X)/(1 − X)³ = 8K = 103.3 ⇒ X ≈ 0.767: about 77% conversion of both H₂S and SO₂.` }
       ] }
   ]
 });

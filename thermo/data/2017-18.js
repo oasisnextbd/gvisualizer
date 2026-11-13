@@ -327,16 +327,66 @@ $$\mathrm{CO_2(g) + 3H_2(g) \rightarrow CH_3OH(g) + H_2O(g)}$$
 $$\mathrm{CO_2(g) + H_2(g) \rightarrow CO(g) + H_2O(g)}$$
 
 Develop expressions for the mole fractions of the reacting species as function of the reaction coordinates for the two reactions.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`**Given:** initial moles $n_{CO_2,0} = 2$, $n_{H_2,0} = 5$, $n_{CO,0} = 1$, $n_{CH_3OH,0} = n_{H_2O,0} = 0$; $n_0 = 8$ mol. Reaction coordinates $\varepsilon_1$ (methanol reaction, j = 1) and $\varepsilon_2$ (reverse shift, j = 2).
+
+**Method:** SVNA §13.2, multiple reactions: $n_i = n_{i0} + \sum_j\nu_{i,j}\varepsilon_j$, $n = n_0 + \sum_j\nu_j\varepsilon_j$ with $\nu_j = \sum_i\nu_{i,j}$, and $y_i = n_i/n$.
+
+1. **Stoichiometric numbers:**
+
+| Species i | $\nu_{i,1}$ | $\nu_{i,2}$ | $n_{i0}$ |
+|---|---|---|---|
+| CO₂ | −1 | −1 | 2 |
+| H₂ | −3 | −1 | 5 |
+| CH₃OH | +1 | 0 | 0 |
+| CO | 0 | +1 | 1 |
+| H₂O | +1 | +1 | 0 |
+| $\nu_j = \sum_i\nu_{i,j}$ | −2 | 0 | 8 |
+
+2. **Total moles:**
+$$n = n_0 + \nu_1\varepsilon_1 + \nu_2\varepsilon_2 = 8 - 2\varepsilon_1$$
+
+3. **Mole fractions:**
+$$y_{CO_2} = \frac{2 - \varepsilon_1 - \varepsilon_2}{8 - 2\varepsilon_1}, \qquad y_{H_2} = \frac{5 - 3\varepsilon_1 - \varepsilon_2}{8 - 2\varepsilon_1}, \qquad y_{CH_3OH} = \frac{\varepsilon_1}{8 - 2\varepsilon_1}$$
+$$y_{CO} = \frac{1 + \varepsilon_2}{8 - 2\varepsilon_1}, \qquad y_{H_2O} = \frac{\varepsilon_1 + \varepsilon_2}{8 - 2\varepsilon_1}$$
+   Check: the numerators add to $(2 + 5 + 1) + (-1 - 3 + 1 + 1)\varepsilon_1 + (-1 - 1 + 1 + 1)\varepsilon_2 = 8 - 2\varepsilon_1$, so $\sum y_i = 1$ ✓.
+
+4. **Limits on the coordinates** (every $n_i \ge 0$): $\varepsilon_1 \ge 0$; $\varepsilon_1 + \varepsilon_2 \ge 0$ (water); $\varepsilon_2 \ge -1$ (CO); $\varepsilon_1 + \varepsilon_2 \le 2$ (CO₂); $3\varepsilon_1 + \varepsilon_2 \le 5$ (H₂). $\varepsilon_2$ may be negative (the shift running backwards, CO + H₂O → CO₂ + H₂) as long as these hold.
+
+5. **Use in the equilibrium problem.** With ideal gases, each reaction gives one equation, $\prod_i y_i^{\nu_{i,j}} = (P/P^\circ)^{-\nu_j}K_j$:
+$$\frac{y_{CH_3OH}\,y_{H_2O}}{y_{CO_2}\,y_{H_2}^3} = \frac{\varepsilon_1(\varepsilon_1 + \varepsilon_2)(8 - 2\varepsilon_1)^2}{(2 - \varepsilon_1 - \varepsilon_2)(5 - 3\varepsilon_1 - \varepsilon_2)^3} = \left(\frac{P}{P^\circ}\right)^2K_1$$
+$$\frac{y_{CO}\,y_{H_2O}}{y_{CO_2}\,y_{H_2}} = \frac{(1 + \varepsilon_2)(\varepsilon_1 + \varepsilon_2)}{(2 - \varepsilon_1 - \varepsilon_2)(5 - 3\varepsilon_1 - \varepsilon_2)} = K_2$$
+   Two equations in the two unknowns $\varepsilon_1$, $\varepsilon_2$, solved simultaneously once $K_1(T)$ and $K_2(T)$ are known. Reaction 2 has $\nu_2 = 0$, so pressure does not affect it directly.
+
+**Result:** $n = 8 - 2\varepsilon_1$; $y_{CO_2} = (2 - \varepsilon_1 - \varepsilon_2)/n$, $y_{H_2} = (5 - 3\varepsilon_1 - \varepsilon_2)/n$, $y_{CH_3OH} = \varepsilon_1/n$, $y_{CO} = (1 + \varepsilon_2)/n$, $y_{H_2O} = (\varepsilon_1 + \varepsilon_2)/n$.`,
+          answer: String.raw`n = 8 − 2ε₁; y_CO₂ = (2 − ε₁ − ε₂)/(8 − 2ε₁), y_H₂ = (5 − 3ε₁ − ε₂)/(8 − 2ε₁), y_CH₃OH = ε₁/(8 − 2ε₁), y_CO = (1 + ε₂)/(8 − 2ε₁), y_H₂O = (ε₁ + ε₂)/(8 − 2ε₁); Σy = 1.` },
         { id: "2017-18-Q5b", label: "(b)", marks: "15",
           topic: "reaction-equilibria", sub: "Liquid-phase reaction equilibrium constant with the Poynting correction",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Derive the following relationship between equilibrium constants to composition for liquid phase reactions:
 
 $$\prod_i(x_i\gamma_i)^{\nu_i} = K\exp\left[\frac{(P^0 - P)}{RT}\sum_i(\nu_iV_i)\right]$$`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`**Assumptions:** reacting liquid mixture at T and P; standard state of each species is the **pure liquid at T and the standard pressure $P^\circ$** (1 bar); liquid molar volumes $V_i$ independent of pressure (incompressible). Method: SVNA §13.8 (liquid-phase reactions).
+
+1. **General equilibrium criterion.** At constant T and P, $dG^t = \sum_i\mu_i\,dn_i = \left(\sum_i\nu_i\mu_i\right)d\varepsilon$, so $G^t$ is a minimum when $\sum_i\nu_i\mu_i = 0$. With $\mu_i = G_i^\circ + RT\ln(\hat f_i/f_i^\circ)$:
+$$\sum_i\nu_iG_i^\circ + RT\sum_i\nu_i\ln\frac{\hat f_i}{f_i^\circ} = 0 \;\Rightarrow\; \prod_i\left(\frac{\hat f_i}{f_i^\circ}\right)^{\nu_i} = \exp\left(\frac{-\Delta G^\circ}{RT}\right) \equiv K$$
+   K depends only on T, because the standard states are at the fixed pressure $P^\circ$.
+
+2. **Fugacity of a species in the liquid solution.** With activity coefficients (Lewis–Randall rule as reference):
+$$\hat f_i = x_i\gamma_if_i$$
+   where $f_i$ is the fugacity of **pure liquid i at T and the system pressure P**. Then
+$$\frac{\hat f_i}{f_i^\circ} = x_i\gamma_i\frac{f_i}{f_i^\circ}$$
+
+3. **Ratio $f_i/f_i^\circ$ (pure liquid at P vs at $P^\circ$).** At constant T, $dG_i = V_i\,dP = RT\,d\ln f_i$. Integrating from $P^\circ$ to P with constant $V_i$:
+$$\ln\frac{f_i}{f_i^\circ} = \frac{V_i(P - P^\circ)}{RT}$$
+
+4. **Substitute** into the equilibrium relation:
+$$\prod_i(x_i\gamma_i)^{\nu_i}\prod_i\exp\left[\frac{\nu_iV_i(P - P^\circ)}{RT}\right] = K$$
+$$\boxed{\prod_i(x_i\gamma_i)^{\nu_i} = K\exp\left[\frac{(P^\circ - P)}{RT}\sum_i\nu_iV_i\right]}$$
+
+5. **Simplifications.** $\sum\nu_iV_i$ is small (order 10–100 cm³/mol), so the exponential (a Poynting-type correction) is close to 1 unless P is hundreds of bar. Example: $\sum\nu_iV_i$ = −50 cm³/mol, P = 100 bar, T = 300 K gives $\exp[(1 - 100)(-50)/(83.14 \times 300)] = e^{0.198} = 1.22$; at 10 bar it is only 1.02. At low to moderate pressure, therefore,
+$$\prod_i(x_i\gamma_i)^{\nu_i} = K$$
+   and for an ideal solution ($\gamma_i = 1$), $\prod_i x_i^{\nu_i} = K$.`,
+          answer: String.raw`Σνᵢμᵢ = 0 with μᵢ = Gᵢ° + RT ln(f̂ᵢ/fᵢ°) ⇒ Π(f̂ᵢ/fᵢ°)^νᵢ = K. Liquid: f̂ᵢ = xᵢγᵢfᵢ; pure liquid compressed from P° to P: ln(fᵢ/fᵢ°) = Vᵢ(P − P°)/RT. Hence Π(xᵢγᵢ)^νᵢ = K exp[(P° − P)ΣνᵢVᵢ/RT]; exponential ≈ 1 at moderate P, giving Π(xᵢγᵢ)^νᵢ = K (Πxᵢ^νᵢ = K for ideal solution).` },
         { id: "2017-18-Q5c", label: "(c)", marks: "8",
           topic: "vle-intro", sub: "Henry's law and the Henry's-law standard state for dilute aqueous solutes",
           type: "derivation", syllabus: "in", repeats: [],
@@ -378,14 +428,75 @@ the equilibrium conversion to methanol is large at 300 K but decreases rapidly w
           topic: "reaction-equilibria", sub: "Methanol synthesis: equilibrium methanol mole fraction at 1 bar and 300 K",
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`(a) What is equilibrium mole fraction of methanol at 1 bar and 300 K.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`**Given:** CO(g) + 2H₂(g) → CH₃OH(g); feed CO : H₂ = 1 : 2; T = 300 K; P = 1 bar.
+
+**Find:** equilibrium mole fraction of methanol.
+
+**Assumptions:** ideal-gas mixture at 1 bar; standard state pure ideal gas at 1 bar. Data from SVNA Appendix C: Table C.4 (pp. 637–638) for $\Delta H^\circ_{f298}$, $\Delta G^\circ_{f298}$ and Table C.1 (p. 635) for $C_P^{ig}/R = A + BT + CT^2 + DT^{-2}$.
+
+| Species | ν | $\Delta H^\circ_{f298}$ / J mol⁻¹ | $\Delta G^\circ_{f298}$ / J mol⁻¹ | A | 10³B | 10⁶C | 10⁻⁵D |
+|---|---|---|---|---|---|---|---|
+| CO | −1 | −110 525 | −137 169 | 3.376 | 0.557 | 0 | −0.031 |
+| H₂ | −2 | 0 | 0 | 3.249 | 0.422 | 0 | 0.083 |
+| CH₃OH | +1 | −200 660 | −161 960 | 2.211 | 12.216 | −3.450 | 0 |
+
+1. **Standard property changes at 298.15 K:**
+$$\Delta H_0^\circ = -200\,660 + 110\,525 = -90\,135\ \mathrm{J/mol}, \qquad \Delta G_0^\circ = -161\,960 + 137\,169 = -24\,791\ \mathrm{J/mol}$$
+$$\Delta A = -7.663, \quad \Delta B = 10.815 \times 10^{-3}, \quad \Delta C = -3.450 \times 10^{-6}, \quad \Delta D = -0.135 \times 10^5$$
+
+2. **K at 300 K** from $K = K_0K_1K_2$ (SVNA eq. 13.21):
+$$K_0 = \exp\left(\frac{-\Delta G_0^\circ}{RT_0}\right) = \exp\left(\frac{24\,791}{8.314 \times 298.15}\right) = 2.205 \times 10^4$$
+$$K_1 = \exp\left[\frac{\Delta H_0^\circ}{RT_0}\left(1 - \frac{T_0}{T}\right)\right] = \exp\left[\frac{-90\,135}{8.314 \times 298.15}\left(1 - \frac{298.15}{300}\right)\right] = 0.7991$$
+   $K_2$ is nearly 1 because T is only 1.85 K above $T_0$:
+$$K_2 = \exp\left(-\frac1T\int_{T_0}^T\frac{\Delta C_P^\circ}{R}dT + \int_{T_0}^T\frac{\Delta C_P^\circ}{R}\frac{dT}{T}\right) = \exp(0.03014 - 0.03024) = 0.9999$$
+$$K = 2.205 \times 10^4 \times 0.7991 \times 0.9999 = 1.762 \times 10^4$$
+
+3. **Mole numbers** (basis 1 mol CO, 2 mol H₂; extent ε):
+
+| CO | H₂ | CH₃OH | Total |
+|---|---|---|---|
+| 1 − ε | 2 − 2ε | ε | 3 − 2ε |
+
+4. **Equilibrium equation** (ideal gas, ν = −2):
+$$\frac{y_{CH_3OH}}{y_{CO}\,y_{H_2}^2} = \left(\frac{P}{P^\circ}\right)^2K \;\Rightarrow\; \frac{\varepsilon(3 - 2\varepsilon)^2}{(1 - \varepsilon)(2 - 2\varepsilon)^2} = \frac{\varepsilon(3 - 2\varepsilon)^2}{4(1 - \varepsilon)^3} = 1.762 \times 10^4$$
+
+5. **Solve.** K is large, so ε is close to 1. A first estimate with ε = 1 in the numerator: $(1 - \varepsilon)^3 = 1/(4 \times 17\,620)$, so 1 − ε = 0.0242. Iterating (or by Newton) gives
+$$\varepsilon = 0.9752, \qquad n = 3 - 2(0.9752) = 1.0496\ \mathrm{mol}$$
+   Check: $0.9752(1.0496)^2/[4(0.0248)^3] = 1.762 \times 10^4$ ✓.
+
+6. **Mole fractions:**
+$$y_{CH_3OH} = \frac{0.9752}{1.0496} = 0.929, \qquad y_{CO} = \frac{0.0248}{1.0496} = 0.0236, \qquad y_{H_2} = \frac{0.0496}{1.0496} = 0.0473$$
+
+**Result:** at 300 K and 1 bar, $y_{CH_3OH}$ ≈ 0.93 (97.5% conversion of CO). Equilibrium strongly favours methanol at low T, but the rate is negligible there.`,
+          answer: String.raw`ΔH°₂₉₈ = −90 135, ΔG°₂₉₈ = −24 791 J/mol; K(300 K) = K₀K₁K₂ = 2.205×10⁴ × 0.7991 × 0.9999 = 1.76×10⁴; ε(3 − 2ε)²/[4(1 − ε)³] = K ⇒ ε = 0.975, y_CH₃OH = 0.929.` },
         { id: "2017-18-Q6b", label: "(b)", marks: "",
           topic: "reaction-equilibria", sub: "Methanol synthesis: temperature at which y(CH₃OH) = 0.5 at 1 bar",
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`(b) At what temperature does the equilibrium mole fraction of methanol equal to 0.5 for a pressure of 1 bar.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Given:** same reaction and feed as (a); P = 1 bar; required $y_{CH_3OH}$ = 0.5.
+
+**Find:** T.
+
+**Assumptions:** as in (a): ideal gases, SVNA Appendix C data, $K = K_0K_1K_2$.
+
+1. **Extent for $y_{CH_3OH}$ = 0.5:**
+$$\frac{\varepsilon}{3 - 2\varepsilon} = 0.5 \;\Rightarrow\; \varepsilon = 0.75, \qquad n = 1.5$$
+$$y_{CO} = \frac{0.25}{1.5} = \frac16, \qquad y_{H_2} = \frac{0.5}{1.5} = \frac13$$
+
+2. **Required K** (P = 1 bar):
+$$K = \frac{y_{CH_3OH}}{y_{CO}\,y_{H_2}^2} = \frac{0.5}{(1/6)(1/3)^2} = 27$$
+
+3. **First estimate (van 't Hoff, constant ΔH°):**
+$$\ln\frac{K}{K_0} = -\frac{\Delta H_0^\circ}{R}\left(\frac1T - \frac1{T_0}\right) \;\Rightarrow\; \frac1T = \frac1{298.15} + \frac{8.314\ln(27/22\,051)}{90\,135} = 2.7355 \times 10^{-3}$$
+   T ≈ 365.6 K.
+
+4. **Exact solution** with the full ΔC°P terms: find T such that $K_0K_1(T)K_2(T) = 27$. Trial near 365 K converges to T = 364.5 K:
+$$K_1 = \exp\left[\frac{-90\,135}{8.314 \times 298.15}\left(1 - \frac{298.15}{364.47}\right)\right] = 1.338 \times 10^{-3}$$
+   $\int\Delta C_P^\circ/R\,dT = -304.02$ K, so $-\frac1T\int\Delta C_P^\circ/R\,dT = +0.8341$; $\int\Delta C_P^\circ/R\,dT/T = -0.9228$; $K_2 = e^{0.8341 - 0.9228} = 0.9152$.
+$$K = 22\,051 \times 1.338 \times 10^{-3} \times 0.9152 = 27.0 \quad\checkmark$$
+
+**Result:** T ≈ 364 K (about 91 °C). Methanol's equilibrium yield falls quickly with T (from 0.93 at 300 K to 0.5 at 364 K at 1 bar). Industrial reactors run at about 500–550 K, where the catalyst is active, and use 50–100 bar to restore the conversion, since the reaction reduces the number of moles (ν = −2, so K is multiplied by $(P/P^\circ)^2$).`,
+          answer: String.raw`y = 0.5 ⇒ ε = 0.75, y_CO = 1/6, y_H₂ = 1/3 ⇒ K = 27 at 1 bar. van 't Hoff estimate 365.6 K; with ΔC°P terms K₀K₁K₂ = 27 at T ≈ 364.5 K (K₁ = 1.338×10⁻³, K₂ = 0.915).` }
       ] },
     { id: "2017-18-Q7", q: 7, section: "B",
       stem: String.raw``,
@@ -460,8 +571,27 @@ At low pressure $\Phi_i = 1$ and the scheme reduces to the modified-Raoult DEW T
           topic: "reaction-equilibria", sub: "Equilibrium constant and the standard Gibbs-energy change of reaction",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Derive the relationship between equilibrium constant and Gibbs free energy change at standard conditions.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`1. **Gibbs energy of a reacting system.** For a single phase at constant T and P, $dG^t = \sum_i\mu_i\,dn_i$. For a reaction, $dn_i = \nu_i\,d\varepsilon$, so
+$$\left(\frac{\partial G^t}{\partial\varepsilon}\right)_{T,P} = \sum_i\nu_i\mu_i$$
+   At equilibrium $G^t$ is a minimum, so the derivative is zero:
+$$\sum_i\nu_i\mu_i = 0$$
+
+2. **Chemical potential in terms of fugacity.** Relative to a standard state at the same T (pure i at the standard pressure $P^\circ$ = 1 bar, fugacity $f_i^\circ$):
+$$\mu_i = G_i^\circ + RT\ln\frac{\hat f_i}{f_i^\circ}$$
+
+3. **Substitute:**
+$$\sum_i\nu_iG_i^\circ + RT\sum_i\ln\left(\frac{\hat f_i}{f_i^\circ}\right)^{\nu_i} = 0 \;\Rightarrow\; \ln\prod_i\left(\frac{\hat f_i}{f_i^\circ}\right)^{\nu_i} = \frac{-\sum_i\nu_iG_i^\circ}{RT}$$
+
+4. **Define** the standard Gibbs-energy change of reaction and the equilibrium constant:
+$$\Delta G^\circ \equiv \sum_i\nu_iG_i^\circ = \sum_i\nu_i\Delta G_{f_i}^\circ, \qquad K \equiv \prod_i\left(\frac{\hat f_i}{f_i^\circ}\right)^{\nu_i}$$
+$$\boxed{-RT\ln K = \Delta G^\circ \qquad\text{or}\qquad K = \exp\left(\frac{-\Delta G^\circ}{RT}\right)}$$
+
+5. **Remarks.**
+   - $G_i^\circ$ is a property of pure i at T and the fixed pressure $P^\circ$, so ΔG° and K depend on **T only**, not on P or composition.
+   - Ideal-gas reaction ($\hat f_i = y_iP$, $f_i^\circ = P^\circ$): $\prod_i(y_iP/P^\circ)^{\nu_i} = K$, i.e. $\prod_i y_i^{\nu_i} = (P/P^\circ)^{-\nu}K$.
+   - ΔG° < 0 gives K > 1 (products favoured); ΔG° > 0 gives K < 1. Example: CO + 2H₂ → CH₃OH at 298.15 K, ΔG° = −24 791 J/mol, so K = exp(24 791/(8.314 × 298.15)) = 2.21 × 10⁴.
+   - The temperature dependence follows from $d\ln K/dT = \Delta H^\circ/RT^2$ (van 't Hoff).`,
+          answer: String.raw`At equilibrium (∂Gᵗ/∂ε)_T,P = Σνᵢμᵢ = 0; μᵢ = Gᵢ° + RT ln(f̂ᵢ/fᵢ°) ⇒ ΣνᵢGᵢ° + RT ln Π(f̂ᵢ/fᵢ°)^νᵢ = 0 ⇒ −RT ln K = ΔG°, with K = Π(f̂ᵢ/fᵢ°)^νᵢ, ΔG° = ΣνᵢΔG°fᵢ; K depends on T only.` }
       ] },
     { id: "2017-18-Q8", q: 8, section: "B",
       stem: String.raw``,
@@ -470,14 +600,57 @@ At low pressure $\Phi_i = 1$ and the scheme reduces to the modified-Raoult DEW T
           topic: "refrigeration", sub: "Absorption refrigeration unit: sketch and principle",
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`With a neat sketch, explain the principle of an absorption refrigeration unit.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`### Principle
+A vapour-compression refrigerator uses **work** to raise the low-pressure refrigerant vapour to the condenser pressure. An absorption unit does the same job with **heat**. The vapour from the evaporator is dissolved (absorbed) in a liquid at low pressure. The liquid solution is pumped to high pressure, which costs very little work because a liquid's volume is small ($W = \int V\,dP$). Heat then drives the refrigerant out of the solution again. Common pairs: ammonia (refrigerant) + water (absorbent), and water (refrigerant) + aqueous LiBr (absorbent) for air conditioning.
+
+![Absorption refrigeration cycle: generator, condenser, expansion valve, evaporator, absorber and solution pump](fig/2023-24-Q1a-sketch.svg)
+
+### Working of the unit (NH₃–H₂O)
+1. **Evaporator (low P):** liquid NH₃ boils at $T_C$ and takes the refrigeration load $Q_C$ from the cold space.
+2. **Absorber (low P):** the NH₃ vapour dissolves in weak (NH₃-lean) solution. Absorption is exothermic, so cooling water removes heat at about the surroundings temperature $T_S$. Strong (NH₃-rich) solution leaves.
+3. **Pump:** the strong solution is pumped to condenser pressure (small work).
+4. **Generator (still, high P):** heat $Q_H$ from steam, flue gas or waste heat at $T_H$ boils NH₃ out of the solution. A rectifier removes the water vapour carried with it.
+5. **Condenser (high P):** NH₃ vapour condenses, rejecting heat at $T_S$.
+6. **Expansion valve:** the liquid NH₃ is throttled to evaporator pressure, closing the refrigerant loop. The hot weak solution returns to the absorber through a pressure-reducing valve, exchanging heat with the cold strong solution in a solution heat exchanger.
+
+### Thermodynamic limit (SVNA §9.4)
+The generator plus absorber act as a heat engine between $T_H$ and $T_S$ that drives a refrigerator between $T_C$ and $T_S$. For reversible (Carnot) operation:
+$$W = Q_C\frac{T_S - T_C}{T_C} = Q_H\frac{T_H - T_S}{T_H} \;\Rightarrow\; \left(\frac{Q_H}{Q_C}\right)_{min} = \frac{T_H}{T_H - T_S}\cdot\frac{T_S - T_C}{T_C}$$
+   Example: steam at 120 °C, surroundings 30 °C, refrigeration at −10 °C: $Q_H/Q_C = \frac{393.15}{90}\cdot\frac{40}{263.15} = 0.66$. Real single-effect units need $Q_H/Q_C$ of roughly 1.5–2 (COP 0.5–0.7).
+
+### Features
+- **Advantages:** uses low-grade or waste heat; almost no moving parts except a small pump; quiet; no ozone-depleting refrigerant.
+- **Limitations:** low COP; bulky and costly (four heat exchangers plus solution circuit); NH₃ is toxic and needs rectification; with LiBr–water, $T_C$ must stay above 0 °C, the plant runs under vacuum, and LiBr can crystallize.`,
+          answer: String.raw`Refrigerant vapour from the evaporator is absorbed in weak solution (absorber, cooled), the strong solution is pumped to high P, heat Q_H in the generator drives the refrigerant out, it condenses, is throttled and evaporates taking Q_C. Heat replaces compressor work; (Q_H/Q_C)min = [T_H/(T_H − T_S)][(T_S − T_C)/T_C]; COP 0.5–0.7; NH₃–H₂O or H₂O–LiBr.` },
         { id: "2017-18-Q8b", label: "(b)", marks: "20",
           topic: "refrigeration", sub: "R-134a refrigerator, −26 °C evaporator and 27 °C condenser: circulation rate for 5.25 kW",
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`A refrigerator with tetrafluoroethane as refrigerant operates with an evaporation temperature of −26°C and a condensation temperature of 27°C. Standard liquid refrigerant from the condenser flows through an expansion valve into the evaporator, from which it emerges as saturated vapor. For a cooling rate of 5.25 kW, what is the circulation rate of the refrigerant?`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Given:** tetrafluoroethane (R-134a); evaporation at −26 °C, condensation at 27 °C; saturated liquid leaves the condenser and saturated vapour leaves the evaporator; $\dot Q_C$ = 5.25 kW.
+
+**Find:** refrigerant circulation rate $\dot m$.
+
+**Data:** no table is attached to the paper, so the values are from Çengel & Boles, Table A-11 (saturated R-134a, temperature table):
+- −26 °C: $P^{sat}$ = 101.73 kPa, $h_g$ = 234.70 kJ/kg.
+- 27 °C (interpolated between 26 °C, $h_f$ = 87.83, and 28 °C, $h_f$ = 90.70): $P^{sat}$ = 706.6 kPa, $h_f$ = 89.27 kJ/kg.
+
+**Assumptions:** steady flow; no pressure drops in the exchangers; kinetic and potential energy changes neglected; the expansion valve is adiabatic with no work, so throttling is isenthalpic.
+
+![Vapour-compression cycle: schematic, T–S and ln P–H diagrams with states 1–4](fig/2023-24-Q2b-sketch.svg)
+
+1. **States** (1 = evaporator exit, 2 = compressor exit, 3 = condenser exit, 4 = valve exit):
+$$H_1 = h_g(-26\,°\mathrm C) = 234.70\ \mathrm{kJ/kg}, \qquad H_3 = h_f(27\,°\mathrm C) = 89.27\ \mathrm{kJ/kg}$$
+
+2. **Throttle (isenthalpic):** $H_4 = H_3 = 89.27$ kJ/kg. The valve exit is a two-phase mixture at −26 °C with quality $x_4 = (89.27 - 17.75)/216.95 = 0.330$.
+
+3. **Refrigeration per kg (evaporator energy balance):**
+$$q_C = H_1 - H_4 = 234.70 - 89.27 = 145.43\ \mathrm{kJ/kg}$$
+
+4. **Circulation rate:**
+$$\dot m = \frac{\dot Q_C}{H_1 - H_4} = \frac{5.25}{145.43} = 0.0361\ \mathrm{kg/s}$$
+
+**Result:** $\dot m$ ≈ 0.0361 kg/s (about 130 kg/h) of R-134a. The compressor work is not needed for this answer. With isentropic compression to 0.70 MPa (A-13, $H_2$ ≈ 274.7 kJ/kg) it would be about 40 kJ/kg, COP ≈ 3.6.`,
+          answer: String.raw`Çengel A-11: H₁ = h_g(−26 °C) = 234.70 kJ/kg, H₄ = H₃ = h_f(27 °C) = 89.27 kJ/kg ⇒ q_C = 145.43 kJ/kg ⇒ ṁ = 5.25/145.43 = 0.0361 kg/s (≈ 130 kg/h).` }
       ] }
   ]
 });
