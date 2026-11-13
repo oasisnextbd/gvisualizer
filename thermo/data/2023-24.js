@@ -739,6 +739,8 @@ $$H_{mix} = \frac{1\cdot H_{acid} + W\,H_w}{1 + W}, \qquad x_{mix} = \frac{0.75}
 4. **Crossing point.** The mixing line meets the interpolated 330 K isotherm again at $x_{mix} \approx 37$ wt% H₂SO₄:
 $$1 + W = \frac{0.75}{0.37} = 2.01 \;\Rightarrow\; W \approx 1.0\ \mathrm{kg}$$
 
+![How to read the H–x chart: water 280 K (H ≈ −84) and 75% acid at 330 K (H ≈ −248) → straight mixing line → re-crosses the 330 K isotherm at ≈ 37 wt%](fig/2023-24-Q8a-read.svg)
+
 **Result:** about **1.0 kg of water per kg of 75% acid** must be added (down to about 37% H₂SO₄) before the mixture temperature falls below 330 K. Smaller additions make it hotter, up to about 80 °C.
 
 > Chart readings are approximate (±10 kJ/kg); the answer is in the range 0.9–1.1 kg. The SVNA Fig. 12.17 chart (in °C) gives the same picture.`,

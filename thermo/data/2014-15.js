@@ -333,6 +333,8 @@ $$Q_C' = 100.799 - 34.892 = 65.907\ \mathrm{Btu/lb_m}, \qquad \dot m' = \frac{5}
    Cross-check with Çengel Table A-13 (0.70 MPa ≈ 101.4 psia, interpolated at $s$ = 0.9515 kJ/(kg K)): $\Delta H_S$ = 39.98 kJ/kg = 17.19 Btu/lbm.
 $$W_S = H_3 - H_2 = 118.0 - 100.799 = 17.20\ \mathrm{Btu/lb_m}$$
 
+![How to read Fig. G.2: saturated vapour at −15 °F → isentrope S = 0.227 → 101.4 psia → H₃ ≈ 118.0 Btu/lbm](fig/2014-15-Q4b-read.svg)
+
 4. **(iii) COP, case (i):**
 $$\omega = \frac{Q_C}{W_S} = \frac{62.821}{17.20} = 3.65$$
 
@@ -690,6 +692,8 @@ $$H_{soln} = 0.40(2.8) + 0.60(113.2) = 1.1 + 67.9 = 69.0\ \mathrm{kJ/kg}$$
    - The 100 °C isotherm is at about +15 to +25 kJ/kg.
    - The **boiling line** crosses 40% at about 50–60 kJ/kg.
    The point H = 69 kJ/kg lies **at, or just above, the boiling line**. Within chart accuracy (±10 kJ/kg) it is on the line.
+
+![How to read Fig. 12.17: water and acid points → mixing line → M (40%, 69 kJ/kg) on the boiling line → T ≈ 113 °C](fig/2014-15-Q8c-read.svg)
 
 4. **Final state.** The solution reaches its **boiling point**. Interpolating the isotherms (about 26 kJ/kg per 10 °C at 40%) between the 100 °C curve and the boiling line gives
 $$T \approx 100 + \frac{55 - 20}{2.6} \approx 113\ ^\circ\mathrm{C}$$
