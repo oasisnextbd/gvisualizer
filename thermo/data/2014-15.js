@@ -265,8 +265,36 @@ $$\ln\hat\phi_1 = \frac{P}{RT}\left(B_{11} + y_2^2\delta_{12}\right) \quad\Right
           topic: "refrigeration", sub: "Absorption refrigeration: schematic, principle and (Q_H/Q_C)min at 30, −10 and 100 °C",
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`Draw the schematic diagram of an adsorption refrigeration unit. Discuss the working principle and find the expression for $(Q_H/Q_C)_{min}$. Estimate $(Q_H/Q_C)_{min}$ if the surrounding temperature is 30°C and $T_C = -10$°C and $T_H = 100$°C.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`### Schematic
+![Absorption refrigeration cycle: generator, condenser, expansion valve, evaporator, absorber and solution pump](fig/2014-15-Q4a-sketch.svg)
+
+The paper prints "adsorption"; the unit meant is the **absorption** refrigerator (SVNA §9.4). A solid-sorbent (adsorption) chiller, e.g. silica gel–water or zeolite–water, works on the same heat-driven principle and has the same thermodynamic limit.
+
+### Working principle (NH₃–H₂O)
+1. **Evaporator (low P):** liquid refrigerant (NH₃) evaporates at $T_C$ and takes heat $Q_C$ from the cold space, exactly as in a vapour-compression cycle.
+2. **Absorber (low P):** the NH₃ vapour is absorbed into weak (NH₃-lean) aqueous solution. Absorption is exothermic, so cooling water removes heat at about the surroundings temperature $T_S$. This produces a strong solution.
+3. **Pump:** the strong solution is pumped to condenser pressure. The work is very small because a liquid has a small specific volume ($W = \int V\,dP$).
+4. **Generator (high P):** heat $Q_H$ from a source at $T_H$ (steam, waste heat, solar heat) boils NH₃ out of the solution. The weak solution returns to the absorber through a valve.
+5. **Condenser (high P):** the NH₃ vapour condenses, rejecting heat at $T_S$.
+6. **Expansion valve:** the liquid is throttled back to evaporator pressure.
+
+The absorber–pump–generator train is a **"thermal compressor"**: it replaces the mechanical compressor, so the cycle is driven by heat instead of work.
+
+### Expression for $(Q_H/Q_C)_{min}$
+1. **Work needed to pump heat** $Q_C$ from $T_C$ to $T_S$ (Carnot refrigerator):
+$$W = Q_C\,\frac{T_S - T_C}{T_C}$$
+2. **Work obtainable from heat** $Q_H$ taken at $T_H$ and rejected at $T_S$ (Carnot engine):
+$$W = Q_H\,\frac{T_H - T_S}{T_H}$$
+3. **Equate them** (the most efficient possible process):
+$$\boxed{\left(\frac{Q_H}{Q_C}\right)_{min} = \frac{T_S - T_C}{T_C}\cdot\frac{T_H}{T_H - T_S}}$$
+   The overall energy balance is $Q_H + Q_C + W_{pump} = Q_{absorber} + Q_{condenser}$, with $W_{pump}$ negligible.
+
+### Estimate
+$T_S$ = 303.15 K, $T_C$ = 263.15 K, $T_H$ = 373.15 K:
+$$\left(\frac{Q_H}{Q_C}\right)_{min} = \frac{303.15 - 263.15}{263.15}\cdot\frac{373.15}{373.15 - 303.15} = 0.1520 \times 5.331 = 0.810$$
+
+**Result:** at least **0.81 kJ of heat at 100 °C per kJ of refrigeration** at −10 °C, so the ideal $Q_C/Q_H$ is 1.23. Real single-effect units need $Q_H/Q_C$ ≈ 1.5–2 ($Q_C/Q_H$ ≈ 0.5–0.7).`,
+          answer: String.raw`Absorber + pump + generator replace the compressor (heat-driven). Carnot engine T_H→T_S drives Carnot refrigerator T_C→T_S: (Q_H/Q_C)min = [(T_S − T_C)/T_C]·[T_H/(T_H − T_S)] = (40/263.15)(373.15/70) = 0.81.` },
         { id: "2014-15-Q4b", label: "(b)", marks: "20",
           topic: "refrigeration", sub: "Tetrafluoroethane refrigerator −15/80 °F, 5 Btu/s: circulation rate, turbine instead of valve, COP",
           type: "numerical", syllabus: "in", repeats: [],
@@ -279,20 +307,62 @@ $$\ln\hat\phi_1 = \frac{P}{RT}\left(B_{11} + y_2^2\delta_{12}\right) \quad\Right
 (iii) Determine COP for isentropic compression of vapor for case (i) and (ii).
 
 Table 9.1 (thermodynamic properties of saturated tetrafluoroethane, British units) and Figure G.2 (P–H diagram for HFC-134a, British units) are attached to the paper.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Given:** HFC-134a; evaporation at −15 °F, condensation at 80 °F; saturated liquid leaves the condenser and saturated vapour leaves the evaporator; $\dot Q_C$ = 5 Btu/s.
+
+**Data (Table 9.1 attached to the paper):**
+
+| T (°F) | P (psia) | $H^l$ | $H^v$ | $S^l$ | $S^v$ |
+|---|---|---|---|---|---|
+| −15 | 14.667 | 7.505 | 100.799 | 0.01733 | 0.22714 |
+| 80 | 101.37 | 37.978 | 113.880 | 0.07892 | 0.21957 |
+
+H in Btu/lbm, S in Btu/(lbm R). States: 1 = liquid entering the evaporator, 2 = saturated vapour at −15 °F, 3 = compressed vapour at 101.37 psia, 4 = saturated liquid at 80 °F.
+
+**Assumptions:** steady flow; kinetic and potential energy changes neglected; compressor and turbine isentropic.
+
+1. **(i) Throttle valve:** $H_1 = H_4$ = 37.978 Btu/lbm. Refrigeration per lbm:
+$$Q_C = H_2 - H_1 = 100.799 - 37.978 = 62.821\ \mathrm{Btu/lb_m}$$
+$$\dot m = \frac{5}{62.821} = 0.0796\ \mathrm{lb_m/s}$$
+
+2. **(ii) Isentropic turbine** from saturated liquid at 80 °F to −15 °F: $S_1' = S_4$ = 0.07892.
+$$x = \frac{0.07892 - 0.01733}{0.22714 - 0.01733} = 0.2936, \qquad H_1' = 7.505 + 0.2936(100.799 - 7.505) = 34.892\ \mathrm{Btu/lb_m}$$
+$$Q_C' = 100.799 - 34.892 = 65.907\ \mathrm{Btu/lb_m}, \qquad \dot m' = \frac{5}{65.907} = 0.0759\ \mathrm{lb_m/s}$$
+   The circulation rate falls by $0.0796 - 0.0759 = 0.0037$ lbm/s, i.e. **4.7%**. The turbine also delivers $W_t = H_4 - H_1' = 3.086$ Btu/lbm.
+
+3. **Isentropic compression** from state 2 ($S$ = 0.22714) to 101.37 psia. On Fig. G.2, follow the constant-entropy line S = 0.227 from the saturated-vapour curve at 14.7 psia up to the 101.4 psia isobar: **$H_3$ ≈ 118.0 Btu/lbm** (about 97 °F).
+   Cross-check with Çengel Table A-13 (0.70 MPa ≈ 101.4 psia, interpolated at $s$ = 0.9515 kJ/(kg K)): $\Delta H_S$ = 39.98 kJ/kg = 17.19 Btu/lbm.
+$$W_S = H_3 - H_2 = 118.0 - 100.799 = 17.20\ \mathrm{Btu/lb_m}$$
+
+4. **(iii) COP, case (i):**
+$$\omega = \frac{Q_C}{W_S} = \frac{62.821}{17.20} = 3.65$$
+
+5. **(iii) COP, case (ii):** the turbine work is recovered, so the net work is $17.20 - 3.086 = 14.11$ Btu/lbm:
+$$\omega' = \frac{65.907}{14.11} = 4.67$$
+   Without crediting the turbine work, $\omega' = 65.907/17.20 = 3.83$. For comparison, the Carnot COP is $T_C/(T_H - T_C) = 444.67/95 = 4.68$. Case (ii) is almost reversible; the small difference comes from desuperheating above 80 °F.
+
+**Result:** (i) $\dot m$ = 0.0796 lbm/s; (ii) $\dot m'$ = 0.0759 lbm/s, 0.0037 lbm/s (4.7%) less; (iii) COP = 3.65 with the valve, 4.67 with the turbine (net work).`,
+          answer: String.raw`(i) Q_C = 100.799 − 37.978 = 62.82 Btu/lbm ⇒ ṁ = 0.0796 lbm/s. (ii) Turbine: x = 0.294, H = 34.89 ⇒ Q_C = 65.91 Btu/lbm, ṁ = 0.0759 lbm/s (−0.0037 lbm/s, 4.7%). (iii) H₃ ≈ 118.0 (Fig. G.2), W_S = 17.2 Btu/lbm: COP = 3.65 (valve), 4.67 (turbine work credited; 3.83 if not).` }
       ] },
     { id: "2014-15-Q5", q: 5, section: "B",
       stem: String.raw`The following is a set of VLE data for the system methanol (1)/water (2) at 60°C.
 
-| P/kPa | $x_1$ | $y_1$ | P/kPa | $x_1$ | $y_1$ |
-|---|---|---|---|---|---|
-| 19.95 | 0.00 | 0.00 | 60.61 | 0.53 | 0.81 |
-| 39.22 | 0.17 | 0.57 | 63.99 | 0.60 | 0.84 |
-| 42.98 | 0.22 | 0.63 | 67.92 | 0.68 | 0.87 |
-| 48.85 | 0.30 | 0.70 | 70.23 | 0.73 | 0.89 |
-| 52.78 | 0.37 | 0.73 | 72.83 | 0.78 | 0.91 |
-| 56.65 | 0.45 | 0.77 | 84.56 | 1.0 | 1.0 |`,
+| P/kPa | $x_1$ | $y_1$ |
+|---|---|---|
+| 19.95 | 0.00 | 0.00 |
+| 39.22 | 0.17 | 0.57 |
+| 42.98 | 0.22 | 0.63 |
+| 48.85 | 0.30 | 0.70 |
+| 52.78 | 0.37 | 0.73 |
+| 56.65 | 0.45 | 0.77 |
+
+| P/kPa | $x_1$ | $y_1$ |
+|---|---|---|
+| 60.61 | 0.53 | 0.81 |
+| 63.99 | 0.60 | 0.84 |
+| 67.92 | 0.68 | 0.87 |
+| 70.23 | 0.73 | 0.89 |
+| 72.83 | 0.78 | 0.91 |
+| 84.56 | 1.0 | 1.0 |`,
       parts: [
         { id: "2014-15-Q5a", label: "(a)", marks: "20",
           topic: "solution-applications", sub: "Methanol/water at 60 °C: Margules parameters from the Gᴱ/x₁x₂RT line",
@@ -409,8 +479,26 @@ $$\left(\frac{d\hat f_2}{dx_2}\right)_{x_2=1} = f_2$$
           topic: "reaction-equilibria", sub: "Liquid-phase reactions: relation of K to composition",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`For liquid-phase reactions, find the relation of equilibrium constants to composition.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`1. **Equilibrium constant** (SVNA eq. 13.11), with standard states at the system T and $P^\circ$ = 1 bar:
+$$\prod_i\left(\frac{\hat f_i}{f_i^\circ}\right)^{\nu_i} = K = \exp\left(\frac{-\Delta G^\circ}{RT}\right)$$
+
+2. **Liquid phase.** Write $\hat f_i = \gamma_ix_if_i$, where $f_i$ is the fugacity of pure liquid i at T and P. The usual standard state is the **pure liquid at T and 1 bar**, with fugacity $f_i^\circ$:
+$$\frac{\hat f_i}{f_i^\circ} = \gamma_ix_i\frac{f_i}{f_i^\circ}$$
+
+3. **Pressure correction (Poynting).** At constant T, $d\ln f_i = V_i\,dP/RT$. For an incompressible liquid,
+$$\ln\frac{f_i}{f_i^\circ} = \frac{V_i(P - P^\circ)}{RT}$$
+
+4. **General relation:**
+$$\prod_i(x_i\gamma_i)^{\nu_i} = K\exp\left[\frac{-(P - P^\circ)}{RT}\sum_i\nu_iV_i\right]$$
+
+5. **Simplifications:**
+   - At low or moderate pressure the exponential is ≈ 1, because $\sum\nu_iV_i$ is small. Then $\prod_i(x_i\gamma_i)^{\nu_i} = K$.
+   - For an **ideal solution**, $\gamma_i$ = 1:
+$$\boxed{\prod_i x_i^{\nu_i} = K}$$
+   - For a solute i at low concentration, use a **Henry's-law (molality) standard state**, $\hat f_i/f_i^\circ = \gamma_i^\ast m_i$ in a hypothetical ideal 1-molal solution. With $\gamma_i^\ast \to 1$ this gives $\prod_i m_i^{\nu_i} = K$ for the dissolved species, combined with $x_i$ for the solvent (≈ 1).
+
+Unlike gas-phase reactions, pressure has almost no effect on liquid-phase equilibrium compositions.`,
+          answer: String.raw`Πᵢ(f̂ᵢ/fᵢ°)^νᵢ = K with f̂ᵢ = γᵢxᵢfᵢ and fᵢ/fᵢ° = exp[Vᵢ(P − P°)/RT] ⇒ Π(xᵢγᵢ)^νᵢ = K exp[−(P − P°)ΣνᵢVᵢ/RT] ≈ K; ideal solution Π xᵢ^νᵢ = K (dilute solutes: molality standard state, Π mᵢ^νᵢ = K).` },
         { id: "2014-15-Q6c", label: "(c)", marks: "15",
           topic: "reaction-equilibria", sub: "Ammonia synthesis from 0.5 mol N₂ and 1.5 mol H₂: equilibrium extent with ideal gases",
           type: "derivation", syllabus: "in", repeats: [],
@@ -421,8 +509,25 @@ $$\frac12\mathrm{N_2(g)} + \frac32\mathrm{H_2(g)} \rightarrow \mathrm{NH_3(g)}$$
 with 0.5 mol N₂ and 1.5 mol H₂ as the initial amounts of reactants and with the assumption that the equilibrium mixture is an ideal gas, show that
 
 $$\varepsilon_e = 1 - \left(1 + 1.299K\frac{P}{P_0}\right)^{-1/2}$$`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Given:** $\tfrac12$N₂ + $\tfrac32$H₂ → NH₃; initially 0.5 mol N₂ and 1.5 mol H₂; ideal-gas equilibrium mixture. Here $\nu = 1 - \tfrac12 - \tfrac32 = -1$.
+
+1. **Mole numbers as functions of ε** ($n_i = n_{i0} + \nu_i\varepsilon$):
+$$n_{N_2} = 0.5 - 0.5\varepsilon = 0.5(1 - \varepsilon), \qquad n_{H_2} = 1.5(1 - \varepsilon), \qquad n_{NH_3} = \varepsilon, \qquad n = 2 - \varepsilon$$
+
+2. **Ideal-gas equilibrium relation:** $\prod_iy_i^{\nu_i} = (P/P^\circ)^{-\nu}K = (P/P^\circ)K$:
+$$\frac{y_{NH_3}}{y_{N_2}^{1/2}\,y_{H_2}^{3/2}} = \frac{n_{NH_3}\,n}{n_{N_2}^{1/2}\,n_{H_2}^{3/2}} = \frac{\varepsilon(2 - \varepsilon)}{(0.5)^{1/2}(1.5)^{3/2}(1 - \varepsilon)^2} = K\frac{P}{P^\circ}$$
+   The total moles $n^{1/2 + 3/2 - 1} = n^1$ appear in the numerator.
+
+3. **Numerical constant:** $(0.5)^{1/2}(1.5)^{3/2} = 0.7071 \times 1.8371 = 1.299$, so
+$$\frac{\varepsilon(2 - \varepsilon)}{(1 - \varepsilon)^2} = 1.299\,K\frac{P}{P^\circ}$$
+
+4. **Solve for ε.** Note $\varepsilon(2 - \varepsilon) = 1 - (1 - \varepsilon)^2$:
+$$\frac{1}{(1 - \varepsilon)^2} - 1 = 1.299K\frac{P}{P^\circ} \;\Rightarrow\; (1 - \varepsilon)^2 = \left(1 + 1.299K\frac{P}{P^\circ}\right)^{-1}$$
+$$\boxed{\varepsilon_e = 1 - \left(1 + 1.299K\frac{P}{P^\circ}\right)^{-1/2}}$$
+   The positive root is taken, since $0 \le \varepsilon_e < 1$.
+
+**Check:** ε rises towards 1 as K or P rises, consistent with ν < 0 (fewer moles of product) and the exothermic reaction (larger K at lower T).`,
+          answer: String.raw`n_N₂ = 0.5(1 − ε), n_H₂ = 1.5(1 − ε), n_NH₃ = ε, n = 2 − ε; ε(2 − ε)/[0.5^½·1.5^{3/2}(1 − ε)²] = K P/P° with 0.5^½·1.5^{3/2} = 1.299; since ε(2 − ε) = 1 − (1 − ε)², ε_e = 1 − (1 + 1.299K P/P°)^{−1/2}.` }
       ] },
     { id: "2014-15-Q7", q: 7, section: "B",
       stem: String.raw`Hydrogen gas is produced by the reaction of steam with 'water gas', an equimolar mixture of H₂ and CO obtained by the reaction of steam with coal. A stream of 'water gas' mixed with steam is passed over a catalyst to convert CO to CO₂ by reaction:
@@ -435,16 +540,71 @@ Subsequently unreacted water is condensed and carbon dioxide is absorbed, leavin
           topic: "reaction-equilibria", sub: "Water-gas shift at 800 K, 1 bar: steam-to-water-gas ratio for 2 mol% CO in product",
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`Determine the molar ratio of steam to 'water gas' (H₂ + CO) required to produce a product gas containing only 2 mole % CO after cooling to 20°C, where the unreacted H₂O has been virtually all condensed.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`**Given:** H₂O + CO → H₂ + CO₂ at 800 K and 1 bar. Basis: 1 mol H₂ + 1 mol CO (2 mol water gas) with n mol steam. Product gas after condensing the water must contain 2 mol% CO.
+
+**Assumptions:** ideal gases; SVNA App. C data (Tables C.1 and C.4); all water removed on cooling to 20 °C; CO₂ still present in the analysed gas (it is absorbed later).
+
+1. **K at 800 K** (SVNA eq. 13.21, $K = K_0K_1K_2$):
+$$\Delta H^\circ_{298} = -393\,509 - (-110\,525 - 241\,818) = -41\,166\ \mathrm{J/mol}$$
+$$\Delta G^\circ_{298} = -394\,359 - (-137\,169 - 228\,572) = -28\,618\ \mathrm{J/mol}$$
+   Heat-capacity differences: ΔA = 5.457 + 3.249 − 3.376 − 3.470 = 1.860; ΔB = 0.540 × 10⁻³; ΔC = 0; ΔD = −1.164 × 10⁵.
+$$K_0 = e^{28\,618/(8.314 \times 298.15)} = 1.033 \times 10^5, \qquad K_1 = \exp\left[\frac{-41\,166}{8.314 \times 298.15}\left(1 - \frac{298.15}{800}\right)\right] = 2.989 \times 10^{-5}$$
+$$\int_{298.15}^{800}\frac{\Delta C_P^\circ}{R}\frac{dT}{T} = 1.0011, \quad \frac{1}{T}\int_{298.15}^{800}\frac{\Delta C_P^\circ}{R}dT = \frac{539.7}{800} = 0.6747, \quad K_2 = e^{1.0011 - 0.6747} = 1.386$$
+$$K = 1.033 \times 10^5 \times 2.989 \times 10^{-5} \times 1.386 = 4.28$$
+
+2. **Equilibrium amounts** in terms of the extent ε:
+
+| Species | CO | H₂O | H₂ | CO₂ | Total |
+|---|---|---|---|---|---|
+| mol | 1 − ε | n − ε | 1 + ε | ε | 2 + n |
+
+   Δν = 0, so P cancels and
+$$K = \frac{(1 + \varepsilon)\varepsilon}{(1 - \varepsilon)(n - \varepsilon)}$$
+
+3. **Product specification.** The dry gas is CO + H₂ + CO₂ = 2 + ε mol:
+$$\frac{1 - \varepsilon}{2 + \varepsilon} = 0.02 \;\Rightarrow\; \varepsilon = \frac{0.96}{1.02} = 0.9412$$
+
+4. **Steam required:**
+$$n - \varepsilon = \frac{(1 + \varepsilon)\varepsilon}{K(1 - \varepsilon)} = \frac{1.9412 \times 0.9412}{4.28 \times 0.0588} = 7.26 \;\Rightarrow\; n = 8.20\ \mathrm{mol}$$
+
+5. **Ratio:**
+$$\frac{\text{steam}}{\text{water gas}} = \frac{8.20}{2} = 4.10$$
+   Reactor exit composition: y(CO) = 0.0058, y(CO₂) = 0.0923, y(H₂) = 0.1903, y(H₂O) = 0.7117.
+
+**Result:** about **4.1 mol steam per mol of water gas** (K = 4.28 at 800 K).`,
+          answer: String.raw`K(800 K) = K₀K₁K₂ = 1.033×10⁵ × 2.989×10⁻⁵ × 1.386 = 4.28; dry gas (1 − ε)/(2 + ε) = 0.02 ⇒ ε = 0.941; n − ε = (1 + ε)ε/[K(1 − ε)] = 7.26 ⇒ n = 8.20 mol steam per 2 mol water gas ⇒ ratio ≈ 4.1.` },
         { id: "2014-15-Q7b", label: "(b)", marks: "13",
           topic: "reaction-equilibria", sub: "Can solid carbon form by 2CO → CO₂ + C(s) at the shift-reactor conditions?",
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`What happens if solid carbon will form at the equilibrium conditions by the reaction:
 
 $$\mathrm{2CO(g) \rightarrow CO_2(g) + C(s)}$$`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Question:** can carbon deposit by the Boudouard reaction 2CO(g) → CO₂(g) + C(s) at the equilibrium conditions of part (a), 800 K and 1 bar?
+
+**Assumptions:** ideal gases; carbon as pure graphite, activity = 1; SVNA data (C(s): ΔA = 1.771, ΔB = 0.771 × 10⁻³, ΔD = −0.867 × 10⁵).
+
+1. **K at 800 K:**
+$$\Delta H^\circ_{298} = -393\,509 - 2(-110\,525) = -172\,459\ \mathrm{J/mol}, \qquad \Delta G^\circ_{298} = -394\,359 - 2(-137\,169) = -120\,021\ \mathrm{J/mol}$$
+   ΔA = 5.457 + 1.771 − 2(3.376) = 0.476; ΔB = 0.702 × 10⁻³; ΔD = −1.962 × 10⁵.
+$$K_0 = 1.066 \times 10^{21}, \qquad K_1 = \exp\left[\frac{-172\,459}{8.314 \times 298.15}\left(1 - \frac{298.15}{800}\right)\right] = 1.111 \times 10^{-19}, \qquad K_2 = e^{-0.1282 - 0.0244} = 0.859$$
+$$K = 1.066 \times 10^{21} \times 1.111 \times 10^{-19} \times 0.859 = 102$$
+
+2. **Equilibrium expression.** Carbon is a pure solid with $a_C$ = 1, and ν(gas) = 1 − 2 = −1:
+$$K = \frac{a_C\,(y_{CO_2}P/P^\circ)}{(y_{CO}P/P^\circ)^2} = \frac{y_{CO_2}}{y_{CO}^2}\frac{P^\circ}{P}$$
+
+3. **Reaction quotient of the shift-reactor gas** from part (a), with $y_{CO}$ = 0.00577, $y_{CO_2}$ = 0.0923 and P = 1 bar:
+$$Q = \frac{0.0923}{(0.00577)^2} = 2.77 \times 10^3$$
+
+4. **Test.**
+   - Carbon can form only if Q < K, i.e. if $\Delta G = RT\ln(Q/K) < 0$ for the forward reaction.
+   - Here $Q/K = 2775/102 = 27$, so $\Delta G = 8.314(800)\ln 27 = +21.9$ kJ/mol > 0.
+   - The reaction would go **backwards**: any carbon present would be gasified by CO₂, so **no carbon deposits** at the equilibrium conditions.
+   - The reason is the large excess of steam: it converts most of the CO, leaving $y_{CO}$ very small. Carbon formation would also be suppressed by the steam–carbon reaction C + H₂O → CO + H₂.
+
+5. **Remark.** At the reactor inlet there is no CO₂ (Q = 0 < K), so carbon deposition is thermodynamically possible there until the shift reaction has produced CO₂. That is why a large steam ratio and an active shift catalyst are used. If carbon did form at equilibrium, the system would have to satisfy both reactions simultaneously, with $y_{CO_2}/y_{CO}^2 = K\,P/P^\circ$ = 102. That would fix a CO content far higher than the 2 mol% specified.
+
+**Result:** K(800 K) ≈ 102 but Q ≈ 2.8 × 10³ > K, so **solid carbon does not form**; the Boudouard reaction would run in reverse.`,
+          answer: String.raw`K(800 K) for 2CO → CO₂ + C = 102; at the part (a) equilibrium Q = y_CO₂/y_CO² (P°/P) = 0.0923/0.00577² = 2.8×10³ > K (ΔG = +21.9 kJ/mol) ⇒ no carbon deposits (excess steam keeps CO low); deposition is possible only near the inlet where CO₂ ≈ 0.` }
       ] },
     { id: "2014-15-Q8", q: 8, section: "B",
       stem: String.raw``,

@@ -9,8 +9,29 @@ QB.paper({
           topic: "refrigeration", sub: "Linde liquefaction as the limiting case (x = 0) of the Claude process",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Show that the Linde process is a limiting case of the claude process with necessary diagram and equation.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`![Linde and Claude liquefaction schematics: compressor and cooler, countercurrent heat exchanger, throttle, separator, and in the Claude process an expander taking a fraction x of the high-pressure gas](fig/2013-14-Q1a-sketch.svg)
+
+**States (SVNA Fig. 9.6 numbering, as on the formula sheet):**
+- 4: compressed gas after the compressor and cooler, entering the heat-exchanger system.
+- 5: high-pressure gas at the expander inlet. A fraction x leaves the expander at state 12 and rejoins the cold return gas.
+- 9: saturated liquid product (fraction z).
+- 15: low-pressure unliquefied gas leaving the warm end of the exchangers.
+
+1. **Control volume:** everything to the right of the compressor and cooler (exchangers, expander, throttle, separator). Basis: 1 mol of gas entering at 4. The exchangers and separator are insulated (Q = 0), and kinetic and potential energy changes are neglected.
+
+2. **Energy balance, Claude process.** The expander delivers shaft work $W_s = x(H_5 - H_{12})$ out of the control volume:
+$$H_4 = zH_9 + (1 - z)H_{15} + x(H_5 - H_{12})$$
+   Solve for the fraction liquefied:
+$$z(H_9 - H_{15}) = H_4 - H_{15} - x(H_5 - H_{12})$$
+$$\boxed{z = \frac{H_4 - H_{15}}{H_9 - H_{15}} + x\,\frac{H_{12} - H_5}{H_9 - H_{15}}}$$
+   Both terms are positive, because $H_9 < H_{15}$ and $H_{12} < H_5$. The second term is the **extra liquefaction from the work-producing expansion**.
+
+3. **Limit x → 0.** If no gas goes to the expander, all of it passes through the exchangers and is throttled (isenthalpic):
+$$z = \frac{H_4 - H_{15}}{H_9 - H_{15}}$$
+   This is exactly the energy balance of the **Linde process**, the same control volume with only a throttle valve and no work.
+
+4. **Conclusion.** The Linde process is the limiting case x = 0 of the Claude process. For the same compression pressure and precooling ($H_4$, $H_9$, $H_{15}$ fixed), any x > 0 increases z. The expander cools the gas nearly isentropically, which gives a much larger temperature drop than Joule–Thomson throttling, and it removes energy as work. The practical limit on x is that the expander exhaust (state 12) must not contain too much liquid.`,
+          answer: String.raw`Energy balance on exchangers + expander + throttle + separator (1 mol at 4): H₄ = zH₉ + (1 − z)H₁₅ + x(H₅ − H₁₂) ⇒ z = (H₄ − H₁₅)/(H₉ − H₁₅) + x(H₁₂ − H₅)/(H₉ − H₁₅). With x = 0 (no expander, throttling only) z = (H₄ − H₁₅)/(H₉ − H₁₅): the Linde result, so Linde is the x = 0 limit of Claude.` },
         { id: "2013-14-Q1b", label: "(b)", marks: "20",
           topic: "refrigeration", sub: "Tetrafluoroethane refrigerator −26/27 °C, 5.3 kW: circulation rate, with heat exchanger, COP",
           type: "numerical", syllabus: "in", repeats: [],
@@ -21,8 +42,35 @@ i) For cooling rate of 5.3 kW, what is the circulation rate of the refrigerant?
 ii) Suppose the cycle of (i) is modified by the inclusion of a counter current heat exchanger between the condenser and the throttle valve in which heat is transferred to vapor returning from the evaporator. If liquid from the condenser enters the exchanger at 27°C and if vapor from the evaporator enters the exchanger at −26°C and leaves at 21°C, what is the circulation rate of the refrigerant?
 
 iii) Determine COP for isentropic compression of the vapor for case (i) and (ii).`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Given:** tetrafluoroethane (R-134a); evaporation at −26 °C, condensation at 27 °C; $\dot Q_C$ = 5.3 kW.
+
+**Data:** no table is attached to the paper, so the values below are from Çengel & Boles, Table A-11 (saturated R-134a) and Table A-13 (superheated R-134a), in kJ/kg and kJ/(kg K).
+- −26 °C: $P^{sat}$ = 101.73 kPa ≈ 0.10 MPa, $h_g$ = 234.70, $s_g$ = 0.95152.
+- 27 °C (interpolated between 26 and 28 °C): $P^{sat}$ = 706.6 kPa ≈ 0.70 MPa, $h_f$ = 89.27.
+- The A-13 isobars 0.10 MPa ($T^{sat}$ = −26.37 °C) and 0.70 MPa ($T^{sat}$ = 26.69 °C) are used for the evaporator and condenser pressures.
+
+**Assumptions:** steady flow, no pressure drops, kinetic and potential energy changes neglected; heat exchanger adiabatic.
+
+1. **(i) Simple cycle.** Throttling is isenthalpic, so the evaporator inlet has $h$ = 89.27 kJ/kg:
+$$q_C = 234.70 - 89.27 = 145.44\ \mathrm{kJ/kg}, \qquad \dot m = \frac{5.3}{145.44} = 0.0364\ \mathrm{kg/s}$$
+
+2. **(ii) Vapour side of the heat exchanger:** 0.10 MPa, −26 °C → 21 °C. From A-13 at 0.10 MPa (20 °C: h = 272.18, s = 1.0919; 30 °C: h = 280.69, s = 1.1204), at 21 °C: h = 273.03 kJ/kg and s = 1.0948 kJ/(kg K).
+$$\Delta h_{vap} = 273.03 - 234.70 = 38.33\ \mathrm{kJ/kg}$$
+
+3. **(ii) Liquid side.** The energy balance gives the liquid leaving the exchanger:
+$$h_{liq} = 89.27 - 38.33 = 50.94\ \mathrm{kJ/kg}$$
+   This is subcooled liquid at about −0.7 °C, since $h_f$ = 51.83 at 0 °C. The throttle keeps this enthalpy, so
+$$q_C = 234.70 - 50.94 = 183.77\ \mathrm{kJ/kg}, \qquad \dot m = \frac{5.3}{183.77} = 0.0288\ \mathrm{kg/s}$$
+
+4. **(iii) Isentropic compression, case (i):** s = 0.95152 to 0.70 MPa. A-13 at 0.70 MPa gives 30 °C: h = 268.47, s = 0.9314 and 40 °C: h = 278.59, s = 0.9642. Interpolating, $h_2$ = 274.68 kJ/kg (36 °C).
+$$w = 274.68 - 234.70 = 39.98\ \mathrm{kJ/kg}, \qquad \mathrm{COP} = \frac{145.44}{39.98} = 3.64$$
+
+5. **(iii) Isentropic compression, case (ii):** s = 1.0948 to 0.70 MPa. A-13 gives 80 °C: h = 318.29, s = 1.0835 and 90 °C: h = 328.31, s = 1.1115. Interpolating, $h_2$ = 322.32 kJ/kg (84 °C).
+$$w = 322.32 - 273.03 = 49.28\ \mathrm{kJ/kg}, \qquad \mathrm{COP} = \frac{183.77}{49.28} = 3.73$$
+   Compressor power: 0.0364 × 39.98 = 1.46 kW in case (i) and 0.0288 × 49.28 = 1.42 kW in case (ii). The exchanger cuts the circulation rate by 21% and raises the COP slightly, but gives a much hotter discharge (84 °C against 36 °C). The Carnot COP is 247.15/53 = 4.66.
+
+**Result:** (i) 0.0364 kg/s; (ii) 0.0288 kg/s; (iii) COP = 3.64 (simple) and 3.73 (with heat exchanger).`,
+          answer: String.raw`Çengel A-11/A-13: (i) q_C = 234.70 − 89.27 = 145.4 kJ/kg ⇒ ṁ = 0.0364 kg/s. (ii) vapour −26→21 °C gains 38.33 kJ/kg ⇒ liquid h = 50.94, q_C = 183.8 kJ/kg ⇒ ṁ = 0.0288 kg/s. (iii) isentropic to 0.70 MPa: h₂ = 274.7 (i), 322.3 (ii) ⇒ COP = 3.64 and 3.73.` }
       ] },
     { id: "2013-14-Q2", q: 2, section: "A",
       stem: String.raw``,
@@ -31,16 +79,44 @@ iii) Determine COP for isentropic compression of the vapor for case (i) and (ii)
           topic: "reaction-equilibria", sub: "Relation between the standard Gibbs-energy change and the equilibrium constant",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Derive a relation between standard Gibbs-energy change and the equilibrium constant.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`1. **Criterion of equilibrium.** For a closed system at constant T and P, $(dG^t)_{T,P} = 0$ at equilibrium. For a single reaction, $dn_i = \nu_i\,d\varepsilon$, so
+$$d(nG) = \sum_i\mu_i\,dn_i = \left(\sum_i\nu_i\mu_i\right)d\varepsilon \quad\Rightarrow\quad \left[\frac{\partial(nG)}{\partial\varepsilon}\right]_{T,P} = \sum_i\nu_i\mu_i = 0$$
+
+2. **Chemical potential in terms of fugacity.** Take the standard state of each species at the system temperature T and a fixed pressure $P^\circ$ (1 bar), with Gibbs energy $G_i^\circ$ and fugacity $f_i^\circ$. Integrating $d\mu_i = RT\,d\ln\hat f_i$ at constant T from the standard state:
+$$\mu_i = G_i^\circ + RT\ln\frac{\hat f_i}{f_i^\circ}$$
+
+3. **Substitute:**
+$$\sum_i\nu_iG_i^\circ + RT\sum_i\nu_i\ln\frac{\hat f_i}{f_i^\circ} = 0 \quad\Rightarrow\quad \ln\prod_i\left(\frac{\hat f_i}{f_i^\circ}\right)^{\nu_i} = \frac{-\sum_i\nu_iG_i^\circ}{RT}$$
+
+4. **Define** the standard Gibbs-energy change of reaction, $\Delta G^\circ \equiv \sum_i\nu_iG_i^\circ$, and the equilibrium constant K:
+$$\boxed{K \equiv \prod_i\left(\frac{\hat f_i}{f_i^\circ}\right)^{\nu_i} = \exp\left(\frac{-\Delta G^\circ}{RT}\right)}, \qquad \boxed{\Delta G^\circ = -RT\ln K}$$
+
+5. **Remarks:**
+   - $G_i^\circ$ is a property of pure i in its standard state at fixed $P^\circ$, so it depends on T only. Therefore **K is a function of temperature only**, not of P or composition. Pressure and composition affect the equilibrium through the ratios $\hat f_i/f_i^\circ$.
+   - ΔG° < 0 gives K > 1 (products favoured); ΔG° > 0 gives K < 1.
+   - $\Delta G^\circ_{298}$ is calculated from $\Delta G^\circ_{f,298}$ values, $\Delta G^\circ = \sum\nu_i\Delta G^\circ_{f_i}$.`,
+          answer: String.raw`At equilibrium Σνᵢμᵢ = 0 (dGᵗ = 0 at T, P); μᵢ = Gᵢ° + RT ln(f̂ᵢ/fᵢ°) ⇒ Π(f̂ᵢ/fᵢ°)^νᵢ = exp(−ΔG°/RT) ≡ K, i.e. ΔG° = Σνᵢ Gᵢ° = −RT ln K (K depends on T only).` },
         { id: "2013-14-Q2b", label: "(b)", marks: "10",
           topic: "reaction-equilibria", sub: "Ideal-gas reaction: product of yᵢ to the power νᵢ equals (P/P°) to the −ν times K",
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Prove that for gas phase reaction:
 
 $$\prod_i(y_i)^{\nu_i} = \left(\frac{P}{P^\circ}\right)^{-\nu}K$$`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`1. **Start from** $K = \prod_i(\hat f_i/f_i^\circ)^{\nu_i}$ (part (a)).
+
+2. **Gas-phase standard state:** pure ideal gas at $P^\circ$ = 1 bar, so $f_i^\circ = P^\circ$. The species fugacity in the gas mixture is $\hat f_i = \hat\phi_iy_iP$. Then
+$$\prod_i\left(\frac{y_i\hat\phi_iP}{P^\circ}\right)^{\nu_i} = K \quad\Rightarrow\quad \prod_i(y_i\hat\phi_i)^{\nu_i} = \left(\frac{P}{P^\circ}\right)^{-\nu}K, \qquad \nu \equiv \sum_i\nu_i$$
+   Here $\prod_i(P/P^\circ)^{\nu_i} = (P/P^\circ)^{\sum\nu_i}$.
+
+3. **Ideal-gas mixture:** $\hat\phi_i$ = 1, which holds at low pressure or high temperature:
+$$\boxed{\prod_i(y_i)^{\nu_i} = \left(\frac{P}{P^\circ}\right)^{-\nu}K}$$
+   An intermediate case is the **ideal solution** of real gases (Lewis/Randall rule), $\hat\phi_i = \phi_i$, with pure-gas $\phi_i$ from a generalized correlation.
+
+4. **Consequences:**
+   - K depends on T only; P enters through $(P/P^\circ)^{-\nu}$.
+   - If ν < 0 (fewer moles of products), raising P increases the product mole fractions. If ν > 0, raising P decreases them. If ν = 0, P has no effect (ideal gases).
+   - An inert diluent lowers the partial pressures, with the opposite effect to raising P.`,
+          answer: String.raw`K = Π(f̂ᵢ/fᵢ°)^νᵢ with fᵢ° = P° and f̂ᵢ = yᵢφ̂ᵢP ⇒ Π(yᵢφ̂ᵢ)^νᵢ = (P/P°)^{−ν}K; ideal gas (φ̂ᵢ = 1): Π yᵢ^νᵢ = (P/P°)^{−ν}K, ν = Σνᵢ.` },
         { id: "2013-14-Q2c", label: "(c)", marks: "15",
           topic: "reaction-equilibria", sub: "Methanol synthesis at 550 K, 100 bar with the reverse shift: equilibrium composition",
           type: "numerical", syllabus: "in", repeats: [],
@@ -51,8 +127,48 @@ $$\mathrm{2H_2(g) + CO(g) \rightarrow CH_3OH(g)}$$
 $$\mathrm{CO_2(g) + H_2(g) \rightarrow CO(g) + H_2O(g)}$$
 
 Assuming ideal gases, determine the composition of the equilibrium mixtures.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Given:** feed (basis 100 mol) 75 H₂, 15 CO, 5 CO₂, 5 N₂; T = 550 K, P = 100 bar. Reaction 1: 2H₂ + CO → CH₃OH (ν₁ = −2). Reaction 2: CO₂ + H₂ → CO + H₂O (ν₂ = 0).
+
+**Assumptions:** ideal gases (as stated); SVNA App. C data; N₂ inert.
+
+1. **K₁ at 550 K** ($K = K_0K_1K_2$, SVNA eq. 13.21):
+   - $\Delta H^\circ_{298}$ = −200 660 + 110 525 = −90 135 J/mol; $\Delta G^\circ_{298}$ = −161 960 + 137 169 = −24 791 J/mol.
+   - ΔA = −7.663, ΔB = 10.815 × 10⁻³, ΔC = −3.450 × 10⁻⁶, ΔD = −0.135 × 10⁵.
+   - $K_0 = 2.205 \times 10^4$, $K_1 = 5.872 \times 10^{-8}$.
+   - $\int\Delta C_P^\circ/R\,dT/T = -2.3906$ and $\frac1T\int\Delta C_P^\circ/R\,dT = -956.4/550 = -1.7390$, so $K_2 = e^{-0.6516} = 0.5212$.
+$$K_1 = 2.205 \times 10^4 \times 5.872 \times 10^{-8} \times 0.5212 = 6.75 \times 10^{-4}$$
+
+2. **K₂ at 550 K** (the reverse water-gas shift):
+   - $\Delta H^\circ_{298}$ = +41 166 J/mol; $\Delta G^\circ_{298}$ = +28 618 J/mol.
+   - ΔA = −1.860, ΔB = −0.540 × 10⁻³, ΔD = +1.164 × 10⁵.
+   - $K_0 = 9.684 \times 10^{-6}$, $K_1$ = 2007.
+   - $\int\Delta C_P^\circ/R\,dT/T = -0.5406$ and $\frac1T\int\Delta C_P^\circ/R\,dT = -232.0/550 = -0.4218$, so $K_2 = e^{-0.1188} = 0.888$.
+$$K_2 = 9.684 \times 10^{-6} \times 2007 \times 0.888 = 0.0173$$
+
+3. **Mole numbers** with extents ε₁ and ε₂:
+
+| Species | H₂ | CO | CO₂ | H₂O | CH₃OH | N₂ | Total |
+|---|---|---|---|---|---|---|---|
+| mol | 75 − 2ε₁ − ε₂ | 15 − ε₁ + ε₂ | 5 − ε₂ | ε₂ | ε₁ | 5 | 100 − 2ε₁ |
+
+4. **Equilibrium equations** ($\prod y_i^{\nu_i} = (P/P^\circ)^{-\nu}K$):
+$$\frac{y_{CH_3OH}}{y_{CO}\,y_{H_2}^2} = \frac{\varepsilon_1(100 - 2\varepsilon_1)^2}{(15 - \varepsilon_1 + \varepsilon_2)(75 - 2\varepsilon_1 - \varepsilon_2)^2} = (100)^2(6.75 \times 10^{-4}) = 6.75$$
+$$\frac{y_{CO}\,y_{H_2O}}{y_{CO_2}\,y_{H_2}} = \frac{(15 - \varepsilon_1 + \varepsilon_2)\,\varepsilon_2}{(5 - \varepsilon_2)(75 - 2\varepsilon_1 - \varepsilon_2)} = 0.0173$$
+
+5. **Solve simultaneously** (Newton's method, or iterate: guess ε₂, solve the first equation for ε₁, update ε₂ from the second):
+$$\varepsilon_1 = 11.86\ \mathrm{mol}, \qquad \varepsilon_2 = 0.888\ \mathrm{mol}, \qquad n = 76.28\ \mathrm{mol}$$
+
+6. **Equilibrium composition:**
+
+| Species | H₂ | CO | CO₂ | H₂O | CH₃OH | N₂ |
+|---|---|---|---|---|---|---|
+| mol | 50.39 | 4.03 | 4.11 | 0.89 | 11.86 | 5.00 |
+| $y_i$ | 0.6606 | 0.0528 | 0.0539 | 0.0116 | 0.1555 | 0.0655 |
+
+   Check: $0.1555/(0.0528 \times 0.6606^2) = 6.75$ ✓ and $0.0528 \times 0.0116/(0.0539 \times 0.6606) = 0.0173$ ✓.
+
+**Result:** $y_{CH_3OH}$ ≈ 0.156, $y_{H_2}$ ≈ 0.661, $y_{CO}$ ≈ 0.053, $y_{CO_2}$ ≈ 0.054, $y_{H_2O}$ ≈ 0.012, $y_{N_2}$ ≈ 0.066. Methanol formed is 11.86 mol per 15 mol CO fed (79%); the CO₂ reaction converts only 0.89 of the 5 mol CO₂ to CO.`,
+          answer: String.raw`K₁(550 K) = 6.75×10⁻⁴, K₂ = 0.0173; solving both equilibrium equations: ε₁ = 11.86, ε₂ = 0.888 (per 100 mol feed), n = 76.28 ⇒ y: H₂ 0.661, CO 0.053, CO₂ 0.054, H₂O 0.012, CH₃OH 0.156, N₂ 0.066.` }
       ] },
     { id: "2013-14-Q3", q: 3, section: "A",
       stem: String.raw`Ethanol is produced from ethylene via the gas phase reaction
@@ -65,26 +181,79 @@ Reaction conditions are 400K and 2 bar.`,
           topic: "reaction-equilibria", sub: "Ethylene hydration: K at 25 °C from standard Gibbs energies of formation",
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`Determine a numerical value for the equilibrium constant K for this reaction at 25°C.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`**Given:** C₂H₄(g) + H₂O(g) → C₂H₅OH(g). SVNA Table C.4, J/mol:
+
+| Species | $\Delta H^\circ_{f,298}$ | $\Delta G^\circ_{f,298}$ |
+|---|---|---|
+| C₂H₄(g) | 52 510 | 68 460 |
+| H₂O(g) | −241 818 | −228 572 |
+| C₂H₅OH(g) | −235 100 | −168 490 |
+
+1. **Standard Gibbs-energy change at 298.15 K:**
+$$\Delta G^\circ_{298} = \sum\nu_i\Delta G^\circ_{f_i} = -168\,490 - 68\,460 - (-228\,572) = -8\,378\ \mathrm{J/mol}$$
+
+2. **Equilibrium constant** ($\Delta G^\circ = -RT\ln K$):
+$$\ln K_{298} = \frac{8\,378}{8.314 \times 298.15} = 3.380 \quad\Rightarrow\quad \boxed{K_{298} = 29.4}$$
+
+3. **Standard heat of reaction** (needed in part b):
+$$\Delta H^\circ_{298} = -235\,100 - 52\,510 - (-241\,818) = -45\,792\ \mathrm{J/mol}$$
+   The reaction is exothermic, so K decreases as T rises.
+
+**Result:** $K_{298}$ ≈ 29.4 (ΔG° = −8378 J/mol).`,
+          answer: String.raw`ΔG°₂₉₈ = −168 490 − 68 460 + 228 572 = −8378 J/mol ⇒ K₂₉₈ = exp(8378/(8.314 × 298.15)) = 29.4 (ΔH°₂₉₈ = −45 792 J/mol).` },
         { id: "2013-14-Q3b", label: "(b)", marks: "5",
           topic: "reaction-equilibria", sub: "Ethylene hydration: K at 400 K",
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`Determine the value of K at 400K.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`**Method:** SVNA eq. 13.21, $K = K_0K_1K_2$.
+
+1. **K₀ and K₁:**
+$$K_0 = 29.37, \qquad K_1 = \exp\left[\frac{\Delta H^\circ_0}{RT_0}\left(1 - \frac{T_0}{T}\right)\right] = \exp\left[\frac{-45\,792}{8.314 \times 298.15}\left(1 - \frac{298.15}{400}\right)\right] = e^{-4.704} = 0.00906$$
+
+2. **K₂.** From Table C.1 for C₂H₅OH − C₂H₄ − H₂O: ΔA = 3.518 − 1.424 − 3.470 = −1.376; ΔB = (20.001 − 14.394 − 1.450) × 10⁻³ = 4.157 × 10⁻³; ΔC = (−6.002 + 4.392) × 10⁻⁶ = −1.610 × 10⁻⁶; ΔD = −0.121 × 10⁵.
+$$\int_{298.15}^{400}\frac{\Delta C_P^\circ}{R}\frac{dT}{T} = -0.06846, \qquad \frac{1}{T}\int_{298.15}^{400}\frac{\Delta C_P^\circ}{R}dT = \frac{-22.81}{400} = -0.05702$$
+$$K_2 = \exp(-0.06846 + 0.05702) = 0.9886$$
+
+3. **K at 400 K:**
+$$K_{400} = 29.37 \times 0.00906 \times 0.9886 = 0.263$$
+   With ΔH° taken as constant ($K_2$ = 1) the result would be 0.266; the heat-capacity correction is small over this range.
+
+**Result:** $K_{400}$ ≈ **0.263** (ΔG°₄₀₀ = +4.44 kJ/mol).`,
+          answer: String.raw`K = K₀K₁K₂ = 29.37 × exp[−45 792/(R·298.15)·(1 − 298.15/400)] × 0.9886 = 29.37 × 0.00906 × 0.9886 = 0.263.` },
         { id: "2013-14-Q3c", label: "(c)", marks: "10",
           topic: "reaction-equilibria", sub: "Ethylene hydration at 400 K, 2 bar: equilibrium composition for an equimolar feed",
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`Determine the composition of the equilibrium gas mixture for an equimolar feed containing only ethylene and H₂O.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`**Given:** 1 mol C₂H₄ + 1 mol H₂O; 400 K, 2 bar; $K_{400}$ = 0.263; ideal gases (low pressure). ν = 1 − 1 − 1 = −1.
+
+1. **Mole numbers:** C₂H₄ = 1 − ε, H₂O = 1 − ε, C₂H₅OH = ε; total n = 2 − ε.
+
+2. **Equilibrium relation:** $\prod y_i^{\nu_i} = (P/P^\circ)^{-\nu}K = (P/P^\circ)K$:
+$$\frac{y_{EtOH}}{y_{C_2H_4}\,y_{H_2O}} = \frac{\varepsilon(2 - \varepsilon)}{(1 - \varepsilon)^2} = \frac{P}{P^\circ}K = 2(0.263) = 0.526$$
+
+3. **Solve.** Since $\varepsilon(2 - \varepsilon) = 1 - (1 - \varepsilon)^2$,
+$$\frac{1}{(1 - \varepsilon)^2} = 1 + 0.526 \;\Rightarrow\; 1 - \varepsilon = (1.526)^{-1/2} = 0.8095 \;\Rightarrow\; \varepsilon = 0.1905$$
+
+4. **Composition** (n = 1.8095):
+$$y_{C_2H_5OH} = \frac{0.1905}{1.8095} = 0.105, \qquad y_{C_2H_4} = y_{H_2O} = \frac{0.8095}{1.8095} = 0.447$$
+
+**Result:** **10.5% ethanol, 44.7% ethylene, 44.7% water** (19% conversion of ethylene).`,
+          answer: String.raw`ε(2 − ε)/(1 − ε)² = (P/P°)K = 0.526 ⇒ 1 − ε = 1.526^{−½} ⇒ ε = 0.1905; y_EtOH = 0.105, y_C₂H₄ = y_H₂O = 0.447.` },
         { id: "2013-14-Q3d", label: "(d)", marks: "5",
           topic: "reaction-equilibria", sub: "Effect of lowering the pressure to 1 bar on the ethanol mole fraction",
           type: "theory", syllabus: "in", repeats: [],
           text: String.raw`For the same feed as in part (c), but for P = 1 bar, would the equilibrium mole fraction of ethanol be hither or lower? Explain.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Lower.**
+
+1. **Le Chatelier / sign of ν.** ν = −1: two moles of gas give one. From $\prod y_i^{\nu_i} = (P/P^\circ)K$, a lower P (with K fixed by T) lowers the right side, so the equilibrium shifts towards fewer products.
+
+2. **Numbers.** At P = 1 bar:
+$$\frac{\varepsilon(2 - \varepsilon)}{(1 - \varepsilon)^2} = 0.263 \;\Rightarrow\; 1 - \varepsilon = (1.263)^{-1/2} = 0.8898, \quad \varepsilon = 0.110$$
+$$y_{C_2H_5OH} = \frac{0.110}{1.890} = 0.058$$
+   This is lower than 0.105 at 2 bar.
+
+High pressure (and moderate temperature, since the reaction is exothermic) favours ethanol formation; industrial ethylene hydration runs at about 60–70 bar.`,
+          answer: String.raw`Lower: ν = −1, so Πyᵢ^νᵢ = (P/P°)K falls with P; at 1 bar ε = 0.110 and y_EtOH = 0.058 (vs 0.105 at 2 bar).` }
       ] },
     { id: "2013-14-Q4", q: 4, section: "A",
       stem: String.raw``,
@@ -131,8 +300,27 @@ At low pressure ($\Phi_i$ = 1) the same diagram gives DEW T by modified Raoult's
           topic: "refrigeration", sub: "Absorption refrigeration: sketch, working principle and Q_H/Q_C equations",
           type: "sketch", syllabus: "in", repeats: [],
           text: String.raw`With a neat sketch, write the working principle of an absorption refrigeration system. Derive necessary equations.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` },
+          solution: String.raw`### Sketch
+![Absorption refrigeration cycle: generator, condenser, expansion valve, evaporator, absorber and solution pump; high-pressure and low-pressure sides](fig/2013-14-Q4b-sketch.svg)
+
+### Working principle (NH₃–H₂O; LiBr–H₂O works the same way with water as refrigerant)
+1. **Evaporator (low P):** liquid NH₃ boils at $T_C$, absorbing $Q_C$ from the cold space.
+2. **Absorber (low P):** the vapour dissolves in a weak NH₃–water solution. The heat of absorption is removed by cooling water at about $T_S$.
+3. **Pump:** the strong solution is pumped to high pressure. Pumping a liquid needs very little work.
+4. **Generator (high P):** heat $Q_H$ at $T_H$ drives NH₃ out of solution (with a rectifier to remove water). The weak solution returns to the absorber through a throttle, usually via a solution heat exchanger.
+5. **Condenser (high P):** the NH₃ condenses at $T_S$.
+6. **Expansion valve:** the liquid is throttled to the evaporator pressure.
+
+The absorber, pump and generator together act as a **heat-driven compressor**. This replaces the work input of a vapour-compression cycle with heat.
+
+### Equations
+1. **Overall energy balance** (steady state):
+$$Q_H + Q_C + W_{pump} = Q_{absorber} + Q_{condenser}$$
+2. **Best possible performance.** The heat $Q_H$ runs a Carnot engine between $T_H$ and $T_S$; its work drives a Carnot refrigerator between $T_C$ and $T_S$:
+$$W = Q_H\frac{T_H - T_S}{T_H} = Q_C\frac{T_S - T_C}{T_C}$$
+$$\left(\frac{Q_H}{Q_C}\right)_{min} = \frac{T_S - T_C}{T_C}\cdot\frac{T_H}{T_H - T_S}, \qquad \mathrm{COP}_{max} = \frac{Q_C}{Q_H} = \frac{T_C}{T_S - T_C}\cdot\frac{T_H - T_S}{T_H}$$
+3. **Example:** $T_H$ = 100 °C, $T_S$ = 30 °C, $T_C$ = −10 °C gives $(Q_H/Q_C)_{min}$ = 0.81. Real units achieve $Q_C/Q_H$ ≈ 0.5–0.7. They are worthwhile when waste heat, steam or solar heat is cheap.`,
+          answer: String.raw`Absorber + pump + generator replace the compressor (heat-driven). Q_H + Q_C + W_pump = Q_abs + Q_cond; Carnot limit: (Q_H/Q_C)min = [(T_S − T_C)/T_C]·[T_H/(T_H − T_S)] (0.81 for 100/30/−10 °C).` },
         { id: "2013-14-Q4c", label: "(c)", marks: "10",
           topic: "reaction-equilibria", sub: "Ethylene oxidation, two reactions from 2 mol C₂H₄ + 3 mol O₂: yᵢ(ε₁, ε₂)",
           type: "derivation", syllabus: "in", repeats: [],
@@ -143,8 +331,28 @@ $$\mathrm{C_2H_4(g) + \tfrac12O_2(g) \rightarrow ((CH_2)_2)O(g)}$$
 $$\mathrm{C_2H_4(g) + 3O_2(g) \rightarrow 2CO_2(g) + 2H_2O(g)}$$
 
 Develop expression for the mole fractions of the reacting species as function of the reaction coordinates.`,
-          solution: String.raw`*Full solution coming in the next update.*`,
-          answer: String.raw`—` }
+          solution: String.raw`**Given:** initially 2 mol C₂H₄ and 3 mol O₂.
+- Reaction 1: C₂H₄ + ½O₂ → (CH₂)₂O (ethylene oxide), $\nu_1 = 1 - 1 - \tfrac12 = -\tfrac12$.
+- Reaction 2: C₂H₄ + 3O₂ → 2CO₂ + 2H₂O, $\nu_2 = 2 + 2 - 1 - 3 = 0$.
+
+1. **Mole numbers** ($n_i = n_{i0} + \sum_j\nu_{i,j}\varepsilon_j$):
+
+| Species | $\nu_{i,1}$ | $\nu_{i,2}$ | $n_i$ |
+|---|---|---|---|
+| C₂H₄ | −1 | −1 | $2 - \varepsilon_1 - \varepsilon_2$ |
+| O₂ | −½ | −3 | $3 - \tfrac12\varepsilon_1 - 3\varepsilon_2$ |
+| (CH₂)₂O | 1 | 0 | $\varepsilon_1$ |
+| CO₂ | 0 | 2 | $2\varepsilon_2$ |
+| H₂O | 0 | 2 | $2\varepsilon_2$ |
+| Total | −½ | 0 | $n = 5 - \tfrac12\varepsilon_1$ |
+
+2. **Mole fractions:**
+$$y_{C_2H_4} = \frac{2 - \varepsilon_1 - \varepsilon_2}{5 - \frac12\varepsilon_1}, \qquad y_{O_2} = \frac{3 - \frac12\varepsilon_1 - 3\varepsilon_2}{5 - \frac12\varepsilon_1}, \qquad y_{(CH_2)_2O} = \frac{\varepsilon_1}{5 - \frac12\varepsilon_1}$$
+$$y_{CO_2} = y_{H_2O} = \frac{2\varepsilon_2}{5 - \frac12\varepsilon_1}$$
+   Check: the numerators sum to $5 - \tfrac12\varepsilon_1$ ✓.
+
+3. **Limits on the extents** (all $n_i \ge 0$): $\varepsilon_1, \varepsilon_2 \ge 0$; $\varepsilon_1 + \varepsilon_2 \le 2$; $\tfrac12\varepsilon_1 + 3\varepsilon_2 \le 3$. For example, if only reaction 1 occurs, $\varepsilon_1 \le 2$; if only reaction 2 occurs, $\varepsilon_2 \le 1$ (O₂ limiting).`,
+          answer: String.raw`n_C₂H₄ = 2 − ε₁ − ε₂, n_O₂ = 3 − ε₁/2 − 3ε₂, n_EO = ε₁, n_CO₂ = n_H₂O = 2ε₂, n = 5 − ε₁/2; yᵢ = nᵢ/(5 − ε₁/2).` }
       ] },
     { id: "2013-14-Q5", q: 5, section: "B",
       stem: String.raw``,
