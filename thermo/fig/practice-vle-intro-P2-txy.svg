@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" font-family="Helvetica, Arial, sans-serif">
+<title>t–x–y diagram for acetonitrile(1)/nitromethane(2) at 70 kPa (Raoult’s law)</title>
+<rect width="640" height="420" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<line x1="80.0" y1="30.0" x2="80.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="80.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >0.0</text>
+<line x1="180.0" y1="30.0" x2="180.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="180.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >0.2</text>
+<line x1="280.0" y1="30.0" x2="280.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="280.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >0.4</text>
+<line x1="380.0" y1="30.0" x2="380.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="380.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >0.6</text>
+<line x1="480.0" y1="30.0" x2="480.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="480.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >0.8</text>
+<line x1="580.0" y1="30.0" x2="580.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="580.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >1.0</text>
+<line x1="80.0" y1="350.0" x2="580.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="354.0" font-size="12" fill="#55667D" text-anchor="end" >65</text>
+<line x1="80.0" y1="296.7" x2="580.0" y2="296.7" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="300.7" font-size="12" fill="#55667D" text-anchor="end" >70</text>
+<line x1="80.0" y1="243.3" x2="580.0" y2="243.3" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="247.3" font-size="12" fill="#55667D" text-anchor="end" >75</text>
+<line x1="80.0" y1="190.0" x2="580.0" y2="190.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="194.0" font-size="12" fill="#55667D" text-anchor="end" >80</text>
+<line x1="80.0" y1="136.7" x2="580.0" y2="136.7" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="140.7" font-size="12" fill="#55667D" text-anchor="end" >85</text>
+<line x1="80.0" y1="83.3" x2="580.0" y2="83.3" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="87.3" font-size="12" fill="#55667D" text-anchor="end" >90</text>
+<line x1="80.0" y1="30.0" x2="580.0" y2="30.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="34.0" font-size="12" fill="#55667D" text-anchor="end" >95</text>
+<rect x="80" y="30" width="500" height="320" fill="none" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="330.0" y="386.0" font-size="13" fill="#1E2B3A" text-anchor="middle" >x₁, y₁</text>
+<text x="36.0" y="190.0" font-size="13" fill="#1E2B3A" text-anchor="middle" transform="rotate(-90 36 190.0)">t / °C</text>
+<path d="M580.0,298.3 L574.4,296.6 L568.9,294.8 L563.3,293.0 L557.9,291.2 L552.4,289.5 L547.0,287.7 L541.6,285.9 L536.2,284.2 L530.9,282.4 L525.5,280.6 L520.3,278.9 L515.0,277.1 L509.8,275.3 L504.6,273.6 L499.4,271.8 L494.2,270.0 L489.1,268.2 L484.0,266.5 L479.0,264.7 L473.9,262.9 L468.9,261.2 L463.9,259.4 L459.0,257.6 L454.0,255.9 L449.1,254.1 L444.2,252.3 L439.4,250.6 L434.5,248.8 L429.7,247.0 L425.0,245.2 L420.2,243.5 L415.5,241.7 L410.7,239.9 L406.1,238.2 L401.4,236.4 L396.8,234.6 L392.1,232.9 L387.5,231.1 L383.0,229.3 L378.4,227.6 L373.9,225.8 L369.4,224.0 L364.9,222.2 L360.5,220.5 L356.0,218.7 L351.6,216.9 L347.2,215.2 L342.9,213.4 L338.5,211.6 L334.2,209.9 L329.9,208.1 L325.6,206.3 L321.4,204.6 L317.1,202.8 L312.9,201.0 L308.7,199.2 L304.5,197.5 L300.4,195.7 L296.2,193.9 L292.1,192.2 L288.0,190.4 L283.9,188.6 L279.9,186.9 L275.8,185.1 L271.8,183.3 L267.8,181.6 L263.8,179.8 L259.8,178.0 L255.9,176.2 L252.0,174.5 L248.1,172.7 L244.2,170.9 L240.3,169.2 L236.5,167.4 L232.6,165.6 L228.8,163.9 L225.0,162.1 L221.2,160.3 L217.5,158.6 L213.7,156.8 L210.0,155.0 L206.3,153.2 L202.6,151.5 L198.9,149.7 L195.2,147.9 L191.6,146.2 L188.0,144.4 L184.4,142.6 L180.8,140.9 L177.2,139.1 L173.6,137.3 L170.1,135.6 L166.5,133.8 L163.0,132.0 L159.5,130.2 L156.0,128.5 L152.6,126.7 L149.1,124.9 L145.7,123.2 L142.3,121.4 L138.9,119.6 L135.5,117.9 L132.1,116.1 L128.7,114.3 L125.4,112.6 L122.0,110.8 L118.7,109.0 L115.4,107.2 L112.1,105.5 L108.9,103.7 L105.6,101.9 L102.4,100.2 L99.1,98.4 L95.9,96.6 L92.7,94.9 L89.5,93.1 L86.3,91.3 L83.2,89.6 L80.0,87.8" fill="none" stroke="#D2552B" stroke-width="2.5" stroke-linejoin="round" />
+<path d="M580.0,298.3 L577.2,296.6 L574.4,294.8 L571.6,293.0 L568.8,291.2 L565.9,289.5 L563.0,287.7 L560.1,285.9 L557.2,284.2 L554.3,282.4 L551.3,280.6 L548.4,278.9 L545.4,277.1 L542.3,275.3 L539.3,273.6 L536.2,271.8 L533.1,270.0 L530.0,268.2 L526.9,266.5 L523.7,264.7 L520.6,262.9 L517.4,261.2 L514.2,259.4 L510.9,257.6 L507.7,255.9 L504.4,254.1 L501.1,252.3 L497.7,250.6 L494.4,248.8 L491.0,247.0 L487.6,245.2 L484.2,243.5 L480.8,241.7 L477.3,239.9 L473.8,238.2 L470.3,236.4 L466.8,234.6 L463.2,232.9 L459.6,231.1 L456.0,229.3 L452.4,227.6 L448.7,225.8 L445.0,224.0 L441.3,222.2 L437.6,220.5 L433.8,218.7 L430.1,216.9 L426.3,215.2 L422.4,213.4 L418.6,211.6 L414.7,209.9 L410.8,208.1 L406.9,206.3 L402.9,204.6 L399.0,202.8 L394.9,201.0 L390.9,199.2 L386.9,197.5 L382.8,195.7 L378.7,193.9 L374.5,192.2 L370.4,190.4 L366.2,188.6 L362.0,186.9 L357.7,185.1 L353.5,183.3 L349.2,181.6 L344.9,179.8 L340.5,178.0 L336.1,176.2 L331.7,174.5 L327.3,172.7 L322.9,170.9 L318.4,169.2 L313.9,167.4 L309.3,165.6 L304.7,163.9 L300.2,162.1 L295.5,160.3 L290.9,158.6 L286.2,156.8 L281.5,155.0 L276.7,153.2 L272.0,151.5 L267.2,149.7 L262.4,147.9 L257.5,146.2 L252.6,144.4 L247.7,142.6 L242.8,140.9 L237.8,139.1 L232.8,137.3 L227.7,135.6 L222.7,133.8 L217.6,132.0 L212.5,130.2 L207.3,128.5 L202.1,126.7 L196.9,124.9 L191.7,123.2 L186.4,121.4 L181.1,119.6 L175.7,117.9 L170.4,116.1 L165.0,114.3 L159.5,112.6 L154.0,110.8 L148.5,109.0 L143.0,107.2 L137.5,105.5 L131.9,103.7 L126.2,101.9 L120.6,100.2 L114.9,98.4 L109.2,96.6 L103.4,94.9 L97.6,93.1 L91.8,91.3 L85.9,89.6 L80.0,87.8" fill="none" stroke="#0B7C8C" stroke-width="2.5" stroke-linejoin="round" />
+<text x="205.0" y="190.0" font-size="12" fill="#D2552B" text-anchor="end" >t–x₁ (bubble)</text>
+<text x="390.0" y="126.0" font-size="12" fill="#0B7C8C" text-anchor="start" >t–y₁ (dew)</text>
+<text x="180.0" y="296.7" font-size="12" fill="#55667D" text-anchor="start" >subcooled liquid</text>
+<text x="355.0" y="62.0" font-size="12" fill="#55667D" text-anchor="start" >superheated vapour</text>
+<text x="90.0" y="79.8" font-size="11.5" fill="#55667D" text-anchor="start" >t₂ˢᵃᵗ = 89.58 °C</text>
+<text x="570.0" y="325.5" font-size="11.5" fill="#55667D" text-anchor="end" >t₁ˢᵃᵗ = 69.84 °C</text>
+<line x1="287.1" y1="190.0" x2="369.4" y2="190.0" stroke="#1E2B3A" stroke-width="1.2" />
+<text x="330.0" y="184.0" font-size="11" fill="#1E2B3A" text-anchor="middle" >tie line at 80 °C</text>
+</svg>

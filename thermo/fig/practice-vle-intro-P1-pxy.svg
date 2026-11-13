@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" font-family="Helvetica, Arial, sans-serif">
+<title>P–x–y diagram for acetonitrile(1)/nitromethane(2) at 75 °C (Raoult’s law)</title>
+<rect width="640" height="420" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<line x1="80.0" y1="30.0" x2="80.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="80.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >0.0</text>
+<line x1="180.0" y1="30.0" x2="180.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="180.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >0.2</text>
+<line x1="280.0" y1="30.0" x2="280.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="280.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >0.4</text>
+<line x1="380.0" y1="30.0" x2="380.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="380.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >0.6</text>
+<line x1="480.0" y1="30.0" x2="480.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="480.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >0.8</text>
+<line x1="580.0" y1="30.0" x2="580.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="580.0" y="367.0" font-size="12" fill="#55667D" text-anchor="middle" >1.0</text>
+<line x1="80.0" y1="350.0" x2="580.0" y2="350.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="354.0" font-size="12" fill="#55667D" text-anchor="end" >20</text>
+<line x1="80.0" y1="270.0" x2="580.0" y2="270.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="274.0" font-size="12" fill="#55667D" text-anchor="end" >40</text>
+<line x1="80.0" y1="190.0" x2="580.0" y2="190.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="194.0" font-size="12" fill="#55667D" text-anchor="end" >60</text>
+<line x1="80.0" y1="110.0" x2="580.0" y2="110.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="114.0" font-size="12" fill="#55667D" text-anchor="end" >80</text>
+<line x1="80.0" y1="30.0" x2="580.0" y2="30.0" stroke="#9AA8B8" stroke-width="0.6" />
+<text x="73.0" y="34.0" font-size="12" fill="#55667D" text-anchor="end" >100</text>
+<rect x="80" y="30" width="500" height="320" fill="none" stroke="#1E2B3A" stroke-width="1.2"/>
+<text x="330.0" y="386.0" font-size="13" fill="#1E2B3A" text-anchor="middle" >x₁, y₁</text>
+<text x="36.0" y="190.0" font-size="13" fill="#1E2B3A" text-anchor="middle" transform="rotate(-90 36 190.0)">P / kPa</text>
+<path d="M80.0,262.1 L85.0,260.4 L90.0,258.8 L95.0,257.1 L100.0,255.5 L105.0,253.8 L110.0,252.2 L115.0,250.5 L120.0,248.9 L125.0,247.2 L130.0,245.6 L135.0,243.9 L140.0,242.3 L145.0,240.6 L150.0,239.0 L155.0,237.3 L160.0,235.7 L165.0,234.0 L170.0,232.4 L175.0,230.7 L180.0,229.1 L185.0,227.4 L190.0,225.8 L195.0,224.1 L200.0,222.5 L205.0,220.8 L210.0,219.2 L215.0,217.5 L220.0,215.9 L225.0,214.2 L230.0,212.6 L235.0,211.0 L240.0,209.3 L245.0,207.7 L250.0,206.0 L255.0,204.4 L260.0,202.7 L265.0,201.1 L270.0,199.4 L275.0,197.8 L280.0,196.1 L285.0,194.5 L290.0,192.8 L295.0,191.2 L300.0,189.5 L305.0,187.9 L310.0,186.2 L315.0,184.6 L320.0,182.9 L325.0,181.3 L330.0,179.6 L335.0,178.0 L340.0,176.3 L345.0,174.7 L350.0,173.0 L355.0,171.4 L360.0,169.7 L365.0,168.1 L370.0,166.4 L375.0,164.8 L380.0,163.1 L385.0,161.5 L390.0,159.8 L395.0,158.2 L400.0,156.5 L405.0,154.9 L410.0,153.2 L415.0,151.6 L420.0,149.9 L425.0,148.3 L430.0,146.6 L435.0,145.0 L440.0,143.3 L445.0,141.7 L450.0,140.0 L455.0,138.4 L460.0,136.7 L465.0,135.1 L470.0,133.4 L475.0,131.8 L480.0,130.2 L485.0,128.5 L490.0,126.9 L495.0,125.2 L500.0,123.6 L505.0,121.9 L510.0,120.3 L515.0,118.6 L520.0,117.0 L525.0,115.3 L530.0,113.7 L535.0,112.0 L540.0,110.4 L545.0,108.7 L550.0,107.1 L555.0,105.4 L560.0,103.8 L565.0,102.1 L570.0,100.5 L575.0,98.8 L580.0,97.2" fill="none" stroke="#D2552B" stroke-width="2.5" stroke-linejoin="round" />
+<path d="M80.0,262.1 L89.8,260.4 L99.4,258.8 L108.9,257.1 L118.1,255.5 L127.2,253.8 L136.1,252.2 L144.9,250.5 L153.5,248.9 L161.9,247.2 L170.2,245.6 L178.4,243.9 L186.4,242.3 L194.2,240.6 L202.0,239.0 L209.6,237.3 L217.0,235.7 L224.4,234.0 L231.6,232.4 L238.7,230.7 L245.7,229.1 L252.5,227.4 L259.3,225.8 L265.9,224.1 L272.5,222.5 L278.9,220.8 L285.3,219.2 L291.5,217.5 L297.6,215.9 L303.7,214.2 L309.6,212.6 L315.5,211.0 L321.3,209.3 L327.0,207.7 L332.6,206.0 L338.1,204.4 L343.6,202.7 L348.9,201.1 L354.2,199.4 L359.5,197.8 L364.6,196.1 L369.7,194.5 L374.7,192.8 L379.6,191.2 L384.5,189.5 L389.3,187.9 L394.0,186.2 L398.7,184.6 L403.3,182.9 L407.8,181.3 L412.3,179.6 L416.8,178.0 L421.1,176.3 L425.4,174.7 L429.7,173.0 L433.9,171.4 L438.1,169.7 L442.2,168.1 L446.2,166.4 L450.2,164.8 L454.1,163.1 L458.0,161.5 L461.9,159.8 L465.7,158.2 L469.5,156.5 L473.2,154.9 L476.8,153.2 L480.5,151.6 L484.1,149.9 L487.6,148.3 L491.1,146.6 L494.6,145.0 L498.0,143.3 L501.4,141.7 L504.7,140.0 L508.0,138.4 L511.3,136.7 L514.5,135.1 L517.7,133.4 L520.9,131.8 L524.0,130.2 L527.1,128.5 L530.1,126.9 L533.2,125.2 L536.2,123.6 L539.1,121.9 L542.0,120.3 L544.9,118.6 L547.8,117.0 L550.6,115.3 L553.5,113.7 L556.2,112.0 L559.0,110.4 L561.7,108.7 L564.4,107.1 L567.1,105.4 L569.7,103.8 L572.3,102.1 L574.9,100.5 L577.5,98.8 L580.0,97.2" fill="none" stroke="#0B7C8C" stroke-width="2.5" stroke-linejoin="round" />
+<text x="230.0" y="198.0" font-size="12" fill="#D2552B" text-anchor="end" >P–x₁ (bubble)</text>
+<text x="410.0" y="222.0" font-size="12" fill="#0B7C8C" text-anchor="start" >P–y₁ (dew)</text>
+<text x="205.0" y="90.0" font-size="12" fill="#55667D" text-anchor="start" >subcooled liquid</text>
+<text x="430.0" y="302.0" font-size="12" fill="#55667D" text-anchor="start" >superheated vapour</text>
+<line x1="380.0" y1="50.0" x2="380.0" y2="330.0" stroke="#55667D" stroke-width="1" stroke-dasharray="4 3"/>
+<circle cx="380.0" cy="163.1" r="4.5" fill="#1E2B3A"/>
+<text x="372.0" y="155.1" font-size="11.5" fill="#1E2B3A" text-anchor="end" >b (bubble, 66.72)</text>
+<circle cx="380.0" cy="191.0" r="4.5" fill="#1E2B3A"/>
+<text x="388.0" y="207.0" font-size="11.5" fill="#1E2B3A" text-anchor="start" >c (dew, 59.74)</text>
+<line x1="380.0" y1="163.1" x2="454.1" y2="163.1" stroke="#1E2B3A" stroke-width="1.2" />
+<line x1="295.4" y1="191.0" x2="380.0" y2="191.0" stroke="#1E2B3A" stroke-width="1.2" />
+<text x="90.0" y="280.1" font-size="11.5" fill="#55667D" text-anchor="start" >P₂ˢᵃᵗ = 41.98</text>
+<text x="565.0" y="85.2" font-size="11.5" fill="#55667D" text-anchor="end" >P₁ˢᵃᵗ = 83.21</text>
+</svg>
