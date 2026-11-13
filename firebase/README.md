@@ -64,6 +64,20 @@ Team roles never come from team verification: team members still need Google sig
 
 The rules changed for this, so **re-publish `firebase/firestore.rules`** (Firestore → Rules → paste → Publish).
 
+## Tutor studio (`tutor/`)
+
+A separate page for private tutors, with its own access list. See `tutor/README.md`.
+
+1. **Re-publish `firebase/firestore.rules`** (Firestore → Rules → paste → Publish): it adds `tutors/{email}` and
+   `tutorBank/{id}`. Until then the Tutors tab and the studio are refused.
+2. Dashboard → **Tutors** (admins only) → **Add a tutor** with their email or 7-digit student ID.
+   Being on the Students list gives no access to the studio; **Block** or **Remove** takes it away at once.
+3. Same tab → **Upload and replace bank** with the question-bank JSON file. The file is never committed to this
+   public repository; the bank lives only in Firestore, readable by tutors on the list and by admins.
+
+Reads: opening the studio costs one read for the tutor entry plus one per bank part (a part holds about
+600 KB of questions, so a few hundred questions are one or two reads).
+
 ## Free-plan limits (Spark)
 
 - Firestore: 50,000 reads, 20,000 writes and 1 GiB stored per day/total; enough for a few hundred students.

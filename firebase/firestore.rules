@@ -150,6 +150,43 @@ service cloud.firestore {
       allow delete: if isMod() || (authed() && uid == request.auth.uid);
     }
 
+    // ------------------------------------------------------------ tutor studio (tutor/)
+    // A separate list from members: being an allowed student gives nothing here.
+    // Only admins put people on it; a person may read their own entry to learn whether they are in.
+    function tutorDoc() {
+      return /databases/$(database)/documents/tutors/$(me());
+    }
+    function isTutor() {
+      return verified() && exists(tutorDoc()) && get(tutorDoc()).data.get('blocked', false) != true;
+    }
+    match /tutors/{email} {
+      function tutorFields() {
+        return request.resource.data.keys().hasOnly(['name', 'note', 'blocked', 'by', 'at'])
+          && optStr(request.resource.data.get('name', null), 80)
+          && optStr(request.resource.data.get('note', null), 200)
+          && request.resource.data.blocked is bool
+          && request.resource.data.by == me()
+          && email == email.lower();
+      }
+      allow get: if (authed() && email == me()) || isAdmin();
+      allow list: if isAdmin();
+      allow create, update: if isAdmin() && tutorFields();
+      allow delete: if isAdmin();
+    }
+
+    // The shared question bank, in a few documents that each hold a JSON list of questions.
+    // It is never in the public repository: tutors on the list read it, admins replace it.
+    match /tutorBank/{id} {
+      allow read: if isTutor() || isAdmin();
+      allow create, update: if isAdmin()
+        && request.resource.data.keys().hasOnly(['data', 'count', 'updatedAt', 'updatedBy'])
+        && request.resource.data.data is string && request.resource.data.data.size() <= 1000000
+        && request.resource.data.count is int
+        && request.resource.data.updatedAt == request.time
+        && request.resource.data.updatedBy == me();
+      allow delete: if isAdmin();
+    }
+
     // ------------------------------------------------------------ comments
     // Students create their own comment once; only the team changes it afterwards.
     match /comments/{id} {

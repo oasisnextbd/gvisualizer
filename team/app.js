@@ -1,4 +1,4 @@
-// gvisualizer team dashboard: comments inbox, team notes, allowed students, lab access (bKash payments and codes) and the team list.
+// gvisualizer team dashboard: comments inbox, team notes, allowed students, lab access (bKash payments and codes), the tutor studio list and the team list.
 import { enabled, fb, onUser, signIn, signOut, googleSignIn, niceError, esc, when, shortName, OWNER, FOUNDER, DOMAIN } from '../shared/fb.js';
 import { DEFAULT_RANGES } from '../shared/config.js';
 
@@ -26,7 +26,7 @@ function render() {
   if (me.dbError && !me.isOwner) return say(`<h2>Database not ready</h2><p class="lede">The database refused the request (${esc(me.dbError)}). If Firebase was just set up, publish <b>firebase/firestore.rules</b> in the console (Firestore → Rules) and reload.</p><button class="btn ghost" id="out">Sign out</button>`);
   if (!me.isMod) return say(`<h2>Not on the team</h2><p class="lede"><b>${esc(me.email)}</b> is signed in but is not on the team list. Ask the owner (${esc(OWNER)}) or an admin to add you.</p><button class="btn ghost" id="out">Sign out</button>`);
   if (!seenSaved) { seenSaved = true; C.F.setDoc(C.F.doc(C.db, 'seen', me.email), { at: C.F.serverTimestamp() }).catch(() => {}); }
-  const tabs = [['overview', 'Overview'], ['comments', 'Comments'], ['notes', 'Notes'], ['students', 'Students'], ['labs', 'Lab access']].concat(me.isAdmin ? [['team', 'Team']] : []);
+  const tabs = [['overview', 'Overview'], ['comments', 'Comments'], ['notes', 'Notes'], ['students', 'Students'], ['labs', 'Lab access']].concat(me.isAdmin ? [['tutors', 'Tutors'], ['team', 'Team']] : []);
   if (!tabs.some(t => t[0] === view.tab)) view.tab = 'overview';
   app.innerHTML = `<div class="tm"><nav class="tm-nav">
       <div class="tm-me"><b>${esc(me.email)}</b><span class="tag">${esc(me.role)}</span></div>
@@ -34,7 +34,7 @@ function render() {
       <button class="btn ghost" id="out" style="margin-top:8px">Sign out</button>
     </nav><section id="main"><p class="empty">Loading…</p></section></div>`;
   $('#out').onclick = () => signOut();
-  ({ overview, comments, notes, students, labs, team })[view.tab]();
+  ({ overview, comments, notes, students, labs, tutors, team })[view.tab]();
 }
 const $ = s => app.querySelector(s);
 function say(h) { app.innerHTML = `<div class="tm-login">${h}</div>`; const o = $('#out'); if (o) o.onclick = () => signOut(); }
@@ -370,10 +370,98 @@ async function labs() {
   } catch (e) { box.innerHTML = `<p class="empty">${esc(e.message)}</p>`; }
 }
 
+// ------------------------------------------------------------ tutors (tutor studio access and its question bank)
+// Admins only. The tutors list is separate from the allowed students: nobody gets the studio by being a student.
+// The shared question bank lives in Firestore (tutorBank/*), never in this repository; it is uploaded here from a file.
+const BANK_PART_BYTES = 600000;
+function bankParts(list) {
+  const enc = new TextEncoder(), parts = [];
+  let cur = [], size = 2;
+  for (const q of list) {
+    const n = enc.encode(JSON.stringify(q)).length + 1;
+    if (n > BANK_PART_BYTES) throw new Error('Question ' + q.id + ' is too large (over 600 KB). Shrink its image.');
+    if (cur.length && size + n > BANK_PART_BYTES) { parts.push(cur); cur = []; size = 2; }
+    cur.push(q); size += n;
+  }
+  if (cur.length) parts.push(cur);
+  return parts;
+}
+async function tutors() {
+  const { F, db } = C;
+  if (!me.isAdmin) return main('<p class="empty">Only admins manage the tutor studio.</p>');
+  try {
+    const [tu, bank] = await Promise.all([F.getDocs(F.collection(db, 'tutors')), F.getDocs(F.collection(db, 'tutorBank'))]);
+    const all = tu.docs.map(d => ({ email: d.id, ...d.data() })).sort((a, b) => a.email.localeCompare(b.email));
+    const have = new Map(all.map(r => [r.email, r]));
+    const parts = bank.docs.map(d => ({ id: d.id, ...d.data() })).sort((a, b) => a.id.localeCompare(b.id));
+    const total = parts.reduce((n, p) => n + (p.count || 0), 0);
+    const last = parts.reduce((a, p) => (p.updatedAt && (!a || p.updatedAt.seconds > a.updatedAt.seconds) ? p : a), null);
+    const m = main(`<h1>Tutors</h1>
+      <p class="lede">Who can open the <a href="../tutor/" target="_blank" rel="noopener">tutor studio</a>. This list is separate from <b>Students</b>: being an allowed student gives no access here. A tutor signs in on the studio page with the email below (their BUET account, or Google for any Gmail).</p>
+      <div class="tm-detail"><h3>Add a tutor</h3>
+        <div class="tm-bar"><input class="search" id="ue" autocomplete="off" data-lpignore="true" data-1p-ignore="true" placeholder="email or 7-digit student ID"><input class="search" id="un" autocomplete="off" data-lpignore="true" data-1p-ignore="true" placeholder="name (optional)"><input class="search" id="uo" autocomplete="off" data-lpignore="true" data-1p-ignore="true" placeholder="note, e.g. paid until March (optional)"><button class="btn" id="ua">Add tutor</button></div>
+        <p class="cm-msg" id="um"></p></div>
+      <div class="tm-detail" style="overflow-x:auto"><h3>Tutors with access (${all.filter(r => !r.blocked).length})</h3>
+        ${all.length ? `<table class="tm-t"><thead><tr><th>Email</th><th>Note</th><th>Status</th><th>Added</th><th></th></tr></thead><tbody>
+        ${all.map(r => `<tr><td><b>${esc(r.name || shortName(r.email))}</b><br><span class="cm-dim">${esc(r.email)}</span></td><td class="cm-dim">${esc(r.note || '')}</td>
+          <td>${r.blocked ? '<span class="st-new">blocked</span>' : '<span class="st-approved">has access</span>'}</td><td class="cm-dim">${esc(when(r.at))}<br>by ${esc(shortName(r.by || ''))}</td>
+          <td><button class="cm-link" data-b="${esc(r.email)}">${r.blocked ? 'Unblock' : 'Block'}</button> · <button class="cm-link" data-x="${esc(r.email)}">Remove</button></td></tr>`).join('')}
+        </tbody></table>` : '<p class="empty">No tutors yet. Admins can always open the studio.</p>'}</div>
+      <div class="tm-detail"><h3>Shared question bank</h3>
+        <p>${total ? `<b>${total}</b> questions in ${parts.length} part${parts.length > 1 ? 's' : ''}${last ? `, last uploaded ${esc(when(last.updatedAt))} by ${esc(shortName(last.updatedBy || ''))}` : ''}.` : 'Nothing uploaded yet: tutors see an empty bank.'}</p>
+        <p class="cm-dim">Upload the bank as one JSON file (a list of questions). It <b>replaces</b> the whole bank for every tutor. Keep the file on your computer or a private drive, never in the public repository. Tutors' own questions stay in their browsers and are not affected.</p>
+        <div class="tm-bar"><input type="file" id="bf" accept=".json,application/json"><button class="btn" id="bu">Upload and replace bank</button>${total ? '<button class="btn ghost" id="bd">Download current bank</button>' : ''}</div>
+        <p class="cm-msg" id="bm"></p></div>`);
+    const msg = t => { m.querySelector('#um').textContent = t; }, bmsg = t => { m.querySelector('#bm').textContent = t; };
+    m.querySelector('#ua').onclick = async () => {
+      let email = m.querySelector('#ue').value.trim().toLowerCase();
+      if (/^\d{7}$/.test(email)) email += '@' + DOMAIN;
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return msg('Type a full email address or a 7-digit student ID.');
+      if (have.has(email)) return msg(email + ' is already on the list.');
+      try { await F.setDoc(F.doc(db, 'tutors', email), { name: m.querySelector('#un').value.trim().slice(0, 80) || null, note: m.querySelector('#uo').value.trim().slice(0, 200) || null, blocked: false, by: me.email, at: F.serverTimestamp() }); tutors(); }
+      catch (e) { msg(niceError(e)); }
+    };
+    m.querySelectorAll('[data-b]').forEach(b => b.onclick = async () => {
+      const r = have.get(b.dataset.b);
+      try { await F.setDoc(F.doc(db, 'tutors', r.email), { name: r.name || null, note: r.note || null, blocked: !r.blocked, by: me.email, at: F.serverTimestamp() }); tutors(); } catch (e) { msg(niceError(e)); }
+    });
+    m.querySelectorAll('[data-x]').forEach(b => b.onclick = async () => { if (confirm('Remove ' + b.dataset.x + ' from the tutors list? They lose the studio at once.')) { try { await F.deleteDoc(F.doc(db, 'tutors', b.dataset.x)); tutors(); } catch (e) { msg(niceError(e)); } } });
+    m.querySelector('#bu').onclick = async () => {
+      const f = m.querySelector('#bf').files[0];
+      if (!f) return bmsg('Choose the JSON file first.');
+      try {
+        const list = JSON.parse(await f.text());
+        if (!Array.isArray(list) || !list.length) throw new Error('The file must be a JSON list of questions.');
+        const ids = new Set();
+        list.forEach((q, i) => {
+          if (!q || typeof q !== 'object' || typeof q.id !== 'string' || !/^[\w.-]{1,80}$/.test(q.id) || typeof q.stem !== 'string' || !q.stem.trim()) throw new Error('Entry ' + (i + 1) + ' needs an id (letters, digits, _ . -) and a stem.');
+          if (ids.has(q.id)) throw new Error('The id ' + q.id + ' appears twice.');
+          ids.add(q.id);
+        });
+        const chunks = bankParts(list);
+        if (!confirm(`Replace the shared bank (${total} questions) with ${list.length} questions from ${f.name}? Every tutor sees the new bank on their next visit.`)) return;
+        for (let i = 0; i < chunks.length; i++) {
+          bmsg(`Uploading part ${i + 1} of ${chunks.length}…`);
+          await F.setDoc(F.doc(db, 'tutorBank', 'part-' + String(i).padStart(3, '0')), { data: JSON.stringify(chunks[i]), count: chunks[i].length, updatedAt: F.serverTimestamp(), updatedBy: me.email });
+        }
+        const keep = new Set(chunks.map((_, i) => 'part-' + String(i).padStart(3, '0')));
+        for (const p of parts) if (!keep.has(p.id)) await F.deleteDoc(F.doc(db, 'tutorBank', p.id));
+        bmsg(`Done: ${list.length} questions uploaded.`); setTimeout(tutors, 900);
+      } catch (e) { bmsg(e instanceof SyntaxError ? 'That file is not valid JSON.' : niceError(e)); }
+    };
+    const bd = m.querySelector('#bd');
+    if (bd) bd.onclick = () => {
+      const list = []; parts.forEach(p => { try { list.push(...JSON.parse(p.data)); } catch (e) { /* skip a damaged part */ } });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(list, null, 1)], { type: 'application/json' }));
+      a.download = 'tutor-bank.json'; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+    };
+  } catch (e) { fail(e); }
+}
+
 // ------------------------------------------------------------ team
 const ROLE_INFO = {
   owner: ['Owner', 'Everything, including admins and the company account.'],
-  admin: ['Admin', 'Everything, except changing the owner or other admins: comments, notes, allowed students, moderators.'],
+  admin: ['Admin', 'Everything, except changing the owner or other admins: comments, notes, allowed students, tutors and their question bank, moderators.'],
   moderator: ['Moderator', 'Comments and notes: review, reply, approve, publish corrections and methods; approve student verification requests; approve lab payments.']
 };
 const CAN_SEE = { owner: 'Everything', admin: 'Everything except changing the owner or admins', moderator: 'Comments, Notes, verification requests, lab payments' };

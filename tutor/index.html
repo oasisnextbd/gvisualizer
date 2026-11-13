@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>QForge · Tutor studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="tutor.css?v=20261113">
+</head>
+<body>
+
+<!-- Sign-in gate: the only thing a visitor sees until their account is on the tutors list. -->
+<div id="tutorGate" class="gate">
+  <div class="gate-card"><p class="gate-text" style="margin:0">Loading…</p></div>
+</div>
+
+<div id="tutorApp" class="hidden min-h-screen">
+
+  <header class="app-header no-print">
+    <div class="app-header-in">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">Q</span>
+        <span class="brand-name">QForge<span class="brand-sub">Tutor studio</span></span>
+      </div>
+      <div class="account">
+        <span id="accountEmail"></span>
+        <button id="btnSignOut" type="button" class="btn btn-quiet btn-sm">Sign out</button>
+      </div>
+      <nav class="tabs" aria-label="Sections">
+        <button id="navTabBank" type="button" class="tab is-active" aria-selected="true">Question bank <span id="bankCountBadge" class="tab-count">0</span></button>
+        <button id="navTabCreate" type="button" class="tab" aria-selected="false">Add a question</button>
+        <button id="navTabGviz" type="button" class="tab" aria-selected="false">Diagram lab</button>
+        <button id="navTabPaper" type="button" class="tab" aria-selected="false">Exam paper <span id="paperCountBadge" class="tab-count">0</span></button>
+        <button id="navTabBackup" type="button" class="tab" aria-selected="false">Syllabus &amp; backup</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6">
+
+    <!-- ==================== 1. QUESTION BANK ==================== -->
+    <section id="viewBank" class="space-y-5 no-print">
+      <div>
+        <h1 class="text-xl font-semibold">Question bank</h1>
+        <p class="section-sub">Filter to the topic you just taught, add questions to a paper, then print it with its mark scheme.</p>
+      </div>
+
+      <div class="card card-pad">
+        <h2 class="text-sm font-semibold text-slate-900">Ready-made topic tests</h2>
+        <p class="mt-0.5 text-xs text-slate-500">One click filters the bank and fills the exam paper.</p>
+        <div class="mt-3 flex flex-wrap gap-2 font-bangla">
+          <button id="btnPresetHMath1Part1" type="button" class="btn btn-secondary btn-sm">উচ্চতর গণিত ১ম · অধ্যায় ১–৫</button>
+          <button id="btnPresetHMath1Part2" type="button" class="btn btn-secondary btn-sm">উচ্চতর গণিত ১ম · অধ্যায় ৬–১০</button>
+          <button id="btnPresetChemCh3SetA" type="button" class="btn btn-secondary btn-sm">রসায়ন ১ম · অধ্যায় ৩ · Set A</button>
+          <button id="btnPresetChemCh3SetB" type="button" class="btn btn-secondary btn-sm">রসায়ন ১ম · অধ্যায় ৩ · Set B</button>
+          <button id="btnPresetChemCh3BUET" type="button" class="btn btn-secondary btn-sm">রসায়ন ১ম · অধ্যায় ৩ · Admission</button>
+          <button id="btnPresetWPH11Full" type="button" class="btn btn-secondary btn-sm">Edexcel IAL Physics · WPH11</button>
+          <button id="btnPresetHSC" type="button" class="btn btn-secondary btn-sm">HSC mixed</button>
+          <button id="btnPresetIAL" type="button" class="btn btn-secondary btn-sm">Edexcel IAL mixed</button>
+          <button id="btnPresetIGCSE" type="button" class="btn btn-secondary btn-sm">Edexcel IGCSE mixed</button>
+        </div>
+      </div>
+
+      <div class="card card-pad space-y-4">
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div>
+            <label for="filterCurriculum" class="field-label">Curriculum</label>
+            <select id="filterCurriculum" class="field">
+              <option value="ALL">All curricula</option>
+              <option value="HSC">HSC (Bangla version)</option>
+              <option value="IAL">Edexcel IAL (A Level)</option>
+              <option value="IGCSE">Edexcel IGCSE (O Level)</option>
+            </select>
+          </div>
+          <div>
+            <label for="filterSubject" class="field-label">Subject or unit</label>
+            <select id="filterSubject" class="field font-bangla"><option value="ALL">All subjects</option></select>
+          </div>
+          <div>
+            <label for="filterChapter" class="field-label">Chapter</label>
+            <select id="filterChapter" class="field font-bangla"><option value="ALL">All chapters</option></select>
+          </div>
+          <div>
+            <label for="filterMicroTopic" class="field-label">Topic or set</label>
+            <select id="filterMicroTopic" class="field font-bangla"><option value="ALL">All topics</option></select>
+          </div>
+          <div>
+            <label for="filterType" class="field-label">Format</label>
+            <select id="filterType" class="field">
+              <option value="ALL">All formats</option>
+              <option value="HIGH_YIELD">High priority only</option>
+              <option value="CQ">HSC creative question (CQ)</option>
+              <option value="MCQ">Multiple choice (MCQ)</option>
+              <option value="STRUCTURED">Edexcel structured</option>
+              <option value="CLONABLE">Can make new numbers</option>
+            </select>
+          </div>
+          <div>
+            <label for="filterSearch" class="field-label">Search</label>
+            <input id="filterSearch" type="search" placeholder="নদী-নৌকা, WPH11, buffer…" class="field font-bangla">
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-4">
+          <div class="flex items-center gap-3 text-sm">
+            <span id="filteredResultSummary" class="font-medium text-slate-700">0 questions</span>
+            <button id="btnClearSearch" type="button" class="btn btn-quiet btn-sm">Clear filters</button>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <button id="btnAddFilteredToPaper" type="button" class="btn btn-secondary">Add all shown to paper</button>
+            <button id="btnGoToPrintFromBank" type="button" class="btn btn-primary"><span>Open exam paper · <span id="selectedCountInline">0</span></span></button>
+          </div>
+        </div>
+      </div>
+
+      <div id="questionBankList" class="grid grid-cols-1 gap-4 lg:grid-cols-2"></div>
+    </section>
+
+    <!-- ==================== 2. ADD A QUESTION ==================== -->
+    <section id="viewCreate" class="hidden space-y-5 no-print">
+      <div class="flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <h1 class="text-xl font-semibold">Add a question</h1>
+          <p class="section-sub">Your own questions are saved in this browser and marked “Yours” in the bank.</p>
+        </div>
+        <div class="seg">
+          <button id="subTabStructured" type="button" class="is-active">Type it</button>
+          <button id="subTabCrop" type="button">From a screenshot</button>
+          <button id="subTabCloner" type="button">New numbers</button>
+        </div>
+      </div>
+
+      <!-- 2A: typed question -->
+      <div id="createPanelStructured" class="card card-pad space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <h2 class="section-title">Type a question</h2>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-slate-500">Start from an example:</span>
+            <button id="btnFillSampleHSCForm" type="button" class="btn btn-secondary btn-sm">HSC CQ</button>
+            <button id="btnFillSampleEdexcelForm" type="button" class="btn btn-secondary btn-sm">Edexcel</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <label for="newQCurriculum" class="field-label">Curriculum</label>
+            <select id="newQCurriculum" class="field">
+              <option value="HSC">HSC (Bangla version)</option>
+              <option value="IAL">Edexcel IAL (A Level)</option>
+              <option value="IGCSE">Edexcel IGCSE (O Level)</option>
+            </select>
+          </div>
+          <div>
+            <label for="newQSubject" class="field-label">Subject or unit</label>
+            <select id="newQSubject" class="field font-bangla"></select>
+          </div>
+          <div>
+            <label for="newQChapter" class="field-label">Chapter</label>
+            <select id="newQChapter" class="field font-bangla"></select>
+          </div>
+          <div>
+            <label for="newQType" class="field-label">Format</label>
+            <select id="newQType" class="field">
+              <option value="CQ">HSC creative question (ক, খ, গ, ঘ)</option>
+              <option value="STRUCTURED">Edexcel structured (a, b, c)</option>
+              <option value="MCQ">Multiple choice</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <div>
+            <label for="newQSource" class="field-label">Source (optional)</label>
+            <input id="newQSource" type="text" placeholder="Dhaka Board 2024, WPH11 Jan 24 Q15…" class="field font-bangla">
+          </div>
+          <div>
+            <label for="newQMicroTopic" class="field-label">Topic tag (optional)</label>
+            <input id="newQMicroTopic" type="text" placeholder="River and boat, buffer capacity…" class="field font-bangla">
+          </div>
+        </div>
+
+        <div>
+          <label for="newQStem" class="field-label">Question stem / উদ্দীপক</label>
+          <textarea id="newQStem" rows="3" class="field font-bangla"></textarea>
+        </div>
+
+        <div id="newQSubpartsContainer" class="space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="field-label" style="margin:0">Parts and marks</span>
+            <button id="btnAddSubpartRow" type="button" class="btn btn-quiet btn-sm">+ Add a part</button>
+          </div>
+          <div id="subpartRowsList" class="space-y-2"></div>
+        </div>
+
+        <div id="newQMcqContainer" class="hidden space-y-2">
+          <span class="field-label" style="margin:0">Options (1 mark)</span>
+          <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+            <input id="mcqOptA" type="text" placeholder="(ক) / (A)" class="field font-bangla">
+            <input id="mcqOptB" type="text" placeholder="(খ) / (B)" class="field font-bangla">
+            <input id="mcqOptC" type="text" placeholder="(গ) / (C)" class="field font-bangla">
+            <input id="mcqOptD" type="text" placeholder="(ঘ) / (D)" class="field font-bangla">
+          </div>
+        </div>
+
+        <div>
+          <label for="newQSolution" class="field-label">Mark scheme (printed only on the tutor copy)</label>
+          <textarea id="newQSolution" rows="3" class="field font-bangla"></textarea>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-4">
+          <label class="check"><input id="newQHighYield" type="checkbox"> Mark as high priority</label>
+          <div class="flex flex-wrap gap-2">
+            <button id="btnSaveQuestionOnly" type="button" class="btn btn-secondary">Save</button>
+            <button id="btnSaveAndAddToPaper" type="button" class="btn btn-primary">Save and add to paper</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2B: from a screenshot -->
+      <div id="createPanelCrop" class="hidden card card-pad space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 class="section-title">From a screenshot</h2>
+            <p class="section-sub">Upload a screenshot or photo of a question or diagram and crop it. Use material you have the right to reproduce.</p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button id="btnLoadSampleDiagramCrop" type="button" class="btn btn-quiet btn-sm">Try a sample figure</button>
+            <label class="btn btn-primary btn-sm cursor-pointer">Upload image<input id="cropFileInput" type="file" accept="image/*" class="hidden"></label>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-5 lg:grid-cols-12">
+          <div class="space-y-3 lg:col-span-7">
+            <div class="rounded-lg border border-slate-200 bg-slate-100 p-3">
+              <canvas id="cropCanvas" width="640" height="300" class="mx-auto block h-auto max-w-full rounded bg-white"></canvas>
+            </div>
+            <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-xs text-slate-600 sm:grid-cols-4">
+              <label>Top<input id="cropTopRange" type="range" min="0" max="90" value="0" class="mt-1 block w-full"></label>
+              <label>Bottom<input id="cropBottomRange" type="range" min="10" max="100" value="100" class="mt-1 block w-full"></label>
+              <label>Left<input id="cropLeftRange" type="range" min="0" max="90" value="0" class="mt-1 block w-full"></label>
+              <label>Right<input id="cropRightRange" type="range" min="10" max="100" value="100" class="mt-1 block w-full"></label>
+            </div>
+          </div>
+
+          <div class="space-y-3 lg:col-span-5">
+            <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <div>
+                <label for="cropCurriculum" class="field-label">Curriculum</label>
+                <select id="cropCurriculum" class="field">
+                  <option value="IAL">Edexcel IAL</option>
+                  <option value="IGCSE">Edexcel IGCSE</option>
+                  <option value="HSC">HSC (Bangla version)</option>
+                </select>
+              </div>
+              <div>
+                <label for="cropSubject" class="field-label">Subject or unit</label>
+                <select id="cropSubject" class="field font-bangla"></select>
+              </div>
+              <div>
+                <label for="cropChapter" class="field-label">Chapter</label>
+                <select id="cropChapter" class="field font-bangla"></select>
+              </div>
+              <div>
+                <label for="cropMarks" class="field-label">Total marks</label>
+                <input id="cropMarks" type="number" min="1" max="100" value="6" class="field">
+              </div>
+            </div>
+            <div>
+              <label for="cropSource" class="field-label">Source (optional)</label>
+              <input id="cropSource" type="text" placeholder="Paper or book this came from" class="field font-bangla">
+            </div>
+            <div>
+              <label for="cropCaption" class="field-label">Question text (optional)</label>
+              <textarea id="cropCaption" rows="3" placeholder="Anything to print next to the figure" class="field font-bangla"></textarea>
+            </div>
+            <div>
+              <label for="cropSolution" class="field-label">Mark scheme (optional)</label>
+              <textarea id="cropSolution" rows="2" class="field font-bangla"></textarea>
+            </div>
+            <button id="btnSaveCroppedQuestion" type="button" class="btn btn-primary w-full">Save and add to paper</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2C: new numbers -->
+      <div id="createPanelCloner" class="hidden card card-pad space-y-5">
+        <div>
+          <h2 class="section-title">New numbers for a standard question</h2>
+          <p class="section-sub">Pick a question type and change its numbers. The mark scheme is recalculated as you go.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-5 lg:grid-cols-12">
+          <div class="space-y-4 lg:col-span-5">
+            <div>
+              <label for="clonerTemplateSelect" class="field-label">Question type</label>
+              <select id="clonerTemplateSelect" class="field font-bangla">
+                <option value="HSC_PHY_RIVER">HSC পদার্থবিজ্ঞান ১ম · নদী ও স্রোত</option>
+                <option value="HSC_CHEM_BUFFER">HSC রসায়ন ১ম · বাফার দ্রবণের pH</option>
+                <option value="HSC_MATH_CALC">HSC উচ্চতর গণিত ১ম · স্পর্শক ও ক্ষেত্রফল</option>
+                <option value="HSC_MATH1_MATRIX_LOCUS">HSC উচ্চতর গণিত ১ম · বিপরীত ম্যাট্রিক্স ও সঞ্চারপথ</option>
+                <option value="HSC_MATH1_CIRCLE_RADICAL">HSC উচ্চতর গণিত ১ম · বৃত্ত ও জ্যা</option>
+                <option value="IAL_P1_P2_CIRC">Edexcel IAL Pure · Circle and tangent</option>
+                <option value="IAL_M1_INCLINE">Edexcel IAL M1 · Rough inclined plane</option>
+                <option value="IAL_S1_NORMAL">Edexcel IAL S1 · Normal distribution</option>
+                <option value="IAL_PHY_PROJ">Edexcel IAL Physics · Projectile</option>
+                <option value="IGCSE_4PM1_QUAD">Edexcel IGCSE 4PM1 · Roots of a quadratic</option>
+              </select>
+            </div>
+            <div id="clonerParamsBox" class="space-y-4 rounded-lg border border-slate-200 bg-slate-50 p-4"></div>
+            <div class="flex flex-wrap gap-2">
+              <button id="btnRandomizeClonerParams" type="button" class="btn btn-secondary flex-1">Random numbers</button>
+              <button id="btnSaveClonedVariant" type="button" class="btn btn-primary flex-1">Add to paper</button>
+            </div>
+          </div>
+
+          <div class="space-y-3 lg:col-span-7">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-medium uppercase tracking-wide text-slate-500">Preview</span>
+              <span id="clonerPreviewMarks" class="text-xs tabular-nums text-slate-500"></span>
+            </div>
+            <div id="clonerQuestionPreview" class="rounded-lg border border-slate-200 p-4"></div>
+            <div>
+              <span class="text-xs font-medium uppercase tracking-wide text-slate-500">Mark scheme</span>
+              <div id="clonerSolutionPreview" class="q-solution-body font-bangla"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. EXAM PAPER ==================== -->
+    <section id="viewPaper" class="hidden space-y-5">
+      <div class="no-print flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <h1 class="text-xl font-semibold">Exam paper</h1>
+          <p class="section-sub">Set the header, check the order, then print or save as PDF (A4).</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <div class="seg">
+            <button id="btnViewStudentPaper" type="button" class="is-active">Student paper</button>
+            <button id="btnViewMarkScheme" type="button">Mark scheme</button>
+          </div>
+          <button id="btnPrintPaper" type="button" class="btn btn-primary">Print / save PDF</button>
+        </div>
+      </div>
+
+      <div class="no-print card card-pad space-y-4">
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="sm:col-span-2 lg:col-span-4">
+            <label for="paperHeaderTitle" class="field-label">Exam title</label>
+            <input id="paperHeaderTitle" type="text" value="Topic test" class="field font-bangla">
+          </div>
+          <div class="lg:col-span-2">
+            <label for="paperHeaderInstructor" class="field-label">Tutor or coaching centre</label>
+            <input id="paperHeaderInstructor" type="text" placeholder="Shown under the title and in the footer" class="field font-bangla">
+          </div>
+          <div>
+            <label for="paperHeaderTime" class="field-label">Time allowed</label>
+            <input id="paperHeaderTime" type="text" value="40 minutes" class="field font-bangla">
+          </div>
+          <div>
+            <label for="paperHeaderDate" class="field-label">Date or set</label>
+            <input id="paperHeaderDate" type="text" class="field font-bangla">
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-slate-100 pt-4">
+          <label class="check"><input id="chkCompactMode" type="checkbox" checked> Compact spacing</label>
+          <label class="check"><input id="chkShowDottedLines" type="checkbox"> Answer lines</label>
+          <label class="check"><input id="chkShowSourceOnPrint" type="checkbox" checked> Show source</label>
+          <label class="check"><input id="chkStudentInfoBox" type="checkbox" checked> Name and score box</label>
+        </div>
+      </div>
+
+      <div id="paperQueueManager" class="no-print card card-pad space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span id="paperTotalMarksSummary" class="text-sm font-medium text-slate-900">0 questions</span>
+          <div class="flex flex-wrap items-center gap-2">
+            <button id="btnCloneAllInPaper" type="button" class="btn btn-secondary btn-sm" title="Gives every question that supports it new numbers, for a Set B">Make Set B (new numbers)</button>
+            <button id="btnClearPaper" type="button" class="btn btn-quiet btn-danger btn-sm">Clear paper</button>
+          </div>
+        </div>
+        <div id="paperQueuePills" class="flex flex-wrap gap-2"></div>
+      </div>
+
+      <div id="printableA4Container" class="a4-sheet p-6 text-slate-950 sm:p-10"></div>
+    </section>
+
+    <!-- ==================== 4. SYLLABUS & BACKUP ==================== -->
+    <section id="viewBackup" class="hidden space-y-5 no-print">
+      <div>
+        <h1 class="text-xl font-semibold">Syllabus &amp; backup</h1>
+        <p class="section-sub">See what the bank covers, and keep a copy of the questions you wrote.</p>
+      </div>
+      <div class="grid grid-cols-1 gap-5 lg:grid-cols-12">
+        <div class="card card-pad space-y-4 lg:col-span-7">
+          <h2 class="section-title">Syllabus coverage</h2>
+          <div id="syllabusDirectoryTree" class="space-y-5"></div>
+        </div>
+
+        <div class="space-y-5 lg:col-span-5">
+          <div class="card card-pad space-y-3">
+            <h2 class="section-title">Your own questions</h2>
+            <p class="text-sm text-slate-500">They are stored in this browser only. Download a backup before clearing browser data or moving to another device.</p>
+            <div class="flex flex-wrap gap-2">
+              <button id="btnExportBankJson" type="button" class="btn btn-secondary">Download backup</button>
+              <label class="btn btn-secondary cursor-pointer">Import a backup<input id="inputImportBankJson" type="file" accept=".json,application/json" class="hidden"></label>
+            </div>
+            <div class="border-t border-slate-100 pt-3">
+              <button id="btnResetDefaultBank" type="button" class="btn btn-quiet btn-sm">Bring back hidden bank questions</button>
+            </div>
+          </div>
+
+          <div class="card card-pad space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <h2 class="section-title">Current paper as text</h2>
+              <button id="btnCopyMarkdownExam" type="button" class="btn btn-secondary btn-sm">Copy</button>
+            </div>
+            <p class="text-sm text-slate-500">Markdown, for pasting into a document or chat.</p>
+            <textarea id="exportMarkdownBox" rows="10" readonly class="field font-mono text-xs"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. DIAGRAM LAB ==================== -->
+    <section id="viewGviz" class="hidden space-y-5 no-print">
+      <div>
+        <h1 class="text-xl font-semibold">Diagram lab</h1>
+        <p class="section-sub">Set up a figure with the sliders and send it to the exam paper as a question with its answer.</p>
+      </div>
+      <div class="card card-pad space-y-4">
+        <div class="max-w-md">
+          <label for="gvizModeSelect" class="field-label">Figure</label>
+          <select id="gvizModeSelect" class="field">
+            <option value="CIRCLE">HSC Higher Math · Circle and chord</option>
+            <option value="CALCULUS">HSC Higher Math · Area between parabola and line</option>
+            <option value="PROJECTILE">Physics · Projectile over a wall</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <label class="block text-sm">
+            <span class="mb-1 flex justify-between"><span id="gvizLbl1" class="text-slate-700"></span><span id="gvizVal1" class="font-semibold tabular-nums"></span></span>
+            <input id="gvizSlider1" type="range" min="3" max="9" step="0.5" value="5" class="w-full">
+          </label>
+          <label class="block text-sm">
+            <span class="mb-1 flex justify-between"><span id="gvizLbl2" class="text-slate-700"></span><span id="gvizVal2" class="font-semibold tabular-nums"></span></span>
+            <input id="gvizSlider2" type="range" min="1" max="8" step="0.5" value="3" class="w-full">
+          </label>
+          <label class="block text-sm">
+            <span class="mb-1 flex justify-between"><span id="gvizLbl3" class="text-slate-700"></span><span id="gvizVal3" class="font-semibold tabular-nums"></span></span>
+            <input id="gvizSlider3" type="range" min="-2" max="2" step="0.25" value="1" class="w-full">
+          </label>
+        </div>
+
+        <div class="overflow-hidden rounded-lg border border-slate-200">
+          <canvas id="gvizSimCanvas" width="680" height="290" class="block h-auto w-full"></canvas>
+        </div>
+
+        <div class="space-y-2 rounded-lg bg-slate-50 p-4">
+          <p id="gvizReadoutBadge" class="text-sm font-medium tabular-nums text-slate-900"></p>
+          <p id="gvizQuestionPreview" class="text-sm leading-relaxed text-slate-700 font-bangla"></p>
+        </div>
+        <div class="flex justify-end">
+          <button id="btnGvizExportToExam" type="button" class="btn btn-primary">Add figure and question to paper</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div id="toastContainer" class="toast hidden no-print" role="status" aria-live="polite">
+  <p id="toastMessage"></p>
+</div>
+
+<script type="module" src="tutor.js?v=20261113"></script>
+</body>
+</html>
