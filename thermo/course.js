@@ -13,6 +13,6 @@ window.QB_COURSE={
     {id:'phase-equilibria-topics',name:'Topics in phase equilibria: stability, LLE, VLLE, SLE, SVE',ch:'14'},
     {id:'other',name:'Other (not in current slides)',ch:'–'}
   ],
-  years:['2023-24','2022-23','2021-22','2020-21','2018-19','2014-15','2013-14'],   /* solved so far; still to add: 2021-22, 2020-21, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14 */
+  years:['2023-24','2022-23','2021-22','2020-21','2018-19','2017-18','2016-17','2015-16','2014-15','2013-14'],   /* solved so far; still to add: 2021-22, 2020-21, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14 */
   sets:[]   /* practice sets to come: refrigeration, vle-intro, solution-theory, solution-applications, reaction-equilibria, phase-equilibria-topics */
 };

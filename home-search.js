@@ -14,7 +14,7 @@
   function load() {
     if (idx) return Promise.resolve(idx);
     if (!loading) loading = new Promise(res => {
-      const s = document.createElement('script'); s.src = 'search-index.js?v=202611131033';
+      const s = document.createElement('script'); s.src = 'search-index.js?v=202611131039';
       s.onload = () => { idx = (window.GV_INDEX || []).map(r => { const topic = (window.GV_TOPICS || [])[r[5]] || ''; return { dir: r[0], id: r[1], label: r[2], title: r[3], text: r[4], topic, type: r[6], practice: !!r[7], paper: r[8], hTitle: norm(r[3]), hAll: norm([r[3], r[4], topic, r[2], CODE[r[0]]].join(' ')) }; }); res(idx); };
       s.onerror = () => res([]);
       document.head.appendChild(s);
