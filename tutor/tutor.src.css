@@ -1,0 +1,118 @@
+/* QForge tutor studio: source stylesheet. tutor.css is built from this file (see tutor/README.md). */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', 'Hind Siliguri', system-ui, sans-serif;
+    --font-bangla: 'Hind Siliguri', 'Inter', system-ui, sans-serif;
+  }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font-family: var(--font-sans); @apply bg-slate-50 text-slate-900 antialiased; }
+  h1, h2, h3 { @apply tracking-tight; }
+  :focus-visible { @apply outline-none ring-2 ring-indigo-500 ring-offset-1; }
+}
+
+@layer components {
+  .font-bangla { font-family: var(--font-bangla); }
+
+  /* ---------- buttons */
+  .btn { @apply inline-flex items-center justify-center gap-1.5 rounded-lg px-3.5 py-2 text-sm font-medium transition-colors select-none whitespace-nowrap; }
+  .btn:disabled { @apply opacity-50 cursor-not-allowed; }
+  .btn-primary { @apply bg-indigo-600 text-white hover:bg-indigo-700; }
+  .btn-secondary { @apply bg-white text-slate-800 border border-slate-300 hover:bg-slate-50; }
+  .btn-quiet { @apply text-slate-600 hover:text-slate-900 hover:bg-slate-100; }
+  .btn-danger { @apply text-rose-700 hover:bg-rose-50; }
+  .btn-sm { @apply px-2.5 py-1.5 text-xs; }
+  .btn-selected { @apply bg-indigo-50 text-indigo-700 border border-indigo-200 hover:bg-indigo-100; }
+
+  /* ---------- form fields */
+  .field { @apply block w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20; }
+  select.field, input.field { @apply h-10 py-0; }
+  textarea.field { @apply leading-relaxed; }
+  .field-label { @apply mb-1 block text-xs font-medium text-slate-600; }
+  .check { @apply inline-flex cursor-pointer select-none items-center gap-2 text-sm text-slate-700; }
+  .check input { @apply h-4 w-4 rounded border-slate-300 accent-indigo-600; }
+  input[type='range'] { @apply accent-indigo-600; }
+
+  /* ---------- surfaces */
+  .card { @apply rounded-xl border border-slate-200 bg-white; }
+  .card-pad { @apply p-4 sm:p-5; }
+  .section-title { @apply text-base font-semibold text-slate-900; }
+  .section-sub { @apply mt-0.5 text-sm text-slate-500; }
+  .muted { @apply text-slate-500; }
+  .chip { @apply inline-flex items-center rounded-md bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-700; }
+  .chip-accent { @apply bg-indigo-50 text-indigo-700; }
+  .chip-own { @apply bg-emerald-50 text-emerald-700; }
+
+  /* ---------- header and tabs */
+  .app-header { @apply sticky top-0 z-30 border-b border-slate-200 bg-white/95 backdrop-blur; }
+  .app-header-in { @apply mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-4 pt-3 sm:px-6; }
+  .brand { @apply flex items-center gap-2.5 text-slate-900; }
+  .brand-mark { @apply flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-sm font-semibold text-white; }
+  .brand-name { @apply text-[15px] font-semibold leading-tight; }
+  .brand-sub { @apply block text-xs font-normal text-slate-500; }
+  .account { @apply ml-auto flex min-w-0 items-center gap-1 text-xs text-slate-500; }
+  .account span { @apply max-w-[180px] truncate; }
+  .tabs { @apply order-last -mb-px flex w-full gap-1 overflow-x-auto; scrollbar-width: none; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { @apply flex shrink-0 items-center gap-1.5 border-b-2 border-transparent px-3 py-2.5 text-sm font-medium text-slate-500 transition-colors hover:text-slate-900; }
+  .tab.is-active { @apply border-indigo-600 text-indigo-700; }
+  .tab-count { @apply rounded-full bg-slate-100 px-1.5 text-xs font-medium tabular-nums text-slate-600; }
+  .tab.is-active .tab-count { @apply bg-indigo-50 text-indigo-700; }
+
+  .seg { @apply inline-flex max-w-full gap-1 overflow-x-auto rounded-lg bg-slate-100 p-1; }
+  .seg button { @apply shrink-0 rounded-md px-3 py-1.5 text-sm font-medium text-slate-600 transition-colors hover:text-slate-900; }
+  .seg button.is-active { @apply bg-white text-slate-900 shadow-sm; }
+
+  /* ---------- question cards */
+  .q-card { @apply flex flex-col rounded-xl border border-slate-200 bg-white p-4 transition-colors; }
+  .q-card.is-selected { @apply border-indigo-300 bg-indigo-50/30; }
+  .q-meta { @apply flex flex-wrap items-center gap-1.5; }
+  .q-marks { @apply ml-auto text-xs font-medium tabular-nums text-slate-500; }
+  .q-topic { @apply mt-2 text-xs text-slate-500; }
+  .q-stem { @apply mt-2 whitespace-pre-line text-sm leading-relaxed text-slate-900; }
+  .q-figure { @apply mt-3 max-h-48 max-w-full rounded-lg border border-slate-200; }
+  .q-parts { @apply mt-3 space-y-1.5 border-l-2 border-slate-200 pl-3 text-sm text-slate-700; }
+  .q-part { @apply flex items-start justify-between gap-3; }
+  .q-part b { @apply font-semibold text-slate-900; }
+  .q-part-marks { @apply shrink-0 text-xs tabular-nums text-slate-500; }
+  .q-options { @apply mt-3 grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-slate-700; }
+  .q-solution { @apply mt-3; }
+  .q-solution summary { @apply cursor-pointer select-none text-xs font-medium text-indigo-700 hover:text-indigo-900; }
+  .q-solution-body { @apply mt-2 whitespace-pre-line rounded-lg bg-slate-50 p-3 text-sm leading-relaxed text-slate-700; }
+  .q-actions { @apply mt-4 flex flex-wrap items-center justify-between gap-2 border-t border-slate-100 pt-3; }
+  .q-source { @apply min-w-0 flex-1 truncate text-xs text-slate-400; }
+  .exam-figure { @apply my-2 h-auto w-64 max-w-full rounded border border-slate-200 bg-white p-1; }
+
+  .pill { @apply inline-flex max-w-full items-center gap-1 rounded-lg border border-slate-200 bg-white py-1 pl-2.5 pr-1 text-xs; }
+  .pill button { @apply rounded px-1.5 py-0.5 text-slate-500 hover:bg-slate-100 hover:text-slate-900; }
+
+  /* ---------- sign-in gate */
+  .gate { @apply flex min-h-screen items-center justify-center px-4 py-10; }
+  .gate-card { @apply w-full max-w-sm rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8; }
+  .gate-card .brand-mark { @apply mb-5; }
+  .gate-title { @apply text-xl font-semibold text-slate-900; }
+  .gate-text { @apply mb-5 mt-1.5 text-sm leading-relaxed text-slate-600; }
+  .gate-or { @apply my-4 flex items-center gap-3 text-xs text-slate-400; }
+  .gate-or::before, .gate-or::after { content: ''; @apply h-px flex-1 bg-slate-200; }
+  .gate-msg { @apply mt-3 min-h-[1.25rem] text-sm text-rose-700; }
+
+  /* ---------- toast */
+  .toast { @apply fixed bottom-5 left-1/2 z-50 flex w-[calc(100%-2rem)] max-w-md -translate-x-1/2 items-start gap-2.5 rounded-lg bg-slate-900 px-4 py-3 text-sm text-white shadow-lg; }
+  .toast.is-warn { @apply bg-amber-50 text-amber-900 ring-1 ring-amber-300; }
+
+  /* ---------- A4 sheet */
+  .a4-sheet { @apply mx-auto max-w-[820px] rounded-md border border-slate-200 bg-white shadow-sm; }
+  .dotted-line { border-bottom: 1px dotted #64748b; height: 24px; width: 100%; }
+}
+
+@media print {
+  @page { size: A4 portrait; margin: 12mm 14mm; }
+  body { background: #fff !important; color: #000 !important; }
+  .no-print { display: none !important; }
+  .a4-sheet { box-shadow: none !important; border: none !important; max-width: 100% !important; width: 100% !important; margin: 0 !important; padding: 0 !important; }
+  .question-block-print { break-inside: avoid; page-break-inside: avoid; }
+  main { padding: 0 !important; max-width: none !important; }
+}
