@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2015-16-Q1a", label: "(a)", marks: "15",
           topic: "refrigeration", sub: "Absorption refrigeration system: sketch and description",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2023-24-Q1a", "2021-22-Q6b", "2020-21-Q6a", "2018-19-Q8c", "2017-18-Q8a", "2014-15-Q4a", "2013-14-Q4b"],
           text: String.raw`With a neat sketch, describe a absorption refrigeration system.`,
           solution: String.raw`![Absorption refrigeration cycle: generator, condenser, expansion valve, evaporator, absorber and solution pump](fig/2015-16-Q1a-sketch.svg)
 
@@ -107,7 +107,7 @@ $$\frac{T_C}{313.15 - T_C} = 2.667 \;\Rightarrow\; T_C = \frac{2.667(313.15)}{3.
           answer: String.raw`(i) ω = 4/1.5 = 2.67; |Q_H| = 4 + 1.5 = 5.5 kJ/s. (ii) Carnot limit T_C/(313.15 − T_C) = 2.667 ⇒ T_C,min = 227.7 K (−45.4 °C).` },
         { id: "2015-16-Q2b", label: "(b)", marks: "15",
           topic: "reaction-equilibria", sub: "Relation between the standard Gibbs-energy change and the equilibrium constant",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2017-18-Q7c", "2013-14-Q2a"],
           text: String.raw`Find the relation between standard Gibbs-Energy change and the equilibrium constant.`,
           solution: String.raw`1. **Criterion of equilibrium.** For a closed system at constant T and P, $(dG^t)_{T,P} \le 0$, and at equilibrium $G^t$ is a minimum. For a single reaction $\sum_i\nu_iA_i = 0$, the reaction coordinate ε gives $dn_i = \nu_i\,d\varepsilon$. The fundamental relation $d(nG) = (nV)\,dP - (nS)\,dT + \sum_i\mu_i\,dn_i$ then gives
 $$\left[\frac{\partial(nG)}{\partial\varepsilon}\right]_{T,P} = \sum_i\nu_i\mu_i = 0 \quad\text{at equilibrium}$$
@@ -129,7 +129,7 @@ $$\boxed{K \equiv \prod_i\left(\frac{\hat f_i}{f_i^\circ}\right)^{\nu_i} = \exp\
           answer: String.raw`Σνᵢμᵢ = 0 at equilibrium (min Gᵗ at const T, P); μᵢ = Gᵢ° + RT ln(f̂ᵢ/fᵢ°) ⇒ Π(f̂ᵢ/fᵢ°)^νᵢ = exp(−ΔG°/RT) ≡ K, i.e. ln K = −ΔG°/RT with ΔG° = ΣνᵢΔG°fᵢ; K = f(T) only; ΔG° < 0 ⇔ K > 1.` },
         { id: "2015-16-Q2c", label: "(c)", marks: "10",
           topic: "reaction-equilibria", sub: "Ideal-solution liquid-phase equilibrium: ∏xᵢ^νᵢ = K",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q6b", "2017-18-Q5b", "2014-15-Q6b"],
           text: String.raw`Derive the relationship of $\prod_i(x_i)^{\nu_i} = K$.`,
           solution: String.raw`1. **Equilibrium criterion** for a reaction at constant T and P: $\sum_i\nu_i\mu_i = 0$. With $\mu_i = G_i^\circ + RT\ln(\hat f_i/f_i^\circ)$:
 $$\prod_i\left(\frac{\hat f_i}{f_i^\circ}\right)^{\nu_i} = \exp\frac{-\Delta G^\circ}{RT} = K$$
@@ -223,7 +223,7 @@ $$K_{II} = \frac{y_{CO}^2}{y_{CO_2}}\left(\frac{P}{P^\circ}\right) = \frac{(\var
       parts: [
         { id: "2015-16-Q4a", label: "(a)", marks: "15",
           topic: "solution-applications", sub: "DEW T block diagram with the gamma–phi formulation and its equations",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2017-18-Q7b", "2013-14-Q4a"],
           text: String.raw`Write a block diagram for the calculation of DEW T, by using Gamma-Phi formulation. Write necessary equations clearly.`,
           solution: String.raw`**Problem:** given P and the vapour composition $\{y_i\}$, find the dew-point temperature T and the composition $\{x_i\}$ of the first drop of liquid (SVNA §14.1). Neither T nor $\{x_i\}$ is known, and $\gamma_i$ depends on both, so this is the most iterative of the four bubble/dew calculations.
 
@@ -366,7 +366,7 @@ $$x_1 = \frac{90 - 33.92}{179.69 - 33.92} = 0.3847, \qquad y_1 = \frac{0.3847 \t
           answer: String.raw`t₁ˢᵃᵗ = 76.36 °C, t₂ˢᵃᵗ = 132.15 °C at 90 kPa; x₁ = (P − P₂ˢᵃᵗ)/(P₁ˢᵃᵗ − P₂ˢᵃᵗ), y₁ = x₁P₁ˢᵃᵗ/P, e.g. 100 °C: x₁ = 0.385, y₁ = 0.768; 90 °C: 0.590, 0.891; 120 °C: 0.112, 0.372.` },
         { id: "2015-16-Q5b", label: "(b)", marks: "15",
           topic: "vle-intro", sub: "Dilute solution of 1 in 2 at 25 °C and 1 bar: x₁ and y₁ from Henry's and Raoult's laws",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2013-14-Q8a"],
           text: String.raw`A concentrated binary solution containing mostly species 2 (but $x_2 \ne 1$) is in equilibrium with a vapor phase containing both species 1 and 2. The pressure of this two phase system is 1 bar. The temperature is 25°C. Determine the good estimate of $x_1$ and $y_1$. $H_1$ = 200 bar and $P_2^{Sat}$ = 0.1 bar. State and justify all assumptions.`,
           solution: String.raw`**Given:** T = 25 °C, P = 1 bar; Henry's constant of species 1 in 2, $\mathcal H_1$ = 200 bar; $P_2^{sat}$ = 0.1 bar; the liquid is mostly species 2.
 
@@ -418,7 +418,7 @@ $$y_1 = \frac{x_1\mathcal H_1}{P} = \frac{0.004502 \times 200}{1} = 0.900, \qqua
       parts: [
         { id: "2015-16-Q6a", label: "(a)", marks: "25",
           topic: "vle-intro", sub: "Modified Raoult, ln γ = 1.8x²: z₁ range at x₁ = 0.65, P and y₁, azeotrope",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2017-18-Q1b", "2013-14-Q5b"],
           text: String.raw`A binary system of species 1 and 2 consists of vapor and liquid phases in equilibrium at temperature T, for which
 
 $$\ln\gamma_1 = 1.8x_2^2 \qquad \ln\gamma_2 = 1.8x_1^2$$
@@ -467,7 +467,7 @@ $$\gamma_2^{az}P_2^{sat} = \exp[1.8(0.5921)^2](0.89) = 1.8797 \times 0.89 = 1.67
           answer: String.raw`γ₁ = 1.2467, γ₂ = 2.1393 ⇒ P = 1.0048 + 0.6664 = 1.671 bar, y₁ = 0.601; two phases with x₁ = 0.65 for 0.601 ≤ z₁ ≤ 0.65. α₁₂ from 8.43 to 0.230 ⇒ azeotrope x₁ = y₁ = 0.592, P = 1.673 bar.` },
         { id: "2015-16-Q6b", label: "(b)", marks: "10",
           topic: "solution-theory", sub: "Partial properties from the solution property: M̄₁ = M + x₂ dM/dx₁, M̄₂ = M − x₁ dM/dx₁",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2014-15-Q2a"],
           text: String.raw`Show that the partial properties are readily calculated directly from an expression for the solution property as a function of composition at constant T and P.`,
           solution: String.raw`**Setting:** a binary solution at constant T and P, with the molar property known as a function of composition, $M = M(x_1)$. We want $\bar M_1$ and $\bar M_2$ from it (SVNA §11.3, eqs. 11.15–11.16).
 
@@ -497,7 +497,7 @@ $$M = \bar M_2 + x_1\frac{dM}{dx_1} \;\Rightarrow\; \boxed{\bar M_2 = M - x_1\fr
       parts: [
         { id: "2015-16-Q7a", label: "(a)", marks: "10",
           topic: "solution-theory", sub: "Fugacity: definition and estimation for a pure liquid (φ^sat and Poynting factor)",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q6c", "2013-14-Q6a"],
           text: String.raw`Define fugacity. How would you estimate fugacity of a pure liquid?`,
           solution: String.raw`### Definition
 1. For an ideal gas at constant T, $dG_i^{ig} = V_i^{ig}\,dP = RT\,d\ln P$, so $G_i^{ig} = \Gamma_i(T) + RT\ln P$.
@@ -531,7 +531,7 @@ $$\boxed{f_i^l = \phi_i^{sat}P_i^{sat}\exp\left[\frac{V_i^l(P - P_i^{sat})}{RT}\
           answer: String.raw`Gᵢ = Γᵢ(T) + RT ln fᵢ with fᵢ/P → 1 as P → 0; φᵢ = fᵢ/P, ln φᵢ = ∫₀ᴾ(Z − 1)dP/P. Pure liquid: φᵢˢᵃᵗ of saturated vapour (virial ln φˢᵃᵗ = BᵢᵢPᵢˢᵃᵗ/RT, Lee/Kesler, cubic EOS or steam tables); fᵢˡ(Pˢᵃᵗ) = φˢᵃᵗPˢᵃᵗ; Poynting compression: fᵢˡ = φᵢˢᵃᵗPᵢˢᵃᵗexp[Vᵢˡ(P − Pᵢˢᵃᵗ)/RT].` },
         { id: "2015-16-Q7b", label: "(b)", marks: "25",
           topic: "solution-applications", sub: "G^E/RT = (Ax₁ + Bx₂)x₁x₂: ln γ₁, ln γ₂, Gibbs–Duhem and end slopes",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q4a", "2013-14-Q6b"],
           text: String.raw`The excess Gibbs energy of a binary liquid mixture at T and P is given by
 
 $$G^E/RT = (Ax_1 + Bx_2)x_1x_2$$
@@ -595,7 +595,7 @@ $$\left(\frac{d\ln\gamma_1}{dx_1}\right)_{x_1 = 1} = -2(0)h = 0, \qquad \left(\f
       parts: [
         { id: "2015-16-Q8a", label: "(a)", marks: "",
           topic: "solution-applications", sub: "Acetone/methanol at 55 °C: two-parameter Margules fit of G^E/RT (12 data points)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2023-24-Q7b"],
           text: String.raw`(a) Find the parameter values for the two parameters Margules equation that provide the best fit of $G^E/RT$ to the data.`,
           solution: String.raw`**Given:** T = 55 °C = 328.15 K; $P_1^{sat}$ = 96.88 kPa ($x_1$ = 1), $P_2^{sat}$ = 68.73 kPa ($x_1$ = 0); ten interior data points.
 
@@ -633,7 +633,7 @@ $$\frac{G^E}{x_1x_2RT} = 0.6430 + 0.1064x_1 \;\Rightarrow\; \boxed{A_{12} = 0.64
           answer: String.raw`γᵢ = yᵢP/(xᵢPᵢˢᵃᵗ) with P₁ˢᵃᵗ = 96.88, P₂ˢᵃᵗ = 68.73 kPa; least-squares G^E/x₁x₂RT = 0.6430 + 0.1064x₁ ⇒ A₁₂ = 0.643, A₂₁ = 0.749 (γ₁^∞ = 1.90, γ₂^∞ = 2.12).` },
         { id: "2015-16-Q8b", label: "(b)", marks: "",
           topic: "solution-applications", sub: "Acetone/methanol at 55 °C: P-x-y diagram, data versus Margules correlation",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2023-24-Q7b"],
           text: String.raw`(b) Prepare a P-x-y diagram that compares the experimental points with the curves determined from the correlation.`,
           solution: String.raw`**Given:** $A_{12}$ = 0.643, $A_{21}$ = 0.749 from (a); $P_1^{sat}$ = 96.88 kPa, $P_2^{sat}$ = 68.73 kPa.
 

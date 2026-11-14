@@ -263,7 +263,7 @@ $$\gamma_1^{az} = e^{0.95(0.143)^2} = 1.0196, \qquad P^{az} = \gamma_1^{az}P_1^{
       parts: [
         { id: "2020-21-Q4a", label: "(a)", marks: "10",
           topic: "solution-applications", sub: "Block diagram for the DEW P calculation with the gamma/phi formulation",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2014-15-Q8b"],
           text: String.raw`Draw a neat and clean block diagram for the calculation of dew point pressure (DEW P) applying the gamma/phi formulation.
 
 $$x_i = \frac{y_i\Phi_iP}{\gamma_iP_i^{sat}} \qquad \text{(A)}$$
@@ -369,7 +369,7 @@ So equilibrium criteria locate the candidate states, and stability criteria deci
           answer: String.raw`(dGᵗ)_T,P = 0 only makes G stationary (min, max or saddle); stability criteria (d²ΔG/dx₁² > 0, d ln γ₁/dx₁ > −1/x₁, df̂₁/dx₁ > 0) identify the true minimum — deciding single phase vs. split (LLE), rejecting unstable model solutions (S-shaped P–x, vdW loops) and distinguishing stable, metastable and unstable states.` },
         { id: "2020-21-Q5c", label: "(c)", marks: "12",
           topic: "refrigeration", sub: "Linde liquefaction process: principle, schematic, scale of application",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2016-17-Q5a"],
           text: String.raw`Describe the operating principles of Linde process with a schematic diagram of the process. Mention the preferable scale of application for the process.`,
           solution: String.raw`![Linde and Claude liquefaction schematics: compressor, heat exchanger, throttle, separator, and in Claude an expansion engine](fig/2020-21-Q5c-sketch.svg)
 
@@ -387,7 +387,7 @@ The Linde process is simple, cheap and robust: there are **no moving parts at lo
           answer: String.raw`Compress (with intercooling) → cool in countercurrent HX against returning cold gas → Joule–Thomson throttle (below inversion T) into separator → liquid fraction z withdrawn, vapour recycled; z = (H₄ − H₁₅)/(H₉ − H₁₅). Simple, no cold moving parts but low yield and high energy use ⇒ small–medium scale; large plants use Claude/cascade cycles.` },
         { id: "2020-21-Q5d", label: "(d)", marks: "5",
           topic: "phase-equilibria-topics", sub: "Equality of solid and vapour fugacities at solid–vapour equilibrium",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2023-24-Q3c"],
           text: String.raw`"At solid-vapor equilibrium, the fugacities of solid phase and vapor phase will be equal". Do you agree with this statement? Clarify your answer.`,
           solution: String.raw`**Agree, with a qualification:** equality holds for the species that is present in **both** phases. For SVE that is the solute only.
 
@@ -421,7 +421,7 @@ $$dU^t + P\,dV^t - T\,dS^t \le 0$$
           answer: String.raw`It is general but usable directly only at constant (Uᵗ, Vᵗ) [(dSᵗ)_U,V ≥ 0] or (Sᵗ, Vᵗ) [(dUᵗ)_S,V ≤ 0] — variables that cannot be controlled or measured. At constant T, P (what we control) it becomes (dGᵗ)_T,P ≤ 0, which gives the practical criteria (d²ΔG/dx₁² > 0 etc.).` },
         { id: "2020-21-Q5f", label: "(f)", marks: "5",
           topic: "reaction-equilibria", sub: "Equilibrium constant for multiphase reactions, with examples",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q4a"],
           text: String.raw`How do you express equilibrium constant for multiphase reactions? Describe with examples.`,
           solution: String.raw`1. **General relation.** For any reaction, $\prod_i(\hat f_i/f_i^\circ)^{\nu_i} = K = \exp(-\Delta G^\circ/RT)$. In a multiphase reaction each species is assigned to the phase in which it exists, with a standard state appropriate to that phase.
 
@@ -440,7 +440,7 @@ $$dU^t + P\,dV^t - T\,dS^t \le 0$$
           answer: String.raw`Π(f̂ᵢ/fᵢ°)^νᵢ = K with each species in its own phase/standard state: gas → yᵢφ̂ᵢP/P°, liquid solution → γᵢxᵢ, pure solid/liquid → activity ≈ 1 (drops out); ΔG° from ΔG°f of the stated phases. E.g. CaCO₃ ⇌ CaO + CO₂: K = P_CO₂/P°; C + CO₂ ⇌ 2CO: K = y²_CO P/(y_CO₂P°); add phase-equilibrium equations for species in two phases.` },
         { id: "2020-21-Q5g", label: "(g)", marks: "6",
           topic: "phase-equilibria-topics", sub: "Interpret three binary LLE solubility diagrams (UCST, LCST, closed loop)",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2023-24-Q4a"],
           text: String.raw`Describe the conditions shown in the figure below:
 
 *(Figure 5g: three T–x₁ diagrams for binary liquid–liquid equilibrium, each with tie line A–B at temperature T and phase compositions $x_1^\alpha$, $x_1^\beta$: (a) a closed "two liquid phases" loop between a lower point L at $T_L$ and an upper point U at $T_U$; (b) a dome with its maximum U at $T_U$; (c) a U-shaped region with its minimum L at $T_L$.)*`,
@@ -462,7 +462,7 @@ Between the binodal and the spinodal the single liquid is metastable.`,
       parts: [
         { id: "2020-21-Q6a", label: "(a)", marks: "16",
           topic: "refrigeration", sub: "Absorption refrigeration cycle: sketch and working principle",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2023-24-Q1a", "2021-22-Q6b", "2018-19-Q8c", "2017-18-Q8a", "2015-16-Q1a", "2014-15-Q4a", "2013-14-Q4b"],
           text: String.raw`Draw an absorption refrigeration cycle and describe its working principle.`,
           solution: String.raw`![Absorption refrigeration cycle: generator, condenser, expansion valve, evaporator, absorber and solution pump](fig/2020-21-Q6a-sketch.svg)
 
@@ -486,7 +486,7 @@ For example, $T_H$ = 373.15 K, $T_S$ = 303.15 K and $T_C$ = 263.15 K give $(Q_H/
           answer: String.raw`Absorber–pump–generator replaces the compressor: NH₃ evaporates (Q_C at T_C), is absorbed in weak solution (heat to cooling water), the strong solution is pumped to high P, heated in the generator (Q_H at T_H) to release NH₃, which condenses (heat at T_S) and is throttled back; weak solution returns via HX/valve. (Q_H/Q_C)min = [T_H/(T_H − T_S)][(T_S − T_C)/T_C] (≈ 0.81 for 100/30/−10 °C).` },
         { id: "2020-21-Q6b", label: "(b)", marks: "6+2=8",
           topic: "reaction-equilibria", sub: "Maximum thermodynamic efficiency of a hydrogen fuel cell",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q1v"],
           text: String.raw`What is the maximum efficiency that could be reached by a hydrogen fuel cell thermodynamically? How much of it is practically achievable?`,
           solution: String.raw`### Thermodynamic maximum (6)
 A fuel cell converts the chemical energy of $\mathrm{H_2 + \tfrac12O_2 \to H_2O}$ directly into electrical work. It is not a heat engine, so it is **not Carnot-limited**. For reversible operation at constant T and P:
@@ -503,7 +503,7 @@ Real cells operate at 0.6–0.8 V instead of 1.18–1.23 V, because of activatio
           answer: String.raw`η_max = ΔG/ΔH: 94.5% for H₂O(g) at 25 °C (ΔG = −228.6, ΔH = −241.8 kJ/mol, E = 1.184 V), 83% on HHV (liquid water, E = 1.229 V); not Carnot-limited. In practice ≈ 40–60% (≈ 50%) because of activation, ohmic and concentration losses (V_cell ≈ 0.6–0.8 V).` },
         { id: "2020-21-Q6c", label: "(c)", marks: "6",
           topic: "refrigeration", sub: "Why some refrigerants were banned and their alternatives",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2023-24-Q4c"],
           text: String.raw`Describe the reasons behind banning some of the refrigerants. What are the possible alternatives to them?`,
           solution: String.raw`### Why some refrigerants were banned
 - **Ozone depletion (CFCs, HCFCs).** Chlorofluorocarbons such as R-11 (CCl₃F) and R-12 (CCl₂F₂) are chemically very stable, so they survive to the stratosphere. There UV radiation frees Cl atoms, which destroy ozone catalytically:
@@ -527,7 +527,7 @@ Alternative cycles (absorption refrigeration, heat-driven) also avoid synthetic 
       parts: [
         { id: "2020-21-Q7a", label: "(a)", marks: "18",
           topic: "phase-equilibria-topics", sub: "Stability criteria for a binary liquid–liquid mixture: derivation",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2023-24-Q2a"],
           text: String.raw`Derive the stability criteria for a binary liquid-liquid mixture in equilibrium.`,
           solution: String.raw`**Assumptions:** binary liquid at constant T and P; ΔG is the Gibbs energy change of mixing per mole.
 
@@ -559,7 +559,7 @@ $$\boxed{\frac{d\mu_1}{dx_1} > 0} \qquad (5)$$
           answer: String.raw`From (dGᵗ)_T,P ≤ 0: ΔG(x₁) must be convex ⇒ d²(ΔG/RT)/dx₁² > 0 ⇔ d²(Gᴱ/RT)/dx₁² > −1/(x₁x₂) ⇔ d ln γ₁/dx₁ > −1/x₁ ⇔ df̂₁/dx₁ > 0 ⇔ dμ₁/dx₁ > 0. Failure ⇒ split into α, β (common tangent, x_i^α γ_i^α = x_i^β γ_i^β); e.g. Margules unstable for A > 2.` },
         { id: "2020-21-Q7b", label: "(b)", marks: "12",
           topic: "phase-equilibria-topics", sub: "Criteria for isothermal binary VLE and their significance",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2021-22-Q8a", "2018-19-Q7a"],
           text: String.raw`For an isothermal binary component vapor-liquid equilibrium, what criteria are to be met? Explain the significance of these criteria.`,
           solution: String.raw`**System:** binary, two phases (vapour and liquid), constant T.
 

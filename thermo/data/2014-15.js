@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2014-15-Q1a", label: "(a)", marks: "10",
           topic: "vle-intro", sub: "Retrograde condensation on the P–T envelope near the critical region",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2022-23-Q5a", "2018-19-Q1a"],
           text: String.raw`Explain the term Retrograde condensation using P-T diagram in the critical region.`,
           solution: String.raw`![P–T envelope of a mixture of fixed composition: bubble and dew curves meeting at the critical point C, with cricondenbar M, cricondentherm N and the retrograde region](fig/2014-15-Q1a-sketch.svg)
 
@@ -30,7 +30,7 @@ QB.paper({
           answer: String.raw`On the P–T envelope of a mixture the critical point C is not the maximum: the envelope extends to the cricondenbar M and cricondentherm N. For T between T_c and N, isothermal pressure reduction from the dense-gas region crosses the dew curve twice, so liquid forms on lowering P and then re-vaporizes: retrograde condensation (important in gas-condensate wells).` },
         { id: "2014-15-Q1b", label: "(b)", marks: "15",
           topic: "vle-intro", sub: "Cyclohexanone/phenol at 144 °C: Margules A from the azeotrope, P and y₁ at x₁ = 0.6",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2018-19-Q2a", "2016-17-Q2a"],
           text: String.raw`A liquid mixture of cyclohexanone (1)/Phenol (2) for which $x_1 = 0.6$ is in equilibrium with its vapor at 144°C. Determine the equilibrium pressure P and vapor composition $y_1$ from the following information:
 
 $$\ln\gamma_1 = Ax_2^2 \qquad \ln\gamma_2 = Ax_1^2$$
@@ -91,7 +91,7 @@ $$P = x_1P_1^{sat} + x_2P_2^{sat} = P_2^{sat} + (P_1^{sat} - P_2^{sat})x_1, \qqu
       parts: [
         { id: "2014-15-Q2a", label: "(a)", marks: "10",
           topic: "solution-theory", sub: "Partial molar property definition and M̄₁ = M + x₂ dM/dx₁ for a binary",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2015-16-Q6b"],
           text: String.raw`Define Partial Molar Properties and show that for a binary system
 
 $$\bar M_1 = M + x_2\frac{dM}{dx_1}$$
@@ -121,7 +121,7 @@ $$\bar M_1 = \frac{\partial(nM)}{\partial n_1} = M + n\frac{dM}{dx_1}\frac{x_2}{
           answer: String.raw`M̄ᵢ = [∂(nM)/∂nᵢ] at T, P, nⱼ. From M = x₁M̄₁ + x₂M̄₂ and Gibbs–Duhem (x₁dM̄₁ + x₂dM̄₂ = 0): dM/dx₁ = M̄₁ − M̄₂, so M̄₁ = M + x₂ dM/dx₁ and M̄₂ = M − x₁ dM/dx₁ (tangent intercepts).` },
         { id: "2014-15-Q2b", label: "(b)", marks: "25",
           topic: "solution-theory", sub: "Partial molar volumes from V = 120x₁ + 70x₂ + (15x₁ + 8x₂)x₁x₂: checks and plot",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q3b", "2016-17-Q2b"],
           text: String.raw`The molar volume of a binary liquid mixture at T and P is given by
 
 $$V = 120x_1 + 70x_2 + (15x_1 + 8x_2)x_1x_2$$
@@ -179,7 +179,7 @@ $$\bar V_1^\infty = \bar V_1(x_1 \to 0) = 128\ \mathrm{cm^3/mol}, \qquad \bar V_
       parts: [
         { id: "2014-15-Q3a", label: "(a)", marks: "20",
           topic: "solution-applications", sub: "Ternary Gᴱ/RT = A₁₂x₁x₂ + A₁₃x₁x₃ + A₂₃x₂x₃: ln γᵢ and infinite-dilution limit",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2021-22-Q2a"],
           text: String.raw`The excess Gibbs energy of a particular ternary liquid mixture is represented by empirical expression
 
 $$\frac{G^E}{RT} = A_{12}x_1x_2 + A_{13}x_1x_3 + A_{23}x_2x_3$$
@@ -220,7 +220,7 @@ $$\ln\gamma_1^\infty = \lim_{x_1\to0}\ln\gamma_1 = A_{12}x_2 + A_{13}x_3 - A_{23
           answer: String.raw`ln γ₁ = A₁₂x₂(1 − x₁) + A₁₃x₃(1 − x₁) − A₂₃x₂x₃ (and cyclic for γ₂, γ₃); Σxᵢ ln γᵢ = Gᴱ/RT ✓. ln γ₁^∞ = lim(x₁→0) = A₁₂x₂ + A₁₃x₃ − A₂₃x₂x₃ (= A₁₂ in pure 2, A₁₃ in pure 3): species 1 infinitely dilute in the 2–3 solvent (Henry's-law region, 𝓗₁ = γ₁^∞f₁).` },
         { id: "2014-15-Q3b", label: "(b)", marks: "15",
           topic: "solution-theory", sub: "Derivation of ln φ̂₁ = P(B₁₁ + y₂²δ₁₂)/RT from the virial equation",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q3a", "2016-17-Q3a"],
           text: String.raw`Show that fugacity co-efficient for a binary mixture,
 
 $$\hat\phi_1 = \exp\left[\frac{P}{RT}\left(B_{11} + y_2^2\delta_{12}\right)\right]$$
@@ -263,7 +263,7 @@ $$\ln\hat\phi_1 = \frac{P}{RT}\left(B_{11} + y_2^2\delta_{12}\right) \quad\Right
       parts: [
         { id: "2014-15-Q4a", label: "(a)", marks: "15",
           topic: "refrigeration", sub: "Absorption refrigeration: schematic, principle and (Q_H/Q_C)min at 30, −10 and 100 °C",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2023-24-Q1a", "2021-22-Q6b", "2020-21-Q6a", "2018-19-Q8c", "2017-18-Q8a", "2015-16-Q1a", "2013-14-Q4b"],
           text: String.raw`Draw the schematic diagram of an adsorption refrigeration unit. Discuss the working principle and find the expression for $(Q_H/Q_C)_{min}$. Estimate $(Q_H/Q_C)_{min}$ if the surrounding temperature is 30°C and $T_C = -10$°C and $T_H = 100$°C.`,
           solution: String.raw`### Schematic
 ![Absorption refrigeration cycle: generator, condenser, expansion valve, evaporator, absorber and solution pump](fig/2014-15-Q4a-sketch.svg)
@@ -368,7 +368,7 @@ $$\omega' = \frac{65.907}{14.11} = 4.67$$
       parts: [
         { id: "2014-15-Q5a", label: "(a)", marks: "20",
           topic: "solution-applications", sub: "Methanol/water at 60 °C: Margules parameters from the Gᴱ/x₁x₂RT line",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2017-18-Q4a"],
           text: String.raw`Find parameter values for the Margules equation that provide the best fit of $G^E/RT$ to the data.`,
           solution: String.raw`**Given:** T = 333.15 K; $P_1^{sat}$ = 84.56 kPa ($x_1$ = 1), $P_2^{sat}$ = 19.95 kPa ($x_1$ = 0); ten interior data points.
 
@@ -410,7 +410,7 @@ $$\ln\gamma_1 = x_2^2(0.659 - 0.290x_1), \qquad \ln\gamma_2 = x_1^2(0.514 + 0.29
           answer: String.raw`γᵢ from yᵢP = xᵢγᵢPᵢˢᵃᵗ; least-squares line Gᴱ/x₁x₂RT = 0.6586 − 0.1446x₁ ⇒ A₁₂ = 0.659, A₂₁ = 0.514 (γ₁^∞ = 1.93, γ₂^∞ = 1.67).` },
         { id: "2014-15-Q5b", label: "(b)", marks: "15",
           topic: "solution-applications", sub: "Methanol/water at 60 °C: P–x–y diagram, data versus Margules correlation",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2017-18-Q4b"],
           text: String.raw`Prepare a $P_{xy}$ diagram that compares the experimental points with curves determined from the correlation.`,
           solution: String.raw`**Given:** $A_{12}$ = 0.659, $A_{21}$ = 0.514 from part (a); $P_1^{sat}$ = 84.56 kPa, $P_2^{sat}$ = 19.95 kPa.
 
@@ -454,7 +454,7 @@ $$P = 0.30(1.3235)(84.56) + 0.70(1.0666)(19.95) = 33.57 + 14.90 = 48.47\ \mathrm
       parts: [
         { id: "2014-15-Q6a", label: "(a)", marks: "10",
           topic: "solution-applications", sub: "Henry's law for the solute implies the Lewis/Randall rule for the solvent (Gibbs–Duhem)",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2013-14-Q7a"],
           text: String.raw`Prove that Henry's law is related to the Lewis/Randall rule through the Gibbs-Duhen equation.`,
           solution: String.raw`**Statements** (binary at constant T, P):
 - **Henry's law** for species 1 as $x_1 \to 0$: $\hat f_1 = x_1\mathcal H_1$, where $\mathcal H_1 = \lim_{x_1\to0}\hat f_1/x_1$ is Henry's constant.
@@ -479,7 +479,7 @@ $$\left(\frac{d\hat f_2}{dx_2}\right)_{x_2=1} = f_2$$
           answer: String.raw`Gibbs–Duhem: x₁ d ln f̂₁/dx₁ = x₂ d ln f̂₂/dx₂. Henry's law f̂₁ = x₁𝓗₁ (x₁ → 0) makes the left side 1, so (df̂₂/dx₂)/f̂₂ → 1 at x₂ = 1, i.e. df̂₂/dx₂ = f₂ and f̂₂ = x₂f₂ (Lewis/Randall) as x₂ → 1.` },
         { id: "2014-15-Q6b", label: "(b)", marks: "10",
           topic: "reaction-equilibria", sub: "Liquid-phase reactions: relation of K to composition",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q6b", "2017-18-Q5b", "2015-16-Q2c"],
           text: String.raw`For liquid-phase reactions, find the relation of equilibrium constants to composition.`,
           solution: String.raw`1. **Equilibrium constant** (SVNA eq. 13.11), with standard states at the system T and $P^\circ$ = 1 bar:
 $$\prod_i\left(\frac{\hat f_i}{f_i^\circ}\right)^{\nu_i} = K = \exp\left(\frac{-\Delta G^\circ}{RT}\right)$$
@@ -642,7 +642,7 @@ $$\text{DEW T:}\quad P_j^{sat} = P\sum_i\frac{y_i\Phi_i}{\gamma_i}\frac{P_j^{sat
           answer: String.raw`yᵢΦᵢP = xᵢγᵢPᵢˢᵃᵗ with Φᵢ = (φ̂ᵢ/φᵢˢᵃᵗ)exp[−Vᵢˡ(P − Pᵢˢᵃᵗ)/RT]. Bubble (Σyᵢ = 1): P = Σxᵢγᵢ Pᵢˢᵃᵗ/Φᵢ, yᵢ = xᵢγᵢPᵢˢᵃᵗ/(ΦᵢP); Pⱼˢᵃᵗ = P/Σ(xᵢγᵢ/Φᵢ)(Pᵢˢᵃᵗ/Pⱼˢᵃᵗ). Dew (Σxᵢ = 1): P = 1/Σ(yᵢΦᵢ/γᵢPᵢˢᵃᵗ), xᵢ = yᵢΦᵢP/(γᵢPᵢˢᵃᵗ); Pⱼˢᵃᵗ = PΣ(yᵢΦᵢ/γᵢ)(Pⱼˢᵃᵗ/Pᵢˢᵃᵗ).` },
         { id: "2014-15-Q8b", label: "(b)", marks: "15",
           topic: "solution-applications", sub: "Block diagram for the DEW P calculation (gamma/phi)",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2020-21-Q4a"],
           text: String.raw`Write a block diagram for the calculation of Dew P.`,
           solution: String.raw`**Problem:** given T and the vapour composition $\{y_i\}$, find P and $\{x_i\}$ (SVNA §14.1, Fig. 14.2).
 

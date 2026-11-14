@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2023-24-Q1a", label: "(a)", marks: "12+3=15",
           topic: "refrigeration", sub: "Absorption refrigeration cycle: schematic, working principle and limitations",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2021-22-Q6b", "2020-21-Q6a", "2018-19-Q8c", "2017-18-Q8a", "2015-16-Q1a", "2014-15-Q4a", "2013-14-Q4b"],
           text: String.raw`Describe the absorption-refrigeration cycle using a schematic diagram. Mention its limitations.`,
           solution: String.raw`### Idea
 A vapour-compression refrigerator spends **work** to lift the low-pressure refrigerant vapour to the condenser pressure. An absorption refrigerator does the same job with **heat**. The vapour is absorbed into a liquid at low pressure, the liquid solution is pumped to high pressure (pumping a liquid costs very little work), and the refrigerant is then driven out again by heating. The usual pairs are ammonia (refrigerant) + water (absorbent), and water (refrigerant) + aqueous LiBr (absorbent) for air conditioning.
@@ -67,7 +67,7 @@ $$\boxed{(dG^t)_{T,P} \le 0}$$
           answer: String.raw`dS^surr = −dQ/T and dQ = dU^t + P dV^t give dU^t + P dV^t − T dS^t ≤ 0; at fixed T, P this is d(U^t + PV^t − TS^t) = (dG^t)_T,P ≤ 0 (equilibrium = minimum G^t). Most useful because T and P are the variables actually held fixed and measured, and it leads directly to μ-equality, K and stability criteria.` },
         { id: "2023-24-Q1c", label: "(c)", marks: "5",
           topic: "reaction-equilibria", sub: "Three simultaneous reactions: mole fraction of hydrogen in terms of extents",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2021-22-Q7c"],
           text: String.raw`$$\mathrm{H_2 + \tfrac{1}{2}O_2 = H_2O}\qquad \mathrm{C + \tfrac{1}{2}O_2 = CO}\qquad \mathrm{C + O_2 = CO_2}$$
 
 All the three reactions are in equilibrium and take place at once in a closed chamber. At initial condition, 1 mol of H₂O, 0.5 mol of O₂ and 1.88 mol of N₂ were entered in the system. Write down the equation for the mole fraction of hydrogen at equilibrium.`,
@@ -105,7 +105,7 @@ $$y_{H_2} = \frac{-\varepsilon_1}{3.38 - 0.5\varepsilon_1}$$
       parts: [
         { id: "2023-24-Q2a", label: "(a)", marks: "12+3=15",
           topic: "phase-equilibria-topics", sub: "Three stability criteria for liquid–liquid equilibrium and their significance",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2020-21-Q7a"],
           text: String.raw`Derive the three stability criteria for Liquid-Liquid equilibrium. Explain the significance of the stability criteria for an equilibrium.`,
           solution: String.raw`**Assumptions:** binary liquid at constant T and P.
 
@@ -139,7 +139,7 @@ $$\boxed{\frac{d\mu_1}{dx_1} > 0} \qquad \text{(criterion 3)}$$
           answer: String.raw`d²(ΔG/RT)/dx₁² > 0 ⇒ d²(G^E/RT)/dx₁² > −1/(x₁x₂) ⇒ (1) d ln γ₁/dx₁ > −1/x₁, (2) d f̂₁/dx₁ > 0, (3) dμ₁/dx₁ > 0 (const T, P). Where they fail the liquid splits into two phases (LLE); they test G^E models (two-suffix Margules splits for A > 2) and screen out unstable solutions.` },
         { id: "2023-24-Q2b", label: "(b)", marks: "10+3=13",
           topic: "refrigeration", sub: "Vapour-compression cycle on ln P–H diagram and its irreversibilities",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2022-23-Q2b"],
           text: String.raw`Draw the lnP vs. H diagram and describe the vapor compression cycle. Using the diagram, explain the irreversibility of the process.`,
           solution: String.raw`![Vapour-compression cycle: schematic, T–S and ln P–H diagrams with states 1–4](fig/2023-24-Q2b-sketch.svg)
 
@@ -160,7 +160,7 @@ The ln P–H chart is preferred because three of the four steps are straight lin
           answer: String.raw`ln P–H: 1→2 horizontal evaporation (Q_C = H₂ − H₁), 2→3 compression into superheat (W = H₃ − H₂), 3→4 horizontal condensation (Q_H), 4→1 vertical isenthalpic throttling. ω = (H₂ − H₁)/(H₃ − H₂). Irreversibilities: throttling (ΔS > 0, no work recovered), non-isentropic compression, desuperheating and finite-ΔT heat transfer ⇒ ω < T_C/(T_H − T_C).` },
         { id: "2023-24-Q2c", label: "(c)", marks: "2+5=7",
           topic: "reaction-equilibria", sub: "Effect of temperature on fuel-cell reversible voltage",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2021-22-Q5iv"],
           text: String.raw`'If the temperature is increased for a fuel cell, the voltage of the cell is increased' – do you agree with this statement? Clarify with reasoning.`,
           solution: String.raw`**Answer: No, not in general.** For the usual hydrogen–oxygen cell, the reversible (equilibrium) voltage **decreases** as temperature rises.
 
@@ -249,7 +249,7 @@ $$F = 2 - \pi + N - r = 2 - 1 + 7 - 4 = 4$$
           answer: String.raw`From Σᵢnᵢa_ik = A_k with Lagrange multipliers: ΔG°_fi + RT ln(yᵢφ̂ᵢP/P°) + Σ_k λ_k a_ik = 0. Here A_C = 2.5, A_H = 9.5, A_O = 1.0; 7 species equations + 3 element balances + Σy = 1 = 11 equations for 11 unknowns (7 y, n, λ_C, λ_H, λ_O). Phase rule F = 2 − 1 + 7 − 4 = 4; with fixed feed (Duhem) T and P fix everything, so 0 remaining.` },
         { id: "2023-24-Q3b", label: "(b)", marks: "12",
           topic: "refrigeration", sub: "Ground-source heat pump: minimum power for winter heating and summer cooling",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2018-19-Q8a"],
           text: String.raw`Consider a heat-pump installation to maintain the house temperature at 20°C in winter and 25°C in summer. The house has a winter heating requirement of 35 kJ/s and a summer cooling requirement of 70 kJ/s. This requires circulation of the refrigerant through interior exchanger coils at 30°C in winter and 5°C in summer. Underground coils provided the heat source in winter and the heat sink in summer. For a year-round ground temperature of 15°C, the heat-transfer characteristics of the coils necessitate refrigerant temperature of 10°C in winter and 25°C in summer. Determine the minimum power requirements for winter heating and summer cooling.
 
 [Required formulas: $Q_C/Q_H = (-T_C/T_H)$; $W/Q_C = (T_H - T_C)/T_C$]`,
@@ -271,7 +271,7 @@ $$W = Q_C\,\frac{T_H - T_C}{T_C} = 70 \times \frac{298.15 - 278.15}{278.15} = 70
           answer: String.raw`Winter: W_min = 35 × 20/303.15 = 2.31 kW. Summer: W_min = 70 × 20/278.15 = 5.03 kW.` },
         { id: "2023-24-Q3c", label: "(c)", marks: "5",
           topic: "phase-equilibria-topics", sub: "Solvent phase not in equilibrium with solid in solid–vapour equilibrium",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2020-21-Q5d"],
           text: String.raw`'The solvent phase is not in equilibrium with the solid phase during solid-vapor equilibrium' – discuss this statement with explanation.`,
           solution: String.raw`**The statement is correct, and it is the key simplifying assumption of SVE (SVNA §14.7).**
 
@@ -292,7 +292,7 @@ $$f_1^s = \hat f_1^v \;\Rightarrow\; y_1 = \frac{P_1^{sat}}{P}\,\frac{\phi_1^{sa
       parts: [
         { id: "2023-24-Q4a", label: "(a)", marks: "9",
           topic: "phase-equilibria-topics", sub: "Three types of LLE solubility diagrams versus temperature",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2020-21-Q5g"],
           text: String.raw`Describe the three major types for liquid-liquid equilibrium (LLE) with schematic of phase diagrams with respect to temperature change.`,
           solution: String.raw`On a T–x₁ diagram at constant P, the LLE (binodal) curve encloses the region in which a liquid splits into two phases α and β. A horizontal tie line at T joins their compositions $x_1^\alpha$ and $x_1^\beta$. Three common shapes occur (SVNA Fig. 14.13):
 
@@ -308,7 +308,7 @@ Other behaviour: the LLE region may be cut off by freezing (SLE) below or by the
           answer: String.raw`(i) UCST: two-phase island closed at the top, solubility increases with T, single phase above T_U (water/phenol). (ii) LCST: closed at the bottom, phases separate on heating (water/triethylamine). (iii) Closed loop with both T_L and T_U (water/nicotine). Tie lines + lever rule give the phase compositions and amounts.` },
         { id: "2023-24-Q4b", label: "(b)", marks: "7+8+2+3=20",
           topic: "reaction-equilibria", sub: "Derive ln K = −ΔG°/RT and K = K₀K₁K₂ temperature dependence",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2021-22-Q7a", "2018-19-Q6a", "2016-17-Q8a"],
           text: String.raw`For a reactive system in equilibrium, derive the equation for equilibrium constant at constant temperature and pressure ($\ln K = -\Delta G^\circ/RT$) from the definition of Gibb's free energy. To describe its dependence on temperature, further expand the equation of K with temperature change during reaction. In the final derived equation, identify the parameters which exert the most impact of temperature change on the equilibrium constant, K. Provide reasons to your answer why the parameters (i.e., K₀, K₁, K₂) have different impacts on the change of K with respect to temperature change.
 
 [Hint: $d(nG) = (nV)dP - (nS)dT + \sum\mu_i dn_i$]`,
@@ -344,7 +344,7 @@ $$\ln K_2 = \frac{\Delta C_P^\circ}{R}\left(\ln\tau - 1 + \frac{1}{\tau}\right)$
           answer: String.raw`Σνᵢμᵢ = 0 at equilibrium (from d(nG) with dnᵢ = νᵢdε), μᵢ = Gᵢ° + RT ln(f̂ᵢ/fᵢ°) ⇒ ln K = −ΔG°/RT. With d ln K/dT = ΔH°/RT²: K = K₀K₁K₂, K₀ = exp(−ΔG₀°/RT₀), K₁ = exp[(ΔH₀°/RT₀)(1 − T₀/T)], K₂ = exp[−(1/T)∫ΔC_P°/R dT + ∫ΔC_P°/R dT/T]. K₁ (heat of reaction) dominates; K₀ is a constant; K₂ ≈ 1 because ΔC_P° is small and the two integrals nearly cancel.` },
         { id: "2023-24-Q4c", label: "(c)", marks: "6",
           topic: "refrigeration", sub: "Why CFC refrigerants are banned and their alternatives",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2020-21-Q6c"],
           text: String.raw`Why are CFC refrigerants not recommended for refrigeration applications? Give examples of a few alternatives to CFC based refrigerants.`,
           solution: String.raw`### Why not CFCs
 - **Ozone depletion.** CFCs (e.g. R-11 CCl₃F, R-12 CCl₂F₂) are so stable that they reach the stratosphere intact. There UV light frees Cl atoms, which destroy ozone catalytically ($\mathrm{Cl + O_3 \to ClO + O_2}$, $\mathrm{ClO + O \to Cl + O_2}$); one Cl atom can destroy thousands of O₃ molecules. Ozone-depletion potential (ODP) is about 1 for R-11 and R-12.
@@ -388,7 +388,7 @@ Figure for Question 5(a) (attached to the paper): a three-dimensional P–T–z 
           answer: String.raw`(i) Dew-point (saturated vapour) curve, P–y; the upper curve is the bubble curve. (ii) Locus of mixture critical points from C(ethane) 305 K to C(heptane) 540.5 K. (iii) Isothermal pressure reduction from single-phase fluid b produces liquid that later re-vaporizes before a: retrograde condensation, important in deep natural-gas/gas-condensate wells.` },
         { id: "2023-24-Q5b", label: "(b)", marks: "6+6+3=15",
           topic: "solution-theory", sub: "Partial enthalpies from H = 400x₁ + 600x₂ + (40x₁ + 20x₂)x₁x₂",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2022-23-Q8a", "2016-17-Q1c"],
           text: String.raw`The molar enthalpy of a binary liquid mixture at T and P is given by:
 
 $$H = 400x_1 + 600x_2 + (40x_1 + 20x_2)x_1x_2$$
@@ -620,7 +620,7 @@ At low pressure $\Phi_i \approx 1$ and the method reduces to modified Raoult's l
           answer: String.raw`Given T, {xᵢ}: Pᵢˢᵃᵗ (Antoine), γᵢ(T, x) fixed; Φᵢ = 1 → P = Σxᵢγᵢ Pᵢˢᵃᵗ/Φᵢ → yᵢ = xᵢγᵢPᵢˢᵃᵗ/(ΦᵢP) → φ̂ᵢ (virial), φᵢˢᵃᵗ, Φᵢ = (φ̂ᵢ/φᵢˢᵃᵗ)exp[−Vᵢˡ(P − Pᵢˢᵃᵗ)/RT] → recompute P; repeat until δP < ε.` },
         { id: "2023-24-Q7b", label: "(b)", marks: "20",
           topic: "solution-applications", sub: "Acetone/methanol at 55 °C: Margules fit of G^E/RT and P-x-y comparison",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2015-16-Q8b", "2015-16-Q8a"],
           text: String.raw`Following table presents a set of VLE data for acetone(1)/methanol(2) system at 55°C.
 
 | P (kPa) | x₁ | y₁ |
@@ -747,7 +747,7 @@ $$1 + W = \frac{0.75}{0.37} = 2.01 \;\Rightarrow\; W \approx 1.0\ \mathrm{kg}$$
           answer: String.raw`Mixing line from water (280 K, H ≈ −84 kJ/kg) to 75% acid (330 K, H ≈ −248 kJ/kg) rises above 330 K (max ≈ 354 K near 55%) and re-crosses the 330 K isotherm at ≈ 37 wt% ⇒ W = 0.75/0.37 − 1 ≈ 1.0 kg water per kg acid.` },
         { id: "2023-24-Q8b", label: "(b)", marks: "7+7+3=17",
           topic: "vle-intro", sub: "Modified Raoult, ln γ = 0.67x²: two-phase P range, flash at x₁ = 0.75, azeotrope test",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q5b"],
           text: String.raw`A binary system of species 1 and 2 consists of vapor and liquid phases in equilibrium at temperature T. The overall mole fraction of species 1 in the system is $z_1 = 0.65$. At temperature T,
 
 $$\ln\gamma_1 = 0.67x_2^2, \qquad \ln\gamma_2 = 0.67x_1^2$$
@@ -786,7 +786,7 @@ $$(\alpha_{12})_{x_1 = 0} = \frac{32.27}{73.14}e^{0.67} = 0.862, \qquad (\alpha_
           answer: String.raw`(i) P_dew = 43.86 kPa (x₁ = 0.874) to P_bubl = 56.74 kPa. (ii) P = 51.89 kPa, y₁ = 0.486, vapour fraction V = 0.379. (iii) α₁₂ = 0.862 at x₁ = 0 and 0.226 at x₁ = 1, always < 1 ⇒ no azeotrope.` },
         { id: "2023-24-Q8c", label: "(c)", marks: "12",
           topic: "solution-applications", sub: "Flash calculation algorithm with the gamma–phi formulation",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2021-22-Q4b"],
           text: String.raw`Show the algorithm you need to follow to make flash calculation using γ, φ formulation. Clearly write the expressions for each term involved in the algorithm.`,
           solution: String.raw`**Problem (P,T-flash):** given T, P and the overall composition $\{z_i\}$ of a feed (1 mol), find the vapour fraction $\mathcal V$ and the compositions $\{x_i\}$ and $\{y_i\}$ (SVNA §14.1, formula sheet item 39).
 

@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2016-17-Q1a", label: "(a)", marks: "8",
           topic: "vle-intro", sub: "K-values in VLE: at least one above and one below 1.0",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2017-18-Q1a"],
           text: String.raw`For a system that exhibits VLE, at least one of the k-values must be greater than 1.0 and at least one must be less than 1.0. True/False. Explain your answer.`,
           solution: String.raw`**True** for any VLE system whose two phases differ in composition; the only exception is the case where every $K_i = 1$ (an azeotrope, or a pure species).
 
@@ -61,7 +61,7 @@ $$\boxed{v = \frac{z_1(k_1 - k_2) - (1 - k_2)}{(k_1 - 1)(1 - k_2)}}$$
           answer: String.raw`k₁x₁ + k₂(1 − x₁) = 1 ⇒ x₁ = (1 − k₂)/(k₁ − k₂); y₁ = k₁x₁; z₁ = x₁(1 − v) + y₁v ⇒ v = (z₁ − x₁)/[x₁(k₁ − 1)] = [z₁(k₁ − k₂) − (1 − k₂)]/[(k₁ − 1)(1 − k₂)].` },
         { id: "2016-17-Q1c", label: "(c)", marks: "15",
           topic: "solution-theory", sub: "H = 400x₁ + 600x₂ + x₁x₂(40x₁ + 20x₂): partial, pure and infinite-dilution enthalpies",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2023-24-Q5b", "2022-23-Q8a"],
           text: String.raw`The enthalpy of a binary liquid system of species 1 and 2 at fixed T and P is represented by the equation,
 
 $$H = 400x_1 + 600x_2 + x_1x_2(40x_1 + 20x_2)$$
@@ -108,7 +108,7 @@ $$\bar H_1^\infty = \bar H_1(x_1 \to 0) = 420\ \mathrm{J/mol}, \qquad \bar H_2^\
       parts: [
         { id: "2016-17-Q2a", label: "(a)", marks: "20",
           topic: "vle-intro", sub: "Cyclohexanone/phenol at 144 °C: A from the azeotrope, then P and y₁ at x₁ = 0.6",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2018-19-Q2a", "2014-15-Q1b"],
           text: String.raw`A liquid mixture of cyclohexanone(1)/ phenol(2) for which $x_1 = 0.6$ is in equilibrium with its vapor at 144°C. Determine the equilibrium pressure and vapor phase composition from the following information
 
 $$\ln\gamma_1 = Ax_2^2 \qquad \ln\gamma_2 = Ax_1^2$$
@@ -144,7 +144,7 @@ $$P^{az} = \gamma_1^{az}P_1^{sat} = \exp[-1.768(0.696)^2](80) = 0.4246 \times 80
           answer: String.raw`A = ln(P₂ˢᵃᵗ/P₁ˢᵃᵗ)/(1 − 2x^az) = −1.768; γ₁ = 0.7536, γ₂ = 0.5291 ⇒ P = 36.17 + 8.47 = 44.64 kPa, y₁ = 0.810 (minimum-pressure azeotrope at 33.97 kPa).` },
         { id: "2016-17-Q2b", label: "(b)", marks: "15",
           topic: "solution-theory", sub: "Partial molar volumes from V = 120x₁ + 70x₂ + (15x₁ + 8x₂)x₁x₂",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q3b", "2014-15-Q2b"],
           text: String.raw`The molar volume of a binary liquid mixture at T and P is given by
 
 $$V = 120x_1 + 70x_2 + (15x_1 + 8x_2)x_1x_2$$
@@ -182,7 +182,7 @@ $$= -2x_1 - 40x_1^2 + 42x_1^3 + 2x_1 + 42x_1^2 - 2x_1^2 - 42x_1^3 = 0 \quad\chec
       parts: [
         { id: "2016-17-Q3a", label: "(a)", marks: "20",
           topic: "solution-theory", sub: "Fugacity coefficient of species 1 in a binary gas from the virial equation",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q3a", "2014-15-Q3b"],
           text: String.raw`The virial equation of state for a gas mixture is represented by
 
 $$nz = n + \frac{nBP}{RT}$$
@@ -224,7 +224,7 @@ $$\boxed{\ln\hat\phi_1 = \frac{P}{RT}\left(B_{11} + y_2^2\delta_{12}\right)}$$
           answer: String.raw`ln φ̂ᵢ = ∫₀ᴾ(Z̄ᵢ − 1)dP/P with Z̄ᵢ = 1 + (P/RT)∂(nB)/∂nᵢ ⇒ ln φ̂ᵢ = (P/RT)∂(nB)/∂nᵢ. B = y₁B₁₁ + y₂B₂₂ + y₁y₂δ₁₂, nB = n₁B₁₁ + n₂B₂₂ + n₁n₂δ₁₂/n ⇒ ∂(nB)/∂n₁ = B₁₁ + y₂²δ₁₂, so ln φ̂₁ = (P/RT)(B₁₁ + y₂²δ₁₂).` },
         { id: "2016-17-Q3b", label: "(b)", marks: "15",
           topic: "solution-theory", sub: "Compressibility factor of equimolar propane/n-pentane at 50 °C and 2 bar (virial)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2021-22-Q2b"],
           text: String.raw`Estimate z for an equimolar mixture of propane(1)/n-pentane(2) at 50°C and 2 bar. Where,
 
 $$B_{11} = -331\ \mathrm{cm^3/mol}$$
@@ -254,7 +254,7 @@ $$Z = 1 + \frac{BP}{RT} = 1 - 0.04517 = \boxed{0.955}$$
       parts: [
         { id: "2016-17-Q4a", label: "(a)", marks: "18",
           topic: "solution-applications", sub: "Single-effect LiCl evaporator: heat duty from heats of solution (Fig. 12.14)",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2018-19-Q4b"],
           text: String.raw`A single effect evaporator operating at atmospheric pressure concentrates a 15% (by weight) LiCl solution to 40%. The feed enters the evaporator at the rate of 2 kg/s at 25°C. The normal boiling point of a 40% LiCl solution is about 132°C and its specific heat is estimated as 2.72 kJ/kg.°C. What is the heat transfer rate in the evaporator? The change of enthalpy for water [from 25°C (l) to 132°C (g)] is 2635 kJ/kg.
 
 Attached to the paper (Fig. for Q4(a)): SVNA Figure 12.14, heats of solution at 25 °C, ΔH̃ in kJ per mol of solute against ñ, moles of H₂O per mole of solute (log scale 1–1000), for HCl(g) and LiCl(s).`,
@@ -298,7 +298,7 @@ $$Q = \Delta H = 239.2 - 164.6 + 218.3 + 3293.8 = 3586.7\ \mathrm{kJ/s} \approx 
           answer: String.raw`LiCl 7.077 mol/s; feed ñ = 13.33 (ΔH̃ = −33.80 kJ/mol), product 0.75 kg/s with ñ = 3.53 (ΔH̃ = −23.26 kJ/mol; Fig. 12.14 readings as in SVNA Ex. 12.5); 1.25 kg/s water evaporated. Q = 239.2 − 164.6 + 218.3 + 3293.8 ≈ 3587 kJ/s ≈ 3.59 MW.` },
         { id: "2016-17-Q4b", label: "(b)", marks: "17",
           topic: "solution-applications", sub: "Margules form: limit of G^E/x₁x₂RT as x₁ → 0 equals ln γ₁^∞ = A₁₂",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2022-23-Q8c", "2017-18-Q3b"],
           text: String.raw`The excess Gibbs energy of a binary liquid mixture at T and P is given by
 
 $$\frac{G^E}{x_1x_2RT} = A_{21}x_1 + A_{12}x_2$$
@@ -332,7 +332,7 @@ $$\boxed{\lim_{x_1 \to 0}\frac{G^E}{x_1x_2RT} = \ln\gamma_1^\infty = A_{12}}$$
       parts: [
         { id: "2016-17-Q5a", label: "(a)", marks: "15",
           topic: "refrigeration", sub: "Linde liquefaction process: schematic and working principle",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2020-21-Q5c"],
           text: String.raw`With a schematic diagram write the working principle of a Linde liquefaction process.`,
           solution: String.raw`### Idea
 A gas can be liquefied only if it is cooled below its critical temperature. The Linde process does this by **Joule–Thomson expansion** (throttling) of a compressed gas that has been precooled by **countercurrent heat exchange** with the cold gas returning from the separator. Throttling a real gas at constant enthalpy lowers its temperature when the gas is below its inversion temperature, i.e. when $\mu_{JT} = (\partial T/\partial P)_H > 0$.
@@ -469,7 +469,7 @@ $$\left(\frac{\partial T}{\partial P}\right)_S = \frac{T}{C_P}\left(\frac{\parti
           answer: String.raw`On T–S from a high-P state A: (1) constant-P heat exchange along the isobar (limited by coolant T); (2) isentropic expansion in an expander, vertical drop, largest cooling, always cools; (3) isenthalpic throttling, small cooling, only below the inversion T, ends in the dome if the gas is precooled (Linde). Claude combines 1 + 2 + 3.` },
         { id: "2016-17-Q6c", label: "(c)", marks: "15",
           topic: "reaction-equilibria", sub: "Mole fractions versus two reaction coordinates: CO₂ hydrogenation to methanol and CO",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2017-18-Q5a"],
           text: String.raw`A system formed initially of 2 mol CO₂, 5 mol H₂ and 1 mol CO undergoes the reactions:
 
 $$\mathrm{CO_2 + 3H_2 \rightarrow CH_3OH + H_2O}$$
@@ -514,7 +514,7 @@ $$\frac{y_{CO}\,y_{H_2O}}{y_{CO_2}\,y_{H_2}} = \frac{(1 + \varepsilon_2)(\vareps
       parts: [
         { id: "2016-17-Q7", label: "", marks: "35",
           topic: "reaction-equilibria", sub: "Methanol synthesis at 550 K and 100 bar with the shift reaction: equilibrium composition",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2013-14-Q2c"],
           text: String.raw`The feed gas to a methanol synthesis reactor is composed of 75% mol H₂, 15 mole% CO, 5 mole% CO₂ and 5 mole% N₂. The system comes to equilibrium at 550 K and 100 bar with respect to the reactions:
 
 $$\mathrm{2H_2 + CO \rightarrow CH_3OH}$$
@@ -583,7 +583,7 @@ $$\varepsilon_1 = 11.86\ \mathrm{mol}, \qquad \varepsilon_2 = 0.888\ \mathrm{mol
       parts: [
         { id: "2016-17-Q8a", label: "(a)", marks: "20",
           topic: "reaction-equilibria", sub: "Temperature dependence of ΔG°/RT from ΔH°₀, ΔG°₀ and ΔC°P",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2023-24-Q4b", "2021-22-Q7a", "2018-19-Q6a"],
           text: String.raw`For calculating the effect of temperature on the equilibrium constant, derive the following equation:
 
 $$\frac{\Delta G^\circ}{RT} = \frac{\Delta G_0^\circ - \Delta H_0^\circ}{RT_0} + \frac{\Delta H_0^\circ}{RT} + \frac1T\int_{T_0}^{T}\frac{\Delta C_P^\circ}{R}dT - \int_{T_0}^{T}\frac{\Delta C_P^\circ}{R}\frac{dT}{T}$$`,

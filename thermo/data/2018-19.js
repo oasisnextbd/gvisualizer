@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2018-19-Q1a", label: "(a)", marks: "10",
           topic: "vle-intro", sub: "Retrograde condensation and deep natural-gas wells",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q5a", "2014-15-Q1a"],
           text: String.raw`Retrograde condensation is important in the operation of deep natural gas wells. True/False - Explain your answer.`,
           solution: String.raw`**True.**
 
@@ -51,7 +51,7 @@ $$y_1 = \frac{x_1\mathcal H_1}{P} = \frac{10.000}{10.023} = 0.9977, \qquad y_2 =
           answer: String.raw`With x_CO₂ = 0.01 (needed extra specification, as in SVNA Ex. 10.2): P = 0.01(1000) + 0.99(0.0234) = 10.02 bar; y_CO₂ = 0.9977, y_H₂O = 0.0023; x_H₂O = 0.99.` },
         { id: "2018-19-Q1c", label: "(c)", marks: "10",
           topic: "vle-intro", sub: "Flash calculation: derive Σ zᵢkᵢ/[1 + v(kᵢ − 1)] = 1",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2017-18-Q7a"],
           text: String.raw`For flash calculation, show that
 
 $$\sum\frac{z_ik_i}{1 + v(k_i - 1)} = 1$$
@@ -83,7 +83,7 @@ $$F(v) = \sum_i\frac{z_i(k_i - 1)}{1 + v(k_i - 1)} = 0, \qquad \frac{dF}{dv} = -
       parts: [
         { id: "2018-19-Q2a", label: "(a)", marks: "20",
           topic: "vle-intro", sub: "Cyclohexanone/phenol at 144 °C: A from the azeotrope, then P and y at x₁ = 0.6",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2016-17-Q2a", "2014-15-Q1b"],
           text: String.raw`A liquid mixture of cyclohexane(1)/ phenol (2) for which $x_1$ = 0.6 is in equilibrium with its vapor at 144°C. Determine the equilibrium P and vapor composition y from the following information:
 
 $$\ln\gamma_1 = Ax_2^2 \qquad \ln\gamma_2 = Ax_1^2$$
@@ -115,7 +115,7 @@ $$y_1 = \frac{32.01}{37.95} = 0.843, \qquad y_2 = 0.157$$
           answer: String.raw`A = ln(32/75)/(1 − 0.6) = −2.129; at x₁ = 0.6: γ₁ = 0.711, γ₂ = 0.465 ⇒ P = 32.01 + 5.95 = 37.95 kPa, y₁ = 0.843 (minimum-pressure azeotrope at 26.4 kPa).` },
         { id: "2018-19-Q2b", label: "(b)", marks: "15",
           topic: "solution-theory", sub: "Gibbs–Duhem for a binary: x₁dM̄₁ + x₂dM̄₂ = 0 at constant T and P",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2022-23-Q6a", "2017-18-Q2b"],
           text: String.raw`If $\bar M_i$ represents partial molal property of species i in solution, for binary mixture at constant temperature and pressure show that
 
 $$x_1d\bar M_1 + x_2d\bar M_2 = 0$$`,
@@ -147,7 +147,7 @@ $$\boxed{x_1\,d\bar M_1 + x_2\,d\bar M_2 = 0}$$
       parts: [
         { id: "2018-19-Q3a", label: "(a)", marks: "15",
           topic: "solution-theory", sub: "Fugacity coefficient of a species in a binary gas mixture from the virial equation",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2016-17-Q3a", "2014-15-Q3b"],
           text: String.raw`How could you estimate fugacity co-efficient of species i in a binary mixture from Virial equation of state?`,
           solution: String.raw`1. **Starting relation.** $\ln\hat\phi_i$ is the partial property of $G^R/RT$, and at constant T and composition
 $$\frac{G^R}{RT} = \int_0^P(Z - 1)\frac{dP}{P} \quad\Rightarrow\quad \ln\hat\phi_i = \int_0^P(\bar Z_i - 1)\frac{dP}{P}, \qquad \bar Z_i = \left[\frac{\partial(nZ)}{\partial n_i}\right]_{T,P,n_j}$$
@@ -176,7 +176,7 @@ $$\boxed{\ln\hat\phi_1 = \frac{P}{RT}\left(B_{11} + y_2^2\delta_{12}\right), \qq
           answer: String.raw`With Z = 1 + BP/RT, B = ΣΣyᵢyⱼBᵢⱼ: ln φ̂ₖ = (P/RT)[∂(nB)/∂nₖ] ⇒ ln φ̂₁ = (P/RT)(B₁₁ + y₂²δ₁₂), ln φ̂₂ = (P/RT)(B₂₂ + y₁²δ₁₂), δ₁₂ = 2B₁₂ − B₁₁ − B₂₂; Bᵢⱼ from data or the Pitzer correlation with combining rules for B₁₂.` },
         { id: "2018-19-Q3b", label: "(b)", marks: "20",
           topic: "solution-theory", sub: "V = 120x₁ + 70x₂ + (15x₁ + 8x₂)x₁x₂: partial volumes, Gibbs–Duhem and plot",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2016-17-Q2b", "2014-15-Q2b"],
           text: String.raw`The molar volume (cm³/mol) of a binary liquid mixture at T and P is given by
 
 $$V = 120x_1 + 70x_2 + (15x_1 + 8x_2)x_1x_2$$
@@ -232,7 +232,7 @@ $$x_1(-2 - 40x_1 + 42x_1^2) + (1 - x_1)(2x_1 + 42x_1^2) = -2x_1 - 40x_1^2 + 42x_
       parts: [
         { id: "2018-19-Q4a", label: "(a)", marks: "15",
           topic: "solution-applications", sub: "Gᴱ/x₁x₂RT linear in x₁ (Margules): derive ln γ₁",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2015-16-Q7b", "2013-14-Q6b"],
           text: String.raw`If excess Gibbs energy in a binary solution, $G^E/x_1x_2RT$ is linear function of $x_1$, find the corresponding equation for $\ln\gamma_1$.`,
           solution: String.raw`1. **Linear form.** Write the straight line in terms of its end values (intercepts) at $x_1$ = 0 and $x_1$ = 1:
 $$\frac{G^E}{x_1x_2RT} = A_{21}x_1 + A_{12}x_2 \quad\Rightarrow\quad \frac{G^E}{RT} = (A_{21}x_1 + A_{12}x_2)x_1x_2$$
@@ -257,7 +257,7 @@ $$\boxed{\ln\gamma_1 = x_2^2\left[A_{12} + 2(A_{21} - A_{12})x_1\right]}$$
           answer: String.raw`Gᴱ/x₁x₂RT = A₂₁x₁ + A₁₂x₂ (Margules) ⇒ ln γ₁ = ∂(nGᴱ/RT)/∂n₁ = x₂²[A₁₂ + 2(A₂₁ − A₁₂)x₁] (and ln γ₂ = x₁²[A₂₁ + 2(A₁₂ − A₂₁)x₂]); ln γ₁^∞ = A₁₂.` },
         { id: "2018-19-Q4b", label: "(b)", marks: "20",
           topic: "solution-applications", sub: "Single-effect evaporator, 10 % to 40 % LiCl at 2 kg/s: heat-transfer rate",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2016-17-Q4a"],
           text: String.raw`A single effect evaporator operating at atmospheric pressure concentrate 10% (wt) LiCl solution of 40%. The feed enters the evaporator at a rate 2 kg/s at 25°C. The normal boiling point of a 40% LiCl solution is about 132°C and its specific heat is estimated as 2.72 kJkg⁻¹°C⁻¹. What is the heat transfer rate in the evaporator? The enthalpy change per mole of water to produce 132°C superheated steam is 3636 kJ.`,
           solution: String.raw`**Given:** feed 2 kg/s of 10 wt% LiCl at 25 °C; product 40% LiCl at 132 °C (its normal boiling point), $C_p$ = 2.72 kJ/(kg·°C); vapour leaves as superheated steam at 132 °C and 1 atm.
 
@@ -317,7 +317,7 @@ d) A throttle valve`,
           answer: String.raw`(c) A pump: the vapour is absorbed into liquid at low P and the solution is pumped (small ∫V dP) to high P, where generator heat releases the refrigerant; valves only reduce pressure, there is no compressor or vacuum pump.` },
         { id: "2018-19-Q5ii", label: "(ii)", marks: "5",
           topic: "reaction-equilibria", sub: "Effect of pressure on a gas-phase reaction with Σν > 0",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2021-22-Q5i"],
           text: String.raw`If the total stoichiometric number $\nu = \sum\nu_i$ is positive, and increase in P at constant temperature (according to $\prod_i(y_i)^{\nu_i} = \left(\dfrac{P}{P_o}\right)^{-\nu}K$, symbols have their usual meanings)
 
 a) will cause a shift of the reaction to the right
@@ -333,7 +333,7 @@ Example: $\mathrm{CH_4 + H_2O \rightleftharpoons CO + 3H_2}$ (ν = +2). Steam re
           answer: String.raw`(b) Left: Πyᵢ^νᵢ = (P/P°)^−ν K with K = f(T); for ν > 0 a rise in P lowers the right side, so the product mole fractions fall (Le Chatelier — fewer moles favoured), e.g. steam reforming favoured by low P.` },
         { id: "2018-19-Q5iii", label: "(iii)", marks: "5",
           topic: "refrigeration", sub: "Most critical factor for choosing multistage (cascade) refrigeration",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2021-22-Q5ii"],
           text: String.raw`Using cascade refrigeration loop, higher cooling efficiency can be achieved. In this case, we need to connect them in a way that one loops evaporator becomes condenser for the other. What is the most critical factor to choose multiple-stage refrigeration over single stage -
 
 a) Limits of temperature difference
@@ -355,7 +355,7 @@ d) Limits on the evaporator`,
           answer: String.raw`(a) Limits of temperature difference: a large T_H − T_C needs a huge pressure ratio, with no single refrigerant suitable at both ends, poor compressor efficiency, high discharge temperature and big throttling losses. A cascade splits the lift between loops with different refrigerants.` },
         { id: "2018-19-Q5iv", label: "(iv)", marks: "5",
           topic: "refrigeration", sub: "Is the Linde process a limiting case of the Claude process?",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2013-14-Q1a"],
           text: String.raw`Linde process is a limiting case of Claude process. True/False (Justify)`,
           solution: String.raw`**True.**
 
@@ -370,7 +370,7 @@ So the Linde process is the limiting case of the Claude process with zero expand
           answer: String.raw`True: Claude z = (H₄ − H₁₅)/(H₉ − H₁₅) + x(H₁₂ − H₅)/(H₉ − H₁₅); with x = 0 (no gas to the expander) it reduces to Linde's z = (H₄ − H₁₅)/(H₉ − H₁₅). The expander term is positive, so Claude yields more.` },
         { id: "2018-19-Q5v", label: "(v)", marks: "5",
           topic: "phase-equilibria-topics", sub: "Do phase-stability criteria apply to non-equilibrium states?",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2021-22-Q5iii"],
           text: String.raw`Phase stability criteria are applicable to both equilibrium and non-equilibrium states. True/False (Justify).`,
           solution: String.raw`**True.**
 
@@ -400,7 +400,7 @@ $$\Delta S_{total} = \frac{|Q_H|}{T_H} - \frac{|Q_C|}{T_C} \ge 0 \;\Rightarrow\;
           answer: String.raw`Work (external energy input). Clausius statement: heat cannot by itself flow from cold to hot; ΔS_total = |Q_H|/T_H − |Q_C|/T_C ≥ 0 forces |Q_H| > |Q_C|, so W = |Q_H| − |Q_C| > 0, with W_min = |Q_C|(T_H − T_C)/T_C.` },
         { id: "2018-19-Q5vii", label: "(vii)", marks: "5",
           topic: "reaction-equilibria", sub: "Degrees of freedom for CaCO₃(s) → CaO(s) + CO₂(g)",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2021-22-Q5v"],
           text: String.raw`If CaCO₃ breaks down in a reaction: CaCO₃(s) → CaO(s) + CO₂(g). How many degrees of freedom available for this case?
 
 a) 0 b) 1 c) 2 d) 3`,
@@ -413,7 +413,7 @@ $$F = 2 - 3 + 3 - 1 - 0 = 1$$
           answer: String.raw`(b) 1: π = 3 (two pure solids + gas), N = 3, r = 1, s = 0 ⇒ F = 2 − 3 + 3 − 1 = 1; K ≈ P_CO₂/P°, so T fixes the decomposition pressure.` },
         { id: "2018-19-Q5viii", label: "(viii)", marks: "5",
           topic: "phase-equilibria-topics", sub: "Solid–vapour equilibrium: which species is insoluble in the solid",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2021-22-Q5vi"],
           text: String.raw`In solid/vapor equilibrium, there would be a binary vapor phase containing species 1 and species 2. Among these two -
 
 a) species 1 is insoluble in the solid
@@ -469,7 +469,7 @@ d) None of the above`,
       parts: [
         { id: "2018-19-Q6a", label: "(a)", marks: "5",
           topic: "reaction-equilibria", sub: "Effect of temperature on the equilibrium constant (brief)",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2023-24-Q4b", "2021-22-Q7a", "2016-17-Q8a"],
           text: String.raw`What is the effect of temperature on the equilibrium constant? Explain in brief.`,
           solution: String.raw`1. K depends on **temperature only**: $\ln K = -\Delta G^\circ/RT$, with ΔG° at the fixed standard pressure.
 2. **van 't Hoff equation:**
@@ -482,7 +482,7 @@ $$\frac{d\ln K}{dT} = \frac{\Delta H^\circ}{RT^2}$$
           answer: String.raw`K = f(T) only; d ln K/dT = ΔH°/RT²: exothermic ⇒ K falls with T, endothermic ⇒ K rises, ΔH° ≈ 0 ⇒ ~constant; ln K vs 1/T ≈ linear with slope −ΔH°/R (Le Chatelier).` },
         { id: "2018-19-Q6b", label: "(b)", marks: "10",
           topic: "reaction-equilibria", sub: "Liquid-phase reaction in ideal solution: Πxᵢ^νᵢ = K, with assumptions",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2017-18-Q5b", "2015-16-Q2c", "2014-15-Q6b"],
           text: String.raw`Derive the equation for liquid phase reactions for ideal solution $\left(\prod_i(x_i)^{\nu_i} = K\right)$. State all the necessary assumptions during the derivation.`,
           solution: String.raw`1. **Equilibrium criterion** for a reaction at constant T and P: $\sum_i\nu_i\mu_i = 0$. With $\mu_i = G_i^\circ + RT\ln(\hat f_i/f_i^\circ)$:
 $$\prod_i\left(\frac{\hat f_i}{f_i^\circ}\right)^{\nu_i} = \exp\frac{-\Delta G^\circ}{RT} = K$$
@@ -549,7 +549,7 @@ $$\text{C: } n_{CH_4} + n_{CO} + n_{CO_2} = 2, \qquad \text{H: } 4n_{CH_4} + 2n_
           answer: String.raw`A_C = 2, A_H = 14, A_O = 3; five equations ΔG°fᵢ/RT + ln(nᵢ/Σn) + Σλₖaᵢₖ/RT = 0 (CH₄: λ_C + 4λ_H; H₂O: 2λ_H + λ_O; CO: λ_C + λ_O; CO₂: λ_C + 2λ_O; H₂: 2λ_H) plus C, H, O balances ⇒ 8 equations, 8 unknowns (solution: y = 0.0196, 0.0980, 0.1743, 0.0371, 0.6711).` },
         { id: "2018-19-Q6d", label: "(d)", marks: "5",
           topic: "reaction-equilibria", sub: "Gibbs-energy minimisation versus equilibrium-constant method",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2021-22-Q6c"],
           text: String.raw`What are the advantages or disadvantages of determining equilibrium composition for reactions using Gibb's free energy minimization against equilibrium constant based calculation?`,
           solution: String.raw`| | Gibbs-energy minimisation (Lagrange multipliers) | Equilibrium-constant method |
 |---|---|---|
@@ -569,7 +569,7 @@ $$\text{C: } n_{CH_4} + n_{CO} + n_{CO_2} = 2, \qquad \text{H: } 4n_{CH_4} + 2n_
       parts: [
         { id: "2018-19-Q7a", label: "(a)", marks: "15",
           topic: "phase-equilibria-topics", sub: "Three stability conditions for a binary liquid in VLE; ideal gas and azeotrope",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2021-22-Q8a", "2020-21-Q7b"],
           text: String.raw`Derive the three conditions of stability for a system of binary liquid mixture in equilibrium with vapor phase. If the pressure is low enough for the system to consider as ideal gas, make necessary simplifications and show what happens if the mixture reaches azeotrope.`,
           solution: String.raw`**Assumptions:** binary liquid at constant T and P in equilibrium with its vapour.
 
@@ -614,7 +614,7 @@ $$\frac{d^2\Delta G}{dx_1^2} > 0 \quad\text{for all } x_1$$
           answer: String.raw`Upper curve: d²ΔG/dx₁² > 0 everywhere ⇒ every mixture stable, complete miscibility. Lower curve: concave middle (d²ΔG/dx₁² < 0 between inflection points) ⇒ unstable; common tangent at x₁^α, x₁^β gives the two coexisting liquids (equal μᵢ), metastable between tangent and inflection points ⇒ LLE.` },
         { id: "2018-19-Q7c", label: "(c)", marks: "6+4=10",
           topic: "phase-equilibria-topics", sub: "Solid–vapour equilibrium at high pressure; interpret solubility vs P figure",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2022-23-Q1iv", "2021-22-Q7b"],
           text: String.raw`The general equation of Solid/Vapor eq. is: $y_1 = \dfrac{P_1^{sat}}{P}\dfrac{\phi_1}{\hat\phi}\exp\left(\dfrac{V_1^s(P - P_1^{sat})}{RT}\right)$.
 
 Simplify the equation for high pressure applications and interpret the figure below (no numerical calculation is necessary).
@@ -642,7 +642,7 @@ This is the SVNA figure for the solubility of naphthalene (1) in compressed CO�
       parts: [
         { id: "2018-19-Q8a", label: "(a)", marks: "8",
           topic: "refrigeration", sub: "Ground-source heat pump, 29 kJ/s heating and 55 kJ/s cooling: minimum power",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2023-24-Q3b"],
           text: String.raw`A house has a winter heating requirement of 29 kJ/s and a summer cooling requirement of 55 kJ/s. Consider a heat-pump installation to maintain the house temperature at 20°C in winter and 25°C in summer. This requires circulation of the refrigerant through interior exchanger coils at 30°C in winter and 5°C in summer. Underground coils provide the heat source in winter and the heat sink in summer. For a year-round ground temperature of 15°C, the heat-transfer characteristics of the coils necessitate refrigerant temperatures of 10°C in winter and 25°C in summer. What are the minimum power requirements for winter heating and summer cooling?`,
           solution: String.raw`**Given:** winter heating $|Q_H|$ = 29 kJ/s, delivered by refrigerant at 30 °C (interior coils), with heat drawn from the ground coils with refrigerant at 10 °C. Summer cooling $|Q_C|$ = 55 kJ/s, absorbed by refrigerant at 5 °C (interior coils), with heat rejected through the ground coils with refrigerant at 25 °C.
 
@@ -695,7 +695,7 @@ $$\omega = \frac{H_2 - H_1}{H_3 - H_2} = \frac{147.48}{48.0} = \mathbf{3.07}$$
           answer: String.raw`(a) T_C = 248.15 K, T_H = 299.15 K ⇒ ω_Carnot = 4.87. (b) Table 9.1: H₂ = 383.45, S₂ = 1.746, H₄ = H₁ = 235.97 kJ/kg; chart: H₃′ ≈ 422 kJ/kg at 6.854 bar ⇒ ΔH = 38.4/0.8 = 48.0 kJ/kg; ṁ = 33.33/147.48 = 0.226 kg/s (814 kg/h); ω = 147.48/48.0 = 3.07 (W = 10.9 kW).` },
         { id: "2018-19-Q8c", label: "(c)", marks: "2+7=9",
           topic: "refrigeration", sub: "Absorption refrigeration cycle: definition, sketch, working principle",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2023-24-Q1a", "2021-22-Q6b", "2020-21-Q6a", "2017-18-Q8a", "2015-16-Q1a", "2014-15-Q4a", "2013-14-Q4b"],
           text: String.raw`What is absorption refrigeration cycle? Draw a neat sketch of the absorption refrigeration process and explain its working principle.`,
           solution: String.raw`**Definition (2).** An absorption refrigeration cycle is a refrigeration cycle in which the vapour compressor is replaced by a **heat-driven "thermal compressor"**: an absorber, a solution pump and a generator. The refrigerant vapour is absorbed into a liquid absorbent at low pressure, the solution is pumped to high pressure, and the refrigerant is released again by supplying heat. The cycle runs mainly on **heat** (steam, waste heat, solar, gas flame) instead of shaft work. Working pairs: NH₃–H₂O, H₂O–LiBr.
 

@@ -56,7 +56,7 @@ The energy balance $z = \dfrac{H_4 - H_{15}}{H_9 - H_{15}}$ shows the remedies:
           answer: String.raw`Unliquefied gas is recycled through the heat exchanger, so eventually all feed is liquefied; the cold section has only a throttle valve (simple, reliable, cheap). Improve z by higher pressure, external precooling, or the Claude process (expansion engine/turbine gives near-isentropic cooling and work recovery), cascades or mixed refrigerants.` },
         { id: "2022-23-Q1iv", label: "(iv)", marks: "8",
           topic: "phase-equilibria-topics", sub: "Simplified solid–vapour equilibrium equation at high pressure",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2021-22-Q7b", "2018-19-Q7c"],
           text: String.raw`Derive the simplified equation for solid-vapor equilibrium applicable under high pressure scenario. Give an example of an application where this equation could be used.`,
           solution: String.raw`**System:** pure solid solute 1 in equilibrium with a gas mixture of 1 and an insoluble solvent gas 2 (SVNA §14.7).
 
@@ -81,7 +81,7 @@ $$\boxed{y_1 = \frac{P_1^{sat}}{\hat\phi_1P}\exp\frac{V_1^sP}{RT}}$$
           answer: String.raw`f₁ˢ = f̂₁ᵛ with f₁ˢ = φ₁ˢᵃᵗP₁ˢᵃᵗ exp[V₁ˢ(P − P₁ˢᵃᵗ)/RT] ⇒ y₁ = (P₁ˢᵃᵗ/P)(φ₁ˢᵃᵗ/φ̂₁)exp[V₁ˢ(P − P₁ˢᵃᵗ)/RT]; at high P, φ₁ˢᵃᵗ ≈ 1 and P ≫ P₁ˢᵃᵗ: y₁ = P₁ˢᵃᵗ exp(V₁ˢP/RT)/(φ̂₁P) (enhancement factor). Application: supercritical CO₂ extraction (decaffeination, naphthalene in CO₂).` },
         { id: "2022-23-Q1v", label: "(v)", marks: "10",
           topic: "reaction-equilibria", sub: "Alkaline fuel cell: electrode reactions and thermodynamic efficiency",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2020-21-Q6b"],
           text: String.raw`Illustrate the basic mechanism (with reactions) for an alkaline fuel cell. How can thermodynamic equilibrium provide effective estimation of fuel cell efficiency? Explain.`,
           solution: String.raw`![Alkaline fuel cell: H₂ at the anode, O₂ at the cathode, OH⁻ through KOH electrolyte, electrons through the external load](fig/2022-23-Q1v-sketch.svg)
 
@@ -155,7 +155,7 @@ With x = 0 the Claude result reduces to Linde's, so **the Linde process is the l
           answer: String.raw`Liquefy by compression + heat exchange with cold return gas + expansion (isentropic in an expander or isenthalpic in a throttle) into a separator. Linde: throttle only, z = (H₄ − H₁₅)/(H₉ − H₁₅). Claude: part of the gas expanded in an engine with work recovery, z = (H₄ − H₁₅)/(H₉ − H₁₅) + x(H₁₂ − H₅)/(H₉ − H₁₅), larger yield; Linde = Claude with x = 0.` },
         { id: "2022-23-Q2b", label: "(b)", marks: "8+7=15",
           topic: "refrigeration", sub: "Vapour-compression refrigeration cycle on T–S and ln P–H diagrams",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2023-24-Q2b"],
           text: String.raw`Describe the vapor-liquid compression cycle with a schematic of the process. Explain different steps of the process using T-S and lnP-H diagrams.`,
           solution: String.raw`![Vapour-compression cycle: schematic, T–S and ln P–H diagrams with states 1–4](fig/2023-24-Q2b-sketch.svg)
 
@@ -258,7 +258,7 @@ $$H_{in} = zH_9 + (1 - z)H_v = 0.0541(285.4) + 0.9459(796.9) = 15.45 + 753.77 = 
       parts: [
         { id: "2022-23-Q4a", label: "(a)", marks: "5+10=15",
           topic: "reaction-equilibria", sub: "Multiphase reaction equilibrium constant: phases of species and simplifications",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2020-21-Q5f"],
           text: String.raw`$$K = \frac{x_1\gamma_1f_1^lP^\circ}{(y_2\hat\phi_2P)(x_3\gamma_3f_3^l)}$$
 
 This is an expression for a multiphase reaction equilibrium constant. Assuming the expression, answer the following questions:
@@ -333,7 +333,7 @@ $$\prod_i y_i^{\nu_i} = K\left(\frac{P}{P^\circ}\right)^{-\nu} = K$$
       parts: [
         { id: "2022-23-Q5a", label: "(a)", marks: "10",
           topic: "vle-intro", sub: "Retrograde condensation and its importance in deep natural-gas wells",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2018-19-Q1a", "2014-15-Q1a"],
           text: String.raw`Explain the term "retrograde condensation". Discuss its applicability in the operation of deep natural gas wells.`,
           solution: String.raw`![P–T envelope of a mixture: bubble and dew curves meeting at the critical point C, with cricondenbar M, cricondentherm N and the retrograde region](fig/2022-23-Q5a-sketch.svg)
 
@@ -355,7 +355,7 @@ $$\prod_i y_i^{\nu_i} = K\left(\frac{P}{P^\circ}\right)^{-\nu} = K$$
           answer: String.raw`Retrograde condensation: for T between the mixture critical temperature and the cricondentherm, an isothermal pressure decrease from the dense-gas region crosses the dew curve, so liquid forms (then re-vaporizes at lower P). In deep gas-condensate wells falling reservoir pressure drops valuable condensate in the rock pores (lost, blocks flow), so pressure is maintained by gas cycling and separators are set to maximize condensate recovery.` },
         { id: "2022-23-Q5b", label: "(b)", marks: "25",
           topic: "vle-intro", sub: "Modified Raoult, ln γ = 0.67x²: two-phase P range, flash at x₁ = 0.75, azeotrope test",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2023-24-Q8b"],
           text: String.raw`A binary system of species 1 and 2 consists of vapor and liquid phases in equilibrium at temperature T. The overall mole fraction of species 1 in the system is $z_1 = 0.65$.
 
 At temperature T
@@ -396,7 +396,7 @@ $$\alpha_{12} = \frac{32.27}{73.14}e^{0.67(1 - 2x_1)}: \qquad \alpha_{12}(0) = 0
       parts: [
         { id: "2022-23-Q6a", label: "(a)", marks: "15",
           topic: "solution-theory", sub: "Partial molar properties and the Gibbs–Duhem equation Σx dM̄ = 0",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q2b", "2017-18-Q2b"],
           text: String.raw`Define partial molar properties and show that for constant P and T.
 
 $$\sum x_i\,d\bar M_i = 0$$`,
@@ -438,7 +438,7 @@ $$G_i^v - G_i^l = RT\ln\frac{f_i^v}{f_i^l} = 0 \;\Rightarrow\; f_i^v = f_i^l = f
           answer: String.raw`True: at equal T, G_i = Γ_i(T) + RT ln f_i, so f^v = f^l ⇔ G^v = G^l (equilibrium); mechanical equilibrium (P = P^sat) is implied, giving f^v = f^l = f^sat = φ^sat P^sat.` },
         { id: "2022-23-Q6c", label: "(c)", marks: "15",
           topic: "solution-theory", sub: "Pure-liquid fugacity with virial φ^sat and Poynting factor",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2015-16-Q7a"],
           text: String.raw`Show that for pure liquid
 
 $$f_i = P_i^{sat}\exp\frac{B_{ii}P_i^{sat} + V_i^l(P - P_i^{sat})}{RT}$$`,
@@ -560,7 +560,7 @@ $$P = x_1\gamma_1P_1^{sat} + x_2\gamma_2P_2^{sat}, \qquad y_1 = \frac{x_1\gamma_
       parts: [
         { id: "2022-23-Q8a", label: "(a)", marks: "15",
           topic: "solution-theory", sub: "Partial excess enthalpies from H^E = x₁x₂(40x₁ + 20x₂)",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2023-24-Q5b", "2016-17-Q1c"],
           text: String.raw`The excess enthalpy for a liquid mixture of species 1 and 2 at fixed T and P is represented by the equation $H^E = x_1x_2(40x_1 + 20x_2)$ where $H^E$ is in J/mol. Determine expressions for $\bar H_1^E$ and $\bar H_2^E$ as function of x₁.`,
           solution: String.raw`1. **In terms of $x_1$ only** ($x_2 = 1 - x_1$, $40x_1 + 20x_2 = 20 + 20x_1$):
 $$H^E = (20 + 20x_1)x_1(1 - x_1) = 20x_1 - 20x_1^3, \qquad \frac{dH^E}{dx_1} = 20 - 60x_1^2$$
@@ -604,7 +604,7 @@ $$\boxed{\bar V_2 = \frac{a_0 + 2a_1x_1 + 3a_2x_1^2}{(a_0 + a_1x_1 + a_2x_1^2)^2
           answer: String.raw`V = 1/ρ, dV/dx₁ = −(a₁ + 2a₂x₁)/ρ²; V̄₁ = [(a₀ − a₁) + 2(a₁ − a₂)x₁ + 3a₂x₁²]/ρ², V̄₂ = [a₀ + 2a₁x₁ + 3a₂x₁²]/ρ², with ρ = a₀ + a₁x₁ + a₂x₁².` },
         { id: "2022-23-Q8c", label: "(c)", marks: "10",
           topic: "solution-applications", sub: "Limit of G^E/x₁x₂RT as x₁ → 0 equals ln γ₁^∞",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2017-18-Q3b", "2016-17-Q4b"],
           text: String.raw`Show that for pure liquid
 
 $$\lim_{x_1 \to 0}\frac{G^E}{x_1x_2RT} = \ln\gamma_1^\infty$$`,

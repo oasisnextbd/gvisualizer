@@ -115,7 +115,7 @@ $$\mathcal V = \frac{z_1 - x_1}{y_1 - x_1} = \frac{0.30 - 0.20}{0.335 - 0.20} = 
       parts: [
         { id: "2021-22-Q2a", label: "(a)", marks: "10",
           topic: "solution-applications", sub: "Ternary Gᴱ/RT = A₁₂x₁x₂ + A₁₃x₁x₃ + A₂₃x₂x₃: ln γ₁ and summability",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2014-15-Q3a"],
           text: String.raw`The excess Gibbs energy of a particular ternary liquid mixture is represented by the empirical expression, with parameters $A_{12}$, $A_{13}$ and $A_{23}$ functions of T and P only.
 
 $$G^E/RT = A_{12}x_1x_2 + A_{13}x_1x_3 + A_{23}x_2x_3$$
@@ -142,7 +142,7 @@ $$= 2\frac{G^E}{RT} - \frac{G^E}{RT} = \frac{G^E}{RT}\ ✓$$
           answer: String.raw`ln γ₁ = A₁₂x₂ + A₁₃x₃ − Gᴱ/RT = A₁₂x₂(1 − x₁) + A₁₃x₃(1 − x₁) − A₂₃x₂x₃ (similarly for γ₂, γ₃); Σxᵢ ln γᵢ = 2Gᴱ/RT − Gᴱ/RT = Gᴱ/RT, so summability holds.` },
         { id: "2021-22-Q2b", label: "(b)", marks: "20",
           topic: "solution-theory", sub: "Equimolar propane/n-pentane at 75 °C, 2 bar: Z, Hᴿ, Sᴿ from virial coefficients",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2016-17-Q3b"],
           text: String.raw`For an equimolar vapor mixture of propane (1) and n-pentane (2) at 75°C and 2 bar, estimate Z, $H^R$, and $S^R$. The second virial coefficients are in cm³mol⁻¹.
 
 | t/°C | $B_{11}$ | $B_{22}$ | $B_{12}$ |
@@ -287,7 +287,7 @@ $$Q = -299.4\ \mathrm{kJ\ per\ lb_m} = -660\ \mathrm{kJ\ per\ kg\ of\ 50\%\ acid
           answer: String.raw`Q ≈ −284 Btu per lbₘ of 50% acid (−660 kJ/kg; −129.5 kJ/mol SO₃): reaction SO₃(l) + H₂O(l) → H₂SO₄(l), ΔH° = −87.12 kJ/mol (−191 Btu/lbₘ), plus mixing from the chart H(50%, 140 °F) = −70 vs. M = 22.5 Btu/lbₘ (−92.8 Btu/lbₘ). Heat must be removed.` },
         { id: "2021-22-Q4b", label: "(b)", marks: "15",
           topic: "solution-applications", sub: "Block diagram for a P,T-flash calculation with the gamma/phi formulation",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2023-24-Q8c"],
           text: String.raw`Draw a block diagram for a P, T - flash calculation applying the gamma-phi formulation. You may consider the following equations.
 
 $$K_i = \frac{y_i}{x_i} = \frac{\gamma_iP_i^{sat}}{\phi_iP} \qquad F = \sum_i\frac{z_i(K_i - 1)}{1 + V(K_i - 1)} = 0$$
@@ -323,7 +323,7 @@ $$V_{new} = V - \frac{F}{dF/dV}, \qquad \frac{dF}{dV} = -\sum_i\frac{z_i(K_i - 1
       parts: [
         { id: "2021-22-Q5i", label: "(i)", marks: "7",
           topic: "reaction-equilibria", sub: "Effect of pressure on a liquid-phase reaction with Σν > 0",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2018-19-Q5ii"],
           text: String.raw`If the total stoichiometric number $\nu = \sum\nu_i$ is positive, an increases in P at constant Temperature (according to $\prod_i(\gamma_ix_i)^{\nu_i} = K\exp\left(\dfrac{(P_0 - P)}{P_0}\sum_i\gamma_i\nu_i\right)$, (Symbols have their usual meanings)
 
 (a) will cause a shift of the reaction to the right
@@ -346,7 +346,7 @@ $$\prod_i(x_i\gamma_i)^{\nu_i} = K\exp\left[\frac{(P^\circ - P)}{RT}\sum_i\nu_iV
           answer: String.raw`(b) Shifts left: Π(xᵢγᵢ)^νᵢ = K exp[(P° − P)ΣνᵢVᵢ/RT] (printed exponent garbled); with ΔV = ΣνᵢVᵢ > 0 (products bulkier, as ν > 0 implies for gases), raising P lowers the right side ⇒ fewer products (Le Chatelier). For liquids the effect is small (ΔV tiny).` },
         { id: "2021-22-Q5ii", label: "(ii)", marks: "5",
           topic: "refrigeration", sub: "Most critical factor for choosing multistage (cascade) refrigeration",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2018-19-Q5iii"],
           text: String.raw`Using cascade refrigeration loop, higher cooling efficiency can be achieved. In this case, for this we need to connect them in a way that one loops evaporator becomes condenser for the other. What is the most critical factor to choose multiple-stage refrigeration over single stage-
 
 (a) Limits of Temperature difference
@@ -370,7 +370,7 @@ Describe the reasons behind your answer.`,
           answer: String.raw`(a) Limits of temperature difference: a large T_H − T_C needs a huge pressure ratio, with no single refrigerant suitable at both ends, poor compressor efficiency, high discharge temperature and big throttling losses. A cascade splits the lift between loops with different refrigerants.` },
         { id: "2021-22-Q5iii", label: "(iii)", marks: "",
           topic: "phase-equilibria-topics", sub: "Do phase-stability criteria apply to non-equilibrium states?",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2018-19-Q5v"],
           text: String.raw`Phase stability criteria are applicable to both equilibrium and non-equilibrium states. True/False (Clarify)`,
           solution: String.raw`**True.**
 
@@ -386,7 +386,7 @@ $$\frac{d^2(\Delta G/RT)}{dx_1^2} > 0 \;\Leftrightarrow\; \frac{d\ln\gamma_1}{dx
           answer: String.raw`True: derived from dUᵗ + PdVᵗ − TdSᵗ ≤ 0 [(dGᵗ)_T,P ≤ 0], which covers irreversible (non-equilibrium) changes and equilibrium alike; d²(ΔG/RT)/dx₁² > 0 tests any homogeneous state — if violated, a (non-equilibrium) mixture splits spontaneously; equilibrium solutions must satisfy it too.` },
         { id: "2021-22-Q5iv", label: "(iv)", marks: "7",
           topic: "reaction-equilibria", sub: "Does a fuel cell gain efficiency at higher temperature?",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2023-24-Q2c"],
           text: String.raw`A fuel cell is operating at room temperature. It will achieve higher efficiency if it can be operated at a higher temperature. True/False (Clarify)`,
           solution: String.raw`**False** (thermodynamically). The ideal efficiency of an H₂–O₂ fuel cell **decreases** with temperature.
 
@@ -403,7 +403,7 @@ $$\Delta S = \frac{\Delta H - \Delta G}{T} = \frac{-241818 + 228572}{298.15} = -
           answer: String.raw`False: η_ideal = ΔG/ΔH = 1 − TΔS/ΔH with ΔS < 0 (−44.4 J/mol K for H₂O(g)), so η falls with T (0.945 at 25 °C → 0.939 at 60 °C; E 1.184 → 1.176 V). Higher T only reduces kinetic/ohmic losses (rate effect); fuel cells are not Carnot-limited.` },
         { id: "2021-22-Q5v", label: "(v)", marks: "6",
           topic: "reaction-equilibria", sub: "Degrees of freedom for NiO(s) + H₂(g) → Ni(s) + H₂O(l)",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2018-19-Q5vii"],
           text: String.raw`Consider this reaction: NiO(s) + H₂(g) → Ni(s) + H₂O(l). How many degrees of freedom available for this case (provide explanation)?
 
 a) 0 b) 1 c) 2 d) 3`,
@@ -422,7 +422,7 @@ $$F = 2 - 4 + 4 - 1 - 0 = 1$$
           answer: String.raw`(b) 1: N = 4 species, π = 4 phases (NiO(s), Ni(s), H₂O(l), gas H₂ + H₂O vapour), r = 1 ⇒ F = 2 − 4 + 4 − 1 = 1 (fix T and P, y are fixed).` },
         { id: "2021-22-Q5vi", label: "(vi)", marks: "6",
           topic: "phase-equilibria-topics", sub: "Solid–vapour equilibrium: which species is insoluble in the solid",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2018-19-Q5viii"],
           text: String.raw`In solid/vapor equilibrium, there would be a binary vapor phase containing species 1 and species 2. Among these two-
 
 a) species 1 is insoluble in the solid
@@ -474,7 +474,7 @@ $$\boxed{z = x\frac{H_{12} - H_5}{H_9 - H_{15}} + \frac{H_4 - H_{15}}{H_9 - H_{1
           answer: String.raw`Compress and cool → countercurrent HX → fraction x expanded in an engine/turbine (near-isentropic, work out) to give extra cooling → remainder throttled into separator, liquid z drawn off, cold vapour recycled through HX. Energy balance on the cold box: H₄ = zH₉ + (1 − z)H₁₅ + x(H₅ − H₁₂) ⇒ z = x(H₁₂ − H₅)/(H₉ − H₁₅) + (H₄ − H₁₅)/(H₉ − H₁₅); x = 0 gives Linde.` },
         { id: "2021-22-Q6b", label: "(b)", marks: "10+3=13",
           topic: "refrigeration", sub: "Absorption refrigeration: sketch, working principle, example",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2023-24-Q1a", "2020-21-Q6a", "2018-19-Q8c", "2017-18-Q8a", "2015-16-Q1a", "2014-15-Q4a", "2013-14-Q4b"],
           text: String.raw`Draw a neat sketch of the absorption refrigeration process and describe its working principle. State an example of an absorption refrigeration process.`,
           solution: String.raw`![Absorption refrigeration cycle: generator, condenser, expansion valve, evaporator, absorber and solution pump](fig/2021-22-Q6b-sketch.svg)
 
@@ -497,7 +497,7 @@ For example, with $T_H$ = 373 K, $T_S$ = 303 K and $T_C$ = 263 K, $Q_H/Q_C$ = 0.
           answer: String.raw`Absorber + pump + generator replace the compressor: refrigerant (NH₃) evaporates at T_C, is absorbed in weak solution (heat to cooling water), pumped to high P, driven out of the strong solution by heat Q_H in the generator, condensed, throttled; (Q_H/Q_C)min = [T_H/(T_H − T_S)][(T_S − T_C)/T_C]. Examples: NH₃–H₂O cold storage/Electrolux fridge; LiBr–H₂O chillers.` },
         { id: "2021-22-Q6c", label: "(c)", marks: "5",
           topic: "reaction-equilibria", sub: "Gibbs-energy minimisation versus equilibrium-constant method",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2018-19-Q6d"],
           text: String.raw`What are the advantages or, disadvantages of determining equilibrium composition for reactions using Gibb's free energy minimization against equilibrium constant-based calculation?`,
           solution: String.raw`| | Gibbs-energy minimisation (Lagrange multipliers) | Equilibrium-constant method |
 |---|---|---|
@@ -517,7 +517,7 @@ For example, with $T_H$ = 373 K, $T_S$ = 303 K and $T_C$ = 263 K, $Q_H/Q_C$ = 0.
       parts: [
         { id: "2021-22-Q7a", label: "(a)", marks: "15",
           topic: "reaction-equilibria", sub: "Effect of temperature on the equilibrium constant: consolidated expression",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2023-24-Q4b", "2018-19-Q6a", "2016-17-Q8a"],
           text: String.raw`What is the effect of temperature on the equilibrium constant? Derive the consolidated expression and interpret different types of temperature effect on equilibrium constant.`,
           solution: String.raw`### Effect (summary)
 K depends on T only. Its variation is governed by the **standard heat of reaction**: K increases with T for an endothermic reaction (ΔH° > 0) and decreases for an exothermic one (ΔH° < 0).
@@ -549,7 +549,7 @@ $$K_0 = \exp\frac{-\Delta G_0^\circ}{RT_0}, \qquad K_1 = \exp\left[\frac{\Delta 
           answer: String.raw`d ln K/dT = ΔH°/RT² (van 't Hoff); consolidated: K = K₀K₁K₂ with K₀ = exp(−ΔG°₀/RT₀), K₁ = exp[(ΔH°₀/RT₀)(1 − T₀/T)] (dominant), K₂ = ΔC°_P correction (~1). Endothermic: K rises with T; exothermic: K falls; ΔH° ≈ 0: K ~ constant; ln K vs 1/T nearly linear with slope −ΔH°/R.` },
         { id: "2021-22-Q7b", label: "(b)", marks: "6+2=8",
           topic: "phase-equilibria-topics", sub: "Solid–vapour equilibrium at high pressure and the Poynting factor",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2022-23-Q1iv", "2018-19-Q7c"],
           text: String.raw`The general equation of Solid/Vapor eq. is: $y_1 = \dfrac{P_1^{sat}}{P}\dfrac{\phi_1^{sat}}{\hat\phi_1}\exp\left(\dfrac{V_1^s(P - P_1^{sat})}{RT}\right)$.
 
 Simplify the equation for high pressure applications and explain the effect of pointing factor for a solid -vapor equilibrium condition.`,
@@ -565,7 +565,7 @@ $\exp(V_1^sP/RT)$ always **increases** the solubility, but only modestly. For na
           answer: String.raw`High P: φ₁ˢᵃᵗ ≈ 1, P − P₁ˢᵃᵗ ≈ P ⇒ y₁ = (P₁ˢᵃᵗ/P)·(1/φ̂₁)exp(V₁ˢP/RT) = (P₁ˢᵃᵗ/P)F₁ (enhancement factor). Poynting factor raises solubility modestly (~1.6 at 100 bar for naphthalene); the large enhancement comes from φ̂₁ ≪ 1 in the dense gas.` },
         { id: "2021-22-Q7c", label: "(c)", marks: "12",
           topic: "reaction-equilibria", sub: "Three simultaneous reactions (H₂O, CO, CO₂ formation): K₁–K₃ in terms of extents",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2023-24-Q1c"],
           text: String.raw`Consider the following set of reactions taking place at once and have reached equilibrium:
 
 $$H_2 + \tfrac12O_2 \leftrightarrow H_2O \qquad (1)$$
@@ -605,7 +605,7 @@ $$K_3 = \frac{y_{CO_2}}{y_{O_2}} = \frac{\varepsilon_3}{0.5 - \tfrac12\varepsilo
       parts: [
         { id: "2021-22-Q8a", label: "(a)", marks: "14",
           topic: "phase-equilibria-topics", sub: "Three stability criteria for a binary liquid in VLE; ideal-gas simplification and azeotrope",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2020-21-Q7b", "2018-19-Q7a"],
           text: String.raw`Derive the three criteria of stability for as system of binary liquid mixture in equilibrium with vapor phase. If the pressure is low enough for the system to consider as ideal gas, make necessary simplifications and interpret what happens if the mixture reaches azeotrope.`,
           solution: String.raw`**Assumptions:** binary liquid at constant T and P in equilibrium with its vapour.
 
@@ -630,7 +630,7 @@ $$\frac{1}{P}\frac{dP}{dx_1} = \frac{y_1 - x_1}{y_1y_2}\,\frac{dy_1}{dx_1}$$
           answer: String.raw`Stability: d²(ΔG/RT)/dx₁² > 0 ⇒ (1) d ln γ₁/dx₁ > −1/x₁, (2) df̂₁/dx₁ > 0, (3) dμ₁/dx₁ > 0. Ideal-gas vapour (f̂ᵢ = yᵢP): dy₁/dx₁ > 0 and (1/P)dP/dx₁ = (y₁ − x₁)/(y₁y₂)·dy₁/dx₁; at an azeotrope y₁ = x₁ ⇒ dP/dx₁ = 0 (P extremum, max for positive, min for negative deviations).` },
         { id: "2021-22-Q8b", label: "(b)", marks: "6+2=8",
           topic: "reaction-equilibria", sub: "Gas-phase reaction equilibrium under ideal conditions: Πyᵢ^νᵢ = (P/P°)^−ν K",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2013-14-Q2b"],
           text: String.raw`Derive the equation for gas phase reactions understand ideal conditions $\left(\prod_i(y_i)^{\nu_i} = \left(\dfrac{P}{P_0}\right)^{-\nu}K\right)$. State all the necessary assumptions during thee derivation.`,
           solution: String.raw`1. **Equilibrium criterion.** For a single reaction at constant T and P, minimising $G^t$ with $dn_i = \nu_i\,d\varepsilon$ gives $\sum_i\nu_i\mu_i = 0$.
 

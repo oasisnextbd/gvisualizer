@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2013-14-Q1a", label: "(a)", marks: "15",
           topic: "refrigeration", sub: "Linde liquefaction as the limiting case (x = 0) of the Claude process",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q5iv"],
           text: String.raw`Show that the Linde process is a limiting case of the claude process with necessary diagram and equation.`,
           solution: String.raw`![Linde and Claude liquefaction schematics: compressor and cooler, countercurrent heat exchanger, throttle, separator, and in the Claude process an expander taking a fraction x of the high-pressure gas](fig/2013-14-Q1a-sketch.svg)
 
@@ -34,7 +34,7 @@ $$z = \frac{H_4 - H_{15}}{H_9 - H_{15}}$$
           answer: String.raw`Energy balance on exchangers + expander + throttle + separator (1 mol at 4): H₄ = zH₉ + (1 − z)H₁₅ + x(H₅ − H₁₂) ⇒ z = (H₄ − H₁₅)/(H₉ − H₁₅) + x(H₁₂ − H₅)/(H₉ − H₁₅). With x = 0 (no expander, throttling only) z = (H₄ − H₁₅)/(H₉ − H₁₅): the Linde result, so Linde is the x = 0 limit of Claude.` },
         { id: "2013-14-Q1b", label: "(b)", marks: "20",
           topic: "refrigeration", sub: "Tetrafluoroethane refrigerator −26/27 °C, 5.3 kW: circulation rate, with heat exchanger, COP",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2017-18-Q8b"],
           text: String.raw`A refrigerator with tetra fluoroethane as refrigerant operates with an evaporation temperature of −26°C and a condensation temperature of 27°C. Saturated liquid refrigerant from the condenser flows through an expansion valve into the evaporator, from which it emerges as saturated vapor.
 
 i) For cooling rate of 5.3 kW, what is the circulation rate of the refrigerant?
@@ -77,7 +77,7 @@ $$w = 322.32 - 273.03 = 49.28\ \mathrm{kJ/kg}, \qquad \mathrm{COP} = \frac{183.7
       parts: [
         { id: "2013-14-Q2a", label: "(a)", marks: "10",
           topic: "reaction-equilibria", sub: "Relation between the standard Gibbs-energy change and the equilibrium constant",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2017-18-Q7c", "2015-16-Q2b"],
           text: String.raw`Derive a relation between standard Gibbs-energy change and the equilibrium constant.`,
           solution: String.raw`1. **Criterion of equilibrium.** For a closed system at constant T and P, $(dG^t)_{T,P} = 0$ at equilibrium. For a single reaction, $dn_i = \nu_i\,d\varepsilon$, so
 $$d(nG) = \sum_i\mu_i\,dn_i = \left(\sum_i\nu_i\mu_i\right)d\varepsilon \quad\Rightarrow\quad \left[\frac{\partial(nG)}{\partial\varepsilon}\right]_{T,P} = \sum_i\nu_i\mu_i = 0$$
@@ -98,7 +98,7 @@ $$\boxed{K \equiv \prod_i\left(\frac{\hat f_i}{f_i^\circ}\right)^{\nu_i} = \exp\
           answer: String.raw`At equilibrium Σνᵢμᵢ = 0 (dGᵗ = 0 at T, P); μᵢ = Gᵢ° + RT ln(f̂ᵢ/fᵢ°) ⇒ Π(f̂ᵢ/fᵢ°)^νᵢ = exp(−ΔG°/RT) ≡ K, i.e. ΔG° = Σνᵢ Gᵢ° = −RT ln K (K depends on T only).` },
         { id: "2013-14-Q2b", label: "(b)", marks: "10",
           topic: "reaction-equilibria", sub: "Ideal-gas reaction: product of yᵢ to the power νᵢ equals (P/P°) to the −ν times K",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2021-22-Q8b"],
           text: String.raw`Prove that for gas phase reaction:
 
 $$\prod_i(y_i)^{\nu_i} = \left(\frac{P}{P^\circ}\right)^{-\nu}K$$`,
@@ -119,7 +119,7 @@ $$\boxed{\prod_i(y_i)^{\nu_i} = \left(\frac{P}{P^\circ}\right)^{-\nu}K}$$
           answer: String.raw`K = Π(f̂ᵢ/fᵢ°)^νᵢ with fᵢ° = P° and f̂ᵢ = yᵢφ̂ᵢP ⇒ Π(yᵢφ̂ᵢ)^νᵢ = (P/P°)^{−ν}K; ideal gas (φ̂ᵢ = 1): Π yᵢ^νᵢ = (P/P°)^{−ν}K, ν = Σνᵢ.` },
         { id: "2013-14-Q2c", label: "(c)", marks: "15",
           topic: "reaction-equilibria", sub: "Methanol synthesis at 550 K, 100 bar with the reverse shift: equilibrium composition",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2016-17-Q7"],
           text: String.raw`The feed gas to a methanol synthesis reactor is composed of 75 mole % H₂, 15 mole % CO, 5 mole % CO₂ and 5 mole % N₂. The system comes to equilibrium at 550 k and 100 bar with respect to the reactions:
 
 $$\mathrm{2H_2(g) + CO(g) \rightarrow CH_3OH(g)}$$
@@ -260,7 +260,7 @@ High pressure (and moderate temperature, since the reaction is exothermic) favou
       parts: [
         { id: "2013-14-Q4a", label: "(a)", marks: "15",
           topic: "solution-applications", sub: "Block diagram for the DEW T calculation with all equations (gamma/phi)",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2017-18-Q7b", "2015-16-Q4a"],
           text: String.raw`By clearly showing all the necessary equations, write a block diagram for the calculation of Dew T.`,
           solution: String.raw`**Problem:** given P and the vapour composition $\{y_i\}$, find T and the liquid composition $\{x_i\}$ (SVNA §14.1).
 
@@ -298,7 +298,7 @@ At low pressure ($\Phi_i$ = 1) the same diagram gives DEW T by modified Raoult's
           answer: String.raw`Read P, {yᵢ}; Φᵢ = γᵢ = 1; Tᵢˢᵃᵗ = Bᵢ/(Aᵢ − ln P) − Cᵢ, T = ΣyᵢTᵢˢᵃᵗ; Pⱼˢᵃᵗ = PΣ(yᵢΦᵢ/γᵢ)(Pⱼˢᵃᵗ/Pᵢˢᵃᵗ) → T (Antoine); Φᵢ (virial), xᵢ = yᵢΦᵢP/γᵢPᵢˢᵃᵗ, γᵢ(T, x); inner loop: normalize x, new γ until δγ < ε; outer loop: new T until δT < ε; print T, {xᵢ}.` },
         { id: "2013-14-Q4b", label: "(b)", marks: "10",
           topic: "refrigeration", sub: "Absorption refrigeration: sketch, working principle and Q_H/Q_C equations",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2023-24-Q1a", "2021-22-Q6b", "2020-21-Q6a", "2018-19-Q8c", "2017-18-Q8a", "2015-16-Q1a", "2014-15-Q4a"],
           text: String.raw`With a neat sketch, write the working principle of an absorption refrigeration system. Derive necessary equations.`,
           solution: String.raw`### Sketch
 ![Absorption refrigeration cycle: generator, condenser, expansion valve, evaporator, absorber and solution pump; high-pressure and low-pressure sides](fig/2013-14-Q4b-sketch.svg)
@@ -406,7 +406,7 @@ It also needs every species to have a vapour pressure, i.e. **T below each speci
           answer: String.raw`(i) Yes — similar aromatics at low P. (ii) No — 25 bar is near Pc (P_r ≈ 0.8–0.9), near-critical, non-ideal vapour. (iii) No — H₂ is supercritical (Tc = 33.2 K ≪ 200 K), no Pˢᵃᵗ; use Henry's law. (iv) Yes — isomeric C₈ paraffins, P ≈ 1 bar. (v) No — water and n-decane are immiscible (two liquid phases).` },
         { id: "2013-14-Q5b", label: "(b)", marks: "20",
           topic: "vle-intro", sub: "Modified Raoult, ln γ = 1.8x²: z₁ range at x₁ = 0.65, P and y₁, azeotrope",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2017-18-Q1b", "2015-16-Q6a"],
           text: String.raw`A binary system of species 1 and 2 consists of vapor and liquid phase in equilibrium at temperature T, for which
 
 $$\ln\gamma_1 = 1.8x_2^2 \qquad \ln\gamma_2 = 1.8x_1^2$$
@@ -448,7 +448,7 @@ $$\gamma_1^{az} = e^{1.8(0.4079)^2} = 1.3491, \qquad P^{az} = \gamma_1^{az}P_1^{
       parts: [
         { id: "2013-14-Q6a", label: "(a)", marks: "8",
           topic: "solution-theory", sub: "Definition of fugacity and its physical significance",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2015-16-Q7a"],
           text: String.raw`Define fugacity. What is its physical significance?`,
           solution: String.raw`### Definition
 1. **Ideal gas.** For a pure ideal gas at constant T, $dG_i^{ig} = V_i^{ig}dP = RT\,d\ln P$, which integrates to
@@ -471,7 +471,7 @@ $$\hat f_i^\alpha = \hat f_i^\beta = \cdots = \hat f_i^\pi \quad(i = 1, 2, \ldot
           answer: String.raw`Gᵢ = Γᵢ(T) + RT ln fᵢ with fᵢ/P → 1 as P → 0 (μᵢ = Γᵢ + RT ln f̂ᵢ in solution); φᵢ = fᵢ/P, ln φᵢ = Gᵢᴿ/RT = ∫(Z − 1)dP/P. Significance: an effective (corrected) pressure / escaping tendency; equality of f̂ᵢ in all phases is the phase-equilibrium criterion.` },
         { id: "2013-14-Q6b", label: "(b)", marks: "27",
           topic: "solution-applications", sub: "Gᴱ/RT = (−2.6x₁ − 1.8x₂)x₁x₂: ln γ₁, ln γ₂, Gibbs–Duhem check, plot with ln γ∞",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q4a", "2015-16-Q7b"],
           text: String.raw`The excess Gibbs energy of a binary liquid mixture at T and P is given by
 
 $$\frac{G^E}{RT} = (-2.6x_1 - 1.8x_2)\,x_1x_2$$
@@ -520,7 +520,7 @@ $$\ln\gamma_1^\infty = \ln\gamma_1(x_1 = 0) = -1.8, \qquad \ln\gamma_2^\infty = 
       parts: [
         { id: "2013-14-Q7a", label: "(a)", marks: "18",
           topic: "solution-applications", sub: "Henry's law at infinite dilution and the Lewis/Randall rule for the solvent via Gibbs–Duhem",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2014-15-Q6a"],
           text: String.raw`"Henry's law applies to a species as it approaches infinite dilution in a binary solution, and the Gibbs/Duhem equation insures validity of the Lewis/Randall rule for the other species at it approaches purity"- justify this statement with necessary equations.`,
           solution: String.raw`### 1. Henry's law at infinite dilution
 Consider $\hat f_1$ as a function of $x_1$ at constant T and P. It runs from $\hat f_1$ = 0 at $x_1$ = 0 to $\hat f_1 = f_1$ (pure 1) at $x_1$ = 1. Its limiting slope at $x_1 \to 0$ is finite; it defines **Henry's constant**:
@@ -605,7 +605,7 @@ The areas above and below the axis on a $\ln(\gamma_1/\gamma_2)$–$x_1$ plot mu
       parts: [
         { id: "2013-14-Q8a", label: "(a)", marks: "15",
           topic: "vle-intro", sub: "Dilute solute: Henry's law for 1 and Raoult's law for 2 at 298.15 K, 1 bar",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2015-16-Q5b"],
           text: String.raw`A concentrated binary solution containing mostly species 2 (but $x_2 \neq 1$) is in equilibrium with a vapor phase containing both species 1 and 2. The pressure of this two-phase system is 1 bar; the temperature is 298.15 K. Determine from the following data good estimates of $x_1$ and $y_1$
 
 $$\mathcal H_1 = 200\ \mathrm{bar} \qquad P_2^{sat} = 0.10\ \mathrm{bar}$$

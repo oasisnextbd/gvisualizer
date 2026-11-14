@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2017-18-Q1a", label: "(a)", marks: "8",
           topic: "vle-intro", sub: "K-values in VLE: at least one above and one below 1.0",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2016-17-Q1a"],
           text: String.raw`If a system exhibits VLE, at least one of k-values must be greater than 1.0 and at least one must be less than 1.0. True/False – Explain your answer.`,
           solution: String.raw`**True** for any VLE system whose two phases differ in composition; the only exception is the case where every $K_i = 1$ (an azeotrope, or a pure species).
 
@@ -29,7 +29,7 @@ $$\sum_i K_ix_i = \sum_i x_i \;\Rightarrow\; \sum_i x_i(K_i - 1) = 0$$
           answer: String.raw`True: Σyᵢ = Σxᵢ = 1 gives Σxᵢ(Kᵢ − 1) = 0, so unless every Kᵢ = 1 (azeotrope or pure species) at least one Kᵢ > 1 (light species, enriched in vapour) and one Kᵢ < 1 (heavy species).` },
         { id: "2017-18-Q1b", label: "(b)", marks: "27",
           topic: "vle-intro", sub: "Modified Raoult, ln γ = 1.5x²: z₁ range at x₁ = 0.60, P and y₁, azeotrope",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2015-16-Q6a", "2013-14-Q5b"],
           text: String.raw`A binary system of species 1 and 2 consists of vapor and liquid phase in equilibrium at temperature T, for which
 
 $$\ln\gamma_1 = 1.5x_2^2 \qquad \ln\gamma_2 = 1.5x_1^2$$
@@ -133,7 +133,7 @@ $$= 0.2042 + 0.2458 = 0.4500 \quad\checkmark$$
           answer: String.raw`P_dew = 101.3 < 120 < P_bubl = 132.5 kPa; K = 1.633, 0.817, 0.417; Rachford–Rice ⇒ V = 0.424, L = 0.576; x = (0.355, 0.380, 0.266), y = (0.579, 0.310, 0.111).` },
         { id: "2017-18-Q2b", label: "(b)", marks: "15",
           topic: "solution-theory", sub: "Gibbs–Duhem equation Σxᵢ dM̄ᵢ = 0 from nM = M(T, P, n₁, n₂, …)",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2022-23-Q6a", "2018-19-Q2b"],
           text: String.raw`If the thermodynamic properties of a homogenious phase are function of pressure, temperature and the number of moles of the individual species which comprises the phase;
 
 $$nM = M(T, P, n_1, n_2 \ldots n_i \ldots)$$
@@ -206,7 +206,7 @@ $$\left.\frac{d\bar H_1}{dx_1}\right|_{x_1 = 1} = 2(b_1 + b_2)(0) = 0, \qquad \l
           answer: String.raw`H̄₁ = a₁ + b₁ − (b₁ + b₂)x₂², H̄₂ = a₂ + b₂ − (b₁ + b₂)x₁²; dH̄₁/dx₁ = 2(b₁ + b₂)x₂, dH̄₂/dx₁ = −2(b₁ + b₂)x₁ ⇒ x₁dH̄₁/dx₁ + x₂dH̄₂/dx₁ = 0, and both slopes vanish at x₁ = 1 and x₁ = 0 respectively.` },
         { id: "2017-18-Q3b", label: "(b)", marks: "20",
           topic: "solution-applications", sub: "Limit of G^E/x₁x₂RT as x₁ → 0 equals ln γ₁^∞",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2022-23-Q8c", "2016-17-Q4b"],
           text: String.raw`The excess Gibbs Energy for binary system is given as, $\dfrac{G^E}{RT} = x_1\ln\gamma_1 + x_2\ln\gamma_2$.
 
 Show that $\displaystyle\lim_{x_1 \to 0}\frac{G^E}{x_1x_2RT} = \ln\gamma_1^\infty$.`,
@@ -247,7 +247,7 @@ $$\boxed{\lim_{x_1 \to 0}\frac{G^E}{x_1x_2RT} = \ln\gamma_1^\infty}$$
       parts: [
         { id: "2017-18-Q4a", label: "(a)", marks: "",
           topic: "solution-applications", sub: "Methanol/water at 333 K: two-parameter Margules fit of G^E/RT to VLE data",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2014-15-Q5a"],
           text: String.raw`(a) Find parameters values for the Margules equation that provide the best fit of $G^E/RT$ to the data.`,
           solution: String.raw`**Given:** T = 333 K; $P_1^{sat}$ = 85 kPa (P at $x_1$ = 1), $P_2^{sat}$ = 20 kPa (P at $x_1$ = 0); five interior (P, $x_1$, $y_1$) points.
 
@@ -282,7 +282,7 @@ $$\frac{G^E}{x_1x_2RT} = 0.7875 - 0.3990x_1 \;\Rightarrow\; \boxed{A_{12} = 0.78
           answer: String.raw`γᵢ from yᵢP = xᵢγᵢPᵢˢᵃᵗ (P₁ˢᵃᵗ = 85, P₂ˢᵃᵗ = 20 kPa); x₁ = 0.81 point inconsistent (γ₂ = 0.84 < 1), excluded. Least-squares G^E/x₁x₂RT = 0.7875 − 0.3990x₁ ⇒ A₁₂ = 0.788, A₂₁ = 0.389 (all five points: 0.822, 0.316).` },
         { id: "2017-18-Q4b", label: "(b)", marks: "",
           topic: "solution-applications", sub: "Methanol/water at 333 K: P-x-y data compared with the Margules correlation",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2014-15-Q5b"],
           text: String.raw`(b) Compare the experimental points with the curve determined from the correlation.`,
           solution: String.raw`**Given:** $A_{12}$ = 0.788, $A_{21}$ = 0.389 from (a); $P_1^{sat}$ = 85 kPa, $P_2^{sat}$ = 20 kPa.
 
@@ -320,7 +320,7 @@ $$P = 0.52(1.0898)(85) + 0.48(1.2322)(20) = 48.17 + 11.83 = 59.99\ \mathrm{kPa}$
       parts: [
         { id: "2017-18-Q5a", label: "(a)", marks: "12",
           topic: "reaction-equilibria", sub: "Mole fractions versus two reaction coordinates: CO₂ hydrogenation to methanol and CO",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2016-17-Q6c"],
           text: String.raw`A system formed initially of 2 mol CO₂, 5 mol H₂ and 1 mol CO undergoes the reactions:
 
 $$\mathrm{CO_2(g) + 3H_2(g) \rightarrow CH_3OH(g) + H_2O(g)}$$
@@ -361,7 +361,7 @@ $$\frac{y_{CO}\,y_{H_2O}}{y_{CO_2}\,y_{H_2}} = \frac{(1 + \varepsilon_2)(\vareps
           answer: String.raw`n = 8 − 2ε₁; y_CO₂ = (2 − ε₁ − ε₂)/(8 − 2ε₁), y_H₂ = (5 − 3ε₁ − ε₂)/(8 − 2ε₁), y_CH₃OH = ε₁/(8 − 2ε₁), y_CO = (1 + ε₂)/(8 − 2ε₁), y_H₂O = (ε₁ + ε₂)/(8 − 2ε₁); Σy = 1.` },
         { id: "2017-18-Q5b", label: "(b)", marks: "15",
           topic: "reaction-equilibria", sub: "Liquid-phase reaction equilibrium constant with the Poynting correction",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q6b", "2015-16-Q2c", "2014-15-Q6b"],
           text: String.raw`Derive the following relationship between equilibrium constants to composition for liquid phase reactions:
 
 $$\prod_i(x_i\gamma_i)^{\nu_i} = K\exp\left[\frac{(P^0 - P)}{RT}\sum_i(\nu_iV_i)\right]$$`,
@@ -503,7 +503,7 @@ $$K = 22\,051 \times 1.338 \times 10^{-3} \times 0.9152 = 27.0 \quad\checkmark$$
       parts: [
         { id: "2017-18-Q7a", label: "(a)", marks: "10",
           topic: "vle-intro", sub: "Flash calculation equations: material balance, K-values and Rachford–Rice",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q1c"],
           text: String.raw`Derive necessary equations for flash calculations.`,
           solution: String.raw`**Problem:** a liquid at a pressure above its bubble point is throttled ("flashed") to a lower pressure P at temperature T, and partly vaporizes. Given T, P and the overall composition $\{z_i\}$, find the vapour fraction $\mathcal V$, the liquid fraction $\mathcal L$, and the compositions $\{x_i\}$ and $\{y_i\}$ (SVNA §10.6).
 
@@ -536,7 +536,7 @@ $$x_1 = \frac{1 - K_2}{K_1 - K_2}, \qquad y_1 = K_1x_1, \qquad \mathcal V = \fra
           answer: String.raw`L + V = 1; zᵢ = xᵢL + yᵢV; yᵢ = Kᵢxᵢ (Kᵢ = Pᵢˢᵃᵗ/P or γᵢPᵢˢᵃᵗ/P) ⇒ xᵢ = zᵢ/[1 + V(Kᵢ − 1)], yᵢ = Kᵢxᵢ; Σyᵢ − Σxᵢ = 0 gives Rachford–Rice Σzᵢ(Kᵢ − 1)/[1 + V(Kᵢ − 1)] = 0, solved by Newton; valid when P_dew < P < P_bubl.` },
         { id: "2017-18-Q7b", label: "(b)", marks: "17",
           topic: "solution-applications", sub: "DEW T block diagram (gamma–phi formulation)",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2015-16-Q4a", "2013-14-Q4a"],
           text: String.raw`Write a block diagram for the calculation of Dew T.`,
           solution: String.raw`**Problem:** given P and the vapour composition $\{y_i\}$, find the dew-point temperature T and the composition $\{x_i\}$ of the first drop of liquid (SVNA §14.1). This is the hardest of the four bubble/dew calculations because neither T nor x is known, and $\gamma_i$ depends on both.
 
@@ -569,7 +569,7 @@ At low pressure $\Phi_i = 1$ and the scheme reduces to the modified-Raoult DEW T
           answer: String.raw`Given P, {yᵢ}: Φᵢ = γᵢ = 1, T = ΣyᵢTᵢˢᵃᵗ → Pⱼˢᵃᵗ = PΣ(yᵢΦᵢ/γᵢ)(Pⱼˢᵃᵗ/Pᵢˢᵃᵗ), T from Antoine → Pᵢˢᵃᵗ, Φᵢ (virial φ̂ᵢ, φᵢˢᵃᵗ, Poynting) → xᵢ = yᵢΦᵢP/(γᵢPᵢˢᵃᵗ), normalize, γᵢ(T, x) → new Pⱼˢᵃᵗ, T; repeat until δT < ε; print T, {xᵢ}.` },
         { id: "2017-18-Q7c", label: "(c)", marks: "8",
           topic: "reaction-equilibria", sub: "Equilibrium constant and the standard Gibbs-energy change of reaction",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2015-16-Q2b", "2013-14-Q2a"],
           text: String.raw`Derive the relationship between equilibrium constant and Gibbs free energy change at standard conditions.`,
           solution: String.raw`1. **Gibbs energy of a reacting system.** For a single phase at constant T and P, $dG^t = \sum_i\mu_i\,dn_i$. For a reaction, $dn_i = \nu_i\,d\varepsilon$, so
 $$\left(\frac{\partial G^t}{\partial\varepsilon}\right)_{T,P} = \sum_i\nu_i\mu_i$$
@@ -598,7 +598,7 @@ $$\boxed{-RT\ln K = \Delta G^\circ \qquad\text{or}\qquad K = \exp\left(\frac{-\D
       parts: [
         { id: "2017-18-Q8a", label: "(a)", marks: "15",
           topic: "refrigeration", sub: "Absorption refrigeration unit: sketch and principle",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2023-24-Q1a", "2021-22-Q6b", "2020-21-Q6a", "2018-19-Q8c", "2015-16-Q1a", "2014-15-Q4a", "2013-14-Q4b"],
           text: String.raw`With a neat sketch, explain the principle of an absorption refrigeration unit.`,
           solution: String.raw`### Principle
 A vapour-compression refrigerator uses **work** to raise the low-pressure refrigerant vapour to the condenser pressure. An absorption unit does the same job with **heat**. The vapour from the evaporator is dissolved (absorbed) in a liquid at low pressure. The liquid solution is pumped to high pressure, which costs very little work because a liquid's volume is small ($W = \int V\,dP$). Heat then drives the refrigerant out of the solution again. Common pairs: ammonia (refrigerant) + water (absorbent), and water (refrigerant) + aqueous LiBr (absorbent) for air conditioning.
@@ -624,7 +624,7 @@ $$W = Q_C\frac{T_S - T_C}{T_C} = Q_H\frac{T_H - T_S}{T_H} \;\Rightarrow\; \left(
           answer: String.raw`Refrigerant vapour from the evaporator is absorbed in weak solution (absorber, cooled), the strong solution is pumped to high P, heat Q_H in the generator drives the refrigerant out, it condenses, is throttled and evaporates taking Q_C. Heat replaces compressor work; (Q_H/Q_C)min = [T_H/(T_H − T_S)][(T_S − T_C)/T_C]; COP 0.5–0.7; NH₃–H₂O or H₂O–LiBr.` },
         { id: "2017-18-Q8b", label: "(b)", marks: "20",
           topic: "refrigeration", sub: "R-134a refrigerator, −26 °C evaporator and 27 °C condenser: circulation rate for 5.25 kW",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2013-14-Q1b"],
           text: String.raw`A refrigerator with tetrafluoroethane as refrigerant operates with an evaporation temperature of −26°C and a condensation temperature of 27°C. Standard liquid refrigerant from the condenser flows through an expansion valve into the evaporator, from which it emerges as saturated vapor. For a cooling rate of 5.25 kW, what is the circulation rate of the refrigerant?`,
           solution: String.raw`**Given:** tetrafluoroethane (R-134a); evaporation at −26 °C, condensation at 27 °C; saturated liquid leaves the condenser and saturated vapour leaves the evaporator; $\dot Q_C$ = 5.25 kW.
 
