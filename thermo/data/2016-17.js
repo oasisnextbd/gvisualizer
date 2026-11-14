@@ -281,6 +281,8 @@ Attached to the paper (Fig. for Q4(a)): SVNA Figure 12.14, heats of solution at 
    - Product: $\tilde n = 24.979/7.077 = 3.53$. Go up from ñ = 3.53 (just past the 3 line on the log scale) to the steep start of the LiCl curve: $\Delta\tilde H = -23.26$ kJ/mol LiCl.
    - These are the readings printed in SVNA 6th ed. (SI), Example 12.5, pp. 430–432, for exactly this evaporator. Unmixing has the same heat effect as mixing, with the opposite sign.
 
+![How to read Fig. 12.14: ñ = 13.33 → LiCl(s) curve → ΔH̃ ≈ −33.8 kJ/mol; ñ = 3.53 → ΔH̃ ≈ −23.3 kJ/mol](fig/2016-17-Q4a-read.svg)
+
 4. **Enthalpy changes of the steps:**
 $$\Delta H_a = -(7.077)(-33.80) = +239.2\ \mathrm{kJ/s}$$
 $$\Delta H_b = (7.077)(-23.26) = -164.6\ \mathrm{kJ/s}$$
