@@ -280,6 +280,8 @@ $$\boxed{\ln\gamma_1 = x_2^2\left[A_{12} + 2(A_{21} - A_{12})x_1\right]}$$
    - $\tilde n$ = 21.18: $\Delta\tilde H$ = **−34.9 kJ/mol LiCl**
    - $\tilde n$ = 3.53 (near the start of the curve at ñ ≈ 3): $\Delta\tilde H$ = **−23.4 kJ/mol LiCl**
 
+![How to read Fig. 12.14: ñ = 21.18 → LiCl(s) curve → ΔH̃ ≈ −34.9 kJ/mol; ñ = 3.53 → ΔH̃ ≈ −23.4 kJ/mol](fig/2018-19-Q4b-read.svg)
+
 3. **Path at 25 °C, then heating** (enthalpy is a state function). For each step:
    - (a) **Unmix** the feed into LiCl(s) and water at 25 °C: $\Delta\dot H_a = -4.718(-34.9) = +164.6$ kJ/s
    - (b) **Mix** 0.2 kg/s LiCl with 0.3 kg/s water into 40% solution at 25 °C: $\Delta\dot H_b = 4.718(-23.4) = -110.4$ kJ/s
@@ -679,6 +681,8 @@ $$\omega_{Carnot} = \frac{T_C}{T_H - T_C} = \frac{248.15}{299.15 - 248.15} = \fr
 
 3. **Isentropic compression (chart reading).** On Fig. 8(b2), start at state 2 on the saturated-vapour line at 0.106 MPa. Follow the constant-entropy line s = 1.746 kJ/(kg·K), between the 1.70 and 1.75 lines and close to 1.75, up to P = 0.685 MPa. Read $H_3' \approx$ **422 kJ/kg** (superheated, about 35 °C). The same value (421.9) follows from Çengel Table A-13 shifted to this reference.
 $$\Delta H_S = 422 - 383.45 = 38.4\ \mathrm{kJ/kg}, \qquad \Delta H = \frac{\Delta H_S}{\eta} = \frac{38.4}{0.80} = 48.0\ \mathrm{kJ/kg}, \qquad H_3 = 431.5\ \mathrm{kJ/kg}$$
+
+![How to read Fig. 8(b2): saturated vapour at −25 °C → isentrope s = 1.746 → 0.685 MPa → H₃′ ≈ 422 kJ/kg](fig/2018-19-Q8b-read.svg)
 
 4. **(b) Circulation rate:**
 $$\dot m = \frac{|Q_C|}{H_2 - H_1} = \frac{33.33}{383.45 - 235.97} = \frac{33.33}{147.48} = \mathbf{0.226\ kg/s}\ (814\ \mathrm{kg/h})$$

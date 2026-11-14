@@ -195,6 +195,8 @@ $$\tilde M_i = \left[\frac{\partial M^t}{\partial(M_in_i)}\right]_{T,P,n_j} = \f
    - $\tilde n$ = 21.18 (between 20 and 30): $\Delta\tilde H_1$ = **−34.9 kJ/mol LiCl**.
    - $\tilde n$ = 8.145 (just above the "8" division): $\Delta\tilde H_2$ = **−32.0 kJ/mol LiCl**.
 
+![How to read Fig. 12.14: ñ = 21.18 → LiCl(s) curve → ΔH̃ ≈ −34.9 kJ/mol; ñ = 8.145 → ΔH̃ ≈ −32.0 kJ/mol](fig/2020-21-Q3a-read.svg)
+
 3. **Path (enthalpy is a state function).** (a) Unmix the initial solution into 12.5 kg LiCl(s) and 112.5 kg H₂O at 25 °C: $\Delta H_a = -n_1\Delta\tilde H_1$. (b) Dissolve all 32.5 kg of LiCl in the water: $\Delta H_b = n_2\Delta\tilde H_2$.
 $$\Delta H_a = -(294.9\ \mathrm{mol})(-34.9) = +10\,290\ \mathrm{kJ}$$
 $$\Delta H_b = (766.7\ \mathrm{mol})(-32.0) = -24\,530\ \mathrm{kJ}$$

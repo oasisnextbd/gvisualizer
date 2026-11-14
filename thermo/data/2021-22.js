@@ -277,6 +277,8 @@ $$\Delta H_{(i)} = 2.3124(-87.12) = -201.5\ \mathrm{kJ} = -191.0\ \mathrm{Btu}$$
 $$\Delta H_{(ii)} = H_P - H_M = -70.3 - 22.5 = -92.8\ \mathrm{Btu} = -98.0\ \mathrm{kJ}$$
    On the chart, P lies 92.8 Btu/lbₘ vertically below M: the heat of mixing far exceeds the sensible heat needed to reach 140 °F.
 
+![How to read the H–x chart (Btu): W (x = 0, 77 °F, H = 45) and S (100 %, H = 0) → M on line WS at 50 % (22.5) → P on the 140 °F isotherm at 50 % (H ≈ −70 Btu/lbₘ)](fig/2021-22-Q4a-read.svg)
+
 5. **Total heat effect** (per lbₘ of product):
 $$Q = \Delta H_{(i)} + \Delta H_{(ii)} = -191.0 - 92.8 = -283.8\ \mathrm{Btu/lb_m}$$
 $$Q = -299.4\ \mathrm{kJ\ per\ lb_m} = -660\ \mathrm{kJ\ per\ kg\ of\ 50\%\ acid} \;(= -129.5\ \mathrm{kJ\ per\ mol\ SO_3})$$
