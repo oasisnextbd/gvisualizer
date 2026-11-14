@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 554 419" width="554" height="419" font-family="Helvetica, Arial, sans-serif">
+<title>Upper semicircle enclosing i and −1 + i</title>
+<rect width="554" height="419" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<line x1="45.9" y1="253.7" x2="518.1" y2="253.7" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="516.1" y="269.7" font-size="12" fill="#1E2B3A" text-anchor="end" >Re z</text>
+<line x1="277.0" y1="373.0" x2="277.0" y2="35.0" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="283.0" y="43.0" font-size="12" fill="#1E2B3A" text-anchor="start" >Im z</text>
+<text x="272.0" y="267.7" font-size="11" fill="#55667D" text-anchor="end" >O</text>
+<path d="M448.5,253.7 L448.4,251.0 L448.4,248.3 L448.3,245.6 L448.1,242.9 L447.9,240.2 L447.7,237.5 L447.4,234.8 L447.1,232.1 L446.7,229.4 L446.3,226.8 L445.9,224.1 L445.4,221.4 L444.9,218.8 L444.3,216.1 L443.7,213.5 L443.0,210.9 L442.3,208.3 L441.6,205.7 L440.8,203.1 L440.0,200.5 L439.1,197.9 L438.2,195.4 L437.3,192.8 L436.3,190.3 L435.3,187.8 L434.2,185.3 L433.1,182.8 L432.0,180.4 L430.8,177.9 L429.6,175.5 L428.3,173.1 L427.0,170.7 L425.7,168.4 L424.3,166.1 L422.9,163.7 L421.5,161.4 L420.0,159.2 L418.5,156.9 L417.0,154.7 L415.4,152.5 L413.8,150.3 L412.1,148.2 L410.4,146.1 L408.7,144.0 L407.0,141.9 L405.2,139.9 L403.4,137.9 L401.5,135.9 L399.7,133.9 L397.8,132.0 L395.8,130.1 L393.9,128.3 L391.9,126.4 L389.8,124.6 L387.8,122.9 L385.7,121.1 L383.6,119.4 L381.5,117.8 L379.3,116.1 L377.1,114.5 L374.9,113.0 L372.7,111.5 L370.4,110.0 L368.1,108.5 L365.8,107.1 L363.5,105.7 L361.2,104.3 L358.8,103.0 L356.4,101.8 L354.0,100.5 L351.6,99.3 L349.1,98.2 L346.7,97.1 L344.2,96.0 L341.7,94.9 L339.2,93.9 L336.6,93.0 L334.1,92.1 L331.5,91.2 L329.0,90.3 L326.4,89.5 L323.8,88.8 L321.2,88.1 L318.5,87.4 L315.9,86.7 L313.3,86.2 L310.6,85.6 L308.0,85.1 L305.3,84.6 L302.6,84.2 L299.9,83.8 L297.3,83.5 L294.6,83.2 L291.9,82.9 L289.2,82.7 L286.5,82.5 L283.8,82.4 L281.1,82.3 L278.4,82.3 L275.6,82.3 L272.9,82.3 L270.2,82.4 L267.5,82.5 L264.8,82.7 L262.1,82.9 L259.4,83.2 L256.7,83.5 L254.1,83.8 L251.4,84.2 L248.7,84.6 L246.0,85.1 L243.4,85.6 L240.7,86.2 L238.1,86.7 L235.5,87.4 L232.8,88.1 L230.2,88.8 L227.6,89.5 L225.0,90.3 L222.5,91.2 L219.9,92.1 L217.4,93.0 L214.8,93.9 L212.3,94.9 L209.8,96.0 L207.3,97.1 L204.9,98.2 L202.4,99.3 L200.0,100.5 L197.6,101.8 L195.2,103.0 L192.8,104.3 L190.5,105.7 L188.2,107.1 L185.9,108.5 L183.6,110.0 L181.3,111.5 L179.1,113.0 L176.9,114.5 L174.7,116.1 L172.5,117.8 L170.4,119.4 L168.3,121.1 L166.2,122.9 L164.2,124.6 L162.1,126.4 L160.1,128.3 L158.2,130.1 L156.2,132.0 L154.3,133.9 L152.5,135.9 L150.6,137.9 L148.8,139.9 L147.0,141.9 L145.3,144.0 L143.6,146.1 L141.9,148.2 L140.2,150.3 L138.6,152.5 L137.0,154.7 L135.5,156.9 L134.0,159.2 L132.5,161.4 L131.1,163.7 L129.7,166.1 L128.3,168.4 L127.0,170.7 L125.7,173.1 L124.4,175.5 L123.2,177.9 L122.0,180.4 L120.9,182.8 L119.8,185.3 L118.7,187.8 L117.7,190.3 L116.7,192.8 L115.8,195.4 L114.9,197.9 L114.0,200.5 L113.2,203.1 L112.4,205.7 L111.7,208.3 L111.0,210.9 L110.3,213.5 L109.7,216.1 L109.1,218.8 L108.6,221.4 L108.1,224.1 L107.7,226.8 L107.3,229.4 L106.9,232.1 L106.6,234.8 L106.3,237.5 L106.1,240.2 L105.9,242.9 L105.7,245.6 L105.6,248.3 L105.6,251.0 L105.5,253.7" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round" />
+<path d="M283.0,82.3 L273.0,82.3" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arc)"/>
+<text x="182.2" y="109.0" font-size="12" fill="#0B7C8C" text-anchor="start" >C_R</text>
+<path d="M105.5,253.7 L448.5,253.7" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round" />
+<path d="M271.0,253.7 L281.0,253.7" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arc)"/>
+<line x1="105.5" y1="250.7" x2="105.5" y2="256.7" stroke="#1E2B3A" stroke-width="1" />
+<text x="105.5" y="268.7" font-size="11" fill="#55667D" text-anchor="middle" >−R</text>
+<line x1="448.5" y1="250.7" x2="448.5" y2="256.7" stroke="#1E2B3A" stroke-width="1" />
+<text x="448.5" y="268.7" font-size="11" fill="#55667D" text-anchor="middle" >R</text>
+<circle cx="277.0" cy="179.2" r="5" fill="#D2552B" stroke="#D2552B" stroke-width="2"/>
+<text x="285.0" y="171.2" font-size="11.5" fill="#D2552B" text-anchor="start" >i: (1 − 2i)/10</text>
+<circle cx="202.5" cy="179.2" r="5" fill="#D2552B" stroke="#D2552B" stroke-width="2"/>
+<text x="194.5" y="169.2" font-size="11.5" fill="#D2552B" text-anchor="end" >−1+i: (−1+3i)/10</text>
+<circle cx="277.0" cy="328.3" r="5" fill="#fff" stroke="#55667D" stroke-width="2"/>
+<text x="285.0" y="320.3" font-size="11.5" fill="#55667D" text-anchor="start" >−i</text>
+<circle cx="202.5" cy="328.3" r="5" fill="#fff" stroke="#55667D" stroke-width="2"/>
+<text x="194.5" y="332.3" font-size="11.5" fill="#55667D" text-anchor="end" >−1−i</text>
+</svg>

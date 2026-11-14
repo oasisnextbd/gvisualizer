@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 547 420" width="547" height="420" font-family="Helvetica, Arial, sans-serif">
+<title>Poles of z²/((z−1)²(z+2)) with their residues</title>
+<rect width="547" height="420" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<line x1="45.7" y1="210.0" x2="511.3" y2="210.0" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="509.3" y="226.0" font-size="12" fill="#1E2B3A" text-anchor="end" >Re z</text>
+<line x1="319.1" y1="374.0" x2="319.1" y2="36.0" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="325.1" y="44.0" font-size="12" fill="#1E2B3A" text-anchor="start" >Im z</text>
+<text x="314.1" y="224.0" font-size="11" fill="#55667D" text-anchor="end" >O</text>
+<circle cx="410.2" cy="210.0" r="5" fill="#D2552B" stroke="#D2552B" stroke-width="2"/>
+<text x="410.2" y="198.0" font-size="11.5" fill="#D2552B" text-anchor="middle" >z = 1 (double): 5/9</text>
+<circle cx="136.8" cy="210.0" r="5" fill="#D2552B" stroke="#D2552B" stroke-width="2"/>
+<text x="136.8" y="198.0" font-size="11.5" fill="#D2552B" text-anchor="middle" >z = −2 (simple): 4/9</text>
+<line x1="410.2" y1="207.0" x2="410.2" y2="213.0" stroke="#1E2B3A" stroke-width="1" />
+<text x="410.2" y="225.0" font-size="11" fill="#55667D" text-anchor="middle" >1</text>
+<line x1="136.8" y1="207.0" x2="136.8" y2="213.0" stroke="#1E2B3A" stroke-width="1" />
+<text x="136.8" y="225.0" font-size="11" fill="#55667D" text-anchor="middle" >−2</text>
+</svg>

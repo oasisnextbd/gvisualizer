@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 502 420" width="502" height="420" font-family="Helvetica, Arial, sans-serif">
+<title>Upper semicircle (Jordan arc) enclosing ib and ia (drawn for a = 2, b = 1)</title>
+<rect width="502" height="420" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<line x1="46.0" y1="221.7" x2="466.0" y2="221.7" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="464.0" y="237.7" font-size="12" fill="#1E2B3A" text-anchor="end" >Re z</text>
+<line x1="251.0" y1="374.0" x2="251.0" y2="36.0" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="257.0" y="44.0" font-size="12" fill="#1E2B3A" text-anchor="start" >Im z</text>
+<text x="246.0" y="235.7" font-size="11" fill="#55667D" text-anchor="end" >O</text>
+<path d="M403.3,221.7 L403.3,219.3 L403.2,216.9 L403.1,214.5 L403.0,212.1 L402.8,209.7 L402.6,207.3 L402.4,204.9 L402.1,202.5 L401.8,200.1 L401.4,197.8 L401.0,195.4 L400.6,193.0 L400.1,190.7 L399.6,188.3 L399.0,186.0 L398.5,183.7 L397.8,181.3 L397.2,179.0 L396.5,176.7 L395.8,174.4 L395.0,172.1 L394.2,169.9 L393.4,167.6 L392.5,165.4 L391.6,163.2 L390.6,160.9 L389.7,158.8 L388.6,156.6 L387.6,154.4 L386.5,152.3 L385.4,150.1 L384.3,148.0 L383.1,145.9 L381.9,143.8 L380.6,141.8 L379.3,139.8 L378.0,137.7 L376.7,135.7 L375.3,133.8 L373.9,131.8 L372.5,129.9 L371.0,128.0 L369.5,126.1 L368.0,124.2 L366.4,122.4 L364.9,120.6 L363.3,118.8 L361.6,117.0 L359.9,115.3 L358.3,113.6 L356.5,111.9 L354.8,110.3 L353.0,108.7 L351.2,107.1 L349.4,105.5 L347.6,103.9 L345.7,102.4 L343.8,101.0 L341.9,99.5 L339.9,98.1 L338.0,96.7 L336.0,95.3 L334.0,94.0 L331.9,92.7 L329.9,91.5 L327.8,90.2 L325.8,89.0 L323.6,87.9 L321.5,86.7 L319.4,85.6 L317.2,84.6 L315.1,83.6 L312.9,82.6 L310.7,81.6 L308.4,80.7 L306.2,79.8 L304.0,78.9 L301.7,78.1 L299.4,77.3 L297.1,76.6 L294.8,75.9 L292.5,75.2 L290.2,74.6 L287.9,74.0 L285.6,73.4 L283.2,72.9 L280.9,72.4 L278.5,71.9 L276.1,71.5 L273.8,71.1 L271.4,70.8 L269.0,70.5 L266.6,70.2 L264.2,70.0 L261.8,69.8 L259.4,69.7 L257.0,69.5 L254.6,69.5 L252.2,69.4 L249.8,69.4 L247.4,69.5 L245.0,69.5 L242.6,69.7 L240.2,69.8 L237.8,70.0 L235.4,70.2 L233.0,70.5 L230.6,70.8 L228.2,71.1 L225.9,71.5 L223.5,71.9 L221.1,72.4 L218.8,72.9 L216.4,73.4 L214.1,74.0 L211.8,74.6 L209.5,75.2 L207.2,75.9 L204.9,76.6 L202.6,77.3 L200.3,78.1 L198.0,78.9 L195.8,79.8 L193.6,80.7 L191.3,81.6 L189.1,82.6 L186.9,83.6 L184.8,84.6 L182.6,85.6 L180.5,86.7 L178.4,87.9 L176.2,89.0 L174.2,90.2 L172.1,91.5 L170.1,92.7 L168.0,94.0 L166.0,95.3 L164.0,96.7 L162.1,98.1 L160.1,99.5 L158.2,101.0 L156.3,102.4 L154.4,103.9 L152.6,105.5 L150.8,107.1 L149.0,108.7 L147.2,110.3 L145.5,111.9 L143.7,113.6 L142.1,115.3 L140.4,117.0 L138.7,118.8 L137.1,120.6 L135.6,122.4 L134.0,124.2 L132.5,126.1 L131.0,128.0 L129.5,129.9 L128.1,131.8 L126.7,133.8 L125.3,135.7 L124.0,137.7 L122.7,139.8 L121.4,141.8 L120.1,143.8 L118.9,145.9 L117.7,148.0 L116.6,150.1 L115.5,152.3 L114.4,154.4 L113.4,156.6 L112.3,158.8 L111.4,160.9 L110.4,163.2 L109.5,165.4 L108.6,167.6 L107.8,169.9 L107.0,172.1 L106.2,174.4 L105.5,176.7 L104.8,179.0 L104.2,181.3 L103.5,183.7 L103.0,186.0 L102.4,188.3 L101.9,190.7 L101.4,193.0 L101.0,195.4 L100.6,197.8 L100.2,200.1 L99.9,202.5 L99.6,204.9 L99.4,207.3 L99.2,209.7 L99.0,212.1 L98.9,214.5 L98.8,216.9 L98.7,219.3 L98.7,221.7" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round" />
+<path d="M257.0,69.4 L247.0,69.4" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arc)"/>
+<text x="167.5" y="92.5" font-size="12" fill="#0B7C8C" text-anchor="start" >C_R</text>
+<path d="M98.7,221.7 L403.3,221.7" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round" />
+<path d="M245.0,221.7 L255.0,221.7" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arc)"/>
+<line x1="98.7" y1="218.7" x2="98.7" y2="224.7" stroke="#1E2B3A" stroke-width="1" />
+<text x="98.7" y="236.7" font-size="11" fill="#55667D" text-anchor="middle" >−R</text>
+<line x1="403.3" y1="218.7" x2="403.3" y2="224.7" stroke="#1E2B3A" stroke-width="1" />
+<text x="403.3" y="236.7" font-size="11" fill="#55667D" text-anchor="middle" >R</text>
+<circle cx="251.0" cy="104.6" r="5" fill="#D2552B" stroke="#D2552B" stroke-width="2"/>
+<text x="259.0" y="96.6" font-size="11.5" fill="#D2552B" text-anchor="start" >ia: e^(−a)/(2ia(b²−a²))</text>
+<circle cx="251.0" cy="163.1" r="5" fill="#D2552B" stroke="#D2552B" stroke-width="2"/>
+<text x="259.0" y="155.1" font-size="11.5" fill="#D2552B" text-anchor="start" >ib: e^(−b)/(2ib(a²−b²))</text>
+<circle cx="251.0" cy="280.3" r="5" fill="#fff" stroke="#55667D" stroke-width="2"/>
+<text x="259.0" y="272.3" font-size="11.5" fill="#55667D" text-anchor="start" >−ib</text>
+<circle cx="251.0" cy="338.9" r="5" fill="#fff" stroke="#55667D" stroke-width="2"/>
+<text x="259.0" y="330.9" font-size="11.5" fill="#55667D" text-anchor="start" >−ia</text>
+</svg>
