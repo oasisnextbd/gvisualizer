@@ -19,6 +19,6 @@ window.QB_COURSE={
     {id:'pca',name:'Principal component analysis',ch:'B4'},
     {id:'other',name:'Other (MATH 263 only: Fourier series and transforms, PDEs)',ch:'–'}
   ],
-  years:['2023-24','2022-23','2018-19'],   /* solved so far; MATH 263 papers to add: 2021-22, 2020-21, 2019-20, 2018-19, 2016-17, 2013-14 */
+  years:['2023-24','2022-23','2018-19','2016-17'],   /* solved so far; MATH 263 papers to add: 2021-22, 2020-21, 2019-20, 2018-19, 2016-17, 2013-14 */
   sets:[]
 };

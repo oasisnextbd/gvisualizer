@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" font-family="Helvetica, Arial, sans-serif">
+<title>Square contour |x| ≤ 2, |y| ≤ 2 with the pole of order 4 at z = π/4</title>
+<rect width="640" height="360" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<line x1="130.0" y1="180.0" x2="510.0" y2="180.0" stroke="#1E2B3A" stroke-width="1.3" marker-end="url(#ar)"/>
+<line x1="320.0" y1="345.0" x2="320.0" y2="15.0" stroke="#1E2B3A" stroke-width="1.3" marker-end="url(#ar)"/>
+<text x="506.0" y="196.0" font-size="12" fill="#1E2B3A" text-anchor="end" >x</text>
+<text x="326.0" y="25.0" font-size="12" fill="#1E2B3A" text-anchor="start" >y</text>
+<text x="134.0" y="27.0" font-size="13" fill="#1E2B3A" text-anchor="start" >z-plane</text>
+<rect x="190" y="50" width="260" height="260" fill="none" stroke="#0B7C8C" stroke-width="2.5"/>
+<path d="M340.0,50.0 L300.0,50.0" fill="none" stroke="#0B7C8C" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#arc)"/>
+<path d="M365.1,174 l12,12 m0,-12 l-12,12" stroke="#D2552B" stroke-width="2.5"/>
+<text x="379.1" y="170.0" font-size="12" fill="#D2552B" text-anchor="start" >z = π/4 (pole of order 4)</text>
+<text x="450.0" y="198.0" font-size="11.5" fill="#55667D" text-anchor="middle" >2</text>
+<text x="312.0" y="54.0" font-size="11.5" fill="#55667D" text-anchor="end" >2i</text>
+<text x="190.0" y="198.0" font-size="11.5" fill="#55667D" text-anchor="middle" >−2</text>
+<text x="312.0" y="314.0" font-size="11.5" fill="#55667D" text-anchor="end" >−2i</text>
+<text x="196.0" y="42.0" font-size="12" fill="#0B7C8C" text-anchor="start" >C (positively oriented)</text>
+</svg>
