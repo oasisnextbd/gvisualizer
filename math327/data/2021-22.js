@@ -94,7 +94,7 @@ $$w = i\left(-i\tan\frac\theta2\right) = \tan\frac\theta2 \quad\text{(real)} ✓
       parts: [
         { id: "2021-22-Q2a", label: "(a)", marks: "16",
           topic: "analytic", sub: "Polar Cauchy–Riemann equations; f = √r e^{iθ/2} is differentiable and f′ = 1/(2f)",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2019-20-Q2a"],
           text: String.raw`Write down Cauchy Riemann equations in polar form. If $f(z) = u(r, \theta) + iv(r, \theta)$ then test the differentiability of the function $f(z) = \sqrt r\,e^{i\theta/2}$, $(r > 0,\ \alpha < \theta < \alpha + 2\pi)$ in the indicated domain and hence show that, $f'(z) = \dfrac{1}{2f(z)}$.`,
           solution: String.raw`1. **Polar C–R equations.** With $x = r\cos\theta$, $y = r\sin\theta$, the equations $u_x = v_y$, $u_y = -v_x$ become
 $$u_r = \frac1r v_\theta, \qquad v_r = -\frac1r u_\theta$$
