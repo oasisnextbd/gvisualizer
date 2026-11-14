@@ -24,10 +24,11 @@
 <text x="215.0" y="114.0" font-size="10.5" fill="#55667D" text-anchor="end">1</text>
 <path d="M40.0,200.0 L400.0,200.0" fill="none" stroke="#0B7C8C" stroke-width="2.6" stroke-linejoin="round"/>
 <path d="M220.0,380.0 L220.0,20.0" fill="none" stroke="#6A4FC9" stroke-width="2.6" stroke-linejoin="round"/>
-<text x="310.0" y="192.0" font-size="11.5" fill="#0B7C8C" text-anchor="middle">u_x = v_y  ⇔  y = 0</text>
-<text x="226.0" y="74.0" font-size="11.5" fill="#6A4FC9" text-anchor="start">u_y = −v_x  ⇔  x = 0</text>
+<text x="310.0" y="192.0" font-size="11.5" fill="#0B7C8C" text-anchor="middle">u<tspan baseline-shift="sub" font-size="70%">x</tspan> = v<tspan baseline-shift="sub" font-size="70%">y</tspan>  ⇔  y = 0</text>
+<text x="226.0" y="74.0" font-size="11.5" fill="#6A4FC9" text-anchor="start">u<tspan baseline-shift="sub" font-size="70%">y</tspan> = −v<tspan baseline-shift="sub" font-size="70%">x</tspan>  ⇔  x = 0</text>
 <circle cx="220.0" cy="200.0" r="4.6" fill="#D2552B" stroke="#fff" stroke-width="1.2"/>
-<text x="228.0" y="220.0" font-size="11.5" fill="#D2552B" text-anchor="start">z = 0: both hold</text>
+<line x1="220.0" y1="200.0" x2="130.0" y2="263.0" stroke="#D2552B" stroke-width="0.9"/>
+<text x="130.0" y="277.0" font-size="11.5" fill="#D2552B" text-anchor="middle">z = 0: both hold</text>
 <text x="220.0" y="402.0" font-size="11.5" fill="#55667D" text-anchor="middle">Draw the two sets where each C–R equation holds; f = z Im z is</text>
 <text x="220.0" y="417.0" font-size="11.5" fill="#55667D" text-anchor="middle">differentiable only where they meet (z = 0), so it is analytic</text>
 <text x="220.0" y="432.0" font-size="11.5" fill="#55667D" text-anchor="middle">nowhere.</text>
