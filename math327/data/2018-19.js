@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2018-19-Q1a", label: "(a)", marks: "10",
           topic: "complex-algebra", sub: "(z − i)/(z + i) purely imaginary ⇒ z lies on the unit circle",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2021-22-Q1c"],
           text: String.raw`If the ratio of $\frac{z - i}{z + i}$ is purely imaginary, then show that the point z lies on a circle whose centre is at the origin and radius 1.`,
           solution: String.raw`1. **Write z = x + iy** and rationalise:
 $$\frac{z - i}{z + i} = \frac{x + i(y - 1)}{x + i(y + 1)} = \frac{[x + i(y - 1)][x - i(y + 1)]}{x^2 + (y + 1)^2}$$
@@ -28,7 +28,7 @@ $$x^2 + y^2 - 1 = 0 \;\Rightarrow\; x^2 + y^2 = 1, \quad\text{i.e. } |z| = 1$$
           answer: String.raw`(z − i)/(z + i) = [(x² + y² − 1) − 2ix]/[x² + (y + 1)²]; Re = 0 ⇒ x² + y² = 1: the unit circle (centre 0, radius 1), excluding ±i.` },
         { id: "2018-19-Q1b", label: "(b)", marks: "15",
           topic: "elementary-functions", sub: "Analyticity of w = ln z and its derivative 1/z",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2021-22-Q1b"],
           text: String.raw`Test the analyticity of the function w = ln(z) and find its derivative.`,
           solution: String.raw`1. **Definition (principal branch).** With $z = re^{i\theta}$, r > 0, −π < θ ≤ π:
 $$w = \ln z = \ln r + i\theta \;\Rightarrow\; u(r, \theta) = \ln r, \quad v(r, \theta) = \theta$$
@@ -184,7 +184,7 @@ $$\oint = 2\pi i\left(\frac18 + \frac{1}{32}\right) = \frac{5\pi i}{16}$$
           answer: String.raw`Poles 1 (inside), −1 and 3 (double) — the latter two lie ON |z − 1| = 2, so the integral as printed is undefined (misprint). Residues 1/8, 1/32, −5/32: enclosing only z = 1 ⇒ πi/4; enclosing ±1 (|z| = 2) ⇒ 5πi/16.` },
         { id: "2018-19-Q4b", label: "(b)", marks: "20",
           topic: "residues", sub: "∫₀²π cos 3θ/(5 − 4cos θ) dθ = π/12 by contour integration",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q5a"],
           text: String.raw`Evaluate $\int_0^{2\pi}\frac{\cos3\theta}{5 - 4\cos\theta}d\theta$ by using the method of contour integration.`,
           solution: String.raw`1. **Use the exponential.** $\cos3\theta = \mathrm{Re}\,e^{3i\theta}$, and the denominator is real, so
 $$I = \mathrm{Re}\int_0^{2\pi}\frac{e^{3i\theta}}{5 - 4\cos\theta}d\theta$$

@@ -32,7 +32,7 @@ $$\frac{x^2}{9} + \frac{y^2}{25} = 1$$
           answer: String.raw`(i) Sum of distances to the fixed points ±4i is 10 > 8 ⇒ ellipse with foci (0, ±4), a = 5, b = 3: x²/9 + y²/25 = 1. (ii) Points equidistant from 1 and −i lie on the perpendicular bisector of that segment: through (½, −½) with slope −1 ⇒ y = −x.` },
         { id: "2023-24-Q1b", label: "(b)", marks: "11",
           topic: "analytic", sub: "Where is f(z) = z Im(z) differentiable? Analyticity",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2020-21-Q1c"],
           text: String.raw`Determine where the function $f(z) = z\,\mathrm{Im}(z)$ is differentiable and discuss its analyticity.`,
           solution: String.raw`1. **Real and imaginary parts.** With z = x + iy, Im z = y, so
 $$f(z) = (x + iy)y = xy + iy^2 \;\Rightarrow\; u = xy, \quad v = y^2$$
@@ -52,7 +52,7 @@ $$f'(0) = u_x + iv_x = 0$$
           answer: String.raw`u = xy, v = y²; CR: y = 2y and x = 0 ⇒ only at z = 0, where f′(0) = 0. Differentiable only at the origin, hence analytic nowhere.` },
         { id: "2023-24-Q1c", label: "(c)", marks: "12",
           topic: "mapping", sub: "Translation w = z + (1 − 2i): image of the rectangle 0 ≤ x ≤ 2, 0 ≤ y ≤ 1",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2013-14-Q2c"],
           text: String.raw`Using the transformation $w = z + (1 - 2i)$, determine the region R′ in the w plane into which the region R in the z plane bounded by the lines x = 0, y = 0, x = 2, y = 1 is mapped.`,
           solution: String.raw`1. **Transformation in components.** With w = u + iv and z = x + iy:
 $$u + iv = (x + 1) + i(y - 2) \;\Rightarrow\; u = x + 1, \quad v = y - 2$$
@@ -158,7 +158,7 @@ $$\boxed{f(z) = e^z + ic}$$
       parts: [
         { id: "2023-24-Q3a", label: "(a)", marks: "18",
           topic: "complex-integration", sub: "∫ z̄ dz from 0 to 4 + 2i along a polyline and along z = t² + it",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q3a"],
           text: String.raw`Evaluate $\int_C\bar z\,dz$ along the curve C from z = 0 to z = 4 + 2i where C is given by
 
 i) the line from z = 0 to z = 2i and then from z = 2i to z = 4 + 2i
@@ -306,7 +306,7 @@ $$\int_{-\infty}^\infty\frac{x^2}{x^6 + 1}dx = 2\pi i\cdot\frac{1}{6i} = \frac\p
       parts: [
         { id: "2023-24-Q6a", label: "(a)", marks: "5+15=20",
           topic: "multivariate-normal", sub: "Aspects and objectives of multivariate analysis; x̄, Sₙ and R for 5 observations on 3 variables",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q6b", "2022-23-Q6a"],
           text: String.raw`Discuss the aspects of Multivariate Analysis along with the major objectives. The following are the 5 measurements on the variables $x_1$, $x_2$, and $x_3$.
 
 | $x_1$ | 9 | 2 | 6 | 5 | 8 |
@@ -384,7 +384,7 @@ $$P(X_1 + X_2 > 1) = 1 - \frac16 = \frac56 \approx 0.833$$`,
       parts: [
         { id: "2023-24-Q7a", label: "(a)", marks: "20",
           topic: "multivariate-normal", sub: "Bivariate normal and independence; P(106 < Y < 124) and given X = 3.2",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q7a"],
           text: String.raw`Define bivariate normal distribution, Stochastically independent random variables. Let X and Y have a bivariate normal distribution with $\mu_X = 2.8$, $\mu_Y = 110$, $\sigma_X^2 = 0.16$, $\sigma_Y^2 = 100$, and ρ = 0.6, compute
 
 (i) p(106 < Y < 124)
@@ -445,7 +445,7 @@ $$f_X(x)f_Y(y) = \frac{4(2x + 1)(2 + y)}{25x^3} \ne \frac{4(x + y)}{5x^3} = f(x,
       parts: [
         { id: "2023-24-Q8a", label: "(a)", marks: "5",
           topic: "pca", sub: "Key concepts and essential steps of principal component analysis",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2022-23-Q8b"],
           text: String.raw`Explain the key concepts and various essential steps in Principal Component Analysis.`,
           solution: String.raw`### Key concepts
 - **Principal components (PCs)** are uncorrelated linear combinations $Y_i = \mathbf e_i'\mathbf X = e_{i1}X_1 + \cdots + e_{ip}X_p$ of the p original variables. They are chosen so that $Y_1$ has the largest possible variance, $Y_2$ the largest variance among combinations uncorrelated with $Y_1$, and so on (with $\mathbf e_i'\mathbf e_i = 1$).
@@ -464,7 +464,7 @@ $$\mathrm{Var}(Y_i) = \lambda_i, \qquad \mathrm{Cov}(Y_i, Y_k) = 0\ (i \ne k), \
           answer: String.raw`PCs are uncorrelated linear combinations eᵢ′X with maximal variances = eigenpairs of Σ (or ρ): Var(Yᵢ) = λᵢ, Σλᵢ = tr Σ, proportion λₖ/Σλ. Steps: centre/standardise → S or R → eigenvalues/vectors (ordered) → PCs and variance proportions → choose number (cumulative %, scree, λ > 1) → interpret/use scores.` },
         { id: "2023-24-Q8b", label: "(b)", marks: "15",
           topic: "pca", sub: "Principal components of Σ = diag(2, 4, 4); non-unique eigenvectors for equal eigenvalues",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q8c"],
           text: String.raw`Suppose the random variables $X_1$, $X_2$ and $X_3$ have the covariance matrix
 
 $$\Sigma = \begin{bmatrix}2 & 0 & 0\\0 & 4 & 0\\0 & 0 & 4\end{bmatrix}$$
@@ -497,7 +497,7 @@ $$\mathbf e_1 = (0, \cos\alpha, \sin\alpha)', \qquad \mathbf e_2 = (0, -\sin\alp
           answer: String.raw`λ = 4, 4, 2 ⇒ Y₁ = X₂, Y₂ = X₃ (variance 4 each, 40 % each), Y₃ = X₁ (variance 2, 20 %). For the repeated eigenvalue 4 any orthonormal pair in the (x₂, x₃) plane is an eigenvector pair: those PCs are unique only up to rotation (variances unique, directions arbitrary).` },
         { id: "2023-24-Q8c", label: "(c)", marks: "15",
           topic: "regression", sub: "Normal equations; least-squares regression of X₃ on X₁, X₂ from summary statistics and predictions",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q7b"],
           text: String.raw`Define the normal equations of multiple linear regression for 3 variables $X_1$, $X_2$, and $X_3$.
 
 An instructor of mathematics wished to determine the relationship of grades on two quizzes given during the semester. Calling $X_1$, $X_2$, and $X_3$ the grades of a student on the first quiz, second quiz, and final examination, respectively, he made the following computations for a total of 120 students:

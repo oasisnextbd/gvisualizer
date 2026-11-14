@@ -7,7 +7,7 @@ QB.paper({
       parts: [
         { id: "2013-14-Q1a", label: "(a)", marks: "10",
           topic: "complex-algebra", sub: "The four fourth roots of −8 − 8√3 i in rectangular form, shown on |z| = 2",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q1b"],
           text: String.raw`Find all roots of $(-8 - 8\sqrt3 i)^{1/4}$ in rectangular coordinates and exhibit the distinct roots graphically.`,
           solution: String.raw`1. **Polar form.** $|-8 - 8\sqrt3i| = \sqrt{64 + 192} = 16$. The point is in the third quadrant with $\tan^{-1}(\sqrt3) = \pi/3$, so the principal argument is $-\pi + \pi/3 = -2\pi/3$:
 $$-8 - 8\sqrt3i = 16\left[\cos\left(-\frac{2\pi}{3} + 2k\pi\right) + i\sin\left(-\frac{2\pi}{3} + 2k\pi\right)\right]$$
@@ -103,7 +103,7 @@ $$f'(z) = 2z + \frac{-z^2}{z^4} = 2z - \frac{1}{z^2} \;\Rightarrow\; f(z) = z^2 
       parts: [
         { id: "2013-14-Q2a", label: "(a)", marks: "10",
           topic: "elementary-functions", sub: "Solve cosh z = −2 by equating real and imaginary parts",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2020-21-Q1b", "2016-17-Q2c"],
           text: String.raw`Solve $\cosh z = -2$ by equating the real and imaginary parts in the equation.`,
           solution: String.raw`1. **Expand** with z = x + iy:
 $$\cosh z = \cosh x\cos y + i\sinh x\sin y = -2$$
@@ -145,7 +145,7 @@ $$\mathrm{Log}(-1 + i\sqrt3)^2 \ne 2\,\mathrm{Log}(-1 + i\sqrt3)$$
           answer: String.raw`Log(−1 + i√3) = ln 2 + 2πi/3 ⇒ 2Log = 2ln 2 + 4πi/3; (−1 + i√3)² = −2 − 2√3i ⇒ Log = 2ln 2 − 2πi/3. Different (by 2πi), since 4π/3 is outside (−π, π].` },
         { id: "2013-14-Q2c", label: "(c)", marks: "15⅔",
           topic: "mapping", sub: "Image of the rectangle 1, 4, 4 + 6i, 1 + 6i under w = (1 + i)z + (2 − i)",
-          type: "sketch", syllabus: "in", repeats: [],
+          type: "sketch", syllabus: "in", repeats: ["2023-24-Q1c"],
           text: String.raw`Find the image of the rectangle with vertices 1, 4, 4 + 6i, 1 + 6i in the z-plane under the transformation $w = (1 + i)z + (2 - i)$. Sketch the graph of the rectangular region and its image.`,
           solution: String.raw`1. **Nature of the map.** $w = az + b$ with $a = 1 + i = \sqrt2e^{i\pi/4}$ and $b = 2 - i$ is a linear map: a **rotation by 45°**, a **magnification by √2** and a **translation by 2 − i**. It maps straight lines to straight lines and preserves angles and shapes, so the rectangle maps to a rectangle.
 
@@ -235,7 +235,7 @@ $$= \cdots + \frac{1}{6(z - 1)^3} - \frac{1}{3(z - 1)^2} + \frac{2}{3(z - 1)} - 
           answer: String.raw`f = (4/3)/(2z − 1) + (1/3)/(z − 2); with t = z − 1: (4/3)/(1 + 2t) = (2/3)Σ(−1)ⁿ/(2ⁿt^{n+1}) (|t| > ½) and (1/3)/(t − 1) = −(1/3)Σtⁿ (|t| < 1): f = … − 1/(3t²) + 2/(3t) − 1/3 − t/3 − …` },
         { id: "2013-14-Q3ci", label: "(c)(i)", marks: "12",
           topic: "residues", sub: "∮ dz/(z³(z + 4)) on |z| = 2 by the residue theorem",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2021-22-Q3c"],
           text: String.raw`Evaluate the following integrals by Cauchy's residue theorem:
 
 (i) $\displaystyle\oint_C\frac{dz}{z^3(z + 4)}$ where $C: |z| = 2$

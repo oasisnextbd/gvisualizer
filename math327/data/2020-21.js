@@ -23,7 +23,7 @@ $$\left|\frac{e^{iz}}{z^2 + z + 1}\right| = \frac{|e^{iz}|}{|z^2 + z + 1|} \le \
           answer: String.raw`On C_R, y ≥ 0 so |e^{iz}| = e^{−y} ≤ 1; z² + z + 1 = (z − ω)(z − ω̄) with |ω| = 1, so |z² + z + 1| ≥ (R − 1)² ⇒ the bound. (Then ∫_{C_R} → 0 by ML ≤ πR/(R − 1)².)` },
         { id: "2020-21-Q1b", label: "(b)", marks: "12",
           topic: "elementary-functions", sub: "Principal value of (2i)^{1−i}; all solutions of sin z = 5",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2016-17-Q2c", "2016-17-Q2b", "2013-14-Q2a"],
           text: String.raw`Compute the principal value of the complex power $(2i)^{1-i}$. Also find all solutions to the equation $\sin z = 5$.`,
           solution: String.raw`### Principal value of $(2i)^{1-i}$
 1. **Definition:** $z^c = e^{c\,\mathrm{Log}\,z}$, with the principal logarithm $\mathrm{Log}\,z = \ln|z| + i\,\mathrm{Arg}\,z$:
@@ -50,7 +50,7 @@ $$\boxed{z = \frac\pi2 + 2n\pi \pm i\ln\left(5 + 2\sqrt6\right), \qquad n = 0, \
           answer: String.raw`(2i)^{1−i} = e^{(1−i)(ln 2 + iπ/2)} = 2e^{π/2}[sin(ln 2) + i cos(ln 2)] ≈ 6.147 + 7.401i. sin z = 5 ⇒ cos x = 0, sin x = 1, cosh y = 5 ⇒ z = π/2 + 2nπ ± i ln(5 + 2√6) (≈ ±2.292i).` },
         { id: "2020-21-Q1c", label: "(c)", marks: "12",
           topic: "analytic", sub: "Where 2x² + y + i(y² − x) and z Im z are differentiable; analyticity",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2023-24-Q1b"],
           text: String.raw`Determine where the following functions are differentiable.
 
 (i) $f(z) = 2x^2 + y + i(y^2 - x)$ (ii) $f(z) = z\,\mathrm{Im}(z)$

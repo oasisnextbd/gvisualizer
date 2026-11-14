@@ -50,7 +50,7 @@ $$\frac{\Delta f}{\Delta z} = \frac{(a + h)^2 - a^2 + i[(a + k)^2 - a^2]}{h + ik
           answer: String.raw`u = x², v = y²: u_y = −v_x = 0 always; u_x = v_y ⇔ 2x = 2y. Partials continuous ⇒ f′ exists exactly on y = x (z = x + ix), f′ = 2x; f is nowhere analytic.` },
         { id: "2016-17-Q1c", label: "(c)", marks: "13⅔",
           topic: "analytic", sub: "Polar Cauchy–Riemann equations; f(z) = √r e^{iθ/2} is differentiable and f′ = 1/(2f)",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2021-22-Q2a", "2019-20-Q2a"],
           text: String.raw`Write down Cauchy Riemann equation in polar form. Test the differentiability of the function $f(z) = \sqrt r\,e^{i\theta/2}$, $(r > 0, \alpha < \theta < \alpha + 2\pi)$ in the indicated domain and hence show that, $f'(z) = \dfrac{1}{2f(z)}$.`,
           solution: String.raw`1. **Polar CR equations.** With $z = re^{i\theta}$ and $f = u(r, \theta) + iv(r, \theta)$:
 $$u_r = \frac1r v_\theta, \qquad v_r = -\frac1r u_\theta \qquad (r > 0)$$
@@ -110,7 +110,7 @@ $$u^2 + \left(v + \frac78\right)^2 = \frac12 + \frac{49}{64} = \frac{81}{64}$$
       parts: [
         { id: "2016-17-Q2a", label: "(a)", marks: "10",
           topic: "analytic", sub: "u = ½ ln(x² + y²) is harmonic; analytic f(z) = ln z",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2021-22-Q2b"],
           text: String.raw`Show that $u = \dfrac12\ln(x^2 + y^2)$ is harmonic. Find an analytic function $f(z)$ in which $u(x, y)$ is the real part. Also express $f(z)$ in terms of z.`,
           solution: String.raw`**Domain:** $(x, y) \ne (0, 0)$.
 
@@ -136,7 +136,7 @@ $$f = \frac12\ln(x^2 + y^2) + i\tan^{-1}\frac yx + iC = \ln r + i\theta + iC$$
           answer: String.raw`u_xx = (y² − x²)/(x² + y²)², u_yy = (x² − y²)/(x² + y²)² ⇒ Δu = 0. CR ⇒ v = tan⁻¹(y/x) + C; f = ½ln(x² + y²) + i tan⁻¹(y/x) = ln z + iC (f′ = 1/z).` },
         { id: "2016-17-Q2b", label: "(b)", marks: "10",
           topic: "elementary-functions", sub: "Principal value of (1 − i)^{4i}",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2020-21-Q1b"],
           text: String.raw`Find the principle value of $(1 - i)^{4i}$.`,
           solution: String.raw`1. **Definition:** $a^b = e^{b\log a}$; the principal value uses the principal logarithm $\mathrm{Log}\,a = \ln|a| + i\,\mathrm{Arg}\,a$, $-\pi < \mathrm{Arg}\,a \le \pi$.
 
@@ -157,7 +157,7 @@ $$(1 - i)^{4i} \approx 4.245 + 22.748i$$
           answer: String.raw`Log(1 − i) = ½ln 2 − iπ/4 ⇒ 4i Log(1 − i) = π + 2i ln 2 ⇒ (1 − i)^{4i} = e^π[cos(2 ln 2) + i sin(2 ln 2)] ≈ 4.245 + 22.748i.` },
         { id: "2016-17-Q2c", label: "(c)", marks: "10",
           topic: "elementary-functions", sub: "Solve cos z = 2 by equating real and imaginary parts",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2020-21-Q1b", "2013-14-Q2a"],
           text: String.raw`Solve the equation $\cos z = 2$ by equating the real and imaginary parts in the equation.`,
           solution: String.raw`1. **Expand** with z = x + iy:
 $$\cos z = \cos x\cosh y - i\sin x\sinh y = 2$$
@@ -220,7 +220,7 @@ $$\oint_C\frac{z}{(9 - z^2)(z + i)}dz = 2\pi i\left(-\frac{i}{10}\right) = \frac
           answer: String.raw`Only z = −i lies inside |z| = 2 (±3 outside); g = z/(9 − z²), g(−i) = −i/10 ⇒ integral = 2πi(−i/10) = π/5.` },
         { id: "2016-17-Q3b", label: "(b)", marks: "15⅔",
           topic: "series", sub: "Laurent series of z²/((z − 1)(z − 2)) in 1 < |z| < 2",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q4a", "2021-22-Q3b"],
           text: String.raw`Express $f(z) = \dfrac{z^2}{(z - 1)(z - 2)}$ in a Laurent series valid in the region $1 < |z| < 2$.`,
           solution: String.raw`1. **Partial fractions.** The degrees of numerator and denominator are equal, so first divide: $z^2 = (z - 1)(z - 2) + 3z - 2$. Then
 $$f(z) = 1 + \frac{3z - 2}{(z - 1)(z - 2)} = 1 + \frac{A}{z - 1} + \frac{B}{z - 2}$$
@@ -266,7 +266,7 @@ $$\oint_C\frac{\sin3z}{(z - \pi/4)^4}dz = 2\pi i\cdot\frac{9\sqrt2}{4} = \frac{9
       parts: [
         { id: "2016-17-Q4i", label: "(i)", marks: "23",
           topic: "residues", sub: "∫₀^{2π} cos 2θ/(5 − 3 cos θ) dθ = π/18 by the unit-circle substitution",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2021-22-Q4ii"],
           text: String.raw`(i) $\displaystyle\int_0^{2\pi}\frac{\cos2\theta}{5 - 3\cos\theta}d\theta$.`,
           solution: String.raw`**Method:** put $z = e^{i\theta}$, so the interval $0 \le \theta \le 2\pi$ becomes the unit circle |z| = 1, with
 $$\cos\theta = \frac12\left(z + \frac1z\right), \qquad d\theta = \frac{dz}{iz}, \qquad \cos2\theta = \mathrm{Re}(e^{2i\theta}) = \mathrm{Re}(z^2)$$

@@ -21,7 +21,7 @@ $$\bar z_1 = r(\cos\theta - i\sin\theta) = re^{-i\theta}$$
           answer: String.raw`z₁ = re^{iθ}, z₂ = re^{−iθ} (same modulus, opposite amplitude) ⇒ z₂ = r(cos θ − i sin θ) = z̄₁ (reflection in the real axis).` },
         { id: "2021-22-Q1b", label: "(b)", marks: "9+9=18",
           topic: "analytic", sub: "Analyticity and derivatives of cosh 5z and ln(√z)",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q1b"],
           text: String.raw`Discuss the analyticity of the following functions and find its derivatives
 
 (i) $f(z) = \cosh 5z$, and (ii) $f(z) = \ln\left(\sqrt z\right)$`,
@@ -52,7 +52,7 @@ $$f'(z) = e^{-i\theta}(u_r + iv_r) = \frac{e^{-i\theta}}{2r} = \frac{1}{2z}$$
           answer: String.raw`(i) u = cosh5x cos5y, v = sinh5x sin5y satisfy C–R everywhere ⇒ entire; f′ = 5 sinh 5z. (ii) ln√z = ½ ln z: u = ½ ln r, v = θ/2 satisfy polar C–R for r > 0, −π < θ < π ⇒ analytic except at z = 0 and on the branch cut (negative real axis); f′ = 1/(2z).` },
         { id: "2021-22-Q1c", label: "(c)", marks: "10",
           topic: "complex-algebra", sub: "(z − i)/(z − 1) purely imaginary ⇒ z on the circle centre ½(1 + i), radius 1/√2",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2018-19-Q1a"],
           text: String.raw`If the ratio of $\dfrac{z - i}{z - 1}$ is purely imaginary, then prove that the point z lies on the circle whose centre is the point $\frac12(1 + i)$ and radius is $\frac{1}{\sqrt2}$.`,
           solution: String.raw`1. **Write z = x + iy** and rationalize:
 $$\frac{z - i}{z - 1} = \frac{x + i(y - 1)}{(x - 1) + iy}\cdot\frac{(x - 1) - iy}{(x - 1) - iy} = \frac{[x(x - 1) + y(y - 1)] + i[(x - 1)(y - 1) - xy]}{(x - 1)^2 + y^2}$$
@@ -94,7 +94,7 @@ $$w = i\left(-i\tan\frac\theta2\right) = \tan\frac\theta2 \quad\text{(real)} ✓
       parts: [
         { id: "2021-22-Q2a", label: "(a)", marks: "16",
           topic: "analytic", sub: "Polar Cauchy–Riemann equations; f = √r e^{iθ/2} is differentiable and f′ = 1/(2f)",
-          type: "derivation", syllabus: "in", repeats: ["2019-20-Q2a"],
+          type: "derivation", syllabus: "in", repeats: ["2019-20-Q2a", "2016-17-Q1c"],
           text: String.raw`Write down Cauchy Riemann equations in polar form. If $f(z) = u(r, \theta) + iv(r, \theta)$ then test the differentiability of the function $f(z) = \sqrt r\,e^{i\theta/2}$, $(r > 0,\ \alpha < \theta < \alpha + 2\pi)$ in the indicated domain and hence show that, $f'(z) = \dfrac{1}{2f(z)}$.`,
           solution: String.raw`1. **Polar C–R equations.** With $x = r\cos\theta$, $y = r\sin\theta$, the equations $u_x = v_y$, $u_y = -v_x$ become
 $$u_r = \frac1r v_\theta, \qquad v_r = -\frac1r u_\theta$$
@@ -115,7 +115,7 @@ $$f'(z) = e^{-i\theta}(u_r + iv_r) = e^{-i\theta}\frac{1}{2\sqrt r}e^{i\theta/2}
           answer: String.raw`u_r = v_θ/r, v_r = −u_θ/r. For f = √r e^{iθ/2}: u = √r cos(θ/2), v = √r sin(θ/2); u_r = cos(θ/2)/(2√r) = v_θ/r, v_r = sin(θ/2)/(2√r) = −u_θ/r, continuous for r > 0 ⇒ differentiable; f′ = e^{−iθ}(u_r + iv_r) = 1/(2√r e^{iθ/2}) = 1/(2f).` },
         { id: "2021-22-Q2b", label: "(b)", marks: "15",
           topic: "analytic", sub: "v = −tan⁻¹(x/y) is harmonic; analytic f with imaginary part v: f = ln z + C",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2016-17-Q2a"],
           text: String.raw`Define harmonic function. Show that $v = -\tan^{-1}\dfrac{x}{y}$ is a harmonic. Find an analytic function $f(z)$ in which $v(x, y)$ is the imaginary part.`,
           solution: String.raw`**Harmonic function:** a real function with continuous second partial derivatives satisfying Laplace's equation $\phi_{xx} + \phi_{yy} = 0$.
 
@@ -186,7 +186,7 @@ $$\oint_C\frac{dz}{(z^2 + 1)(z^2 + 9)} = \frac\pi8 - \frac\pi8 = 0$$
           answer: String.raw`Poles ±i inside the rectangle ±3 ± 2i, ±3i outside. CIF: 2πi·1/((2i)(8)) + 2πi·1/((−2i)(8)) = π/8 − π/8 = 0.` },
         { id: "2021-22-Q3b", label: "(b)", marks: "16⅔",
           topic: "series", sub: "Laurent series of 1/(z(z² − 3z + 2)) in 1 < |z| < 2 and |z| ≥ 2",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2022-23-Q4a", "2016-17-Q3b"],
           text: String.raw`Express $f(z) = \dfrac{1}{z(z^2 - 3z + 2)}$ in a Laurent expansion valid in the region:
 
 (i) $1 < |z| < 2$, and (ii) $|z| \ge 2$.`,
@@ -207,7 +207,7 @@ $$\boxed{f(z) = \sum_{n=3}^\infty\frac{2^{n-2} - 1}{z^n} = \frac{1}{z^3} + \frac
           answer: String.raw`f = 1/(2z) − 1/(z − 1) + 1/(2(z − 2)). (i) 1 < |z| < 2: f = −1/(2z) − Σ_{n≥2} z^{−n} − Σ_{n≥0} zⁿ/2ⁿ⁺². (ii) |z| > 2: f = Σ_{n≥3}(2ⁿ⁻² − 1)/zⁿ = 1/z³ + 3/z⁴ + 7/z⁵ + ….` },
         { id: "2021-22-Q3c", label: "(c)", marks: "15",
           topic: "residues", sub: "Residue theorem: ∮ dz/(z³(z + 4)) on |z| = 2",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2013-14-Q3ci"],
           text: String.raw`Evaluate the integral $\displaystyle\oint_C\frac{dz}{z^3(z + 4)}$ by Cauchy's residue theorem, where C: $|z| = 2$.`,
           solution: String.raw`1. **Poles:** $z = 0$ (order 3) is inside $|z| = 2$; $z = -4$ is outside.
 
@@ -249,7 +249,7 @@ $$\int_{-\infty}^{\infty}\frac{\sin\pi x}{x(1 - x^2)}dx = 2\pi \;\Rightarrow\; I
           answer: String.raw`f = e^{iπz}/(z(1 − z²)); simple poles 0, ±1 on the real axis with residues 1, ½, ½; indented upper contour, Jordan's lemma ⇒ P.V.∫ = πi(2) = 2πi ⇒ ∫_{−∞}^{∞} sin πx/(x(1 − x²)) = 2π ⇒ ∫₀^∞ = π.` },
         { id: "2021-22-Q4ii", label: "(ii)", marks: "23",
           topic: "residues", sub: "∫₀^2π sin 2θ/(5 − 3 cos θ) dθ by the unit-circle substitution",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2016-17-Q4i"],
           text: String.raw`$$\int_0^{2\pi}\frac{\sin2\theta}{5 - 3\cos\theta}\,d\theta$$`,
           solution: String.raw`1. **Substitution** $z = e^{i\theta}$, $d\theta = \dfrac{dz}{iz}$:
 $$\sin2\theta = \frac{z^2 - z^{-2}}{2i} = \frac{z^4 - 1}{2iz^2}, \qquad 5 - 3\cos\theta = 5 - \frac32\left(z + \frac1z\right) = -\frac{(3z - 1)(z - 3)}{2z}$$

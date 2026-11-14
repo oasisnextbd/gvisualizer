@@ -38,7 +38,7 @@ $$\boxed{|z_1 - z_2| \ge \big||z_1| - |z_2|\big|}$$
           answer: String.raw`|z₁ + z₂|² = |z₁|² + |z₂|² + 2Re(z₁z̄₂) ≤ (|z₁| + |z₂|)² since Re(z₁z̄₂) ≤ |z₁||z₂| ⇒ (i). Applying (i) to z₁ = (z₁ − z₂) + z₂ and to z₂ = (z₂ − z₁) + z₁ gives |z₁ − z₂| ≥ ±(|z₁| − |z₂|) ⇒ (ii).` },
         { id: "2022-23-Q1b", label: "(b)", marks: "12",
           topic: "complex-algebra", sub: "Fourth roots of −8 − 8√3 i: rectangular form, sketch, principal root",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2013-14-Q1a"],
           text: String.raw`Find the roots of the equation $z^4 + 8 + 8\sqrt3\,i = 0$ in rectangular coordinates, exhibit them geometrically, and point out which is the principal root.`,
           solution: String.raw`**Given:** $z^4 = -8 - 8\sqrt3\,i$.
 
@@ -148,7 +148,7 @@ $$f(z) = u(z, 0) + iv(z, 0) = 2z - z^3 + iC$$
       parts: [
         { id: "2022-23-Q3a", label: "(a)", marks: "18",
           topic: "complex-integration", sub: "∫ z̄ dz from 0 to 4 + 2i along z = t² + it and along 0 → 2i → 4 + 2i",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2023-24-Q3a"],
           text: String.raw`Evaluate $\displaystyle\int_C\bar z\,dz$ from $z = 0$ to $z = 4 + 2i$ along the curve C given by (i) $z = t^2 + it$; (ii) the line from $z = 0$ to $z = 2i$ and then from $z = 2i$ to $z = 4 + 2i$.`,
           solution: String.raw`![The parabola z = t² + it and the broken line 0 → 2i → 4 + 2i, with the two values of the integral](fig/2022-23-Q3a-sol.svg)
 
@@ -197,7 +197,7 @@ $$\oint_{C_1}\frac{(z + 1)/(z - 2)}{z}\,dz = 2\pi i\left[\frac{z + 1}{z - 2}\rig
       parts: [
         { id: "2022-23-Q4a", label: "(a)", marks: "18",
           topic: "series", sub: "Laurent series of 1/(z(z − 2)) in 1 < |z| < 2 and in |z| > 2",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2021-22-Q3b", "2016-17-Q3b"],
           text: String.raw`Expand $f(z) = \dfrac{1}{z(z - 2)}$ in a Laurent series valid for (i) $1 < |z| < 2$, (ii) $|z| > 2$.`,
           solution: String.raw`1. **Partial fractions:**
 $$f(z) = \frac{1}{z(z - 2)} = \frac12\left[\frac{1}{z - 2} - \frac{1}{z}\right]$$
@@ -247,7 +247,7 @@ $$\sum\mathrm{Res} = \frac12 + \frac54 + \frac54 = 3, \qquad \oint_C f(z)\,dz = 
       parts: [
         { id: "2022-23-Q5a", label: "(a)", marks: "15",
           topic: "residues", sub: "∫₀^2π sin²θ/(5 − 4 cos θ) dθ = π/4 by the unit-circle substitution",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2018-19-Q4b"],
           text: String.raw`$$\int_0^{2\pi}\frac{\sin^2\theta}{5 - 4\cos\theta}\,d\theta$$`,
           solution: String.raw`1. **Substitution** $z = e^{i\theta}$ (θ from 0 to 2π traces the unit circle $|z| = 1$ once):
 $$\cos\theta = \frac{z + z^{-1}}{2}, \qquad \sin\theta = \frac{z - z^{-1}}{2i}, \qquad d\theta = \frac{dz}{iz}$$
@@ -300,7 +300,7 @@ $$\int_{-\infty}^{\infty}\frac{dx}{x^4 + 1} = \frac{\pi}{\sqrt2} \approx 2.2214$
       parts: [
         { id: "2022-23-Q6a", label: "(a)", marks: "8",
           topic: "multivariate-normal", sub: "Data matrix X (n × p): mean vector, covariance and correlation matrices and their relation",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2023-24-Q6a"],
           text: String.raw`Let $X_{n\times p}$ be a data matrix containing n observations and p features. Derive the formulas of mean vector, covariance matrix, correlation matrix for the data matrix $X_{n\times p}$. What is the relationship between covariance and correlation?`,
           solution: String.raw`1. **Data matrix.** Row j is the j-th observation, column k the k-th variable:
 $$X = \begin{bmatrix} x_{11} & x_{12} & \cdots & x_{1p} \\ x_{21} & x_{22} & \cdots & x_{2p} \\ \vdots & & & \vdots \\ x_{n1} & x_{n2} & \cdots & x_{np}\end{bmatrix}_{n\times p}$$
@@ -322,7 +322,7 @@ $$R = D^{-1/2}S_nD^{-1/2}, \qquad S_n = D^{1/2}RD^{1/2}$$
           answer: String.raw`x̄ = (1/n)X′1; S_n = (1/n)(X − 1x̄′)′(X − 1x̄′) (s_ik = (1/n)Σ(x_ji − x̄_i)(x_jk − x̄_k)); r_ik = s_ik/√(s_ii s_kk), R = D^{−1/2}S_nD^{−1/2} with D = diag(s_kk): correlation = covariance of standardized variables (unit-free, −1 ≤ r ≤ 1).` },
         { id: "2022-23-Q6b", label: "(b)", marks: "20",
           topic: "multivariate-normal", sub: "7 × 2 data: mean vector, covariance matrix S_n, correlation matrix R and scatter plot",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2023-24-Q6a"],
           text: String.raw`Calculate mean vector, covariance matrix, correlation matrix for the data matrix below. Interpret the correlation matrix graphically.
 
 | $x_1$ | $x_2$ |
@@ -395,7 +395,7 @@ $$f(\mathbf x) = \frac{1}{(2\pi)^{p/2}|\Sigma|^{1/2}}\exp\left[-\frac12(\mathbf 
       parts: [
         { id: "2022-23-Q7a", label: "(a)", marks: "10",
           topic: "multivariate-normal", sub: "Derivation of the bivariate normal probability density function",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2023-24-Q7a"],
           text: String.raw`Derive the probability density function for the bivariate normal distribution.`,
           solution: String.raw`1. **Start from the univariate normal and generalize** (lecture notes, Ch. 2). The univariate density
 $$f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac12\left(\frac{x - \mu}{\sigma}\right)^2}$$
@@ -424,7 +424,7 @@ $$\boxed{f(x_1, x_2) = \frac{1}{2\pi\sqrt{\sigma_{11}\sigma_{22}(1 - \rho_{12}^2
           answer: String.raw`Replace ((x − μ)/σ)² by (x − μ)′Σ⁻¹(x − μ) and the constant by (2π)^{p/2}|Σ|^{1/2}; with p = 2, |Σ| = σ₁₁σ₂₂(1 − ρ²): f(x₁, x₂) = [2π√(σ₁₁σ₂₂(1 − ρ²))]⁻¹ exp{−[z₁² + z₂² − 2ρz₁z₂]/(2(1 − ρ²))}, z_i = (x_i − μ_i)/√σ_ii.` },
         { id: "2022-23-Q7b", label: "(b)", marks: "10",
           topic: "regression", sub: "Method of least squares and the estimator β̂ = (XᵀX)⁻¹XᵀY",
-          type: "derivation", syllabus: "in", repeats: [],
+          type: "derivation", syllabus: "in", repeats: ["2023-24-Q8c"],
           text: String.raw`Describe the method of least squares and how it is utilized to estimate parameter, $\hat\beta = (X^TX)^{-1}X^TY$ in multivariate regression.`,
           solution: String.raw`1. **Model.** For n observations of a response Y and k predictors, the multiple linear regression model is
 $$Y_i = \beta_0 + \beta_1x_{i1} + \cdots + \beta_kx_{ik} + \varepsilon_i, \qquad i = 1, \ldots, n$$
@@ -525,7 +525,7 @@ MANOVA uses the correlation among responses and controls the overall type I erro
           answer: String.raw`Both assume independent random samples, normal errors and equal variability across groups. ANOVA: one response, univariate normal, equal variances σ², F test. MANOVA: several responses, multivariate normal N_p(μ_ℓ, Σ), equal covariance matrices (Box's M), linearly related but not multicollinear responses, n_ℓ > p, multivariate outliers; Wilks' Λ etc.` },
         { id: "2022-23-Q8b", label: "(b)", marks: "8",
           topic: "pca", sub: "What principal component analysis is and its purpose",
-          type: "theory", syllabus: "in", repeats: [],
+          type: "theory", syllabus: "in", repeats: ["2023-24-Q8a"],
           text: String.raw`What is principal component analysis (PCA), and what is its primary purpose in data analysis?`,
           solution: String.raw`**Principal component analysis** explains the variance–covariance structure of a set of p variables through a few **linear combinations** of them, the principal components (lecture notes).
 
@@ -543,7 +543,7 @@ $$Y_i = \mathbf e_i'\mathbf X = e_{i1}X_1 + \cdots + e_{ip}X_p, \qquad \mathrm{V
           answer: String.raw`PCA forms uncorrelated linear combinations Y_i = e_i′X of the variables, with e_i the eigenvectors of Σ (or ρ) and Var(Y_i) = λ_i in decreasing order; total variance Σλ_i is preserved. Purpose: reduce dimension by keeping the few components that explain most variance, interpret structure, and remove multicollinearity / visualize data for further analysis.` },
         { id: "2022-23-Q8c", label: "(c)", marks: "20",
           topic: "pca", sub: "Principal components of a 5 × 2 dataset: covariance, eigenvalues, eigenvectors, scores",
-          type: "numerical", syllabus: "in", repeats: [],
+          type: "numerical", syllabus: "in", repeats: ["2023-24-Q8b"],
           text: String.raw`Calculate the principal components for the following dataset:
 
 | feature 1 | feature 2 |

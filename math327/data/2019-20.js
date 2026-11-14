@@ -94,7 +94,7 @@ $$z = \frac{i(1 + w)}{1 - w}\bigg|_{w=1+i} = \frac{i(2 + i)}{-i} = -(2 + i) = -2
       parts: [
         { id: "2019-20-Q2a", label: "(a)", marks: "15⅔",
           topic: "analytic", sub: "Polar Cauchy–Riemann equations; f = √r e^{iθ/2} (0 < θ < 2π) is differentiable and f′ = 1/(2f)",
-          type: "derivation", syllabus: "in", repeats: ["2021-22-Q2a"],
+          type: "derivation", syllabus: "in", repeats: ["2021-22-Q2a", "2016-17-Q1c"],
           text: String.raw`Write down Cauchy-Riemann equations in polar form. Test the differentiability of the function $f(z) = \sqrt r\,e^{i\theta/2}$, $(r > 0,\ 0 < \theta < 2\pi)$ in the indicated domain and hence show that $f'(z) = \dfrac{1}{2f(z)}$.`,
           solution: String.raw`1. **Polar C–R equations:**
 $$u_r = \frac1r v_\theta, \qquad v_r = -\frac1r u_\theta, \qquad f'(z) = e^{-i\theta}(u_r + iv_r)$$
