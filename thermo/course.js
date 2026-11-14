@@ -14,5 +14,5 @@ window.QB_COURSE={
     {id:'other',name:'Other (not in current slides)',ch:'–'}
   ],
   years:['2023-24','2022-23','2021-22','2020-21','2018-19','2017-18','2016-17','2015-16','2014-15','2013-14'],   /* solved so far; still to add: 2021-22, 2020-21, 2018-19, 2017-18, 2016-17, 2015-16, 2014-15, 2013-14 */
-  sets:['vle-intro','solution-theory','reaction-equilibria']   /* still to come: solution-applications, refrigeration, phase-equilibria-topics */
+  sets:['vle-intro','solution-theory','solution-applications','reaction-equilibria']   /* still to come: refrigeration, phase-equilibria-topics */
 };
