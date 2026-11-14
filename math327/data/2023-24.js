@@ -44,6 +44,8 @@ $$u_x = y, \quad u_y = x, \quad v_x = 0, \quad v_y = 2y$$
 $$u_x = v_y: \; y = 2y \Rightarrow y = 0, \qquad u_y = -v_x: \; x = 0$$
    Both hold only at x = 0, y = 0, i.e. **only at z = 0**.
 
+![Sketch: the line y = 0 and the line x = 0 meet only at the origin](fig/2023-24-Q1b-sketch.svg)
+
 4. **Differentiability.** The partials are continuous everywhere and the CR equations hold at z = 0. So f is differentiable at z = 0, with
 $$f'(0) = u_x + iv_x = 0$$
    Directly: $\dfrac{f(\Delta z) - f(0)}{\Delta z} = \mathrm{Im}(\Delta z) \to 0$. At every other point the CR equations fail, so f is not differentiable there.
@@ -128,6 +130,8 @@ $$v_r = 4r^{-5}\sin4\theta, \qquad v_\theta = -4r^{-4}\cos4\theta$$
 $$\frac1r v_\theta = -4r^{-5}\cos4\theta = u_r\ ✓, \qquad -\frac1r u_\theta = 4r^{-5}\sin4\theta = v_r\ ✓$$
    They hold at every point of the domain r > 0, 0 < θ < 2π, and the partials are continuous there. So **f is differentiable (indeed analytic) throughout the domain**.
 
+![Sketch of the domain (origin and the cut excluded)](fig/2023-24-Q2b-sketch.svg)
+
 5. **Derivative:**
 $$f'(z) = e^{-i\theta}(u_r + iv_r) = e^{-i\theta}\left(-4r^{-5}\cos4\theta + 4ir^{-5}\sin4\theta\right) = -4r^{-5}e^{-i\theta}e^{-4i\theta} = -\frac{4}{r^5e^{5i\theta}}\ \blacksquare$$
    This agrees with $\frac{d}{dz}z^{-4} = -4z^{-5}$.`,
@@ -150,7 +154,9 @@ $$v = e^x\sin y + c$$
 $$f = u + iv = e^x\cos y + ie^x\sin y + ic = e^x(\cos y + i\sin y) + ic = e^{x + iy} + ic$$
 $$\boxed{f(z) = e^z + ic}$$
 
-4. **Check by Milne–Thomson.** $f'(z) = u_x - iu_y$; put x = z, y = 0: $f'(z) = e^z\cos0 - i(-e^z\sin0) = e^z$, so $f = e^z + C$ ✓.`,
+4. **Check by Milne–Thomson.** $f'(z) = u_x - iu_y$; put x = z, y = 0: $f'(z) = e^z\cos0 - i(-e^z\sin0) = e^z$, so $f = e^z + C$ ✓.
+
+![Orthogonal families of u and v](fig/2023-24-Q2c-sketch.svg)`,
           answer: String.raw`u_xx + u_yy = eˣcos y − eˣcos y = 0 ⇒ harmonic; v = eˣ sin y + c ⇒ f = eˣ(cos y + i sin y) + ic = eᶻ + ic.` }
       ] },
     { id: "2023-24-Q3", q: 3, section: "A",
@@ -218,6 +224,8 @@ $$f(z) = \sum_{n=0}^\infty a_n(z - a)^n + \sum_{n=1}^\infty\frac{a_{-n}}{(z - a)
 2. **Centre and variable.** The region $0 < |z + 1| < 1$ is a punctured disc about a = −1, reaching up to the other singularity z = −2. Put u = z + 1, so 0 < |u| < 1 and z + 2 = u + 1:
 $$f = \frac{1}{u(1 + u)}$$
 
+![Region of validity](fig/2023-24-Q4a-sketch.svg)
+
 3. **Expand $1/(1 + u)$** as a geometric series (|u| < 1):
 $$\frac{1}{1 + u} = 1 - u + u^2 - u^3 + \cdots = \sum_{n=0}^\infty(-1)^nu^n$$
 
@@ -272,6 +280,8 @@ $$J = \oint_{|z|=1}\frac{1}{2 + \frac{z + z^{-1}}{2}}\cdot\frac{dz}{iz} = \oint_
 
 3. **Poles:** $z^2 + 4z + 1 = 0$ gives $z = -2 \pm \sqrt3$. Here $z_1 = -2 + \sqrt3 = -0.268$ lies inside the unit circle and $z_2 = -2 - \sqrt3 = -3.732$ lies outside.
 
+![Contour and poles](fig/2023-24-Q5a-sketch.svg)
+
 4. **Residue at $z_1$:**
 $$\mathrm{Res}_{z_1} = \frac{2}{i(z_1 - z_2)} = \frac{2}{i(2\sqrt3)} = \frac{1}{i\sqrt3}$$
 
@@ -291,6 +301,8 @@ $$\oint_Cf\,dz = \int_{-R}^Rf(x)\,dx + \int_\Gamma f(z)\,dz = 2\pi i\sum\mathrm{
 3. **Poles:** $z^6 = -1 = e^{i\pi}$ gives $z_k = e^{i(\pi + 2k\pi)/6}$. The poles in the upper half plane are
 $$z_0 = e^{i\pi/6}, \qquad z_1 = e^{i\pi/2} = i, \qquad z_2 = e^{5i\pi/6}$$
    They are simple poles.
+
+![Contour and poles](fig/2023-24-Q5b-sketch.svg)
 
 4. **Residues:** for a simple pole of P/Q, Res = $P(z_k)/Q'(z_k) = z_k^2/(6z_k^5) = 1/(6z_k^3)$.
 $$z_0^3 = e^{i\pi/2} = i, \qquad z_1^3 = i^3 = -i, \qquad z_2^3 = e^{5i\pi/2} = i$$
@@ -530,8 +542,8 @@ $$\boxed{\hat X_3 = -50.11 + 4.359X_1 + 4.043X_2}$$
 4. **Student 2** ($X_1$ = 5, $X_2$ = 8): $\hat X_3 = -50.11 + 21.80 + 32.34 = 4.0$.
 
 ### Note on the data
-The printed $\bar X_3$ = 6.9 is not consistent with $s_3$ = 9.0 and grades on the quiz scale: a mean of 6.9 with a standard deviation of 9 would make many predicted final grades negative, e.g. $X_1$ = 5, $X_2$ = 6 gives −4.1. The final-exam mean has probably been misprinted. The slopes $b_1$ and $b_2$ do **not** depend on $\bar X_3$. If the true mean is $\bar X_3'$, only the intercept and the predictions change, by $(\bar X_3' - 6.9)$: $b_0 = \bar X_3' - 57.01$, and the predictions become $\bar X_3' + 22.65$ and $\bar X_3' - 2.87$. The solution above uses the data as printed.`,
-          answer: String.raw`Normal equations: X′Xb = X′y (three sums equations). b₁ = (s₃/s₁)(r₁₃ − r₁₂r₂₃)/(1 − r₁₂²) = 4.359, b₂ = (s₃/s₂)(r₂₃ − r₁₂r₁₃)/(1 − r₁₂²) = 4.043, b₀ = 6.9 − 4.359(6.4) − 4.043(7.2) = −50.11 ⇒ X̂₃ = −50.11 + 4.359X₁ + 4.043X₂; predictions 29.6 (9, 10) and 4.0 (5, 8). X̄₃ = 6.9 looks misprinted (slopes unaffected; predictions shift by X̄₃′ − 6.9).` }
+These data, and the fitted equation $\hat X_3 = -50.11 + 4.36X_1 + 4.043X_2$ with predictions 29.56 and 4.03, agree with the worked example in the regression lecture notes, which uses the same values including $\bar X_3$ = 6.9. The intercept is negative because $\bar X_3$ is small compared with $b_1\bar X_1 + b_2\bar X_2$; for some combinations of quiz marks the fitted value can also be negative.`,
+          answer: String.raw`Normal equations: X′Xb = X′y (three sums equations). b₁ = (s₃/s₁)(r₁₃ − r₁₂r₂₃)/(1 − r₁₂²) = 4.359, b₂ = (s₃/s₂)(r₂₃ − r₁₂r₁₃)/(1 − r₁₂²) = 4.043, b₀ = 6.9 − 4.359(6.4) − 4.043(7.2) = −50.11 ⇒ X̂₃ = −50.11 + 4.359X₁ + 4.043X₂; predictions 29.6 (9, 10) and 4.0 (5, 8). Data and result agree with the lecture-notes worked example.` }
       ] }
   ]
 });
