@@ -78,7 +78,7 @@ service cloud.firestore {
       return v == null || str(v, max);
     }
     function course(v) {
-      return v in ['che301', 'che303', 'che311', 'che313'];
+      return v in ['che301', 'che303', 'che311', 'che313', 'math327'];
     }
 
     // ------------------------------------------------------------ team
