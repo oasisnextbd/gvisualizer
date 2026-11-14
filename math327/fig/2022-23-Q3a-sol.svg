@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 430" width="560" height="430" font-family="Helvetica, Arial, sans-serif">
+<title>Two paths from 0 to 4+2i</title>
+<defs><marker id="ar1E2B3A" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="ar55667D" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#55667D"/></marker><marker id="arD2552B" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker><marker id="ar0B7C8C" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arB7840A" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7840A"/></marker><marker id="ar6A4FC9" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4FC9"/></marker></defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="280.0" y="22.0" font-size="13.5" fill="#1E2B3A" text-anchor="middle" font-weight="bold">Paths of integration for ∫ z̄ dz from 0 to 4 + 2i</text>
+<line x1="114.0" y1="45.0" x2="114.0" y2="305.0" stroke="#C5CED8" stroke-width="0.6"/>
+<text x="114.0" y="320.0" font-size="11" fill="#55667D" text-anchor="middle">0</text>
+<line x1="202.0" y1="45.0" x2="202.0" y2="305.0" stroke="#C5CED8" stroke-width="0.6"/>
+<text x="202.0" y="320.0" font-size="11" fill="#55667D" text-anchor="middle">1</text>
+<line x1="290.0" y1="45.0" x2="290.0" y2="305.0" stroke="#C5CED8" stroke-width="0.6"/>
+<text x="290.0" y="320.0" font-size="11" fill="#55667D" text-anchor="middle">2</text>
+<line x1="378.0" y1="45.0" x2="378.0" y2="305.0" stroke="#C5CED8" stroke-width="0.6"/>
+<text x="378.0" y="320.0" font-size="11" fill="#55667D" text-anchor="middle">3</text>
+<line x1="466.0" y1="45.0" x2="466.0" y2="305.0" stroke="#C5CED8" stroke-width="0.6"/>
+<text x="466.0" y="320.0" font-size="11" fill="#55667D" text-anchor="middle">4</text>
+<line x1="70.0" y1="261.7" x2="510.0" y2="261.7" stroke="#C5CED8" stroke-width="0.6"/>
+<text x="64.0" y="265.7" font-size="11" fill="#55667D" text-anchor="end">0</text>
+<line x1="70.0" y1="175.0" x2="510.0" y2="175.0" stroke="#C5CED8" stroke-width="0.6"/>
+<text x="64.0" y="179.0" font-size="11" fill="#55667D" text-anchor="end">1</text>
+<line x1="70.0" y1="88.3" x2="510.0" y2="88.3" stroke="#C5CED8" stroke-width="0.6"/>
+<text x="64.0" y="92.3" font-size="11" fill="#55667D" text-anchor="end">2</text>
+<rect x="70.0" y="45.0" width="440.0" height="260.0" rx="0" fill="none" stroke="#1E2B3A" stroke-width="1.1"/>
+<text x="290.0" y="339.0" font-size="12.5" fill="#1E2B3A" text-anchor="middle">x</text>
+<text x="34.0" y="175.0" font-size="12.5" fill="#1E2B3A" text-anchor="middle" transform="rotate(-90.0 34.0 175.0)">y</text>
+<path d="M114.0,261.7l0,-0.9l0,-0.9l0.1,-0.8l0,-0.9l0.1,-0.9l0.1,-0.9l0.1,-0.8l0.2,-0.9l0.1,-0.9l0.2,-0.8l0.2,-0.9l0.2,-0.9l0.2,-0.9l0.2,-0.8l0.3,-0.9l0.3,-0.9l0.3,-0.8l0.3,-0.9l0.3,-0.9l0.4,-0.9l0.3,-0.8l0.4,-0.9l0.4,-0.9l0.4,-0.8l0.5,-0.9l0.4,-0.9l0.5,-0.9l0.5,-0.8l0.5,-0.9l0.5,-0.9l0.5,-0.8l0.6,-0.9l0.6,-0.9l0.6,-0.8l0.6,-0.9l0.6,-0.9l0.7,-0.9l0.6,-0.8l0.7,-0.9l0.7,-0.9l0.7,-0.8l0.8,-0.9l0.7,-0.9l0.8,-0.9l0.8,-0.8l0.8,-0.9l0.8,-0.9l0.9,-0.8l0.8,-0.9l0.9,-0.9l0.9,-0.9l0.9,-0.8l1,-0.9l0.9,-0.9l1,-0.8l1,-0.9l1,-0.9l1,-0.9l1,-0.8l1.1,-0.9l1.1,-0.9l1.1,-0.8l1.1,-0.9l1.1,-0.9l1.2,-0.8l1.1,-0.9l1.2,-0.9l1.2,-0.9l1.2,-0.8l1.3,-0.9l1.2,-0.9l1.3,-0.8l1.3,-0.9l1.3,-0.9l1.3,-0.9l1.3,-0.8l1.4,-0.9l1.4,-0.9l1.4,-0.8l1.4,-0.9l1.4,-0.9l1.5,-0.9l1.4,-0.8l1.5,-0.9l1.5,-0.9l1.5,-0.8l1.6,-0.9l1.5,-0.9l1.6,-0.9l1.6,-0.8l1.6,-0.9l1.6,-0.9l1.7,-0.8l1.6,-0.9l1.7,-0.9l1.7,-0.9l1.7,-0.8l1.8,-0.9l1.7,-0.9l1.8,-0.8l1.8,-0.9l1.8,-0.9l1.8,-0.8l1.8,-0.9l1.9,-0.9l1.9,-0.9l1.9,-0.8l1.9,-0.9l1.9,-0.9l2,-0.8l1.9,-0.9l2,-0.9l2,-0.9l2,-0.8l2.1,-0.9l2,-0.9l2.1,-0.8l2.1,-0.9l2.1,-0.9l2.1,-0.9l2.1,-0.8l2.2,-0.9l2.2,-0.9l2.2,-0.8l2.2,-0.9l2.2,-0.9l2.3,-0.9l2.2,-0.8l2.3,-0.9l2.3,-0.9l2.3,-0.8l2.4,-0.9l2.3,-0.9l2.4,-0.9l2.4,-0.8l2.4,-0.9l2.4,-0.9l2.5,-0.8l2.4,-0.9l2.5,-0.9l2.5,-0.8l2.5,-0.9l2.6,-0.9l2.5,-0.9l2.6,-0.8l2.6,-0.9l2.6,-0.9l2.6,-0.8l2.6,-0.9l2.7,-0.9l2.7,-0.9l2.7,-0.8l2.7,-0.9l2.7,-0.9l2.8,-0.8l2.7,-0.9l2.8,-0.9l2.8,-0.9l2.8,-0.8l2.8,-0.9l2.9,-0.9l2.9,-0.8l2.9,-0.9l2.9,-0.9l2.9,-0.9l2.9,-0.8l3,-0.9l3,-0.9l3,-0.8l3,-0.9l3,-0.9l3.1,-0.8l3,-0.9l3.1,-0.9l3.1,-0.9l3.1,-0.8l3.2,-0.9l3.1,-0.9l3.2,-0.8l3.2,-0.9l3.2,-0.9l3.2,-0.9l3.3,-0.8l3.2,-0.9l3.3,-0.9l3.3,-0.8l3.3,-0.9l3.4,-0.9l3.3,-0.9l3.4,-0.8l3.4,-0.9l3.4,-0.9l3.4,-0.8l3.4,-0.9l3.5,-0.9l3.5,-0.9l3.5,-0.8l3.5,-0.9l3.5,-0.9" fill="none" stroke="#D2552B" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M114.0,261.7l0,-173.4l352,0" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="114.0" cy="261.7" r="4.5" fill="#1E2B3A" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="466.0" cy="88.3" r="4.5" fill="#1E2B3A" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="114.0" cy="88.3" r="4" fill="#0B7C8C" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="307.6" y="166.3" font-size="12" fill="#D2552B" text-anchor="start">(i) z = t² + it, 0 ≤ t ≤ 2:  10 − 8i/3</text>
+<text x="127.2" y="75.3" font-size="12" fill="#0B7C8C" text-anchor="start">(ii) 0 → 2i → 4 + 2i:  10 − 8i</text>
+<text x="466.0" y="104.3" font-size="11.5" fill="#1E2B3A" text-anchor="middle">4 + 2i</text>
+<text x="120.0" y="255.7" font-size="11.5" fill="#1E2B3A" text-anchor="start">0</text>
+<text x="280.0" y="400.0" font-size="11.5" fill="#55667D" text-anchor="middle">Different values: z̄ is not analytic, so the integral depends on the path.</text>
+</svg>
