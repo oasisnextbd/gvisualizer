@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 352" width="400" height="352" font-family="Helvetica, Arial, sans-serif">
+<title>Three paths from 0 to 1 + i</title>
+<rect width="400" height="352" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<line x1="40.0" y1="264.0" x2="370.0" y2="264.0" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="368.0" y="280.0" font-size="12" fill="#1E2B3A" text-anchor="end" >Re z</text>
+<line x1="104.0" y1="312.0" x2="104.0" y2="30.0" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="110.0" y="38.0" font-size="12" fill="#1E2B3A" text-anchor="start" >Im z</text>
+<text x="99.0" y="278.0" font-size="11" fill="#55667D" text-anchor="end" >O</text>
+<path d="M104.0,264.0 L104.0,104.0" fill="none" stroke="#D2552B" stroke-width="2.4" stroke-linejoin="round" />
+<path d="M104.0,190.0 L104.0,180.0" fill="none" stroke="#D2552B" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arh)"/>
+<path d="M104.0,104.0 L264.0,104.0" fill="none" stroke="#D2552B" stroke-width="2.4" stroke-linejoin="round" />
+<path d="M178.0,104.0 L188.0,104.0" fill="none" stroke="#D2552B" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arh)"/>
+<path d="M104.0,264.0 L264.0,104.0" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round" />
+<path d="M179.8,188.2 L186.8,181.2" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arc)"/>
+<path d="M104.0,264.0 L106.0,264.0 L108.1,263.9 L110.1,263.8 L112.1,263.6 L114.1,263.4 L116.2,263.1 L118.2,262.7 L120.2,262.4 L122.2,261.9 L124.3,261.4 L126.3,260.9 L128.3,260.3 L130.3,259.7 L132.4,259.0 L134.4,258.2 L136.4,257.4 L138.4,256.6 L140.5,255.7 L142.5,254.7 L144.5,253.7 L146.5,252.7 L148.6,251.6 L150.6,250.4 L152.6,249.2 L154.6,248.0 L156.7,246.7 L158.7,245.3 L160.7,243.9 L162.7,242.4 L164.8,240.9 L166.8,239.4 L168.8,237.7 L170.8,236.1 L172.9,234.4 L174.9,232.6 L176.9,230.8 L178.9,228.9 L181.0,227.0 L183.0,225.0 L185.0,223.0 L187.0,220.9 L189.1,218.8 L191.1,216.6 L193.1,214.4 L195.1,212.1 L197.2,209.8 L199.2,207.4 L201.2,204.9 L203.2,202.4 L205.3,199.9 L207.3,197.3 L209.3,194.7 L211.3,192.0 L213.4,189.2 L215.4,186.4 L217.4,183.6 L219.4,180.7 L221.5,177.8 L223.5,174.8 L225.5,171.7 L227.5,168.6 L229.6,165.5 L231.6,162.2 L233.6,159.0 L235.6,155.7 L237.7,152.3 L239.7,148.9 L241.7,145.5 L243.7,141.9 L245.8,138.4 L247.8,134.8 L249.8,131.1 L251.8,127.4 L253.9,123.6 L255.9,119.8 L257.9,115.9 L259.9,112.0 L262.0,108.0 L264.0,104.0" fill="none" stroke="#6A4FC9" stroke-width="2.4" stroke-linejoin="round" />
+<path d="M197.4,209.6 L203.8,201.8" fill="none" stroke="#6A4FC9" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ar)"/>
+<circle cx="104.0" cy="264.0" r="3.5" fill="#1E2B3A"/>
+<circle cx="104.0" cy="104.0" r="3.5" fill="#1E2B3A"/>
+<text x="98.0" y="96.0" font-size="11.5" fill="#1E2B3A" text-anchor="end" >L (0, 1)</text>
+<circle cx="264.0" cy="104.0" r="3.5" fill="#1E2B3A"/>
+<text x="272.0" y="98.0" font-size="11.5" fill="#1E2B3A" text-anchor="start" >M (1, 1)</text>
+<text x="167.2" y="176.8" font-size="12" fill="#0B7C8C" text-anchor="end" >C₃: y = x</text>
+<text x="227.2" y="216.4" font-size="12" fill="#6A4FC9" text-anchor="start" >y = x²</text>
+<text x="184.0" y="96.0" font-size="12" fill="#D2552B" text-anchor="middle" >C₂</text>
+<text x="96.0" y="184.0" font-size="12" fill="#D2552B" text-anchor="end" >C₁</text>
+<text x="200.0" y="342.0" font-size="11.5" fill="#55667D" text-anchor="middle" >(I) 1 − i,  (II) (1 − i)/2,  (III) 4/3 − 7i/6</text>
+</svg>
