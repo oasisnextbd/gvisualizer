@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 529" width="440" height="529" font-family="Helvetica, Arial, sans-serif">
+<title>Values of ln 1, ln(−1) and log i all lie on Re w = 0</title>
+<rect width="440" height="529" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<polygon points="46.0,373.7 394.0,373.7 394.0,205.5 46.0,205.5" fill="#E6F3F5" stroke="none"/>
+<line x1="46.0" y1="289.6" x2="404.0" y2="289.6" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="402.0" y="305.6" font-size="12" fill="#1E2B3A" text-anchor="end" >Re w</text>
+<line x1="220.0" y1="483.0" x2="220.0" y2="35.7" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="226.0" y="43.7" font-size="12" fill="#1E2B3A" text-anchor="start" >Im w</text>
+<text x="215.0" y="303.6" font-size="11" fill="#55667D" text-anchor="end" >O</text>
+<circle cx="220.0" cy="289.6" r="4.5" fill="#0B7C8C"/>
+<text x="210.0" y="281.6" font-size="11.5" fill="#0B7C8C" text-anchor="end" >ln 1: 0</text>
+<circle cx="220.0" cy="121.4" r="4.5" fill="#0B7C8C"/>
+<text x="210.0" y="125.4" font-size="11.5" fill="#0B7C8C" text-anchor="end" >2πi</text>
+<circle cx="220.0" cy="457.8" r="4.5" fill="#0B7C8C"/>
+<text x="210.0" y="461.8" font-size="11.5" fill="#0B7C8C" text-anchor="end" >−2πi</text>
+<circle cx="220.0" cy="205.5" r="5" fill="#D2552B" stroke="#D2552B" stroke-width="2"/>
+<text x="230.0" y="209.5" font-size="11.5" fill="#D2552B" text-anchor="start" >ln(−1): πi</text>
+<circle cx="220.0" cy="373.7" r="5" fill="#D2552B" stroke="#D2552B" stroke-width="2"/>
+<text x="230.0" y="377.7" font-size="11.5" fill="#D2552B" text-anchor="start" >−πi</text>
+<circle cx="220.0" cy="247.5" r="5" fill="#6A4FC9" stroke="#6A4FC9" stroke-width="2"/>
+<text x="230.0" y="251.5" font-size="11.5" fill="#6A4FC9" text-anchor="start" >Log i = πi/2</text>
+<circle cx="220.0" cy="79.3" r="5" fill="#6A4FC9" stroke="#6A4FC9" stroke-width="2"/>
+<text x="230.0" y="83.3" font-size="11.5" fill="#6A4FC9" text-anchor="start" >5πi/2</text>
+<circle cx="220.0" cy="415.7" r="5" fill="#6A4FC9" stroke="#6A4FC9" stroke-width="2"/>
+<text x="230.0" y="419.7" font-size="11.5" fill="#6A4FC9" text-anchor="start" >−3πi/2</text>
+<text x="220.0" y="503.0" font-size="11.5" fill="#55667D" text-anchor="middle" >teal: ln 1 = 2nπi; orange: ln(−1) = (2n + 1)πi; violet: log i = (2n + ½)πi</text>
+<text x="220.0" y="520.0" font-size="11.5" fill="#55667D" text-anchor="middle" >shaded: principal strip −π &lt; Im w ≤ π (principal values)</text>
+</svg>

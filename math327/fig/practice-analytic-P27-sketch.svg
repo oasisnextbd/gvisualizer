@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 367" width="460" height="367" font-family="Helvetica, Arial, sans-serif">
+<title>sin z = cosh 4: z = π/2 + 2nπ ± 4i</title>
+<rect width="460" height="367" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<line x1="46.0" y1="185.8" x2="424.0" y2="185.8" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="422.0" y="201.8" font-size="12" fill="#1E2B3A" text-anchor="end" >Re z</text>
+<line x1="183.7" y1="321.0" x2="183.7" y2="35.6" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="189.7" y="43.6" font-size="12" fill="#1E2B3A" text-anchor="start" >Im z</text>
+<text x="178.7" y="199.8" font-size="11" fill="#55667D" text-anchor="end" >O</text>
+<circle cx="65.7" cy="85.7" r="5" fill="#D2552B" stroke="#D2552B" stroke-width="2"/>
+<circle cx="65.7" cy="286.0" r="5" fill="#D2552B" stroke="#D2552B" stroke-width="2"/>
+<path d="M65.7,311.0 L65.7,60.6" fill="none" stroke="#55667D" stroke-width="0.8" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<circle cx="223.0" cy="85.7" r="5" fill="#D2552B" stroke="#D2552B" stroke-width="2"/>
+<circle cx="223.0" cy="286.0" r="5" fill="#D2552B" stroke="#D2552B" stroke-width="2"/>
+<path d="M223.0,311.0 L223.0,60.6" fill="none" stroke="#55667D" stroke-width="0.8" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<circle cx="380.3" cy="85.7" r="5" fill="#D2552B" stroke="#D2552B" stroke-width="2"/>
+<circle cx="380.3" cy="286.0" r="5" fill="#D2552B" stroke="#D2552B" stroke-width="2"/>
+<path d="M380.3,311.0 L380.3,60.6" fill="none" stroke="#55667D" stroke-width="0.8" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<text x="231.0" y="79.7" font-size="11.5" fill="#D2552B" text-anchor="start" >π/2 + 4i</text>
+<text x="231.0" y="300.0" font-size="11.5" fill="#D2552B" text-anchor="start" >π/2 − 4i</text>
+<text x="388.3" y="79.7" font-size="11.5" fill="#D2552B" text-anchor="start" >5π/2 + 4i</text>
+<text x="230.0" y="341.0" font-size="11.5" fill="#55667D" text-anchor="middle" >cos x sinh y = 0 and sin x cosh y = cosh 4 &gt; 1 force cos x = 0, sin x = 1</text>
+<text x="230.0" y="358.0" font-size="11.5" fill="#55667D" text-anchor="middle" >so x = π/2 + 2nπ (dotted lines) and cosh y = cosh 4, y = ±4</text>
+</svg>

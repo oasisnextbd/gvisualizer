@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 429" width="440" height="429" font-family="Helvetica, Arial, sans-serif">
+<title>tanh z: zeros nπi (filled) and singular points (n + ½)πi (hollow)</title>
+<rect width="440" height="429" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<line x1="46.0" y1="228.1" x2="404.0" y2="228.1" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="402.0" y="244.1" font-size="12" fill="#1E2B3A" text-anchor="end" >Re z</text>
+<line x1="220.0" y1="383.0" x2="220.0" y2="35.9" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="226.0" y="43.9" font-size="12" fill="#1E2B3A" text-anchor="start" >Im z</text>
+<text x="215.0" y="242.1" font-size="11" fill="#55667D" text-anchor="end" >O</text>
+<circle cx="220.0" cy="319.2" r="4.5" fill="#0B7C8C"/>
+<text x="230.0" y="323.2" font-size="11.5" fill="#0B7C8C" text-anchor="start" >−πi</text>
+<circle cx="220.0" cy="228.1" r="4.5" fill="#0B7C8C"/>
+<text x="230.0" y="244.1" font-size="11.5" fill="#0B7C8C" text-anchor="start" >0</text>
+<circle cx="220.0" cy="137.0" r="4.5" fill="#0B7C8C"/>
+<text x="230.0" y="141.0" font-size="11.5" fill="#0B7C8C" text-anchor="start" >πi</text>
+<circle cx="220.0" cy="364.8" r="5" fill="#fff" stroke="#D2552B" stroke-width="2"/>
+<text x="210.0" y="368.8" font-size="11.5" fill="#D2552B" text-anchor="end" >−3πi/2</text>
+<circle cx="220.0" cy="273.7" r="5" fill="#fff" stroke="#D2552B" stroke-width="2"/>
+<text x="210.0" y="277.7" font-size="11.5" fill="#D2552B" text-anchor="end" >−πi/2</text>
+<circle cx="220.0" cy="182.6" r="5" fill="#fff" stroke="#D2552B" stroke-width="2"/>
+<text x="210.0" y="186.6" font-size="11.5" fill="#D2552B" text-anchor="end" >πi/2</text>
+<circle cx="220.0" cy="91.5" r="5" fill="#fff" stroke="#D2552B" stroke-width="2"/>
+<text x="210.0" y="95.5" font-size="11.5" fill="#D2552B" text-anchor="end" >3πi/2</text>
+<text x="220.0" y="403.0" font-size="11.5" fill="#55667D" text-anchor="middle" >zeros of sinh z: nπi; zeros of cosh z: (n + ½)πi</text>
+<text x="220.0" y="420.0" font-size="11.5" fill="#55667D" text-anchor="middle" >tanh z = sinh z/cosh z is analytic except at the hollow points</text>
+</svg>
