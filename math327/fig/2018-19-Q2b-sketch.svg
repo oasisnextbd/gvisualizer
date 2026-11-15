@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 420" width="310" height="420" font-family="Helvetica, Arial, sans-serif">
+<title>Path (0, 3) → (2, 3) → (2, 4), and the straight line for comparison</title>
+<rect width="310" height="420" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<line x1="45.7" y1="337.6" x2="274.3" y2="337.6" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="272.3" y="353.6" font-size="12" fill="#1E2B3A" text-anchor="end" >x</text>
+<line x1="82.1" y1="374.0" x2="82.1" y2="36.0" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="88.1" y="44.0" font-size="12" fill="#1E2B3A" text-anchor="start" >y</text>
+<text x="77.1" y="351.6" font-size="11" fill="#55667D" text-anchor="end" >O</text>
+<path d="M82.1,155.3 L203.6,155.3" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round" />
+<path d="M136.9,155.3 L146.9,155.3" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arc)"/>
+<path d="M203.6,155.3 L203.6,94.6" fill="none" stroke="#D2552B" stroke-width="2.4" stroke-linejoin="round" />
+<path d="M203.6,131.0 L203.6,121.0" fill="none" stroke="#D2552B" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arh)"/>
+<path d="M82.1,155.3 L203.6,94.6" fill="none" stroke="#55667D" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<path d="M137.5,127.6 L146.4,123.2" fill="none" stroke="#55667D" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ar)"/>
+<circle cx="82.1" cy="155.3" r="3.5" fill="#1E2B3A"/>
+<text x="76.1" y="147.3" font-size="11.5" fill="#1E2B3A" text-anchor="end" >(0, 3)</text>
+<circle cx="203.6" cy="155.3" r="3.5" fill="#1E2B3A"/>
+<text x="211.6" y="169.3" font-size="11.5" fill="#1E2B3A" text-anchor="start" >(2, 3)</text>
+<circle cx="203.6" cy="94.6" r="3.5" fill="#1E2B3A"/>
+<text x="211.6" y="90.6" font-size="11.5" fill="#1E2B3A" text-anchor="start" >(2, 4)</text>
+<text x="142.9" y="173.3" font-size="11.5" fill="#0B7C8C" text-anchor="middle" >y = 3: 44/3</text>
+<text x="211.6" y="129.0" font-size="11.5" fill="#D2552B" text-anchor="start" >x = 2: 5/2</text>
+<text x="85.1" y="67.3" font-size="11" fill="#55667D" text-anchor="start" >dashed straight line: 97/6</text>
+</svg>

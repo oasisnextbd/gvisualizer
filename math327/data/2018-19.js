@@ -34,6 +34,8 @@ $$x^2 + y^2 - 1 = 0 \;\Rightarrow\; x^2 + y^2 = 1, \quad\text{i.e. } |z| = 1$$
 $$w = \ln z = \ln r + i\theta \;\Rightarrow\; u(r, \theta) = \ln r, \quad v(r, \theta) = \theta$$
    (Other branches add $2k\pi i$.)
 
+![Domain of analyticity of ln z: the plane minus the origin and the branch cut θ = π](fig/2018-19-Q1b-sketch.svg)
+
 2. **Polar Cauchy–Riemann equations:** $u_r = \dfrac1rv_\theta$, $v_r = -\dfrac1ru_\theta$.
 $$u_r = \frac1r, \quad u_\theta = 0, \quad v_r = 0, \quad v_\theta = 1$$
 $$u_r = \frac1r = \frac1r v_\theta\ ✓, \qquad v_r = 0 = -\frac1ru_\theta\ ✓$$
@@ -79,6 +81,8 @@ $$\left(u - \tfrac12\right)^2 + \left(v - \tfrac12\right)^2 = \tfrac12$$
 $$v_x = 2 - 2y, \quad v_{xx} = 0, \qquad v_y = -2x, \quad v_{yy} = 0 \;\Rightarrow\; v_{xx} + v_{yy} = 0$$
    v is harmonic.
 
+![Families u = const and v = const of f(z) = −z² + 2iz: orthogonal hyperbolas centred at z = i](fig/2018-19-Q2a-sketch.svg)
+
 2. **Find u from the CR equations** ($u_x = v_y$, $u_y = -v_x$). From $u_x = v_y = -2x$:
 $$u = -x^2 + g(y)$$
    Then $u_y = g'(y) = -v_x = -(2 - 2y) = 2y - 2$, so $g(y) = y^2 - 2y + c$.
@@ -99,6 +103,8 @@ $$\boxed{f(z) = -z^2 + 2iz + c}\quad(c\ \text{real})$$
 
 1. **Segment 1:** y = 3 (dy = 0), x from 0 to 2:
 $$\int_0^2(6 + x^2)\,dx = 12 + \frac83 = \frac{44}{3}$$
+
+![Draw the broken path (0, 3) → (2, 3) → (2, 4); the dashed straight line gives a different value (path dependence)](fig/2018-19-Q2b-sketch.svg)
 
 2. **Segment 2:** x = 2 (dx = 0), y from 3 to 4:
 $$\int_3^4(6 - y)\,dy = \left[6y - \frac{y^2}{2}\right]_3^4 = 16 - 13.5 = \frac52$$
@@ -141,6 +147,8 @@ $$\oint_C\frac{e^{3z}}{(z - i)^4}dz = \frac{2\pi i}{3!}\cdot27e^{3i} = 9\pi ie^{
           solution: String.raw`1. **Centre a = 1 − 3i.** Put u = z − a = z − 1 + 3i. Then
 $$z + 3 = u + (a + 3) = u + (4 - 3i), \qquad |4 - 3i| = 5$$
    The only singularity, z = −3, is at distance 5 from a. So the region |u| > 5 is the exterior annulus.
+
+![Shade the exterior of the circle of radius 5 about 1 − 3i; the singularity −3 lies on that circle (distance |4 − 3i| = 5)](fig/2018-19-Q3b-sketch.svg)
 
 2. **Factor out u** (valid since |(4 − 3i)/u| < 1 for |u| > 5):
 $$f = \frac{1}{u\left(1 + \frac{4 - 3i}{u}\right)} = \frac1u\sum_{n=0}^\infty(-1)^n\left(\frac{4 - 3i}{u}\right)^n$$
@@ -190,6 +198,8 @@ $$\oint = 2\pi i\left(\frac18 + \frac{1}{32}\right) = \frac{5\pi i}{16}$$
 $$I = \mathrm{Re}\int_0^{2\pi}\frac{e^{3i\theta}}{5 - 4\cos\theta}d\theta$$
    Put $z = e^{i\theta}$ (unit circle C), $\cos\theta = \frac{z + z^{-1}}{2}$, $d\theta = \frac{dz}{iz}$:
 $$\int_0^{2\pi}\frac{e^{3i\theta}}{5 - 4\cos\theta}d\theta = \oint_C\frac{z^3}{5 - 2(z + z^{-1})}\cdot\frac{dz}{iz} = \oint_C\frac{z^3\,dz}{i(5z - 2z^2 - 2)} = \oint_C\frac{-z^3\,dz}{i(2z - 1)(z - 2)}$$
+
+![Unit circle with the simple pole z = ½ inside and z = 2 outside](fig/2018-19-Q4b-sketch.svg)
 
 2. **Poles:** $2z^2 - 5z + 2 = (2z - 1)(z - 2)$, so z = ½ (inside C) and z = 2 (outside).
 
