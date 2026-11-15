@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 438" width="440" height="438" font-family="Helvetica, Arial, sans-serif">
+<title>Roots ±1 ± i of z⁴ + 4 on |z| = √2</title>
+<rect width="440" height="438" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker></defs>
+<line x1="40.0" y1="380.0" x2="40.0" y2="20.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="130.0" y1="380.0" x2="130.0" y2="20.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="220.0" y1="380.0" x2="220.0" y2="20.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="310.0" y1="380.0" x2="310.0" y2="20.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="400.0" y1="380.0" x2="400.0" y2="20.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="40.0" y1="380.0" x2="400.0" y2="380.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="40.0" y1="290.0" x2="400.0" y2="290.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="40.0" y1="200.0" x2="400.0" y2="200.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="40.0" y1="110.0" x2="400.0" y2="110.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="40.0" y1="20.0" x2="400.0" y2="20.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="40.0" y1="200.0" x2="400.0" y2="200.0" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="398.0" y="193.0" font-size="12.5" fill="#1E2B3A" text-anchor="end">Re z</text>
+<line x1="220.0" y1="380.0" x2="220.0" y2="20.0" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="227.0" y="32.0" font-size="12.5" fill="#1E2B3A" text-anchor="start">Im z</text>
+<text x="40.0" y="214.0" font-size="10.5" fill="#55667D" text-anchor="middle">−2</text>
+<text x="130.0" y="214.0" font-size="10.5" fill="#55667D" text-anchor="middle">−1</text>
+<text x="310.0" y="214.0" font-size="10.5" fill="#55667D" text-anchor="middle">1</text>
+<text x="215.0" y="384.0" font-size="10.5" fill="#55667D" text-anchor="end">−2</text>
+<text x="215.0" y="294.0" font-size="10.5" fill="#55667D" text-anchor="end">−1</text>
+<text x="215.0" y="114.0" font-size="10.5" fill="#55667D" text-anchor="end">1</text>
+<path d="M347.3,200.0 L347.2,196.7 L347.1,193.3 L346.9,190.0 L346.6,186.6 L346.2,183.3 L345.7,180.0 L345.1,176.7 L344.5,173.4 L343.7,170.2 L342.9,166.9 L342.0,163.7 L341.0,160.5 L339.9,157.3 L338.8,154.2 L337.5,151.1 L336.2,148.0 L334.8,145.0 L333.3,142.0 L331.7,139.0 L330.1,136.1 L328.4,133.2 L326.6,130.4 L324.7,127.6 L322.8,124.9 L320.8,122.2 L318.7,119.6 L316.5,117.1 L314.3,114.5 L312.0,112.1 L309.7,109.7 L307.3,107.4 L304.8,105.1 L302.3,102.9 L299.7,100.8 L297.1,98.7 L294.4,96.7 L291.7,94.8 L288.9,93.0 L286.0,91.2 L283.2,89.5 L280.2,87.9 L277.3,86.3 L274.3,84.9 L271.2,83.5 L268.1,82.2 L265.0,80.9 L261.9,79.8 L258.7,78.7 L255.5,77.8 L252.3,76.9 L249.0,76.1 L245.8,75.4 L242.5,74.7 L239.2,74.2 L235.9,73.7 L232.5,73.3 L229.2,73.1 L225.9,72.9 L222.5,72.7 L219.2,72.7 L215.8,72.8 L212.5,72.9 L209.1,73.2 L205.8,73.5 L202.5,73.9 L199.2,74.4 L195.9,75.0 L192.6,75.7 L189.4,76.5 L186.1,77.3 L182.9,78.2 L179.7,79.3 L176.6,80.4 L173.4,81.5 L170.3,82.8 L167.3,84.2 L164.2,85.6 L161.2,87.1 L158.3,88.7 L155.4,90.3 L152.5,92.1 L149.7,93.9 L147.0,95.8 L144.2,97.7 L141.6,99.7 L139.0,101.8 L136.4,104.0 L133.9,106.2 L131.5,108.5 L129.1,110.9 L126.8,113.3 L124.6,115.8 L122.4,118.3 L120.3,120.9 L118.2,123.6 L116.2,126.3 L114.3,129.0 L112.5,131.8 L110.8,134.7 L109.1,137.6 L107.5,140.5 L106.0,143.5 L104.5,146.5 L103.1,149.6 L101.9,152.6 L100.7,155.8 L99.5,158.9 L98.5,162.1 L97.5,165.3 L96.7,168.5 L95.9,171.8 L95.2,175.1 L94.6,178.4 L94.0,181.7 L93.6,185.0 L93.3,188.3 L93.0,191.6 L92.8,195.0 L92.7,198.3 L92.7,201.7 L92.8,205.0 L93.0,208.4 L93.3,211.7 L93.6,215.0 L94.0,218.3 L94.6,221.6 L95.2,224.9 L95.9,228.2 L96.7,231.5 L97.5,234.7 L98.5,237.9 L99.5,241.1 L100.7,244.2 L101.9,247.4 L103.1,250.4 L104.5,253.5 L106.0,256.5 L107.5,259.5 L109.1,262.4 L110.8,265.3 L112.5,268.2 L114.3,271.0 L116.2,273.7 L118.2,276.4 L120.3,279.1 L122.4,281.7 L124.6,284.2 L126.8,286.7 L129.1,289.1 L131.5,291.5 L133.9,293.8 L136.4,296.0 L139.0,298.2 L141.6,300.3 L144.2,302.3 L147.0,304.2 L149.7,306.1 L152.5,307.9 L155.4,309.7 L158.3,311.3 L161.2,312.9 L164.2,314.4 L167.3,315.8 L170.3,317.2 L173.4,318.5 L176.6,319.6 L179.7,320.7 L182.9,321.8 L186.1,322.7 L189.4,323.5 L192.6,324.3 L195.9,325.0 L199.2,325.6 L202.5,326.1 L205.8,326.5 L209.1,326.8 L212.5,327.1 L215.8,327.2 L219.2,327.3 L222.5,327.3 L225.9,327.1 L229.2,326.9 L232.5,326.7 L235.9,326.3 L239.2,325.8 L242.5,325.3 L245.8,324.6 L249.0,323.9 L252.3,323.1 L255.5,322.2 L258.7,321.3 L261.9,320.2 L265.0,319.1 L268.1,317.8 L271.2,316.5 L274.3,315.1 L277.3,313.7 L280.2,312.1 L283.2,310.5 L286.0,308.8 L288.9,307.0 L291.7,305.2 L294.4,303.3 L297.1,301.3 L299.7,299.2 L302.3,297.1 L304.8,294.9 L307.3,292.6 L309.7,290.3 L312.0,287.9 L314.3,285.5 L316.5,282.9 L318.7,280.4 L320.8,277.8 L322.8,275.1 L324.7,272.4 L326.6,269.6 L328.4,266.8 L330.1,263.9 L331.7,261.0 L333.3,258.0 L334.8,255.0 L336.2,252.0 L337.5,248.9 L338.8,245.8 L339.9,242.7 L341.0,239.5 L342.0,236.3 L342.9,233.1 L343.7,229.8 L344.5,226.6 L345.1,223.3 L345.7,220.0 L346.2,216.7 L346.6,213.4 L346.9,210.0 L347.1,206.7 L347.2,203.3 L347.3,200.0" fill="none" stroke="#0B7C8C" stroke-width="1.6" stroke-linejoin="round" stroke-dasharray="6 4"/>
+<line x1="341.6" y1="237.6" x2="359.5" y2="267.5" stroke="#0B7C8C" stroke-width="0.9"/>
+<text x="359.5" y="281.5" font-size="11.5" fill="#0B7C8C" text-anchor="middle">|z| = √2</text>
+<circle cx="310.0" cy="110.0" r="4.6" fill="#D2552B" stroke="#fff" stroke-width="1.2"/>
+<circle cx="130.0" cy="110.0" r="4.6" fill="#D2552B" stroke="#fff" stroke-width="1.2"/>
+<circle cx="130.0" cy="290.0" r="4.6" fill="#D2552B" stroke="#fff" stroke-width="1.2"/>
+<circle cx="310.0" cy="290.0" r="4.6" fill="#D2552B" stroke="#fff" stroke-width="1.2"/>
+<path d="M310.0,110.0 L310.0,290.0" fill="none" stroke="#D2552B" stroke-width="1.6" stroke-linejoin="round" stroke-dasharray="4 3"/>
+<path d="M130.0,110.0 L130.0,290.0" fill="none" stroke="#6A4FC9" stroke-width="1.6" stroke-linejoin="round" stroke-dasharray="4 3"/>
+<text x="317.0" y="104.0" font-size="12" fill="#D2552B" text-anchor="start">1 + i</text>
+<text x="317.0" y="304.0" font-size="12" fill="#D2552B" text-anchor="start">1 − i</text>
+<text x="123.0" y="104.0" font-size="12" fill="#6A4FC9" text-anchor="end">−1 + i</text>
+<text x="123.0" y="304.0" font-size="12" fill="#6A4FC9" text-anchor="end">−1 − i</text>
+<text x="265.0" y="159.5" font-size="11.5" fill="#D2552B" text-anchor="middle">z² − 2z + 2</text>
+<text x="175.0" y="159.5" font-size="11.5" fill="#6A4FC9" text-anchor="middle">z² + 2z + 2</text>
+<text x="220.0" y="402.0" font-size="11.5" fill="#55667D" text-anchor="middle">Plot the four roots on the circle |z| = √2 (a square); join each</text>
+<text x="220.0" y="417.0" font-size="11.5" fill="#55667D" text-anchor="middle">conjugate pair — each pair gives one real quadratic factor.</text>
+</svg>

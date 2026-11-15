@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 390" width="600" height="390" font-family="Helvetica, Arial, sans-serif">
+<title>Upper semicircular contour for ∫ dx/(x⁴ + 1)</title>
+<rect width="600" height="390" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker></defs>
+<line x1="40.0" y1="332.0" x2="40.0" y2="20.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="126.7" y1="332.0" x2="126.7" y2="20.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="213.3" y1="332.0" x2="213.3" y2="20.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="300.0" y1="332.0" x2="300.0" y2="20.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="386.7" y1="332.0" x2="386.7" y2="20.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="473.3" y1="332.0" x2="473.3" y2="20.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="560.0" y1="332.0" x2="560.0" y2="20.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="40.0" y1="297.3" x2="560.0" y2="297.3" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="40.0" y1="210.7" x2="560.0" y2="210.7" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="40.0" y1="124.0" x2="560.0" y2="124.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="40.0" y1="37.3" x2="560.0" y2="37.3" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="40.0" y1="210.7" x2="560.0" y2="210.7" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="558.0" y="203.7" font-size="12.5" fill="#1E2B3A" text-anchor="end">Re z</text>
+<line x1="300.0" y1="332.0" x2="300.0" y2="20.0" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="307.0" y="32.0" font-size="12.5" fill="#1E2B3A" text-anchor="start">Im z</text>
+<text x="40.0" y="224.7" font-size="10.5" fill="#55667D" text-anchor="middle">−3</text>
+<text x="126.7" y="224.7" font-size="10.5" fill="#55667D" text-anchor="middle">−2</text>
+<text x="213.3" y="224.7" font-size="10.5" fill="#55667D" text-anchor="middle">−1</text>
+<text x="386.7" y="224.7" font-size="10.5" fill="#55667D" text-anchor="middle">1</text>
+<text x="473.3" y="224.7" font-size="10.5" fill="#55667D" text-anchor="middle">2</text>
+<text x="295.0" y="301.3" font-size="10.5" fill="#55667D" text-anchor="end">−1</text>
+<text x="295.0" y="128.0" font-size="10.5" fill="#55667D" text-anchor="end">1</text>
+<path d="M161.3,210.7 L438.7,210.7" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M-6,-5 L6,0 L-6,5 z" fill="#0B7C8C" transform="translate(300.0,210.7) rotate(0.0)"/>
+<path d="M438.7,210.7 L438.6,207.9 L438.6,205.2 L438.4,202.5 L438.2,199.7 L438.0,197.0 L437.7,194.3 L437.3,191.5 L436.9,188.8 L436.5,186.1 L436.0,183.4 L435.4,180.8 L434.8,178.1 L434.1,175.4 L433.4,172.8 L432.6,170.2 L431.8,167.6 L430.9,165.0 L430.0,162.4 L429.0,159.8 L428.0,157.3 L426.9,154.8 L425.8,152.3 L424.6,149.8 L423.4,147.3 L422.1,144.9 L420.8,142.5 L419.4,140.2 L418.0,137.8 L416.5,135.5 L415.0,133.2 L413.5,130.9 L411.9,128.7 L410.2,126.5 L408.5,124.4 L406.8,122.2 L405.0,120.1 L403.2,118.1 L401.4,116.1 L399.5,114.1 L397.6,112.1 L395.6,110.2 L393.6,108.4 L391.6,106.5 L389.5,104.7 L387.4,103.0 L385.2,101.3 L383.0,99.6 L380.8,98.0 L378.6,96.4 L376.3,94.9 L374.0,93.4 L371.7,92.0 L369.3,90.6 L366.9,89.2 L364.5,87.9 L362.1,86.7 L359.6,85.5 L357.2,84.3 L354.6,83.2 L352.1,82.2 L349.6,81.2 L347.0,80.2 L344.4,79.3 L341.8,78.5 L339.2,77.7 L336.6,76.9 L333.9,76.2 L331.2,75.6 L328.6,75.0 L325.9,74.4 L323.2,74.0 L320.5,73.5 L317.8,73.1 L315.0,72.8 L312.3,72.5 L309.6,72.3 L306.8,72.2 L304.1,72.1 L301.4,72.0 L298.6,72.0 L295.9,72.1 L293.2,72.2 L290.4,72.3 L287.7,72.5 L285.0,72.8 L282.2,73.1 L279.5,73.5 L276.8,74.0 L274.1,74.4 L271.4,75.0 L268.8,75.6 L266.1,76.2 L263.4,76.9 L260.8,77.7 L258.2,78.5 L255.6,79.3 L253.0,80.2 L250.4,81.2 L247.9,82.2 L245.4,83.2 L242.8,84.3 L240.4,85.5 L237.9,86.7 L235.5,87.9 L233.1,89.2 L230.7,90.6 L228.3,92.0 L226.0,93.4 L223.7,94.9 L221.4,96.4 L219.2,98.0 L217.0,99.6 L214.8,101.3 L212.6,103.0 L210.5,104.7 L208.4,106.5 L206.4,108.4 L204.4,110.2 L202.4,112.1 L200.5,114.1 L198.6,116.1 L196.8,118.1 L195.0,120.1 L193.2,122.2 L191.5,124.4 L189.8,126.5 L188.1,128.7 L186.5,130.9 L185.0,133.2 L183.5,135.5 L182.0,137.8 L180.6,140.2 L179.2,142.5 L177.9,144.9 L176.6,147.3 L175.4,149.8 L174.2,152.3 L173.1,154.8 L172.0,157.3 L171.0,159.8 L170.0,162.4 L169.1,165.0 L168.2,167.6 L167.4,170.2 L166.6,172.8 L165.9,175.4 L165.2,178.1 L164.6,180.8 L164.0,183.4 L163.5,186.1 L163.1,188.8 L162.7,191.5 L162.3,194.3 L162.0,197.0 L161.8,199.7 L161.6,202.5 L161.4,205.2 L161.4,207.9 L161.3,210.7" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M-6,-5 L6,0 L-6,5 z" fill="#0B7C8C" transform="translate(381.9,98.8) rotate(-143.8)"/>
+<text x="161.3" y="226.7" font-size="11.5" fill="#0B7C8C" text-anchor="middle">−R</text>
+<text x="438.7" y="226.7" font-size="11.5" fill="#0B7C8C" text-anchor="middle">R</text>
+<text x="408.3" y="76.3" font-size="12" fill="#0B7C8C" text-anchor="start">Γ: |z| = R</text>
+<circle cx="361.3" cy="149.4" r="4.6" fill="#D2552B" stroke="#fff" stroke-width="1.2"/>
+<circle cx="238.7" cy="149.4" r="4.6" fill="#D2552B" stroke="#fff" stroke-width="1.2"/>
+<circle cx="238.7" cy="271.9" r="4.6" fill="#fff" stroke="#55667D" stroke-width="1.8"/>
+<circle cx="361.3" cy="271.9" r="4.6" fill="#fff" stroke="#55667D" stroke-width="1.8"/>
+<line x1="361.3" y1="149.4" x2="451.7" y2="128.3" stroke="#D2552B" stroke-width="0.9"/>
+<text x="455.7" y="132.3" font-size="11.5" fill="#D2552B" text-anchor="start">e<tspan baseline-shift="super" font-size="70%">iπ/4</tspan>: −(1 + i)/(4√2)</text>
+<line x1="238.7" y1="149.4" x2="148.3" y2="128.3" stroke="#D2552B" stroke-width="0.9"/>
+<text x="144.3" y="132.3" font-size="11.5" fill="#D2552B" text-anchor="end">e<tspan baseline-shift="super" font-size="70%">3iπ/4</tspan>: (1 − i)/(4√2)</text>
+<text x="300.0" y="354.0" font-size="11.5" fill="#55667D" text-anchor="middle">Close [−R, R] by the upper semicircle Γ; only e<tspan baseline-shift="super" font-size="70%">iπ/4</tspan> and e<tspan baseline-shift="super" font-size="70%">3iπ/4</tspan> (filled) are inside; the</text>
+<text x="300.0" y="369.0" font-size="11.5" fill="#55667D" text-anchor="middle">integral over Γ → 0 as R → ∞.</text>
+</svg>

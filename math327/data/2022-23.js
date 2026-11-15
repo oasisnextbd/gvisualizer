@@ -34,7 +34,9 @@ $$|z_1 - z_2| \ge |z_2| - |z_1| = -(|z_1| - |z_2|)$$
 4. **Combine.** $|z_1 - z_2|$ is at least both $(|z_1| - |z_2|)$ and $-(|z_1| - |z_2|)$, hence
 $$\boxed{|z_1 - z_2| \ge \big||z_1| - |z_2|\big|}$$
 
-**Geometric meaning:** in the triangle with vertices 0, $z_1$ and $z_1 + z_2$, no side is longer than the sum of the other two, and no side is shorter than the difference of the other two.`,
+**Geometric meaning:** in the triangle with vertices 0, $z_1$ and $z_1 + z_2$, no side is longer than the sum of the other two, and no side is shorter than the difference of the other two.
+
+![Triangle 0, z₁, z₁ + z₂](fig/2022-23-Q1a-sketch.svg)`,
           answer: String.raw`|z₁ + z₂|² = |z₁|² + |z₂|² + 2Re(z₁z̄₂) ≤ (|z₁| + |z₂|)² since Re(z₁z̄₂) ≤ |z₁||z₂| ⇒ (i). Applying (i) to z₁ = (z₁ − z₂) + z₂ and to z₂ = (z₂ − z₁) + z₁ gives |z₁ − z₂| ≥ ±(|z₁| − |z₂|) ⇒ (ii).` },
         { id: "2022-23-Q1b", label: "(b)", marks: "12",
           topic: "complex-algebra", sub: "Fourth roots of −8 − 8√3 i: rectangular form, sketch, principal root",
@@ -85,6 +87,8 @@ $$z_0 = \sqrt2 e^{i\pi/4} = 1 + i, \quad z_1 = \sqrt2 e^{3i\pi/4} = -1 + i, \qua
 $$(z - (1 + i))(z - (1 - i)) = (z - 1)^2 + 1 = z^2 - 2z + 2$$
 $$(z - (-1 + i))(z - (-1 - i)) = (z + 1)^2 + 1 = z^2 + 2z + 2$$
 
+![Roots and conjugate pairs](fig/2022-23-Q1c-sketch.svg)
+
 4. **Factorization:**
 $$\boxed{z^4 + 4 = (z^2 - 2z + 2)(z^2 + 2z + 2)}$$
    Check: $(z^2 + 2)^2 - (2z)^2 = z^4 + 4z^2 + 4 - 4z^2 = z^4 + 4$ ✓.`,
@@ -109,6 +113,8 @@ $$\nabla^2u = \frac{\partial^2u}{\partial x^2} + \frac{\partial^2u}{\partial y^2
 2. **Cauchy–Riemann equations** (necessary for differentiability):
 $$u_x = 2x,\quad v_y = 0 \;\Rightarrow\; u_x = v_y \text{ only if } x = 0; \qquad u_y = 2y,\quad -v_x = 0 \;\Rightarrow\; u_y = -v_x \text{ only if } y = 0$$
    Both hold only at $x = y = 0$. So f is **not differentiable at any $z \ne 0$**.
+
+![Where the C–R equations hold](fig/2022-23-Q2a-sketch.svg)
 
 3. **At $z = 0$, from the definition:**
 $$f'(0) = \lim_{\Delta z\to0}\frac{|\Delta z|^2 - 0}{\Delta z} = \lim_{\Delta z\to0}\frac{\Delta z\,\overline{\Delta z}}{\Delta z} = \lim_{\Delta z\to0}\overline{\Delta z} = 0$$
@@ -139,6 +145,8 @@ $$\boxed{v(x, y) = 2y - 3x^2y + y^3 + C}$$
 4. **f in terms of z** (Milne–Thomson: put $x = z$, $y = 0$):
 $$f(z) = u(z, 0) + iv(z, 0) = 2z - z^3 + iC$$
    Check: $z^3 = (x + iy)^3 = x^3 - 3xy^2 + i(3x^2y - y^3)$, so $2z - z^3 = (2x - x^3 + 3xy^2) + i(2y - 3x^2y + y^3)$ ✓.
+
+![Orthogonal level curves of u and v](fig/2022-23-Q2b-sketch.svg)
 
 **Result:** $v = 2y - 3x^2y + y^3 + C$, $f(z) = 2z - z^3 + iC$.`,
           answer: String.raw`u_xx + u_yy = −6x + 6x = 0; v = 2y − 3x²y + y³ + C; f(z) = 2z − z³ + iC.` }
@@ -178,6 +186,8 @@ $$f(z_0) = \frac{1}{2\pi i}\oint_C\frac{f(z)}{z - z_0}\,dz, \qquad\text{and}\qqu
 ### Evaluation
 1. **Singular points:** $z^2 - 2z = z(z - 2) = 0$ at $z = 0$ and $z = 2$. Both lie inside $|z| = 3$.
 
+![Contour and singular points](fig/2022-23-Q3b-sketch.svg)
+
 2. **Partial fractions:**
 $$\frac{z + 1}{z(z - 2)} = \frac{A}{z} + \frac{B}{z - 2}, \qquad A = \frac{0 + 1}{0 - 2} = -\frac12, \quad B = \frac{2 + 1}{2} = \frac32$$
 
@@ -203,6 +213,8 @@ $$\oint_{C_1}\frac{(z + 1)/(z - 2)}{z}\,dz = 2\pi i\left[\frac{z + 1}{z - 2}\rig
 $$f(z) = \frac{1}{z(z - 2)} = \frac12\left[\frac{1}{z - 2} - \frac{1}{z}\right]$$
    The term $-1/(2z)$ is already a Laurent term about $z = 0$; only $1/(z - 2)$ must be expanded.
 
+![The two regions of validity](fig/2022-23-Q4a-sketch.svg)
+
 2. **(i) $1 < |z| < 2$:** here $|z/2| < 1$, so expand in powers of $z/2$:
 $$\frac{1}{z - 2} = -\frac12\cdot\frac{1}{1 - z/2} = -\frac12\sum_{n=0}^{\infty}\left(\frac z2\right)^n$$
 $$\boxed{f(z) = -\frac{1}{2z} - \sum_{n=0}^{\infty}\frac{z^n}{2^{n+2}} = -\frac{1}{2z} - \frac14 - \frac z8 - \frac{z^2}{16} - \cdots}$$
@@ -224,6 +236,8 @@ $$\boxed{f(z) = \sum_{n=2}^{\infty}\frac{2^{n-2}}{z^n} = \frac{1}{z^2} + \frac{2
           solution: String.raw`**Residue theorem:** $\oint_Cf(z)\,dz = 2\pi i\sum(\text{residues of } f \text{ at the poles inside } C)$.
 
 1. **Poles:** $z = 1$ and $z = \pm3i$, all simple. $|1| = 1$ and $|\pm3i| = 3$ are less than 4, so all three are inside C.
+
+![Contour and poles](fig/2022-23-Q4b-sketch.svg)
 
 2. **Residue at $z = 1$:**
 $$\mathrm{Res}_{z=1} = \lim_{z\to1}(z - 1)f(z) = \frac{3 + 2}{1 + 9} = \frac12$$
@@ -258,6 +272,8 @@ $$I = \oint_{|z|=1}\frac{-(z^2 - 1)^2}{4z^2}\cdot\frac{-z}{(2z - 1)(z - 2)}\cdot
 
 3. **Poles inside $|z| = 1$:** $z = 0$ (double) and $z = 1/2$ (simple). $z = 2$ is outside.
 
+![Unit circle and poles](fig/2022-23-Q5a-sketch.svg)
+
 4. **Residue at $z = 1/2$:**
 $$\mathrm{Res} = \frac{(1/4 - 1)^2}{4i(1/4)(2)(1/2 - 2)} = \frac{9/16}{4i(-3/4)} = \frac{9/16}{-3i} = \frac{3i}{16}$$
 
@@ -277,6 +293,8 @@ $$I = 2\pi i\left(\frac{3i}{16} - \frac{5i}{16}\right) = 2\pi i\left(-\frac{i}{8
           solution: String.raw`1. **Contour.** Take $f(z) = \dfrac{1}{z^4 + 1}$ and the closed contour C made of the segment $[-R, R]$ of the real axis and the semicircle $\Gamma: |z| = R$ in the upper half-plane, with $R > 1$.
 
 2. **Poles:** $z^4 = -1 = e^{i(\pi + 2k\pi)}$ gives $z = e^{i\pi/4}, e^{3i\pi/4}, e^{5i\pi/4}, e^{7i\pi/4}$. Only $z_1 = e^{i\pi/4}$ and $z_2 = e^{3i\pi/4}$ lie in the upper half-plane, inside C.
+
+![Contour and poles](fig/2022-23-Q5b-sketch.svg)
 
 3. **Residues** (simple poles, $\mathrm{Res} = 1/(4z^3) = z/(4z^4) = -z/4$ since $z^4 = -1$):
 $$\mathrm{Res}_{z_1} = -\frac{e^{i\pi/4}}{4} = -\frac{1 + i}{4\sqrt2}, \qquad \mathrm{Res}_{z_2} = -\frac{e^{3i\pi/4}}{4} = -\frac{-1 + i}{4\sqrt2}$$
