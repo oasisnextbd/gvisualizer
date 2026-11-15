@@ -43,6 +43,8 @@ $$\mathrm{Log}(1 + i) = \ln\sqrt2 + i\frac\pi4 = \tfrac12\ln2 + i\frac\pi4 \appr
 1. **Real and imaginary parts.** Using $\sin(iy) = i\sinh y$ and $\cos(iy) = \cosh y$:
 $$\sin z = \sin(x + iy) = \sin x\cosh y + i\cos x\sinh y$$
 
+![Principal branch of Log z: cut along the negative real axis; z = 1 + i has |z| = √2 and Arg z = π/4](fig/2019-20-Q1b-sketch.svg)
+
 2. **Modulus squared:**
 $$|\sin z|^2 = \sin^2x\cosh^2y + \cos^2x\sinh^2y$$
 
@@ -58,6 +60,8 @@ $$|\sin z|^2 = \sin^2x(1 + \sinh^2y) + \cos^2x\sinh^2y = \sin^2x + (\sin^2x + \c
           solution: String.raw`1. **Guess by substitution:** at $z_0 = 2 + i$, $z_0^2 = 3 + 4i$ and $2iz_0 = -2 + 4i$, so
 $$\frac{z_0^2 - 2iz_0}{z_0^2 + 4} = \frac{3 + 4i + 2 - 4i}{7 + 4i} = \frac{5}{7 + 4i} = \frac{5(7 - 4i)}{65} = \frac{7 - 4i}{13}$$
 
+![Different paths to z₀ = 2 + i give the same limit; the only bad points ±2i are away from z₀](fig/2019-20-Q1c-sketch.svg)
+
 2. **Is the guess correct?** Factor the numerator and denominator:
 $$\frac{z^2 - 2iz}{z^2 + 4} = \frac{z(z - 2i)}{(z - 2i)(z + 2i)} = \frac{z}{z + 2i}, \qquad z \ne 2i$$
    The rational function $\dfrac{z}{z + 2i}$ is continuous wherever $z \ne -2i$, and in particular at $2 + i$. By the limit theorems for sums, products and quotients (the limit of the denominator, $z_0 + 2i = 2 + 3i$, is not zero):
@@ -72,6 +76,8 @@ $$\lim_{z\to2+i}\frac{z^2 - 2iz}{z^2 + 4} = \frac{7 - 4i}{13} \approx 0.538 - 0.
           type: "derivation", syllabus: "in", repeats: [],
           text: String.raw`Find the image of the circle $|z| = r_0$, $r_0 \ne 1$ under the bilinear transformation $T(z) = \dfrac{z - i}{z + i}$. What happens if $r_0 = 1$? Which point will map onto $1 + i$.`,
           solution: String.raw`1. **Inverse map.** From $w = \dfrac{z - i}{z + i}$: $w(z + i) = z - i \Rightarrow z = \dfrac{i(1 + w)}{1 - w}$.
+
+![z-plane circles |z| = ½, 1, 2 and their images under T: circles centred on the u-axis, and the imaginary axis for r₀ = 1; −2 − i ↦ 1 + i](fig/2019-20-Q1d-sketch.svg)
 
 2. **Condition $|z| = r_0$:**
 $$\left|\frac{i(1 + w)}{1 - w}\right| = r_0 \;\Rightarrow\; |w + 1| = r_0|w - 1|$$
@@ -99,6 +105,8 @@ $$z = \frac{i(1 + w)}{1 - w}\bigg|_{w=1+i} = \frac{i(2 + i)}{-i} = -(2 + i) = -2
           solution: String.raw`1. **Polar C–R equations:**
 $$u_r = \frac1r v_\theta, \qquad v_r = -\frac1r u_\theta, \qquad f'(z) = e^{-i\theta}(u_r + iv_r)$$
 
+![Draw the domain: the plane with the positive real axis (θ = 0) and the origin removed](fig/2019-20-Q2a-sketch.svg)
+
 2. **Parts of f:** $u = \sqrt r\cos\dfrac\theta2$, $v = \sqrt r\sin\dfrac\theta2$.
 
 3. **Partial derivatives:**
@@ -118,6 +126,8 @@ $$f'(z) = e^{-i\theta}\cdot\frac{1}{2\sqrt r}\left(\cos\frac\theta2 + i\sin\frac
           solution: String.raw`1. **Derivatives of u:**
 $$u_x = e^{-x}(\sin y - x\sin y + y\cos y), \qquad u_{xx} = e^{-x}(-2\sin y + x\sin y - y\cos y)$$
 $$u_y = e^{-x}(x\cos y - \cos y + y\sin y), \qquad u_{yy} = e^{-x}(-x\sin y + 2\sin y + y\cos y)$$
+
+![Families u = const (teal) and v = const (orange) for f = iz e^{−z}: they cut at right angles](fig/2019-20-Q2b-sketch.svg)
 
 2. **Laplace's equation:**
 $$u_{xx} + u_{yy} = e^{-x}\left[(-2 + 2)\sin y + (x - x)\sin y + (-y + y)\cos y\right] = 0$$
@@ -143,6 +153,8 @@ $$ize^{-z} = i(x + iy)e^{-x}(\cos y - i\sin y) = e^{-x}(x\sin y - y\cos y) + ie^
 1. **Segment 1, $1 + i \to 1 + 8i$:** $x = 1$, $z = 1 + iy$, $dz = i\,dy$, $1 \le y \le 8$:
 $$\int_1^8(1 - iy^2)\,i\,dy = \int_1^8(i + y^2)\,dy = 7i + \frac{8^3 - 1}{3} = \frac{511}{3} + 7i$$
 
+![Draw the two segments with their directions: x = 1 from 1 + i up to 1 + 8i, then y = 8 across to 2 + 8i](fig/2019-20-Q2c-sketch.svg)
+
 2. **Segment 2, $1 + 8i \to 2 + 8i$:** $y = 8$, $z = x + 8i$, $dz = dx$, $1 \le x \le 2$:
 $$\int_1^2(x^2 - 64i)\,dx = \frac{8 - 1}{3} - 64i = \frac73 - 64i$$
 
@@ -160,6 +172,8 @@ $$\int_C(x^2 - iy^2)\,dz = \frac{511}{3} + \frac{7}{3} + (7 - 64)i = \frac{518}{
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`Use Cauchy integral formula to evaluate $\displaystyle\oint_C\frac{z + 1}{z^4 + 2iz^3}\,dz$, where the contour C is the circle $|z| = 1$.`,
           solution: String.raw`1. **Factor:** $z^4 + 2iz^3 = z^3(z + 2i)$. The singular points are $z = 0$ (order 3), inside $|z| = 1$, and $z = -2i$, outside.
+
+![Draw |z| = 1 with the triple pole z = 0 inside and z = −2i outside](fig/2019-20-Q3a-sketch.svg)
 
 2. **Take** $f(z) = \dfrac{z + 1}{z + 2i}$, analytic inside and on C. Cauchy's integral formula for the second derivative:
 $$\oint_C\frac{f(z)}{z^3}\,dz = \frac{2\pi i}{2!}f''(0)$$
@@ -179,6 +193,8 @@ $$\oint_C\frac{z + 1}{z^4 + 2iz^3}dz = \pi i\cdot\frac{2 + i}{4} = \frac{\pi(-1 
           solution: String.raw`1. **Partial fractions:**
 $$f(z) = \frac12\left[\frac{1}{z + 1} - \frac{1}{z + 3}\right]$$
 
+![Shade the annulus 1 < |z| < 3 and the exterior |z| > 3; the singularities −1 and −3 lie on the boundary circles](fig/2019-20-Q3b-sketch.svg)
+
 2. **(i) $1 < |z| < 3$:** $|1/z| < 1$ and $|z/3| < 1$:
 $$\frac{1}{z + 1} = \frac1z\cdot\frac{1}{1 + 1/z} = \sum_{n=0}^\infty\frac{(-1)^n}{z^{n+1}}, \qquad \frac{1}{z + 3} = \frac13\cdot\frac{1}{1 + z/3} = \sum_{n=0}^\infty\frac{(-1)^nz^n}{3^{n+1}}$$
 $$\boxed{f(z) = \frac12\sum_{n=0}^\infty\frac{(-1)^n}{z^{n+1}} - \frac12\sum_{n=0}^\infty\frac{(-1)^nz^n}{3^{n+1}} = \cdots - \frac{1}{2z^2} + \frac{1}{2z} - \frac16 + \frac{z}{18} - \frac{z^2}{54} + \cdots}$$
@@ -193,6 +209,8 @@ $$f(z) = \frac12\sum_{n=0}^\infty\frac{(-1)^n(1 - 3^n)}{z^{n+1}} = \frac{1}{z^2}
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`Evaluate $\displaystyle\oint_C\frac{1}{(z - 1)^2(z - 3)}\,dz$ by Cauchy residue theorem, where the contour C is the circle $|z| = 2$.`,
           solution: String.raw`1. **Poles:** $z = 1$ (double) is inside $|z| = 2$; $z = 3$ is outside.
+
+![Draw |z| = 2 with the double pole z = 1 inside (residue −1/4) and z = 3 outside](fig/2019-20-Q3c-sketch.svg)
 
 2. **Residue at the double pole:**
 $$\mathrm{Res}_{z=1} = \lim_{z\to1}\frac{d}{dz}\left[(z - 1)^2\frac{1}{(z - 1)^2(z - 3)}\right] = \frac{d}{dz}\left(\frac{1}{z - 3}\right)\bigg|_{z=1} = -\frac{1}{(1 - 3)^2} = -\frac14$$
@@ -214,6 +232,8 @@ $$\oint_C\frac{dz}{(z - 1)^2(z - 3)} = 2\pi i\left(-\frac14\right) = -\frac{\pi 
 $$5 - 3\sin\theta = 5 - \frac{3(z^2 - 1)}{2iz} = \frac{-3z^2 + 10iz + 3}{2iz} = -\frac{3z^2 - 10iz - 3}{2iz}$$
    The roots of $3z^2 - 10iz - 3 = 0$ are $z = \dfrac{10i \pm \sqrt{-100 + 36}}{6} = \dfrac{10i \pm 8i}{6}$, i.e. $3i$ and $i/3$, so $3z^2 - 10iz - 3 = 3(z - 3i)(z - i/3)$.
 
+![Unit circle |z| = 1 with the double pole i/3 inside and 3i outside](fig/2019-20-Q4a-sketch.svg)
+
 2. **Integrand:**
 $$\frac{d\theta}{(5 - 3\sin\theta)^2} = \frac{(2iz)^2}{9(z - 3i)^2(z - i/3)^2}\cdot\frac{dz}{iz} = \frac{4iz}{9(z - 3i)^2(z - i/3)^2}\,dz$$
 
@@ -233,6 +253,8 @@ $$\int_0^{2\pi}\frac{d\theta}{(5 - 3\sin\theta)^2} = 2\pi i\left(-\frac{5i}{64}\
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`Evaluate the following integral using the method of contour integration $\displaystyle\int_{-\infty}^{\infty}\frac{dx}{(x^2 + 1)(x^2 + 9)}$.`,
           solution: String.raw`1. **Contour:** $f(z) = \dfrac{1}{(z^2 + 1)(z^2 + 9)}$, closed by the semicircle $\Gamma: |z| = R$ in the upper half-plane ($R > 3$).
+
+![Upper semicircle enclosing the poles i and 3i; −i and −3i are outside](fig/2019-20-Q4b-sketch.svg)
 
 2. **Poles in the upper half-plane:** $z = i$ and $z = 3i$ (simple).
 
