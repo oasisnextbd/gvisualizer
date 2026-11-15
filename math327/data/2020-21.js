@@ -16,6 +16,8 @@ $$|e^{iz}| = |e^{ix - y}| = e^{-y} \le 1$$
 2. **Denominator.** Factor $z^2 + z + 1 = (z - \omega)(z - \bar\omega)$ with $\omega = e^{2\pi i/3} = -\tfrac12 + \tfrac{\sqrt3}{2}i$, $|\omega| = |\bar\omega| = 1$. By the triangle inequality $|z - \omega| \ge |z| - |\omega| = R - 1 > 0$, and the same for $\bar\omega$:
 $$|z^2 + z + 1| = |z - \omega||z - \bar\omega| \ge (R - 1)^2$$
 
+![C_R and the zeros of z² + z + 1](fig/2020-21-Q1a-sketch.svg)
+
 3. **Combine:**
 $$\left|\frac{e^{iz}}{z^2 + z + 1}\right| = \frac{|e^{iz}|}{|z^2 + z + 1|} \le \frac{1}{(R - 1)^2} \qquad\blacksquare$$
 
@@ -46,7 +48,9 @@ $$\cosh y = 5 \;\Rightarrow\; y = \pm\cosh^{-1}5 = \pm\ln\left(5 + \sqrt{24}\rig
 
 4. **Solutions:**
 $$\boxed{z = \frac\pi2 + 2n\pi \pm i\ln\left(5 + 2\sqrt6\right), \qquad n = 0, \pm1, \pm2, \ldots}$$
-   (The same result from $\sin z = 5 \Rightarrow e^{2iz} - 10ie^{iz} - 1 = 0 \Rightarrow e^{iz} = (5 \pm 2\sqrt6)i$.)`,
+   (The same result from $\sin z = 5 \Rightarrow e^{2iz} - 10ie^{iz} - 1 = 0 \Rightarrow e^{iz} = (5 \pm 2\sqrt6)i$.)
+
+![Principal argument and solution lattice](fig/2020-21-Q1b-sketch.svg)`,
           answer: String.raw`(2i)^{1−i} = e^{(1−i)(ln 2 + iπ/2)} = 2e^{π/2}[sin(ln 2) + i cos(ln 2)] ≈ 6.147 + 7.401i. sin z = 5 ⇒ cos x = 0, sin x = 1, cosh y = 5 ⇒ z = π/2 + 2nπ ± i ln(5 + 2√6) (≈ ±2.292i).` },
         { id: "2020-21-Q1c", label: "(c)", marks: "12",
           topic: "analytic", sub: "Where 2x² + y + i(y² − x) and z Im z are differentiable; analyticity",
@@ -68,7 +72,9 @@ Hence discuss the analyticity of these functions.`,
 1. $u = xy$, $v = y^2$: $u_x = y$, $v_y = 2y$, $u_y = x$, $v_x = 0$.
 2. $u_x = v_y \Rightarrow y = 2y \Rightarrow y = 0$; $u_y = -v_x \Rightarrow x = 0$.
 3. Both hold only at **z = 0**, where the partials are continuous, so f is differentiable only at the origin, with $f'(0) = 0$. (Directly: $\frac{f(\Delta z) - f(0)}{\Delta z} = \mathrm{Im}\,\Delta z \to 0$.)
-4. **Analyticity:** differentiable at a single point only, so **nowhere analytic**.`,
+4. **Analyticity:** differentiable at a single point only, so **nowhere analytic**.
+
+![Sets of differentiability](fig/2020-21-Q1c-sketch.svg)`,
           answer: String.raw`(i) u = 2x² + y, v = y² − x: u_y = −v_x always, u_x = v_y ⇔ y = 2x ⇒ differentiable only on the line y = 2x (f′ = 4x − i), nowhere analytic. (ii) z Im z = xy + iy²: C–R need y = 0 and x = 0 ⇒ differentiable only at z = 0 (f′(0) = 0), nowhere analytic.` },
         { id: "2020-21-Q1d", label: "(d)", marks: "11⅓",
           topic: "mapping", sub: "w = z² on the quarter annulus b ≤ |z| ≤ a in the first quadrant; conformality",
@@ -111,6 +117,8 @@ $$u_r = -\frac{e^{-\theta}}{r}\sin(\ln r), \quad u_\theta = -e^{-\theta}\cos(\ln
 $$\frac1r v_\theta = -\frac{e^{-\theta}}{r}\sin(\ln r) = u_r ✓, \qquad -\frac1r u_\theta = \frac{e^{-\theta}}{r}\cos(\ln r) = v_r ✓$$
    All partials are continuous for $r > 0$, $0 < \theta < 2\pi$, so **f is differentiable (analytic) in the domain**.
 
+![Domain of differentiability](fig/2020-21-Q2a-sketch.svg)
+
 5. **Derivative:**
 $$f'(z) = e^{-i\theta}\frac{e^{-\theta}}{r}\left[-\sin(\ln r) + i\cos(\ln r)\right] = e^{-i\theta}\frac{i}{r}\,e^{-\theta}\left[\cos(\ln r) + i\sin(\ln r)\right] = \frac{i}{re^{i\theta}}f(z) = i\frac{f(z)}{z} \qquad\blacksquare$$
    (In fact $f = e^{-\theta}e^{i\ln r} = e^{i(\ln r + i\theta)} = e^{i\log z} = z^i$, and $\frac{d}{dz}z^i = iz^{i-1} = iz^i/z$.)`,
@@ -131,6 +139,8 @@ $$f'(z) = i\left(-\frac{1}{z^2} + \sinh z\right) \;\Rightarrow\; f(z) = \frac{i}
 
 3. **Check:** $\dfrac iz = \dfrac{i(x - iy)}{x^2 + y^2} = \dfrac{y + ix}{x^2 + y^2}$ and $i\cosh z = i(\cosh x\cos y + i\sinh x\sin y) = -\sinh x\sin y + i\cosh x\cos y$. The imaginary part is $\dfrac{x}{x^2 + y^2} + \cosh x\cos y = v$ ✓.
 
+![Orthogonal level curves of u and v](fig/2020-21-Q2b-sketch.svg)
+
 4. **Real part:** $u = \dfrac{y}{x^2 + y^2} - \sinh x\sin y + C$.
 
 **Result:** $f(z) = \dfrac iz + i\cosh z + C$.`,
@@ -140,6 +150,8 @@ $$f'(z) = i\left(-\frac{1}{z^2} + \sinh z\right) \;\Rightarrow\; f(z) = \frac{i}
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`Evaluate $\displaystyle\int_C\frac1z\,dz$ along the curve $x = \cos t$, $y = \sin t$, $0 \le t \le 2\pi$.`,
           solution: String.raw`1. **Parametrize:** $z = \cos t + i\sin t = e^{it}$, $dz = ie^{it}dt$, $0 \le t \le 2\pi$ (the unit circle once, anticlockwise).
+
+![Path and the pole at 0](fig/2020-21-Q2c-sketch.svg)
 
 2. **Integral:**
 $$\int_C\frac{dz}{z} = \int_0^{2\pi}\frac{ie^{it}}{e^{it}}\,dt = i\int_0^{2\pi}dt = 2\pi i$$
@@ -167,6 +179,8 @@ $$\oint_C\frac{f(z)}{z^2}dz = 2\pi i\,f'(0), \qquad f'(z) = \frac{(z - 1 - i) - 
 $$f'(0) = \frac{-3 - i}{(1 + i)^2} = \frac{-3 - i}{2i} = \frac{-1 + 3i}{2}$$
 3. **Value:** $2\pi i\cdot\dfrac{-1 + 3i}{2} = \pi i(-1 + 3i) = -3\pi - \pi i$.
 
+![The two contours](fig/2020-21-Q3a-sketch.svg)
+
 ### (ii) $|z - 1 - i| = 1$
 1. The circle has centre $1 + i$ and radius 1: $z = 1 + i$ is inside; $z = 0$ is at distance $\sqrt2 > 1$, outside.
 2. **Take** $g(z) = \dfrac{z + 2}{z^2}$ and use the n = 0 formula:
@@ -180,6 +194,8 @@ $$\oint_C\frac{g(z)}{z - (1 + i)}dz = 2\pi i\,g(1 + i) = 2\pi i\cdot\frac{3 + i}
           text: String.raw`Expand $f(z) = \dfrac{1}{z(z - 1)}$ in a Laurent series valid for $1 < |z - 2| < 2$.`,
           solution: String.raw`1. **Partial fractions and centre z = 2.** Put $u = z - 2$:
 $$f(z) = \frac{1}{z - 1} - \frac1z = \frac{1}{u + 1} - \frac{1}{u + 2}$$
+
+![Region of validity](fig/2020-21-Q3b-sketch.svg)
 
 2. **$\frac{1}{u + 1}$ with $|u| > 1$:**
 $$\frac{1}{u + 1} = \frac1u\cdot\frac{1}{1 + 1/u} = \sum_{n=0}^\infty\frac{(-1)^n}{u^{n+1}}$$
@@ -198,6 +214,8 @@ $$= \cdots - \frac{1}{(z - 2)^2} + \frac{1}{z - 2} - \frac12 + \frac{z - 2}{4} -
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`Evaluate $\displaystyle\oint_C\frac{e^z}{(z^2 + \pi^2)^2}\,dz$ by Cauchy's residue theorem, where the contour C is the circle $|z| = 4$.`,
           solution: String.raw`1. **Poles:** $z^2 + \pi^2 = 0$ gives $z = \pm i\pi$, each a pole of order 2. Since $\pi < 4$, both are inside C.
+
+![Contour and double poles](fig/2020-21-Q3c-sketch.svg)
 
 2. **Residue at $z = i\pi$** (order 2):
 $$\mathrm{Res} = \frac{d}{dz}\left[\frac{e^z}{(z + i\pi)^2}\right]_{z=i\pi} = \left[\frac{e^z(z + i\pi - 2)}{(z + i\pi)^3}\right]_{z=i\pi} = \frac{e^{i\pi}(2i\pi - 2)}{(2i\pi)^3} = \frac{-(2i\pi - 2)}{-8i\pi^3} = \frac{i\pi - 1}{4i\pi^3}$$
