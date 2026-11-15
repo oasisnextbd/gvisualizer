@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 411" width="340" height="411" font-family="Helvetica, Arial, sans-serif">
+<title>w = 1/z maps the strip onto the lower half plane minus a disc</title>
+<rect width="340" height="411" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<g transform="translate(0.0,0)">
+<polygon points="30.0,94.7 310.0,94.7 310.0,71.3 30.0,71.3" fill="#E6F3F5" stroke="none"/>
+<line x1="30.0" y1="94.7" x2="320.0" y2="94.7" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="318.0" y="110.7" font-size="12" fill="#1E2B3A" text-anchor="end" >Re z</text>
+<line x1="170.0" y1="132.0" x2="170.0" y2="19.3" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="176.0" y="27.3" font-size="12" fill="#1E2B3A" text-anchor="start" >Im z</text>
+<path d="M30.0,71.3 L310.0,71.3" fill="none" stroke="#D2552B" stroke-width="2.4" stroke-linejoin="round" />
+<path d="M30.0,94.7 L310.0,94.7" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round" />
+<text x="67.3" y="65.3" font-size="11.5" fill="#D2552B" text-anchor="start" >y = 1/(2c)</text>
+<text x="170.0" y="152.0" font-size="11.5" fill="#55667D" text-anchor="middle" >strip (shown for c = 1)</text>
+</g>
+<g transform="translate(0.0,168)">
+<polygon points="30.0,213.0 310.0,213.0 310.0,62.2 30.0,62.2" fill="#E6F3F5" stroke="none"/>
+<line x1="30.0" y1="62.2" x2="320.0" y2="62.2" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="318.0" y="78.2" font-size="12" fill="#1E2B3A" text-anchor="end" >Re w</text>
+<line x1="170.0" y1="213.0" x2="170.0" y2="19.9" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="176.0" y="27.9" font-size="12" fill="#1E2B3A" text-anchor="start" >Im w</text>
+<circle cx="170.0" cy="116.1" r="53.8" fill="#fff" stroke="#D2552B" stroke-width="2.4"/>
+<path d="M30.0,62.2 L310.0,62.2" fill="none" stroke="#0B7C8C" stroke-width="2.4" stroke-linejoin="round" />
+<circle cx="170.0" cy="116.1" r="2.5" fill="#55667D"/>
+<text x="176.0" y="120.1" font-size="11.5" fill="#55667D" text-anchor="start" >−ci</text>
+<text x="245.4" y="180.7" font-size="11.5" fill="#1E2B3A" text-anchor="middle" >u² + (v + c)² &gt; c²</text>
+<text x="170.0" y="233.0" font-size="11.5" fill="#55667D" text-anchor="middle" >outside the circle, below the u axis</text>
+</g>
+</svg>

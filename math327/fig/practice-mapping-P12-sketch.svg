@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 528" width="340" height="528" font-family="Helvetica, Arial, sans-serif">
+<title>Fixed points f(z) = z</title>
+<rect width="340" height="528" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<g transform="translate(20.0,0)">
+<line x1="35.0" y1="145.0" x2="275.0" y2="145.0" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="273.0" y="161.0" font-size="12" fill="#1E2B3A" text-anchor="end" >Re z</text>
+<line x1="150.0" y1="260.0" x2="150.0" y2="20.0" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="156.0" y="28.0" font-size="12" fill="#1E2B3A" text-anchor="start" >Im z</text>
+<circle cx="150.0" cy="73.1" r="4.5" fill="#D2552B"/>
+<text x="158.0" y="67.1" font-size="11.5" fill="#D2552B" text-anchor="start" >i</text>
+<circle cx="150.0" cy="216.9" r="4.5" fill="#D2552B"/>
+<text x="158.0" y="228.9" font-size="11.5" fill="#D2552B" text-anchor="start" >−i</text>
+<circle cx="78.1" cy="145.0" r="5" fill="#fff" stroke="#55667D" stroke-width="2"/>
+<text x="78.1" y="135.0" font-size="11.5" fill="#55667D" text-anchor="middle" >−1 ↦ ∞</text>
+<text x="150.0" y="280.0" font-size="11.5" fill="#55667D" text-anchor="middle" >(a) two fixed points z = ±i</text>
+</g>
+<g transform="translate(0.0,296)">
+<line x1="30.0" y1="115.8" x2="320.0" y2="115.8" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="318.0" y="131.8" font-size="12" fill="#1E2B3A" text-anchor="end" >Re z</text>
+<line x1="83.8" y1="202.0" x2="83.8" y2="19.7" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="89.8" y="27.7" font-size="12" fill="#1E2B3A" text-anchor="start" >Im z</text>
+<circle cx="245.4" cy="115.8" r="4.5" fill="#D2552B"/>
+<text x="245.4" y="105.8" font-size="11.5" fill="#D2552B" text-anchor="middle" >3 (double)</text>
+<circle cx="83.8" cy="115.8" r="5" fill="#fff" stroke="#55667D" stroke-width="2"/>
+<text x="91.8" y="129.8" font-size="11.5" fill="#55667D" text-anchor="start" >0 ↦ ∞</text>
+<text x="170.0" y="222.0" font-size="11.5" fill="#55667D" text-anchor="middle" >(b) one (double) fixed point z = 3</text>
+</g>
+</svg>
