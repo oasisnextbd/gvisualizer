@@ -55,6 +55,8 @@ $$x^2 + y^2 + 3(x^2 - y^2) \le 4 \;\Rightarrow\; 4x^2 - 2y^2 \le 4 \;\Rightarrow
 $$f(z) = \begin{cases}\dfrac{(\bar z)^2}{z}, & z \ne 0\\[4pt] 0, & z = 0\end{cases}$$`,
           solution: String.raw`1. **Continuity at 0.** For z ≠ 0, $|f(z)| = \dfrac{|\bar z|^2}{|z|} = \dfrac{|z|^2}{|z|} = |z| \to 0$ as z → 0. Hence $\lim_{z \to 0}f(z) = 0 = f(0)$: **f is continuous at z = 0**.
 
+![Approach z = 0 along different rays: the difference quotient e^{−4iθ} takes different values](fig/2013-14-Q1c-sketch.svg)
+
 2. **Differentiability at 0.** The difference quotient is
 $$\frac{f(z) - f(0)}{z - 0} = \frac{(\bar z)^2}{z^2}$$
    Along the path $z = re^{i\theta}$ (fixed θ, r → 0) this equals $e^{-4i\theta}$:
@@ -79,6 +81,8 @@ $$u_x = \lim_{h\to0}\frac{u(h, 0)}{h} = 1, \quad u_y = \lim_{k\to0}\frac{u(0, k)
 
 1. **First derivatives:**
 $$u_x = 2x + \frac{(x^2 + y^2) - 2x^2}{(x^2 + y^2)^2} = 2x + \frac{y^2 - x^2}{(x^2 + y^2)^2}, \qquad u_y = -2y - \frac{2xy}{(x^2 + y^2)^2}$$
+
+![Families u = const and v = const of f(z) = z² + 1/z (z ≠ 0) cut at right angles](fig/2013-14-Q1d-sketch.svg)
 
 2. **Second derivatives:**
 $$u_{xx} = 2 + \frac{2x^3 - 6xy^2}{(x^2 + y^2)^3}, \qquad u_{yy} = -2 - \frac{2x^3 - 6xy^2}{(x^2 + y^2)^3}$$
@@ -108,6 +112,8 @@ $$f'(z) = 2z + \frac{-z^2}{z^4} = 2z - \frac{1}{z^2} \;\Rightarrow\; f(z) = z^2 
           solution: String.raw`1. **Expand** with z = x + iy:
 $$\cosh z = \cosh x\cos y + i\sinh x\sin y = -2$$
 
+![Plot the solution lattice: x = ±ln(2 + √3) ≈ ±1.317 on each line y = (2k + 1)π](fig/2013-14-Q2a-sketch.svg)
+
 2. **Equate parts:**
 $$\cosh x\cos y = -2 \quad(1), \qquad \sinh x\sin y = 0 \quad(2)$$
 
@@ -132,6 +138,8 @@ $$z = \pm\ln(2 + \sqrt3) + (2k + 1)\pi i, \qquad k = 0, \pm1, \pm2, \ldots$$
 
 1. **Right side.** $|-1 + i\sqrt3| = 2$ and $\mathrm{Arg}(-1 + i\sqrt3) = \pi - \pi/3 = 2\pi/3$:
 $$\mathrm{Log}(-1 + i\sqrt3) = \ln2 + \frac{2\pi i}{3} \;\Rightarrow\; 2\,\mathrm{Log}(-1 + i\sqrt3) = 2\ln2 + \frac{4\pi i}{3}$$
+
+![Arg z = 2π/3 but Arg z² = −2π/3: doubling the angle leaves (−π, π], so Log z² ≠ 2 Log z](fig/2013-14-Q2b-sketch.svg)
 
 2. **Left side.** $(-1 + i\sqrt3)^2 = 1 - 2\sqrt3i - 3 = -2 - 2\sqrt3i$, with modulus 4 and principal argument $-\pi + \pi/3 = -2\pi/3$:
 $$\mathrm{Log}(-1 + i\sqrt3)^2 = \ln4 - \frac{2\pi i}{3} = 2\ln2 - \frac{2\pi i}{3}$$
@@ -174,6 +182,8 @@ $$3 \le u + v \le 9, \qquad -3 \le v - u \le 9$$
 1. **Part C₁ (−1 ≤ x ≤ 0, f = 1):**
 $$\int_{C_1}1\,dz = z\Big|_{-1-i}^{0} = 0 - (-1 - i) = 1 + i$$
 
+![Sketch y = x³ from −1 − i to 1 + i, split at the origin where f changes formula](fig/2013-14-Q2d-sketch.svg)
+
 2. **Part C₂ (0 ≤ x ≤ 1, f = 4y = 4x³):**
 $$\int_{C_2}4y\,dz = \int_0^14x^3(1 + 3ix^2)\,dx = \int_0^1(4x^3 + 12ix^5)\,dx = \left[x^4 + 2ix^6\right]_0^1 = 1 + 2i$$
 
@@ -196,6 +206,8 @@ $$\int_C f(z)\,dz = (1 + i) + (1 + 2i) = 2 + 3i$$
    - $|2i - i| = 1 < 2$: **2i is inside** C.
    - $|-2i - i| = 3 > 2$: −2i is outside.
 
+![Draw the circle |z − i| = 2 (centre i, radius 2): the double pole 2i is inside, −2i is outside](fig/2013-14-Q3a-sketch.svg)
+
 2. **Cauchy integral formula for derivatives:** $\oint_C\dfrac{g(z)}{(z - z_0)^{n+1}}dz = \dfrac{2\pi i}{n!}g^{(n)}(z_0)$. Here n = 1, $z_0 = 2i$ and
 $$g(z) = \frac{1}{(z + 2i)^2}$$
    g is analytic inside and on C.
@@ -215,6 +227,8 @@ $$\oint_C\frac{dz}{(z^2 + 4)^2} = 2\pi i\cdot\frac{1}{32i} = \frac{\pi}{16}$$
           text: String.raw`Find Laurent's series expansion of the function $f(z) = \dfrac{2z - 3}{(2z - 1)(z - 2)}$ about z = 1 where $\dfrac12 < |z - 1| < 1$ is the region of convergence.`,
           solution: String.raw`1. **Partial fractions:** $\dfrac{2z - 3}{(2z - 1)(z - 2)} = \dfrac{A}{2z - 1} + \dfrac{B}{z - 2}$. At z = ½: $A = \dfrac{1 - 3}{\frac12 - 2} = \dfrac43$. At z = 2: $B = \dfrac{4 - 3}{4 - 1} = \dfrac13$:
 $$f(z) = \frac{4/3}{2z - 1} + \frac{1/3}{z - 2}$$
+
+![Shade the annulus ½ < |z − 1| < 1 centred at 1; the singularities ½ and 2 lie on its boundary circles](fig/2013-14-Q3b-sketch.svg)
 
 2. **Shift to t = z − 1** (expansion about z = 1, region ½ < |t| < 1): $2z - 1 = 1 + 2t$ and $z - 2 = t - 1$:
 $$f = \frac{4/3}{1 + 2t} + \frac{1/3}{t - 1}$$
@@ -243,6 +257,8 @@ $$= \cdots + \frac{1}{6(z - 1)^3} - \frac{1}{3(z - 1)^2} + \frac{2}{3(z - 1)} - 
 taken in positive sense.`,
           solution: String.raw`1. **Singularities:** z = 0, a pole of order 3, inside |z| = 2; z = −4, outside.
 
+![Draw |z| = 2 with the triple pole 0 inside and −4 outside](fig/2013-14-Q3ci-sketch.svg)
+
 2. **Residue at the pole of order 3:**
 $$\mathrm{Res}_{z=0} = \frac{1}{2!}\lim_{z\to0}\frac{d^2}{dz^2}\left[z^3\cdot\frac{1}{z^3(z + 4)}\right] = \frac12\frac{d^2}{dz^2}\frac{1}{z + 4}\Big|_0 = \frac12\cdot\frac{2}{(z + 4)^3}\Big|_0 = \frac{1}{64}$$
    (Check by series: $\frac{1}{z + 4} = \frac14(1 - \frac z4 + \frac{z^2}{16} - \cdots)$, so the coefficient of $z^2$, which gives $z^{-1}$ after dividing by $z^3$, is 1/64 ✓.)
@@ -259,6 +275,8 @@ $$\oint_C\frac{dz}{z^3(z + 4)} = 2\pi i\cdot\frac{1}{64} = \frac{\pi i}{32}$$
 
 taken in positive sense.`,
           solution: String.raw`1. **Singularities:** z = 1 (double pole) and z = −2i (simple pole). Both lie inside |z| = 3 (|1| = 1, |−2i| = 2).
+
+![Draw |z| = 3 with both poles inside, labelled with their residues](fig/2013-14-Q3cii-sketch.svg)
 
 2. **Residue at the simple pole z = −2i:**
 $$\mathrm{Res}_{z=-2i} = \frac{1 + z^2}{(z - 1)^2}\Big|_{z=-2i} = \frac{1 - 4}{(-1 - 2i)^2} = \frac{-3}{-3 + 4i} = \frac{-3(-3 - 4i)}{25} = \frac{9 + 12i}{25}$$
@@ -284,6 +302,8 @@ $$\sum\mathrm{Res} = \frac{9 + 12i + 16 - 12i}{25} = 1, \qquad \oint_C = 2\pi i(
           solution: String.raw`**Method:** consider $f(z) = \dfrac{z^3e^{iz}}{(z^2 + 1)(z^2 + 9)}$ on the upper semicircular contour of radius R > 3. Then $\int_0^\infty = \frac12\mathrm{Im}\int_{-\infty}^{\infty}$, because $x^3\sin x/[(x^2 + 1)(x^2 + 9)]$ is even.
 
 1. **Poles in the upper half-plane:** z = i and z = 3i (simple).
+
+![Upper semicircle (Jordan arc) enclosing i and 3i; −i and −3i are outside](fig/2013-14-Q4ai-sketch.svg)
 
 2. **Residues** (write $(z^2 + 1)(z^2 + 9) = (z - i)(z + i)(z - 3i)(z + 3i)$):
 $$\mathrm{Res}_{z=i} = \frac{i^3e^{-1}}{(2i)(i^2 + 9)} = \frac{-ie^{-1}}{2i \times 8} = -\frac{e^{-1}}{16}$$
@@ -312,6 +332,8 @@ $$\int_0^\infty\frac{x^3\sin x}{(x^2 + 1)(x^2 + 9)}dx = \frac{\pi}{16}(9e^{-3} -
 $$2iz\left[3 - (z + z^{-1}) + \frac{z - z^{-1}}{2i}\right] = 6iz - 2iz^2 - 2i + z^2 - 1 = (1 - 2i)z^2 + 6iz - (1 + 2i)$$
    Hence
 $$I = \oint_C\frac{1}{3 - 2\cos\theta + \sin\theta}\cdot\frac{dz}{iz} = \oint_C\frac{2\,dz}{(1 - 2i)z^2 + 6iz - (1 + 2i)}$$
+
+![Unit circle with the pole (2 − i)/5 inside and 2 − i outside](fig/2013-14-Q4aii-sketch.svg)
 
 2. **Poles:**
 $$z = \frac{-6i \pm\sqrt{(6i)^2 + 4(1 - 2i)(1 + 2i)}}{2(1 - 2i)} = \frac{-6i \pm\sqrt{-36 + 20}}{2(1 - 2i)} = \frac{-6i \pm 4i}{2(1 - 2i)}$$

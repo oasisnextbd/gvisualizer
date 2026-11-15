@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 430" width="300" height="430" font-family="Helvetica, Arial, sans-serif">
+<title>Solutions of cosh z = −2: z = ±ln(2 + √3) + (2k + 1)πi</title>
+<rect width="300" height="430" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<line x1="85.5" y1="215.0" x2="224.5" y2="215.0" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="222.5" y="231.0" font-size="12" fill="#1E2B3A" text-anchor="end" >Re z</text>
+<line x1="150.0" y1="384.0" x2="150.0" y2="36.0" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="156.0" y="44.0" font-size="12" fill="#1E2B3A" text-anchor="start" >Im z</text>
+<text x="145.0" y="229.0" font-size="11" fill="#55667D" text-anchor="end" >O</text>
+<circle cx="170.2" cy="359.8" r="4.5" fill="#D2552B"/>
+<circle cx="129.8" cy="359.8" r="4.5" fill="#D2552B"/>
+<circle cx="170.2" cy="263.3" r="4.5" fill="#D2552B"/>
+<circle cx="129.8" cy="263.3" r="4.5" fill="#D2552B"/>
+<circle cx="170.2" cy="166.7" r="4.5" fill="#D2552B"/>
+<circle cx="129.8" cy="166.7" r="4.5" fill="#D2552B"/>
+<circle cx="170.2" cy="70.2" r="4.5" fill="#D2552B"/>
+<circle cx="129.8" cy="70.2" r="4.5" fill="#D2552B"/>
+<text x="176.2" y="157.7" font-size="11" fill="#D2552B" text-anchor="start" >ln(2+√3) + πi</text>
+<path d="M88.5,359.8 L211.5,359.8" fill="none" stroke="#55667D" stroke-width="0.8" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<text x="87.0" y="354.8" font-size="11" fill="#55667D" text-anchor="start" >y = −3π</text>
+<path d="M88.5,263.3 L211.5,263.3" fill="none" stroke="#55667D" stroke-width="0.8" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<text x="87.0" y="258.3" font-size="11" fill="#55667D" text-anchor="start" >y = −π</text>
+<path d="M88.5,166.7 L211.5,166.7" fill="none" stroke="#55667D" stroke-width="0.8" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<text x="87.0" y="161.7" font-size="11" fill="#55667D" text-anchor="start" >y = π</text>
+<path d="M88.5,70.2 L211.5,70.2" fill="none" stroke="#55667D" stroke-width="0.8" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<text x="87.0" y="65.2" font-size="11" fill="#55667D" text-anchor="start" >y = 3π</text>
+<text x="150.0" y="420.0" font-size="11.5" fill="#55667D" text-anchor="middle" >pairs at x = ±1.317 on the lines y = (2k+1)π</text>
+</svg>
