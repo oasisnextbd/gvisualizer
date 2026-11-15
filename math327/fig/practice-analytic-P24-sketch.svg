@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 231" width="440" height="231" font-family="Helvetica, Arial, sans-serif">
+<title>Log(z + 4)/(z² + i): cut x ≤ −4 and points ±(1 − i)/√2</title>
+<rect width="440" height="231" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<line x1="46.0" y1="115.4" x2="404.0" y2="115.4" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="402.0" y="131.4" font-size="12" fill="#1E2B3A" text-anchor="end" >Re z</text>
+<line x1="307.0" y1="185.0" x2="307.0" y2="35.8" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="313.0" y="43.8" font-size="12" fill="#1E2B3A" text-anchor="start" >Im z</text>
+<text x="302.0" y="129.4" font-size="11" fill="#55667D" text-anchor="end" >O</text>
+<path d="M46.0,115.4 L133.0,115.4" fill="none" stroke="#D2552B" stroke-width="3.2" stroke-linejoin="round" />
+<circle cx="133.0" cy="115.4" r="5" fill="#D2552B" stroke="#D2552B" stroke-width="2"/>
+<text x="89.5" y="105.4" font-size="11.5" fill="#D2552B" text-anchor="middle" >cut of Log(z + 4)</text>
+<text x="133.0" y="133.4" font-size="11.5" fill="#D2552B" text-anchor="middle" >−4</text>
+<circle cx="337.8" cy="146.2" r="5" fill="#fff" stroke="#6A4FC9" stroke-width="2"/>
+<text x="345.8" y="154.2" font-size="11.5" fill="#6A4FC9" text-anchor="start" >(1 − i)/√2</text>
+<circle cx="276.2" cy="84.6" r="5" fill="#fff" stroke="#6A4FC9" stroke-width="2"/>
+<text x="268.2" y="78.6" font-size="11.5" fill="#6A4FC9" text-anchor="end" >−(1 − i)/√2</text>
+</svg>
