@@ -14,6 +14,8 @@ QB.paper({
 1. **Relate $z_2$ to $z_1$.** From $\bar z_1 = -i\bar z_2$, take the conjugate of both sides (the conjugate of $-i$ is $+i$):
 $$z_1 = i z_2 \;\Rightarrow\; z_2 = \frac{z_1}{i} = -iz_1$$
 
+![Draw z₂ = −iz₁ as z₁ rotated by −90°; the product must lie on the negative real axis](fig/2016-17-Q1a-sketch.svg)
+
 2. **Product:**
 $$z_1z_2 = -iz_1^2$$
 
@@ -32,6 +34,8 @@ $$\arg(z_1z_2) = 2\theta - \frac{\pi}{2} = \pi + 2k\pi \;\Rightarrow\; 2\theta =
 
 1. **Partial derivatives** (all continuous everywhere):
 $$u_x = 2x, \quad u_y = 0, \quad v_x = 0, \quad v_y = 2y$$
+
+![The set where the Cauchy–Riemann equations hold: the line y = x](fig/2016-17-Q1b-sketch.svg)
 
 2. **Cauchy–Riemann equations** $u_x = v_y$, $u_y = -v_x$:
    - $u_y = -v_x$: $0 = 0$, true everywhere.
@@ -56,6 +60,8 @@ $$\frac{\Delta f}{\Delta z} = \frac{(a + h)^2 - a^2 + i[(a + k)^2 - a^2]}{h + ik
 $$u_r = \frac1r v_\theta, \qquad v_r = -\frac1r u_\theta \qquad (r > 0)$$
    If these hold and the first partials are continuous near a point, then f is differentiable there and
 $$f'(z) = e^{-i\theta}(u_r + iv_r)$$
+
+![Draw the domain: the plane with the origin and the ray θ = α removed](fig/2016-17-Q1c-sketch.svg)
 
 2. **Real and imaginary parts:**
 $$u = \sqrt r\cos\frac\theta2, \qquad v = \sqrt r\sin\frac\theta2$$
@@ -117,6 +123,8 @@ $$u^2 + \left(v + \frac78\right)^2 = \frac12 + \frac{49}{64} = \frac{81}{64}$$
 1. **First derivatives:**
 $$u_x = \frac{x}{x^2 + y^2}, \qquad u_y = \frac{y}{x^2 + y^2}$$
 
+![Level curves of u = ½ ln(x² + y²) (circles) and of its conjugate v = tan⁻¹(y/x) (rays) cross at right angles](fig/2016-17-Q2a-sketch.svg)
+
 2. **Second derivatives:**
 $$u_{xx} = \frac{(x^2 + y^2) - 2x^2}{(x^2 + y^2)^2} = \frac{y^2 - x^2}{(x^2 + y^2)^2}, \qquad u_{yy} = \frac{x^2 - y^2}{(x^2 + y^2)^2}$$
 $$u_{xx} + u_{yy} = 0$$
@@ -140,6 +148,8 @@ $$f = \frac12\ln(x^2 + y^2) + i\tan^{-1}\frac yx + iC = \ln r + i\theta + iC$$
           text: String.raw`Find the principle value of $(1 - i)^{4i}$.`,
           solution: String.raw`1. **Definition:** $a^b = e^{b\log a}$; the principal value uses the principal logarithm $\mathrm{Log}\,a = \ln|a| + i\,\mathrm{Arg}\,a$, $-\pi < \mathrm{Arg}\,a \le \pi$.
 
+![Locate 1 − i: modulus √2, principal argument −π/4 (inside −π < Arg ≤ π)](fig/2016-17-Q2b-sketch.svg)
+
 2. **Principal log of 1 − i:** $|1 - i| = \sqrt2$, $\mathrm{Arg}(1 - i) = -\pi/4$:
 $$\mathrm{Log}(1 - i) = \frac12\ln 2 - \frac{i\pi}{4}$$
 
@@ -161,6 +171,8 @@ $$(1 - i)^{4i} \approx 4.245 + 22.748i$$
           text: String.raw`Solve the equation $\cos z = 2$ by equating the real and imaginary parts in the equation.`,
           solution: String.raw`1. **Expand** with z = x + iy:
 $$\cos z = \cos x\cosh y - i\sin x\sinh y = 2$$
+
+![Plot the solutions: pairs of points ±1.317i above and below each x = 2kπ](fig/2016-17-Q2c-sketch.svg)
 
 2. **Equate parts:**
 $$\cos x\cosh y = 2 \quad (1), \qquad \sin x\sinh y = 0 \quad (2)$$
@@ -187,6 +199,8 @@ $$z = 2k\pi \pm i\ln(2 + \sqrt3), \qquad k = 0, \pm1, \pm2, \ldots$$
 1. **Parametrize:** $dz = ie^{i\theta}d\theta$, $z^2 = e^{2i\theta}$:
 $$\int_C z^2\,dz = \int_0^{\pi/2}e^{2i\theta}\,ie^{i\theta}\,d\theta = i\int_0^{\pi/2}e^{3i\theta}d\theta = i\left[\frac{e^{3i\theta}}{3i}\right]_0^{\pi/2} = \frac{e^{3i\pi/2} - 1}{3}$$
 
+![Draw the quarter circle from 1 to i with its direction](fig/2016-17-Q2d-sketch.svg)
+
 2. **Evaluate:** $e^{3i\pi/2} = -i$, so
 $$\int_C z^2\,dz = \frac{-1 - i}{3}$$
 
@@ -205,6 +219,8 @@ $$\left[\frac{z^3}{3}\right]_1^i = \frac{i^3 - 1}{3} = \frac{-i - 1}{3} \;\check
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`Use Cauchy integral formula to evaluate $\displaystyle\oint_C\frac{z}{(9 - z^2)(z + i)}dz$, where C is the circle $|z| = 2$.`,
           solution: String.raw`1. **Singularities:** $9 - z^2 = 0$ gives $z = \pm3$, with $|z| = 3 > 2$: **outside** C. $z = -i$, with $|z| = 1 < 2$: **inside** C.
+
+![Draw |z| = 2 with z = −i inside and the poles ±3 outside](fig/2016-17-Q3a-sketch.svg)
 
 2. **Cauchy integral formula** $\oint_C\dfrac{g(z)}{z - z_0}dz = 2\pi i\,g(z_0)$ with $z_0 = -i$ and
 $$g(z) = \frac{z}{9 - z^2}$$
@@ -226,6 +242,8 @@ $$\oint_C\frac{z}{(9 - z^2)(z + i)}dz = 2\pi i\left(-\frac{i}{10}\right) = \frac
 $$f(z) = 1 + \frac{3z - 2}{(z - 1)(z - 2)} = 1 + \frac{A}{z - 1} + \frac{B}{z - 2}$$
    with $A = \dfrac{3 - 2}{1 - 2} = -1$ and $B = \dfrac{6 - 2}{2 - 1} = 4$:
 $$f(z) = 1 - \frac{1}{z - 1} + \frac{4}{z - 2}$$
+
+![Shade the annulus 1 < |z| < 2; the singularities 1 and 2 lie on its boundary circles](fig/2016-17-Q3b-sketch.svg)
 
 2. **Term −1/(z − 1) for |z| > 1** (expand in powers of 1/z, since |1/z| < 1):
 $$-\frac{1}{z - 1} = -\frac1z\cdot\frac{1}{1 - 1/z} = -\frac1z\sum_{n=0}^\infty\frac{1}{z^n} = -\sum_{n=1}^\infty\frac{1}{z^n}$$
@@ -274,6 +292,8 @@ $$\cos\theta = \frac12\left(z + \frac1z\right), \qquad d\theta = \frac{dz}{iz}, 
 1. **Write I as the real part of a contour integral** (using $e^{2i\theta}$ instead of $\cos 2\theta$ avoids a pole at z = 0):
 $$I = \mathrm{Re}\oint_{|z|=1}\frac{z^2}{5 - \frac32\left(z + \frac1z\right)}\frac{dz}{iz} = \mathrm{Re}\oint_{|z|=1}\frac{2z^2}{i(10z - 3z^2 - 3)}dz = \mathrm{Re}\oint_{|z|=1}\frac{2iz^2}{3z^2 - 10z + 3}dz$$
    (multiplying numerator and denominator by −1 and using −1/i = i).
+
+![Unit circle with the simple pole 1/3 inside and 3 outside](fig/2016-17-Q4i-sketch.svg)
 
 2. **Poles:** $3z^2 - 10z + 3 = (3z - 1)(z - 3) = 0$ gives $z = 1/3$ (inside |z| = 1) and z = 3 (outside).
 

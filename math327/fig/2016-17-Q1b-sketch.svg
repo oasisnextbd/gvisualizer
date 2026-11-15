@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" width="420" height="420" font-family="Helvetica, Arial, sans-serif">
+<title>f = x² + iy² is differentiable only on the line y = x</title>
+<rect width="420" height="420" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0B7C8C"/></marker><marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D2552B"/></marker></defs>
+<line x1="46.0" y1="210.0" x2="384.0" y2="210.0" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="382.0" y="226.0" font-size="12" fill="#1E2B3A" text-anchor="end" >Re z</text>
+<line x1="210.0" y1="374.0" x2="210.0" y2="36.0" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="216.0" y="44.0" font-size="12" fill="#1E2B3A" text-anchor="start" >Im z</text>
+<text x="205.0" y="224.0" font-size="11" fill="#55667D" text-anchor="end" >O</text>
+<path d="M54.2,365.8 L365.8,54.2" fill="none" stroke="#D2552B" stroke-width="3" stroke-linejoin="round" />
+<text x="310.6" y="97.4" font-size="12" fill="#D2552B" text-anchor="end" >y = x:  f′ = 2x</text>
+<text x="210.0" y="410.0" font-size="11.5" fill="#55667D" text-anchor="middle" >CR fails off the line, so f is nowhere analytic</text>
+</svg>
