@@ -17,6 +17,8 @@ $$\bar z_1 = r(\cos\theta - i\sin\theta) = re^{-i\theta}$$
 
 3. **Compare:** $z_2 = r(\cos\theta - i\sin\theta) = \bar z_1$. $\blacksquare$
 
+![z₁ and its mirror image z₂](fig/2021-22-Q1a-sketch.svg)
+
 **Geometric view:** $z_1$ and $z_2$ are at the same distance from the origin and at equal and opposite angles from the positive real axis, so each is the mirror image of the other in the real axis.`,
           answer: String.raw`z₁ = re^{iθ}, z₂ = re^{−iθ} (same modulus, opposite amplitude) ⇒ z₂ = r(cos θ − i sin θ) = z̄₁ (reflection in the real axis).` },
         { id: "2021-22-Q1b", label: "(b)", marks: "9+9=18",
@@ -45,6 +47,8 @@ $$u_r = \frac{1}{2r}, \quad \frac1r v_\theta = \frac{1}{2r} \;✓; \qquad v_r = 
    The partials are continuous for $r > 0$, $-\pi < \theta < \pi$.
 
 3. **Analyticity:** f is analytic everywhere **except at z = 0** (branch point, $\ln r \to -\infty$) and **on the negative real axis** (branch cut, where θ jumps from π to −π, so f is not even continuous there).
+
+![Regions of analyticity](fig/2021-22-Q1b-sketch.svg)
 
 4. **Derivative:**
 $$f'(z) = e^{-i\theta}(u_r + iv_r) = \frac{e^{-i\theta}}{2r} = \frac{1}{2z}$$
@@ -86,6 +90,8 @@ $$\frac{1 - e^{i\theta}}{1 + e^{i\theta}} = \frac{e^{-i\theta/2} - e^{i\theta/2}
 $$w = i\left(-i\tan\frac\theta2\right) = \tan\frac\theta2 \quad\text{(real)} ✓$$
    Also $z = 0 \to w = i$: the inside of the unit circle maps to the upper half-plane.
 
+![z-plane and w-plane](fig/2021-22-Q1d-sketch.svg)
+
 **Result:** $w = \dfrac{i(1 - z)}{1 + z}$.`,
           answer: String.raw`w = k(z − 1)/(z + 1); z = i → 1 gives k = −i ⇒ w = i(1 − z)/(1 + z). On |z| = 1, z = e^{iθ} gives w = tan(θ/2) (real); |z| < 1 maps to Im w > 0.` }
       ] },
@@ -109,6 +115,8 @@ $$u_r = \frac{1}{2\sqrt r}\cos\frac\theta2, \quad u_\theta = -\frac{\sqrt r}{2}\
 4. **Check:**
 $$\frac1r v_\theta = \frac{1}{2\sqrt r}\cos\frac\theta2 = u_r ✓, \qquad -\frac1r u_\theta = \frac{1}{2\sqrt r}\sin\frac\theta2 = v_r ✓$$
    The partials are continuous for $r > 0$, $\alpha < \theta < \alpha + 2\pi$, so **f is differentiable (indeed analytic) throughout the domain**.
+
+![Domain of differentiability](fig/2021-22-Q2a-sketch.svg)
 
 5. **Derivative:**
 $$f'(z) = e^{-i\theta}(u_r + iv_r) = e^{-i\theta}\frac{1}{2\sqrt r}e^{i\theta/2} = \frac{1}{2\sqrt r\,e^{i\theta/2}} = \frac{1}{2f(z)} \qquad\blacksquare$$`,
@@ -134,13 +142,17 @@ $$u = \tfrac12\ln(x^2 + y^2) + \phi(y)$$
 $$f(z) = \tfrac12\ln(x^2 + y^2) - i\tan^{-1}\frac xy + C$$
    **In terms of z** (Milne–Thomson): $f'(z) = u_x + iv_x = v_y + iv_x$, and with $x = z$, $y = 0$: $f'(z) = \dfrac1z - 0$, so
 $$\boxed{f(z) = \ln z + C}$$
-   Check: in polar form, $\tan^{-1}(x/y) = \frac\pi2 - \theta$ (first quadrant), so $v = \theta - \frac\pi2$ and $u = \ln r$: $u + iv = \ln r + i\theta - i\frac\pi2 = \ln z - \frac{i\pi}{2}$, consistent with $C = -i\pi/2$.`,
+   Check: in polar form, $\tan^{-1}(x/y) = \frac\pi2 - \theta$ (first quadrant), so $v = \theta - \frac\pi2$ and $u = \ln r$: $u + iv = \ln r + i\theta - i\frac\pi2 = \ln z - \frac{i\pi}{2}$, consistent with $C = -i\pi/2$.
+
+![Circles u = c and rays v = c](fig/2021-22-Q2b-sketch.svg)`,
           answer: String.raw`v_x = −y/(x² + y²), v_y = x/(x² + y²), v_xx + v_yy = 2xy/r⁴ − 2xy/r⁴ = 0 ⇒ harmonic. u_x = v_y ⇒ u = ½ ln(x² + y²); f = ½ ln(x² + y²) − i tan⁻¹(x/y) + C = ln z + C (f′ = 1/z).` },
         { id: "2021-22-Q2c", label: "(c)", marks: "15⅔",
           topic: "complex-integration", sub: "∫ (z² − 3|z| + Im z) dz along the quarter circle from 2 to 2i",
           type: "numerical", syllabus: "in", repeats: [],
           text: String.raw`Compute the integral $\displaystyle\int_C\left(z^2 - 3|z| + \mathrm{Im}\,z\right)dz$, where C is $z = 2e^{i\theta}$ $\left(0 \le \theta \le \frac\pi2\right)$. That is, C is the quarter-circle centered at the origin and extending from 2 to 2i.`,
           solution: String.raw`**On C:** $z = 2e^{i\theta}$, $dz = 2ie^{i\theta}d\theta$, $|z| = 2$, $\mathrm{Im}\,z = 2\sin\theta$. Split the integral into three parts.
+
+![Path of integration](fig/2021-22-Q2c-sketch.svg)
 
 1. **$\int_C z^2\,dz$:** $z^2$ is analytic, so it depends only on the end points:
 $$\int_C z^2\,dz = \left[\frac{z^3}{3}\right]_2^{2i} = \frac{(2i)^3 - 8}{3} = \frac{-8 - 8i}{3}$$
@@ -193,6 +205,8 @@ $$\oint_C\frac{dz}{(z^2 + 1)(z^2 + 9)} = \frac\pi8 - \frac\pi8 = 0$$
           solution: String.raw`1. **Partial fractions** ($z^2 - 3z + 2 = (z - 1)(z - 2)$):
 $$f(z) = \frac{1}{z(z - 1)(z - 2)} = \frac{1}{2z} - \frac{1}{z - 1} + \frac{1}{2(z - 2)}$$
 
+![Regions of validity](fig/2021-22-Q3b-sketch.svg)
+
 2. **(i) $1 < |z| < 2$:** here $|1/z| < 1$ and $|z/2| < 1$:
 $$-\frac{1}{z - 1} = -\frac1z\cdot\frac{1}{1 - 1/z} = -\sum_{n=0}^\infty\frac{1}{z^{n+1}}, \qquad \frac{1}{2(z - 2)} = -\frac14\cdot\frac{1}{1 - z/2} = -\sum_{n=0}^\infty\frac{z^n}{2^{n+2}}$$
 $$f(z) = \frac{1}{2z} - \frac1z - \frac{1}{z^2} - \frac{1}{z^3} - \cdots - \frac14 - \frac z8 - \frac{z^2}{16} - \cdots$$
@@ -210,6 +224,8 @@ $$\boxed{f(z) = \sum_{n=3}^\infty\frac{2^{n-2} - 1}{z^n} = \frac{1}{z^3} + \frac
           type: "numerical", syllabus: "in", repeats: ["2013-14-Q3ci"],
           text: String.raw`Evaluate the integral $\displaystyle\oint_C\frac{dz}{z^3(z + 4)}$ by Cauchy's residue theorem, where C: $|z| = 2$.`,
           solution: String.raw`1. **Poles:** $z = 0$ (order 3) is inside $|z| = 2$; $z = -4$ is outside.
+
+![Contour and poles](fig/2021-22-Q3c-sketch.svg)
 
 2. **Residue at the pole of order 3:**
 $$\mathrm{Res}_{z=0} = \frac{1}{2!}\lim_{z\to0}\frac{d^2}{dz^2}\left[z^3\cdot\frac{1}{z^3(z + 4)}\right] = \frac12\cdot\frac{2}{(z + 4)^3}\bigg|_{z=0} = \frac{1}{64}$$
@@ -232,6 +248,8 @@ $$\oint_C\frac{dz}{z^3(z + 4)} = 2\pi i\cdot\frac{1}{64} = \frac{\pi i}{32}$$
 $$I = \int_0^\infty\frac{\sin\pi x}{x(1 - x^2)}dx = \frac12\int_{-\infty}^{\infty}\frac{\sin\pi x}{x(1 - x^2)}dx = \frac12\,\mathrm{Im}\;\mathrm{P.V.}\!\int_{-\infty}^{\infty}\frac{e^{i\pi x}}{x(1 - x^2)}dx$$
 
 2. **Contour.** Take $f(z) = \dfrac{e^{i\pi z}}{z(1 - z^2)}$. It has simple poles at $z = 0, 1, -1$, **on** the real axis. Use the large upper semicircle Γ of radius R, the real axis, and small upper semicircles of radius ε round each pole (indentations). There are no poles inside, so the total integral is 0.
+
+![Indented contour](fig/2021-22-Q4i-sketch.svg)
 
 3. **Large semicircle → 0** by Jordan's lemma, since $|1/(z(1 - z^2))| \to 0$ as $|z| \to \infty$ and $e^{i\pi z}$ is bounded in the upper half-plane.
 
@@ -256,6 +274,8 @@ $$\sin2\theta = \frac{z^2 - z^{-2}}{2i} = \frac{z^4 - 1}{2iz^2}, \qquad 5 - 3\co
 $$I = \oint_{|z|=1}\frac{z^4 - 1}{2iz^2}\cdot\frac{-2z}{(3z - 1)(z - 3)}\cdot\frac{dz}{iz} = \oint_{|z|=1}\frac{z^4 - 1}{z^2(3z - 1)(z - 3)}\,dz$$
 
 2. **Poles inside $|z| = 1$:** $z = 0$ (double) and $z = 1/3$; $z = 3$ is outside.
+
+![Unit circle and poles](fig/2021-22-Q4ii-sketch.svg)
 
 3. **Residue at $z = 1/3$:**
 $$\frac{(1/3)^4 - 1}{(1/3)^2\cdot3\cdot(1/3 - 3)} = \frac{-80/81}{-8/9} = \frac{10}{9}$$

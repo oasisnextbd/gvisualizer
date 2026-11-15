@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 438" width="440" height="438" font-family="Helvetica, Arial, sans-serif">
+<title>Quarter circle z = 2e^{iθ} from 2 to 2i</title>
+<rect width="440" height="438" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E2B3A"/></marker></defs>
+<line x1="107.5" y1="380.0" x2="107.5" y2="20.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="220.0" y1="380.0" x2="220.0" y2="20.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="332.5" y1="380.0" x2="332.5" y2="20.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="40.0" y1="312.5" x2="400.0" y2="312.5" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="40.0" y1="200.0" x2="400.0" y2="200.0" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="40.0" y1="87.5" x2="400.0" y2="87.5" stroke="#D5DCE4" stroke-width="0.6"/>
+<line x1="40.0" y1="312.5" x2="400.0" y2="312.5" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="398.0" y="305.5" font-size="12.5" fill="#1E2B3A" text-anchor="end">Re z</text>
+<line x1="107.5" y1="380.0" x2="107.5" y2="20.0" stroke="#1E2B3A" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="114.5" y="32.0" font-size="12.5" fill="#1E2B3A" text-anchor="start">Im z</text>
+<text x="220.0" y="326.5" font-size="10.5" fill="#55667D" text-anchor="middle">1</text>
+<text x="332.5" y="326.5" font-size="10.5" fill="#55667D" text-anchor="middle">2</text>
+<text x="102.5" y="204.0" font-size="10.5" fill="#55667D" text-anchor="end">1</text>
+<text x="102.5" y="91.5" font-size="10.5" fill="#55667D" text-anchor="end">2</text>
+<path d="M332.5,312.5 L332.5,309.5 L332.4,306.6 L332.3,303.6 L332.2,300.6 L332.0,297.7 L331.8,294.7 L331.5,291.7 L331.2,288.8 L330.9,285.8 L330.5,282.9 L330.1,279.9 L329.7,277.0 L329.2,274.1 L328.7,271.2 L328.1,268.2 L327.5,265.3 L326.9,262.4 L326.2,259.5 L325.5,256.7 L324.7,253.8 L323.9,250.9 L323.1,248.1 L322.2,245.2 L321.3,242.4 L320.4,239.6 L319.4,236.8 L318.4,234.0 L317.3,231.2 L316.2,228.5 L315.1,225.7 L313.9,223.0 L312.7,220.3 L311.5,217.6 L310.2,214.9 L308.9,212.2 L307.6,209.6 L306.2,206.9 L304.8,204.3 L303.3,201.7 L301.9,199.1 L300.3,196.6 L298.8,194.1 L297.2,191.5 L295.6,189.0 L294.0,186.6 L292.3,184.1 L290.6,181.7 L288.8,179.3 L287.1,176.9 L285.2,174.5 L283.4,172.2 L281.5,169.9 L279.6,167.6 L277.7,165.4 L275.8,163.1 L273.8,160.9 L271.8,158.7 L269.7,156.6 L267.6,154.5 L265.5,152.4 L263.4,150.3 L261.3,148.2 L259.1,146.2 L256.9,144.2 L254.6,142.3 L252.4,140.4 L250.1,138.5 L247.8,136.6 L245.5,134.8 L243.1,132.9 L240.7,131.2 L238.3,129.4 L235.9,127.7 L233.4,126.0 L231.0,124.4 L228.5,122.8 L225.9,121.2 L223.4,119.7 L220.9,118.1 L218.3,116.7 L215.7,115.2 L213.1,113.8 L210.4,112.4 L207.8,111.1 L205.1,109.8 L202.4,108.5 L199.7,107.3 L197.0,106.1 L194.3,104.9 L191.5,103.8 L188.8,102.7 L186.0,101.6 L183.2,100.6 L180.4,99.6 L177.6,98.7 L174.8,97.8 L171.9,96.9 L169.1,96.1 L166.2,95.3 L163.3,94.5 L160.5,93.8 L157.6,93.1 L154.7,92.5 L151.8,91.9 L148.8,91.3 L145.9,90.8 L143.0,90.3 L140.1,89.9 L137.1,89.5 L134.2,89.1 L131.2,88.8 L128.3,88.5 L125.3,88.2 L122.3,88.0 L119.4,87.8 L116.4,87.7 L113.4,87.6 L110.5,87.5 L107.5,87.5" fill="none" stroke="#0B7C8C" stroke-width="2.6" stroke-linejoin="round"/>
+<path d="M-6,-5 L6,0 L-6,5 z" fill="#0B7C8C" transform="translate(266.6,153.4) rotate(-135.0)"/>
+<circle cx="332.5" cy="312.5" r="4.5" fill="#D2552B"/>
+<circle cx="107.5" cy="87.5" r="4.5" fill="#D2552B"/>
+<text x="326.5" y="304.5" font-size="12" fill="#D2552B" text-anchor="end">start z = 2</text>
+<text x="115.5" y="83.5" font-size="12" fill="#D2552B" text-anchor="start">end z = 2i</text>
+<path d="M107.5,312.5 L305.0,204.6" fill="none" stroke="#55667D" stroke-width="1.1" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<text x="214.4" y="276.5" font-size="11.5" fill="#55667D" text-anchor="middle">|z| = 2</text>
+<text x="220.0" y="402.0" font-size="11.5" fill="#55667D" text-anchor="middle">Draw C: the arc |z| = 2 from 2 to 2i (anticlockwise). On it |z| = 2</text>
+<text x="220.0" y="417.0" font-size="11.5" fill="#55667D" text-anchor="middle">and Im z = 2 sin θ.</text>
+</svg>
